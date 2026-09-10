@@ -1,0 +1,12 @@
+scripts/
+agents/
+rubric.md
+README.md
+.claude/
+.env*
+.github/
+data/chain-*.json
+data/*.csv
+data/review-*
+data/verify-*
+data/index.md

@@ -1,0 +1,24 @@
+name: Correction
+description: Report a wrong score, a missed page, or a dead link in the Subnet Legibility Index
+title: "[Correction] SN<netuid> <subnet name>"
+labels: [correction]
+body:
+  - type: input
+    id: netuid
+    attributes: { label: Subnet netuid, placeholder: "64" }
+    validations: { required: true }
+  - type: dropdown
+    id: audience
+    attributes: { label: Audience, options: [stakers, miners, buyers, newcomers, identity] }
+    validations: { required: true }
+  - type: dropdown
+    id: question
+    attributes: { label: Question, options: ["q1 What it is", "q2 Who it is for", "q3 How it resists gaming or fails", "q4 Identity and documentation"] }
+  - type: textarea
+    id: wrong
+    attributes: { label: What is wrong, description: "What the index says, and what a reader can actually find." }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Source URL, description: "The public page a first-time reader would find this on." }
+    validations: { required: true }
