@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-SITE = "https://legible.network"
+SITE = "https://www.legible.network"
 
 
 def png_size(path):

@@ -21,7 +21,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 PARTIALS = REPO / "scripts" / "templates" / "partials"
-SITE = "https://legible.network"
+SITE = "https://www.legible.network"
 TODAY = date.today().isoformat()
 
 DOCS = [  # (source markdown, output dir, nav key)
