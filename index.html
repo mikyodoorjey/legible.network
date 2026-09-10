@@ -231,7 +231,7 @@ main.grid.open aside{display:block}
     if (state.ident.size && !state.ident.has(identClass(r))) return false;
     if (state.docsOnly && !(r.flags && r.flags.has_docs)) return false;
     if (state.paperOnly && !(r.flags && r.flags.has_paper)) return false;
-    if (state.q){ const q = state.q.toLowerCase(); if (!(r.name.toLowerCase().includes(q) || String(r.netuid) === q.replace(/^sn/, ""))) return false; }
+    if (state.q){ const q = state.q.toLowerCase().trim(); const num = q.replace(/^sn\s*/, "").trim(); if (!(r.name.toLowerCase().includes(q) || (/^\d+$/.test(num) && String(r.netuid).startsWith(num)))) return false; }
     return true;
   }
   const byEmission = (a, b) => a.rank - b.rank;
