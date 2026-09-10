@@ -177,6 +177,7 @@ def doc_page(title, meta, sections, active, ctx, description):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)} · Subnet Legibility Index</title>
+{ctx.get("robots", "")}
 <meta name="description" content="{html.escape(description)}">
 <link rel="canonical" href="{SITE}/{active}/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -237,6 +238,7 @@ def main():
     data_path = REPO / a.data
     data = json.loads(data_path.read_text(encoding="utf-8")) if data_path.exists() else None
     ctx = {
+        "robots": "" if a.launch else '<meta name="robots" content="noindex">',
         "snapshot": (data or {}).get("chain_snapshot", "pending"),
         "rubric_version": rubric_version(),
         "year": TODAY[:4],
@@ -287,6 +289,7 @@ def main():
         active = "index" if name == "index.html" else ""
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
+        s2 = inject(s2, "robots", ctx["robots"])
         if name == "index.html":
             s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
         if s2 != s:
@@ -296,6 +299,7 @@ def main():
     if data:
         from render_subnets import build_all
         parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
+        parts["robots"] = ctx["robots"]
         sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed)
         changed += sub_changed
         p = REPO / "index.html"

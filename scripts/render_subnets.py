@@ -150,7 +150,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name):
         "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml&title=%5BCorrection%5D%20SN{sub['netuid']}%20{e(sub['name']).replace(' ', '%20')}",
         "mail_subject": f"[SLI] Correction: SN{sub['netuid']} {sub['name']}".replace(" ", "%20"),
         "json": json.dumps(sub, ensure_ascii=False).replace("</", "<\\/"),
-        "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"],
+        "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
     }
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)
 
@@ -161,7 +161,7 @@ def render_list(data, partials, site):
         for s in sorted(data["subnets"], key=lambda s: s["rank"]))
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All subnets · Subnet Legibility Index</title><link rel="canonical" href="{site}/sn/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>All subnets · Subnet Legibility Index</title>{partials.get("robots", "")}<link rel="canonical" href="{site}/sn/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css"><style>ol{{padding-left:22px;line-height:1.9}}</style></head>
 <body>{partials["topbar"]}{partials["nav"]}<main class="wrap" style="padding-top:32px"><span class="mono">By emission rank</span><h1>All {len(data["subnets"])} subnets</h1><ol>{items}</ol></main>{partials["footer"]}</body></html>
 """

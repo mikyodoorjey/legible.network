@@ -1,7 +1,7 @@
 // Vercel Edge Middleware: Basic Auth over the whole site until launch.
-// Env: the site is locked unless SITE_LOCKED=0. SITE_USER / SITE_PASSWORD for the preview login,
+// Env: the site is open unless SITE_LOCKED=1. SITE_USER / SITE_PASSWORD for the preview login,
 // PUBLIC_PATHS as a comma-separated list of path prefixes that stay open (e.g. /rubric/,/about/,/assets/).
-// Set SITE_LOCKED=0 and redeploy to open the site. Unset means locked (fail closed).
+// Set SITE_LOCKED=1 plus a password and redeploy to lock the site. Unset means open.
 
 export const config = { matcher: ["/((?!favicon.svg|robots.txt).*)"] };
 
@@ -25,7 +25,7 @@ function challenge(status, body) {
 }
 
 export default function middleware(request) {
-  if (process.env.SITE_LOCKED === "0") return;
+  if (process.env.SITE_LOCKED !== "1") return;
   const pathname = new URL(request.url).pathname;
   const open = (process.env.PUBLIC_PATHS || "").split(",").map(s => s.trim()).filter(Boolean);
   if (open.some(p => pathname === p || pathname.startsWith(p))) return;
