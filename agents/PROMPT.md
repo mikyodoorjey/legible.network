@@ -20,6 +20,8 @@ The score is what a reader in that audience can find in five minutes, not what t
 
 Discord is recorded as present or absent in `artifacts`. Never join or read it. A link to the shared Opentensor server counts as absent.
 
+The identity fields in your slice file were read from the chain on the snapshot date. A Taostats page that will not render is never grounds for an unknown on q4; you already have the identity, so score q4 from the slice file plus whether the links resolve.
+
 Budget: 25 minutes and 20 web searches per subnet, whichever runs out first. When it runs out, write `unknown` for the cells not yet checked and move on. Record `minutes_spent` and `searches_used` honestly. Your session cap is about 200 searches; the per-subnet cap leaves a reserve.
 
 ## How to write evidence
@@ -59,7 +61,7 @@ The calibration file shows all sixteen cells for three subnets, scored by hand. 
 - `stakers_score` and the other three: your mean of the four cell scores, one decimal. The merge script recomputes and will warn if yours differs.
 - `composite`: leave blank; the script computes it.
 - `own_words`: one sentence in the subnet's own words saying what it is, then ` | <url>`. Required. This is rendered as the subnet's self-description.
-- `identity_check`: one entry per identity field that is set, `field | value | resolves|mismatch|dead | note`, semicolon-separated. `mismatch` means the link resolves to something other than the claimed subnet. Fields that are not set: `field | none | none | not set`.
+- `identity_check`: one entry per identity field, `field | value | resolves|mismatch|dead|text|none | note`, semicolon-separated. `resolves`, `mismatch`, and `dead` are for URLs; `mismatch` means the link resolves to something other than the claimed subnet. `text` is for non-URL fields (name, description, contact email, additional) and the note says whether the value agrees with the site. Fields that are not set: `field | none | none | not set`.
 - `artifacts`: presence inventory in this fixed order, `github|<url or none>; docs|...; whitepaper|...; x|<handle or none>; discord|<url or none>; api|...; dashboard|...`.
 - `sources`: every URL you fetched successfully, semicolon-separated. The link verifier checks all of them.
 - `searches_used`, `minutes_spent`: integers.

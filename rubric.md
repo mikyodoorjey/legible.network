@@ -45,8 +45,10 @@ Third-party evidence alone caps a cell at 1. Discord is recorded as present or a
 | 1 | Findable only in third-party sources, or only by asking in Discord |
 | 2 | The subnet's own materials touch it, but scattered across pages, stale (contradicted by current code or chain state), or readable only in code |
 | 3 | Stated in the subnet's own materials in one place, but the reader needs Bittensor or domain knowledge, or more than five minutes, to act on it |
-| 4 | Stated plainly in one place within two clicks of the README or the site front page; a first-time reader gets it in under five minutes |
+| 4 | Stated plainly in one place within two clicks of the README, the docs root, or the site front page; a first-time reader gets it in under five minutes |
 | 5 | As 4, plus a concrete artifact the reader can check (a number with a date, a table, a schema, a live endpoint, a diagram, a worked example), and it agrees with the on-chain identity |
+
+"One place" means one page, or one page plus a link it points to. Plain statements spread across three pages that each answer part of the question are scattered, and score 2, even when each part is clear.
 
 When torn between two scores, take the lower one and say why.
 
@@ -58,7 +60,7 @@ Each audience is scored on the same four-question spine. For every cell: the rea
 
 **S1. What it is.** "What does this subnet produce that someone pays for, and in what unit?" Evidence: a commodity statement naming the output (inference tokens, GPU hours, model checkpoints, forecasts, datasets) and its unit. A 5 puts the output and unit on the front page, matching the on-chain description. A 2 is a tagline like "decentralized AI for everyone" with the actual output only inferable from code.
 
-**S2. Who it is for.** "Who is using it today, and how would I see demand?" Evidence: usage figures, named customers, revenue or buyback statements, a dashboard. A 5 is a dated usage or revenue figure, or a live dashboard, on the subnet's own site. A 2 is "used by many" with no number, or numbers only in a months-old post.
+**S2. Who it is for.** "Who is using it today, and how would I see demand?" Evidence: usage figures, named customers, revenue or buyback statements, a dashboard. A 5 is a dated usage or revenue figure, or a live dashboard, on the subnet's own site, and it agrees with the subnet's other pages. A dashboard that reads zero while the docs describe live activity is a 3 at most. A 2 is "used by many" with no number, or numbers only in a months-old post.
 
 **S3. How it resists gaming or fails.** "How do validators score, how do they stop miners cheating, and what would kill this subnet?" Evidence: an incentive mechanism document, a validation description, a known-attacks or limitations section, a statement of how emissions are earned. A 5 is a named incentive document with an anti-gaming section and stated failure modes. A 2 is a mechanism that exists only as validator code.
 
@@ -86,7 +88,7 @@ Each audience is scored on the same four-question spine. For every cell: the rea
 
 ### Newcomers
 
-**N1. What it is.** "In one paragraph, what is this?" Evidence: a plain-language paragraph without unexplained crypto or ML jargon. A 5 is that paragraph on the front page, consistent with the on-chain description. A 2 is a technical README opening or the chain description alone.
+**N1. What it is.** "In one paragraph, what is this?" Evidence: a plain-language paragraph without unexplained crypto or ML jargon. A 5 is that paragraph on the front page, consistent with the on-chain description. A 2 is a technical README opening, or a chain description that is a full sentence and nothing more. A chain description that is only a tag, like two words with no verb, is a 1.
 
 **N2. Who it is for.** "What does this do that a centralized service does not, and who cares?" Evidence: an explicit statement of the difference decentralization makes here. A 5 is a concrete stated difference (cost, censorship, ownership, coverage) with a comparison. A 2 is a generic "decentralized" claim.
 
