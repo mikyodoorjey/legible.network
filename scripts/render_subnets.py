@@ -276,7 +276,7 @@ def render_chart(data):
     med_x = ems[len(ems) // 2]
     comps = sorted(float(s["composite"]) for s in subs)
     med_y = comps[len(comps) // 2]
-    out = [f'<svg viewBox="0 0 {W} {H}" width="100%" height="auto" role="img" aria-label="Legibility against emission share" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family:var(--mono);font-size:11px">']
+    out = [f'<svg viewBox="0 0 {W} {H}" width="100%" style="height:auto;display:block" role="img" aria-label="Legibility against emission share" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="var(--mono)" font-size="11">']
     for v in range(0, 6):
         out.append(f'<line x1="{L}" y1="{Y(v):.1f}" x2="{W - R}" y2="{Y(v):.1f}" stroke="var(--rule)" stroke-width="1"/><text x="{L - 10}" y="{Y(v) + 4:.1f}" text-anchor="end" fill="var(--softer)">{v}</text>')
     step = max(1, int(xmax / 6))
