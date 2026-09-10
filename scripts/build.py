@@ -350,6 +350,18 @@ def main():
                        "audience": c["audience"], "q": c["q"], "old": c["old_score"], "new": c["new_score"],
                        "reason": c["reason"], "requested_by": c["requested_by"]} for c in corrections],
     }
+    tokens_path = latest("tokens-*.json")
+    if tokens_path:
+        tok = json.loads(tokens_path.read_text(encoding="utf-8"))
+        data["tao_usd"] = tok.get("tao_usd")
+        data["tokens_snapshot"] = tokens_path.name.replace("tokens-", "").replace(".json", "")
+        for s in data["subnets"]:
+            s["alpha"] = tok["tokens"].get(str(s["netuid"]))
+    else:
+        data["tao_usd"] = None
+        data["tokens_snapshot"] = None
+        for s in data["subnets"]:
+            s["alpha"] = None
     (DATA / "index.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     write_index_md(data, DATA / "index.md")
     write_changelog(data, DATA / "CHANGELOG.md")

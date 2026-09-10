@@ -1,0 +1,1469 @@
+{
+ "pulled_at": "2026-09-10T02:41:19+00:00",
+ "tao_usd": 250.813463227718,
+ "sources": {
+  "pool": "taostats /api/dtao/pool/latest/v1",
+  "tao_usd": "taostats /api/price/latest/v1",
+  "kraken": "api.kraken.com AssetPairs",
+  "mexc": "api.mexc.com exchangeInfo",
+  "coingecko": "api.coingecko.com search + tickers"
+ },
+ "tokens": {
+  "107": {
+   "netuid": 107,
+   "name": "Minos",
+   "symbol": "ミ",
+   "price_tao": 0.057532711,
+   "price_usd": 14.429978494789426,
+   "market_cap_tao": 91387.368916768,
+   "market_cap_usd": 22921182.49328369,
+   "liquidity_tao": 44280.580813629,
+   "volume_24h_tao": 3697.628975532,
+   "change_1d": -2.424930647882347,
+   "change_1w": 10.10397819289936,
+   "change_1m": -6.5453355349238,
+   "alpha_staked": 1203612.155629518,
+   "alpha_in_pool": 384829.746869533,
+   "total_alpha": 1991767.108566991,
+   "pool_rank": 13,
+   "coingecko_id": "tiger-alpha",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/107",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/107",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/107",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "51": {
+   "netuid": 51,
+   "name": "lium.io",
+   "symbol": "ת",
+   "price_tao": 0.095099971,
+   "price_usd": 23.85235307936555,
+   "market_cap_tao": 442297.161922976,
+   "market_cap_usd": 110934082.95769237,
+   "liquidity_tao": 326111.499822056,
+   "volume_24h_tao": 12383.551267828,
+   "change_1d": 6.87200820094011,
+   "change_1w": 13.12230834098376,
+   "change_1m": 28.8456523453303,
+   "alpha_staked": 2936293.336609274,
+   "alpha_in_pool": 1714572.034558677,
+   "total_alpha": 5851298.345827626,
+   "pool_rank": 1,
+   "coingecko_id": "celium",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/51",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/51",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/51",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN51-USD",
+     "pair": "SN51/USD",
+     "note": "Spot market",
+     "source": "stated"
+    },
+    {
+     "name": "MEXC",
+     "kind": "exchange",
+     "url": "https://www.mexc.com/exchange/SN51_USDT",
+     "pair": "SN51/USDT",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "15": {
+   "netuid": 15,
+   "name": "ORO",
+   "symbol": "ο",
+   "price_tao": 0.033738189,
+   "price_usd": 8.4619920261213,
+   "market_cap_tao": 56186.723309242,
+   "market_cap_usd": 14092386.660608534,
+   "liquidity_tao": 30823.415681329,
+   "volume_24h_tao": 8083.670240949,
+   "change_1d": -5.38847449178138,
+   "change_1w": -5.36888202506878,
+   "change_1m": 51.5158233854009,
+   "alpha_staked": 1208571.452529202,
+   "alpha_in_pool": 456803.156322585,
+   "total_alpha": 2016824.357238777,
+   "pool_rank": 21,
+   "coingecko_id": "bitquant",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/15",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/15",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/15",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "120": {
+   "netuid": 120,
+   "name": "Affine",
+   "symbol": "ⴷ",
+   "price_tao": 0.053145276,
+   "price_usd": 13.329550727752922,
+   "market_cap_tao": 214295.799925392,
+   "market_cap_usd": 53748271.73444172,
+   "liquidity_tao": 162130.845907,
+   "volume_24h_tao": 2366.49450816,
+   "change_1d": 1.366548251494774,
+   "change_1w": -0.960407905705629,
+   "change_1m": -12.66109297948712,
+   "alpha_staked": 2506909.097106367,
+   "alpha_in_pool": 1525355.217889236,
+   "total_alpha": 4193710.174283182,
+   "pool_rank": 5,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/120",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/120",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/120",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "64": {
+   "netuid": 64,
+   "name": "Chutes",
+   "symbol": "ش",
+   "price_tao": 0.072900853,
+   "price_usd": 18.284515413184774,
+   "market_cap_tao": 429619.095815321,
+   "market_cap_usd": 107754253.29020147,
+   "liquidity_tao": 410012.076955063,
+   "volume_24h_tao": 2808.939708485,
+   "change_1d": -0.3377730718192465,
+   "change_1w": -1.961605628483777,
+   "change_1m": -15.38028248075922,
+   "alpha_staked": 3081075.836544993,
+   "alpha_in_pool": 2812121.26795694,
+   "total_alpha": 6155041.867597256,
+   "pool_rank": 2,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/64",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/64",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/64",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN64-USD",
+     "pair": "SN64/USD",
+     "note": "Spot market",
+     "source": "stated"
+    },
+    {
+     "name": "MEXC",
+     "kind": "exchange",
+     "url": "https://www.mexc.com/exchange/SN64_USDT",
+     "pair": "SN64/USDT",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "97": {
+   "netuid": 97,
+   "name": "Albedo",
+   "symbol": "ა",
+   "price_tao": 0.023521927,
+   "price_usd": 5.899615972659567,
+   "market_cap_tao": 37586.778422349,
+   "market_cap_usd": 9427270.067682216,
+   "liquidity_tao": 25495.548989746,
+   "volume_24h_tao": 730.210403789,
+   "change_1d": 0.2425697020857611,
+   "change_1w": 2.09908859721268,
+   "change_1m": -4.89041560332525,
+   "alpha_staked": 1055993.468268315,
+   "alpha_in_pool": 541952.925424224,
+   "total_alpha": 1664876.280809717,
+   "pool_rank": 29,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/97",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/97",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/97",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "4": {
+   "netuid": 4,
+   "name": "Targon",
+   "symbol": "δ",
+   "price_tao": 0.058428924,
+   "price_usd": 14.654760781109129,
+   "market_cap_tao": 328644.566101452,
+   "market_cap_usd": 82428481.79487586,
+   "liquidity_tao": 280932.211732909,
+   "volume_24h_tao": 1500.608839518,
+   "change_1d": 0.2836140799894548,
+   "change_1w": 4.58563751597252,
+   "change_1m": 3.234783614106608,
+   "alpha_staked": 3220638.806842384,
+   "alpha_in_pool": 2404050.877695576,
+   "total_alpha": 6171631.354845998,
+   "pool_rank": 3,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/4",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/4",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/4",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "44": {
+   "netuid": 44,
+   "name": "Score",
+   "symbol": "ף",
+   "price_tao": 0.039693612,
+   "price_usd": 9.955692293737306,
+   "market_cap_tao": 215503.936894461,
+   "market_cap_usd": 54051288.75170735,
+   "liquidity_tao": 137591.020645146,
+   "volume_24h_tao": 4277.686666352,
+   "change_1d": 2.165963272503487,
+   "change_1w": 4.66366981561648,
+   "change_1m": -4.60508814526508,
+   "alpha_staked": 3696021.070668934,
+   "alpha_in_pool": 1733163.27502531,
+   "total_alpha": 5915640.459675214,
+   "pool_rank": 4,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/44",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/44",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/44",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN44-USD",
+     "pair": "SN44/USD",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "80": {
+   "netuid": 80,
+   "name": "OpenRoboto",
+   "symbol": "ى",
+   "price_tao": 0.016489465,
+   "price_usd": 4.135779823422243,
+   "market_cap_tao": 32352.493643235,
+   "market_cap_usd": 8114440.974712502,
+   "liquidity_tao": 6655.888021977,
+   "volume_24h_tao": 3846.993485454,
+   "change_1d": 3.363147266109628,
+   "change_1w": 15.15607121946205,
+   "change_1m": 10.98933747581327,
+   "alpha_staked": 1760187.457125249,
+   "alpha_in_pool": 201822.446970203,
+   "total_alpha": 2217670.921360978,
+   "pool_rank": 33,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/80",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/80",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/80",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "114": {
+   "netuid": 114,
+   "name": "SOMA",
+   "symbol": "Є",
+   "price_tao": 0.013035791,
+   "price_usd": 3.269551886622717,
+   "market_cap_tao": 22811.633641279,
+   "market_cap_usd": 5721464.835451106,
+   "liquidity_tao": 12664.754546591,
+   "volume_24h_tao": 805.108035479,
+   "change_1d": 0.1039220694291267,
+   "change_1w": 0.4389071862123739,
+   "change_1m": 13.41222900276288,
+   "alpha_staked": 1264154.611120253,
+   "alpha_in_pool": 485768.630306295,
+   "total_alpha": 2120168.480124578,
+   "pool_rank": 44,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/114",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/114",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/114",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "3": {
+   "netuid": 3,
+   "name": "Teutonic",
+   "symbol": "γ",
+   "price_tao": 0.029360024,
+   "price_usd": 7.363889299888918,
+   "market_cap_tao": 159592.945052593,
+   "market_cap_usd": 40028059.25535175,
+   "liquidity_tao": 161127.359477289,
+   "volume_24h_tao": 2485.52700838,
+   "change_1d": -0.1799784795553226,
+   "change_1w": 4.384111314897773,
+   "change_1m": 15.13935831429215,
+   "alpha_staked": 2691730.26917374,
+   "alpha_in_pool": 2743992.298784422,
+   "total_alpha": 6000519.967894375,
+   "pool_rank": 6,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/3",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/3",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/3",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "MEXC",
+     "kind": "exchange",
+     "url": "https://www.mexc.com/exchange/SN3_USDT",
+     "pair": "SN3/USDT",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "8": {
+   "netuid": 8,
+   "name": "Vanta",
+   "symbol": "θ",
+   "price_tao": 0.027549878,
+   "price_usd": 6.909880312681117,
+   "market_cap_tao": 143858.158698363,
+   "market_cap_usd": 36081562.99669909,
+   "liquidity_tao": 157406.696283019,
+   "volume_24h_tao": 702.132047116,
+   "change_1d": 0.588623131717789,
+   "change_1w": -1.841525273300413,
+   "change_1m": -7.76949838436889,
+   "alpha_staked": 2364976.389533785,
+   "alpha_in_pool": 2856758.483425114,
+   "total_alpha": 5999589.360232852,
+   "pool_rank": 7,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/8",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/8",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/8",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN8-USD",
+     "pair": "SN8/USD",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "9": {
+   "netuid": 9,
+   "name": "iota",
+   "symbol": "ι",
+   "price_tao": 0.027618086,
+   "price_usd": 6.926987797380953,
+   "market_cap_tao": 133994.366018343,
+   "market_cap_usd": 33607590.99406306,
+   "liquidity_tao": 112036.91905116,
+   "volume_24h_tao": 1480.125667397,
+   "change_1d": -3.114498885178235,
+   "change_1w": -7.52751414521945,
+   "change_1m": -17.29802115364979,
+   "alpha_staked": 2823363.873993916,
+   "alpha_in_pool": 2028325.197375606,
+   "total_alpha": 6029593.514573839,
+   "pool_rank": 8,
+   "coingecko_id": "iota-2",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/9",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/9",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/9",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "53": {
+   "netuid": 53,
+   "name": "engy",
+   "symbol": "ب",
+   "price_tao": 0.023899994,
+   "price_usd": 5.994440266261681,
+   "market_cap_tao": 129850.189845856,
+   "market_cap_usd": 32568175.816015806,
+   "liquidity_tao": 62334.776750493,
+   "volume_24h_tao": 4490.736949741,
+   "change_1d": -5.70069804385321,
+   "change_1w": -20.95269947260554,
+   "change_1m": -22.84787731376127,
+   "alpha_staked": 4128988.541454993,
+   "alpha_in_pool": 1304075.15914075,
+   "total_alpha": 5942967.34053197,
+   "pool_rank": 9,
+   "coingecko_id": "efficientfrontier",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/53",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/53",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/53",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "93": {
+   "netuid": 93,
+   "name": "Bitcast",
+   "symbol": "ᚃ",
+   "price_tao": 0.020761503,
+   "price_usd": 5.207264469242657,
+   "market_cap_tao": 82539.016379548,
+   "market_cap_usd": 20701896.549563777,
+   "liquidity_tao": 49277.983174023,
+   "volume_24h_tao": 3414.525932155,
+   "change_1d": 3.441920221361642,
+   "change_1w": 20.87593426082789,
+   "change_1m": 115.8253949261626,
+   "alpha_staked": 2788816.634632844,
+   "alpha_in_pool": 1186763.378988907,
+   "total_alpha": 5042227.688922184,
+   "pool_rank": 16,
+   "coingecko_id": "bitcast",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/93",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/93",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/93",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "68": {
+   "netuid": 68,
+   "name": "NOVA",
+   "symbol": "ظ",
+   "price_tao": 0.021737186,
+   "price_usd": 5.451978901485066,
+   "market_cap_tao": 110225.538244916,
+   "market_cap_usd": 27646048.98334666,
+   "liquidity_tao": 88504.942419567,
+   "volume_24h_tao": 1371.624053122,
+   "change_1d": -1.411271266219129,
+   "change_1w": -2.387167253310116,
+   "change_1m": -9.89635620367834,
+   "alpha_staked": 3035032.556535438,
+   "alpha_in_pool": 2035795.757898489,
+   "total_alpha": 5741251.084033406,
+   "pool_rank": 10,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/68",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/68",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/68",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "28": {
+   "netuid": 28,
+   "name": "SayGM",
+   "symbol": "ד",
+   "price_tao": 0.019930207,
+   "price_usd": 4.998764240515308,
+   "market_cap_tao": 93515.376270208,
+   "market_cap_usd": 23454915.387374025,
+   "liquidity_tao": 43056.857016301,
+   "volume_24h_tao": 4653.384364315,
+   "change_1d": -11.08630307424502,
+   "change_1w": -1.623297454098589,
+   "change_1m": 14.20304379752979,
+   "alpha_staked": 3611951.819713407,
+   "alpha_in_pool": 1080190.929742682,
+   "total_alpha": 6040492.304547866,
+   "pool_rank": 12,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/28",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/28",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/28",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "91": {
+   "netuid": 91,
+   "name": "cascade",
+   "symbol": "ᚁ",
+   "price_tao": 0.008355681,
+   "price_usd": 2.095717289236042,
+   "market_cap_tao": 10477.718926621,
+   "market_cap_usd": 2627952.970712421,
+   "liquidity_tao": 7991.24950915,
+   "volume_24h_tao": 1708.222633444,
+   "change_1d": 1.32180529464235,
+   "change_1w": -9.58086599212601,
+   "change_1m": -8.2130286012575,
+   "alpha_staked": 775770.881409371,
+   "alpha_in_pool": 478192.610808858,
+   "total_alpha": 1649890.242218229,
+   "pool_rank": 90,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/91",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/91",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/91",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "110": {
+   "netuid": 110,
+   "name": "Green Compute",
+   "symbol": "Ѐ",
+   "price_tao": 0.012544257,
+   "price_usd": 3.146268541788544,
+   "market_cap_tao": 35616.796588593,
+   "market_cap_usd": 8933172.101462182,
+   "liquidity_tao": 14439.360028217,
+   "volume_24h_tao": 3018.989019177,
+   "change_1d": 2.770090387326505,
+   "change_1w": -0.771332045591411,
+   "change_1m": 73.5441968336027,
+   "alpha_staked": 2263754.362861829,
+   "alpha_in_pool": 575536.683917068,
+   "total_alpha": 3477066.136778897,
+   "pool_rank": 31,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/110",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/110",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/110",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "75": {
+   "netuid": 75,
+   "name": "Hippius",
+   "symbol": "م",
+   "price_tao": 0.018447743,
+   "price_usd": 4.626942310564892,
+   "market_cap_tao": 87929.333682313,
+   "market_cap_usd": 22053860.700166553,
+   "liquidity_tao": 68330.958567233,
+   "volume_24h_tao": 2245.397923113,
+   "change_1d": 1.698086215797768,
+   "change_1w": 4.212372725307882,
+   "change_1m": -2.040915267503501,
+   "alpha_staked": 2914386.563250739,
+   "alpha_in_pool": 1852014.057264933,
+   "total_alpha": 5528111.052324806,
+   "pool_rank": 14,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/75",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/75",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/75",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN75-USD",
+     "pair": "SN75/USD",
+     "note": "Spot market",
+     "source": "stated"
+    },
+    {
+     "name": "MEXC",
+     "kind": "exchange",
+     "url": "https://www.mexc.com/exchange/SN75_USDT",
+     "pair": "SN75/USDT",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "58": {
+   "netuid": 58,
+   "name": "greevils",
+   "symbol": "خ",
+   "price_tao": 0.008388468,
+   "price_usd": 2.103940710254889,
+   "market_cap_tao": 4528.826761146,
+   "market_cap_usd": 1135890.7243213973,
+   "liquidity_tao": 2009.97399679,
+   "volume_24h_tao": 222.945460611,
+   "change_1d": 13.79935557994752,
+   "change_1w": -6.14038994097737,
+   "change_1m": -4.74266055212561,
+   "alpha_staked": 420081.451395742,
+   "alpha_in_pool": 119805.77963933,
+   "total_alpha": 619072.450042777,
+   "pool_rank": 112,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/58",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/58",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/58",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "38": {
+   "netuid": 38,
+   "name": "ChronoLLM",
+   "symbol": "ם",
+   "price_tao": 0.007915121,
+   "price_usd": 1.9852189098764386,
+   "market_cap_tao": 13545.684044679,
+   "market_cap_usd": 3397439.9270343822,
+   "liquidity_tao": 9687.115837138,
+   "volume_24h_tao": 753.317491798,
+   "change_1d": 4.490584175944933,
+   "change_1w": -4.247290566379204,
+   "change_1m": -32.14566777929496,
+   "alpha_staked": 1099430.532274365,
+   "alpha_in_pool": 611937.372863032,
+   "total_alpha": 2193340.03110972,
+   "pool_rank": 75,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/38",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/38",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/38",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "56": {
+   "netuid": 56,
+   "name": "Gradients",
+   "symbol": "ج",
+   "price_tao": 0.016246201,
+   "price_usd": 4.0747659371036145,
+   "market_cap_tao": 83291.210607685,
+   "market_cap_usd": 20890556.988942716,
+   "liquidity_tao": 102526.147736633,
+   "volume_24h_tao": 739.061196781,
+   "change_1d": -0.850456496646772,
+   "change_1w": 0.904821707621866,
+   "change_1m": -4.66806754247811,
+   "alpha_staked": 1971423.236658582,
+   "alpha_in_pool": 3155388.293476079,
+   "total_alpha": 5957978.384776574,
+   "pool_rank": 15,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/56",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/56",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/56",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "118": {
+   "netuid": 118,
+   "name": "Ditto",
+   "symbol": "ⲁ",
+   "price_tao": 0.00824733,
+   "price_usd": 2.0685413996818554,
+   "market_cap_tao": 21984.577708091,
+   "market_cap_usd": 5514028.0725651905,
+   "liquidity_tao": 13094.840037901,
+   "volume_24h_tao": 1470.803007646,
+   "change_1d": 2.107158828158312,
+   "change_1w": -11.20617817484157,
+   "change_1m": -9.2023036392599,
+   "alpha_staked": 1871776.397165215,
+   "alpha_in_pool": 793883.605295179,
+   "total_alpha": 2976533.202889413,
+   "pool_rank": 49,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/118",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/118",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/118",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "124": {
+   "netuid": 124,
+   "name": "Swarm",
+   "symbol": "𑀁",
+   "price_tao": 0.011521606,
+   "price_usd": 2.889773902805255,
+   "market_cap_tao": 44014.553243438,
+   "market_cap_usd": 11039442.531407472,
+   "liquidity_tao": 26159.763416211,
+   "volume_24h_tao": 1893.173521893,
+   "change_1d": 4.324224918840819,
+   "change_1w": 0.924300944798336,
+   "change_1m": 14.82297502729157,
+   "alpha_staked": 2684927.037242409,
+   "alpha_in_pool": 1135248.140023544,
+   "total_alpha": 4702697.898104856,
+   "pool_rank": 25,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/124",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/124",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/124",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "61": {
+   "netuid": 61,
+   "name": "RedTeam",
+   "symbol": "ر",
+   "price_tao": 0.013929616,
+   "price_usd": 3.4937352303922324,
+   "market_cap_tao": 73185.396209647,
+   "market_cap_usd": 18355882.68103427,
+   "liquidity_tao": 30573.957029339,
+   "volume_24h_tao": 1738.80063764,
+   "change_1d": 1.440125372673476,
+   "change_1w": 16.09249718428346,
+   "change_1m": 57.7329671442118,
+   "alpha_staked": 4156497.741502591,
+   "alpha_in_pool": 1097444.377910274,
+   "total_alpha": 6035228.91144094,
+   "pool_rank": 17,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/61",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/61",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/61",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "83": {
+   "netuid": 83,
+   "name": "CliqueAI",
+   "symbol": "ᚦ",
+   "price_tao": 0.009149058,
+   "price_usd": 2.294706922251259,
+   "market_cap_tao": 30881.009059469,
+   "market_cap_usd": 7745372.830171954,
+   "liquidity_tao": 16625.784528989,
+   "volume_24h_tao": 39.73924827,
+   "change_1d": -0.652632813416207,
+   "change_1w": -5.99480935171559,
+   "change_1m": -13.69617624319545,
+   "alpha_staked": 2466714.834424464,
+   "alpha_in_pool": 908606.325357157,
+   "total_alpha": 3700697.921879261,
+   "pool_rank": 35,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/83",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/83",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/83",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "5": {
+   "netuid": 5,
+   "name": "Hone",
+   "symbol": "ε",
+   "price_tao": 0.012820321,
+   "price_usd": 3.215509109701041,
+   "market_cap_tao": 54728.281048573,
+   "market_cap_usd": 13726589.70629248,
+   "liquidity_tao": 66791.334540726,
+   "volume_24h_tao": 84.325389626,
+   "change_1d": -0.1089579840902955,
+   "change_1w": 0.3030610053447988,
+   "change_1m": -6.32740353882117,
+   "alpha_staked": 1663968.845695318,
+   "alpha_in_pool": 2604900.946923253,
+   "total_alpha": 5740924.574359426,
+   "pool_rank": 22,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/5",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/5",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/5",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "90": {
+   "netuid": 90,
+   "name": "KubeTEE",
+   "symbol": "テ",
+   "price_tao": 0.031141874,
+   "price_usd": 7.810801269341227,
+   "market_cap_tao": 10894.045656076,
+   "market_cap_usd": 2732373.3195612985,
+   "liquidity_tao": 4346.7230635,
+   "volume_24h_tao": 1899.038181726,
+   "change_1d": 12.58354098034697,
+   "change_1w": -0.785878927188418,
+   "change_1m": 16.29180376218316,
+   "alpha_staked": 280030.808514408,
+   "alpha_in_pool": 69789.040351346,
+   "total_alpha": 349819.848865754,
+   "pool_rank": 88,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/90",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/90",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/90",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "34": {
+   "netuid": 34,
+   "name": "BitMind",
+   "symbol": "י",
+   "price_tao": 0.011765317,
+   "price_usd": 2.9508999027419454,
+   "market_cap_tao": 61844.074864432,
+   "market_cap_usd": 15511326.596862454,
+   "liquidity_tao": 69122.449901771,
+   "volume_24h_tao": 130.707283624,
+   "change_1d": -0.2656938489369025,
+   "change_1w": -2.941666832344724,
+   "change_1m": -3.866481535303665,
+   "alpha_staked": 2318921.839522164,
+   "alpha_in_pool": 2937551.476448164,
+   "total_alpha": 5604801.08435633,
+   "pool_rank": 18,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/34",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/34",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/34",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "62": {
+   "netuid": 62,
+   "name": "Ridges",
+   "symbol": "ز",
+   "price_tao": 0.010995635,
+   "price_usd": 2.757853294737909,
+   "market_cap_tao": 58312.131628103,
+   "market_cap_usd": 14625467.681835063,
+   "liquidity_tao": 60479.976837166,
+   "volume_24h_tao": 1103.799408603,
+   "change_1d": 0.4240398801520403,
+   "change_1w": 0.762876169989206,
+   "change_1m": -9.31868078217131,
+   "alpha_staked": 2553026.130420326,
+   "alpha_in_pool": 2750181.15393421,
+   "total_alpha": 5452273.007734124,
+   "pool_rank": 19,
+   "coingecko_id": null,
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/62",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/62",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/62",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "Kraken",
+     "kind": "exchange",
+     "url": "https://pro.kraken.com/app/trade/SN62-USD",
+     "pair": "SN62/USD",
+     "note": "Spot market",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  },
+  "19": {
+   "netuid": 19,
+   "name": "blockmachine",
+   "symbol": "t",
+   "price_tao": 0.010274536,
+   "price_usd": 2.576991957217865,
+   "market_cap_tao": 50786.596970943,
+   "market_cap_usd": 12737962.271832546,
+   "liquidity_tao": 64987.246694146,
+   "volume_24h_tao": 611.486674136,
+   "change_1d": 0.709566468620079,
+   "change_1w": -0.02188427606493665,
+   "change_1m": 0.694139816623526,
+   "alpha_staked": 1780418.585220462,
+   "alpha_in_pool": 3162539.127998303,
+   "total_alpha": 5934509.202857543,
+   "pool_rank": 23,
+   "coingecko_id": "nineteen-ai",
+   "venues": [
+    {
+     "name": "tao.app",
+     "kind": "on-chain",
+     "url": "https://tao.app/subnets/19",
+     "note": "Stake TAO into the subnet pool; the official Bittensor app",
+     "source": "stated"
+    },
+    {
+     "name": "Taostats",
+     "kind": "on-chain",
+     "url": "https://taostats.io/subnets/19",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    },
+    {
+     "name": "TaoMarketCap",
+     "kind": "on-chain",
+     "url": "https://taomarketcap.com/subnets/19",
+     "note": "Pool stats and staking",
+     "source": "stated"
+    }
+   ],
+   "as_of": "2026-09-10T02:40:12Z"
+  }
+ }
+}

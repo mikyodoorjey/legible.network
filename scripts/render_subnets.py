@@ -149,7 +149,8 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name):
         "score_rows": score_rows, "prevnext": prevnext,
         "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml&title=%5BCorrection%5D%20SN{sub['netuid']}%20{e(sub['name']).replace(' ', '%20')}",
         "mail_subject": f"[SLI] Correction: SN{sub['netuid']} {sub['name']}".replace(" ", "%20"),
-        "json": json.dumps(sub, ensure_ascii=False).replace("</", "<\\/"),
+        "alpha_row": (lambda t: f'<div class="row"><span>Alpha token</span><a href="/alpha/{sub["netuid"]}/"><b style="font-family:var(--mono);font-weight:500">{e(t.get("symbol") or "α")}</b> {(t.get("price_tao") or 0):.4f} τ · {len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"])} exchange{"s" if len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"]) != 1 else ""}</a></div>' if t else "")(sub.get("alpha") or {}),
+        "json": json.dumps({k: v for k, v in sub.items() if k != "alpha"}, ensure_ascii=False).replace("</", "<\\/"),
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
     }
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)

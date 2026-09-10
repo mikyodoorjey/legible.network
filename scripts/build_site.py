@@ -273,7 +273,11 @@ def main():
         summary = {k: v for k, v in data.items() if k != "subnets"}
         summary["subnets"] = []
         for sub in data["subnets"]:
-            lite = {k: v for k, v in sub.items() if k not in ("audiences", "identity_check", "corrections", "claim_labels", "notes", "owner")}
+            lite = {k: v for k, v in sub.items() if k not in ("audiences", "identity_check", "corrections", "claim_labels", "notes", "owner", "alpha")}
+            t = sub.get("alpha") or {}
+            lite["alpha"] = {"symbol": t.get("symbol"), "price_tao": t.get("price_tao"), "price_usd": t.get("price_usd"),
+                             "market_cap_tao": t.get("market_cap_tao"), "change_1d": t.get("change_1d"),
+                             "exchanges": sorted({v["name"] for v in (t.get("venues") or []) if v["kind"] == "exchange"})} if t else None
             lite["audiences"] = {a: {"score": v["score"], "rank": v.get("rank"), "partial": v.get("partial", False),
                                      "cells": [{"q": c["q"], "score": c["score"], "status": c.get("status", ""), "url": c.get("url", ""),
                                                 "note": (c.get("note") or "")[:220], "link": c.get("link", "")} for c in v["cells"]]}
@@ -303,6 +307,8 @@ def main():
         parts["robots"] = ctx["robots"]
         sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed)
         changed += sub_changed
+        from render_alpha import build_alpha
+        changed += build_alpha(data, parts, SITE, write_if_changed)
         p = REPO / "index.html"
         s = p.read_text(encoding="utf-8")
         s2 = inject(s, "chart", chart_html)
@@ -313,6 +319,8 @@ def main():
     urls = ["/", "/rubric/", "/methodology/", "/about/"]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
+        if any(s.get("alpha") for s in data.get("subnets", [])):
+            urls += ["/alpha/"] + [f"/alpha/{s['netuid']}/" for s in data.get("subnets", [])]
     lastmod = ctx["snapshot"] if ctx["snapshot"] != "pending" else TODAY
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE}{u}</loc><lastmod>{lastmod}</lastmod></url>\n" for u in urls) + "</urlset>\n"

@@ -47,6 +47,8 @@ def main():
     pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html"]
     if data:
         pages += ["sn/index.html"] + [f"sn/{s['netuid']}/index.html" for s in data["subnets"]]
+        if any(s.get("alpha") for s in data["subnets"]):
+            pages += ["alpha/index.html"] + [f"alpha/{s['netuid']}/index.html" for s in data["subnets"]]
     for rel in pages:
         p = REPO / rel
         if not p.exists():
@@ -85,6 +87,8 @@ def main():
                     fails.append(f"summary.json carries provenance for SN{s['netuid']}")
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/rubric/", f"{SITE}/methodology/", f"{SITE}/about/", f"{SITE}/sn/"}
+        if any(s.get("alpha") for s in data["subnets"]):
+            want |= {f"{SITE}/alpha/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/alpha/"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))
         if want != have:
             fails.append(f"sitemap mismatch: missing {sorted(want - have)[:3]} extra {sorted(have - want)[:3]}")
