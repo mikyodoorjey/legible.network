@@ -168,13 +168,17 @@ def sdk_identity(sub, netuid):
 def sdk_extras(sub, netuid, deep):
     extra = {}
     try:
-        extra["registration_cost_tao"] = float(sub.subnets.burn(netuid=netuid))
-    except Exception:
-        pass
+        b = sub.subnets.burn(netuid=netuid)
+        extra["registration_cost_tao"] = float(getattr(b, "tao", b))
+    except Exception as e:  # noqa
+        print(f"  sdk burn {netuid}: {str(e)[:60]}", file=sys.stderr)
     try:
-        extra["alpha_price_tao"] = float(sub.prices.alpha_price(netuid=netuid))
-    except Exception:
-        pass
+        p = sub.prices.alpha_price(netuid=netuid)
+        if isinstance(p, dict):
+            p = p.get("tao_per_alpha", p.get("price"))
+        extra["alpha_price_tao"] = float(getattr(p, "tao", p))
+    except Exception as e:  # noqa
+        print(f"  sdk price {netuid}: {str(e)[:60]}", file=sys.stderr)
     if deep:
         try:
             mg = sub.subnets.metagraph(netuid=netuid)

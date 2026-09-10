@@ -1,0 +1,43 @@
+/* Long-document layout for the rubric and methodology pages. */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--teal);z-index:20;transition:width .1s linear}
+.doc{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start;padding-top:36px}
+.toc{position:sticky;top:24px;font-size:13px;max-height:calc(100vh - 48px);overflow:auto;padding-right:8px}
+.toc .mono{margin-bottom:10px;display:block}
+.toc a{display:block;color:var(--soft);padding:4px 0 4px 10px;border-left:2px solid var(--rule);line-height:1.35}
+.toc a.active{color:var(--ink);border-left-color:var(--teal)}
+.toc a:hover{text-decoration:none;color:var(--ink)}
+.prose{max-width:74ch}
+.prose section{scroll-margin-top:24px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--rule)}
+.prose section:last-child{border-bottom:0}
+.prose h2{margin:0 0 12px}
+.prose h3{margin:22px 0 8px}
+.prose p{margin:0 0 14px;color:var(--ink-soft)}
+.prose ul,.prose ol{padding-left:22px;color:var(--ink-soft)}
+.prose li{margin:4px 0}
+.prose strong{color:var(--ink);font-weight:600}
+.prose code{font-family:var(--mono);font-size:12.5px;background:var(--paper-deep);padding:1px 5px;border-radius:3px}
+.prose pre{background:var(--paper-deep);padding:12px 14px;border-radius:6px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.prose .kicker{display:block;margin-bottom:6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.table-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;margin:14px 0 18px;background:var(--paper)}
+.table-wrap table{width:100%;border-collapse:collapse;font-size:14px}
+.table-wrap th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);padding:10px 12px;border-bottom:1px solid var(--rule-strong);white-space:nowrap}
+.table-wrap td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-soft)}
+.table-wrap tr:last-child td{border-bottom:0}
+.table-wrap td:first-child{color:var(--ink);font-weight:500;white-space:nowrap}
+h2 a.anchor{opacity:0;margin-left:8px;font-size:14px;color:var(--softer)}
+h2:hover a.anchor{opacity:1}
+@media (max-width:900px){
+  .doc{grid-template-columns:1fr;gap:20px}
+  .toc{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:4px 14px;padding:0 0 12px;border-bottom:1px solid var(--rule)}
+  .toc .mono{width:100%}
+  .toc a{border-left:0;padding:2px 0}
+}
+@media (max-width:600px){
+  .table-wrap:not(.data-table) table,.table-wrap:not(.data-table) tbody,.table-wrap:not(.data-table) tr,.table-wrap:not(.data-table) td{display:block}
+  .table-wrap:not(.data-table) thead{display:none}
+  .table-wrap:not(.data-table) tr{padding:10px 12px;border-bottom:1px solid var(--rule)}
+  .table-wrap:not(.data-table) td{padding:2px 0;border:0;white-space:normal}
+  .table-wrap:not(.data-table) td::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);margin-top:6px}
+  .table-wrap:not(.data-table) td:first-child::before{display:none}
+}
