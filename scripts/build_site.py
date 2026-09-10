@@ -293,6 +293,18 @@ def main():
             p.write_text(s2, encoding="utf-8")
             changed.append(name)
 
+    if data:
+        from render_subnets import build_all
+        parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
+        sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed)
+        changed += sub_changed
+        p = REPO / "index.html"
+        s = p.read_text(encoding="utf-8")
+        s2 = inject(s, "chart", chart_html)
+        if s2 != s:
+            p.write_text(s2, encoding="utf-8")
+            changed.append("index.html chart")
+
     urls = ["/", "/rubric/", "/methodology/", "/about/"]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
