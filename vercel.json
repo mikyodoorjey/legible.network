@@ -1,5 +1,16 @@
 {
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/learn",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/learn/:path*",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

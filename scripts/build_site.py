@@ -154,7 +154,7 @@ def partial(name, ctx):
 
 def nav_ctx(active, ctx):
     c = dict(ctx)
-    for k in ("index", "learn", "rubric", "methodology", "about"):
+    for k in ("index", "rubric", "methodology", "about"):
         c[f"cur_{k}"] = ' aria-current="page"' if k == active else ""
     return c
 
@@ -310,7 +310,7 @@ def main():
 
     if data:
         from render_subnets import build_all
-        from render_learn import EXPLAINER_CSS, load_entries, load_glossary, render_entry_block, render_learn, render_placeholder
+        from render_learn import EXPLAINER_CSS, load_entries, load_glossary, render_entry_block, render_placeholder
         from render_alpha import head as alpha_head
         parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
         parts["robots"] = ctx["robots"]
@@ -323,10 +323,6 @@ def main():
         for sub in data["subnets"]:
             ent = entries.get(sub["netuid"])
             explainers[sub["netuid"]] = ((render_entry_block(ent, terms, inline, sub) if ent else render_placeholder(sub)), EXPLAINER_CSS)
-        learn_parts = dict(parts)
-        learn_parts["nav"] = partial("nav", nav_ctx("learn", ctx))
-        if write_if_changed(REPO / "learn" / "index.html", render_learn(data, entries, terms, learn_parts, SITE, inline, alpha_head)):
-            changed.append("learn/index.html")
         sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed, explainers)
         changed += sub_changed
         from render_alpha import build_alpha
@@ -338,7 +334,7 @@ def main():
             p.write_text(s2, encoding="utf-8")
             changed.append("index.html chart")
 
-    urls = ["/", "/rubric/", "/methodology/", "/about/", "/learn/"]
+    urls = ["/", "/rubric/", "/methodology/", "/about/"]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
         if any(s.get("alpha") for s in data.get("subnets", [])):

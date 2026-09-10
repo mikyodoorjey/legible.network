@@ -18,7 +18,7 @@ I hold no position in any subnet token and have not been paid by any subnet, val
 
 ## How to use it
 
-Sort the index by an audience and read the deltas: a subnet that moves a long way between its emission rank and its buyer-legibility rank is telling you something about who it has been talking to. Open a subnet page for the evidence behind every score. If a score is wrong, the [methodology](/methodology/#corrections) page says how to fix it.
+Sort the index by an audience and read the deltas: a subnet that moves a long way between its emission rank and its buyer-legibility rank is telling you something about who it has been talking to. Open a subnet page for the evidence behind every score. Every subnet page opens with a plain-language explainer, and dotted terms open a definition where you are. If a score is wrong, the [methodology](/methodology/#corrections) page says how to fix it.
 
 ## Cite
 

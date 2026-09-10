@@ -129,7 +129,6 @@ main.grid.open aside{display:block}
   <a class="wordmark" href="/">legible.network</a>
   <div class="links">
     <a href="/" aria-current="page">Index</a>
-    <a href="/learn/">Learn</a>
     <a href="/rubric/">Rubric</a>
     <a href="/methodology/">Methodology</a>
     <a href="/about/">About</a>
@@ -153,10 +152,10 @@ main.grid.open aside{display:block}
 <details class="primer wrap" id="primer">
   <summary><span class="mono">Start here</span> <span class="t">What a subnet is, and what this index measures</span><span class="chev">›</span></summary>
   <div class="body">
-    <p><b>Bittensor</b> is a network of small, independent marketplaces for digital work that share one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund. The fund is <a class="term" href="/learn/#tao">TAO</a>, a coin created at a steady rate.</p>
-    <p>A <b>subnet</b> is one booth. It is a set of rules for a single kind of work: <a class="term" href="/learn/#miner">miners</a> do the task, <a class="term" href="/learn/#validator">validators</a> score it, and pay flows by score. Each subnet has its own <a class="term" href="/learn/#alpha-token">token</a>, and since June 2026 its share of the prize fund follows that token's price, so the market decides which booths get funded.</p>
-    <p><b>This index</b> asks one question of the 32 best-funded booths: has the subnet told the people who fund it, work for it, buy from it, and encounter it what it sells, in a place they will look, in five minutes? It scores findability, not quality. Every score links to its evidence, and every subnet has a plain-language <a href="/learn/">explainer</a>.</p>
-    <p class="links"><a href="/learn/#glossary">Glossary</a> · <a href="/learn/#by-commodity">Subnets by what they make</a> · <a href="/rubric/">How scoring works</a></p>
+    <p><b>Bittensor</b> is a network of small, independent marketplaces for digital work that share one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund. The fund is <a class="term" href="#" data-term="tao">TAO</a>, a coin created at a steady rate.</p>
+    <p>A <b>subnet</b> is one booth. It is a set of rules for a single kind of work: <a class="term" href="#" data-term="miner">miners</a> do the task, <a class="term" href="#" data-term="validator">validators</a> score it, and pay flows by score. Each subnet has its own <a class="term" href="#" data-term="alpha-token">token</a>, and since June 2026 its share of the prize fund follows that token's price, so the market decides which booths get funded.</p>
+    <p><b>This index</b> asks one question of the 32 best-funded booths: has the subnet told the people who fund it, work for it, buy from it, and encounter it what it sells, in a place they will look, in five minutes? It scores findability, not quality. Every score links to its evidence, and every subnet page opens with a plain-language explainer. Dotted words open a definition.</p>
+    <p class="links"><a href="/rubric/">How scoring works</a> · <a href="/methodology/">Method and corrections</a> · <a href="/alpha/">Alpha tokens</a></p>
   </div>
 </details>
 
@@ -175,6 +174,7 @@ main.grid.open aside{display:block}
       <button class="chip" id="pinnedOnly">★ Pinned <span class="n" id="pinCount">0</span></button>
     </div>
     <div class="frow"><span class="flabel">Composite</span><span id="fBand"></span></div>
+    <div class="frow"><span class="flabel">Makes</span><span id="fComm"></span></div>
     <div class="frow"><span class="flabel">Identity</span><span id="fIdentity"></span>
       <button class="chip" data-toggle="docsOnly">Has docs</button>
       <button class="chip" data-toggle="paperOnly">Has paper</button>
@@ -235,6 +235,8 @@ main.grid.open aside{display:block}
   const AUD_LABEL = {stakers:"Stakers", miners:"Miners", buyers:"Buyers", newcomers:"Newcomers"};
   const BANDS = ["0 to 1","1 to 2","2 to 3","3 to 4","4 to 5"];
   const IDENT = ["complete","partial","empty"];
+  const COMM = ["inference","compute","training","data","agents","forecasting","storage","security","media","science","other"];
+  const commOf = r => (r.explainer && r.explainer.commodity) || "other";
   const QL = {q1:"What it is", q2:"Who it is for", q3:"Resists gaming", q4:"Identity and docs"};
   const BAND_WORD = ["sparse","thin","partial","workable","clear","exemplary"];
   const AUD_Q = {stakers:"Should I allocate here?", miners:"Can I compete, and what wins?", buyers:"Can I use this today?", newcomers:"What is this and why does it matter?"};
@@ -249,7 +251,7 @@ main.grid.open aside{display:block}
   }
 
   let data = [], meta = {}, loaded = false, loadError = null;
-  const state = {q:"", sort:"emission", band:new Set(), ident:new Set(), docsOnly:false, paperOnly:false, pinned:false, sel:null};
+  const state = {q:"", sort:"emission", band:new Set(), ident:new Set(), comm:new Set(), docsOnly:false, paperOnly:false, pinned:false, sel:null};
   let sortCol = null, sortDir = 1;
   const pins = readStore("sli.pins", {});
 
@@ -287,6 +289,7 @@ main.grid.open aside{display:block}
   function renderFilters(){
     chips($("#fBand"), BANDS, state.band, counts(r => BANDS[chipBand(r.composite)]));
     chips($("#fIdentity"), IDENT, state.ident, counts(identClass));
+    chips($("#fComm"), COMM.filter(c => data.some(r => commOf(r) === c)), state.comm, counts(commOf));
     document.querySelectorAll("[data-toggle]").forEach(b => { b.classList.toggle("on", !!state[b.dataset.toggle]); b.onclick = () => { state[b.dataset.toggle] = !state[b.dataset.toggle]; render(); }; });
     document.querySelectorAll("#seg button").forEach(b => b.classList.toggle("on", b.dataset.sort === state.sort && !sortCol));
     $("#pinnedOnly").classList.toggle("on", state.pinned);
@@ -297,6 +300,7 @@ main.grid.open aside{display:block}
     if (state.pinned && !pins[r.netuid]) return false;
     if (state.band.size && !state.band.has(BANDS[chipBand(r.composite)])) return false;
     if (state.ident.size && !state.ident.has(identClass(r))) return false;
+    if (state.comm.size && !state.comm.has(commOf(r))) return false;
     if (state.docsOnly && !(r.flags && r.flags.has_docs)) return false;
     if (state.paperOnly && !(r.flags && r.flags.has_paper)) return false;
     if (state.q){ const q = state.q.toLowerCase().trim(); const num = q.replace(/^sn\s*/, "").trim(); const hay = (r.name + " " + ((r.explainer && (r.explainer.one_sentence + " " + r.explainer.metaphor + " " + r.explainer.commodity)) || "")).toLowerCase(); if (!(hay.includes(q) || (/^\d+$/.test(num) && String(r.netuid).startsWith(num)))) return false; }
@@ -386,6 +390,7 @@ main.grid.open aside{display:block}
     if (sortCol){ p.set("col", sortCol); if (sortDir < 0) p.set("dir", "desc"); }
     if (state.band.size) p.set("band", [...state.band].join(","));
     if (state.ident.size) p.set("id", [...state.ident].join(","));
+    if (state.comm.size) p.set("makes", [...state.comm].join(","));
     if (state.docsOnly) p.set("docs", "1"); if (state.paperOnly) p.set("paper", "1"); if (state.pinned) p.set("pinned", "1");
     if (state.sel) p.set("sel", state.sel);
     const h = p.toString();
@@ -395,7 +400,7 @@ main.grid.open aside{display:block}
     const p = new URLSearchParams(location.hash.slice(1));
     state.q = p.get("q") || ""; $("#q").value = state.q;
     state.sort = p.get("sort") || "emission"; sortCol = p.get("col") || null; sortDir = p.get("dir") === "desc" ? -1 : 1;
-    state.band = new Set((p.get("band") || "").split(",").filter(Boolean)); state.ident = new Set((p.get("id") || "").split(",").filter(Boolean));
+    state.band = new Set((p.get("band") || "").split(",").filter(Boolean)); state.ident = new Set((p.get("id") || "").split(",").filter(Boolean)); state.comm = new Set((p.get("makes") || "").split(",").filter(Boolean));
     state.docsOnly = p.get("docs") === "1"; state.paperOnly = p.get("paper") === "1"; state.pinned = p.get("pinned") === "1";
     state.sel = p.get("sel") ? Number(p.get("sel")) : null;
   }
@@ -403,7 +408,7 @@ main.grid.open aside{display:block}
   $("#q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
   $("#seg").addEventListener("click", e => { const b = e.target.closest("button[data-sort]"); if (!b) return; state.sort = b.dataset.sort; sortCol = null; render(); });
   $("#pinnedOnly").addEventListener("click", () => { state.pinned = !state.pinned; render(); });
-  $("#reset").addEventListener("click", () => { state.q = ""; $("#q").value = ""; state.sort = "emission"; sortCol = null; state.band.clear(); state.ident.clear(); state.docsOnly = state.paperOnly = state.pinned = false; render(); });
+  $("#reset").addEventListener("click", () => { state.q = ""; $("#q").value = ""; state.sort = "emission"; sortCol = null; state.band.clear(); state.ident.clear(); state.comm.clear(); state.docsOnly = state.paperOnly = state.pinned = false; render(); });
   document.querySelectorAll("th").forEach(th => th.addEventListener("click", () => { const k = th.dataset.k; if (sortCol === k) sortDir = -sortDir; else { sortCol = k; sortDir = 1; } render(); }));
   $("#rows").addEventListener("click", e => {
     const star = e.target.closest("[data-star]"); if (star){ e.preventDefault(); e.stopPropagation(); togglePin(Number(star.dataset.star)); if (state.sel) showDetail(state.sel); return; }

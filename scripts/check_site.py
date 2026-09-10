@@ -44,7 +44,7 @@ def main():
     if data and data.get("rubric_version") != md_ver:
         fails.append(f"index.json rubric_version {data.get('rubric_version')} != rubric.md {md_ver}")
 
-    pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html", "learn/index.html"]
+    pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html"]
     if data:
         pages += ["sn/index.html"] + [f"sn/{s['netuid']}/index.html" for s in data["subnets"]]
         if any(s.get("alpha") for s in data["subnets"]):
@@ -86,7 +86,7 @@ def main():
                 if "claim_labels" in s or "identity_check" in s:
                     fails.append(f"summary.json carries provenance for SN{s['netuid']}")
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""
-        want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/rubric/", f"{SITE}/methodology/", f"{SITE}/about/", f"{SITE}/sn/", f"{SITE}/learn/"}
+        want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/rubric/", f"{SITE}/methodology/", f"{SITE}/about/", f"{SITE}/sn/"}
         if any(s.get("alpha") for s in data["subnets"]):
             want |= {f"{SITE}/alpha/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/alpha/"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))

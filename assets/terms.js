@@ -17,6 +17,7 @@
     return pop;
   }
   function slugOf(a) {
+    if (a.dataset.term) return a.dataset.term;
     const h = a.getAttribute("href") || "";
     const i = h.indexOf("#");
     return i >= 0 ? h.slice(i + 1) : "";
@@ -28,7 +29,7 @@
     const p = ensure();
     if (current === a && !p.hidden) return;
     current = a;
-    p.innerHTML = `<div class="tp-head"><b>${d.term}</b><a class="tp-more" href="/learn/#${s}">Full glossary</a></div><div class="tp-body">${d.html}</div>`;
+    p.innerHTML = `<div class="tp-head"><b>${d.term}</b><span class="tp-more">Glossary</span></div><div class="tp-body">${d.html}</div>`;
     p.hidden = false;
     const r = a.getBoundingClientRect();
     const w = Math.min(380, window.innerWidth - 24);

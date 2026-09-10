@@ -4,8 +4,7 @@
 Reads data/explainers/<netuid>.md (front matter plus seven fixed sections and Sources)
 and data/explainers/glossary.md. Renders:
   - the explainer block placed at the top of each subnet page
-  - /learn/ (glossary, entries by commodity, alphabetical list)
-  - the glossary auto-links: first use of each term in an entry links to /learn/#term
+  - the glossary auto-links: first use of each term in an entry opens a definition card (assets/terms.js)
 """
 import html
 import re
@@ -137,7 +136,7 @@ class Linker:
             pat = re.compile(r"(?<![\w/#-])(" + re.escape(t) + r"s?)(?![\w-])(?![^<]*>)(?![^<]*</a>)", re.I)
             m = pat.search(out)
             if m:
-                out = out[:m.start()] + f'<a class="term" href="/learn/#{slug(t)}">{m.group(1)}</a>' + out[m.end():]
+                out = out[:m.start()] + f'<a class="term" href="#" data-term="{slug(t)}">{m.group(1)}</a>' + out[m.end():]
                 self.used.add(t)
         return out
 
