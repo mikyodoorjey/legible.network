@@ -11,6 +11,8 @@ Live at [legible.network](https://legible.network). Rubric at [/rubric/](https:/
 | `index.html` | The ranked index. Fetches `/data/summary.json`. |
 | `rubric.md`, `methodology.md`, `about.md` | Source of truth for the three document pages, rendered by the build. |
 | `sn/<netuid>/` | One page per subnet, generated. |
+| `alpha/<netuid>/` | One page per alpha token: price, pool stats, and where it trades, generated. |
+| `data/tokens-<date>.json` | Alpha token snapshot: Taostats pool data, Kraken and MEXC pairs, CoinGecko tickers. |
 | `data/index.json` | The published dataset (CC BY 4.0). `summary.json` is the same minus evidence. |
 | `data/chain-<date>.json` | Raw chain snapshots. `subnets.csv` is the frozen target list. |
 | `data/scores-{a,b,c,d}.csv` | Agent output per slice. `scores.csv` is the merged, reviewed source of truth. |
@@ -23,6 +25,7 @@ Live at [legible.network](https://legible.network). Rubric at [/rubric/](https:/
 cp .env.example .env            # add TAOSTATS_API_KEY
 python3 -m venv .venv && .venv/bin/pip install bittensor   # optional, for chain identities
 .venv/bin/python scripts/pull_chain.py            # snapshot, freeze targets, slices, stubs (first run)
+python3 scripts/pull_tokens.py                    # alpha token prices, pool stats, exchange listings
 # run four scoring agents with agents/PROMPT.md, one per slice
 python3 scripts/merge_scores.py                   # scores-*.csv -> scores.csv, recompute
 python3 scripts/verify_links.py --apply           # check every URL, downgrade unreachable
