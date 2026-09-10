@@ -18,101 +18,104 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-.hero{padding:44px 0 26px}
-.hero .demo{margin-top:16px;display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px}
-.hero .demo a{border-bottom:1px solid var(--rule-strong);padding-bottom:1px}
-.hero .demo a:hover{text-decoration:none;border-color:var(--teal)}
+.hero{padding:52px 0 26px}
+.hero .demo{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero .demo a{color:var(--soft);border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
+.hero .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--tag)}
+.hero .stats{display:flex;gap:40px;margin-top:26px}
+.hero .stats b{display:block;font-family:var(--pix);font-size:26px;letter-spacing:.04em;line-height:1}
+.hero .stats span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
 .controls{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);padding:12px 0}
-.controls .wrap{display:flex;flex-direction:column;gap:10px}
+.controls .wrap{display:flex;flex-direction:column;gap:9px}
 .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.search{flex:1 1 240px;min-width:180px;padding:8px 12px;border:1px solid var(--rule-strong);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px}
-.search:focus{outline:2px solid var(--teal);outline-offset:1px}
-.seg button[data-sort=stakers].on{--accent:var(--a-stakers)}.seg button[data-sort=miners].on{--accent:var(--a-miners)}
-.seg button[data-sort=buyers].on{--accent:var(--a-buyers)}.seg button[data-sort=newcomers].on{--accent:var(--a-newcomers)}
+.search{flex:1 1 240px;min-width:180px;padding:9px 12px;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);font:inherit;font-size:14px}
+.search:focus{outline:1px solid var(--ink);outline-offset:1px}
 .frow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.flabel{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);width:80px;flex:none}
+.flabel{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--softer);width:80px;flex:none}
 .spacer{flex:1}
-.reset{font-size:12px;color:var(--soft);text-decoration:underline}
-.summary{font-size:13px;color:var(--soft)}
+.reset{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);text-decoration:underline}
+.summary{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--soft)}
 .summary b{color:var(--ink);font-weight:500}
 main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-template-columns .2s ease}
 main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
 .tablewrap{overflow-x:auto;padding:0 0 60px}
 table{border-collapse:collapse;width:100%;min-width:1080px}
-th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
+th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--softer);padding:12px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none}
 th:hover{color:var(--ink)}
-th.sorted{color:var(--ink)}
-th .arrow{opacity:.6;margin-left:3px}
-th[data-k=stakers]{border-top:2px solid var(--a-stakers)}th[data-k=miners]{border-top:2px solid var(--a-miners)}
-th[data-k=buyers]{border-top:2px solid var(--a-buyers)}th[data-k=newcomers]{border-top:2px solid var(--a-newcomers)}
-td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th.sorted{color:var(--tag)}
+th .arrow{opacity:.7;margin-left:3px}
+td{padding:11px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
 tr.row{cursor:pointer}
 tr.row:hover td{background:var(--teal-soft)}
 tr.row.sel td{background:var(--paper-deep)}
 td.hi{background:var(--paper-deep)}
-td.rank{font-family:var(--mono);font-size:13px;white-space:nowrap}
-td.rank .delta{display:block;font-size:11px;margin-top:2px}
-.delta.up{color:var(--teal)}.delta.down{color:var(--warm)}.delta.same{color:var(--softer)}
+td.rank{font-family:var(--pix);font-size:15px;letter-spacing:.04em;white-space:nowrap;padding-top:13px}
+td.rank .delta{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;margin-top:4px;text-transform:uppercase}
+.delta.up{color:var(--ink)}.delta.down{color:var(--tag)}.delta.same{color:var(--softer)}
 td.name{min-width:300px;max-width:440px}
 td.name .nm{white-space:nowrap}
-td.name .nm a{color:var(--ink);font-weight:500}
-td.name .sn{font-family:var(--mono);font-size:11px;color:var(--softer);margin-left:8px}
-td.name .one{display:block;color:var(--ink-soft);font-size:13px;line-height:1.4;margin-top:3px;max-width:60ch}
-td.name .one:hover{color:var(--teal);text-decoration:none}
-td.name .tag{display:block;font-family:var(--mono);font-size:10.5px;color:var(--softer);letter-spacing:.04em;margin-top:3px}
-.primer{margin-top:4px;margin-bottom:6px;border:1px solid var(--rule);border-radius:8px;background:var(--paper)}
-.primer summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 18px}
+td.name .nm a{color:var(--ink);font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:-.02em}
+td.name .sn{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--softer);margin-left:8px;text-transform:uppercase}
+td.name .star{color:var(--softer);margin-right:6px;font-size:13px}
+td.name .star.on{color:var(--tag)}
+td.name .one{display:block;color:var(--ink-soft);font-size:13px;line-height:1.4;margin-top:4px;max-width:60ch}
+td.name .one:hover{color:var(--ink);text-decoration:none}
+td.name .tag{display:block;font-family:var(--mono);font-size:10px;color:var(--softer);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+td.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+td.comp b{font-family:var(--pix);font-weight:400;font-size:15px;letter-spacing:.04em}
+td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);margin-top:6px;overflow:hidden}
+td.comp .bar i{display:block;height:100%}
+td.alpha a{color:var(--ink)}td.alpha b{font-weight:500;margin-right:4px}td.alpha .ex{display:block;font-size:10px;color:var(--softer);letter-spacing:.08em;text-transform:uppercase}
+.primer{margin-top:6px;margin-bottom:8px;border:1px solid var(--rule-strong);background:var(--paper)}
+.primer summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:13px 18px}
 .primer summary::-webkit-details-marker{display:none}
+.primer summary .mono{color:var(--tag)}
 .primer summary .t{color:var(--ink-soft);font-size:14px}
 .primer summary .chev{margin-left:auto;color:var(--softer);transform:rotate(90deg);transition:transform .15s}
 .primer[open] summary .chev{transform:rotate(-90deg)}
 .primer .body{padding:0 18px 14px;max-width:78ch}
 .primer .body p{margin:0 0 10px;font-size:14.5px;line-height:1.55;color:var(--ink-soft)}
 .primer .body b{color:var(--ink);font-weight:600}
-.primer a.term{border-bottom:1px dotted var(--teal);color:inherit}
-.primer .links{font-size:13px}
-td.name .star{color:var(--softer);margin-right:6px;font-size:13px}
-td.name .star.on{color:var(--warm)}
-td.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
-td.comp b{font-family:var(--mono);font-weight:500;font-size:14px}
-td.alpha a{color:var(--ink)}td.alpha b{font-weight:500;margin-right:4px}td.alpha .ex{display:block;font-size:10.5px;color:var(--softer);letter-spacing:.04em}
-td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);border-radius:2px;margin-top:5px;overflow:hidden}
-td.comp .bar i{display:block;height:100%}
-.empty{padding:60px 32px;color:var(--soft);font-family:var(--serif);font-size:20px}
+.primer .links{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.primer .links a{color:var(--soft)}
+.empty{padding:60px 32px;color:var(--soft);font-family:var(--disp);font-size:22px;font-weight:600;letter-spacing:-.02em}
 aside{border-left:1px solid var(--rule);background:var(--paper);height:100vh;position:sticky;top:0;overflow:auto;display:none}
 main.grid.open aside{display:block}
 .detail{padding:20px 22px 40px}
 .detail .close{float:right;color:var(--softer);font-size:20px;line-height:1;padding:2px 6px}
-.detail h2{font-size:24px;margin:0 0 2px}
+.detail h2{font-size:26px;margin:2px 0 2px}
 .detail .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0 14px}
-.detail .comp{font-family:var(--serif);font-size:44px;line-height:1;font-variation-settings:"opsz" 72,"SOFT" 60}
-.detail .comp small{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin-left:8px}
-.detail .aud{margin:10px 0 0;padding:10px 0;border-top:1px solid var(--rule)}
-.detail .aud h3{font-family:var(--sans);font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin:0 0 6px}
+.detail .comp{font-family:var(--pix);font-size:40px;line-height:1;letter-spacing:.04em}
+.detail .comp small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);margin-left:10px}
 .detail .one{font-size:14px;line-height:1.5;color:var(--ink);margin:6px 0 10px}
-.detail .one a{white-space:nowrap}
-.detail .aq{font-size:12px;color:var(--softer);margin:0 0 6px}
+.detail .one a{white-space:nowrap;color:var(--tag)}
+.detail .aq{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin:0 0 6px}
 .detail .hint{font-size:11.5px;color:var(--softer);margin:0 0 4px}
-.detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:4px 6px;margin:0 -6px;border-radius:4px;cursor:pointer}
+.detail .aud{margin:10px 0 0;padding:10px 0;border-top:1px solid var(--rule)}
+.detail .aud h3{font-family:var(--disp);font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin:0 0 4px}
+.detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:4px 6px;margin:0 -6px;cursor:pointer}
 .detail .cell:hover,.detail .cell:focus{background:var(--teal-soft);color:var(--ink);outline:none}
 .detail .cellwrap .ev{display:none;padding:4px 6px 8px;border-left:2px solid var(--rule-strong);margin:2px 0 6px 4px}
 .detail .cellwrap:hover .ev,.detail .cellwrap.open .ev{display:block}
 .detail .ev .quote{font-size:14px;margin:2px 0 4px}
 .detail .ev .note{font-size:12.5px;color:var(--ink-soft);margin:0 0 4px}
-.detail .ev .src{font-family:var(--mono);font-size:11px;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.detail .ev .src{font-family:var(--mono);font-size:10.5px;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .detail .cell .dots{font-size:12px}
-.detail .full{display:inline-block;margin-top:14px;padding:8px 12px;border:1px solid var(--teal);border-radius:6px;font-size:13px}
-.starbtn{padding:6px 12px;border:1px solid var(--rule-strong);border-radius:6px;font-size:12.5px}
-.starbtn.on{border-color:var(--warm);color:var(--warm);background:var(--warm-soft)}
-#chart-section{padding:30px 0 10px;border-top:1px solid var(--rule)}
+.detail .full{display:inline-block;margin-top:14px;padding:10px 14px;border:1px solid var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+.detail .full:hover{background:var(--ink);color:var(--bg);text-decoration:none}
+.starbtn{padding:6px 12px;border:1px solid var(--rule-strong);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.starbtn.on{border-color:var(--tag);color:var(--tag);background:var(--tagbg)}
+#chart-section{padding:34px 0 10px;border-top:1px solid var(--rule)}
+#chart-section h2{margin:6px 0 8px}
 @media (max-width:820px){
   .flabel{width:100%}
   main.grid.open{grid-template-columns:1fr}
   main.grid.open .tablewrap{display:none}
   aside{height:auto;position:static}
+  .hero .stats{gap:24px}
 }
 </style>
 </head>
@@ -120,13 +123,13 @@ main.grid.open aside{display:block}
 <!-- topbar:start -->
 <div class="topbar"><div class="wrap">
   <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
-  <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a>
+  <span>Exploit Summit 2026 · Montreal · <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a></span>
 </div></div>
 
 <!-- topbar:end -->
 <!-- nav:start -->
 <nav class="nav"><div class="wrap">
-  <a class="wordmark" href="/">legible.network</a>
+  <a class="wordmark" href="/">Legible<small>by Mikyö Clark</small></a>
   <div class="links">
     <a href="/" aria-current="page">Index</a>
     <a href="/rubric/">Rubric</a>
@@ -139,9 +142,10 @@ main.grid.open aside{display:block}
 <!-- nav:end -->
 
 <header class="wrap hero">
-  <span class="mono">Top 32 subnets by emission · four audiences · five minutes</span>
+  <p class="kicker"><b>Read the room.</b> The top 32 subnets, scored on whether a newcomer can understand them.</p>
   <h1>Can a first-time reader understand this subnet <em>in five minutes?</em></h1>
-  <p class="lede">Each subnet is scored on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/rubric/">rubric</a> measures findability, not quality. Every score links to its evidence.</p>
+  <p class="lede">Each subnet is scored on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/rubric/">rubric</a> measures findability, not quality. Every score links to its evidence, and every subnet opens with a plain-language explainer.</p>
+  <div class="stats" id="stats"><div><b>32</b><span>subnets</span></div><div><b id="st-share">90%</b><span>of emission</span></div><div><b id="st-cells">512</b><span>cells scored</span></div><div><b id="st-median">3.3</b><span>median score</span></div></div>
   <div class="demo">
     <a href="#sort=emission">Ranked by emission</a>
     <a href="#sort=buyers">Re-rank by what a buyer can find</a>
@@ -428,6 +432,7 @@ main.grid.open aside{display:block}
       const d = await r.json();
       if (!d || !Array.isArray(d.subnets) || !d.subnets.length) throw new Error("empty dataset");
       data = d.subnets; meta = d; loaded = true;
+      try { $("#st-share").textContent = Math.round(data.reduce((n, r) => n + Number(r.emission_share || 0), 0) * 100) + "%"; $("#st-cells").textContent = String(data.length * 16); $("#st-median").textContent = median(data.map(r => Number(r.composite))).toFixed(1); } catch (e) {}
       readHash(); render(); setCtl();
       if (state.sel) showDetail(state.sel);
     } catch (err) {

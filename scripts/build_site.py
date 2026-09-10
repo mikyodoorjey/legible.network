@@ -189,7 +189,7 @@ def doc_page(title, meta, sections, active, ctx, description):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/doc.css">
 </head>
@@ -200,7 +200,7 @@ def doc_page(title, meta, sections, active, ctx, description):
 <main class="wrap doc">
   <nav class="toc" aria-label="Contents"><span class="mono">Contents</span></nav>
   <article class="prose">
-    <span class="mono kicker">Subnet Legibility Index</span>
+    <p class="kicker"><b>Subnet Legibility Index.</b> Reference</p>
     <h1>{html.escape(title)}</h1>
     <div class="meta">{meta_pills}</div>
     {body}

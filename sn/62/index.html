@@ -21,52 +21,55 @@
 <meta name="twitter:image" content="https://www.legible.network/assets/og/62.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
 .sn{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start;padding-top:32px}
-.card{position:sticky;top:20px;border:1px solid var(--rule);border-radius:8px;background:var(--paper);padding:18px 20px}
-.card .comp{font-family:var(--serif);font-size:64px;line-height:1;font-variation-settings:"opsz" 96,"SOFT" 60}
-.card .comp small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin-top:6px}
+.card{position:sticky;top:20px;border:1px solid var(--rule-strong);background:var(--paper);padding:18px 20px}
+.card .comp{font-family:var(--pix);font-size:56px;line-height:1;letter-spacing:.04em}
+.card .comp small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);margin-top:8px}
 .card .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-top:1px solid var(--rule);font-size:13.5px}
 .card .row:first-of-type{border-top:0}
 .card .row b{font-family:var(--mono);font-weight:500}
 .card .actions{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-.card .actions a{display:block;text-align:center;padding:8px 10px;border:1px solid var(--rule-strong);border-radius:6px;font-size:13px;color:var(--ink-soft)}
-.card .actions a.primary{border-color:var(--teal);color:var(--teal)}
-.card .actions a:hover{text-decoration:none;border-color:var(--teal)}
-.head .pills{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}
-.head .quote{font-size:18px;margin:14px 0 4px}
-.head .qsrc{font-family:var(--mono);font-size:11px;color:var(--softer)}
-.identity{border:1px solid var(--rule);border-radius:8px;padding:14px 16px;margin:18px 0 26px;background:var(--paper)}
+.card .actions a{display:block;text-align:center;padding:10px 10px;border:1px solid var(--rule-strong);font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.card .actions a.primary{border-color:var(--ink);color:var(--ink)}
+.card .actions a:hover{text-decoration:none;background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.head .pills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px}
+.head .quote{font-size:19px;margin:14px 0 4px}
+.head .qsrc{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer)}
+.identity{border:1px solid var(--rule);padding:14px 16px;margin:18px 0 26px;background:var(--paper)}
 .identity dl{display:grid;grid-template-columns:130px 1fr;gap:6px 12px;margin:10px 0 0;font-size:13.5px}
-.identity dt{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--softer);padding-top:2px}
+.identity dt{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);padding-top:2px}
 .identity dd{margin:0;color:var(--ink-soft);overflow-wrap:anywhere}
 .identity dd.unset{color:var(--softer);font-style:italic}
 .identity .mismatch{color:var(--b0)}
-.panel h3{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:15px;font-weight:600;margin:0 0 2px}
+.panel h3{display:flex;justify-content:space-between;align-items:center;font-family:var(--disp);font-size:16px;font-weight:600;margin:0 0 2px}
 .panel .who{font-size:12.5px;color:var(--soft);margin:0 0 10px}
 .panel details{border-top:1px solid var(--rule);padding:8px 0}
 .panel summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;font-size:14px}
 .panel summary::-webkit-details-marker{display:none}
-.panel summary .qn{font-family:var(--mono);font-size:10.5px;color:var(--softer);margin-right:8px}
+.panel summary .qn{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--softer);margin-right:8px}
 .panel .ev{padding:6px 0 4px 0}
 .panel .src{font-family:var(--mono);font-size:11px;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .panel .src a{overflow:hidden;text-overflow:ellipsis;max-width:60ch;white-space:nowrap}
 .panel .note{font-size:13px;color:var(--ink-soft);margin:4px 0 0}
-.toggle{font-size:12px;color:var(--soft);text-decoration:underline;margin:0 0 10px}
+.toggle{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);text-decoration:underline;margin:0 0 10px}
 .prov{margin:26px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
 .prov .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .prov .pill{font-size:10.5px}
 .corr{margin-top:22px;font-size:13.5px;color:var(--ink-soft)}
-.prevnext{display:flex;justify-content:space-between;gap:12px;margin-top:30px;font-size:13px}
+.prevnext{display:flex;justify-content:space-between;gap:12px;margin-top:30px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.prevnext a{color:var(--soft)}
+.scored-head{font-size:26px}
 
-.explainer{border:1px solid var(--rule);border-left:3px solid var(--teal);border-radius:8px;background:var(--paper);padding:18px 22px 14px;margin:18px 0 28px}
-.explainer .one{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink);margin:8px 0 14px;font-variation-settings:"opsz" 24,"SOFT" 60}
-.explainer h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin:18px 0 6px;font-weight:500}
+.explainer{border:1px solid var(--rule-strong);border-left:3px solid var(--tag);background:var(--paper);padding:18px 22px 14px;margin:18px 0 28px}
+.explainer .one{font-family:var(--disp);font-weight:600;font-size:22px;line-height:1.25;letter-spacing:-.025em;color:var(--ink);margin:8px 0 16px}
+.explainer h3{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tag);margin:18px 0 6px;font-weight:500}
 .explainer p{margin:0 0 10px;color:var(--ink-soft);max-width:74ch}
 .explainer ul{padding-left:20px;color:var(--ink-soft)}
 .explainer .srcs{margin-top:10px}
+.explainer .srcs summary{cursor:pointer}
 .explainer .srcs ul{font-family:var(--mono);font-size:11px;padding-left:18px}
 .scored-head{margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--rule)}
 
@@ -80,11 +83,11 @@
 <body>
 <div class="topbar"><div class="wrap">
   <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
-  <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a>
+  <span>Exploit Summit 2026 · Montreal · <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a></span>
 </div></div>
 
 <nav class="nav"><div class="wrap">
-  <a class="wordmark" href="/">legible.network</a>
+  <a class="wordmark" href="/">Legible<small>by Mikyö Clark</small></a>
   <div class="links">
     <a href="/">Index</a>
     <a href="/rubric/">Rubric</a>
@@ -97,7 +100,7 @@
 <main class="wrap sn">
   <div>
     <div class="head">
-      <span class="mono">SN 62 · rank 31 of 32 by emission</span>
+      <p class="kicker"><b>SN 62.</b> Rank 31 of 32 by emission</p>
       <h1>Ridges</h1>
       <div class="pills"><span class="pill">1.0% of emission</span><span class="pill">13 miners · 11 validators</span><span class="pill">registration 0.02598 TAO</span><span class="pill">verified 2026-09-09</span></div>
       <p class="quote">Ridges is an Bittensor subnet that acts as an open source agent competition platform, where miners both compete and collaborate on a software engineering agent.</p><span class="qsrc">In their own words · <a href="https://raw.githubusercontent.com/ridgesai/ridges/main/README.md" target="_blank" rel="noopener">raw.githubusercontent.com</a></span>

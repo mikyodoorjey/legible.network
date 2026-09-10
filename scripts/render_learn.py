@@ -214,12 +214,13 @@ def render_learn(data, entries, terms, partials, site, inline_fn, head_fn):
 
 
 EXPLAINER_CSS = """
-.explainer{border:1px solid var(--rule);border-left:3px solid var(--teal);border-radius:8px;background:var(--paper);padding:18px 22px 14px;margin:18px 0 28px}
-.explainer .one{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink);margin:8px 0 14px;font-variation-settings:"opsz" 24,"SOFT" 60}
-.explainer h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin:18px 0 6px;font-weight:500}
+.explainer{border:1px solid var(--rule-strong);border-left:3px solid var(--tag);background:var(--paper);padding:18px 22px 14px;margin:18px 0 28px}
+.explainer .one{font-family:var(--disp);font-weight:600;font-size:22px;line-height:1.25;letter-spacing:-.025em;color:var(--ink);margin:8px 0 16px}
+.explainer h3{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tag);margin:18px 0 6px;font-weight:500}
 .explainer p{margin:0 0 10px;color:var(--ink-soft);max-width:74ch}
 .explainer ul{padding-left:20px;color:var(--ink-soft)}
 .explainer .srcs{margin-top:10px}
+.explainer .srcs summary{cursor:pointer}
 .explainer .srcs ul{font-family:var(--mono);font-size:11px;padding-left:18px}
 .scored-head{margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--rule)}
 """

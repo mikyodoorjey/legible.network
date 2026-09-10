@@ -21,10 +21,10 @@ AUD_Q = {"stakers": "Should I allocate here?", "miners": "Can I compete, and wha
          "buyers": "Can I use this today?", "newcomers": "What is this and why does it matter?"}
 BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
-LIGHT = {"bg": (241, 237, 229), "paper": (247, 244, 236), "ink": (20, 24, 26), "soft": (90, 94, 96), "softer": (138, 141, 142),
-         "teal": (42, 85, 96), "rule": (215, 210, 200),
-         "bands": [(176, 67, 58), (168, 88, 42), (138, 109, 31), (107, 122, 58), (63, 111, 94), (42, 85, 96)],
-         "aud": {"stakers": (42, 85, 96), "miners": (138, 74, 31), "buyers": (92, 67, 112), "newcomers": (79, 107, 58)}}
+LIGHT = {"bg": (10, 10, 10), "paper": (18, 18, 18), "ink": (242, 242, 242), "soft": (163, 166, 169), "softer": (116, 119, 122),
+         "teal": (231, 38, 48), "rule": (52, 52, 52),
+         "bands": [(231, 38, 48), (111, 114, 117), (143, 146, 149), (176, 179, 182), (210, 212, 214), (242, 242, 242)],
+         "aud": {"stakers": (242, 242, 242), "miners": (242, 242, 242), "buyers": (242, 242, 242), "newcomers": (242, 242, 242)}}
 
 
 def e(s):
@@ -177,14 +177,14 @@ def _font(name, size):
         if p.exists():
             try:
                 f = ImageFont.truetype(str(p), size)
-                if cand.startswith("Fraunces"):
-                    try:  # variable font: match the site's display weight and softness
-                        f.set_variation_by_axes([144, 440, 60, 0])  # opsz, wght, SOFT, WONK
+                if cand.startswith("InterTight"):
+                    try:
+                        f.set_variation_by_axes([600])  # wght
                     except Exception:
                         pass
-                elif cand.startswith("Inter"):
+                elif cand.startswith("IBMPlexSans"):
                     try:
-                        f.set_variation_by_axes([14, 400])  # opsz, wght
+                        f.set_variation_by_axes([100, 400])  # wdth, wght
                     except Exception:
                         pass
                 return f
@@ -202,22 +202,22 @@ def render_og(sub, out_path):
     P = LIGHT
     img = Image.new("RGB", (1200, 630), P["bg"])
     d = ImageDraw.Draw(img)
-    serif = _font(["Fraunces.ttf"], 78)
-    serif_big = _font(["Fraunces.ttf"], 170)
-    mono = _font(["JetBrainsMono-Medium.ttf", "JetBrainsMono-Regular.ttf"], 22)
-    mono_s = _font(["JetBrainsMono-Regular.ttf"], 18)
-    sans = _font(["Inter.ttf"], 24)
+    serif = _font(["InterTight.ttf"], 78)
+    serif_big = _font(["Silkscreen-Regular.ttf"], 150)
+    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
+    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
+    sans = _font(["IBMPlexSans.ttf"], 24)
     d.text((70, 60), "SUBNET LEGIBILITY INDEX", font=mono, fill=P["teal"])
     d.text((70, 100), f"SN {sub['netuid']}  ·  RANK {sub['rank']} BY EMISSION", font=mono_s, fill=P["softer"])
     name = sub["name"]
     size = 78
-    while size > 40 and d.textlength(name, font=_font(["Fraunces.ttf"], size)) > 640:
+    while size > 40 and d.textlength(name, font=_font(["InterTight.ttf"], size)) > 640:
         size -= 6
-    d.text((66, 150), name, font=_font(["Fraunces.ttf"], size), fill=P["ink"])
+    d.text((66, 150), name, font=_font(["InterTight.ttf"], size), fill=P["ink"])
     comp = float(sub["composite"])
     col = P["bands"][band(comp)]
-    d.text((790, 110), f"{comp:.1f}", font=serif_big, fill=col)
-    d.text((800, 300), f"/ 5  ·  {BAND_WORD[band(comp)].upper()}", font=mono_s, fill=P["softer"])
+    d.text((770, 120), f"{comp:.1f}", font=serif_big, fill=col)
+    d.text((780, 300), f"/ 5  ·  {BAND_WORD[band(comp)].upper()}", font=mono_s, fill=P["softer"])
     y = 360
     for a in AUD:
         v = float(sub["audiences"][a]["score"])
@@ -227,7 +227,7 @@ def render_og(sub, out_path):
         d.text((1140 - d.textlength(f"{v:.1f}", font=mono_s), y - 2), f"{v:.1f}", font=mono_s, fill=P["ink"])
         y += 46
     d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 580), "legible.network", font=mono, fill=P["ink"])
+    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=P["ink"])
     d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=P["soft"])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "PNG", optimize=True)
@@ -242,13 +242,13 @@ def render_default_og(data, out_path):
     P = LIGHT
     img = Image.new("RGB", (1200, 630), P["bg"])
     d = ImageDraw.Draw(img)
-    mono = _font(["JetBrainsMono-Medium.ttf", "JetBrainsMono-Regular.ttf"], 22)
-    mono_s = _font(["JetBrainsMono-Regular.ttf"], 18)
-    sans = _font(["Inter.ttf"], 24)
+    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
+    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
+    sans = _font(["IBMPlexSans.ttf"], 24)
     d.text((70, 60), "SUBNET LEGIBILITY INDEX", font=mono, fill=P["teal"])
-    d.text((66, 110), "Can a first-time reader", font=_font(["Fraunces.ttf"], 72), fill=P["ink"])
-    d.text((66, 190), "understand this subnet", font=_font(["Fraunces.ttf"], 72), fill=P["ink"])
-    d.text((66, 270), "in five minutes?", font=_font(["Fraunces-Italic.ttf", "Fraunces.ttf"], 72), fill=P["teal"])
+    d.text((66, 110), "Can a first-time reader", font=_font(["InterTight.ttf"], 74), fill=P["ink"])
+    d.text((66, 190), "understand this subnet", font=_font(["InterTight.ttf"], 74), fill=P["ink"])
+    d.text((66, 270), "in five minutes?", font=_font(["InterTight.ttf"], 74), fill=P["teal"])
     top = sorted(data["subnets"], key=lambda s: -float(s["composite"]))[:5]
     y = 380
     for s in top:
@@ -259,7 +259,7 @@ def render_default_og(data, out_path):
     d.text((760, 410), f"snapshot {data.get('chain_snapshot', '')}", font=mono_s, fill=P["softer"])
     d.text((760, 440), f"rubric v{data.get('rubric_version', '')}", font=mono_s, fill=P["softer"])
     d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 580), "legible.network", font=mono, fill=P["ink"])
+    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=P["ink"])
     d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=P["soft"])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "PNG", optimize=True)
