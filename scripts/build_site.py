@@ -145,7 +145,11 @@ def md_to_sections(md):
 # ---------------- partials and templates
 def partial(name, ctx):
     t = (PARTIALS / f"{name}.html").read_text(encoding="utf-8")
-    return re.sub(r"\{\{(\w+)\}\}", lambda m: html.escape(str(ctx.get(m.group(1), ""))), t)
+    def sub(m):
+        k = m.group(1)
+        v = str(ctx.get(k, ""))
+        return v if k.startswith("cur_") else html.escape(v)
+    return re.sub(r"\{\{(\w+)\}\}", sub, t)
 
 
 def nav_ctx(active, ctx):
@@ -263,6 +267,18 @@ def main():
         if write_if_changed(REPO / outdir / "index.html", page):
             changed.append(f"{outdir}/index.html")
 
+    if data:
+        summary = {k: v for k, v in data.items() if k != "subnets"}
+        summary["subnets"] = []
+        for sub in data["subnets"]:
+            lite = {k: v for k, v in sub.items() if k not in ("audiences", "identity_check", "corrections", "claim_labels", "notes", "owner")}
+            lite["audiences"] = {a: {"score": v["score"], "rank": v.get("rank"), "partial": v.get("partial", False),
+                                     "cells": [{"q": c["q"], "score": c["score"]} for c in v["cells"]]}
+                                 for a, v in sub["audiences"].items()}
+            summary["subnets"].append(lite)
+        if write_if_changed(REPO / "data" / "summary.json", json.dumps(summary, ensure_ascii=False, separators=(",", ":"))):
+            changed.append("data/summary.json")
+
     for name in HAND_PAGES:
         p = REPO / name
         if not p.exists():
@@ -271,6 +287,8 @@ def main():
         active = "index" if name == "index.html" else ""
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
+        if name == "index.html":
+            s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
         if s2 != s:
             p.write_text(s2, encoding="utf-8")
             changed.append(name)

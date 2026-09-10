@@ -17,11 +17,81 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<style>
+.hero{padding:44px 0 26px}
+.hero .demo{margin-top:16px;display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px}
+.hero .demo a{border-bottom:1px solid var(--rule-strong);padding-bottom:1px}
+.hero .demo a:hover{text-decoration:none;border-color:var(--teal)}
+.controls{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);padding:12px 0}
+.controls .wrap{display:flex;flex-direction:column;gap:10px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 240px;min-width:180px;padding:8px 12px;border:1px solid var(--rule-strong);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px}
+.search:focus{outline:2px solid var(--teal);outline-offset:1px}
+.seg button[data-sort=stakers].on{--accent:var(--a-stakers)}.seg button[data-sort=miners].on{--accent:var(--a-miners)}
+.seg button[data-sort=buyers].on{--accent:var(--a-buyers)}.seg button[data-sort=newcomers].on{--accent:var(--a-newcomers)}
+.frow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.flabel{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);width:80px;flex:none}
+.spacer{flex:1}
+.reset{font-size:12px;color:var(--soft);text-decoration:underline}
+.summary{font-size:13px;color:var(--soft)}
+.summary b{color:var(--ink);font-weight:500}
+main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-template-columns .2s ease}
+main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
+.tablewrap{overflow-x:auto;padding:0 0 60px}
+table{border-collapse:collapse;width:100%;min-width:960px}
+th{position:sticky;top:var(--ctl,120px);background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
+th:hover{color:var(--ink)}
+th.sorted{color:var(--ink)}
+th .arrow{opacity:.6;margin-left:3px}
+th[data-k=stakers]{border-top:2px solid var(--a-stakers)}th[data-k=miners]{border-top:2px solid var(--a-miners)}
+th[data-k=buyers]{border-top:2px solid var(--a-buyers)}th[data-k=newcomers]{border-top:2px solid var(--a-newcomers)}
+td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--teal-soft)}
+tr.row.sel td{background:var(--paper-deep)}
+td.hi{background:var(--paper-deep)}
+td.rank{font-family:var(--mono);font-size:13px;white-space:nowrap}
+td.rank .delta{display:block;font-size:11px;margin-top:2px}
+.delta.up{color:var(--teal)}.delta.down{color:var(--warm)}.delta.same{color:var(--softer)}
+td.name{white-space:nowrap;max-width:240px;overflow:hidden;text-overflow:ellipsis}
+td.name a{color:var(--ink);font-weight:500}
+td.name .sn{display:block;font-family:var(--mono);font-size:11px;color:var(--softer);margin-top:1px}
+td.name .star{color:var(--softer);margin-right:6px;font-size:13px}
+td.name .star.on{color:var(--warm)}
+td.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
+td.comp b{font-family:var(--mono);font-weight:500;font-size:14px}
+td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);border-radius:2px;margin-top:5px;overflow:hidden}
+td.comp .bar i{display:block;height:100%}
+.empty{padding:60px 32px;color:var(--soft);font-family:var(--serif);font-size:20px}
+aside{border-left:1px solid var(--rule);background:var(--paper);height:calc(100vh - var(--ctl,120px));position:sticky;top:var(--ctl,120px);overflow:auto;display:none}
+main.grid.open aside{display:block}
+.detail{padding:20px 22px 40px}
+.detail .close{float:right;color:var(--softer);font-size:20px;line-height:1;padding:2px 6px}
+.detail h2{font-size:24px;margin:0 0 2px}
+.detail .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0 14px}
+.detail .comp{font-family:var(--serif);font-size:44px;line-height:1;font-variation-settings:"opsz" 72,"SOFT" 60}
+.detail .comp small{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin-left:8px}
+.detail .aud{margin:10px 0 0;padding:10px 0;border-top:1px solid var(--rule)}
+.detail .aud h3{font-family:var(--sans);font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin:0 0 6px}
+.detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:2px 0}
+.detail .cell .dots{font-size:12px}
+.detail .full{display:inline-block;margin-top:14px;padding:8px 12px;border:1px solid var(--teal);border-radius:6px;font-size:13px}
+.starbtn{padding:6px 12px;border:1px solid var(--rule-strong);border-radius:6px;font-size:12.5px}
+.starbtn.on{border-color:var(--warm);color:var(--warm);background:var(--warm-soft)}
+#chart-section{padding:30px 0 10px;border-top:1px solid var(--rule)}
+@media (max-width:820px){
+  .flabel{width:100%}
+  main.grid.open{grid-template-columns:1fr}
+  main.grid.open .tablewrap{display:none}
+  aside{height:auto;position:static}
+  th{position:static}
+}
+</style>
 </head>
-<body>
+<body data-snapshot="2026-09-09">
 <!-- topbar:start -->
 <div class="topbar"><div class="wrap">
-  <span>Subnet Legibility Index · snapshot pending · rubric v1.0</span>
+  <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
   <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a>
 </div></div>
 
@@ -30,7 +100,7 @@
 <nav class="nav"><div class="wrap">
   <a class="wordmark" href="/">legible.network</a>
   <div class="links">
-    <a href="/" aria-current=&quot;page&quot;>Index</a>
+    <a href="/" aria-current="page">Index</a>
     <a href="/rubric/">Rubric</a>
     <a href="/methodology/">Methodology</a>
     <a href="/about/">About</a>
@@ -39,18 +109,256 @@
 </div></nav>
 
 <!-- nav:end -->
-<main class="wrap hero">
-  <span class="mono">Publishes 2026-09-21</span>
+
+<header class="wrap hero">
+  <span class="mono">Top 32 subnets by emission · four audiences · five minutes</span>
   <h1>Can a first-time reader understand this subnet <em>in five minutes?</em></h1>
-  <p class="lede">The Subnet Legibility Index scores the 32 Bittensor subnets with the largest share of emissions on what a staker, a miner, a buyer, and a newcomer can each find out from public sources. The <a href="/rubric/">rubric</a> is published first. Scores follow on September 21.</p>
+  <p class="lede">Each subnet is scored on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/rubric/">rubric</a> measures findability, not quality. Every score links to its evidence.</p>
+  <div class="demo">
+    <a href="#sort=emission">Ranked by emission</a>
+    <a href="#sort=buyers">Re-rank by what a buyer can find</a>
+    <a href="#chart">Says versus shows</a>
+  </div>
+</header>
+
+<div class="controls" id="controls">
+  <div class="wrap">
+    <div class="tools">
+      <input class="search" id="q" type="search" placeholder="Search by subnet name or number" autocomplete="off">
+      <div class="seg" id="seg" role="group" aria-label="Rank by">
+        <button data-sort="emission" class="on">Emission</button>
+        <button data-sort="composite">Composite</button>
+        <button data-sort="stakers">Stakers</button>
+        <button data-sort="miners">Miners</button>
+        <button data-sort="buyers">Buyers</button>
+        <button data-sort="newcomers">Newcomers</button>
+      </div>
+      <button class="chip" id="pinnedOnly">★ Pinned <span class="n" id="pinCount">0</span></button>
+    </div>
+    <div class="frow"><span class="flabel">Composite</span><span id="fBand"></span></div>
+    <div class="frow"><span class="flabel">Identity</span><span id="fIdentity"></span>
+      <button class="chip" data-toggle="docsOnly">Has docs</button>
+      <button class="chip" data-toggle="paperOnly">Has paper</button>
+      <span class="spacer"></span>
+      <span class="summary" id="summary">Loading…</span>
+      <button class="reset" id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<main class="grid wrap" id="main">
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="rank" title="Rank by emission share">Rank</th>
+        <th data-k="name">Subnet</th>
+        <th data-k="emission">Emission</th>
+        <th data-k="composite">Composite</th>
+        <th data-k="stakers">Stakers</th>
+        <th data-k="miners">Miners</th>
+        <th data-k="buyers">Buyers</th>
+        <th data-k="newcomers">Newcomers</th>
+        <th data-k="identity" title="On-chain identity fields set, of 7">Identity</th>
+        <th data-k="counts" title="Active miners · validators">Miners · validators</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>Nothing matches. Loosen a filter.</div>
+  </div>
+  <aside id="aside"><div class="detail" id="detail"></div></aside>
 </main>
+
+<section class="wrap" id="chart-section">
+  <span class="mono">Says versus shows</span>
+  <h2>What the network pays for, against what a reader can find</h2>
+  <p class="sm">Emission share is what the network says a subnet is worth. Legibility is what the subnet shows an outsider in five minutes. The gap between them is the chart.</p>
+  <!-- chart:start -->
+  <p class="sm">The chart is generated at build time from the published scores.</p>
+  <!-- chart:end -->
+</section>
+
 <!-- footer:start -->
 <footer class="site"><div class="wrap">
   <span>Corrections: <a href="/methodology/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
-  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot pending · rubric v1.0</span>
+  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · rubric v1.0</span>
   <span>Built by Mikyö Clark (they/them) · <a href="https://mikyo.one">mikyo.one</a></span>
 </div></footer>
 
 <!-- footer:end -->
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const AUD = ["stakers","miners","buyers","newcomers"];
+  const AUD_LABEL = {stakers:"Stakers", miners:"Miners", buyers:"Buyers", newcomers:"Newcomers"};
+  const BANDS = ["0 to 1","1 to 2","2 to 3","3 to 4","4 to 5"];
+  const IDENT = ["complete","partial","empty"];
+  const QL = {q1:"What it is", q2:"Who it is for", q3:"Resists gaming", q4:"Identity and docs"};
+  const BAND_WORD = ["sparse","thin","partial","workable","clear","exemplary"];
+
+  let data = [], meta = {}, loaded = false, loadError = null;
+  const state = {q:"", sort:"emission", band:new Set(), ident:new Set(), docsOnly:false, paperOnly:false, pinned:false, sel:null};
+  let sortCol = null, sortDir = 1;
+  const pins = readStore("sli.pins", {});
+
+  function readStore(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }
+  function writeStore(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+  const band = v => Math.max(0, Math.min(5, Math.floor(Number(v))));
+  const chipBand = v => Math.min(4, Math.floor(Number(v)));
+  const identClass = r => r.identity_completeness.filled === r.identity_completeness.of ? "complete" : (r.identity_completeness.filled === 0 ? "empty" : "partial");
+  const aScore = (r, a) => Number(r.audiences[a].score);
+  function scoreDots(n){ const k = Math.round(Number(n)); let s = ""; for (let i = 1; i <= 5; i++) s += i <= k ? `<span class="band-${band(n)}">●</span>` : '<span class="off">●</span>'; return `<span class="dots" title="${Number(n).toFixed(1)}">${s}</span>`; }
+  function meter(r){ const c = r.identity_completeness; let s = ""; for (let i = 0; i < c.of; i++) s += `<i class="${i < c.filled ? "on" : ""}"></i>`; return `<span class="meter" title="${c.filled} of ${c.of} identity fields set">${s}</span> <span class="mono" style="letter-spacing:0">${c.filled}/${c.of}</span>`; }
+
+  function chips(el, vals, set, counts){
+    el.innerHTML = vals.map(v => `<button class="chip${set.has(v) ? " on" : ""}" data-v="${esc(v)}">${esc(v)}<span class="n">${counts[v] || 0}</span></button>`).join("");
+    el.querySelectorAll(".chip").forEach(b => b.onclick = () => { const v = b.dataset.v; set.has(v) ? set.delete(v) : set.add(v); render(); });
+  }
+  function counts(key){ const c = {}; for (const r of data){ const k = key(r); c[k] = (c[k] || 0) + 1; } return c; }
+  function renderFilters(){
+    chips($("#fBand"), BANDS, state.band, counts(r => BANDS[chipBand(r.composite)]));
+    chips($("#fIdentity"), IDENT, state.ident, counts(identClass));
+    document.querySelectorAll("[data-toggle]").forEach(b => { b.classList.toggle("on", !!state[b.dataset.toggle]); b.onclick = () => { state[b.dataset.toggle] = !state[b.dataset.toggle]; render(); }; });
+    document.querySelectorAll("#seg button").forEach(b => b.classList.toggle("on", b.dataset.sort === state.sort && !sortCol));
+    $("#pinnedOnly").classList.toggle("on", state.pinned);
+    $("#pinCount").textContent = Object.keys(pins).filter(k => pins[k]).length;
+  }
+
+  function matches(r){
+    if (state.pinned && !pins[r.netuid]) return false;
+    if (state.band.size && !state.band.has(BANDS[chipBand(r.composite)])) return false;
+    if (state.ident.size && !state.ident.has(identClass(r))) return false;
+    if (state.docsOnly && !(r.flags && r.flags.has_docs)) return false;
+    if (state.paperOnly && !(r.flags && r.flags.has_paper)) return false;
+    if (state.q){ const q = state.q.toLowerCase(); if (!(r.name.toLowerCase().includes(q) || String(r.netuid) === q.replace(/^sn/, ""))) return false; }
+    return true;
+  }
+  const byEmission = (a, b) => a.rank - b.rank;
+  const sorters = {
+    rank: byEmission, emission: byEmission,
+    name: (a, b) => a.name.localeCompare(b.name),
+    composite: (a, b) => b.composite - a.composite || byEmission(a, b),
+    identity: (a, b) => b.identity_completeness.filled - a.identity_completeness.filled || b.composite - a.composite || byEmission(a, b),
+    counts: (a, b) => (b.active_miners || 0) - (a.active_miners || 0) || byEmission(a, b),
+  };
+  for (const a of AUD) sorters[a] = (x, y) => aScore(y, a) - aScore(x, a) || byEmission(x, y);
+
+  function axisRanks(key){
+    if (key === "emission" || key === "rank" || !sorters[key]) return null;
+    const all = [...data].sort(sorters[key]);
+    const pos = {}; all.forEach((r, i) => pos[r.netuid] = i + 1);
+    return pos;
+  }
+
+  function render(){
+    if (!loaded){
+      $("#rows").innerHTML = ""; $("#empty").hidden = true;
+      $("#summary").innerHTML = loadError ? `Could not load the data (${esc(loadError)}). <button class="chip" id="retry">Retry</button>` : "Loading 32 subnets…";
+      const rb = $("#retry"); if (rb) rb.onclick = () => loadData();
+      return;
+    }
+    renderFilters();
+    const key = sortCol || state.sort;
+    let rows = data.filter(matches).sort(sorters[key] || byEmission);
+    if (sortCol && sortDir < 0) rows.reverse();
+    const pos = axisRanks(key);
+    const hiCol = AUD.includes(key) ? key : (key === "composite" ? "composite" : null);
+    $("#rows").innerHTML = rows.map(r => {
+      let delta = "";
+      if (pos){ const d = r.rank - pos[r.netuid]; delta = `<span class="delta ${d > 0 ? "up" : d < 0 ? "down" : "same"}">${d > 0 ? "+" + d : d === 0 ? "=" : d} vs emission</span>`; }
+      return `<tr class="row${state.sel === r.netuid ? " sel" : ""}" data-n="${r.netuid}">
+        <td class="rank">${r.rank}${delta}</td>
+        <td class="name"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></td>
+        <td class="num">${esc(r.emission_pct)}</td>
+        <td class="comp${hiCol === "composite" ? " hi" : ""}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
+        ${AUD.map(a => `<td class="${hiCol === a ? "hi" : ""}">${scoreDots(aScore(r, a))}</td>`).join("")}
+        <td>${meter(r)}</td>
+        <td class="num">${r.active_miners ?? "?"} · ${r.active_validators ?? "?"}</td>
+      </tr>`; }).join("");
+    $("#empty").hidden = rows.length > 0;
+    $("#summary").innerHTML = `<b>${rows.length}</b> of ${data.length} subnets · snapshot ${esc(meta.chain_snapshot)} · median composite <b>${median(data.map(r => Number(r.composite))).toFixed(1)}</b> · <a href="/data/index.json">dataset</a>`;
+    document.querySelectorAll("th").forEach(th => { th.classList.toggle("sorted", th.dataset.k === sortCol); const a = th.querySelector(".arrow"); if (a) a.remove(); if (th.dataset.k === sortCol) th.insertAdjacentHTML("beforeend", `<span class="arrow">${sortDir > 0 ? "↓" : "↑"}</span>`); });
+    writeHash();
+  }
+  function median(xs){ const s = [...xs].sort((a, b) => a - b); const m = Math.floor(s.length / 2); return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : 0; }
+
+  function showDetail(n){
+    const r = data.find(x => x.netuid === n);
+    if (!r){ closeDetail(); return; }
+    state.sel = n; $("#main").classList.add("open");
+    $("#detail").innerHTML = `
+      <button class="close" id="closeBtn" title="Close">×</button>
+      <span class="mono">SN ${r.netuid} · rank ${r.rank} by emission · ${esc(r.emission_pct)}</span>
+      <h2>${esc(r.name)}</h2>
+      <div class="meta"><span class="comp band-${band(r.composite)}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
+      ${r.own_words && r.own_words.quote ? `<p class="quote">${esc(r.own_words.quote)}</p>` : ""}
+      <div class="sm">Identity ${meter(r)}</div>
+      ${AUD.map(a => `<div class="aud"><h3><span class="aud-${a}">${AUD_LABEL[a]}</span><span>${scoreDots(aScore(r, a))} <b class="band-${band(aScore(r, a))}" style="font-family:var(--mono);font-weight:500">${aScore(r, a).toFixed(1)}</b></span></h3>
+        ${r.audiences[a].cells.map(c => `<div class="cell"><span>${esc(QL[c.q] || c.q)}</span>${scoreDots(c.score)}</div>`).join("")}</div>`).join("")}
+      <a class="full" href="/sn/${r.netuid}/">Full evidence and sources →</a>`;
+    $("#closeBtn").onclick = closeDetail;
+    $("#starBtn").onclick = () => { togglePin(n); showDetail(n); };
+    document.querySelectorAll("tr.row").forEach(tr => tr.classList.toggle("sel", Number(tr.dataset.n) === n));
+    writeHash();
+  }
+  function closeDetail(){ state.sel = null; $("#main").classList.remove("open"); render(); }
+  function togglePin(n){ pins[n] = !pins[n]; if (!pins[n]) delete pins[n]; writeStore("sli.pins", pins); render(); }
+
+  function writeHash(){
+    const p = new URLSearchParams();
+    if (state.q) p.set("q", state.q);
+    if (state.sort !== "emission" && !sortCol) p.set("sort", state.sort);
+    if (sortCol){ p.set("col", sortCol); if (sortDir < 0) p.set("dir", "desc"); }
+    if (state.band.size) p.set("band", [...state.band].join(","));
+    if (state.ident.size) p.set("id", [...state.ident].join(","));
+    if (state.docsOnly) p.set("docs", "1"); if (state.paperOnly) p.set("paper", "1"); if (state.pinned) p.set("pinned", "1");
+    if (state.sel) p.set("sel", state.sel);
+    const h = p.toString();
+    history.replaceState(null, "", h ? "#" + h : location.pathname);
+  }
+  function readHash(){
+    const p = new URLSearchParams(location.hash.slice(1));
+    state.q = p.get("q") || ""; $("#q").value = state.q;
+    state.sort = p.get("sort") || "emission"; sortCol = p.get("col") || null; sortDir = p.get("dir") === "desc" ? -1 : 1;
+    state.band = new Set((p.get("band") || "").split(",").filter(Boolean)); state.ident = new Set((p.get("id") || "").split(",").filter(Boolean));
+    state.docsOnly = p.get("docs") === "1"; state.paperOnly = p.get("paper") === "1"; state.pinned = p.get("pinned") === "1";
+    state.sel = p.get("sel") ? Number(p.get("sel")) : null;
+  }
+
+  $("#q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+  $("#seg").addEventListener("click", e => { const b = e.target.closest("button[data-sort]"); if (!b) return; state.sort = b.dataset.sort; sortCol = null; render(); });
+  $("#pinnedOnly").addEventListener("click", () => { state.pinned = !state.pinned; render(); });
+  $("#reset").addEventListener("click", () => { state.q = ""; $("#q").value = ""; state.sort = "emission"; sortCol = null; state.band.clear(); state.ident.clear(); state.docsOnly = state.paperOnly = state.pinned = false; render(); });
+  document.querySelectorAll("th").forEach(th => th.addEventListener("click", () => { const k = th.dataset.k; if (sortCol === k) sortDir = -sortDir; else { sortCol = k; sortDir = 1; } render(); }));
+  $("#rows").addEventListener("click", e => {
+    const star = e.target.closest("[data-star]"); if (star){ e.preventDefault(); e.stopPropagation(); togglePin(Number(star.dataset.star)); if (state.sel) showDetail(state.sel); return; }
+    if (e.target.closest("a")) return;
+    const tr = e.target.closest("tr.row"); if (tr) showDetail(Number(tr.dataset.n));
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && state.sel) closeDetail(); if (e.key === "/" && document.activeElement !== $("#q")){ e.preventDefault(); $("#q").focus(); } });
+  window.addEventListener("hashchange", () => { if (!loaded) return; readHash(); render(); state.sel ? showDetail(state.sel) : (function(){ $("#main").classList.remove("open"); })(); });
+  function setCtl(){ document.documentElement.style.setProperty("--ctl", $("#controls").offsetHeight + "px"); }
+  window.addEventListener("resize", setCtl);
+
+  async function loadData(attempt){
+    attempt = attempt || 1; loadError = null; render();
+    try {
+      const v = document.body.dataset.snapshot || Date.now();
+      const r = await fetch("/data/summary.json?v=" + encodeURIComponent(v), {cache: "no-store"});
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const d = await r.json();
+      if (!d || !Array.isArray(d.subnets) || !d.subnets.length) throw new Error("empty dataset");
+      data = d.subnets; meta = d; loaded = true;
+      readHash(); render(); setCtl();
+      if (state.sel) showDetail(state.sel);
+    } catch (err) {
+      if (attempt < 3){ setTimeout(() => loadData(attempt + 1), 1500 * attempt); return; }
+      loadError = err && err.message ? err.message : String(err); render();
+    }
+  }
+  readHash(); loadData();
+})();
+</script>
 </body>
 </html>
