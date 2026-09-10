@@ -41,7 +41,7 @@
 main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-template-columns .2s ease}
 main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
 .tablewrap{overflow-x:auto;padding:0 0 60px}
-table{border-collapse:collapse;width:100%;min-width:1180px}
+table{border-collapse:collapse;width:100%;min-width:1080px}
 th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
 th:hover{color:var(--ink)}
 th.sorted{color:var(--ink)}
@@ -56,15 +56,28 @@ td.hi{background:var(--paper-deep)}
 td.rank{font-family:var(--mono);font-size:13px;white-space:nowrap}
 td.rank .delta{display:block;font-size:11px;margin-top:2px}
 .delta.up{color:var(--teal)}.delta.down{color:var(--warm)}.delta.same{color:var(--softer)}
-td.name{white-space:nowrap;max-width:240px;overflow:hidden;text-overflow:ellipsis}
-td.name a{color:var(--ink);font-weight:500}
-td.name .sn{display:block;font-family:var(--mono);font-size:11px;color:var(--softer);margin-top:1px}
+td.name{min-width:300px;max-width:440px}
+td.name .nm{white-space:nowrap}
+td.name .nm a{color:var(--ink);font-weight:500}
+td.name .sn{font-family:var(--mono);font-size:11px;color:var(--softer);margin-left:8px}
+td.name .one{display:block;color:var(--ink-soft);font-size:13px;line-height:1.4;margin-top:3px;max-width:60ch}
+td.name .one:hover{color:var(--teal);text-decoration:none}
+td.name .tag{display:block;font-family:var(--mono);font-size:10.5px;color:var(--softer);letter-spacing:.04em;margin-top:3px}
+.primer{margin-top:4px;margin-bottom:6px;border:1px solid var(--rule);border-radius:8px;background:var(--paper)}
+.primer summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 18px}
+.primer summary::-webkit-details-marker{display:none}
+.primer summary .t{color:var(--ink-soft);font-size:14px}
+.primer summary .chev{margin-left:auto;color:var(--softer);transform:rotate(90deg);transition:transform .15s}
+.primer[open] summary .chev{transform:rotate(-90deg)}
+.primer .body{padding:0 18px 14px;max-width:78ch}
+.primer .body p{margin:0 0 10px;font-size:14.5px;line-height:1.55;color:var(--ink-soft)}
+.primer .body b{color:var(--ink);font-weight:600}
+.primer a.term{border-bottom:1px dotted var(--teal);color:inherit}
+.primer .links{font-size:13px}
 td.name .star{color:var(--softer);margin-right:6px;font-size:13px}
 td.name .star.on{color:var(--warm)}
 td.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
 td.comp b{font-family:var(--mono);font-weight:500;font-size:14px}
-td.makes{max-width:260px;font-size:13px;line-height:1.35}
-td.makes a{color:var(--ink-soft)}td.makes .ex{display:block;font-family:var(--mono);font-size:10.5px;color:var(--softer);letter-spacing:.04em;margin-top:2px}
 td.alpha a{color:var(--ink)}td.alpha b{font-weight:500;margin-right:4px}td.alpha .ex{display:block;font-size:10.5px;color:var(--softer);letter-spacing:.04em}
 td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);border-radius:2px;margin-top:5px;overflow:hidden}
 td.comp .bar i{display:block;height:100%}
@@ -79,6 +92,8 @@ main.grid.open aside{display:block}
 .detail .comp small{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin-left:8px}
 .detail .aud{margin:10px 0 0;padding:10px 0;border-top:1px solid var(--rule)}
 .detail .aud h3{font-family:var(--sans);font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin:0 0 6px}
+.detail .one{font-size:14px;line-height:1.5;color:var(--ink);margin:6px 0 10px}
+.detail .one a{white-space:nowrap}
 .detail .aq{font-size:12px;color:var(--softer);margin:0 0 6px}
 .detail .hint{font-size:11.5px;color:var(--softer);margin:0 0 4px}
 .detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:4px 6px;margin:0 -6px;border-radius:4px;cursor:pointer}
@@ -135,10 +150,20 @@ main.grid.open aside{display:block}
   </div>
 </header>
 
+<details class="primer wrap" id="primer">
+  <summary><span class="mono">Start here</span> <span class="t">What a subnet is, and what this index measures</span><span class="chev">›</span></summary>
+  <div class="body">
+    <p><b>Bittensor</b> is a network of small, independent marketplaces for digital work that share one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund. The fund is <a class="term" href="/learn/#tao">TAO</a>, a coin created at a steady rate.</p>
+    <p>A <b>subnet</b> is one booth. It is a set of rules for a single kind of work: <a class="term" href="/learn/#miner">miners</a> do the task, <a class="term" href="/learn/#validator">validators</a> score it, and pay flows by score. Each subnet has its own <a class="term" href="/learn/#alpha-token">token</a>, and since June 2026 its share of the prize fund follows that token's price, so the market decides which booths get funded.</p>
+    <p><b>This index</b> asks one question of the 32 best-funded booths: has the subnet told the people who fund it, work for it, buy from it, and encounter it what it sells, in a place they will look, in five minutes? It scores findability, not quality. Every score links to its evidence, and every subnet has a plain-language <a href="/learn/">explainer</a>.</p>
+    <p class="links"><a href="/learn/#glossary">Glossary</a> · <a href="/learn/#by-commodity">Subnets by what they make</a> · <a href="/rubric/">How scoring works</a></p>
+  </div>
+</details>
+
 <div class="controls" id="controls">
   <div class="wrap">
     <div class="tools">
-      <input class="search" id="q" type="search" placeholder="Search by subnet name or number" autocomplete="off">
+      <input class="search" id="q" type="search" placeholder="Search by name, number, or what it makes" autocomplete="off">
       <div class="seg" id="seg" role="group" aria-label="Rank by">
         <button data-sort="emission" class="on">Emission</button>
         <button data-sort="composite">Composite</button>
@@ -166,7 +191,6 @@ main.grid.open aside{display:block}
       <thead><tr>
         <th data-k="rank" title="Rank by emission share">Rank</th>
         <th data-k="name">Subnet</th>
-        <th data-k="makes" title="From the plain-language explainer. Click for the full entry.">What it makes</th>
         <th data-k="emission">Emission</th>
         <th data-k="alpha" title="Alpha token: symbol, price in TAO, exchange listings. Click for the token page.">Alpha token</th>
         <th data-k="composite">Composite</th>
@@ -235,6 +259,11 @@ main.grid.open aside{display:block}
   const identClass = r => r.identity_completeness.filled === r.identity_completeness.of ? "complete" : (r.identity_completeness.filled === 0 ? "empty" : "partial");
   const aScore = (r, a) => Number(r.audiences[a].score);
   function scoreDots(n){ const k = Math.round(Number(n)); let s = ""; for (let i = 1; i <= 5; i++) s += i <= k ? `<span class="band-${band(n)}">●</span>` : '<span class="off">●</span>'; return `<span class="dots" title="${Number(n).toFixed(1)}">${s}</span>`; }
+  function oneLine(r){
+    const x = r.explainer; if (!x || !x.one_sentence) return "";
+    const sent = x.one_sentence.replace(/^SN\d+\s+\S+\s+/, "");
+    return `<a class="one" href="/sn/${r.netuid}/#explainer">${esc(sent.charAt(0).toUpperCase() + sent.slice(1))}</a><span class="tag">${esc(x.commodity || "")}${x.metaphor ? " · " + esc(x.metaphor) : ""}</span>`;
+  }
   function makesCell(r){
     const x = r.explainer; if (!x || !x.one_sentence) return '<span class="sm">being written</span>';
     const short = x.one_sentence.replace(/^SN\d+\s+\S+\s+/, "").split(/,|;| except | the way /)[0].trim();
@@ -268,7 +297,7 @@ main.grid.open aside{display:block}
     if (state.ident.size && !state.ident.has(identClass(r))) return false;
     if (state.docsOnly && !(r.flags && r.flags.has_docs)) return false;
     if (state.paperOnly && !(r.flags && r.flags.has_paper)) return false;
-    if (state.q){ const q = state.q.toLowerCase().trim(); const num = q.replace(/^sn\s*/, "").trim(); if (!(r.name.toLowerCase().includes(q) || (/^\d+$/.test(num) && String(r.netuid).startsWith(num)))) return false; }
+    if (state.q){ const q = state.q.toLowerCase().trim(); const num = q.replace(/^sn\s*/, "").trim(); const hay = (r.name + " " + ((r.explainer && (r.explainer.one_sentence + " " + r.explainer.metaphor + " " + r.explainer.commodity)) || "")).toLowerCase(); if (!(hay.includes(q) || (/^\d+$/.test(num) && String(r.netuid).startsWith(num)))) return false; }
     return true;
   }
   const byEmission = (a, b) => a.rank - b.rank;
@@ -278,7 +307,6 @@ main.grid.open aside{display:block}
     composite: (a, b) => b.composite - a.composite || byEmission(a, b),
     identity: (a, b) => b.identity_completeness.filled - a.identity_completeness.filled || b.composite - a.composite || byEmission(a, b),
     counts: (a, b) => (b.active_miners || 0) - (a.active_miners || 0) || byEmission(a, b),
-    makes: (a, b) => ((a.explainer && a.explainer.commodity) || "zz").localeCompare((b.explainer && b.explainer.commodity) || "zz") || byEmission(a, b),
     alpha: (a, b) => ((b.alpha && b.alpha.market_cap_tao) || 0) - ((a.alpha && a.alpha.market_cap_tao) || 0) || byEmission(a, b),
   };
   for (const a of AUD) sorters[a] = (x, y) => aScore(y, a) - aScore(x, a) || byEmission(x, y);
@@ -308,8 +336,7 @@ main.grid.open aside{display:block}
       if (pos){ const d = r.rank - pos[r.netuid]; delta = `<span class="delta ${d > 0 ? "up" : d < 0 ? "down" : "same"}">${d > 0 ? "+" + d : d === 0 ? "=" : d} vs emission</span>`; }
       return `<tr class="row${state.sel === r.netuid ? " sel" : ""}" data-n="${r.netuid}">
         <td class="rank">${r.rank}${delta}</td>
-        <td class="name"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></td>
-        <td class="makes">${makesCell(r)}</td>
+        <td class="name"><div class="nm"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></div>${oneLine(r)}</td>
         <td class="num">${esc(r.emission_pct)}</td>
         <td class="num alpha">${alphaCell(r)}</td>
         <td class="comp${hiCol === "composite" ? " hi" : ""}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
@@ -333,7 +360,8 @@ main.grid.open aside{display:block}
       <span class="mono">SN ${r.netuid} · rank ${r.rank} by emission · ${esc(r.emission_pct)}</span>
       <h2>${esc(r.name)}</h2>
       <div class="meta"><span class="comp band-${band(r.composite)}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
-      ${r.own_words && r.own_words.quote ? `<p class="quote">${esc(r.own_words.quote)}</p>` : ""}
+      ${r.explainer && r.explainer.one_sentence ? `<p class="one">${esc(r.explainer.one_sentence)} <a href="/sn/${r.netuid}/#explainer">Read the explainer →</a></p>` : ""}
+      ${r.own_words && r.own_words.quote ? `<p class="quote" title="In their own words">${esc(r.own_words.quote)}</p>` : ""}
       <div class="sm">Identity ${meter(r)}</div>
       <p class="hint">Hover a row for the evidence, click to pin it open.</p>
       ${AUD.map(a => `<div class="aud"><h3><span class="aud-${a}">${AUD_LABEL[a]}</span><span>${scoreDots(aScore(r, a))} <b class="band-${band(aScore(r, a))}" style="font-family:var(--mono);font-weight:500">${aScore(r, a).toFixed(1)}</b></span></h3>
@@ -400,6 +428,7 @@ main.grid.open aside{display:block}
       loadError = err && err.message ? err.message : String(err); render();
     }
   }
+  (function(){ const pr = $("#primer"); try { if (localStorage.getItem("sli.primer") !== "closed") pr.open = true; } catch(e){ pr.open = true; } pr.addEventListener("toggle", () => { try { localStorage.setItem("sli.primer", pr.open ? "open" : "closed"); } catch(e){} }); })();
   readHash(); loadData();
 })();
 </script>
