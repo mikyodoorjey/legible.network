@@ -42,11 +42,13 @@ Third-party evidence alone caps a cell at 1. Discord is recorded as present or a
 | Score | Meaning |
 |---|---|
 | 0 | Nothing findable on the question in five minutes from any public source |
-| 1 | Findable only in third-party sources, or only by asking in Discord |
+| 1 | Findable only in third-party sources, only by asking in Discord, or mentioned in passing in the subnet's own materials without answering the question |
 | 2 | The subnet's own materials touch it, but scattered across pages, stale (contradicted by current code or chain state), or readable only in code |
 | 3 | Stated in the subnet's own materials in one place, but the reader needs Bittensor or domain knowledge, or more than five minutes, to act on it |
 | 4 | Stated plainly in one place within two clicks of the README, the docs root, or the site front page; a first-time reader gets it in under five minutes |
 | 5 | As 4, plus a concrete artifact the reader can check (a number with a date, a table, a schema, a live endpoint, a diagram, a worked example), and it agrees with the on-chain identity |
+
+A file written for machines (an `llms.txt`, an `AGENTS.md`, a handoff document) is the subnet's own material and counts as a source. It is scored on what it contains, and its register decides between 3 and 4: a first-time human reader who has to translate it is not getting the answer plainly.
 
 "One place" means one page, or one page plus a link it points to. Plain statements spread across three pages that each answer part of the question are scattered, and score 2, even when each part is clear.
 

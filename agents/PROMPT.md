@@ -12,7 +12,7 @@ The score is what a reader in that audience can find in five minutes, not what t
 
 1. The identity fields in the slice file. These are the owner's own words.
 2. The README at `github_repo`, then its `docs/` folder or the docs site it links.
-3. The front page at `subnet_url`, then its about, docs, pricing, and status links.
+3. The front page at `subnet_url`, then its about, docs, pricing, and status links. Also try `<subnet_url>/llms.txt` and `<subnet_url>/docs` directly, and `AGENTS.md`, `START_HERE.md`, or a `docs/` folder in the repo: several subnets keep their only real documentation there, one click from a dashboard that renders empty.
 4. A whitepaper or litepaper linked from 2 or 3.
 5. The subnet's own X account or blog, only when linked from 2 or 3.
 6. The Taostats subnet page, as a cross-check on the description only.
@@ -52,7 +52,7 @@ For q1 and q2 in every audience, a verified entry quotes the page: at most 25 wo
 
 ## How to score
 
-Use the ladder from the rubric in every cell: 0 nothing findable; 1 third-party only; 2 own materials but scattered, stale, or code-only; 3 own materials in one place but needs expertise or over five minutes; 4 plain and within two clicks of the front door; 5 plain plus a checkable artifact that agrees with the chain identity. Third-party evidence alone caps a cell at 1. When torn between two scores, take the lower one and say why in the note.
+Use the ladder from the rubric in every cell: 0 nothing findable; 1 third-party only, Discord only, or own materials that mention it without answering; 2 own materials but scattered, stale, or code-only; 3 own materials in one place but needs expertise, translation from a machine-facing file, or over five minutes; 4 plain and within two clicks of the README, the docs root, or the site front page; 5 plain plus a checkable artifact that agrees with the chain identity. Third-party evidence alone caps a cell at 1. When torn between two scores, take the lower one and say why in the note.
 
 The calibration file shows all sixteen cells for three subnets, scored by hand. Match its level. If you find yourself scoring most subnets 4 and 5, you are scoring what the subnet is, not what a reader can find.
 

@@ -254,3 +254,10 @@ Anchors I would rephrase.
 - N1 2: "A technical README opening, or a chain description that is a full sentence and nothing else."
 - 4 (general): "within two clicks of the README, the site front page, or the docs root the site links".
 - Unknown: the rule says unknown covers "a page that would not load". Taostats did not load for any of the three, but the identity was recoverable from the chain. The brief should say that a JS rendered Taostats page is not by itself grounds for an unknown S4 or N4 cell, since the slice file already carries the identity.
+
+
+## Pilot comparison (2026-09-09)
+
+An independent scorer re-scored SN64 and SN120 without seeing the sections above. 28 of 32 cells landed within one point and 15 were exact. The four cells that differed by two or more were all on SN120 Affine (M1, M2, M4, B2) and had one cause: the pilot found `www.affine.io/llms.txt`, a complete miner guide with dated fork notices, one click from the dashboard, which the calibration scorer did not reach. The brief now names that path. For Affine, treat the miner cells as 3 to 4 pending review, not 2: the guide exists and is one click from the front door, and its machine-facing register is what keeps it below 5.
+
+Two lessons for scoring the full set: check `/llms.txt`, `/docs`, and the repo root for `AGENTS.md` or `START_HERE.md` before concluding a subnet has no documentation; and when the only documentation is written for agents, score its content and let the register decide between 3 and 4.
