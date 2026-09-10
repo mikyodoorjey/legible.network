@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn · Subnet Legibility Index</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="What each Bittensor subnet makes, explained from zero, with a glossary.">
+<link rel="canonical" href="https://www.legible.network/learn/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.legible.network/learn/">
+<meta property="og:title" content="Learn · Subnet Legibility Index">
+<meta property="og:description" content="What each Bittensor subnet makes, explained from zero, with a glossary.">
+<meta property="og:image" content="https://www.legible.network/assets/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..100,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.alpha{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:40px;align-items:start;padding-top:32px}
+.sym{font-family:var(--serif);font-size:72px;line-height:1;font-variation-settings:"opsz" 144,"SOFT" 60}
+.price{font-family:var(--mono);font-size:30px;margin:8px 0 2px}
+.price small{font-size:14px;color:var(--soft);margin-left:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0}
+.stat{border:1px solid var(--rule);border-radius:6px;padding:10px 12px;background:var(--paper)}
+.stat .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer)}
+.stat .v{font-family:var(--mono);font-size:16px;margin-top:4px}
+.chg.up{color:var(--b4)}.chg.down{color:var(--b0)}
+.venues{margin:10px 0 0}
+.venue{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--rule)}
+.venue:first-child{border-top:0}
+.venue .n{font-weight:500}
+.venue .n small{font-family:var(--mono);font-size:11px;color:var(--softer);margin-left:8px}
+.venue a.go{padding:6px 10px;border:1px solid var(--rule-strong);border-radius:6px;font-size:12.5px;white-space:nowrap}
+.venue a.go:hover{border-color:var(--teal);text-decoration:none}
+.card{position:sticky;top:20px;border:1px solid var(--rule);border-radius:8px;background:var(--paper);padding:18px 20px}
+.card .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-top:1px solid var(--rule);font-size:13.5px}
+.card .row:first-of-type{border-top:0}
+.card .actions{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.card .actions a{display:block;text-align:center;padding:8px 10px;border:1px solid var(--rule-strong);border-radius:6px;font-size:13px;color:var(--ink-soft)}
+.card .actions a.primary{border-color:var(--teal);color:var(--teal)}
+.note{font-size:13px;color:var(--soft);max-width:70ch}
+.list{padding:0;list-style:none;margin:16px 0 0}
+.list li{display:grid;grid-template-columns:70px minmax(0,1fr) 120px 140px 1fr;gap:12px;align-items:baseline;padding:9px 0;border-top:1px solid var(--rule);font-size:14px}
+.list li.h{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);border-top:0}
+.list .mono{letter-spacing:0;text-transform:none;font-size:13px;color:var(--ink)}
+@media (max-width:820px){.alpha{grid-template-columns:1fr}.card{position:static}.list li{grid-template-columns:60px 1fr 100px}.list li span:nth-child(n+4){display:none}}
+
+.learn .intro{padding:36px 0 10px;max-width:74ch}
+.learn h2{margin:36px 0 12px;padding-top:18px;border-top:1px solid var(--rule)}
+.learn h3{margin:22px 0 8px}
+.entries{list-style:none;padding:0;margin:0}
+.entries li{padding:10px 0;border-top:1px solid var(--rule);line-height:1.5}
+.entries li:first-child{border-top:0}
+.entries .one{color:var(--ink-soft);font-size:14px}
+.entries.compact li{padding:5px 0;border:0}
+.term p{max-width:74ch;color:var(--ink-soft)}
+.term h3{scroll-margin-top:20px}
+
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
+  <a href="https://mikyo.one" rel="author">Built by Mikyö Clark</a>
+</div></div>
+
+<nav class="nav"><div class="wrap">
+  <a class="wordmark" href="/">legible.network</a>
+  <div class="links">
+    <a href="/">Index</a>
+    <a href="/learn/" aria-current="page">Learn</a>
+    <a href="/rubric/">Rubric</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/about/">About</a>
+    <a class="cta" href="/methodology/#corrections">Corrections</a>
+  </div>
+</div></nav>
+
+<main class="wrap learn">
+  <div class="intro">
+    <span class="mono">Learn · 0 of 32 subnets explained</span>
+    <h1>What each subnet makes, <em>explained from zero.</em></h1>
+    <p class="lede">One entry per subnet, written for someone who has never heard of Bittensor: what the digital commodity is, why it has a price, who buys it, how the work gets done, and how you would check. Each entry carries one everyday comparison and says where it breaks. Every claim comes from the subnet's own materials or the evidence behind its <a href="/">legibility score</a>.</p>
+    <p class="sm">Jump to: <a href="#by-commodity">by commodity</a> · <a href="#alphabetical">alphabetical</a> · <a href="#glossary">glossary</a></p>
+  </div>
+  <section id="by-commodity"><h2>By commodity</h2><p class="sm">Still being written: SN107 Minos, SN51 lium.io, SN15 ORO, SN120 Affine, SN64 Chutes, SN97 Albedo, SN4 Targon, SN44 Score, SN80 OpenRoboto, SN114 SOMA, SN3 Teutonic, SN8 Vanta, SN9 iota, SN53 engy, SN93 Bitcast, SN68 NOVA, SN28 SayGM, SN91 cascade, SN110 Green Compute, SN75 Hippius, SN58 greevils, SN38 ChronoLLM, SN56 Gradients, SN118 Ditto, SN124 Swarm, SN61 RedTeam, SN83 CliqueAI, SN5 Hone, SN90 KubeTEE, SN34 BitMind, SN62 Ridges, SN19 blockmachine.</p></section>
+  <section id="alphabetical"><h2>Alphabetical</h2><ul class="entries compact"></ul></section>
+  <section id="glossary"><h2>Glossary</h2><p class="sm">Every term the entries use, with an everyday comparison. The comparison is a way in, not a definition.</p><section id="bittensor" class="term"><h3>Bittensor</h3><p>A network of small, independent marketplaces for digital work, sharing one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund and every ticket is bought with the same money. The fund is TAO, the booths are subnets, and the rule for splitting the fund is written in code rather than decided by a manager.</p></section><section id="tao" class="term"><h3>TAO</h3><p>The network's money. It is created at a steady rate, like a mint that prints a fixed number of coins per day, and handed out to the subnets that the market values most. Anyone can buy TAO on an exchange; anyone holding it can stake it into a subnet to earn that subnet's token.</p></section><section id="subnet" class="term"><h3>Subnet</h3><p>One booth at the trade fair: a marketplace for a single kind of digital work, with its own rules, its own workers, its own judges, and its own token. Each subnet has a number (SN64 is the sixty-fourth). A subnet is not a company; it is a set of rules that a company, a foundation, or a single developer can publish and that strangers then compete inside.</p></section><section id="digital-commodity" class="term"><h3>Digital commodity</h3><p>The thing a subnet produces and sells, as interchangeable as wheat or electricity: an hour of GPU time, a million words of model output, a trained model checkpoint, a forecast, a verified dataset. The word "commodity" is the point. A subnet that cannot say what its unit of output is has not decided what it sells.</p></section><section id="miner" class="term"><h3>Miner</h3><p>A worker who does the subnet's task and gets paid by how well they do it. Like a freelancer on a gig platform, except the platform is code, the jobs arrive automatically, and pay is decided by the judges' scores rather than by a client. A miner might be a person with a laptop or a company with a warehouse of GPUs; the network cannot tell and does not care.</p></section><section id="validator" class="term"><h3>Validator</h3><p>A judge who sends work to miners, scores the results, and by scoring decides who gets paid. Like a restaurant critic whose reviews directly set each kitchen's wages. Validators have to put up money (a stake) to hold the role, and their scores are weighted by how much money stands behind them.</p></section><section id="emission" class="term"><h3>Emission</h3><p>The subnet's share of the newly minted TAO, paid out block by block to its miners, validators, and owner. Like the prize fund at the trade fair being divided among the booths every few seconds. Since June 2026 a subnet's share follows the price of its token, so the market, not a committee, decides which booths are worth funding.</p></section><section id="alpha-token" class="term"><h3>Alpha token</h3><p>Each subnet's own token, created when someone stakes TAO into that subnet. Staking is a swap: TAO goes into the subnet's pool and the staker gets alpha out, like exchanging dollars for casino chips that only work at one table. The alpha's price rises when more TAO flows in and falls when it flows out, and that price is what sets the subnet's emission share.</p></section><section id="staking" class="term"><h3>Staking</h3><p>Locking TAO into a subnet to receive its alpha token and a share of its rewards. Like putting money into one booth's till and owning a slice of that booth's takings. Unstaking swaps the alpha back to TAO at whatever the price is then.</p></section><section id="dtao" class="term"><h3>dTAO</h3><p>The rule change, in February 2025, that gave every subnet its own token and let the market set emission instead of a vote. Before dTAO, a small group of large validators decided which subnets deserved rewards. After it, whoever stakes decides, with their money. Every entry on this site assumes the dTAO world.</p></section><section id="incentive-mechanism" class="term"><h3>Incentive mechanism</h3><p>The subnet's rulebook: what task the miners do, how the validators score it, and how the score turns into pay. Like the scoring rules of a sport. Two subnets can sell the same commodity with very different mechanisms, and the mechanism is where most of the cleverness, and most of the cheating, lives.</p></section><section id="deregistration" class="term"><h3>Deregistration</h3><p>Losing your slot in a subnet because your score fell to the bottom. Each subnet has a fixed number of seats; when a new miner registers, the lowest-scoring one is dropped. Like a league with relegation every round. New entrants usually get a short immunity period before they can be dropped.</p></section><section id="registration-cost" class="term"><h3>Registration cost</h3><p>The fee, paid in TAO, to take a seat as a miner or validator in a subnet. It is burned, not paid to anyone, and it rises when lots of people are trying to get in. Like an entry fee that goes up with the queue.</p></section><section id="inference" class="term"><h3>Inference</h3><p>Asking a trained AI model a question and getting an answer. The model is not learning; it is being used. Inference is the most common commodity on Bittensor because it is easy to meter: one request in, one response out, a price per million words.</p></section><section id="checkpoint" class="term"><h3>Checkpoint</h3><p>A saved copy of a trained model's weights at a moment in time, the file you would download to run the model yourself. Like a snapshot of a student's knowledge that anyone can copy. Subnets that train models produce checkpoints as their commodity.</p></section><section id="training" class="term"><h3>Training</h3><p>Teaching a model by feeding it data and adjusting it, the expensive process that produces a checkpoint. Some subnets pay miners to do pieces of training on their own hardware and stitch the results together, which is the hard technical bet Bittensor is known for.</p></section><section id="tee" class="term"><h3>TEE</h3><p>Trusted execution environment: a locked box inside a computer's processor that can prove what code ran inside it and that nobody, including the machine's owner, tampered with it. Like a tamper-evident seal on a ballot box. Subnets use TEEs so validators can trust a miner's work without redoing it.</p></section><section id="gpu" class="term"><h3>GPU</h3><p>The graphics processor that does most AI computing, sold by the hour like a rental car. When an entry says "compute," it almost always means GPU hours.</p></section><section id="netuid" class="term"><h3>Netuid</h3><p>A subnet's number on the chain. SN107 means netuid 107. Numbers are permanent; names and owners can change, which is why every page here is keyed by number.</p></section></section>
+</main><footer class="site"><div class="wrap">
+  <span>Corrections: <a href="/methodology/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
+  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>Built by Mikyö Clark (they/them) · <a href="https://mikyo.one">mikyo.one</a></span>
+</div></footer>
+</body></html>

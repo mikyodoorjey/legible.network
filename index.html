@@ -41,7 +41,7 @@
 main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-template-columns .2s ease}
 main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
 .tablewrap{overflow-x:auto;padding:0 0 60px}
-table{border-collapse:collapse;width:100%;min-width:960px}
+table{border-collapse:collapse;width:100%;min-width:1180px}
 th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
 th:hover{color:var(--ink)}
 th.sorted{color:var(--ink)}
@@ -63,6 +63,8 @@ td.name .star{color:var(--softer);margin-right:6px;font-size:13px}
 td.name .star.on{color:var(--warm)}
 td.num{font-family:var(--mono);font-size:13px;white-space:nowrap}
 td.comp b{font-family:var(--mono);font-weight:500;font-size:14px}
+td.makes{max-width:260px;font-size:13px;line-height:1.35}
+td.makes a{color:var(--ink-soft)}td.makes .ex{display:block;font-family:var(--mono);font-size:10.5px;color:var(--softer);letter-spacing:.04em;margin-top:2px}
 td.alpha a{color:var(--ink)}td.alpha b{font-weight:500;margin-right:4px}td.alpha .ex{display:block;font-size:10.5px;color:var(--softer);letter-spacing:.04em}
 td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);border-radius:2px;margin-top:5px;overflow:hidden}
 td.comp .bar i{display:block;height:100%}
@@ -112,6 +114,7 @@ main.grid.open aside{display:block}
   <a class="wordmark" href="/">legible.network</a>
   <div class="links">
     <a href="/" aria-current="page">Index</a>
+    <a href="/learn/">Learn</a>
     <a href="/rubric/">Rubric</a>
     <a href="/methodology/">Methodology</a>
     <a href="/about/">About</a>
@@ -163,6 +166,7 @@ main.grid.open aside{display:block}
       <thead><tr>
         <th data-k="rank" title="Rank by emission share">Rank</th>
         <th data-k="name">Subnet</th>
+        <th data-k="makes" title="From the plain-language explainer. Click for the full entry.">What it makes</th>
         <th data-k="emission">Emission</th>
         <th data-k="alpha" title="Alpha token: symbol, price in TAO, exchange listings. Click for the token page.">Alpha token</th>
         <th data-k="composite">Composite</th>
@@ -231,6 +235,11 @@ main.grid.open aside{display:block}
   const identClass = r => r.identity_completeness.filled === r.identity_completeness.of ? "complete" : (r.identity_completeness.filled === 0 ? "empty" : "partial");
   const aScore = (r, a) => Number(r.audiences[a].score);
   function scoreDots(n){ const k = Math.round(Number(n)); let s = ""; for (let i = 1; i <= 5; i++) s += i <= k ? `<span class="band-${band(n)}">●</span>` : '<span class="off">●</span>'; return `<span class="dots" title="${Number(n).toFixed(1)}">${s}</span>`; }
+  function makesCell(r){
+    const x = r.explainer; if (!x || !x.one_sentence) return '<span class="sm">being written</span>';
+    const short = x.one_sentence.replace(/^SN\d+\s+\S+\s+/, "").split(/,|;| except | the way /)[0].trim();
+    return `<a href="/sn/${r.netuid}/#explainer" title="${esc(x.one_sentence)}">${esc(short.charAt(0).toUpperCase() + short.slice(1))}</a><span class="ex">${esc(x.commodity || "")}</span>`;
+  }
   function alphaCell(r){
     const t = r.alpha; if (!t) return '<span class="sm">n/a</span>';
     const ex = (t.exchanges || []).length;
@@ -269,6 +278,7 @@ main.grid.open aside{display:block}
     composite: (a, b) => b.composite - a.composite || byEmission(a, b),
     identity: (a, b) => b.identity_completeness.filled - a.identity_completeness.filled || b.composite - a.composite || byEmission(a, b),
     counts: (a, b) => (b.active_miners || 0) - (a.active_miners || 0) || byEmission(a, b),
+    makes: (a, b) => ((a.explainer && a.explainer.commodity) || "zz").localeCompare((b.explainer && b.explainer.commodity) || "zz") || byEmission(a, b),
     alpha: (a, b) => ((b.alpha && b.alpha.market_cap_tao) || 0) - ((a.alpha && a.alpha.market_cap_tao) || 0) || byEmission(a, b),
   };
   for (const a of AUD) sorters[a] = (x, y) => aScore(y, a) - aScore(x, a) || byEmission(x, y);
@@ -299,6 +309,7 @@ main.grid.open aside{display:block}
       return `<tr class="row${state.sel === r.netuid ? " sel" : ""}" data-n="${r.netuid}">
         <td class="rank">${r.rank}${delta}</td>
         <td class="name"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></td>
+        <td class="makes">${makesCell(r)}</td>
         <td class="num">${esc(r.emission_pct)}</td>
         <td class="num alpha">${alphaCell(r)}</td>
         <td class="comp${hiCol === "composite" ? " hi" : ""}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>

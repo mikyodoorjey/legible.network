@@ -81,7 +81,7 @@ def description(sub):
             f"What a first-time reader can find in five minutes, snapshot {sub.get('last_verified', '')}.")
 
 
-def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name):
+def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css=""):
     ident = sub["identity"]
     check = {c["field"]: c for c in sub.get("identity_check", [])}
     rows = []
@@ -152,6 +152,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name):
         "alpha_row": (lambda t: f'<div class="row"><span>Alpha token</span><a href="/alpha/{sub["netuid"]}/"><b style="font-family:var(--mono);font-weight:500">{e(t.get("symbol") or "α")}</b> {(t.get("price_tao") or 0):.4f} τ · {len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"])} exchange{"s" if len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"]) != 1 else ""}</a></div>' if t else "")(sub.get("alpha") or {}),
         "json": json.dumps({k: v for k, v in sub.items() if k != "alpha"}, ensure_ascii=False).replace("</", "<\\/"),
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
+        "explainer": explainer_html, "explainer_css": explainer_css,
     }
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)
 
@@ -319,7 +320,7 @@ def render_chart(data):
     return style + controls + f'<figure class="chart" data-show="composite">{"".join(out)}</figure>' + lists + script
 
 
-def build_all(data, partials, site, write_if_changed):
+def build_all(data, partials, site, write_if_changed, explainers=None):
     """Render subnet pages, the list, OG images, and return (changed list, chart html)."""
     changed = []
     subs = sorted(data["subnets"], key=lambda s: s["rank"])
@@ -333,7 +334,8 @@ def build_all(data, partials, site, write_if_changed):
                 og_name = "default.png"
         else:
             og_name = "default.png"
-        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name)
+        ex_html, ex_css = (explainers or {}).get(sub["netuid"], ("", ""))
+        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name, ex_html, ex_css)
         if write_if_changed(REPO / "sn" / str(sub["netuid"]) / "index.html", page):
             changed.append(f"sn/{sub['netuid']}/")
     if render_default_og(data, OG_DIR / "default.png"):
