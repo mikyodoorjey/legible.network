@@ -74,7 +74,7 @@ def check_file(path, fetch_links=False):
     for u in body_links - sources:
         fails.append(f"{path.name}: link not in Sources: {u[:70]}")
     deeper = re.search(r"## Go deeper\s*\n(.*?)(?=\n## |\Z)", body, re.S)
-    if deeper and len(re.findall(r"\]\((https?://", deeper.group(1))) > 3:
+    if deeper and len(re.findall(r"\]\(https?://", deeper.group(1))) > 3:
         fails.append(f"{path.name}: more than three Go deeper links")
     if "(inferred" not in main and "inferred" not in main:
         pass  # inference marks are optional; their absence is not a failure

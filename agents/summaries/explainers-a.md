@@ -1,0 +1,18 @@
+# Explainers, slice a
+
+Written 2026-09-10 from data/index.json (verified 2026-09-09) and each subnet's own materials re-fetched the same night. Eight files at data/explainers/{107,64,80,9,28,58,124,90}.md, all 565 to 583 words by the checker's count, all passing scripts/check_explainers.py with --links.
+
+## One line per subnet
+
+- SN107 Minos: a recipe contest where the judges cook every entry themselves. Hardest to explain: that the product is a configuration file for someone else's software, not the mutation calls, and that the about page (100 percent to the winner) and the live network config (winner_weight 0.8) disagree on the payout.
+- SN64 Chutes: a cloud provider whose machines belong to strangers. Hardest to explain: what a "chute" is, since no page defines it, and how a per-token dollar price for buyers connects to a token score for miners.
+- SN80 OpenRoboto: a title fight where the challenger must win by a clear margin. Hardest to explain: three tracks with different fees, vesting and payout rules for what a newcomer sees as one competition, and why an open checkpoint has a purse but no price.
+- SN9 IOTA: an assembly line whose stations sit in strangers' garages. Hardest to explain: pipeline-parallel training (layers on different machines, activations streamed between them) without the reader ever having seen a model trained, while the dashboard reads zero.
+- SN28 SayGM: a resellers' market where brokers underbid the list price for the same seat. Hardest to explain: that the miners' TEE hides the buyer's prompt and the miner's own keys at once, and that nothing in prose says how the epoch table becomes chain weights.
+- SN58 Greevils: a stock-picking contest played with real money. Hardest to explain: that the agent lane exists in the rules but is inert in the validator, so every account is scored as human and the agent pool burns, while the front page shows a leaderboard with agent names.
+- SN124 Swarm: a pilot's exam where the course is redrawn every two weeks. Hardest to explain: King of the Hill's five paid seats and the shrinking improvement floor, which only make sense once the reader sees why a copycat with a tiny tweak is the threat.
+- SN90 KubeTEE: a factory whose workrooms are sealed so even the landlord cannot look in. Hardest to explain: that the only recorded revenue comes from renting idle capacity to SN28, that miner pay is a dollar formula settled in alpha, and that attestation, the thing the subnet is named for, is not yet in the weight path.
+
+## Where the sources were thinnest
+
+Three sites render only with JavaScript and gave WebFetch nothing but a title: openroboto.ai, swarm124.com, and the Minos dashboard's figures. For those I leaned on the index's 2026-09-09 notes and said so inline. IOTA was thinnest overall: the README's two doc links are dead, the primer PDF is gone, the docs overview page is a 2024 to 2025 history, and the only live mechanism page is Scoring, Rewards and Kicking, which leaves every threshold to the code; the dashboard reads zero, so "How you would know it works" had to say that. Greevils' live leaderboard is empty and the front-page one is illustrative, so the demo section is an honest negative. SayGM has excellent buyer and usage pages but no incentive prose at all, so the mechanism section ends in a marked inference. KubeTEE's README is long and candid, which made it easy to be accurate but hard to be short. Swarm's evaluator is not named in the docs I fetched; the entry says validators score the policies, which follows the rubric's vocabulary but is not quoted from Swarm. No section in any entry was written from memory; where the subnet said nothing, the entry says the materials do not say.

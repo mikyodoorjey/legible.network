@@ -64,8 +64,8 @@ def main():
                 fails.append(f"{rel}: non-absolute og/canonical url {m.group(1)}")
         if "topbar:start" in t and "class=\"topbar\"" not in t:
             fails.append(f"{rel}: topbar partial not injected")
-        if rel.startswith("sn/") and rel != "sn/index.html" and t.count("<details") != 16:
-            fails.append(f"{rel}: expected 16 evidence cells, found {t.count('<details')}")
+        if rel.startswith("sn/") and rel != "sn/index.html" and t.count("<details open>") != 16:
+            fails.append(f"{rel}: expected 16 evidence cells, found {t.count("<details open>")}")
 
     if data:
         for s in data["subnets"]:
