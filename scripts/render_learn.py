@@ -185,7 +185,7 @@ def render_learn(data, entries, terms, partials, site, inline_fn, head_fn):
     alpha_html = "<ul class=\"entries compact\">" + "".join(
         f'<li><a href="/sn/{ent["netuid"]}/#explainer">{e(ent["fm"].get("name", ""))}</a> <span class="sm">SN{ent["netuid"]} · {e(ent["fm"].get("commodity", ""))}</span></li>'
         for ent in sorted(entries.values(), key=lambda x: x["fm"].get("name", "").lower())) + "</ul>"
-    gloss = "".join(f'<section id="{slug(t)}" class="term"><h3>{e(t)}</h3>{md_block(b, inline_fn)}</section>' for t, b in terms)
+    gloss = "".join(f'<section id="{slug(t)}" class="gterm"><h3>{e(t)}</h3>{md_block(b, Linker([x for x in terms if x[0] != t], inline_fn))}</section>' for t, b in terms)
     missing = [s for n, s in subs.items() if n not in entries]
     missing_html = ("<p class=\"sm\">Still being written: " + ", ".join(f'SN{s["netuid"]} {e(s["name"])}' for s in sorted(missing, key=lambda x: x["rank"])) + ".</p>") if missing else ""
     body = f"""<main class="wrap learn">
@@ -208,10 +208,10 @@ def render_learn(data, entries, terms, partials, site, inline_fn, head_fn):
 .entries li:first-child{border-top:0}
 .entries .one{color:var(--ink-soft);font-size:14px}
 .entries.compact li{padding:5px 0;border:0}
-.term p{max-width:74ch;color:var(--ink-soft)}
-.term h3{scroll-margin-top:20px}
+.gterm p{max-width:74ch;color:var(--ink-soft)}
+.gterm h3{scroll-margin-top:20px}
 """
-    return head_fn("Learn", "What each Bittensor subnet makes, explained from zero, with a glossary.", "/learn/", partials, site, css) + body + partials["footer"] + "</body></html>\n"
+    return head_fn("Learn", "What each Bittensor subnet makes, explained from zero, with a glossary.", "/learn/", partials, site, css) + body + partials["footer"] + '<script src="/assets/glossary.js"></script><script src="/assets/terms.js"></script>' + "</body></html>\n"
 
 
 EXPLAINER_CSS = """
@@ -220,8 +220,6 @@ EXPLAINER_CSS = """
 .explainer h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin:18px 0 6px;font-weight:500}
 .explainer p{margin:0 0 10px;color:var(--ink-soft);max-width:74ch}
 .explainer ul{padding-left:20px;color:var(--ink-soft)}
-.explainer a.term{border-bottom:1px dotted var(--teal);color:inherit}
-.explainer a.term:hover{color:var(--teal);text-decoration:none}
 .explainer .srcs{margin-top:10px}
 .explainer .srcs ul{font-family:var(--mono);font-size:11px;padding-left:18px}
 .scored-head{margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--rule)}

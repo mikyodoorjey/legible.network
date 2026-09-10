@@ -315,6 +315,10 @@ def main():
         parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
         parts["robots"] = ctx["robots"]
         entries, terms = load_entries(), load_glossary()
+        from render_learn import md_block, slug as _slug
+        gjs = "window.GLOSSARY=" + json.dumps({_slug(t): {"term": t, "html": md_block(b, inline)} for t, b in terms}, ensure_ascii=False) + ";\n"
+        if write_if_changed(REPO / "assets" / "glossary.js", gjs):
+            changed.append("assets/glossary.js")
         explainers = {}
         for sub in data["subnets"]:
             ent = entries.get(sub["netuid"])

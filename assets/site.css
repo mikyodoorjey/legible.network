@@ -89,3 +89,15 @@ footer.site a{color:var(--soft)}
   .links{gap:12px;flex-wrap:wrap}
   .hero{padding:36px 0 28px}
 }
+
+/* glossary popovers */
+a.term{border-bottom:1px dotted var(--teal);color:inherit;cursor:help}
+a.term:hover{color:var(--teal);text-decoration:none}
+.termpop{position:absolute;z-index:50;background:var(--paper);color:var(--ink);border:1px solid var(--rule-strong);border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:12px 14px;font-size:13.5px;line-height:1.5}
+.termpop .tp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.termpop .tp-head b{font-family:var(--serif);font-size:16px;font-weight:400;font-variation-settings:"opsz" 24,"SOFT" 60}
+.termpop .tp-more{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.termpop .tp-body p{margin:0 0 8px;color:var(--ink-soft)}
+.termpop .tp-body p:last-child{margin:0}
+.termpop .tp-body a{color:var(--teal)}
+@media (prefers-reduced-motion:no-preference){.termpop{animation:tp .12s ease-out}@keyframes tp{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}}
