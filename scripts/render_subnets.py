@@ -20,12 +20,7 @@ AUD_LABEL = {"stakers": "Stakers and validators", "miners": "Miners", "buyers": 
 AUD_Q = {"stakers": "Should I allocate here?", "miners": "Can I compete, and what wins?",
          "buyers": "Can I use this today?", "newcomers": "What is this and why does it matter?"}
 BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
-BAND_DEF = ["nothing findable in five minutes from any public source",
-            "findable only through third parties, or mentioned in passing without an answer",
-            "the subnet's own materials touch it, but scattered, stale, or readable only in code",
-            "stated in the subnet's own materials in one place, but a reader needs expertise or more than five minutes",
-            "stated plainly within two clicks of the front door; a first-time reader gets it in under five minutes",
-            "plain, and backed by a checkable artifact that agrees with the chain identity"]
+BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"]
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
 LIGHT = {"bg": (10, 10, 10), "paper": (18, 18, 18), "ink": (242, 242, 242), "soft": (163, 166, 169), "softer": (116, 119, 122),
          "teal": (231, 38, 48), "rule": (52, 52, 52),
@@ -85,6 +80,19 @@ def description(sub):
     lo = min(scores, key=scores.get)
     return (f"Composite {float(sub['composite']):.1f} of 5. Most legible to {hi} ({scores[hi]:.1f}), least to {lo} ({scores[lo]:.1f}). "
             f"What a first-time reader can find in five minutes, snapshot {sub.get('last_verified', '')}.")
+
+
+WHO = {"stakers": "staker", "miners": "miner", "buyers": "buyer", "newcomers": "newcomer"}
+
+
+def verdict_block(sub, comp):
+    v = sub.get("verdict")
+    if not isinstance(v, dict) or not v.get("summary"):
+        return ""
+    items = "".join(
+        f'<li><b>If you were a {WHO[a]}</b> <span class="band-{band(sub["audiences"][a]["score"])}" style="font-family:var(--pix)">{float(sub["audiences"][a]["score"]):.1f}</span> {e(v[a])}</li>'
+        for a in AUD if v.get(a))
+    return f'<div class="verdict"><span class="mono">What {comp:.1f} means</span><p>{e(v["summary"])}</p><ul>{items}</ul></div>'
 
 
 def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css=""):
@@ -151,7 +159,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
         "netuid": sub["netuid"], "name": sub["name"], "rank": sub["rank"], "site": site,
         "description": description(sub), "composite": f"{comp:.1f}", "band": band(comp), "band_word": BAND_WORD[band(comp)],
         "band_def": f"{BAND_WORD[band(comp)]}: {BAND_DEF[band(comp)]}.",
-        "verdict_block": (f'<div class="verdict"><span class="mono">Why {comp:.1f}</span><p>{e(sub["verdict"])}</p></div>' if sub.get("verdict") else ""),
+        "verdict_block": verdict_block(sub, comp),
         "og_image": og_name, "pills": "".join(pills), "own_words": own, "meter": meter(sub), "identity_rows": "".join(rows),
         "panels": "".join(panels), "provenance": prov or '<span class="pill">no provenance recorded</span>',
         "score_rows": score_rows, "prevnext": prevnext,

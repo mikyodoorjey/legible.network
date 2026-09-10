@@ -366,10 +366,10 @@ def main():
     if vpath.exists():
         import csv as _csv
         with vpath.open(newline="", encoding="utf-8") as fh:
-            verdicts = {r["netuid"].strip(): r.get("verdict", "").strip() for r in _csv.DictReader(fh)}
+            verdicts = {r["netuid"].strip(): {k: (r.get(k) or "").strip() for k in ("stakers", "miners", "buyers", "newcomers", "summary")} for r in _csv.DictReader(fh)}
         for sub in data["subnets"]:
-            sub["verdict"] = verdicts.get(str(sub["netuid"]), "")
-        missing_v = [s["netuid"] for s in data["subnets"] if not s.get("verdict")]
+            sub["verdict"] = verdicts.get(str(sub["netuid"]))
+        missing_v = [s["netuid"] for s in data["subnets"] if not (s.get("verdict") or {}).get("summary")]
         if missing_v:
             print(f"  verdicts missing for {len(missing_v)} subnets: {missing_v[:8]}", file=sys.stderr)
     (DATA / "index.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

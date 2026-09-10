@@ -94,6 +94,9 @@ main.grid.open aside{display:block}
 .detail .verdict{border-left:3px solid var(--tag);padding:6px 12px;margin:0 0 14px;background:var(--paper-deep)}
 .detail .verdict .mono{color:var(--tag)}
 .detail .verdict p{margin:4px 0 0;font-size:13.5px;line-height:1.5;color:var(--ink)}
+.detail .verdict ul{list-style:none;padding:0;margin:8px 0 0}
+.detail .verdict li{font-size:13px;line-height:1.5;color:var(--ink-soft);padding:6px 0;border-top:1px solid var(--rule)}
+.detail .verdict li b{color:var(--ink);font-weight:600;margin-right:4px}
 .detail .one{font-size:14px;line-height:1.5;color:var(--ink);margin:6px 0 10px}
 .detail .one a{white-space:nowrap;color:var(--tag)}
 .detail .aq{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin:0 0 6px}
@@ -247,7 +250,7 @@ main.grid.open aside{display:block}
   const commOf = r => (r.explainer && r.explainer.commodity) || "other";
   const QL = {q1:"What it is", q2:"Who it is for", q3:"Resists gaming", q4:"Identity and docs"};
   const BAND_WORD = ["sparse","thin","partial","workable","clear","exemplary"];
-  const BAND_DEF = ["nothing findable in five minutes from any public source","findable only through third parties, or mentioned in passing without an answer","the subnet's own materials touch it, but scattered, stale, or readable only in code","stated in the subnet's own materials in one place, but a reader needs expertise or more than five minutes","stated plainly within two clicks of the front door; a first-time reader gets it in under five minutes","plain, and backed by a checkable artifact that agrees with the chain identity"];
+  const BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"];
   const scoreTip = (v, label) => `${label ? label + " " : ""}${Number(v).toFixed(1)} of 5 · ${BAND_WORD[band(v)]}: ${BAND_DEF[band(v)]}`;
   const split = r => AUD.map(a => `${AUD_LABEL[a]} ${aScore(r, a).toFixed(1)}`).join(" · ");
   const AUD_Q = {stakers:"Should I allocate here?", miners:"Can I compete, and what wins?", buyers:"Can I use this today?", newcomers:"What is this and why does it matter?"};
@@ -356,8 +359,8 @@ main.grid.open aside{display:block}
         <td class="name"><div class="nm"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></div>${oneLine(r)}</td>
         <td class="num">${esc(r.emission_pct)}</td>
         <td class="num alpha">${alphaCell(r)}</td>
-        <td class="comp${hiCol === "composite" ? " hi" : ""}" title="${esc((r.verdict ? r.verdict + "\n\n" : "") + scoreTip(r.composite, "Composite") + "\n" + split(r))}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
-        ${AUD.map(a => `<td class="${hiCol === a ? "hi" : ""}" title="${esc(scoreTip(aScore(r, a), AUD_LABEL[a]))}">${scoreDots(aScore(r, a))}</td>`).join("")}
+        <td class="comp${hiCol === "composite" ? " hi" : ""}" title="${esc(((r.verdict && r.verdict.summary) ? r.verdict.summary + "\n\n" : "") + scoreTip(r.composite, "Composite") + "\n" + split(r))}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
+        ${AUD.map(a => `<td class="${hiCol === a ? "hi" : ""}" title="${esc((r.verdict && r.verdict[a] ? r.verdict[a] + "\n\n" : "") + scoreTip(aScore(r, a), AUD_LABEL[a]))}">${scoreDots(aScore(r, a))}</td>`).join("")}
         <td>${meter(r)}</td>
         <td class="num">${r.active_miners ?? "?"} · ${r.active_validators ?? "?"}</td>
       </tr>`; }).join("");
@@ -378,7 +381,8 @@ main.grid.open aside{display:block}
       <h2>${esc(r.name)}</h2>
       <div class="meta"><span class="comp band-${band(r.composite)}" title="${esc(scoreTip(r.composite, "Composite"))}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
       <p class="banddef">${esc(BAND_WORD[band(r.composite)])}: ${esc(BAND_DEF[band(r.composite)])}.</p>
-      ${r.verdict ? `<div class="verdict"><span class="mono">Why ${Number(r.composite).toFixed(1)}</span><p>${esc(r.verdict)}</p></div>` : ""}
+      ${r.verdict && r.verdict.summary ? `<div class="verdict"><span class="mono">What ${Number(r.composite).toFixed(1)} means</span><p>${esc(r.verdict.summary)}</p>
+        <ul>${AUD.map(a => r.verdict[a] ? `<li><b>If you were a ${a === "stakers" ? "staker" : a === "miners" ? "miner" : a === "buyers" ? "buyer" : "newcomer"}</b> <span class="band-${band(aScore(r, a))}" style="font-family:var(--pix)">${aScore(r, a).toFixed(1)}</span> ${esc(r.verdict[a])}</li>` : "").join("")}</ul></div>` : ""}
       ${r.explainer && r.explainer.one_sentence ? `<p class="one">${esc(r.explainer.one_sentence)} <a href="/sn/${r.netuid}/#explainer">Read the explainer →</a></p>` : ""}
       ${r.own_words && r.own_words.quote ? `<p class="quote" title="In their own words">${esc(r.own_words.quote)}</p>` : ""}
       <div class="sm">Identity ${meter(r)}</div>
