@@ -42,7 +42,7 @@ main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-tem
 main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
 .tablewrap{overflow-x:auto;padding:0 0 60px}
 table{border-collapse:collapse;width:100%;min-width:960px}
-th{position:sticky;top:var(--ctl,140px);background:var(--bg);box-shadow:0 1px 0 var(--rule-strong);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
+th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--softer);padding:10px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
 th:hover{color:var(--ink)}
 th.sorted{color:var(--ink)}
 th .arrow{opacity:.6;margin-left:3px}
@@ -66,7 +66,7 @@ td.comp b{font-family:var(--mono);font-weight:500;font-size:14px}
 td.comp .bar{display:block;height:3px;width:60px;background:var(--rule);border-radius:2px;margin-top:5px;overflow:hidden}
 td.comp .bar i{display:block;height:100%}
 .empty{padding:60px 32px;color:var(--soft);font-family:var(--serif);font-size:20px}
-aside{border-left:1px solid var(--rule);background:var(--paper);height:calc(100vh - var(--ctl,120px));position:sticky;top:var(--ctl,120px);overflow:auto;display:none}
+aside{border-left:1px solid var(--rule);background:var(--paper);height:100vh;position:sticky;top:0;overflow:auto;display:none}
 main.grid.open aside{display:block}
 .detail{padding:20px 22px 40px}
 .detail .close{float:right;color:var(--softer);font-size:20px;line-height:1;padding:2px 6px}
@@ -87,7 +87,6 @@ main.grid.open aside{display:block}
   main.grid.open{grid-template-columns:1fr}
   main.grid.open .tablewrap{display:none}
   aside{height:auto;position:static}
-  th{position:static}
 }
 </style>
 </head>
@@ -341,11 +340,7 @@ main.grid.open aside{display:block}
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && state.sel) closeDetail(); if (e.key === "/" && document.activeElement !== $("#q")){ e.preventDefault(); $("#q").focus(); } });
   window.addEventListener("hashchange", () => { if (!loaded) return; readHash(); render(); state.sel ? showDetail(state.sel) : (function(){ $("#main").classList.remove("open"); })(); });
-  function setCtl(){ document.documentElement.style.setProperty("--ctl", Math.ceil($("#controls").getBoundingClientRect().height) + "px"); }
-  window.addEventListener("resize", setCtl);
-  if (window.ResizeObserver) new ResizeObserver(setCtl).observe($("#controls"));
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(setCtl);
-  setCtl();
+  function setCtl(){}
 
   async function loadData(attempt){
     attempt = attempt || 1; loadError = null; render();
