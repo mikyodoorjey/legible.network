@@ -92,6 +92,9 @@ def main():
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))
         if want != have:
             fails.append(f"sitemap mismatch: missing {sorted(want - have)[:3]} extra {sorted(have - want)[:3]}")
+        nov = [s["netuid"] for s in data["subnets"] if not s.get("verdict")]
+        if nov and len(nov) < len(data["subnets"]):
+            fails.append(f"verdict missing for {len(nov)} subnets: {nov[:6]}")
         for c in data.get("changelog", []):
             if not c.get("date") or not c.get("kind"):
                 fails.append("changelog entry without date or kind")

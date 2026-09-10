@@ -1,6 +1,6 @@
 # Subnet Legibility Index, rubric v1.0
 
-Chain snapshot 2026-09-09, scores as of 2026-09-09, generated 2026-09-10T02:43:30+00:00.
+Chain snapshot 2026-09-09, scores as of 2026-09-09, generated 2026-09-10T20:50:13+00:00.
 32 subnets of 129. Mean composite 3.2.
 
 | # | SN | Name | Emission | Composite | Stakers | Miners | Buyers | Newcomers | Identity |

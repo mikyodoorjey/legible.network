@@ -28,6 +28,10 @@
 .card{position:sticky;top:20px;border:1px solid var(--rule-strong);background:var(--paper);padding:18px 20px}
 .card .comp{font-family:var(--pix);font-size:56px;line-height:1;letter-spacing:.04em}
 .card .comp small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);margin-top:8px}
+.card .banddef{font-family:var(--mono);font-size:10px;letter-spacing:.02em;color:var(--softer);margin:6px 0 10px;line-height:1.45}
+.card .verdict{border-left:3px solid var(--tag);padding:6px 10px;margin:0 0 12px;background:var(--paper-deep)}
+.card .verdict .mono{color:var(--tag)}
+.card .verdict p{margin:4px 0 0;font-size:13px;line-height:1.5;color:var(--ink)}
 .card .row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-top:1px solid var(--rule);font-size:13.5px}
 .card .row:first-of-type{border-top:0}
 .card .row b{font-family:var(--mono);font-weight:500}
@@ -110,7 +114,9 @@
   </div>
 
   <aside class="card">
-    <div class="comp band-{{band}}">{{composite}}<small>{{band_word}} · composite of 5</small></div>
+    <div class="comp band-{{band}}" title="{{band_def}}">{{composite}}<small>{{band_word}} · composite of 5</small></div>
+    <p class="banddef">{{band_def}}</p>
+    {{{verdict_block}}}
     {{{score_rows}}}
     <div class="row"><span>Identity</span><span>{{{meter}}}</span></div>
     {{{alpha_row}}}

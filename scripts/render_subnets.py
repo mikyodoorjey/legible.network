@@ -20,6 +20,12 @@ AUD_LABEL = {"stakers": "Stakers and validators", "miners": "Miners", "buyers": 
 AUD_Q = {"stakers": "Should I allocate here?", "miners": "Can I compete, and what wins?",
          "buyers": "Can I use this today?", "newcomers": "What is this and why does it matter?"}
 BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
+BAND_DEF = ["nothing findable in five minutes from any public source",
+            "findable only through third parties, or mentioned in passing without an answer",
+            "the subnet's own materials touch it, but scattered, stale, or readable only in code",
+            "stated in the subnet's own materials in one place, but a reader needs expertise or more than five minutes",
+            "stated plainly within two clicks of the front door; a first-time reader gets it in under five minutes",
+            "plain, and backed by a checkable artifact that agrees with the chain identity"]
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
 LIGHT = {"bg": (10, 10, 10), "paper": (18, 18, 18), "ink": (242, 242, 242), "soft": (163, 166, 169), "softer": (116, 119, 122),
          "teal": (231, 38, 48), "rule": (52, 52, 52),
@@ -124,7 +130,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
             f'<p class="who">{AUD_Q[a]} · rank {au.get("rank", "?")} of {len(data["subnets"])} for this audience</p>{"".join(cells)}</section>')
 
     score_rows = "".join(
-        f'<div class="row"><span class="aud-{a}">{AUD_LABEL[a].split(" and ")[0]}</span><span>{dots(sub["audiences"][a]["score"])} <b>{float(sub["audiences"][a]["score"]):.1f}</b></span></div>'
+        f'<div class="row" title="{e(AUD_LABEL[a])} {float(sub["audiences"][a]["score"]):.1f} of 5: {BAND_WORD[band(sub["audiences"][a]["score"])]}, {BAND_DEF[band(sub["audiences"][a]["score"])]}"><span class="aud-{a}">{AUD_LABEL[a].split(" and ")[0]}</span><span>{dots(sub["audiences"][a]["score"])} <b>{float(sub["audiences"][a]["score"]):.1f}</b></span></div>'
         for a in AUD)
     prov = "".join(f'<span class="pill">{e(p.strip())}</span>' for p in (sub.get("claim_labels") or "").split(";") if p.strip())
     corrections = sub.get("corrections") or []
@@ -144,6 +150,8 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
     ctx = {
         "netuid": sub["netuid"], "name": sub["name"], "rank": sub["rank"], "site": site,
         "description": description(sub), "composite": f"{comp:.1f}", "band": band(comp), "band_word": BAND_WORD[band(comp)],
+        "band_def": f"{BAND_WORD[band(comp)]}: {BAND_DEF[band(comp)]}.",
+        "verdict_block": (f'<div class="verdict"><span class="mono">Why {comp:.1f}</span><p>{e(sub["verdict"])}</p></div>' if sub.get("verdict") else ""),
         "og_image": og_name, "pills": "".join(pills), "own_words": own, "meter": meter(sub), "identity_rows": "".join(rows),
         "panels": "".join(panels), "provenance": prov or '<span class="pill">no provenance recorded</span>',
         "score_rows": score_rows, "prevnext": prevnext,
