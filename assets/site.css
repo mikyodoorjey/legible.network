@@ -47,8 +47,9 @@ h3{font-size:18px;letter-spacing:-.02em}
 nav.nav{border-bottom:1px solid var(--rule)}
 nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
 .wordmark{font-family:var(--pix);font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
-.wordmark:hover{text-decoration:none;color:var(--tag)}
-.wordmark small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--softer);margin-left:10px}
+.wordmark a{color:inherit}.wordmark a:hover{text-decoration:none;color:var(--tag)}
+.wordmark small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--softer);margin-left:10px;text-transform:uppercase}
+.wordmark small a{color:var(--soft)}.wordmark small a:hover{color:var(--tag)}
 .links{display:flex;gap:22px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .links a{color:var(--soft);padding-bottom:2px;border-bottom:1px solid transparent}
 .links a:hover,.links a[aria-current]{color:var(--ink);border-bottom-color:var(--tag);text-decoration:none}
@@ -93,7 +94,7 @@ footer.site a{color:var(--soft)}
 .panel{border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--paper);padding:14px 16px;margin-bottom:14px}
 .quote{font-family:var(--disp);font-weight:500;font-size:16px;line-height:1.4;letter-spacing:-.01em;color:var(--ink);margin:6px 0}
 
-.hero{position:relative;padding:56px 0 40px}
+.hero{position:relative;padding-top:56px;padding-bottom:40px}
 .hero .lede{font-size:17px;color:var(--ink-soft);max-width:62ch;margin:18px 0 0}
 
 @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
@@ -101,7 +102,7 @@ footer.site a{color:var(--soft)}
   .wrap{padding:0 16px}
   nav.nav .wrap{flex-wrap:wrap}
   .links{gap:12px;flex-wrap:wrap}
-  .hero{padding:36px 0 28px}
+  .hero{padding-top:36px;padding-bottom:28px}
 }
 
 /* glossary popovers */

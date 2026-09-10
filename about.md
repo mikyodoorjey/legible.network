@@ -12,7 +12,7 @@ This index measures the gap. Not the quality of any mechanism, which the market 
 
 ## Who built it
 
-Mikyö Clark (they/them). I built the community function at EigenLayer from zero through its token launch, ran go-to-market for Ritual, an AI-native Layer 1, and for Inversed, an agent governance layer, and now run Compression, a firm for organizational redesign around agentic AI. The longer version is at [mikyo.one](https://mikyo.one). The argument behind this index is in [The Network That Wrote Its Org Chart in Code](https://mikyo.one/bittensor/).
+Mikyö Clark (they/them). I built the community function at EigenLayer from zero through its token launch, ran go-to-market for Ritual, an AI-native Layer 1, and for Inversed, an agent governance layer, and now run Compression, a firm for organizational redesign around agentic AI. The longer version is at [mikyo.one](https://www.mikyo.one). The argument behind this index is in [The Network That Wrote Its Org Chart in Code](https://www.mikyo.one/bittensor/).
 
 I hold no position in any subnet token and have not been paid by any subnet, validator, or foundation for this work. If that changes it will be stated here.
 
