@@ -164,12 +164,12 @@ main.grid.open aside{display:block}
         <th data-k="rank" title="Rank by emission share">Rank</th>
         <th data-k="name">Subnet</th>
         <th data-k="emission">Emission</th>
+        <th data-k="alpha" title="Alpha token: symbol, price in TAO, exchange listings. Click for the token page.">Alpha token</th>
         <th data-k="composite">Composite</th>
         <th data-k="stakers">Stakers</th>
         <th data-k="miners">Miners</th>
         <th data-k="buyers">Buyers</th>
         <th data-k="newcomers">Newcomers</th>
-        <th data-k="alpha" title="Alpha token: price in TAO and exchange listings">Alpha</th>
         <th data-k="identity" title="On-chain identity fields set, of 7">Identity</th>
         <th data-k="counts" title="Active miners · validators">Miners · validators</th>
       </tr></thead>
@@ -300,9 +300,9 @@ main.grid.open aside{display:block}
         <td class="rank">${r.rank}${delta}</td>
         <td class="name"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></td>
         <td class="num">${esc(r.emission_pct)}</td>
+        <td class="num alpha">${alphaCell(r)}</td>
         <td class="comp${hiCol === "composite" ? " hi" : ""}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
         ${AUD.map(a => `<td class="${hiCol === a ? "hi" : ""}">${scoreDots(aScore(r, a))}</td>`).join("")}
-        <td class="num alpha">${alphaCell(r)}</td>
         <td>${meter(r)}</td>
         <td class="num">${r.active_miners ?? "?"} · ${r.active_validators ?? "?"}</td>
       </tr>`; }).join("");
