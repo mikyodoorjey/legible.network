@@ -100,14 +100,26 @@ def taostats_get(path, params, key, fresh=False, ttl_hours=6):
 
 
 def fetch_ranking(limit, key, fresh):
-    j = taostats_get("/api/subnet/latest/v1", {"order": "emission_desc", "limit": limit}, key, fresh)
-    if not j:
-        raise SystemExit("ranking call failed; see stderr")
-    data = j.get("data") if isinstance(j, dict) else j
-    if not isinstance(data, list) or not data:
-        raise SystemExit(f"ranking returned no rows; top-level keys: {list(j)[:10] if isinstance(j, dict) else type(j)}")
-    print(f"  ranking: {len(data)} rows; first record keys: {sorted(data[0].keys())}", file=sys.stderr)
-    return data
+    """Fetch every subnet (paginated) so emission share is over the whole network, then keep the top N."""
+    data, page, total_items = [], 1, None
+    while True:
+        j = taostats_get("/api/subnet/latest/v1", {"order": "emission_desc", "limit": 200, "page": page}, key, fresh)
+        if not j:
+            raise SystemExit("ranking call failed; see stderr")
+        rows = j.get("data") if isinstance(j, dict) else j
+        if not isinstance(rows, list) or not rows:
+            break
+        data.extend(rows)
+        pg = j.get("pagination") or {}
+        total_items = pg.get("total_items", total_items)
+        if not pg.get("next_page"):
+            break
+        page = pg["next_page"]
+    if not data:
+        raise SystemExit("ranking returned no rows")
+    print(f"  ranking: {len(data)} subnets fetched (total_items {total_items}); keys: {sorted(data[0].keys())[:12]}...", file=sys.stderr)
+    data.sort(key=lambda r: -(to_float(pick(r, "emission_share")[0]) or 0.0))
+    return data, total_items or len(data)
 
 
 def fetch_identities_taostats(key, fresh):
@@ -199,7 +211,7 @@ def completeness(identity):
             "missing": [f for f in IDENTITY_FIELDS if f not in filled]}
 
 
-def build_rows(ranking, identities, identity_source, sdk=None, deep=False):
+def build_rows(ranking, identities, identity_source, sdk=None, deep=False, limit=32):
     rows, used = [], {}
     raw_em = []
     for rec in ranking:
@@ -211,12 +223,12 @@ def build_rows(ranking, identities, identity_source, sdk=None, deep=False):
                 used[name] = k
         raw_em.append(to_float(vals["emission_share"]) or 0.0)
     total = sum(raw_em)
-    method = "api_share" if total <= 1.05 else "normalized_over_top_n"
-    for i, rec in enumerate(ranking):
+    method = "api_share" if total <= 1.05 else "normalized_over_network"
+    for i, rec in enumerate(ranking[:limit]):
         vals = {name: pick(rec, name)[0] for name in FIELD_MAP}
         nid = to_int(vals["netuid"])
         em = to_float(vals["emission_share"]) or 0.0
-        if method == "normalized_over_top_n" and total:
+        if method == "normalized_over_network" and total:
             em = em / total
         ident = identities.get(nid) or {f: "" for f in IDENTITY_FIELDS}
         row = {
@@ -298,7 +310,8 @@ def main():
 
     key = require_env("TAOSTATS_API_KEY")
     print("pulling ranking", file=sys.stderr)
-    ranking = fetch_ranking(a.limit, key, a.fresh)
+    ranking, total_subnets = fetch_ranking(a.limit, key, a.fresh)
+    top = ranking[:a.limit]
 
     sdk = None
     version = None if a.no_sdk else sdk_available()
@@ -311,28 +324,28 @@ def main():
             sdk = None
     if sdk is not None:
         identities = {}
-        for rec in ranking:
+        for rec in top:
             nid = to_int(pick(rec, "netuid")[0])
             ident = sdk_identity(sdk, nid)
             if ident is not None:
                 identities[nid] = ident
         identity_source = f"sdk {version}"
-        if len(identities) < len(ranking):
+        if len(identities) < len(top):
             fallback = fetch_identities_taostats(key, a.fresh)
-            for rec in ranking:
+            for rec in top:
                 nid = to_int(pick(rec, "netuid")[0])
                 identities.setdefault(nid, fallback.get(nid, {f: "" for f in IDENTITY_FIELDS}))
     else:
         identities = fetch_identities_taostats(key, a.fresh)
         identity_source = "taostats /api/subnet/identity/v1"
 
-    rows, used, method = build_rows(ranking, identities, identity_source, sdk, a.deep)
+    rows, used, method = build_rows(ranking, identities, identity_source, sdk, a.deep, a.limit)
     snapshot = {
         "pulled_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "sources": {"ranking": "taostats /api/subnet/latest/v1", "identity": identity_source,
                     "counts": "sdk metagraph" if (sdk is not None and a.deep) else "taostats",
                     "emission_share_method": method, "field_map_used": used},
-        "total_subnets": 128,
+        "total_subnets": total_subnets,
         "subnets": rows,
     }
     prev = latest("chain-*.json")

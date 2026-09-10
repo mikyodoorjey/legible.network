@@ -1,0 +1,963 @@
+{
+ "pulled_at": "2026-09-10T00:36:43+00:00",
+ "sources": {
+  "ranking": "taostats /api/subnet/latest/v1",
+  "identity": "sdk 11.1.0",
+  "counts": "taostats",
+  "emission_share_method": "normalized_over_network",
+  "field_map_used": {
+   "netuid": "netuid",
+   "emission_share": "emission",
+   "active_miners": "active_miners",
+   "active_validators": "active_validators",
+   "registration_cost_tao": "registration_cost",
+   "owner": "owner"
+  }
+ },
+ "total_subnets": 129,
+ "subnets": [
+  {
+   "netuid": 107,
+   "rank": 1,
+   "name": "Minos",
+   "emission_share": 0.113385,
+   "active_miners": 20,
+   "active_validators": 7,
+   "registration_cost_tao": 0.99,
+   "alpha_price_tao": 0.057657834,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Minos",
+    "github_repo": "https://github.com/minos-protocol/minos_subnet",
+    "subnet_contact": "contact@theminos.ai",
+    "subnet_url": "https://theminos.ai",
+    "discord": "https://discord.com/channels/799672011265015819/1467949024769478793",
+    "description": "The Foundational Layer of Genomics",
+    "additional": "",
+    "logo_url": "https://theminos.ai/logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 51,
+   "rank": 2,
+   "name": "lium.io",
+   "emission_share": 0.079613,
+   "active_miners": 63,
+   "active_validators": 9,
+   "registration_cost_tao": 0.5,
+   "alpha_price_tao": 0.093558765,
+   "owner": null,
+   "identity": {
+    "subnet_name": "lium.io",
+    "github_repo": "https://github.com/Datura-ai/lium-io",
+    "subnet_contact": "",
+    "subnet_url": "lium.io",
+    "discord": "p383_54249",
+    "description": "revolutionizing the democratization of compute",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/Datura-ai/lium-logos/refs/heads/main/Celium_Icon_FullColor.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "subnet_contact",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 15,
+   "rank": 3,
+   "name": "ORO",
+   "emission_share": 0.066908,
+   "active_miners": 78,
+   "active_validators": 11,
+   "registration_cost_tao": 0.490460158,
+   "alpha_price_tao": 0.034311687,
+   "owner": null,
+   "identity": {
+    "subnet_name": "ORO",
+    "github_repo": "https://github.com/ORO-AI/oro",
+    "subnet_contact": "team@oroagents.com",
+    "subnet_url": "https://oroagents.com",
+    "discord": "https://discord.gg/MHqAVWTdka",
+    "description": "AI commerce agents",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/ORO-AI/oro/main/brand/profile-snowcap.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 120,
+   "rank": 4,
+   "name": "Affine",
+   "emission_share": 0.059873,
+   "active_miners": 5,
+   "active_validators": 3,
+   "registration_cost_tao": 0.850020066,
+   "alpha_price_tao": 0.053218637,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Affine",
+    "github_repo": "https://github.com/AffineFoundation/affine",
+    "subnet_contact": "hello@affine.io",
+    "subnet_url": "www.affine.io",
+    "discord": "consttt",
+    "description": "Reason Mining",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/AffineFoundation/affine/main/affine.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 64,
+   "rank": 5,
+   "name": "Chutes",
+   "emission_share": 0.059359,
+   "active_miners": 15,
+   "active_validators": 14,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.072871179,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Chutes",
+    "github_repo": "https://github.com/chutesai/chutes",
+    "subnet_contact": "support@chutes.ai",
+    "subnet_url": "https://chutes.ai",
+    "discord": "https://discord.gg/chutes",
+    "description": "Breakthrough Serverless Compute for AI, At Scale.",
+    "additional": "Chutes is a subnet operated by Chutes Global Corp, an International Business Corporation registered in Nevis with registration number C 61974",
+    "logo_url": "https://storage.googleapis.com/chutes-random/logo-chutes.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 7,
+    "of": 7,
+    "missing": []
+   }
+  },
+  {
+   "netuid": 97,
+   "rank": 6,
+   "name": "Albedo",
+   "emission_share": 0.051832,
+   "active_miners": 5,
+   "active_validators": 3,
+   "registration_cost_tao": 0.210771026,
+   "alpha_price_tao": 0.023430051,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Albedo",
+    "github_repo": "https://github.com/unarbos/albedo",
+    "subnet_contact": "arbos@bittensor.com",
+    "subnet_url": "https://us-east-1.hippius.com/albedo/index.html",
+    "discord": "@arbos",
+    "description": "Alchemical intelligence",
+    "additional": "",
+    "logo_url": "https://us-east-1.hippius.com/albedo/favicon.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 4,
+   "rank": 7,
+   "name": "Targon",
+   "emission_share": 0.047476,
+   "active_miners": 5,
+   "active_validators": 7,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.058419747,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Targon",
+    "github_repo": "https://github.com/manifold-inc/targon",
+    "subnet_contact": "devs@manifold.inc",
+    "subnet_url": "https://targon.com",
+    "discord": "",
+    "description": "Incentivized Compute Marketplace powered by the Targon Virtual Machine (TVM).",
+    "additional": "",
+    "logo_url": "https://www.manifold.inc/favicon.svg"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 44,
+   "rank": 8,
+   "name": "Score",
+   "emission_share": 0.033568,
+   "active_miners": 10,
+   "active_validators": 9,
+   "registration_cost_tao": 0.007737048,
+   "alpha_price_tao": 0.0398213,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Score",
+    "github_repo": "https://github.com/score-technologies/turbovision",
+    "subnet_contact": "hello@wearescore.com",
+    "subnet_url": "https://www.wearescore.com/",
+    "discord": "",
+    "description": "Making every camera intelligent",
+    "additional": "",
+    "logo_url": "https://www.wearescore.com/android-chrome-512x512.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 80,
+   "rank": 9,
+   "name": "OpenRoboto",
+   "emission_share": 0.030094,
+   "active_miners": 5,
+   "active_validators": 9,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.016477591,
+   "owner": null,
+   "identity": {
+    "subnet_name": "OpenRoboto",
+    "github_repo": "https://github.com/openroboto-ai/openroboto-subnet",
+    "subnet_contact": "riccardo@openroboto.ai",
+    "subnet_url": "https://www.openroboto.ai/",
+    "discord": "",
+    "description": "An open competition on Bittensor for continuously improving robotics models",
+    "additional": "",
+    "logo_url": "https://www.openroboto.ai/logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 114,
+   "rank": 10,
+   "name": "SOMA",
+   "emission_share": 0.024471,
+   "active_miners": 4,
+   "active_validators": 9,
+   "registration_cost_tao": 0.25,
+   "alpha_price_tao": 0.012986567,
+   "owner": null,
+   "identity": {
+    "subnet_name": "SOMA",
+    "github_repo": "https://github.com/DendriteHQ/SOMA",
+    "subnet_contact": "https://x.com/SomaSubnet",
+    "subnet_url": "https://thesoma.ai",
+    "discord": "https://discord.gg/durr4Sg6sM",
+    "description": "Context compression layer delivered through MCP infrastructure",
+    "additional": "",
+    "logo_url": "https://thesoma.ai/images/1200x1200.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 3,
+   "rank": 11,
+   "name": "Teutonic",
+   "emission_share": 0.024454,
+   "active_miners": 5,
+   "active_validators": 3,
+   "registration_cost_tao": 0.008188034,
+   "alpha_price_tao": 0.029367992,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Teutonic",
+    "github_repo": "https://github.com/unarbos/teutonic",
+    "subnet_contact": "arbos@bittensor.com",
+    "subnet_url": "https://www.teutonic.ai/",
+    "discord": "@unarbos",
+    "description": "Coordinated Learning",
+    "additional": "",
+    "logo_url": "https://teutonic.ai/favicon.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 8,
+   "rank": 12,
+   "name": "Vanta",
+   "emission_share": 0.022933,
+   "active_miners": 25,
+   "active_validators": 12,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.027539674,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Vanta",
+    "github_repo": "https://github.com/taoshidev/vanta-network",
+    "subnet_contact": "",
+    "subnet_url": "https://www.vantanetwork.io/",
+    "discord": "tl_arrash",
+    "description": "The first decentralized & trustless liquidity and execution engine for prop firms and traders",
+    "additional": "Vanta Network is the first decentralized, trustless liquidity and execution engine for prop firms and traders. It live-trades top-performing miners who deposit alpha for funding, rewards them based on verifiable performance, and uses profits to buy back alpha, creating a transparent, risk-adjusted, and incentive-aligned trading ecosystem.",
+    "logo_url": "https://website-git-ken-vanta-taoshi.vercel.app/black-white.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "subnet_contact"
+    ]
+   }
+  },
+  {
+   "netuid": 9,
+   "rank": 13,
+   "name": "iota",
+   "emission_share": 0.022901,
+   "active_miners": 3,
+   "active_validators": 10,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.027617432,
+   "owner": null,
+   "identity": {
+    "subnet_name": "iota",
+    "github_repo": "https://github.com/macrocosm-os/iota",
+    "subnet_contact": "hello@macrocosmos.ai",
+    "subnet_url": "https://iota.macrocosmos.ai/",
+    "discord": "https://discord.gg/adsQPnFRY",
+    "description": "Bringing liquid training to the world",
+    "additional": "",
+    "logo_url": "https://www.macrocosmos.ai/images/mc_logo_black.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 53,
+   "rank": 14,
+   "name": "engy",
+   "emission_share": 0.020613,
+   "active_miners": 68,
+   "active_validators": 12,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.024550197,
+   "owner": null,
+   "identity": {
+    "subnet_name": "engy",
+    "github_repo": "https://github.com/hanlinai/engy",
+    "subnet_contact": "ning@engy.ai",
+    "subnet_url": "https://engy.ai",
+    "discord": "",
+    "description": "Verified inference for frontier open models.",
+    "additional": "",
+    "logo_url": "https://engy.ai/icon.svg"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 93,
+   "rank": 15,
+   "name": "Bitcast",
+   "emission_share": 0.01997,
+   "active_miners": 5,
+   "active_validators": 9,
+   "registration_cost_tao": 0.005,
+   "alpha_price_tao": 0.020677304,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Bitcast",
+    "github_repo": "https://github.com/bitcast-network/bitcast",
+    "subnet_contact": "",
+    "subnet_url": "https://stats.bitcast.network/",
+    "discord": "",
+    "description": "The Decentralized Creators Economy",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/bitcast-network/bitcast/main/assets/multi_logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 4,
+    "of": 7,
+    "missing": [
+     "subnet_contact",
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 68,
+   "rank": 16,
+   "name": "NOVA",
+   "emission_share": 0.018773,
+   "active_miners": 2,
+   "active_validators": 5,
+   "registration_cost_tao": 0.119036596,
+   "alpha_price_tao": 0.021704513,
+   "owner": null,
+   "identity": {
+    "subnet_name": "NOVA",
+    "github_repo": "https://github.com/metanova-labs/nova/",
+    "subnet_contact": "",
+    "subnet_url": "https://www.metanova-labs.ai",
+    "discord": "",
+    "description": "Accelerating drug discovery.",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/metanova-labs/nova/refs/heads/main/assets/subnet-logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 4,
+    "of": 7,
+    "missing": [
+     "subnet_contact",
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 28,
+   "rank": 17,
+   "name": "SayGM",
+   "emission_share": 0.017162,
+   "active_miners": 38,
+   "active_validators": 12,
+   "registration_cost_tao": 0.1,
+   "alpha_price_tao": 0.020729762,
+   "owner": null,
+   "identity": {
+    "subnet_name": "SayGM",
+    "github_repo": "https://github.com/taostat/gm-miner",
+    "subnet_contact": "hi@saygm.com",
+    "subnet_url": "https://saygm.com/",
+    "discord": "",
+    "description": "Drop-in access to Claude, GPT, and Gemini.",
+    "additional": "Your prompts routed through a verifiable TEE.",
+    "logo_url": "https://saygm.com/apple-touch-icon.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "discord"
+    ]
+   }
+  },
+  {
+   "netuid": 91,
+   "rank": 18,
+   "name": "cascade",
+   "emission_share": 0.017075,
+   "active_miners": 5,
+   "active_validators": 7,
+   "registration_cost_tao": 0.1,
+   "alpha_price_tao": 0.008392682,
+   "owner": null,
+   "identity": {
+    "subnet_name": "cascade",
+    "github_repo": "https://github.com/TensorLink-AI/cascade",
+    "subnet_contact": "chris@tensor-link.com",
+    "subnet_url": "cascadesub.net",
+    "discord": "christensor_49068",
+    "description": "SOTA Time Series Foundation Models",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/main/cascade/website/favicon-512.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 110,
+   "rank": 19,
+   "name": "Green Compute",
+   "emission_share": 0.016493,
+   "active_miners": 1,
+   "active_validators": 13,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.012618258,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Green Compute",
+    "github_repo": "",
+    "subnet_contact": "",
+    "subnet_url": "https://www.green-compute.com/",
+    "discord": "",
+    "description": "Enterprise Inference Hardware, 100% Green Energy",
+    "additional": "",
+    "logo_url": "https://www.green-compute.com/green.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 3,
+    "of": 7,
+    "missing": [
+     "github_repo",
+     "subnet_contact",
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 75,
+   "rank": 20,
+   "name": "Hippius",
+   "emission_share": 0.016474,
+   "active_miners": 80,
+   "active_validators": 12,
+   "registration_cost_tao": 0.999999999,
+   "alpha_price_tao": 0.018440208,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Hippius",
+    "github_repo": "https://github.com/thenervelab/thebrain",
+    "subnet_contact": "hello@hippius.com",
+    "subnet_url": "https://hippius.com/",
+    "discord": "",
+    "description": "Blockchain-backed cloud: storage, VMs, and apps with unmatched transparency, trust, and power.",
+    "additional": "",
+    "logo_url": "https://hippius.com/logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 58,
+   "rank": 21,
+   "name": "greevils",
+   "emission_share": 0.01427,
+   "active_miners": 1,
+   "active_validators": 5,
+   "registration_cost_tao": 0.1,
+   "alpha_price_tao": 0.008365504,
+   "owner": null,
+   "identity": {
+    "subnet_name": "greevils",
+    "github_repo": "https://github.com/greevils-ai/greevils-cli",
+    "subnet_contact": "atlas@greevils.ai",
+    "subnet_url": "https://www.greevils.ai",
+    "discord": "",
+    "description": "",
+    "additional": "",
+    "logo_url": ""
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 4,
+    "of": 7,
+    "missing": [
+     "discord",
+     "description",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 38,
+   "rank": 22,
+   "name": "ChronoLLM",
+   "emission_share": 0.014081,
+   "active_miners": 10,
+   "active_validators": 6,
+   "registration_cost_tao": 0.74,
+   "alpha_price_tao": 0.007999666,
+   "owner": null,
+   "identity": {
+    "subnet_name": "ChronoLLM",
+    "github_repo": "https://github.com/chronollm/sn38",
+    "subnet_contact": "crew@crunchdao.com",
+    "subnet_url": "https://chronollm.crunchdao.com/",
+    "discord": "https://discord.com/channels/799672011265015819/1485634202895519844",
+    "description": "Competitive training of chronologically consistent Large Language Models",
+    "additional": "",
+    "logo_url": "https://assets.crunchdao.com/chronollm/logo-round.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 56,
+   "rank": 23,
+   "name": "Gradients",
+   "emission_share": 0.013613,
+   "active_miners": 7,
+   "active_validators": 12,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.016248821,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Gradients",
+    "github_repo": "https://github.com/gradients-ai/G.O.D",
+    "subnet_contact": "info@gradients.io",
+    "subnet_url": "https://www.gradients.io/",
+    "discord": "None",
+    "description": "Best AutoML plaftorm in the world",
+    "additional": "None",
+    "logo_url": "https://gradients-public.s3.eu-central-003.backblazeb2.com/gradientslogo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 7,
+    "of": 7,
+    "missing": []
+   }
+  },
+  {
+   "netuid": 118,
+   "rank": 24,
+   "name": "Ditto",
+   "emission_share": 0.012436,
+   "active_miners": 5,
+   "active_validators": 11,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.008439494,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Ditto",
+    "github_repo": "https://github.com/orgs/ditto-assistant/repositories",
+    "subnet_contact": "peyton@omniaura.ai",
+    "subnet_url": "https://heyditto.ai",
+    "discord": "https://discord.gg/qNKYZEMpkD",
+    "description": "Open-Source Claude Cowork",
+    "additional": "The Ditto Agent OS and Harness enable SOTA memory, healing, and speed for 1/100th of the frontier cost.",
+    "logo_url": "https://f005.backblazeb2.com/file/ditto-assets/ditto-logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 7,
+    "of": 7,
+    "missing": []
+   }
+  },
+  {
+   "netuid": 124,
+   "rank": 25,
+   "name": "Swarm",
+   "emission_share": 0.011767,
+   "active_miners": 25,
+   "active_validators": 10,
+   "registration_cost_tao": 0.5,
+   "alpha_price_tao": 0.011494035,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Swarm",
+    "github_repo": "https://github.com/swarm-subnet/swarm",
+    "subnet_contact": "admin@swarm124.com",
+    "subnet_url": "www.swarm124.com",
+    "discord": "",
+    "description": "",
+    "additional": "",
+    "logo_url": "https://raw.githubusercontent.com/swarm-subnet/swarm/refs/heads/main/swarm/assets/Swarm.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 4,
+    "of": 7,
+    "missing": [
+     "discord",
+     "description",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 61,
+   "rank": 26,
+   "name": "RedTeam",
+   "emission_share": 0.01157,
+   "active_miners": 40,
+   "active_validators": 11,
+   "registration_cost_tao": 0.055375233,
+   "alpha_price_tao": 0.013964329,
+   "owner": null,
+   "identity": {
+    "subnet_name": "RedTeam",
+    "github_repo": "https://github.com/RedTeamSubnet/RedTeam",
+    "subnet_contact": "oscar@theredteam.io",
+    "subnet_url": "https://www.theredteam.io/",
+    "discord": "https://discord.com/channels/799672011265015819/1319313447435108413",
+    "description": "\"The RedTeam subnet by Innerworks is a decentralized platform designed to drive innovation in cybersecurity through competitive programming challenges. The subnet incentivizes miners to develop and submit code solutions to various technical challenges, with a focus on enhancing security. These solutions can be integrated into real-world products to improve their security features.\"",
+    "additional": "",
+    "logo_url": ""
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 83,
+   "rank": 27,
+   "name": "CliqueAI",
+   "emission_share": 0.011384,
+   "active_miners": 232,
+   "active_validators": 7,
+   "registration_cost_tao": 0.1,
+   "alpha_price_tao": 0.009149162,
+   "owner": null,
+   "identity": {
+    "subnet_name": "CliqueAI",
+    "github_repo": "https://github.com/toptensor/CliqueAI",
+    "subnet_contact": "CliqueAI@toptensor.ai",
+    "subnet_url": "https://cliqueai.toptensor.ai/",
+    "discord": "https://discord.com/channels/799672011265015819/1355560253076410428",
+    "description": "CliqueAI - AI-Powered Maximum Clique Solver Network",
+    "additional": "",
+    "logo_url": ""
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 5,
+   "rank": 28,
+   "name": "Hone",
+   "emission_share": 0.011088,
+   "active_miners": 243,
+   "active_validators": 9,
+   "registration_cost_tao": 0.139509086,
+   "alpha_price_tao": 0.012819152,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Hone",
+    "github_repo": "https://github.com/hone-subnet-org/hone-subnet",
+    "subnet_contact": "",
+    "subnet_url": "https://honedashboard.com",
+    "discord": "",
+    "description": "Hone training",
+    "additional": "",
+    "logo_url": ""
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 4,
+    "of": 7,
+    "missing": [
+     "subnet_contact",
+     "discord",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 90,
+   "rank": 29,
+   "name": "KubeTEE",
+   "emission_share": 0.011062,
+   "active_miners": 2,
+   "active_validators": 6,
+   "registration_cost_tao": 0.0005,
+   "alpha_price_tao": 0.028546789,
+   "owner": null,
+   "identity": {
+    "subnet_name": "KubeTEE",
+    "github_repo": "https://github.com/KubeTEE-AI/kubetee-subnet",
+    "subnet_contact": "pierre@kubetee.ai",
+    "subnet_url": "https://kubetee.ai",
+    "discord": "https://discord.gg/KUeXm9XQG4",
+    "description": "KubeTEE AI Factory: Confidential Computing TEE Multi-Cluster K8s",
+    "additional": "https://x.com/KubeTEEAI — Enterprise-Grade AIaaS with FIPS-140-3 Federal-Grade Security",
+    "logo_url": "https://kubetee.ai/logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 7,
+    "of": 7,
+    "missing": []
+   }
+  },
+  {
+   "netuid": 34,
+   "rank": 30,
+   "name": "BitMind",
+   "emission_share": 0.010419,
+   "active_miners": 117,
+   "active_validators": 5,
+   "registration_cost_tao": 0.5,
+   "alpha_price_tao": 0.011800329,
+   "owner": null,
+   "identity": {
+    "subnet_name": "BitMind",
+    "github_repo": "https://github.com/BitMind-AI/bitmind-subnet",
+    "subnet_contact": "intern@bitmind.ai",
+    "subnet_url": "",
+    "discord": "",
+    "description": "",
+    "additional": "",
+    "logo_url": ""
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 3,
+    "of": 7,
+    "missing": [
+     "subnet_url",
+     "discord",
+     "description",
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 62,
+   "rank": 31,
+   "name": "Ridges",
+   "emission_share": 0.009983,
+   "active_miners": 13,
+   "active_validators": 11,
+   "registration_cost_tao": 0.026285833,
+   "alpha_price_tao": 0.011043326,
+   "owner": null,
+   "identity": {
+    "subnet_name": "Ridges",
+    "github_repo": "https://github.com/ridgesai/ridges",
+    "subnet_contact": "hello@ridges.ai",
+    "subnet_url": "https://www.ridges.ai/",
+    "discord": "https://discord.gg/WeDvTnYDad",
+    "description": "Software Engineering Agents",
+    "additional": "",
+    "logo_url": "https://www.ridges.ai/logo.png"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 6,
+    "of": 7,
+    "missing": [
+     "additional"
+    ]
+   }
+  },
+  {
+   "netuid": 19,
+   "rank": 32,
+   "name": "blockmachine",
+   "emission_share": 0.008639,
+   "active_miners": 26,
+   "active_validators": 9,
+   "registration_cost_tao": 0.999999999,
+   "alpha_price_tao": 0.01027677,
+   "owner": null,
+   "identity": {
+    "subnet_name": "blockmachine",
+    "github_repo": "https://github.com/taostat/blockmachine/",
+    "subnet_contact": "team@blockmachine.io",
+    "subnet_url": "blockmachine.io",
+    "discord": "",
+    "description": "Harnessing Bittensor's incentive layer to forge self-optimizing infrastructure.",
+    "additional": "",
+    "logo_url": "https://blockmachine.io/logo.svg"
+   },
+   "identity_source": "sdk 11.1.0",
+   "identity_completeness": {
+    "filled": 5,
+    "of": 7,
+    "missing": [
+     "discord",
+     "additional"
+    ]
+   }
+  }
+ ]
+}
