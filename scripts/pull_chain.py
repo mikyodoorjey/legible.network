@@ -157,7 +157,7 @@ def sdk_identity(sub, netuid):
     if ident is None:
         return {f: "" for f in IDENTITY_FIELDS}
     out = {}
-    for f in IDENTITY_FIELDS:
+    for f in IDENTITY_FIELDS + ["logo_url"]:
         v = getattr(ident, f, None)
         if v is None and isinstance(ident, dict):
             v = ident.get(f)
