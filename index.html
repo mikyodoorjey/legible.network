@@ -76,7 +76,15 @@ main.grid.open aside{display:block}
 .detail .comp small{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--softer);margin-left:8px}
 .detail .aud{margin:10px 0 0;padding:10px 0;border-top:1px solid var(--rule)}
 .detail .aud h3{font-family:var(--sans);font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center;margin:0 0 6px}
-.detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:2px 0}
+.detail .aq{font-size:12px;color:var(--softer);margin:0 0 6px}
+.detail .hint{font-size:11.5px;color:var(--softer);margin:0 0 4px}
+.detail .cell{display:flex;justify-content:space-between;font-size:12.5px;color:var(--soft);padding:4px 6px;margin:0 -6px;border-radius:4px;cursor:pointer}
+.detail .cell:hover,.detail .cell:focus{background:var(--teal-soft);color:var(--ink);outline:none}
+.detail .cellwrap .ev{display:none;padding:4px 6px 8px;border-left:2px solid var(--rule-strong);margin:2px 0 6px 4px}
+.detail .cellwrap:hover .ev,.detail .cellwrap.open .ev{display:block}
+.detail .ev .quote{font-size:14px;margin:2px 0 4px}
+.detail .ev .note{font-size:12.5px;color:var(--ink-soft);margin:0 0 4px}
+.detail .ev .src{font-family:var(--mono);font-size:11px;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .detail .cell .dots{font-size:12px}
 .detail .full{display:inline-block;margin-top:14px;padding:8px 12px;border:1px solid var(--teal);border-radius:6px;font-size:13px}
 .starbtn{padding:6px 12px;border:1px solid var(--rule-strong);border-radius:6px;font-size:12.5px}
@@ -197,6 +205,16 @@ main.grid.open aside{display:block}
   const IDENT = ["complete","partial","empty"];
   const QL = {q1:"What it is", q2:"Who it is for", q3:"Resists gaming", q4:"Identity and docs"};
   const BAND_WORD = ["sparse","thin","partial","workable","clear","exemplary"];
+  const AUD_Q = {stakers:"Should I allocate here?", miners:"Can I compete, and what wins?", buyers:"Can I use this today?", newcomers:"What is this and why does it matter?"};
+  function hostOf(u){ try { return new URL(u).host.replace(/^www\./, ""); } catch(e){ return u || ""; } }
+  function splitNote(note){ const m = (note || "").match(/"([^"]{4,})"/); if (!m) return {quote: "", rest: note || ""}; return {quote: m[1], rest: (note.slice(0, m.index) + note.slice(m.index + m[0].length)).replace(/^[\s,;.]+|[\s,;.]+$/g, "")}; }
+  function cellRow(c){
+    const {quote, rest} = splitNote(c.note);
+    const tip = (quote ? "\u201c" + quote + "\u201d " : "") + (rest || "");
+    return `<div class="cellwrap"><div class="cell" title="${esc(tip)}" tabindex="0"><span>${esc(QL[c.q] || c.q)}</span>${scoreDots(c.score)}</div>
+      <div class="ev">${quote ? `<p class="quote">${esc(quote)}</p>` : ""}${rest ? `<p class="note">${esc(rest)}</p>` : ""}
+      <div class="src">${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(hostOf(c.url))}</a>` : "<span>no source</span>"}<span class="badge ${esc(c.status || "unknown")}">${esc(c.status || "unknown")}</span>${c.link ? `<span class="badge ${esc(c.link)}">${esc(c.link)}</span>` : ""}</div></div></div>`;
+  }
 
   let data = [], meta = {}, loaded = false, loadError = null;
   const state = {q:"", sort:"emission", band:new Set(), ident:new Set(), docsOnly:false, paperOnly:false, pinned:false, sel:null};
@@ -296,10 +314,13 @@ main.grid.open aside{display:block}
       <div class="meta"><span class="comp band-${band(r.composite)}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
       ${r.own_words && r.own_words.quote ? `<p class="quote">${esc(r.own_words.quote)}</p>` : ""}
       <div class="sm">Identity ${meter(r)}</div>
+      <p class="hint">Hover a row for the evidence, click to pin it open.</p>
       ${AUD.map(a => `<div class="aud"><h3><span class="aud-${a}">${AUD_LABEL[a]}</span><span>${scoreDots(aScore(r, a))} <b class="band-${band(aScore(r, a))}" style="font-family:var(--mono);font-weight:500">${aScore(r, a).toFixed(1)}</b></span></h3>
-        ${r.audiences[a].cells.map(c => `<div class="cell"><span>${esc(QL[c.q] || c.q)}</span>${scoreDots(c.score)}</div>`).join("")}</div>`).join("")}
+        <p class="aq">${esc(AUD_Q[a])}</p>
+        ${r.audiences[a].cells.map(c => cellRow(c)).join("")}</div>`).join("")}
       <a class="full" href="/sn/${r.netuid}/">Full evidence and sources →</a>`;
     $("#closeBtn").onclick = closeDetail;
+    $("#detail").querySelectorAll(".cell").forEach(el => { const t = () => el.parentElement.classList.toggle("open"); el.onclick = t; el.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); t(); } }; });
     $("#starBtn").onclick = () => { togglePin(n); showDetail(n); };
     document.querySelectorAll("tr.row").forEach(tr => tr.classList.toggle("sel", Number(tr.dataset.n) === n));
     writeHash();

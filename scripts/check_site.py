@@ -81,10 +81,6 @@ def main():
         else:
             sj = json.loads(summary.read_text(encoding="utf-8"))
             for s in sj.get("subnets", []):
-                for a, v in s.get("audiences", {}).items():
-                    if any(("url" in c or "note" in c) for c in v.get("cells", [])):
-                        fails.append(f"summary.json carries evidence for SN{s['netuid']} {a}")
-                        break
                 if "claim_labels" in s or "identity_check" in s:
                     fails.append(f"summary.json carries provenance for SN{s['netuid']}")
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""

@@ -275,7 +275,8 @@ def main():
         for sub in data["subnets"]:
             lite = {k: v for k, v in sub.items() if k not in ("audiences", "identity_check", "corrections", "claim_labels", "notes", "owner")}
             lite["audiences"] = {a: {"score": v["score"], "rank": v.get("rank"), "partial": v.get("partial", False),
-                                     "cells": [{"q": c["q"], "score": c["score"]} for c in v["cells"]]}
+                                     "cells": [{"q": c["q"], "score": c["score"], "status": c.get("status", ""), "url": c.get("url", ""),
+                                                "note": (c.get("note") or "")[:220], "link": c.get("link", "")} for c in v["cells"]]}
                                  for a, v in sub["audiences"].items()}
             summary["subnets"].append(lite)
         if write_if_changed(REPO / "data" / "summary.json", json.dumps(summary, ensure_ascii=False, separators=(",", ":"))):
