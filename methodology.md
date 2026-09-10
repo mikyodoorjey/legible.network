@@ -10,7 +10,7 @@ The Subnet Legibility Index scores the 32 Bittensor subnets with the largest sha
 
 ## Which subnets
 
-The set is the top 32 by share of TAO emission on the snapshot date, read from Taostats. Membership was frozen at the first snapshot so that the scores, the essay, and every conversation refer to one set. Later snapshots refresh emission share, counts, and identities but do not change membership; a subnet that leaves the top 32 after the freeze stays in the index with a note. Since June 2026 a subnet's share of emission follows the moving average of its token price, so the ranking is a ranking of what the market currently pays for, not of quality.
+The set is the top 32 by share of TAO emission on the snapshot date, read from Taostats. Membership was frozen at the first snapshot so that the scores, the essay, and every conversation refer to one set. Active miner and validator counts and registration cost are Taostats' figures on the snapshot date; alpha price and identity come from the chain through the Bittensor SDK. Later snapshots refresh emission share, counts, and identities but do not change membership; a subnet that leaves the top 32 after the freeze stays in the index with a note. Since June 2026 a subnet's share of emission follows the moving average of its token price, so the ranking is a ranking of what the market currently pays for, not of quality.
 
 ## Sources, in the order a scorer looks
 

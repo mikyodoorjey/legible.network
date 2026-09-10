@@ -66,6 +66,16 @@ def to_float(v):
         return None
 
 
+def owner_ss58(v):
+    if isinstance(v, str):
+        return v
+    if isinstance(v, dict):
+        for k in ("ss58", "coldkey", "address", "hotkey"):
+            if isinstance(v.get(k), str):
+                return v[k]
+    return None
+
+
 def to_int(v):
     f = to_float(v)
     return int(f) if f is not None else None
@@ -239,7 +249,7 @@ def build_rows(ranking, identities, identity_source, sdk=None, deep=False, limit
             "active_validators": to_int(vals["active_validators"]),
             "registration_cost_tao": to_float(vals["registration_cost_tao"]),
             "alpha_price_tao": to_float(vals["alpha_price_tao"]),
-            "owner": vals["owner"] if isinstance(vals["owner"], str) else None,
+            "owner": owner_ss58(vals["owner"]),
             "identity": ident, "identity_source": identity_source,
         }
         if sdk is not None:
