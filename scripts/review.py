@@ -174,11 +174,15 @@ def write_markdown(rows, queue, path, verify_name):
     lines = [f"# Review queue {TODAY}", "",
              f"{len(queue)} cells across {len(by_nid)} subnets. Links from {verify_name or 'no verify CSV yet'}.",
              "Decisions go in the CSV: keep, set:<0-5>, unknown->0, recheck.", ""]
+    def comp_of(r):
+        c = composite_score(cells_of(r)[1])[0]
+        return "?" if c is None else f"{c:.1f}"
+
     for r in order:
         items = by_nid.get(r["netuid"])
         if not items:
             continue
-        lines.append(f"## SN{r['netuid']} {r['name']} (rank {r['rank']}, composite {r.get('composite') or '?'})")
+        lines.append(f"## SN{r['netuid']} {r['name']} (rank {r['rank']}, composite {comp_of(r)})")
         lines.append("")
         cur = None
         for it in items:
@@ -195,7 +199,7 @@ def write_markdown(rows, queue, path, verify_name):
     lines.append("")
     if quiet:
         for r in quiet:
-            lines.append(f"- SN{r['netuid']} {r['name']} composite {r.get('composite') or '?'}")
+            lines.append(f"- SN{r['netuid']} {r['name']} composite {comp_of(r)}")
     else:
         lines.append("- every subnet has at least one queued cell")
     lines.append("")
