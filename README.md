@@ -13,15 +13,14 @@ Two instruments for reading the Bittensor ecosystem, one site.
 | `index.html` | The ranked index. Fetches `/data/summary.json`. |
 | `about.md` | Source of truth for the about page, rendered by the build. |
 | `sn/<netuid>/` | One page per subnet, generated. |
-| `alpha/<netuid>/` | One page per alpha token: price, pool stats, and where it trades, generated. |
-| `data/tokens-<date>.json` | Alpha token snapshot: Taostats pool data, Kraken and MEXC pairs, CoinGecko tickers. |
+| `data/tokens-<date>.json` | Token snapshot: Taostats pool data, Kraken and MEXC pairs, CoinGecko tickers. Shown as one row on each subnet page. |
 | `data/index.json` | The published dataset (CC BY 4.0). `summary.json` is the same minus evidence. |
 | `data/chain-<date>.json` | Raw chain snapshots. `subnets.csv` is the frozen target list. |
 | `data/scores-{a,b,c,d}.csv` | Agent output per slice. `scores.csv` is the merged, reviewed source of truth. |
 | `agents/` | The scoring brief, per-agent slices, calibration set, summaries; `NARRATIVE-PROMPT.md` is the narrative research brief. |
 | `scripts/` | The pipeline (below) and the site build. |
 | `narrative/index.html` | The narrative map. Fetches `/data/narrative.json`. |
-| `narrative/<id>/` | One page per narrator, generated. `narrative/metaphors/` is the frames index. |
+| `narrative/<id>/` | One page per person or institution, generated; subnet teams speak on their subnet page under What it says. `narrative/metaphors/` is the frames index. |
 | `method.md` | Source of truth for the single method page at `/method/`: the scale, how the index was applied, what the map records, confidence, coverage, corrections, changelog. |
 | `data/narrative/raw/<id>.json` | One file per narrator, written by a research agent against `agents/NARRATIVE-PROMPT.md` and validated by `scripts/narrative_check.py`. |
 | `data/narrative.json` | The merged, published narrative dataset (CC BY 4.0). `narrative-pretty.json` is the same, indented. |

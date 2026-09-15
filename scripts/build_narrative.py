@@ -87,6 +87,11 @@ def host(url):
         return url
 
 
+def nurl(n):
+    """Where a narrator's page lives: subnet teams speak on their subnet page."""
+    return f"/sn/{n['subnets'][0]}/#says" if n["kind"] == "subnet" and n.get("subnets") else f"/narrative/{n['id']}/"
+
+
 def glyph(n):
     if n["kind"] == "subnet":
         return f"SN{n['subnets'][0]}"
@@ -153,6 +158,7 @@ def merge(raws):
     for r in raws:
         n = dict(r["narrator"])
         n["glyph"] = glyph(n)
+        n["url"] = nurl(n)
         n["aka"] = n.get("aka") or []
         n["handles"] = n.get("handles") or {}
         n["subnets"] = n.get("subnets") or []
@@ -246,7 +252,7 @@ def badge(conf):
 def quote_card(s, by_id, show_narrator=False, compact=False):
     src = s["source"]
     n = by_id.get(s["narrator"])
-    who = f'<a class="who" href="/narrative/{e(s["narrator"])}/">{e(n["name"]) if n else e(s["narrator"])}</a> · ' if show_narrator else ""
+    who = f'<a class="who" href="{e(n["url"]) if n else "/narrative/"}">{e(n["name"]) if n else e(s["narrator"])}</a> · ' if show_narrator else ""
     ts = f' · {e(src["timestamp"])}' if src.get("timestamp") else ""
     arch = f' · <a href="{e(src["archive_url"])}" target="_blank" rel="noopener">archive</a>' if src.get("archive_url") else ""
     about = f'<a class="pill" href="/sn/{e(s["about"].split(":")[1])}/">SN{e(s["about"].split(":")[1])}</a>' if s["about"].startswith("subnet:") else ""
@@ -336,12 +342,12 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
     # relations
     rel_html = []
     def who(nid):
-        return f'<a href="/narrative/{e(nid)}/">{e(by_id[nid]["name"])}</a>' if nid in by_id else f'<span title="not yet a narrator in the map">{e(nid.replace("-", " ").title())}</span>'
+        return f'<a href="{e(by_id[nid]["url"])}">{e(by_id[nid]["name"])}</a>' if nid in by_id else f'<span title="not yet a voice in the map">{e(nid.replace("-", " ").title())}</span>'
     for r in data["relations"]:
         if r["from"] == n["id"]:
             rel_html.append(f'<li><span class="mono">{e(r["kind"])}</span> {who(r["to"])}{(" · " + e(r.get("note", ""))) if r.get("note") else ""}{(" <a class=ref href=#" + e(r["statement"]) + ">" + e(r["statement"].rsplit("-", 1)[1]) + "</a>") if r.get("statement") else ""}</li>')
         elif r["to"] == n["id"] and r["from"] in by_id:
-            rel_html.append(f'<li><a href="/narrative/{e(r["from"])}/">{e(by_id[r["from"]]["name"])}</a> <span class="mono">{e(r["kind"])}</span> this narrator{(" · " + e(r.get("note", ""))) if r.get("note") else ""}</li>')
+            rel_html.append(f'<li><a href="{e(by_id[r["from"]]["url"])}">{e(by_id[r["from"]]["name"])}</a> <span class="mono">{e(r["kind"])}</span> this voice{(" · " + e(r.get("note", ""))) if r.get("note") else ""}</li>')
     shared = []
     for m in data["metaphors"]:
         users = [u["narrator"] for u in m["users"]]
@@ -369,8 +375,8 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
         items = cov.get(k) or []
         if items:
             cov_html += f'<h4>{lab}</h4><ul>' + "".join(f"<li>{e(x)}</li>" for x in items) + "</ul>"
-    prevnext = (f'<a href="/narrative/{e(prev_n["id"])}/">← {e(prev_n["name"])}</a>' if prev_n else "<span></span>") + \
-               (f'<a href="/narrative/{e(next_n["id"])}/">{e(next_n["name"])} →</a>' if next_n else "<span></span>")
+    prevnext = (f'<a href="{e(prev_n["url"])}">← {e(prev_n["name"])}</a>' if prev_n else "<span></span>") + \
+               (f'<a href="{e(next_n["url"])}">{e(next_n["name"])} →</a>' if next_n else "<span></span>")
     first_h1 = next((s for s in mine if "messaging.h1" in s["slots"]), None) or (mine[0] if mine else None)
     desc = f'{n["one_line"]} {n["statement_count"]} quotes on record, {conf["verified"]} verified, across {len(n["eras"])} era{"s" if len(n["eras"]) != 1 else ""}.'
     ctx = {
@@ -397,14 +403,14 @@ def render_metaphors(data, partials, site):
         first = m["first"]
         fs = st_by_id.get(first["statement"])
         users = "".join(
-            f'<a class="pill{" on" if u["narrator"] == first["narrator"] else ""}" href="/narrative/{e(u["narrator"])}/#{e(u["first"])}" title="{e(u.get("wording") or "")}">'
+            f'<a class="pill{" on" if u["narrator"] == first["narrator"] else ""}" href="{e(by_id[u["narrator"]]["url"].split("#")[0])}#{e(u["first"])}" title="{e(u.get("wording") or "")}">'
             f'{e(by_id[u["narrator"]]["glyph"])} <span class="n">{e(fmt_date(u["first_date"], "month" if len(u["first_date"]) >= 7 else "year"))}</span></a>'
             for u in m["users"] if u["narrator"] in by_id)
         eras = "".join(f'<i class="{"on" if era in m["eras"] else ""}" title="{e(ERA_LABEL[era])}"></i>' for era in ERAS)
         rows.append(
             f'<article class="met" id="{e(m["label"])}"><div class="mh"><h3><a href="#{e(m["label"])}">{e(m["label"])}</a></h3>'
             f'<span class="badge {e(m["status"])}">{e(m["status"])}</span><span class="mono">{m["count"]} use{"s" if m["count"] != 1 else ""} · {len(m["users"])} voice{"s" if len(m["users"]) != 1 else ""}</span><span class="eras" title="Eras in use">{eras}</span></div>'
-            + (f'<p class="quote">{e(fs["quote"])}</p><p class="src">First on record: <a href="/narrative/{e(first["narrator"])}/#{e(first["statement"])}">{e(by_id[first["narrator"]]["name"])}</a>, {e(fs["date_label"])} · <a href="{e(fs["source"]["url"])}" target="_blank" rel="noopener">{e(fs["source"]["outlet"] or fs["source"]["host"])}</a> {badge(fs["confidence"])}</p>' if fs else "")
+            + (f'<p class="quote">{e(fs["quote"])}</p><p class="src">First on record: <a href="{e(by_id[first["narrator"]]["url"].split("#")[0])}#{e(first["statement"])}">{e(by_id[first["narrator"]]["name"])}</a>, {e(fs["date_label"])} · <a href="{e(fs["source"]["url"])}" target="_blank" rel="noopener">{e(fs["source"]["outlet"] or fs["source"]["host"])}</a> {badge(fs["confidence"])}</p>' if fs else "")
             + f'<div class="users"><span class="mono">Used by, in order of first use</span><div class="pills">{users}</div></div></article>')
     active = sum(1 for m in data["metaphors"] if m["status"] == "active")
     shared = sum(1 for m in data["metaphors"] if len(m["users"]) > 1)
@@ -443,31 +449,26 @@ def render_metaphors(data, partials, site):
 """
 
 
-def subnet_block(data, netuid):
-    """The 'how they talk about it' block for a subnet page. Empty string when nothing is recorded."""
+def subnet_narrative(data, netuid):
+    """Fragments for a subnet page: what the team says (self, network), what others say, frames, and the map link."""
     by_id = {x["id"]: x for x in data["narrators"]}
-    own = [n for n in data["narrators"] if n["kind"] == "subnet" and netuid in n["subnets"]]
-    about = [s for s in data["statements"] if s["about"] == f"subnet:{netuid}" and s["narrator"] not in {n["id"] for n in own}]
-    if not own and not about:
-        return ""
-    parts = ['<section class="narr-block" id="narrative"><div class="nb-head"><span class="mono">What they say</span>'
-             '<a class="nb-link" href="/narrative/">All the voices →</a></div>']
-    for n in own:
-        selfs = [s for s in data["statements"] if s["narrator"] == n["id"] and "subnet.self" in s["slots"]]
-        nets = [s for s in data["statements"] if s["narrator"] == n["id"] and "subnet.network" in s["slots"]]
-        fw = n["framework"]
-        parts.append(f'<h2 class="nb-h2">In their own frame</h2><p class="sm">{e(n["one_line"])} <a href="/narrative/{e(n["id"])}/">Their page in the map</a> · {n["statement_count"]} quotes on record.</p>')
-        if fw.get("subnet.self"):
-            parts.append(f'<div class="nb-col"><h3>Their subnet</h3><p>{e(fw["subnet.self"]["summary"])}</p>{"".join(quote_card(s, by_id, compact=True) for s in selfs[:3])}</div>')
-        if fw.get("subnet.network"):
-            parts.append(f'<div class="nb-col"><h3>The network</h3><p>{e(fw["subnet.network"]["summary"])}</p>{"".join(quote_card(s, by_id, compact=True) for s in nets[:3])}</div>')
-        mets = [m for m in data["metaphors"] if any(u["narrator"] == n["id"] for u in m["users"])]
-        if mets:
-            parts.append('<p class="nb-mets"><span class="mono">Frames</span> ' + " ".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets) + "</p>")
-    if about:
-        parts.append(f'<h2 class="nb-h2">What others say about it</h2>' + "".join(quote_card(s, by_id, show_narrator=True, compact=True) for s in about[:4]))
-    parts.append("</section>")
-    return "".join(parts)
+    own = next((n for n in data["narrators"] if n["kind"] == "subnet" and netuid in n["subnets"]), None)
+    about = [s for s in data["statements"] if s["about"] == f"subnet:{netuid}" and (not own or s["narrator"] != own["id"])]
+    out = {"count": 0, "self": "", "network": "", "said": "", "frames": "", "map": "", "summary_self": "", "summary_network": ""}
+    if own:
+        selfs = [s for s in data["statements"] if s["narrator"] == own["id"] and "subnet.self" in s["slots"]]
+        nets = [s for s in data["statements"] if s["narrator"] == own["id"] and "subnet.network" in s["slots"]]
+        fw = own["framework"]
+        out["count"] = own["statement_count"]
+        out["summary_self"] = e((fw.get("subnet.self") or {}).get("summary", ""))
+        out["summary_network"] = e((fw.get("subnet.network") or {}).get("summary", ""))
+        out["self"] = "".join(quote_card(s, by_id, compact=True) for s in selfs[:5])
+        out["network"] = "".join(quote_card(s, by_id, compact=True) for s in nets[:4])
+        mets = [m for m in data["metaphors"] if any(u["narrator"] == own["id"] for u in m["users"])]
+        out["frames"] = " ".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets)
+        out["map"] = f'/narrative/#n={e(own["id"])}'
+    out["said"] = "".join(quote_card(s, by_id, show_narrator=True, compact=True) for s in about[:6])
+    return out
 
 
 SUBNET_BLOCK_CSS = """
@@ -620,7 +621,7 @@ def coverage_report(data):
     rows = []
     for n in data["narrators"]:
         c = n["confidence"]
-        rows.append(f'<tr><td><a href="/narrative/{e(n["id"])}/">{e(n["name"])}</a></td><td>{e(KIND_LABEL[n["kind"]])}</td><td>{n["statement_count"]}</td>'
+        rows.append(f'<tr><td><a href="{e(n["url"])}">{e(n["name"])}</a></td><td>{e(KIND_LABEL[n["kind"]])}</td><td>{n["statement_count"]}</td>'
                     f'<td>{c["verified"]}</td><td>{c["probable"]}</td><td>{c["unverified"]}</td>'
                     f'<td>{e(", ".join(ERA_LABEL[x] for x in n["eras"]))}</td><td>{e(", ".join(n["media"]))}</td>'
                     f'<td>{e("; ".join((n["coverage"].get("gaps") or [])[:3]))}</td></tr>')
@@ -641,7 +642,7 @@ def build(partials, site, write_if_changed, raw_dir=RAW):
     if write_if_changed(REPO / "data" / "narrative-pretty.json", json.dumps(data, ensure_ascii=False, indent=1)):
         changed.append("data/narrative-pretty.json")
     og_ok = None
-    ns = data["narrators"]
+    ns = [n for n in data["narrators"] if n["kind"] != "subnet"]  # subnet teams speak on their subnet page
     for i, n in enumerate(ns):
         og_name = f"narrative-{n['id']}.png"
         if og_ok is not False:

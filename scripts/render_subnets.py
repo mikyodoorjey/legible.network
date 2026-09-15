@@ -96,7 +96,51 @@ def verdict_block(sub, comp):
     return f'<div class="verdict"><span class="mono">What {comp:.1f} means</span><p>{e(v["summary"])}</p><ul>{items}</ul></div>'
 
 
-def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css="", narrative_html="", narrative_css=""):
+def first_sentences(text, n=2):
+    parts = re.split(r"(?<=[.!?])\s+", (text or "").strip())
+    return " ".join(parts[:n]).strip()
+
+
+def program_card(sub, ent):
+    """The subnet as a mining program: the work, how it is scored, what it emits."""
+    fm = (ent or {}).get("fm", {})
+    secs = dict((ent or {}).get("sections", []))
+    work = fm.get("one_sentence") or (sub.get("own_words") or {}).get("quote") or ""
+    scored = first_sentences(secs.get("How the work gets done", ""), 2)
+    t = sub.get("alpha") or {}
+    emits = f'{e(sub["emission_pct"])} of the block reward'
+    if t.get("symbol"):
+        emits += f' · paid in {e(t["symbol"])}, its own token'
+    rows = [f'<div><span class="mono">The work</span><p>{e(work)}</p></div>']
+    if scored:
+        rows.append(f'<div><span class="mono">How it is scored</span><p>{e(scored)}</p></div>')
+    rows.append(f'<div><span class="mono">What it emits</span><p>{emits}</p></div>')
+    return f'<section class="program" id="program"><div class="pg-head"><span class="mono">The program</span><span class="sm">{e(fm.get("commodity", ""))}</span></div>{"".join(rows)}</section>'
+
+
+def says_sections(sub, nv):
+    """What it says (own words, the team's quotes) and what is said about it (others' quotes)."""
+    ow = sub.get("own_words") or {}
+    own = (f'<article class="st"><p class="quote">{e(ow.get("quote", ""))}</p><div class="src"><span class="d">In their own words</span> · '
+           f'<a href="{e(ow.get("url", ""))}" target="_blank" rel="noopener">{e(host(ow.get("url", "")))}</a><span class="badge verified">verified</span></div></article>') if ow.get("quote") else ""
+    nv = nv or {}
+    says = [f'<section class="says" id="says"><h2 class="sec-h">What it says</h2>']
+    says.append(f'<p class="sm">The subnet in its own words: the line the index took from its front door, and what the team has said on the record. {("<a href=\"" + nv["map"] + "\">All " + str(nv["count"]) + " quotes in the map</a>.") if nv.get("map") else ""}</p>')
+    says.append(own)
+    if nv.get("self"):
+        says.append(f'<h3>Their subnet</h3>{("<p class=fsum>" + nv["summary_self"] + "</p>") if nv.get("summary_self") else ""}{nv["self"]}')
+    if nv.get("network"):
+        says.append(f'<h3>Bittensor, in their words</h3>{("<p class=fsum>" + nv["summary_network"] + "</p>") if nv.get("summary_network") else ""}{nv["network"]}')
+    if nv.get("frames"):
+        says.append(f'<p class="frames"><span class="mono">Frames</span> {nv["frames"]}</p>')
+    says.append("</section>")
+    said = ""
+    if nv.get("said"):
+        said = f'<section class="said" id="said"><h2 class="sec-h">What is said about it</h2><p class="sm">By other voices in the map, verbatim and dated.</p>{nv["said"]}</section>'
+    return "".join(says), said
+
+
+def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css="", narrative=None, narrative_css="", entry=None):
     ident = sub["identity"]
     check = {c["field"]: c for c in sub.get("identity_check", [])}
     rows = []
@@ -166,11 +210,12 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
         "score_rows": score_rows, "prevnext": prevnext,
         "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml&title=%5BCorrection%5D%20SN{sub['netuid']}%20{e(sub['name']).replace(' ', '%20')}",
         "mail_subject": f"[SLI] Correction: SN{sub['netuid']} {sub['name']}".replace(" ", "%20"),
-        "alpha_row": (lambda t: f'<div class="row"><span>Alpha token</span><a href="/alpha/{sub["netuid"]}/"><b style="font-family:var(--mono);font-weight:500">{e(t.get("symbol") or "α")}</b> {(t.get("price_tao") or 0):.4f} τ · {len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"])} exchange{"s" if len([v for v in (t.get("venues") or []) if v["kind"] == "exchange"]) != 1 else ""}</a></div>' if t else "")(sub.get("alpha") or {}),
+        "alpha_row": (lambda t: f'<div class="row" id="token"><span>Token</span><a href="https://taostats.io/subnets/{sub["netuid"]}" target="_blank" rel="noopener"><b style="font-family:var(--mono);font-weight:500">{e(t.get("symbol") or "α")}</b> {(t.get("price_tao") or 0):.4f} τ · {", ".join(sorted({v["name"] for v in (t.get("venues") or []) if v["kind"] == "exchange"})) or "on-chain only"}</a></div>' if t else "")(sub.get("alpha") or {}),
         "json": json.dumps({k: v for k, v in sub.items() if k != "alpha"}, ensure_ascii=False).replace("</", "<\\/"),
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
         "explainer": explainer_html, "explainer_css": explainer_css,
-        "narrative": narrative_html, "narrative_css": narrative_css if narrative_html else "",
+        "program": program_card(sub, entry), "says": says_sections(sub, narrative)[0], "said": says_sections(sub, narrative)[1],
+        "narrative_css": narrative_css,
     }
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)
 
@@ -328,7 +373,7 @@ def render_chart(data):
     return style + controls + f'<figure class="chart" data-show="composite">{"".join(out)}</figure>' + lists + script
 
 
-def build_all(data, partials, site, write_if_changed, explainers=None, narrative_blocks=None, narrative_css=""):
+def build_all(data, partials, site, write_if_changed, explainers=None, narrative_blocks=None, narrative_css="", entries=None):
     """Render subnet pages, the list, OG images, and return (changed list, chart html)."""
     changed = []
     subs = sorted(data["subnets"], key=lambda s: s["rank"])
@@ -343,8 +388,8 @@ def build_all(data, partials, site, write_if_changed, explainers=None, narrative
         else:
             og_name = "default.png"
         ex_html, ex_css = (explainers or {}).get(sub["netuid"], ("", ""))
-        nb = (narrative_blocks or {}).get(sub["netuid"], "")
-        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name, ex_html, ex_css, nb, narrative_css)
+        nb = (narrative_blocks or {}).get(sub["netuid"])
+        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name, ex_html, ex_css, nb, narrative_css, (entries or {}).get(sub["netuid"]))
         if write_if_changed(REPO / "sn" / str(sub["netuid"]) / "index.html", page):
             changed.append(f"sn/{sub['netuid']}/")
     if render_default_og(data, OG_DIR / "default.png"):

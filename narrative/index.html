@@ -274,7 +274,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
   function stCard(s, opts){
     opts = opts || {};
     const n = byN[s.narrator]; const src = s.source;
-    const who = opts.who ? `<a class="who" href="/narrative/${esc(s.narrator)}/">${esc(n ? n.name : s.narrator)}</a> · ` : "";
+    const who = opts.who ? `<a class="who" href="${esc(byN[s.narrator] ? byN[s.narrator].url : "/narrative/")}">${esc(n ? n.name : s.narrator)}</a> · ` : "";
     const ts = src.timestamp ? ` · ${esc(src.timestamp)}` : "";
     const arch = src.archive_url ? ` · <a href="${esc(src.archive_url)}" target="_blank" rel="noopener">archive</a>` : "";
     const about = s.about.startsWith("subnet:") ? `<a class="pill" href="/sn/${esc(s.about.split(":")[1])}/">SN${esc(s.about.split(":")[1])}</a>` : "";
@@ -286,7 +286,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
       <div class="tags">${about}${slots}${mets}</div></article>`;
   }
   function narHead(n){
-    return `<a class="nlink" href="/narrative/${esc(n.id)}/"><b>${esc(n.glyph)}</b>${esc(n.name)}</a>`;
+    return `<a class="nlink" href="${esc(n.url)}"><b>${esc(n.glyph)}</b>${esc(n.name)}</a>`;
   }
 
   // ---- views
@@ -310,7 +310,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     rows.forEach((n, i) => {
       const cy = T + i * RH + RH / 2;
       out.push(`<line x1="${L}" y1="${(cy + RH/2).toFixed(1)}" x2="${W - R}" y2="${(cy + RH/2).toFixed(1)}" stroke="var(--rule)"/>`);
-      out.push(`<a href="/narrative/${esc(n.id)}/"><text class="row-glyph" x="8" y="${(cy - 4).toFixed(1)}">${esc(n.glyph)}</text><text class="row-label" x="8" y="${(cy + 11).toFixed(1)}">${esc(n.name.length > 20 ? n.name.slice(0, 19) + "…" : n.name)}</text></a>`);
+      out.push(`<a href="${esc(n.url)}"><text class="row-glyph" x="8" y="${(cy - 4).toFixed(1)}">${esc(n.glyph)}</text><text class="row-label" x="8" y="${(cy + 11).toFixed(1)}">${esc(n.name.length > 20 ? n.name.slice(0, 19) + "…" : n.name)}</text></a>`);
       const mine = sts.filter(s => s.narrator === n.id);
       const seen = {};
       mine.forEach(s => {
@@ -405,7 +405,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
       d.innerHTML = `<div class="dh"><span class="mono">Quote</span><button class="close" data-close>Close</button></div>${narHead(n)}
         ${stCard(s)}
         ${s.themes.length ? `<p class="sm">Themes: ${s.themes.map(esc).join(", ")}</p>` : ""}
-        <div class="actions"><a href="/narrative/${esc(n.id)}/#${esc(s.id)}">On their page</a><a href="${esc(s.source.url)}" target="_blank" rel="noopener">Open the source</a></div>
+        <div class="actions"><a href="${esc(n.url.split("#")[0])}#${esc(s.id)}">On their page</a><a href="${esc(s.source.url)}" target="_blank" rel="noopener">Open the source</a></div>
         <div class="nav2"><button data-step="-1" ${i <= 0 ? "disabled" : ""}>← Earlier</button><span class="mono">${i + 1} of ${sts.length}</span><button data-step="1" ${i < 0 || i >= sts.length - 1 ? "disabled" : ""}>Later →</button></div>`;
       return;
     }
@@ -417,7 +417,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
         d.innerHTML = `<div class="dh"><span class="mono">Frame · ${esc(a)}</span><button class="close" data-close>Close</button></div>${narHead(n)}
           ${u && u.wording ? `<p class="fsum">“${esc(u.wording)}” <span class="sm">· ${esc(u.origin)}</span></p>` : ""}
           ${mine.map(s => stCard(s, {compact:true})).join("")}
-          <div class="actions"><a href="/narrative/metaphors/#${esc(a)}">In the frames</a><a href="/narrative/${esc(b)}/">Their page</a></div>`;
+          <div class="actions"><a href="/narrative/metaphors/#${esc(a)}">In the frames</a><a href="${esc(byN[b].url)}">Their page</a></div>`;
         return;
       }
       const n = byN[b]; const mine = sts.filter(s => s.narrator === b && s.slots.includes(a));
@@ -425,7 +425,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
       d.innerHTML = `<div class="dh"><span class="mono">${esc(slotLabel[a] || a)}</span><button class="close" data-close>Close</button></div>${narHead(n)}
         ${f ? `<p class="fsum">${esc(f.summary)}</p>` : `<p class="hint">No synthesis written for this slot. Tagged statements below.</p>`}
         ${mine.length ? mine.map(s => stCard(s, {compact:true})).join("") : `<p class="hint">No statement tagged to this slot in the current selection.</p>`}
-        <div class="actions"><a href="/narrative/${esc(b)}/#slot-${esc(a)}">On their page</a></div>`;
+        <div class="actions"><a href="${esc(byN[b].url.split("#")[0])}${byN[b].kind === "subnet" ? "" : "#slot-" + esc(a)}">On their page</a></div>`;
       return;
     }
     const top = D.metaphors.slice(0, 5);
@@ -448,7 +448,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     document.querySelectorAll("#views button").forEach(b => b.classList.toggle("on", b.dataset.view === state.view));
   }
   function renderNarrators(){
-    $("#ngrid").innerHTML = D.narrators.map(n => `<a class="ncard" href="/narrative/${esc(n.id)}/"><b class="g">${esc(n.glyph)} · ${esc(n.kind)}</b><span class="nm">${esc(n.name)}</span><span class="ol">${esc(n.one_line)}</span><span class="ct">${n.statement_count} quotes · ${n.confidence.verified} verified · ${n.eras.map(e => eraLabel[e]).join(", ")}</span></a>`).join("");
+    $("#ngrid").innerHTML = D.narrators.map(n => `<a class="ncard" href="${esc(n.url)}"><b class="g">${esc(n.glyph)} · ${esc(n.kind)}</b><span class="nm">${esc(n.name)}</span><span class="ol">${esc(n.one_line)}</span><span class="ct">${n.statement_count} quotes · ${n.confidence.verified} verified · ${n.eras.map(e => eraLabel[e]).join(", ")}</span></a>`).join("");
   }
 
   function render(){

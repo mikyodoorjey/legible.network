@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-15T16:53:11+00:00",
+ "generated_at": "2026-09-15T16:55:13+00:00",
  "links_checked": "2026-09-15",
  "license": "CC BY 4.0, attribution: Bittensor Narrative Map by Mikyö Clark, legible.network",
  "eras": [
@@ -318,6 +318,7 @@
    "subnets": [],
    "one_line": "Former Google engineer who co-wrote the Bittensor whitepaper with Ala Shaabana, ran the Opentensor Foundation through mainnet, Finney, Revolution and dynamic TAO, and remains the network's most quoted voice and its most contested steward.",
    "glyph": "JS",
+   "url": "/narrative/jacob-steeves/",
    "statement_count": 60,
    "confidence": {
     "verified": 39,
@@ -852,6 +853,7 @@
    "subnets": [],
    "one_line": "Silicon Valley angel investor and podcast host who was introduced to Bittensor by Mark Jeffrey in 2025, bought TAO personally and joined Stillcore Capital in 2026, and now tells his audience to buy one TAO as a bet to learn and a vote for decentralised AI.",
    "glyph": "JC",
+   "url": "/narrative/jason-calacanis/",
    "statement_count": 56,
    "confidence": {
     "verified": 55,
@@ -1334,6 +1336,7 @@
    "subnets": [],
    "one_line": "The academic half of the founding pair: a McMaster applied-computing PhD and ex-VMware distributed-systems engineer who co-built Bittensor with Jacob Steeves from 2019, ran the foundation's operations, left for Crucible Labs, and explains the network in engineering and institutional terms rather than in Steeves's biological ones.",
    "glyph": "AS",
+   "url": "/narrative/ala-shaabana/",
    "statement_count": 47,
    "confidence": {
     "verified": 28,
@@ -1867,6 +1870,7 @@
    "subnets": [],
    "one_line": "Bitcoin-era investor who runs DCG, and since November 2024 has run Yuma, DCG's Bittensor subsidiary, casting Bittensor as the next Bitcoin and himself as back in the game.",
    "glyph": "BS",
+   "url": "/narrative/barry-silbert/",
    "statement_count": 39,
    "confidence": {
     "verified": 2,
@@ -2317,6 +2321,7 @@
    "subnets": [],
    "one_line": "Serial entrepreneur and early Bitcoin author who turned his Hash Rate podcast into the most followed weekly show on Bittensor subnets, then co-founded Stillcore Capital to invest in TAO and subnet tokens, explaining the network to newcomers through Bitcoin analogies and a contest-capitalism frame.",
    "glyph": "MJ",
+   "url": "/narrative/mark-jeffrey/",
    "statement_count": 35,
    "confidence": {
     "verified": 31,
@@ -2821,6 +2826,7 @@
    "subnets": [],
    "one_line": "The Bittensor analyst: a former Messari researcher who wrote the December 2023 Discovering Taoism report, then in April 2025 launched Unsupervised Capital, a fund dedicated to Bittensor, and now publishes the most consistent investor-side framing of dTAO and subnets.",
    "glyph": "SK",
+   "url": "/narrative/sami-kassab/",
    "statement_count": 25,
    "confidence": {
     "verified": 24,
@@ -3204,6 +3210,7 @@
    "subnets": [],
    "one_line": "The independent analyst who has written on Bittensor most consistently from outside it: a 2024 essay asking whether it is flawed, a widely shared 2025 guide to dynamic TAO, and a 2025 subnet thesis, all with positions disclosed and criticism kept in.",
    "glyph": "TY",
+   "url": "/narrative/teng-yan/",
    "statement_count": 23,
    "confidence": {
     "verified": 22,
@@ -3527,6 +3534,7 @@
    "subnets": [],
    "one_line": "Host of the Bittensor Guru, the longest-running subnet-by-subnet interview podcast in the ecosystem, who ran the sixth-largest validator until it became the TAO.com validator in March 2025 and now speaks as TAO.com's Chief Evangelist.",
    "glyph": "KS",
+   "url": "/narrative/keith-singery/",
    "statement_count": 21,
    "confidence": {
     "verified": 17,
@@ -3797,6 +3805,7 @@
    "subnets": [],
    "one_line": "The institutional voice of Bittensor: the foundation that ran the chain, wrote the docs and the site, and from 2026 signs its pages as the Rao Foundation after handing governance to the chain.",
    "glyph": "OF",
+   "url": "/narrative/opentensor-foundation/",
    "statement_count": 46,
    "confidence": {
     "verified": 46,
@@ -4274,6 +4283,7 @@
    ],
    "one_line": "Reinforcement-learning subnet founded in mid 2025 and run as a king-of-the-hill competition where miners upload model checkpoints and the reigning champion takes the emission; led by Bittensor co-founder Jacob Steeves after he left the Opentensor Foundation, so its language is the closest any subnet gets to the founder's own.",
    "glyph": "SN120",
+   "url": "/sn/120/#says",
    "statement_count": 16,
    "confidence": {
     "verified": 9,
@@ -4601,6 +4611,7 @@
    ],
    "one_line": "Deepfake and AI-content detection subnet launched in 2024, rebuilt in late 2024 as GAS, a generative adversarial engine where generator miners forge and detector miners catch; its enterprise site sells a trust layer and rarely says Bittensor, while its founder tells the press Bittensor is the decentralised network where hundreds of developers compete to build the best detector.",
    "glyph": "SN34",
+   "url": "/sn/34/#says",
    "statement_count": 15,
    "confidence": {
     "verified": 11,
@@ -4929,6 +4940,7 @@
    ],
    "one_line": "Rayon Labs' serverless inference subnet, launched December 2024 and led in public by Jon Durbin, which describes itself as a decentralised compute provider and Bittensor as the decentralised AI network that powers it.",
    "glyph": "SN64",
+   "url": "/sn/64/#says",
    "statement_count": 15,
    "confidence": {
     "verified": 12,
@@ -5222,6 +5234,7 @@
    ],
    "one_line": "Macrocosmos's pretraining subnet, relaunched as IOTA in June 2025, which speaks in the foundation's founding-mission register and calls Bittensor an incentivisation network and a global incentives machine.",
    "glyph": "SN9",
+   "url": "/sn/9/#says",
    "statement_count": 15,
    "confidence": {
     "verified": 14,
@@ -5529,6 +5542,7 @@
    ],
    "one_line": "Genomic variant-calling subnet launched in March 2026 that turns finding DNA mutations into a 72-minute winner-take-all competition scored against synthetic genomes with hidden mutations; it calls itself the foundational layer of genomics, says accuracy is the only thing that matters, and is ranked first by emission in September 2026.",
    "glyph": "SN107",
+   "url": "/sn/107/#says",
    "statement_count": 15,
    "confidence": {
     "verified": 14,
@@ -5817,6 +5831,7 @@
    ],
    "one_line": "Manifold Labs' compute subnet, one of the first on Bittensor, which speaks in the foundation's marketplace-of-digital-commodities language, criticises the network's Python lock-in and subsidised miners, and frames its own subnet as a confidential cloud in hyperscaler territory.",
    "glyph": "SN4",
+   "url": "/sn/4/#says",
    "statement_count": 15,
    "confidence": {
     "verified": 14,
@@ -6122,6 +6137,7 @@
    ],
    "one_line": "Decentralised cloud storage subnet launched in March 2025 by The Nerve Lab, running its own Substrate chain and Arion erasure-coded storage with an S3-compatible front end; its 2025 writing calls it the storage Bittensor lacked, its 2026 docs sell storage without AWS and barely name Bittensor at all.",
    "glyph": "SN75",
+   "url": "/sn/75/#says",
    "statement_count": 14,
    "confidence": {
     "verified": 14,
@@ -6400,6 +6416,7 @@
    ],
    "one_line": "Software-engineering-agent subnet (formerly Agentao) where miners submit Python coding agents that validators run in sandboxes against benchmark problems; it describes itself as an open-source agent competition platform and sells the winning agents through a product called Ridgeline, and its founder talks about replacing human coders.",
    "glyph": "SN62",
+   "url": "/sn/62/#says",
    "statement_count": 13,
    "confidence": {
     "verified": 9,
@@ -6704,6 +6721,7 @@
    ],
    "one_line": "Rayon Labs' fine-tuning subnet, which frames itself as a tournament where miners race for hyperparameters and describes Bittensor as a marketplace whose incentives beat centralised AutoML.",
    "glyph": "SN56",
+   "url": "/sn/56/#says",
    "statement_count": 12,
    "confidence": {
     "verified": 11,

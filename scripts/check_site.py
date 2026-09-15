@@ -48,7 +48,7 @@ def main():
     npath = REPO / "data" / "narrative.json"
     if npath.exists():
         nd = json.loads(npath.read_text(encoding="utf-8"))
-        pages += ["narrative/metaphors/index.html"] + [f"narrative/{n['id']}/index.html" for n in nd["narrators"]]
+        pages += ["narrative/metaphors/index.html"] + [f"narrative/{n['id']}/index.html" for n in nd["narrators"] if n["kind"] != "subnet"]
         if not (REPO / "assets" / "og" / "narrative.png").exists():
             fails.append("assets/og/narrative.png missing")
         for st in nd["statements"]:
@@ -56,8 +56,6 @@ def main():
                 fails.append(f"narrative {st['id']}: verified without a URL")
     if data:
         pages += ["sn/index.html"] + [f"sn/{s['netuid']}/index.html" for s in data["subnets"]]
-        if any(s.get("alpha") for s in data["subnets"]):
-            pages += ["alpha/index.html"] + [f"alpha/{s['netuid']}/index.html" for s in data["subnets"]]
     for rel in pages:
         p = REPO / rel
         if not p.exists():
@@ -96,11 +94,9 @@ def main():
                     fails.append(f"summary.json carries provenance for SN{s['netuid']}")
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/method/", f"{SITE}/about/", f"{SITE}/sn/"}
-        if any(s.get("alpha") for s in data["subnets"]):
-            want |= {f"{SITE}/alpha/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/alpha/"}
         want |= {f"{SITE}/narrative/"}
         if npath.exists():
-            want |= {f"{SITE}/narrative/metaphors/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"]}
+            want |= {f"{SITE}/narrative/metaphors/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"] if n["kind"] != "subnet"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))
         if want != have:
             fails.append(f"sitemap mismatch: missing {sorted(want - have)[:3]} extra {sorted(have - want)[:3]}")

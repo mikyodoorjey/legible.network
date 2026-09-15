@@ -39,6 +39,36 @@
       "source": "/narrative/method/",
       "destination": "/method/#the-map-what-it-records",
       "permanent": true
+    },
+    {
+      "source": "/alpha",
+      "destination": "/sn/",
+      "permanent": true
+    },
+    {
+      "source": "/alpha/",
+      "destination": "/sn/",
+      "permanent": true
+    },
+    {
+      "source": "/alpha/:n(\\d+)",
+      "destination": "/sn/:n/#token",
+      "permanent": true
+    },
+    {
+      "source": "/alpha/:n(\\d+)/",
+      "destination": "/sn/:n/#token",
+      "permanent": true
+    },
+    {
+      "source": "/narrative/sn:n(\\d+)",
+      "destination": "/sn/:n/#says",
+      "permanent": true
+    },
+    {
+      "source": "/narrative/sn:n(\\d+)/",
+      "destination": "/sn/:n/#says",
+      "permanent": true
     }
   ],
   "headers": [

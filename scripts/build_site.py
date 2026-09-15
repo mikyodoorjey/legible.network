@@ -280,7 +280,7 @@ def main():
         "about": "Who built Legible and why.",
     }
     # the narrative map is built first so its dataset and blocks can feed the other pages
-    from build_narrative import build as build_narrative, subnet_block, home_block, coverage_report, SUBNET_BLOCK_CSS
+    from build_narrative import build as build_narrative, subnet_narrative, home_block, coverage_report, SUBNET_BLOCK_CSS
     nparts = {k: partial(k, nav_ctx("narrative", ctx)) for k in ("topbar", "nav", "footer")}  # narrator pages
     nparts["robots"] = ctx["robots"]
     raw_dir = REPO / a.narrative_raw if a.narrative_raw else None
@@ -354,7 +354,6 @@ def main():
     if data:
         from render_subnets import build_all
         from render_learn import EXPLAINER_CSS, load_entries, load_glossary, render_entry_block, render_placeholder
-        from render_alpha import head as alpha_head
         parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
         parts["robots"] = ctx["robots"]
         entries, terms = load_entries(), load_glossary()
@@ -366,11 +365,9 @@ def main():
         for sub in data["subnets"]:
             ent = entries.get(sub["netuid"])
             explainers[sub["netuid"]] = ((render_entry_block(ent, terms, inline, sub) if ent else render_placeholder(sub)), EXPLAINER_CSS)
-        narrative_blocks = {sub["netuid"]: (subnet_block(ndata, sub["netuid"]) if ndata else "") for sub in data["subnets"]}
-        sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed, explainers, narrative_blocks, SUBNET_BLOCK_CSS)
+        narrative_blocks = {sub["netuid"]: (subnet_narrative(ndata, sub["netuid"]) if ndata else None) for sub in data["subnets"]}
+        sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed, explainers, narrative_blocks, SUBNET_BLOCK_CSS, entries)
         changed += sub_changed
-        from render_alpha import build_alpha
-        changed += build_alpha(data, parts, SITE, write_if_changed)
         p = REPO / "sn" / "index.html"
         s = p.read_text(encoding="utf-8")
         s2 = inject(s, "chart", chart_html)
@@ -380,11 +377,9 @@ def main():
 
     urls = ["/", "/method/", "/about/", "/narrative/"]
     if ndata:
-        urls += ["/narrative/metaphors/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"]]
+        urls += ["/narrative/metaphors/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"] if n["kind"] != "subnet"]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
-        if any(s.get("alpha") for s in data.get("subnets", [])):
-            urls += ["/alpha/"] + [f"/alpha/{s['netuid']}/" for s in data.get("subnets", [])]
     lastmod = ctx["snapshot"] if ctx["snapshot"] != "pending" else TODAY
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
         f"  <url><loc>{SITE}{u}</loc><lastmod>{lastmod}</lastmod></url>\n" for u in urls) + "</urlset>\n"
