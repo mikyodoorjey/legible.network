@@ -1,0 +1,1691 @@
+{
+  "narrator": {
+    "id": "barry-silbert",
+    "name": "Barry Silbert",
+    "aka": [
+      "Barry"
+    ],
+    "kind": "person",
+    "role": "Founder and CEO, Digital Currency Group; Founder and CEO, Yuma; Chairman, Grayscale",
+    "affiliation": "Digital Currency Group / Yuma",
+    "active_from": "2024",
+    "handles": {
+      "x": "@BarrySilbert"
+    },
+    "subnets": [],
+    "one_line": "Bitcoin-era investor who runs DCG, and since November 2024 has run Yuma, DCG's Bittensor subsidiary, casting Bittensor as the next Bitcoin and himself as back in the game."
+  },
+  "statements": [
+    {
+      "id": "barry-silbert-001",
+      "date": "2024-08-07",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Excited to see Grayscale introducing Bittensor $TAO to the investing world",
+      "context": "X post reacting to Grayscale's announcement of a single-asset Bittensor Trust. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "audience",
+        "messaging.proof"
+      ],
+      "themes": [
+        "institutional access",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1821176381616574776",
+        "medium": "x",
+        "title": "Excited to see Grayscale introducing Bittensor $TAO",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-002",
+      "date": "2024-09-19",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "It is going to surprise a lot of people and will be obvious in hindsight",
+      "context": "X post on Bittensor as TAO rallied ahead of its smart contract launch, quoted by The Defiant; the post id is 1836818543696031819.",
+      "about": "network",
+      "slots": [
+        "value.emotional",
+        "messaging.h1",
+        "voice"
+      ],
+      "themes": [
+        "early adoption"
+      ],
+      "metaphors": [
+        "hindsight"
+      ],
+      "source": {
+        "url": "https://thedefiant.io/news/blockchains/bittensor-s-tao-rallies-ahead-of-smart-contracts-launch",
+        "medium": "article",
+        "title": "Bittensor's TAO Rallies Ahead of Smart Contracts Launch (quoting an X post)",
+        "outlet": "The Defiant",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-003",
+      "date": "2024-11-20",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Just like the early days of Bitcoin, which fueled the development of a new form of transparent, borderless money, we're moving from the digital ownership of assets to the decentralized ownership of intelligence.",
+      "context": "Silbert's statement in the DCG press release announcing Yuma, quoted in Fortune's launch story by Jeff John Roberts.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "positioning.category",
+        "messaging.h1"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "ownership"
+      ],
+      "metaphors": [
+        "early bitcoin"
+      ],
+      "source": {
+        "url": "https://fortune.com/crypto/2024/11/20/decentralized-ai-yuma-bittensor-bcg-barry-silbert/",
+        "medium": "article",
+        "title": "Bitcoin billionaire Barry Silbert talks about his next big bet, on 'decentralized AI'",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-004",
+      "date": "2024-11-20",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "blockchain scares people away",
+      "context": "To Fortune, explaining why Yuma plays down the crypto side of its pitch even though TAO incentives sit at the centre of Bittensor.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "language.term",
+        "voice"
+      ],
+      "themes": [
+        "enterprise adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://fortune.com/crypto/2024/11/20/decentralized-ai-yuma-bittensor-bcg-barry-silbert/",
+        "medium": "article",
+        "title": "Bitcoin billionaire Barry Silbert talks about his next big bet, on 'decentralized AI'",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-005",
+      "date": "2024-11-20",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "If you ask five people: 'What is Bittensor?' You will get five different answers. If you remember early bitcoin, some people would say it's money, some people would say it's gold. Some people would say it's this blockchain [...] The way that I look at Bittensor is as the World Wide Web of AI.",
+      "context": "Interview with CoinDesk's Ian Allison on the day Yuma launched, asked what Bittensor is.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "messaging.h1",
+        "language.term"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "world wide web",
+        "early bitcoin"
+      ],
+      "source": {
+        "url": "https://www.coindesk.com/business/2024/11/20/digital-currency-groups-barry-silbert-bets-big-on-ai-blockchain-bittensor",
+        "medium": "article",
+        "title": "Digital Currency Group's Barry Silbert Bets Big on AI Blockchain Bittensor",
+        "outlet": "CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-006",
+      "date": "2024-11-20",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "There are two flavors of subnet partnerships. We are doing an accelerator, so if you are a startup or an enterprise who has an idea and wants to explore the world of Bittensor and launch a subnet, we will help you. Then we have a subnet incubator, where we will partner up with somebody to build ... a new subnet.",
+      "context": "Same CoinDesk interview, describing what Yuma will do on Bittensor.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "audience",
+        "value.functional"
+      ],
+      "themes": [
+        "subnets",
+        "enterprise adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.coindesk.com/business/2024/11/20/digital-currency-groups-barry-silbert-bets-big-on-ai-blockchain-bittensor",
+        "medium": "article",
+        "title": "Digital Currency Group's Barry Silbert Bets Big on AI Blockchain Bittensor",
+        "outlet": "CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-007",
+      "date": "2024-11-22",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "New to Bittensor $TAO or just curious? Here are some individuals to follow: @const_reborn @shibshib89 @mogmachine @0xcarro @WSquires @macrocrux @Old_Samster @EvanMalanga @RahulKumaran4 @JosephJacks_ @xponentcrisis @0xarrash @angad_ai @TAOTemplar @kenjon",
+      "context": "X post two days after the Yuma launch pointing newcomers at Bittensor community accounts. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "voice",
+        "relationship"
+      ],
+      "themes": [
+        "community",
+        "newcomers"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1859983981250261113",
+        "medium": "x",
+        "title": "New to Bittensor $TAO or just curious?",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-008",
+      "date": "2024-12-13",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "AI Agents + Bittensor $TAO, brought to you by Masa & @YumaGroup",
+      "context": "X post promoting a Masa and Yuma agent subnet collaboration. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "subnets",
+        "agents"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1867376224860811661",
+        "medium": "x",
+        "title": "AI Agents + Bittensor $TAO",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-009",
+      "date": "2025-04",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "calling $TAO a scam is such a lazy attack. do better",
+      "context": "X reply to Bitcoin author Parker Lewis, who had called Silbert and Raoul Pal affinity scammers for promoting TAO; quoted by CoinDesk on 22 April 2025.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "voice"
+      ],
+      "themes": [
+        "bitcoin maximalism"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.coindesk.com/business/2025/04/22/what-is-tao-the-bittensor-token-causing-friction-between-barry-silbert-and-bitcoiners",
+        "medium": "article",
+        "title": "What Is TAO, the Bittensor Token Causing Friction Between Barry Silbert and Bitcoiners? (quoting an X reply)",
+        "outlet": "CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-010",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I started looking across the whole decentralized AI space and started digging in on Bittensor. Very quickly, I came to the conclusion that from a theme or era perspective, this is the next big one.",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), asked how he arrived at Bittensor; wording taken from The Currency Analytics' write-up of the episode.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "positioning.category",
+        "relationship"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "investment theme"
+      ],
+      "metaphors": [
+        "era"
+      ],
+      "source": {
+        "url": "https://thecurrencyanalytics.com/events/barry-silbert-names-bittensor-as-cryptos-next-big-investment-theme-171036",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via The Currency Analytics",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-011",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "There are a number of projects that have launched. We've backed a number of them. But the one that over the past year or year and a half that has reached escape velocity is Bittensor.",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), on why Bittensor rather than other decentralised AI projects DCG has backed; wording via The Currency Analytics.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "messaging.proof",
+        "positioning.against"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "network effects"
+      ],
+      "metaphors": [
+        "escape velocity"
+      ],
+      "source": {
+        "url": "https://thecurrencyanalytics.com/events/barry-silbert-names-bittensor-as-cryptos-next-big-investment-theme-171036",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via The Currency Analytics",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-012",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We're going to invest in it, we're going to build on it, we're going to help educate, create awareness, create access. We launched a new business in the fall of last year called Yuma. I'm putting my jersey back on. I'm still running DCG, but I'm back in the game.",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), describing Yuma's role and his own return to operating; wording via The Currency Analytics.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "institutional access",
+        "builder"
+      ],
+      "metaphors": [
+        "jersey"
+      ],
+      "source": {
+        "url": "https://thecurrencyanalytics.com/events/barry-silbert-names-bittensor-as-cryptos-next-big-investment-theme-171036",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via The Currency Analytics",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-013",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "You had the Bitcoin and the Ethereum and the NFTs, and you had the layer 2s and DeFi. I think this is the next big investment theme for crypto",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), placing decentralised AI in the sequence of crypto investment eras; wording via CoinStats' summary of the episode.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "positioning.category"
+      ],
+      "themes": [
+        "investment theme",
+        "crypto cycles"
+      ],
+      "metaphors": [
+        "era"
+      ],
+      "source": {
+        "url": "https://coinstats.app/news/8ec1ec11c7efbeb8c997d17017fda9890a1ba08a876ebd31940eea17b46ce6ef_Can-Bittensor-Become-a-Better-Store-of-Value-Than-Bitcoin-Barry-Silbert-Thinks-So/",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via CoinStats",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-014",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The boldest prediction that I could make for Bittensor is it could be a better version of Bitcoin as a global store of value",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), asked for his boldest call on Bittensor; wording via CoinStats.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "positioning.category",
+        "value.functional"
+      ],
+      "themes": [
+        "store of value",
+        "token economics"
+      ],
+      "metaphors": [
+        "better bitcoin"
+      ],
+      "source": {
+        "url": "https://coinstats.app/news/8ec1ec11c7efbeb8c997d17017fda9890a1ba08a876ebd31940eea17b46ce6ef_Can-Bittensor-Become-a-Better-Store-of-Value-Than-Bitcoin-Barry-Silbert-Thinks-So/",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via CoinStats",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-015",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "99.9% of crypto tokens that are out there have no reason to exist and are worthless",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), setting up why TAO clears his bar when most tokens do not; wording via CoinStats.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "positioning.reason",
+        "voice"
+      ],
+      "themes": [
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://coinstats.app/news/8ec1ec11c7efbeb8c997d17017fda9890a1ba08a876ebd31940eea17b46ce6ef_Can-Bittensor-Become-a-Better-Store-of-Value-Than-Bitcoin-Barry-Silbert-Thinks-So/",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via CoinStats",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-016",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's just like bitcoin, there was a white paper that turned into code then launched and it has the same token economics",
+      "context": "On Raoul Pal's Journey Man podcast (recorded 9 April 2025, published 17 April), comparing TAO's origin and 21 million supply with Bitcoin; wording via CoinDesk's report on the Bitcoiner backlash.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "positioning.category",
+        "messaging.proof"
+      ],
+      "themes": [
+        "token economics",
+        "fair launch"
+      ],
+      "metaphors": [
+        "early bitcoin"
+      ],
+      "source": {
+        "url": "https://www.coindesk.com/business/2025/04/22/what-is-tao-the-bittensor-token-causing-friction-between-barry-silbert-and-bitcoiners",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-017",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor is a decentralized intelligence network, with the core idea of creating a global permissionless platform incentivizing global intelligence to solve any problem or challenge.",
+      "context": "Same Journey Man episode, as rendered in a Bitget News transcript that appears to be translated back from Chinese, so the English is not his exact wording; his definition of Bittensor.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "permissionless entry",
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560604721927",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via Bitget News transcript",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "barry-silbert-018",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor eliminates single points of failure, such as OpenAI or Meta API restrictions, while providing redundancy and scalability.",
+      "context": "Same Journey Man episode, as rendered in a Bitget News transcript that appears to be translated back from Chinese, so the English is not his exact wording; on what Bittensor offers relative to closed AI providers.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "problem.market",
+        "value.functional"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "censorship resistance",
+        "redundancy"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560604721927",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via Bitget News transcript",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "barry-silbert-019",
+      "date": "2025-04-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Each subnet has its own token...each subnet token is transacted in TAO. TAO, acting as a utility currency, serves as the pricing base for all subnet tokens.",
+      "context": "Same Journey Man episode, as rendered in a Bitget News transcript that appears to be translated back from Chinese, so the English is not his exact wording; explaining dynamic TAO and subnet tokens.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "token economics",
+        "dynamic tao"
+      ],
+      "metaphors": [
+        "utility currency"
+      ],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560604721927",
+        "medium": "podcast",
+        "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+        "outlet": "Raoul Pal: The Journey Man (Real Vision), wording via Bitget News transcript",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "barry-silbert-020",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Enjoyed the opportunity to go macro with @fintechfrank at @TheBlock__ We went all the way back to the early days of Bitcoin and the evolution of digital assets, to deAI & Bittensor $TAO, and what we're building today at @YumaGroup A lot to cover, and a lot more to come...",
+      "context": "X post promoting his appearance on The Block's podcast The Scoop. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "crypto cycles"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1917667456312562106",
+        "medium": "x",
+        "title": "Enjoyed the opportunity to go macro with @fintechfrank",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-021",
+      "date": "2025-06-05",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "A new chapter for Bittensor $TAO: BitGo has partnered with Yuma to bring TAO staking to institutions",
+      "context": "X post announcing BitGo institutional TAO staking with Yuma. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "audience",
+        "value.functional"
+      ],
+      "themes": [
+        "institutional access",
+        "staking"
+      ],
+      "metaphors": [
+        "chapter"
+      ],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1930683724183536044",
+        "medium": "x",
+        "title": "A new chapter for Bittensor $TAO",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-022",
+      "date": "2025-06-28",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Went down the Bittensor $TAO rabbit hole with @fundstrat. Fun conversation with Tom, the first Wall Street bitcoin OG",
+      "context": "X post after a Fundstrat crypto and AI outlook session with Tom Lee. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "institutional access"
+      ],
+      "metaphors": [
+        "rabbit hole"
+      ],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1938936024660348948",
+        "medium": "x",
+        "title": "Went down the Bittensor $TAO rabbit hole with @fundstrat",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-023",
+      "date": "2025-09-11",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I believe that the next big wave in crypto is going to be the convergence of AI and crypto",
+      "context": "On stage at Fortune's Brainstorm Tech in Park City, Utah, reported by Ben Weiss; asked what comes next for crypto.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "messaging.h1"
+      ],
+      "themes": [
+        "ai and crypto convergence"
+      ],
+      "metaphors": [
+        "wave"
+      ],
+      "source": {
+        "url": "https://fortune.com/crypto/2025/09/11/barry-silbert-digital-currency-group-bittensor-yuma-fortune-brainstorm-tech",
+        "medium": "talk",
+        "title": "Barry Silbert at Fortune Brainstorm Tech",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-024",
+      "date": "2025-09-11",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I want to open up the development and the access to AI and Bitensor is enabling that",
+      "context": "On stage at Fortune's Brainstorm Tech in Park City, Utah, reported by Ben Weiss; on why he backs Bittensor; Fortune's text spells the network 'Bitensor' and is kept as printed.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "foundation.values"
+      ],
+      "themes": [
+        "open access",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://fortune.com/crypto/2025/09/11/barry-silbert-digital-currency-group-bittensor-yuma-fortune-brainstorm-tech",
+        "medium": "talk",
+        "title": "Barry Silbert at Fortune Brainstorm Tech",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-025",
+      "date": "2025-09-11",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It is the thing that I've gotten most excited about since Bitcoin.",
+      "context": "On stage at Fortune's Brainstorm Tech in Park City, Utah, reported by Ben Weiss; his summary line on Bittensor, which Fortune quoted again in its 15 December 2025 halving coverage.",
+      "about": "network",
+      "slots": [
+        "value.emotional",
+        "messaging.h1",
+        "relationship"
+      ],
+      "themes": [
+        "early adoption"
+      ],
+      "metaphors": [
+        "since bitcoin"
+      ],
+      "source": {
+        "url": "https://fortune.com/crypto/2025/09/11/barry-silbert-digital-currency-group-bittensor-yuma-fortune-brainstorm-tech",
+        "medium": "talk",
+        "title": "Barry Silbert at Fortune Brainstorm Tech",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-026",
+      "date": "2025-09-11",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "In the way that the internet was the world wide web of information, Bittensor is creating the world wide web of intelligence",
+      "context": "On stage at Fortune's Brainstorm Tech in Park City, Utah, reported by Ben Weiss; framing what Bittensor is.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "messaging.h1",
+        "foundation.vision"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "open access"
+      ],
+      "metaphors": [
+        "world wide web"
+      ],
+      "source": {
+        "url": "https://fortune.com/crypto/2025/09/11/barry-silbert-digital-currency-group-bittensor-yuma-fortune-brainstorm-tech",
+        "medium": "talk",
+        "title": "Barry Silbert at Fortune Brainstorm Tech",
+        "outlet": "Fortune",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-027",
+      "date": "2025-10-07",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Greg and Jeff are proven leaders who bring a rare blend of institutional infrastructure experience and startup grit, combined with hands-on experience in Bittensor. Their leadership will be pivotal as Yuma powers the next era of decentralized AI.",
+      "context": "Yuma's own announcement that Greg and Jeff Schvey join as COO and CTO, quoting Silbert.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "messaging.proof"
+      ],
+      "themes": [
+        "builder",
+        "institutional access"
+      ],
+      "metaphors": [
+        "era"
+      ],
+      "source": {
+        "url": "https://www.yumaai.com/updates/greg-jeff-schvey-yuma",
+        "medium": "blog",
+        "title": "Yuma Appoints Greg and Jeff Schvey to Lead Growth",
+        "outlet": "Yuma (yumaai.com)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "barry-silbert-028",
+      "date": "2025-10-07",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We're seeing the best minds in crypto move to Bittensor $TAO Welcoming Greg and Jeff to the Yuma team, founders from the early Bitcoin days joining us to help scale decentralized intelligence",
+      "context": "X post on the same hire, framing it as talent migration into Bittensor. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "positioning.reason",
+        "audience"
+      ],
+      "themes": [
+        "talent migration",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "early bitcoin"
+      ],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/1975553988654473546",
+        "medium": "x",
+        "title": "We're seeing the best minds in crypto move to Bittensor $TAO",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-029",
+      "date": "2025-10-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Subnet tokens are an emerging asset class, fueled by TAO, that provide investors with unprecedented exposure to a massive wave of AI innovation. The decentralized AI sector has the power to be as transformative as Bitcoin, and Yuma Asset Management is opening the door for investors to access it through Bittensor.",
+      "context": "Yuma's own announcement of Yuma Asset Management and its two subnet token funds, quoting Silbert as CEO.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "audience",
+        "value.functional",
+        "opportunity"
+      ],
+      "themes": [
+        "subnets",
+        "token economics",
+        "institutional access"
+      ],
+      "metaphors": [
+        "wave",
+        "asset class"
+      ],
+      "source": {
+        "url": "https://www.yumaai.com/updates/yuma-asset-management-launch",
+        "medium": "blog",
+        "title": "Yuma Unveils 'Yuma Asset Management'",
+        "outlet": "Yuma (yumaai.com)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "barry-silbert-030",
+      "date": "2025-10-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I've not been as excited about anything since Bitcoin as I am about Bittensor",
+      "context": "To Bloomberg on the Yuma Asset Management launch, as quoted by crypto.news.",
+      "about": "network",
+      "slots": [
+        "value.emotional",
+        "relationship"
+      ],
+      "themes": [
+        "early adoption"
+      ],
+      "metaphors": [
+        "since bitcoin"
+      ],
+      "source": {
+        "url": "https://crypto.news/barry-silbert-reenters-crypto-with-ai-focused-yuma-asset-management/",
+        "medium": "article",
+        "title": "Barry Silbert reenters crypto with AI-focused Yuma Asset Management (quoting Bloomberg)",
+        "outlet": "crypto.news",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-031",
+      "date": "2025-10-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I put my business-building jersey back on and I'm the CEO of Yuma",
+      "context": "Same Bloomberg remarks, on returning to an operating role, as quoted by crypto.news.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "builder"
+      ],
+      "metaphors": [
+        "jersey"
+      ],
+      "source": {
+        "url": "https://crypto.news/barry-silbert-reenters-crypto-with-ai-focused-yuma-asset-management/",
+        "medium": "article",
+        "title": "Barry Silbert reenters crypto with AI-focused Yuma Asset Management (quoting Bloomberg)",
+        "outlet": "crypto.news",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-032",
+      "date": "2025-12-15",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The $TAO halving has me taking a moment to reflect The first time I came across Bittensor, it felt like Bitcoin in 2012 - a small group of builders with a clear, ambitious vision This time, the opportunity is intelligence Greg does a great job laying out the similarities below",
+      "context": "X post the day after Bittensor's first halving, quoting a thread by Yuma COO Greg Schvey. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "relationship",
+        "opportunity",
+        "messaging.h1"
+      ],
+      "themes": [
+        "halving",
+        "token economics",
+        "early adoption"
+      ],
+      "metaphors": [
+        "bitcoin 2012"
+      ],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/2000573434678612162",
+        "medium": "x",
+        "title": "The $TAO halving has me taking a moment to reflect",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-033",
+      "date": "2025-12-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Decentralized AI is developing quickly, and Grayscale is pioneering access.",
+      "context": "X post as Grayscale chairman when Grayscale filed an S-1 to list a Bittensor ETP, quoted by CoinDesk.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "relationship",
+        "audience"
+      ],
+      "themes": [
+        "institutional access",
+        "regulation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.coindesk.com/business/2025/12/30/grayscale-files-for-first-u-s-bittensor-etp-as-decentralized-ai-gains-momentum",
+        "medium": "article",
+        "title": "Grayscale seeks U.S. listing for Bittensor ETP in first institutional bet on decentralized AI (quoting an X post)",
+        "outlet": "CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-034",
+      "date": "2026-03-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "As the decentralized AI market matures, value is beginning to concentrate in Bittensor subnets solving meaningful problems, offering viable alternatives to the closed, centralized systems controlled by tech giants.",
+      "context": "Preface to Yuma's second annual State of Bittensor report, quoted by The Block; the report page on yumaai.com did not render its text in this session.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "problem.institutional",
+        "messaging.proof"
+      ],
+      "themes": [
+        "subnets",
+        "anti-big-tech",
+        "value accrual"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.theblock.co/post/392351/dcg-yuma-bittensor-report",
+        "medium": "article",
+        "title": "DCG subsidiary Yuma highlights subnet development in 'State of Bittensor' report",
+        "outlet": "The Block",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-035",
+      "date": "2026-03-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's still early, but we're seeing the first signs of this value flow back into subnet tokens, which are becoming more than just network incentives. They are functioning as market validation, signaling the value that each subnet provides to the overall network and the intelligence it generates.",
+      "context": "Closing lines of the same State of Bittensor preface, quoted by The Block.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "value.functional",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "token economics",
+        "value accrual"
+      ],
+      "metaphors": [
+        "market validation"
+      ],
+      "source": {
+        "url": "https://www.theblock.co/post/392351/dcg-yuma-bittensor-report",
+        "medium": "article",
+        "title": "DCG subsidiary Yuma highlights subnet development in 'State of Bittensor' report",
+        "outlet": "The Block",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-036",
+      "date": "2026-04-20",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "A big moment for subnet tokens and meaningful step forward for institutional participation in Bittensor $TAO",
+      "context": "X post on BitGo extending its Yuma partnership to subnet token custody and staking. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "audience"
+      ],
+      "themes": [
+        "subnets",
+        "institutional access"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/2046292884404707516",
+        "medium": "x",
+        "title": "A big moment for subnet tokens",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-037",
+      "date": "2026-04-27",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Must read thread re State of Bittensor $TAO from @YumaGroup's COO",
+      "context": "X post pointing followers to Greg Schvey's thread after the Yuma Group Summit. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "subnets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/2048755656254005254",
+        "medium": "x",
+        "title": "Must read thread re State of Bittensor $TAO",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "barry-silbert-038",
+      "date": "2026-06-26",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "AI is becoming a core portfolio allocation. But for most investors, it's limited to a few, big players. Bittensor offers access to a decentralized network of AI projects.",
+      "context": "Quoted by Benzinga around the launch of the Yuma Total Market Fund; the article returned 403 and the text was seen only in a search index summary, so the wording is unconfirmed.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "problem.market",
+        "value.functional"
+      ],
+      "themes": [
+        "institutional access",
+        "concentration of ai"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.benzinga.com/crypto/cryptocurrency/26/06/60120104/bitcoin-og-barry-silbert-bets-big-on-decentralized-ai-exposure-through-this-2-billion-crypto",
+        "medium": "article",
+        "title": "Bitcoin OG Barry Silbert Bets Big On Decentralized AI Exposure Through This $2B Crypto",
+        "outlet": "Benzinga",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "barry-silbert-039",
+      "date": "2026-07-26",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Jason gets it. He's early in the next big thing, like usual Don't sleep on Bittensor $TAO",
+      "context": "X post quoting Jason Calacanis, who had written that he was buying TAO. Post text as indexed by the search engine under the direct X URL; the X page itself was not reachable in this session.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "audience",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "early adoption"
+      ],
+      "metaphors": [
+        "next big thing"
+      ],
+      "source": {
+        "url": "https://x.com/BarrySilbert/status/2081489477793390933",
+        "medium": "x",
+        "title": "Jason gets it",
+        "outlet": "@BarrySilbert on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2025-04-17",
+      "title": "Barry Silbert is Back: The Next Big Crypto Bet",
+      "outlet": "Raoul Pal: The Journey Man (Real Vision)",
+      "url": "https://podcasts.apple.com/bh/podcast/barry-silbert-is-back-the-next-big-crypto-bet/id1581019716?i=1000703859808",
+      "medium": "podcast",
+      "note": "Recorded 9 April 2025; his Bitcoin origin story, DCG, then Bittensor and Yuma. YouTube id XoqdTfKQCjA. No public transcript reached; quotes taken from press write-ups."
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Barry Silbert on crypto's evolution and why Bittensor may be the next Bitcoin",
+      "outlet": "The Scoop (The Block), host Frank Chaparro",
+      "url": "https://www.theblock.co/post/352647/barry-silbert-on-cryptos-evolution-and-why-bittensor-may-be-the-next-bitcoin",
+      "medium": "podcast",
+      "note": "2008 crisis, Bitcoin's narrative, why Bittensor mirrors early Bitcoin, Yuma's playbook. YouTube id 3qIL4oCe1Uo. Page has chapters only, no transcript; no quotes extracted."
+    },
+    {
+      "date": "2025-06-18",
+      "title": "Panel with David Lawee and Michael del Castillo",
+      "outlet": "Proof of Talk 2025, Paris",
+      "url": "https://crypto.news/barry-silbert-bittensor-and-ais-next-frontier-dominate-headlines-in-paris-at-proof-of-talk-2025/",
+      "medium": "talk",
+      "note": "Announced Yuma's asset management arm for subnet (alpha) token strategies. Coverage paraphrases only; no direct quotes."
+    },
+    {
+      "date": "2025-06-26",
+      "title": "Crypto and AI Outlook with Tom Lee and Barry Silbert",
+      "outlet": "Fundstrat Direct",
+      "url": "https://fundstratdirect.com/event/crypto-ai-outlook-with-tom-lee-and-barry-silbert/",
+      "medium": "youtube",
+      "note": "Webinar on Bittensor and TAO with Tom Lee; YouTube id E0Wmq0emlTc. No transcript reached."
+    },
+    {
+      "date": "2025-09-11",
+      "title": "Fortune Brainstorm Tech session",
+      "outlet": "Fortune Brainstorm Tech, Park City",
+      "url": "https://fortune.com/crypto/2025/09/11/barry-silbert-digital-currency-group-bittensor-yuma-fortune-brainstorm-tech",
+      "medium": "talk",
+      "note": "AI and crypto convergence, world wide web of intelligence. Quotes via Fortune's report."
+    },
+    {
+      "date": "2025-10",
+      "title": "The Incentive Layer",
+      "outlet": "Yuma documentary",
+      "url": "https://www.yumaai.com/updates/bittensor-documentary-the-incentive-layer",
+      "medium": "youtube",
+      "note": "Documentary on Bittensor's incentive design featuring Silbert; page carries no quotes from him."
+    },
+    {
+      "date": "2026-04",
+      "title": "The State of Bittensor presentation",
+      "outlet": "Yuma Group Summit",
+      "url": "https://x.com/BarrySilbert/status/2048755656254005254",
+      "medium": "talk",
+      "note": "Silbert presented on the state of Bittensor and later posted the deck on X; the presentation text was not reached."
+    },
+    {
+      "date": "2026-05",
+      "title": "Speaker listing",
+      "outlet": "Milken Institute Global Conference 2026",
+      "url": "https://milkeninstitute.org/events/global-conference-2026/speakers/barry-silbert",
+      "medium": "talk",
+      "note": "Listed as speaker; session content not found."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "early bitcoin",
+      "wording": "Just like the early days of Bitcoin, which fueled the development of a new form of transparent, borderless money",
+      "first_statement": "barry-silbert-003",
+      "origin": "reused",
+      "lineage_notes": "The Bittensor-as-early-Bitcoin frame predates him in the community; he makes it his signature and sharpens it to a year in [barry-silbert-032]. Raoul Pal repeats it in the Journey Man episode description."
+    },
+    {
+      "label": "world wide web",
+      "wording": "The way that I look at Bittensor is as the World Wide Web of AI",
+      "first_statement": "barry-silbert-005",
+      "origin": "introduced",
+      "lineage_notes": "Restated ten months later as 'the world wide web of intelligence' in [barry-silbert-026]; no earlier use by another narrator found in this session."
+    },
+    {
+      "label": "better bitcoin",
+      "wording": "it could be a better version of Bitcoin as a global store of value",
+      "first_statement": "barry-silbert-014",
+      "origin": "introduced",
+      "lineage_notes": "Provoked Parker Lewis's 'affinity scammer' attack, see CoinDesk 2025-04-22."
+    },
+    {
+      "label": "escape velocity",
+      "wording": "the one that over the past year or year and a half that has reached escape velocity is Bittensor",
+      "first_statement": "barry-silbert-011",
+      "origin": "reused",
+      "lineage_notes": "Yuma's first State of Bittensor report (2025) also says the network is 'hitting escape velocity', per The Block."
+    },
+    {
+      "label": "era",
+      "wording": "from a theme or era perspective, this is the next big one",
+      "first_statement": "barry-silbert-010",
+      "origin": "introduced",
+      "lineage_notes": "Also 'the next era of decentralized AI' in [barry-silbert-027]."
+    },
+    {
+      "label": "jersey",
+      "wording": "I'm putting my jersey back on",
+      "first_statement": "barry-silbert-012",
+      "origin": "introduced",
+      "lineage_notes": "Repeated to Bloomberg as 'business-building jersey' in [barry-silbert-031]."
+    },
+    {
+      "label": "wave",
+      "wording": "the next big wave in crypto is going to be the convergence of AI and crypto",
+      "first_statement": "barry-silbert-023",
+      "origin": "reused",
+      "lineage_notes": "Common crypto idiom; also 'a massive wave of AI innovation' in [barry-silbert-029]."
+    },
+    {
+      "label": "since bitcoin",
+      "wording": "It is the thing that I've gotten most excited about since Bitcoin.",
+      "first_statement": "barry-silbert-025",
+      "origin": "introduced",
+      "lineage_notes": "Restated to Bloomberg in [barry-silbert-030]."
+    },
+    {
+      "label": "bitcoin 2012",
+      "wording": "it felt like Bitcoin in 2012 - a small group of builders with a clear, ambitious vision",
+      "first_statement": "barry-silbert-032",
+      "origin": "introduced",
+      "lineage_notes": "A dated sharpening of the early-bitcoin frame, tied to the first TAO halving."
+    },
+    {
+      "label": "asset class",
+      "wording": "Subnet tokens are an emerging asset class, fueled by TAO",
+      "first_statement": "barry-silbert-029",
+      "origin": "introduced",
+      "lineage_notes": "Yuma's fund marketing repeats it."
+    },
+    {
+      "label": "market validation",
+      "wording": "They are functioning as market validation, signaling the value that each subnet provides",
+      "first_statement": "barry-silbert-035",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "hindsight",
+      "wording": "It is going to surprise a lot of people and will be obvious in hindsight",
+      "first_statement": "barry-silbert-002",
+      "origin": "reused",
+      "lineage_notes": "Standard early-adopter idiom."
+    },
+    {
+      "label": "rabbit hole",
+      "wording": "Went down the Bittensor $TAO rabbit hole",
+      "first_statement": "barry-silbert-022",
+      "origin": "reused",
+      "lineage_notes": "Bitcoin community idiom carried over."
+    },
+    {
+      "label": "utility currency",
+      "wording": "TAO, acting as a utility currency, serves as the pricing base for all subnet tokens",
+      "first_statement": "barry-silbert-019",
+      "origin": "unknown",
+      "lineage_notes": "Back-translated wording; treat as approximate."
+    },
+    {
+      "label": "chapter",
+      "wording": "A new chapter for Bittensor $TAO",
+      "first_statement": "barry-silbert-021",
+      "origin": "reused",
+      "lineage_notes": ""
+    },
+    {
+      "label": "next big thing",
+      "wording": "He's early in the next big thing, like usual",
+      "first_statement": "barry-silbert-039",
+      "origin": "reused",
+      "lineage_notes": ""
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Bittensor exists to open up the development of and access to AI: a permissionless network that incentivises intelligence to solve problems.",
+      "statements": [
+        "barry-silbert-024",
+        "barry-silbert-017"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "A move from digital ownership of assets to decentralised ownership of intelligence, a world wide web of intelligence, and possibly a better global store of value than Bitcoin.",
+      "statements": [
+        "barry-silbert-003",
+        "barry-silbert-026",
+        "barry-silbert-014"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Openness of development and access, set against closed systems.",
+      "statements": [
+        "barry-silbert-024"
+      ]
+    },
+    "problem.market": {
+      "summary": "AI exposure is limited to a few big players, and closed providers are single points of failure.",
+      "statements": [
+        "barry-silbert-038",
+        "barry-silbert-018"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "The alternative is closed, centralised AI controlled by tech giants.",
+      "statements": [
+        "barry-silbert-034"
+      ]
+    },
+    "opportunity": {
+      "summary": "The convergence of AI and crypto is the next investment era after Bitcoin, Ethereum, NFTs, L2s and DeFi; halvings, ETP filings and institutional custody are the tailwinds he cites.",
+      "statements": [
+        "barry-silbert-010",
+        "barry-silbert-013",
+        "barry-silbert-023",
+        "barry-silbert-032",
+        "barry-silbert-033"
+      ]
+    },
+    "audience": {
+      "summary": "He speaks mostly to investors and institutions (Grayscale, BitGo, funds), to newcomers he points at community accounts, and to startups and enterprises he invites to launch subnets while avoiding the word blockchain.",
+      "statements": [
+        "barry-silbert-001",
+        "barry-silbert-004",
+        "barry-silbert-006",
+        "barry-silbert-007",
+        "barry-silbert-021",
+        "barry-silbert-029",
+        "barry-silbert-036",
+        "barry-silbert-038"
+      ]
+    },
+    "positioning.category": {
+      "summary": "Bittensor is the next Bitcoin: the world wide web of AI or of intelligence, a decentralised intelligence network, and subnet tokens are an emerging asset class.",
+      "statements": [
+        "barry-silbert-005",
+        "barry-silbert-026",
+        "barry-silbert-014",
+        "barry-silbert-016",
+        "barry-silbert-029",
+        "barry-silbert-032"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "Of the decentralised AI projects DCG backed, Bittensor is the one that reached escape velocity.",
+      "statements": [
+        "barry-silbert-011"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Same origin story and token economics as Bitcoin (whitepaper, code, 21 million, halvings), plus the best minds in crypto moving to it.",
+      "statements": [
+        "barry-silbert-016",
+        "barry-silbert-028",
+        "barry-silbert-015"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Against closed AI (OpenAI, Meta, tech giants), against worthless tokens, and against Bitcoiners who call TAO a scam.",
+      "statements": [
+        "barry-silbert-018",
+        "barry-silbert-034",
+        "barry-silbert-015",
+        "barry-silbert-009",
+        "barry-silbert-011"
+      ]
+    },
+    "value.functional": {
+      "summary": "Access and exposure: institutional staking, subnet token funds, an ETP, and redundancy against API restrictions; subnet tokens as market validation.",
+      "statements": [
+        "barry-silbert-006",
+        "barry-silbert-021",
+        "barry-silbert-029",
+        "barry-silbert-035",
+        "barry-silbert-038",
+        "barry-silbert-018",
+        "barry-silbert-019"
+      ]
+    },
+    "value.emotional": {
+      "summary": "The excitement of being early, the most excited he has been since Bitcoin, and the promise that it will be obvious in hindsight.",
+      "statements": [
+        "barry-silbert-002",
+        "barry-silbert-025",
+        "barry-silbert-030"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Buying TAO marks you as early to the next big thing.",
+      "statements": [
+        "barry-silbert-039"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "Bittensor is the next Bitcoin, the world wide web of intelligence, the thing he has been most excited about since Bitcoin.",
+      "statements": [
+        "barry-silbert-003",
+        "barry-silbert-005",
+        "barry-silbert-023",
+        "barry-silbert-025",
+        "barry-silbert-026",
+        "barry-silbert-032",
+        "barry-silbert-002"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Grayscale products, BitGo custody and staking, Yuma hires and funds, subnet growth and value flowing into subnet tokens.",
+      "statements": [
+        "barry-silbert-001",
+        "barry-silbert-008",
+        "barry-silbert-011",
+        "barry-silbert-016",
+        "barry-silbert-021",
+        "barry-silbert-027",
+        "barry-silbert-028",
+        "barry-silbert-034",
+        "barry-silbert-035",
+        "barry-silbert-036",
+        "barry-silbert-037"
+      ]
+    },
+    "voice": {
+      "summary": "Short, promotional X posts with $TAO cashtags and 'don't sleep' energy; blunt when attacked ('lazy attack. do better'); sports and comeback idioms in interviews.",
+      "statements": [
+        "barry-silbert-002",
+        "barry-silbert-004",
+        "barry-silbert-007",
+        "barry-silbert-012",
+        "barry-silbert-015",
+        "barry-silbert-009",
+        "barry-silbert-020",
+        "barry-silbert-022",
+        "barry-silbert-031",
+        "barry-silbert-039"
+      ]
+    },
+    "relationship": {
+      "summary": "Investor since DCG's 2021 stake, then operator: CEO of Yuma, back in the game with his jersey on, chairman of the Grayscale vehicle, cheerleader for the community.",
+      "statements": [
+        "barry-silbert-001",
+        "barry-silbert-006",
+        "barry-silbert-012",
+        "barry-silbert-027",
+        "barry-silbert-031",
+        "barry-silbert-032",
+        "barry-silbert-033"
+      ]
+    },
+    "language.term": {
+      "summary": "He says 'decentralized AI', 'deAI' and 'decentralized intelligence', calls subnet tokens an asset class and market validation, and avoids 'blockchain' because it scares people away.",
+      "statements": [
+        "barry-silbert-004",
+        "barry-silbert-005",
+        "barry-silbert-020",
+        "barry-silbert-035",
+        "barry-silbert-019"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "decentralized AI",
+      "deAI",
+      "decentralized intelligence",
+      "subnet tokens",
+      "asset class",
+      "institutional",
+      "access",
+      "early days of Bitcoin",
+      "escape velocity",
+      "$TAO",
+      "next big thing",
+      "convergence of AI and crypto",
+      "world wide web of intelligence"
+    ],
+    "words_avoided": [
+      "blockchain",
+      "scam"
+    ],
+    "coinages": [
+      {
+        "term": "deAI",
+        "meaning": "his shorthand for decentralised AI as a sector",
+        "statement": "barry-silbert-020"
+      },
+      {
+        "term": "world wide web of intelligence",
+        "meaning": "Bittensor as the open access layer for intelligence, as the web was for information",
+        "statement": "barry-silbert-026"
+      },
+      {
+        "term": "subnet tokens as an emerging asset class",
+        "meaning": "alpha tokens framed as an investable category fueled by TAO",
+        "statement": "barry-silbert-029"
+      },
+      {
+        "term": "market validation",
+        "meaning": "subnet token prices as a signal of the value each subnet provides",
+        "statement": "barry-silbert-035"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "revolution",
+      "summary": "He surfaces in August 2024 as an investor cheering Grayscale's TAO trust [barry-silbert-001], teases that Bittensor will be obvious in hindsight [barry-silbert-002], then launches Yuma in November with the founding frame: early Bitcoin for money, Bittensor for the decentralised ownership of intelligence [barry-silbert-003], and Bittensor as the World Wide Web of AI [barry-silbert-005]. The pitch is deliberately de-cryptoed for enterprises [barry-silbert-004].",
+      "dominant_metaphor": "early bitcoin",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "The framing hardens into 'the next Bitcoin': same whitepaper-to-code origin and token economics [barry-silbert-016], the boldest call that it could be a better store of value than Bitcoin [barry-silbert-014], and the halving as a Bitcoin-2012 moment [barry-silbert-032]. The web metaphor is upgraded from 'of AI' to 'of intelligence' [barry-silbert-026]. With dynamic TAO his subject shifts from the network to subnet tokens as an asset class and market validation [barry-silbert-029, barry-silbert-035], and he starts naming the enemy: closed systems run by tech giants [barry-silbert-034], plus Bitcoiners who call TAO a scam [barry-silbert-009].",
+      "dominant_metaphor": "better bitcoin",
+      "shift": "From explaining what Bittensor is to arguing it is the next Bitcoin and packaging subnet tokens for institutions."
+    },
+    {
+      "era": "current",
+      "summary": "Thin so far: the portfolio-allocation pitch that AI exposure should not be limited to a few big players [barry-silbert-038] and cheerleading for late-arriving converts [barry-silbert-039].",
+      "dominant_metaphor": "next big thing",
+      "shift": "Language turns toward allocation and access rather than origin-story comparison."
+    }
+  ],
+  "relations": [
+    {
+      "to": "parker-lewis",
+      "kind": "argues",
+      "statement": "barry-silbert-009",
+      "note": "Lewis called Silbert and Raoul Pal affinity scammers for promoting TAO; Silbert replied that calling TAO a scam is a lazy attack."
+    },
+    {
+      "to": "raoul-pal",
+      "kind": "agrees",
+      "statement": "barry-silbert-014",
+      "note": "Pal hosted and amplified the next-Bitcoin thesis; the episode description calls Bittensor potentially more transformative than Bitcoin."
+    },
+    {
+      "to": "greg-schvey",
+      "kind": "borrows",
+      "statement": "barry-silbert-032",
+      "note": "Silbert quotes Schvey's thread laying out the Bitcoin-2012 similarities."
+    },
+    {
+      "to": "jason-calacanis",
+      "kind": "responds",
+      "statement": "barry-silbert-039",
+      "note": "Endorses Calacanis's public decision to buy TAO."
+    },
+    {
+      "to": "tom-lee",
+      "kind": "agrees",
+      "statement": "barry-silbert-022",
+      "note": "Fundstrat session on TAO; calls Lee the first Wall Street bitcoin OG."
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "introduces",
+      "statement": "barry-silbert-007",
+      "note": "Lists @const_reborn first among accounts newcomers should follow."
+    }
+  ],
+  "coverage": {
+    "searches_used": 25,
+    "fetches_used": 55,
+    "well_covered": [
+      "dtao era via press (Fortune, CoinDesk, The Block, crypto.news) and Yuma's own site",
+      "X post texts for 2024-08 to 2026-07 as indexed, all probable",
+      "the Bitcoin comparison and the world wide web metaphor, earliest and latest instances"
+    ],
+    "thin": [
+      "current era (2026-06 onward): two statements, one unverified",
+      "podcast wording: no primary transcript reached for Real Vision, The Scoop, or Fundstrat",
+      "revolution era before November 2024: two short posts only",
+      "nothing from 2021 to mid-2024 despite DCG's 2021 investment; no public words found"
+    ],
+    "gaps": [
+      "x.com direct pages returned 402, web.archive.org is blocked for this tool, threadreaderapp and xcancel were 403/451, so every X post rests on search-index text (probable) or a quoting article",
+      "Real Vision Journey Man episode (YouTube XoqdTfKQCjA): no transcript reached; Bitget/PANews transcript is a back-translation, recorded as unverified",
+      "The Scoop episode (YouTube 3qIL4oCe1Uo) and Fundstrat webinar (YouTube E0Wmq0emlTc): pages gave no transcript, no quotes extracted",
+      "State of Bittensor Vol. 2 preface on yumaai.com did not render; text taken from The Block",
+      "Benzinga and Sahm Capital June 2026 articles returned 403; the portfolio-allocation quote is unverified",
+      "Yuma Composite Index (Feb 2026) and Total Market Fund (Jun 2026) pages carry no Silbert quote; tradersunion coverage was 403",
+      "Search budget exhausted at session level before searching for pre-2024 statements and Consensus, CNBC, Bloomberg TV appearances"
+    ],
+    "unreachable": [
+      "https://x.com/BarrySilbert/status/2000573434678612162",
+      "https://web.archive.org/web/2026/https://x.com/BarrySilbert/status/2000573434678612162",
+      "https://www.businesswire.com/news/home/20241120332472/en/DCG-Launches-Yuma-A-New-Subsidiary-Focused-on-Accelerating-Decentralized-Intelligence",
+      "https://www.silicon.co.uk/press-release/dcg-launches-yuma-a-new-subsidiary-focused-on-accelerating-decentralized-intelligence",
+      "https://dailyhodl.com/2025/04/20/billionaire-barry-silbert-says-this-is-the-next-big-investment-theme-for-crypto-assets/",
+      "https://beincrypto.com/bittensor-store-of-value-potential/",
+      "https://panews.io/articles/4vhx2ik6",
+      "https://threadreaderapp.com/thread/2000573434678612162.html",
+      "https://xcancel.com/BarrySilbert/status/2000573434678612162",
+      "https://deepnewz.com/markets/barry-silbert-highlights-bittensor-tao-early-adoption-subnet-summer-2025-dcg-7c0e0e8c",
+      "https://tradersunion.com/news/market-voices/show/1555636-yuma-index-bittensor-launch/",
+      "https://tradersunion.com/news/market-voices/show/336367-silbert-bittensor-fundstrat/",
+      "https://tradersunion.com/news/market-voices/show/1917388-subnet-tokens-bittensor-tao/",
+      "https://www.sahmcapital.com/news/content/bitcoin-og-barry-silbert-bets-big-on-decentralized-ai-exposure-through-this-2-billion-crypto-2026-06-26",
+      "https://www.benzinga.com/crypto/cryptocurrency/26/06/60120104/bitcoin-og-barry-silbert-bets-big-on-decentralized-ai-exposure-through-this-2-billion-crypto",
+      "https://www.mexc.com/news/124312",
+      "https://cryptorank.io/news/feed/00a7b-bitcoin-investor-barry-silbert-discusses-ai-and-crypto-convergence-highlights-bittensor-as-key-project"
+    ]
+  }
+}

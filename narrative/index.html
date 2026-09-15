@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bittensor Narrative Map</title>
+<!-- robots:start -->
+<meta name="robots" content="noindex">
+<!-- robots:end -->
+<meta name="description" content="Who says what Bittensor is, in their own words, dated and sourced. A person-centered map of the network's narrative: narrators, metaphors, and how the framing changed over time.">
+<link rel="canonical" href="https://www.legible.network/narrative/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.legible.network/narrative/">
+<meta property="og:title" content="Bittensor Narrative Map">
+<meta property="og:description" content="Who says what Bittensor is, and when they started saying it. Verbatim, dated, sourced.">
+<meta property="og:image" content="https://www.legible.network/assets/og/narrative.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/narrative.css">
+<style>
+.hero{padding-top:52px;padding-bottom:22px}
+.hero .demo{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero .demo a{color:var(--soft);border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
+.hero .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--tag)}
+.primer{margin-top:4px;border:1px solid var(--rule);background:var(--paper)}
+.primer summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:12px 16px}
+.primer summary::-webkit-details-marker{display:none}
+.primer summary .t{font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:-.01em}
+.primer summary .chev{margin-left:auto;color:var(--softer);transition:transform .15s}
+.primer[open] summary .chev{transform:rotate(90deg)}
+.primer .body{padding:0 16px 14px;max-width:78ch;color:var(--ink-soft);font-size:14.5px}
+.primer .body p{margin:0 0 10px}
+.primer .body .links{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+.controls{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);margin-top:18px}
+.controls .wrap{padding-top:12px;padding-bottom:10px;display:flex;flex-direction:column;gap:8px}
+.controls .tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.search{font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);min-width:260px;flex:1 1 260px}
+.search:focus{outline:none;border-color:var(--ink)}
+.frow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.flabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);width:74px;flex:0 0 74px}
+.frow select{font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink)}
+.spacer{flex:1}
+.summary{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft)}
+.reset{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tag);text-decoration:underline}
+.chip.nar b{font-family:var(--pix);letter-spacing:.06em;margin-right:6px;font-size:10px;text-transform:none}
+main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start;padding-top:22px}
+.viz{min-width:0}
+.viz svg{width:100%;height:auto;display:block;font-family:var(--mono);font-size:11px}
+.viz .row-label{fill:var(--ink);font-family:var(--disp);font-weight:600;font-size:13px}
+.viz .row-glyph{fill:var(--tag);font-family:var(--pix);font-size:10px;letter-spacing:.06em}
+.viz .era-lab{fill:var(--softer);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
+.viz .tick{fill:var(--softer)}
+.viz .dot{cursor:pointer}
+.viz .dot circle{stroke:var(--bg);stroke-width:1.5}
+.viz .dot.verified circle{fill:var(--ink)}
+.viz .dot.probable circle{fill:var(--b2)}
+.viz .dot.unverified circle{fill:var(--bg);stroke:var(--tag);stroke-width:1.5}
+.viz .dot.sel circle{stroke:var(--tag);stroke-width:3}
+.viz .dot:hover circle{r:7}
+.viz .span{stroke:var(--rule-strong);stroke-width:2}
+.viz .span.first{stroke:var(--ink)}
+.viz .g-glyph{cursor:pointer}
+.viz .g-glyph rect{fill:var(--paper);stroke:var(--rule-strong)}
+.viz .g-glyph.first rect{fill:var(--ink);stroke:var(--ink)}
+.viz .g-glyph text{fill:var(--ink);font-family:var(--pix);font-size:9px;letter-spacing:.04em}
+.viz .g-glyph.first text{fill:var(--bg)}
+.viz .g-glyph.sel rect{stroke:var(--tag);stroke-width:2}
+.viz .met-label{fill:var(--ink);font-family:var(--disp);font-weight:600;font-size:13px}
+.viz .met-count{fill:var(--softer)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);margin:8px 0 0}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle;margin-right:5px}
+.legend .v{background:var(--ink)}.legend .p{background:var(--b2)}.legend .u{border:1.5px solid var(--tag)}
+/* framework matrix */
+.matrix{overflow-x:auto;border:1px solid var(--rule);background:var(--paper)}
+.matrix table{border-collapse:collapse;width:100%;font-size:13px}
+.matrix th{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);padding:8px 8px;border-bottom:1px solid var(--rule-strong);text-align:left;white-space:nowrap;position:sticky;top:0;background:var(--paper)}
+.matrix th.nar{text-align:center;font-family:var(--pix);color:var(--tag);letter-spacing:.06em;text-transform:none;font-size:10px}
+.matrix td{padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:middle}
+.matrix td.sec{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--paper-deep);padding-top:10px}
+.matrix td.slot{color:var(--ink-soft);white-space:nowrap}
+.matrix td.c{text-align:center}
+.matrix td.c button{width:100%;padding:6px 4px;font-family:var(--mono);font-size:12px;color:var(--ink);border:1px solid transparent}
+.matrix td.c button.z{color:var(--rule-strong)}
+.matrix td.c button.has{background:var(--teal-soft)}
+.matrix td.c button:hover,.matrix td.c button.sel{border-color:var(--tag)}
+.matrix td.c button.sum::after{content:"";display:block;width:14px;height:2px;background:var(--tag);margin:3px auto 0}
+/* list view */
+.list .st{padding:12px 0}
+.empty{padding:40px 0;color:var(--softer);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+/* drawer */
+#aside{position:sticky;top:132px}
+.detail{border:1px solid var(--rule-strong);background:var(--paper);padding:16px 18px;max-height:calc(100vh - 150px);overflow:auto}
+.detail .dh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px}
+.detail .dh .mono{color:var(--tag)}
+.detail .nlink{display:flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:-.01em}
+.detail .nlink b{font-family:var(--pix);font-size:11px;color:var(--tag);letter-spacing:.06em;font-weight:400}
+.detail .st .quote{font-size:17px}
+.detail .close{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
+.detail .fsum{font-size:14px;color:var(--ink);margin:6px 0 10px;padding:8px 10px;border-left:3px solid var(--tag);background:var(--paper-deep)}
+.detail .hint{color:var(--softer);font-size:13px}
+.detail .hint b{color:var(--ink);font-weight:600}
+.detail .hint ul{padding-left:18px;margin:8px 0 0;line-height:1.6}
+.detail .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.detail .actions a{padding:8px 10px;border:1px solid var(--rule-strong);font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.detail .actions a:hover{text-decoration:none;background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.detail .nav2{display:flex;justify-content:space-between;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.detail .nav2 button{color:var(--soft)}.detail .nav2 button:hover{color:var(--ink)}
+.narrators{margin-top:40px}
+.narrators .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:14px}
+.ncard{border:1px solid var(--rule);background:var(--paper);padding:14px 16px;display:flex;flex-direction:column;gap:6px;color:var(--ink)}
+.ncard:hover{text-decoration:none;border-color:var(--ink)}
+.ncard b.g{font-family:var(--pix);font-size:12px;letter-spacing:.06em;color:var(--tag)}
+.ncard .nm{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.02em}
+.ncard .ol{font-size:13px;color:var(--soft);line-height:1.45}
+.ncard .ct{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);margin-top:4px}
+@media (max-width:980px){
+  main.map{grid-template-columns:1fr}
+  #aside{position:static}
+  #aside.has-sel{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:0 12px 12px}
+  #aside.has-sel .detail{max-height:52vh;box-shadow:0 -10px 30px rgba(0,0,0,.35)}
+  .flabel{width:100%;flex-basis:100%}
+}
+</style>
+</head>
+<body>
+<!-- topbar:start -->
+<div class="topbar"><div class="wrap">
+  <span>legible.network v2 · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>Exploit Summit 2026 · Montreal · <a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
+</div></div>
+
+<!-- topbar:end -->
+<!-- nav:start -->
+<nav class="nav"><div class="wrap">
+  <span class="wordmark"><a href="/">Legible</a><small>by <a href="https://www.mikyo.one" rel="author">Mikyö Clark</a></small></span>
+  <div class="links">
+    <a href="/">Index</a>
+    <a href="/narrative/" aria-current="page">Narrative</a>
+    <a href="/rubric/">Rubric</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/about/">About</a>
+    <a class="cta" href="/methodology/#corrections">Corrections</a>
+  </div>
+</div></nav>
+
+<!-- nav:end -->
+
+<header class="wrap hero">
+  <p class="kicker"><b>Read the room, by voice.</b> The people who say what Bittensor is, in their own words.</p>
+  <h1>Who says what Bittensor is, <em>and when they started saying it.</em></h1>
+  <p class="lede">A person-centered map of the network's narrative. Every statement is verbatim, dated, and linked to its source. Narrators are read through one framework so they can be compared slot by slot, and every metaphor is traced from its first sourced use to everyone who picked it up.</p>
+  <div class="stats" id="nstats">
+    <!-- nstats:start -->
+<div><b>18</b><span>narrators</span></div><div><b>482</b><span>sourced statements</span></div><div><b>198</b><span>metaphors traced</span></div><div><b>208</b><span>distinct sources</span></div>
+<!-- nstats:end -->
+  </div>
+  <div class="demo">
+    <a href="#view=timeline">Timeline by narrator</a>
+    <a href="#view=metaphors">Metaphor lineage</a>
+    <a href="#view=framework">Framework, side by side</a>
+    <a href="#view=list&slot=positioning.against">Who they set it against</a>
+  </div>
+</header>
+
+<details class="primer wrap" id="primer">
+  <summary><span class="mono">Start here</span> <span class="t">What a narrator is, and what this map records</span><span class="chev">›</span></summary>
+  <div class="body">
+    <p><b>A narrator</b> is a person, a foundation, or a subnet team with a public voice on Bittensor. The map records only what they said themselves, on the record: a quote of at most sixty words, dated, with the page it came from. Nothing is paraphrased in a quote. The readings above the quotes are written from the quotes alone and name the statements they rest on.</p>
+    <p><b>The framework</b> is a brand strategy skeleton turned on the narrator. Not what Bittensor's brand is, but what this narrator's Bittensor is: what it is for, what it fixes, who it is for, what it is against, what makes it different, what it is worth, what line they repeat, in what voice, and what they call things. <b>A metaphor</b> is the figurative frame, a brain or a market or a Bitcoin, dated to its earliest sourced use and followed to everyone who picked it up.</p>
+    <p><b>Confidence</b> is shown on every statement. Verified means the primary source was reached and the words are on it. Probable means a secondary source quotes them, or the primary exists but could not be read. Unverified statements are hidden unless you switch them on.</p>
+    <p class="links"><a href="/narrative/method/">Method and corrections</a> · <a href="/narrative/metaphors/">Metaphor index</a> · <a href="/data/narrative.json">The data, CC BY 4.0</a> · <a href="/">The legibility index</a></p>
+  </div>
+</details>
+
+<div class="controls" id="controls">
+  <div class="wrap">
+    <div class="tools">
+      <input class="search" id="q" type="search" placeholder="Search quotes, contexts, metaphors, themes" autocomplete="off">
+      <div class="seg" id="views" role="group" aria-label="View">
+        <button data-view="timeline" class="on">Timeline</button>
+        <button data-view="metaphors">Metaphors</button>
+        <button data-view="framework">Framework</button>
+        <button data-view="list">List</button>
+      </div>
+    </div>
+    <div class="frow"><span class="flabel">Narrators</span><span id="fNar"></span></div>
+    <div class="frow"><span class="flabel">Eras</span><span id="fEra"></span>
+      <select id="fSlot" aria-label="Framework slot"><option value="">Any slot</option></select>
+      <select id="fAbout" aria-label="About"><option value="">Network and subnets</option><option value="network">About the network</option><option value="subnet">About a subnet</option></select>
+      <button class="chip" data-toggle="unv">Include unverified</button>
+      <span class="spacer"></span>
+      <span class="summary" id="summary">Loading…</span>
+      <button class="reset" id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<main class="map wrap" id="main">
+  <div class="viz" id="viz"><div class="empty">Loading the map…</div></div>
+  <aside id="aside"><div class="detail" id="detail"></div></aside>
+</main>
+
+<section class="wrap narrators" id="narrators">
+  <span class="mono">The narrators</span>
+  <h2>One page each, <em>in their own words.</em></h2>
+  <div class="grid" id="ngrid"></div>
+</section>
+
+<!-- footer:start -->
+<footer class="site"><div class="wrap">
+  <span>Corrections: <a href="/methodology/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
+  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>Built by Mikyö Clark (they/them) · <a href="https://www.mikyo.one">mikyo.one</a></span>
+</div></footer>
+
+<!-- footer:end -->
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  let D = null, byN = {}, byS = {}, slotLabel = {}, eraLabel = {}, eraStart = {};
+  const state = {view:"timeline", n:new Set(), era:new Set(), slot:"", about:"", q:"", unv:false, allmet:false, sel:null, cell:null};
+  const ERA_ORDER = ["pre","nakamoto","finney","revolution","dtao","current"];
+
+  // ---- hash state
+  function readHash(){
+    const h = new URLSearchParams(location.hash.slice(1));
+    state.view = ["timeline","metaphors","framework","list"].includes(h.get("view")) ? h.get("view") : "timeline";
+    state.n = new Set((h.get("n") || "").split(",").filter(Boolean));
+    state.era = new Set((h.get("era") || "").split(",").filter(Boolean));
+    state.slot = h.get("slot") || ""; state.about = h.get("about") || ""; state.q = h.get("q") || "";
+    state.unv = h.get("unv") === "1"; state.allmet = h.get("allmet") === "1"; state.sel = h.get("sel") || null; state.cell = h.get("cell") || null;
+  }
+  function writeHash(){
+    const h = new URLSearchParams();
+    if (state.view !== "timeline") h.set("view", state.view);
+    if (state.n.size) h.set("n", [...state.n].join(","));
+    if (state.era.size) h.set("era", [...state.era].join(","));
+    if (state.slot) h.set("slot", state.slot); if (state.about) h.set("about", state.about);
+    if (state.q) h.set("q", state.q); if (state.unv) h.set("unv", "1"); if (state.allmet) h.set("allmet", "1");
+    if (state.sel) h.set("sel", state.sel); if (state.cell) h.set("cell", state.cell);
+    const s = h.toString();
+    history.replaceState(null, "", s ? "#" + s : location.pathname);
+  }
+
+  // ---- time scale
+  function dnum(d){ const y = +d.slice(0,4), m = d.length >= 7 ? +d.slice(5,7) : 6, day = d.length >= 10 ? +d.slice(8,10) : 15; return y + (m - 1) / 12 + (day - 1) / 365; }
+  let T0 = 2019, T1 = 2027;
+
+  // ---- filtering
+  function filtered(){
+    const q = state.q.trim().toLowerCase();
+    return D.statements.filter(s => {
+      if (!state.unv && s.confidence === "unverified") return false;
+      if (state.n.size && !state.n.has(s.narrator)) return false;
+      if (state.era.size && !state.era.has(s.era)) return false;
+      if (state.slot && !s.slots.includes(state.slot)) return false;
+      if (state.about === "network" && s.about !== "network") return false;
+      if (state.about === "subnet" && !s.about.startsWith("subnet:")) return false;
+      if (q){
+        const hay = [s.quote, s.context, s.metaphors.join(" "), s.themes.join(" "), byN[s.narrator]?.name, s.source.outlet, s.date].join(" ").toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  // ---- pieces
+  function stCard(s, opts){
+    opts = opts || {};
+    const n = byN[s.narrator]; const src = s.source;
+    const who = opts.who ? `<a class="who" href="/narrative/${esc(s.narrator)}/">${esc(n ? n.name : s.narrator)}</a> · ` : "";
+    const ts = src.timestamp ? ` · ${esc(src.timestamp)}` : "";
+    const arch = src.archive_url ? ` · <a href="${esc(src.archive_url)}" target="_blank" rel="noopener">archive</a>` : "";
+    const about = s.about.startsWith("subnet:") ? `<a class="pill" href="/sn/${esc(s.about.split(":")[1])}/">SN${esc(s.about.split(":")[1])}</a>` : "";
+    const slots = s.slots.map(sl => `<button class="pill slot" data-slot="${esc(sl)}" title="Filter by this slot">${esc(slotLabel[sl] || sl)}</button>`).join("");
+    const mets = s.metaphors.map(m => `<a class="pill met" href="/narrative/metaphors/#${esc(m)}">${esc(m)}</a>`).join("");
+    return `<article class="st ${s.id === state.sel ? "hit" : ""}" data-id="${esc(s.id)}">
+      <p class="quote">${esc(s.quote)}</p>${opts.compact ? "" : `<p class="ctx">${esc(s.context)}</p>`}
+      <div class="src">${who}<span class="d">${esc(s.date_label)}</span> · <a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.outlet || src.host)}</a><span class="m">${esc(src.medium)}${ts}</span>${arch}<span class="badge ${esc(s.confidence)}">${esc(s.confidence)}</span>${src.link && src.link !== "unchecked" ? `<span class="badge ${esc(src.link)}">${esc(src.link)}</span>` : ""}</div>
+      <div class="tags">${about}${slots}${mets}</div></article>`;
+  }
+  function narHead(n){
+    return `<a class="nlink" href="/narrative/${esc(n.id)}/"><b>${esc(n.glyph)}</b>${esc(n.name)}</a>`;
+  }
+
+  // ---- views
+  function renderTimeline(sts){
+    const nars = D.narrators.filter(n => !state.n.size || state.n.has(n.id));
+    const rows = nars.filter(n => sts.some(s => s.narrator === n.id));
+    if (!rows.length) return `<div class="empty">Nothing matches. Loosen a filter.</div>`;
+    const L = 170, R = 16, T = 34, RH = 52, W = 1000, H = T + rows.length * RH + 30;
+    const X = t => L + (W - L - R) * ((t - T0) / (T1 - T0));
+    let out = [`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Statements by narrator over time">`];
+    // era bands
+    const eras = D.eras.filter(e => e.id !== "pre" || sts.some(s => s.era === "pre"));
+    D.eras.forEach((e, i) => {
+      const x0 = Math.max(L, X(dnum(e.start))), x1 = i + 1 < D.eras.length ? X(dnum(D.eras[i+1].start)) : W - R;
+      if (x1 <= L) return;
+      out.push(`<rect x="${x0.toFixed(1)}" y="${T - 20}" width="${(x1 - x0).toFixed(1)}" height="${H - T + 20}" fill="${i % 2 ? "var(--stripe)" : "transparent"}"/>`);
+      out.push(`<line x1="${x0.toFixed(1)}" y1="${T - 20}" x2="${x0.toFixed(1)}" y2="${H - 10}" stroke="var(--rule)"/>`);
+      if (x1 - x0 > 60) out.push(`<text class="era-lab" x="${(x0 + 6).toFixed(1)}" y="${T - 8}">${esc(e.label)}</text>`);
+    });
+    for (let y = Math.ceil(T0); y <= T1; y++) out.push(`<text class="tick" x="${X(y).toFixed(1)}" y="${H - 12}" text-anchor="middle">${y}</text>`);
+    rows.forEach((n, i) => {
+      const cy = T + i * RH + RH / 2;
+      out.push(`<line x1="${L}" y1="${(cy + RH/2).toFixed(1)}" x2="${W - R}" y2="${(cy + RH/2).toFixed(1)}" stroke="var(--rule)"/>`);
+      out.push(`<a href="/narrative/${esc(n.id)}/"><text class="row-glyph" x="8" y="${(cy - 4).toFixed(1)}">${esc(n.glyph)}</text><text class="row-label" x="8" y="${(cy + 11).toFixed(1)}">${esc(n.name.length > 20 ? n.name.slice(0, 19) + "…" : n.name)}</text></a>`);
+      const mine = sts.filter(s => s.narrator === n.id);
+      const seen = {};
+      mine.forEach(s => {
+        const x = X(dnum(s.date)); const k = Math.round(x / 8);
+        seen[k] = (seen[k] || 0) + 1; const lv = [0, -9, 9, -18, 18, -13, 13]; const jit = lv[(seen[k] - 1) % lv.length];
+        out.push(`<g class="dot ${esc(s.confidence)} ${s.id === state.sel ? "sel" : ""}" data-id="${esc(s.id)}" tabindex="0"><circle cx="${x.toFixed(1)}" cy="${(cy + jit).toFixed(1)}" r="5.5"/><title>${esc(s.date_label)} · ${esc(s.quote.slice(0, 120))}${s.quote.length > 120 ? "…" : ""}</title></g>`);
+      });
+    });
+    out.push("</svg>");
+    return out.join("") + `<div class="legend"><span><i class="v"></i>verified</span><span><i class="p"></i>probable</span><span><i class="u"></i>unverified</span><span>click a dot to read it</span></div>`;
+  }
+
+  function renderMetaphors(sts){
+    const ids = new Set(sts.map(s => s.id));
+    const mets = D.metaphors.map(m => {
+      const users = m.users.map(u => {
+        const mine = sts.filter(s => s.narrator === u.narrator && s.metaphors.includes(m.label));
+        return mine.length ? {narrator:u.narrator, first:mine[0], last:mine[mine.length - 1], count:mine.length, origin:u.origin} : null;
+      }).filter(Boolean);
+      return users.length ? {label:m.label, users, first:users.reduce((a, b) => dnum(a.first.date) <= dnum(b.first.date) ? a : b)} : null;
+    }).filter(Boolean).sort((a, b) => b.users.length - a.users.length || dnum(a.first.first.date) - dnum(b.first.first.date));
+    const total = mets.length, shared = mets.filter(m => m.users.length > 1).length;
+    const shown = (state.allmet || state.n.size || state.q || state.slot) ? mets : mets.filter(m => m.users.length > 1);
+    const toggle = `<div class="legend" style="margin-bottom:10px"><button class="chip ${state.allmet ? "on" : ""}" data-toggle="allmet">${state.allmet ? "Showing all" : "Shared by two or more"} <span class="n">${state.allmet ? total : shared} of ${total}</span></button><span>frames used by one narrator only are ${state.allmet ? "shown" : "hidden unless you filter or search"}</span></div>`;
+    if (!shown.length) return toggle + `<div class="empty">No metaphor in the current selection.</div>`;
+    const L = 170, R = 16, T = 34, UH = 16, PAD = 12, W = 1000;
+    const rowH = m => Math.max(34, m.users.length * UH + PAD);
+    let H = T; shown.forEach(m => H += rowH(m)); H += 30;
+    const X = t => L + (W - L - R) * ((t - T0) / (T1 - T0));
+    let out = [`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Metaphor lineage across narrators">`];
+    D.eras.forEach((e, i) => {
+      const x0 = Math.max(L, X(dnum(e.start))), x1 = i + 1 < D.eras.length ? X(dnum(D.eras[i+1].start)) : W - R;
+      if (x1 <= L) return;
+      out.push(`<rect x="${x0.toFixed(1)}" y="${T - 20}" width="${(x1 - x0).toFixed(1)}" height="${H - T + 20}" fill="${i % 2 ? "var(--stripe)" : "transparent"}"/>`);
+      out.push(`<line x1="${x0.toFixed(1)}" y1="${T - 20}" x2="${x0.toFixed(1)}" y2="${H - 10}" stroke="var(--rule)"/>`);
+      if (x1 - x0 > 60) out.push(`<text class="era-lab" x="${(x0 + 6).toFixed(1)}" y="${T - 8}">${esc(e.label)}</text>`);
+    });
+    for (let y = Math.ceil(T0); y <= T1; y++) out.push(`<text class="tick" x="${X(y).toFixed(1)}" y="${H - 12}" text-anchor="middle">${y}</text>`);
+    let y = T;
+    shown.forEach(m => {
+      const h = rowH(m); const off = (h - m.users.length * UH) / 2;
+      out.push(`<line x1="${L}" y1="${(y + h).toFixed(1)}" x2="${W - R}" y2="${(y + h).toFixed(1)}" stroke="var(--rule)"/>`);
+      out.push(`<a href="/narrative/metaphors/#${esc(m.label)}"><text class="met-label" x="8" y="${(y + 16).toFixed(1)}">${esc(m.label.length > 20 ? m.label.slice(0, 19) + "…" : m.label)}</text></a>`);
+      out.push(`<text class="met-count" x="8" y="${(y + 30).toFixed(1)}">${m.users.length} narrator${m.users.length !== 1 ? "s" : ""} · ${m.users.reduce((a, u) => a + u.count, 0)} use${m.users.reduce((a, u) => a + u.count, 0) !== 1 ? "s" : ""}</text>`);
+      m.users.sort((a, b) => dnum(a.first.date) - dnum(b.first.date)).forEach((u, j) => {
+        const cy = y + off + j * UH + UH / 2, x0 = X(dnum(u.first.date)), x1 = Math.max(x0 + 2, X(dnum(u.last.date)));
+        const n = byN[u.narrator]; const isFirst = j === 0; const key = `${m.label}|${u.narrator}`;
+        out.push(`<line class="span ${isFirst ? "first" : ""}" x1="${x0.toFixed(1)}" y1="${cy.toFixed(1)}" x2="${x1.toFixed(1)}" y2="${cy.toFixed(1)}"/>`);
+        if (!isFirst) out.push(`<line x1="${X(dnum(m.first.first.date)).toFixed(1)}" y1="${(y + off + UH/2).toFixed(1)}" x2="${x0.toFixed(1)}" y2="${cy.toFixed(1)}" stroke="var(--rule-strong)" stroke-dasharray="2 3"/>`);
+        const w = 12 + n.glyph.length * 6.2;
+        out.push(`<g class="g-glyph ${isFirst ? "first" : ""} ${state.cell === key ? "sel" : ""}" data-cell="${esc(key)}" tabindex="0"><rect x="${(x0 - w/2).toFixed(1)}" y="${(cy - 7).toFixed(1)}" width="${w.toFixed(1)}" height="14"/><text x="${x0.toFixed(1)}" y="${(cy + 3.5).toFixed(1)}" text-anchor="middle">${esc(n.glyph)}</text><title>${esc(n.name)}: ${u.count} use${u.count !== 1 ? "s" : ""} of "${esc(m.label)}", ${esc(u.first.date_label)} to ${esc(u.last.date_label)}</title></g>`);
+      });
+      y += h;
+    });
+    out.push("</svg>");
+    return toggle + out.join("") + `<div class="legend"><span>filled glyph: first on record</span><span>line: span of use</span><span>dashed: picked up later</span><span>click a glyph to read the uses</span></div>`;
+  }
+
+  function renderFramework(sts){
+    const nars = D.narrators.filter(n => (!state.n.size || state.n.has(n.id)) && sts.some(s => s.narrator === n.id));
+    if (!nars.length) return `<div class="empty">Nothing matches. Loosen a filter.</div>`;
+    let out = [`<div class="matrix"><table><thead><tr><th>Slot</th>${nars.map(n => `<th class="nar" title="${esc(n.name)}">${esc(n.glyph)}</th>`).join("")}</tr></thead><tbody>`];
+    D.sections.forEach(sec => {
+      if (sec.id === "subnet" && !nars.some(n => n.kind === "subnet")) return;
+      out.push(`<tr><td class="sec" colspan="${nars.length + 1}">${esc(sec.title)}</td></tr>`);
+      sec.slots.forEach(sl => {
+        const lab = (D.slots.find(x => x.id === sl) || {}).label || sl;
+        out.push(`<tr><td class="slot">${esc(lab.includes(": ") ? lab.split(": ")[1] : lab)}</td>`);
+        nars.forEach(n => {
+          const c = sts.filter(s => s.narrator === n.id && s.slots.includes(sl)).length;
+          const has = !!(n.framework && n.framework[sl]); const key = `${sl}|${n.id}`;
+          out.push(`<td class="c"><button data-cell="${esc(key)}" class="${c ? "has" : "z"} ${has ? "sum" : ""} ${state.cell === key ? "sel" : ""}" title="${esc(n.name)} · ${esc(lab)}">${c || "·"}</button></td>`);
+        });
+        out.push("</tr>");
+      });
+    });
+    out.push("</tbody></table></div>");
+    return out.join("") + `<div class="legend"><span>number: statements tagged</span><span>red mark: a synthesis was written</span><span>click a cell to read</span></div>`;
+  }
+
+  function renderList(sts){
+    if (!sts.length) return `<div class="empty">Nothing matches. Loosen a filter.</div>`;
+    return `<div class="list">${sts.slice().reverse().map(s => stCard(s, {who:true})).join("")}</div>`;
+  }
+
+  // ---- drawer
+  function renderDetail(sts){
+    const d = $("#detail");
+    if (state.sel && byS[state.sel]){
+      const s = byS[state.sel]; const n = byN[s.narrator];
+      const i = sts.findIndex(x => x.id === s.id);
+      d.innerHTML = `<div class="dh"><span class="mono">Statement</span><button class="close" data-close>Close</button></div>${narHead(n)}
+        ${stCard(s)}
+        ${s.themes.length ? `<p class="sm">Themes: ${s.themes.map(esc).join(", ")}</p>` : ""}
+        <div class="actions"><a href="/narrative/${esc(n.id)}/#${esc(s.id)}">On the narrator's page</a><a href="${esc(s.source.url)}" target="_blank" rel="noopener">Open the source</a></div>
+        <div class="nav2"><button data-step="-1" ${i <= 0 ? "disabled" : ""}>← Earlier</button><span class="mono">${i + 1} of ${sts.length}</span><button data-step="1" ${i < 0 || i >= sts.length - 1 ? "disabled" : ""}>Later →</button></div>`;
+      return;
+    }
+    if (state.cell){
+      const [a, b] = state.cell.split("|");
+      if (state.view === "metaphors" || D.metaphors.some(m => m.label === a)){
+        const n = byN[b]; const mine = sts.filter(s => s.narrator === b && s.metaphors.includes(a));
+        const m = D.metaphors.find(x => x.label === a); const u = m ? m.users.find(x => x.narrator === b) : null;
+        d.innerHTML = `<div class="dh"><span class="mono">Metaphor · ${esc(a)}</span><button class="close" data-close>Close</button></div>${narHead(n)}
+          ${u && u.wording ? `<p class="fsum">“${esc(u.wording)}” <span class="sm">· ${esc(u.origin)}</span></p>` : ""}
+          ${mine.map(s => stCard(s, {compact:true})).join("")}
+          <div class="actions"><a href="/narrative/metaphors/#${esc(a)}">In the metaphor index</a><a href="/narrative/${esc(b)}/">Narrator page</a></div>`;
+        return;
+      }
+      const n = byN[b]; const mine = sts.filter(s => s.narrator === b && s.slots.includes(a));
+      const f = n && n.framework && n.framework[a];
+      d.innerHTML = `<div class="dh"><span class="mono">${esc(slotLabel[a] || a)}</span><button class="close" data-close>Close</button></div>${narHead(n)}
+        ${f ? `<p class="fsum">${esc(f.summary)}</p>` : `<p class="hint">No synthesis written for this slot. Tagged statements below.</p>`}
+        ${mine.length ? mine.map(s => stCard(s, {compact:true})).join("") : `<p class="hint">No statement tagged to this slot in the current selection.</p>`}
+        <div class="actions"><a href="/narrative/${esc(b)}/#slot-${esc(a)}">On the narrator's page</a></div>`;
+      return;
+    }
+    const top = D.metaphors.slice(0, 5);
+    d.innerHTML = `<div class="dh"><span class="mono">How to read this</span></div>
+      <p class="hint"><b>Timeline</b> puts every sourced statement on a line per narrator; the shading is the era. <b>Metaphors</b> shows each frame from its first use to everyone who picked it up. <b>Framework</b> lays the narrators side by side, slot by slot. <b>List</b> is the same statements as text, newest first.</p>
+      <p class="hint"><b>Most shared frames</b></p><ul class="hint">${top.map(m => `<li><a href="/narrative/metaphors/#${esc(m.label)}">${esc(m.label)}</a> · ${m.users.length} narrator${m.users.length !== 1 ? "s" : ""}, first ${esc(byN[m.first.narrator]?.name || "")} ${esc(m.first.date.slice(0, 7))}</li>`).join("")}</ul>
+      <div class="actions"><a href="/narrative/method/">Method</a><a href="/data/narrative.json">Data</a></div>`;
+  }
+
+  // ---- controls
+  function renderControls(){
+    $("#fNar").innerHTML = D.narrators.map(n => `<button class="chip nar ${state.n.has(n.id) ? "on" : ""}" data-n="${esc(n.id)}" title="${esc(n.one_line)}"><b>${esc(n.glyph)}</b>${esc(n.name.length > 18 ? n.name.slice(0, 17) + "…" : n.name)}</button>`).join("");
+    $("#fEra").innerHTML = D.eras.map(e => `<button class="chip ${state.era.has(e.id) ? "on" : ""}" data-era="${esc(e.id)}" title="${esc(e.span)} · ${esc(e.note)}">${esc(e.label)}</button>`).join("");
+    const sel = $("#fSlot");
+    if (sel.options.length <= 1){
+      D.sections.forEach(sec => { const og = document.createElement("optgroup"); og.label = sec.title; sec.slots.forEach(sl => { const o = document.createElement("option"); o.value = sl; o.textContent = slotLabel[sl]; og.appendChild(o); }); sel.appendChild(og); });
+    }
+    sel.value = state.slot; $("#fAbout").value = state.about; $("#q").value = state.q;
+    document.querySelector('[data-toggle="unv"]').classList.toggle("on", state.unv);
+    document.querySelectorAll("#views button").forEach(b => b.classList.toggle("on", b.dataset.view === state.view));
+  }
+  function renderNarrators(){
+    $("#ngrid").innerHTML = D.narrators.map(n => `<a class="ncard" href="/narrative/${esc(n.id)}/"><b class="g">${esc(n.glyph)} · ${esc(n.kind)}</b><span class="nm">${esc(n.name)}</span><span class="ol">${esc(n.one_line)}</span><span class="ct">${n.statement_count} statements · ${n.confidence.verified} verified · ${n.eras.map(e => eraLabel[e]).join(", ")}</span></a>`).join("");
+  }
+
+  function render(){
+    if (!D) return;
+    const sts = filtered();
+    const viz = $("#viz");
+    viz.innerHTML = state.view === "timeline" ? renderTimeline(sts) : state.view === "metaphors" ? renderMetaphors(sts) : state.view === "framework" ? renderFramework(sts) : renderList(sts);
+    renderDetail(sts);
+    $("#aside").classList.toggle("has-sel", !!(state.sel || state.cell));
+    const nars = new Set(sts.map(s => s.narrator)), mets = new Set(sts.flatMap(s => s.metaphors));
+    $("#summary").textContent = `${sts.length} statement${sts.length !== 1 ? "s" : ""} · ${nars.size} narrator${nars.size !== 1 ? "s" : ""} · ${mets.size} metaphor${mets.size !== 1 ? "s" : ""}`;
+    renderControls();
+    writeHash();
+  }
+
+  // ---- events
+  document.addEventListener("click", ev => {
+    const t = ev.target.closest("[data-n],[data-era],[data-view],[data-toggle],[data-id],[data-cell],[data-close],[data-step],[data-slot],#reset");
+    if (!t) return;
+    if (t.matches("a")) return;
+    if (t.dataset.n !== undefined){ state.n.has(t.dataset.n) ? state.n.delete(t.dataset.n) : state.n.add(t.dataset.n); state.sel = null; state.cell = null; }
+    else if (t.dataset.era !== undefined){ state.era.has(t.dataset.era) ? state.era.delete(t.dataset.era) : state.era.add(t.dataset.era); }
+    else if (t.dataset.view !== undefined){ state.view = t.dataset.view; state.cell = null; }
+    else if (t.dataset.toggle === "unv"){ state.unv = !state.unv; }
+    else if (t.dataset.toggle === "allmet"){ state.allmet = !state.allmet; }
+    else if (t.dataset.id !== undefined){ state.sel = state.sel === t.dataset.id ? null : t.dataset.id; state.cell = null; }
+    else if (t.dataset.cell !== undefined){ state.cell = state.cell === t.dataset.cell ? null : t.dataset.cell; state.sel = null; }
+    else if (t.dataset.close !== undefined){ state.sel = null; state.cell = null; }
+    else if (t.dataset.step !== undefined){ const sts = filtered(); const i = sts.findIndex(x => x.id === state.sel); const j = i + (+t.dataset.step); if (sts[j]) state.sel = sts[j].id; }
+    else if (t.dataset.slot !== undefined){ state.slot = state.slot === t.dataset.slot ? "" : t.dataset.slot; }
+    else if (t.id === "reset"){ state.n.clear(); state.era.clear(); state.slot = ""; state.about = ""; state.q = ""; state.unv = false; state.allmet = false; state.sel = null; state.cell = null; }
+    ev.preventDefault();
+    render();
+  });
+  document.addEventListener("keydown", ev => { if (ev.key === "Enter" && ev.target.matches("[data-id],[data-cell]")) ev.target.click(); if (ev.key === "Escape" && (state.sel || state.cell)){ state.sel = null; state.cell = null; render(); } });
+  $("#q").addEventListener("input", ev => { state.q = ev.target.value; render(); });
+  $("#fSlot").addEventListener("change", ev => { state.slot = ev.target.value; render(); });
+  $("#fAbout").addEventListener("change", ev => { state.about = ev.target.value; render(); });
+  window.addEventListener("hashchange", () => { readHash(); render(); });
+  try { const p = $("#primer"); if (localStorage.getItem("nprimer") === "closed") p.open = false; else p.open = true; p.addEventListener("toggle", () => { try { localStorage.setItem("nprimer", p.open ? "open" : "closed"); } catch(e){} }); } catch(e){}
+
+  // ---- load
+  readHash();
+  fetch("/data/narrative.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    D = d; d.narrators.forEach(n => byN[n.id] = n); d.statements.forEach(s => byS[s.id] = s);
+    d.slots.forEach(s => slotLabel[s.id] = s.label); d.eras.forEach(e => { eraLabel[e.id] = e.label; eraStart[e.id] = e.start; });
+    const ds = d.statements.map(s => dnum(s.date));
+    T0 = Math.floor(Math.min(...ds, 2021)); T1 = Math.ceil(Math.max(...ds, 2026)) + 0.5;
+    renderNarrators(); render();
+    if (state.sel && byS[state.sel]) state.view = state.view === "framework" || state.view === "metaphors" ? "timeline" : state.view;
+  }).catch(err => { $("#viz").innerHTML = `<div class="empty">The map could not load its data (${esc(err.message)}). <a href="/data/narrative.json">Try the data directly.</a></div>`; });
+})();
+</script>
+</body>
+</html>

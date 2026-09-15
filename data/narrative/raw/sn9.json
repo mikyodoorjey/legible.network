@@ -1,0 +1,777 @@
+{
+  "narrator": {
+    "id": "sn9",
+    "name": "IOTA (SN9)",
+    "aka": [
+      "Subnet 9",
+      "Pretraining subnet",
+      "Macrocosmos SN9",
+      "Train at Home"
+    ],
+    "kind": "subnet",
+    "role": "Subnet team: decentralised LLM pretraining on Bittensor subnet 9",
+    "affiliation": "Macrocosmos",
+    "active_from": "2023-11",
+    "handles": {
+      "x": "@MacrocosmosAI",
+      "github": "macrocosm-os/iota",
+      "founder_x": "@wsquires"
+    },
+    "subnets": [
+      9
+    ],
+    "one_line": "Macrocosmos's pretraining subnet, relaunched as IOTA in June 2025, which speaks in the foundation's founding-mission register and calls Bittensor an incentivisation network and a global incentives machine."
+  },
+  "statements": [
+    {
+      "id": "sn9-001",
+      "date": "2024-05-13",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "The pre-training subnet (SN9), is at the heart of Bittensor's vision. Pre-training is the crucial first step in the creation of all modern AI models, where enormous amounts of data and computational power are consumed by the model in order for it to begin to understand the world.",
+      "context": "Steffen Cruz and Will Squires on the Macrocosmos Substack, announcing larger parameter counts on subnet 9.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "foundation.mission",
+        "subnet.network"
+      ],
+      "themes": [
+        "decentralised pretraining",
+        "founding mission"
+      ],
+      "metaphors": [
+        "heart"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/subnet-9-scaling-up-parameters-to",
+        "medium": "blog",
+        "title": "Subnet 9: Scaling up parameters to further Bittensor's founding mission",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-002",
+      "date": "2024-05-13",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Today on SN9, the pre-training process is distributed between highly skilled teams which compete to continuously improve models and get paid to do so. As a result SN9 produces world class large language models (LLMs) that are truly open: open source, open data, open models, open competition.",
+      "context": "The same post describing how subnet 9 worked in its competition phase.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "foundation.values",
+        "value.functional"
+      ],
+      "themes": [
+        "open source",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/subnet-9-scaling-up-parameters-to",
+        "medium": "blog",
+        "title": "Subnet 9: Scaling up parameters to further Bittensor's founding mission",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-003",
+      "date": "2024-10-03",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "There is this sort of constellation effect, of you needing lots and lots of pieces of the AI process to be really effective in this space, and in Bittensor. Ultimately, the network needs lots of these commodities to be super valuable. And so we saw a lot of harmony between building more than one of them",
+      "context": "Will Squires on the Novelty Search podcast, as excerpted by Macrocosmos on its own Substack, explaining why the team runs several subnets.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "relationship",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets",
+        "multiple subnets"
+      ],
+      "metaphors": [
+        "constellation"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/watch-co-founders-will-and-steffen-ed3",
+        "medium": "podcast",
+        "title": "Co-founders Will and Steffen discuss the Macrocosmos Ecosystem on the Novelty Search podcast",
+        "outlet": "Novelty Search (Opentensor Foundation), via Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-004",
+      "date": "2025-05-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Subnet 9 proved decentralized LLM pretraining is viable. We are proud to release the technical primer for IOTA in advance of mainnet launch on June 2nd.",
+      "context": "Macrocosmos on X announcing the IOTA technical primer ahead of mainnet, as shown in a search result snippet.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "messaging.proof"
+      ],
+      "themes": [
+        "decentralised pretraining"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/MacrocosmosAI/status/1928491993338167573",
+        "medium": "x",
+        "title": "IOTA technical primer announcement",
+        "outlet": "Macrocosmos on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn9-005",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Subnet 9 is now the home to the world's first ever model parallel and data parallel incentivized trustless pretraining protocol",
+      "context": "Macrocosmos Substack post announcing IOTA on subnet 9.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "messaging.h1",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "decentralised pretraining",
+        "trustless"
+      ],
+      "metaphors": [
+        "home"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining",
+        "medium": "blog",
+        "title": "IOTA: Bittensor's biggest pretraining breakthrough is here",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-006",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Swarm refers to multiple nodes working towards the same goal - but IOTA harnesses Bittensor to overcome the challenges of trustless incentivization and reward",
+      "context": "The IOTA announcement post explaining the swarm term and what Bittensor adds.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "language.term",
+        "subnet.network"
+      ],
+      "themes": [
+        "swarm training",
+        "incentive design"
+      ],
+      "metaphors": [
+        "swarm"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining",
+        "medium": "blog",
+        "title": "IOTA: Bittensor's biggest pretraining breakthrough is here",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-007",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "IOTA is also a significant step towards Bittensor's original intention of creating a competitive, decentralized alternative to proprietary models",
+      "context": "The IOTA announcement post placing the subnet in Bittensor's founding story.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.mission",
+        "positioning.against"
+      ],
+      "themes": [
+        "anti-proprietary",
+        "founding mission"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining",
+        "medium": "blog",
+        "title": "IOTA: Bittensor's biggest pretraining breakthrough is here",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-008",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "participants around the globe join permissionlessly, but they all come together to build modular models and get rewarded as a collective",
+      "context": "The IOTA announcement post on the change from winner takes all to shared reward.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "value.self_expressive",
+        "foundation.values"
+      ],
+      "themes": [
+        "permissionless entry",
+        "collective reward"
+      ],
+      "metaphors": [
+        "collective"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining",
+        "medium": "blog",
+        "title": "IOTA: Bittensor's biggest pretraining breakthrough is here",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-009",
+      "date": "2025-06-17",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor is an incentivisation network - and our experience of designing, honing, and iterating incentives and reward functions enables us …",
+      "context": "The IOTA announcement post describing Bittensor and Macrocosmos's craft; the sentence continues past the cut.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category",
+        "relationship"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/iota-bittensors-biggest-pretraining",
+        "medium": "blog",
+        "title": "IOTA: Bittensor's biggest pretraining breakthrough is here",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-010",
+      "date": "2025-06-20",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor's unique edge is it allows teams a way to maintain alignment with alpha holders without splitting incentive landscapes between equity and beyond.",
+      "context": "Will Squires writing on the Macrocosmos Substack about owner alpha and how the team funds itself.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.differentiator",
+        "opportunity"
+      ],
+      "themes": [
+        "token economics",
+        "alignment"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/on-owner-alpha-and-funding-the-fire",
+        "medium": "blog",
+        "title": "On owner alpha, and funding the fire",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-011",
+      "date": "2025-06-20",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We continue to maintain a view of the protocol that is more than the sum of its parts.",
+      "context": "Will Squires closing the owner alpha post.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "voice",
+        "relationship"
+      ],
+      "themes": [
+        "protocol",
+        "multiple subnets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/on-owner-alpha-and-funding-the-fire",
+        "medium": "blog",
+        "title": "On owner alpha, and funding the fire",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-012",
+      "date": "2025-06-26",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor is a global incentives machine",
+      "context": "Macrocosmos Substack post comparing IOTA with federated learning and swarm, on why pipeline parallelism can scale on Bittensor.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [
+        "machine"
+      ],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/why-iota-is-different-comparing-pretraining",
+        "medium": "blog",
+        "title": "Why IOTA is different: Comparing Pretraining, Federated Learning, and Swarm",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-013",
+      "date": "2025-06-26",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Anyone, anywhere can contribute to the training of a frontier LLM",
+      "context": "The same comparison post on what IOTA's swarm and pipeline parallelism allow.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "value.self_expressive",
+        "audience"
+      ],
+      "themes": [
+        "permissionless entry",
+        "accessibility"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://macrocosmosai.substack.com/p/why-iota-is-different-comparing-pretraining",
+        "medium": "blog",
+        "title": "Why IOTA is different: Comparing Pretraining, Federated Learning, and Swarm",
+        "outlet": "Macrocosmos Substack",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-014",
+      "date": "2025-07-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "In August 2024, Bittensor's Subnet 9 (SN9) demonstrated that a distributed network of incentivized, permissionless actors could each pretrain large language models (LLMs) ranging from 700 million to 14 billion parameters, while surpassing established baselines.",
+      "context": "Abstract of the IOTA technical primer on arXiv by Quinque, Aboudib, Fonau, Lopez Portillo Alcocer, McCrindle and Cruz of Macrocosmos.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "messaging.proof"
+      ],
+      "themes": [
+        "decentralised pretraining",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://arxiv.org/abs/2507.17766",
+        "medium": "whitepaper",
+        "title": "Incentivised Orchestrated Training Architecture (IOTA): A Technical Primer for Release",
+        "outlet": "arXiv (Macrocosmos)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn9-015",
+      "date": "2025-11-05",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Our current north star for IOTA is to make our system indistinguishable for training purposes from centralised alternatives.",
+      "context": "Will Squires in a written interview with TaoPill about IOTA's goal.",
+      "about": "subnet:9",
+      "slots": [
+        "subnet.self",
+        "foundation.vision",
+        "positioning.against"
+      ],
+      "themes": [
+        "parity with centralised labs"
+      ],
+      "metaphors": [
+        "north star"
+      ],
+      "source": {
+        "url": "https://www.taopill.ai/p/an-interview-with-will-squires-from-macrocosmos",
+        "medium": "article",
+        "title": "An Interview With Will Squires from Macrocosmos",
+        "outlet": "TaoPill",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2024-10-03",
+      "title": "Co-founders Will and Steffen on the Novelty Search podcast",
+      "outlet": "Novelty Search (Opentensor Foundation)",
+      "url": "https://www.youtube.com/watch?v=UM5UhZadrRQ",
+      "medium": "youtube",
+      "note": "Macrocosmos ecosystem, constellation effect; Macrocosmos posted an excerpt on its Substack, full transcript not reached"
+    },
+    {
+      "date": "2024-11",
+      "title": "S2E1 - Macrocosmos.ai - Season 2 Launch Party with Steffen Cruz and Will Squires",
+      "outlet": "Bittensor Guru",
+      "url": "https://podcasts.apple.com/us/podcast/s2e1-macrocosmos-ai-season-2-launch-party-with-steffen/id1715552186?i=1000676487496",
+      "medium": "podcast",
+      "note": "Not fetched; no transcript"
+    },
+    {
+      "date": "2025",
+      "title": "S2E13 Subnet 9 IOTA w/ Will and Steffen from Macrocosmos",
+      "outlet": "Bittensor Guru",
+      "url": "https://bittensor.guru/s2e13-subnet-9-iota-w-will-and-steffen-from-macrocosmos",
+      "medium": "podcast",
+      "note": "Page unreachable this session (TLS error); no transcript"
+    },
+    {
+      "date": "2025-06-02",
+      "title": "Swarm Intelligence Is Reshaping How AI Gets Trained",
+      "outlet": "Forbes",
+      "url": "https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/",
+      "medium": "article",
+      "note": "Press piece quoting Macrocosmos on IOTA; returned 403"
+    },
+    {
+      "date": "2025-11-05",
+      "title": "An Interview With Will Squires from Macrocosmos",
+      "outlet": "TaoPill",
+      "url": "https://www.taopill.ai/p/an-interview-with-will-squires-from-macrocosmos",
+      "medium": "article",
+      "note": "Written Q&A, quotes reached"
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "heart",
+      "wording": "at the heart of Bittensor's vision",
+      "first_statement": "sn9-001",
+      "origin": "reused",
+      "lineage_notes": "Pretraining as the network's founding purpose is the foundation's own story; the Bittensor whitepaper and bittensor.com frame the network around training"
+    },
+    {
+      "label": "swarm",
+      "wording": "IOTA harnesses Bittensor to overcome the challenges of trustless incentivization",
+      "first_statement": "sn9-006",
+      "origin": "reused",
+      "lineage_notes": "Swarm is borrowed from the SWARM parallelism literature; Macrocosmos adds trustless incentives to it"
+    },
+    {
+      "label": "constellation",
+      "wording": "this sort of constellation effect",
+      "first_statement": "sn9-003",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "collective",
+      "wording": "get rewarded as a collective",
+      "first_statement": "sn9-008",
+      "origin": "introduced",
+      "lineage_notes": "Chutes uses 'collective' for its own team at https://chutes.ai/news/who-are-the-founders-of-chutes-ai"
+    },
+    {
+      "label": "machine",
+      "wording": "Bittensor is a global incentives machine",
+      "first_statement": "sn9-012",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "north star",
+      "wording": "Our current north star for IOTA",
+      "first_statement": "sn9-015",
+      "origin": "reused",
+      "lineage_notes": ""
+    },
+    {
+      "label": "home",
+      "wording": "Subnet 9 is now the home to the world's first ever",
+      "first_statement": "sn9-005",
+      "origin": "reused",
+      "lineage_notes": "The 2026 site tagline is 'The home of liquid training'"
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Subnet 9 is presented as the heart of Bittensor's vision and IOTA as a step toward Bittensor's original intention of a decentralised alternative to proprietary models.",
+      "statements": [
+        "sn9-001",
+        "sn9-007"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "The goal is a system indistinguishable for training from centralised alternatives, so anyone anywhere can help train a frontier model.",
+      "statements": [
+        "sn9-015",
+        "sn9-013"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Truly open: open source, open data, open models, open competition; later, permissionless joining and reward as a collective.",
+      "statements": [
+        "sn9-002",
+        "sn9-008"
+      ]
+    },
+    "opportunity": {
+      "summary": "dTAO and owner alpha are read as Bittensor's edge, letting teams stay aligned with token holders instead of splitting incentives with equity.",
+      "statements": [
+        "sn9-010"
+      ]
+    },
+    "audience": {
+      "summary": "Anyone with compute, anywhere, is invited to contribute to training.",
+      "statements": [
+        "sn9-013"
+      ]
+    },
+    "positioning.category": {
+      "summary": "Bittensor is an incentivisation network and a global incentives machine; the subnet is a pretraining protocol.",
+      "statements": [
+        "sn9-009",
+        "sn9-012",
+        "sn9-005"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "The world's first model parallel and data parallel incentivised trustless pretraining protocol.",
+      "statements": [
+        "sn9-005",
+        "sn9-010"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Set against proprietary models and centralised labs.",
+      "statements": [
+        "sn9-007",
+        "sn9-015"
+      ]
+    },
+    "value.functional": {
+      "summary": "World class open LLMs produced by paid competing teams, then a way to train without hosting the whole model.",
+      "statements": [
+        "sn9-002",
+        "sn9-013"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Joining means being part of a globe-spanning collective that trains a frontier model.",
+      "statements": [
+        "sn9-008",
+        "sn9-013"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "The world's first incentivised trustless pretraining protocol, and the claim that subnet 9 proved decentralised pretraining viable.",
+      "statements": [
+        "sn9-005",
+        "sn9-004"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Proof is the August 2024 result: permissionless actors pretraining models from 700 million to 14 billion parameters above baselines.",
+      "statements": [
+        "sn9-014",
+        "sn9-004"
+      ]
+    },
+    "voice": {
+      "summary": "Squires writes as a steward speaking to token holders, in a considered register about the protocol as a whole.",
+      "statements": [
+        "sn9-011",
+        "sn9-010"
+      ]
+    },
+    "relationship": {
+      "summary": "Macrocosmos speaks as a multi-subnet team that sees the protocol as more than the sum of its parts and as experts in incentive design.",
+      "statements": [
+        "sn9-003",
+        "sn9-011",
+        "sn9-009"
+      ]
+    },
+    "language.term": {
+      "summary": "Swarm, constellation effect, IOTA, and the commodity vocabulary borrowed from the foundation.",
+      "statements": [
+        "sn9-006",
+        "sn9-003"
+      ]
+    },
+    "subnet.self": {
+      "summary": "Subnet 9 is the heart of Bittensor's vision, then the home of the first trustless swarm pretraining protocol where participants are rewarded as a collective.",
+      "statements": [
+        "sn9-001",
+        "sn9-005",
+        "sn9-006",
+        "sn9-008",
+        "sn9-015"
+      ]
+    },
+    "subnet.network": {
+      "summary": "Macrocosmos speaks in the foundation's founding-mission register, calling Bittensor an incentivisation network, a global incentives machine, and a network of commodities whose edge is alignment with alpha holders.",
+      "statements": [
+        "sn9-007",
+        "sn9-009",
+        "sn9-012",
+        "sn9-003",
+        "sn9-010",
+        "sn9-011"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "pretraining",
+      "incentives",
+      "trustless",
+      "permissionless",
+      "swarm",
+      "commodities",
+      "collective",
+      "alpha holders",
+      "frontier"
+    ],
+    "words_avoided": [
+      "market for intelligence",
+      "Bitcoin of AI"
+    ],
+    "coinages": [
+      {
+        "term": "IOTA",
+        "meaning": "Incentivised Orchestrated Training Architecture, the swarm pretraining protocol on subnet 9",
+        "statement": "sn9-005"
+      },
+      {
+        "term": "constellation effect",
+        "meaning": "the need for many pieces of the AI process, and many commodities, for the network to be valuable",
+        "statement": "sn9-003"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "revolution",
+      "summary": "In 2024 subnet 9 was described in the foundation's own register: the heart of Bittensor's vision [sn9-001], skilled teams competing and paid to produce truly open models [sn9-002]. Squires explained the multi-subnet strategy as a constellation effect built on commodities [sn9-003].",
+      "dominant_metaphor": "heart",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "With IOTA in mid 2025 the frame moved from competition to swarm and collective reward [sn9-006] [sn9-008], while Bittensor became an incentivisation network [sn9-009] and a global incentives machine [sn9-012]. Squires framed dTAO as Bittensor's unique edge [sn9-010] and set the north star as parity with centralised training [sn9-015].",
+      "dominant_metaphor": "swarm",
+      "shift": "from competing teams to a cooperating swarm; the network becomes an incentives machine"
+    }
+  ],
+  "relations": [
+    {
+      "to": "opentensor-foundation",
+      "kind": "borrows",
+      "statement": "sn9-007",
+      "note": "Frames IOTA as fulfilling Bittensor's original intention, the foundation's founding-mission story"
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "borrows",
+      "statement": "sn9-003",
+      "note": "Commodities vocabulary for what subnets produce"
+    },
+    {
+      "to": "sn64",
+      "kind": "agrees",
+      "statement": "sn9-008",
+      "note": "Both use 'collective' but for different things: Macrocosmos for miners, Chutes for its team"
+    }
+  ],
+  "coverage": {
+    "searches_used": 2,
+    "fetches_used": 12,
+    "well_covered": [
+      "dtao era Substack posts by Macrocosmos and Will Squires",
+      "the IOTA arXiv primer",
+      "the 2024 scaling post"
+    ],
+    "thin": [
+      "podcast transcripts: none reached directly",
+      "X: one post via a search snippet",
+      "current era: only the 2026 site and Train at Home post, not quoted here"
+    ],
+    "gaps": [
+      "Bittensor Guru S2E13 and S2E1 pages failed with a TLS error",
+      "Forbes article returned 403",
+      "x.com not fetchable; archive.org blocked",
+      "iota.macrocosmos.ai 2026 site copy ('The home of liquid training') and the February 2026 Train at Home post were read but left out to stay within 15 statements"
+    ],
+    "unreachable": [
+      "https://bittensor.guru/s2e13-subnet-9-iota-w-will-and-steffen-from-macrocosmos",
+      "https://www.forbes.com/sites/torconstantino/2025/06/02/swarm-intelligence-is-reshaping-how-ai-gets-trained/"
+    ]
+  }
+}

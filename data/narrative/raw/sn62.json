@@ -1,0 +1,363 @@
+{
+  "narrator": {
+    "id": "sn62",
+    "name": "Ridges (SN62)",
+    "aka": ["Ridges AI", "Agentao", "SN62", "Subnet 62"],
+    "kind": "subnet",
+    "role": "Subnet team; Shakeel Hussein, founder and CEO, speaks for it",
+    "affiliation": "Ridges AI",
+    "active_from": "2025",
+    "handles": {"x": "@ridges_ai", "github": "ridgesai"},
+    "subnets": [62],
+    "one_line": "Software-engineering-agent subnet (formerly Agentao) where miners submit Python coding agents that validators run in sandboxes against benchmark problems; it describes itself as an open-source agent competition platform and sells the winning agents through a product called Ridgeline, and its founder talks about replacing human coders."
+  },
+  "statements": [
+    {
+      "id": "sn62-001",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "a decentralized, self-sustaining marketplace of autonomous software engineering agents, designed to solve real-world software challenges.",
+      "context": "Self-description reproduced on the Subnet Alpha profile of Ridges AI, which notes the project was previously Agentao; the primary page was not reachable.",
+      "about": "subnet:62",
+      "slots": ["subnet.self", "positioning.category"],
+      "themes": ["agents", "commodity markets"],
+      "metaphors": ["marketplace"],
+      "source": {
+        "url": "https://subnetalpha.ai/subnet/ridgesai/",
+        "medium": "other",
+        "title": "Ridges AI - Subnet Alpha",
+        "outlet": "Subnet Alpha",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn62-002",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "The logic is simple—better coding models lead to even more advanced AI, accelerating the path to AGI.",
+      "context": "Line reproduced on the Subnet Alpha profile as the project's stated rationale; primary not reached.",
+      "about": "subnet:62",
+      "slots": ["foundation.vision", "positioning.reason"],
+      "themes": ["agents", "AGI"],
+      "metaphors": ["path"],
+      "source": {
+        "url": "https://subnetalpha.ai/subnet/ridgesai/",
+        "medium": "other",
+        "title": "Ridges AI - Subnet Alpha",
+        "outlet": "Subnet Alpha",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn62-003",
+      "date": "2025-06",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "we want to basically split each step up and get the miners to specialize in one kind of step... and then we basically create like a handoff layer where, when someone gives us a problem, we can split it up into all these steps and allow the agents to just focus on their one step",
+      "context": "Shakeel Hussein on the Ventura Labs podcast (episode 47), describing the plan for specialised miner agents; wording taken from a Chain of Thought episode summary surfaced in search, since the video did not render and the summary page now returns 404.",
+      "about": "subnet:62",
+      "slots": ["subnet.self", "voice", "audience"],
+      "themes": ["agents", "specialisation"],
+      "metaphors": ["handoff"],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=TodWj5-ki_c",
+        "medium": "youtube",
+        "title": "Shakeel Hussein: Ridges AI, Bittensor AI Agents, Decentralized Software Engineering | Ep. 47",
+        "outlet": "Ventura Labs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn62-004",
+      "date": "2026-03-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "building AI software engineers that fully replace human coders",
+      "context": "Phrase quoted from docs.ridges.ai by SimplyTao's guide to SN62; the current docs no longer carry it, so it is recorded through the guide.",
+      "about": "subnet:62",
+      "slots": ["foundation.vision", "positioning.against", "messaging.h1"],
+      "themes": ["agents", "automation"],
+      "metaphors": ["software engineer"],
+      "source": {
+        "url": "https://simplytao.ai/blog/your-simple-guide-to-ridges-sn62",
+        "medium": "article",
+        "title": "Your Simple Guide to Ridges (SN62)",
+        "outlet": "SimplyTao",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn62-005",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Ridges is an Bittensor subnet that acts as an open source agent competition platform, where miners both compete and collaborate on a software engineering agent.",
+      "context": "Opening line of the README in the ridgesai/ridges repository, read 15 September 2026; typo in the original.",
+      "about": "subnet:62",
+      "slots": ["subnet.self", "positioning.category", "foundation.values"],
+      "themes": ["open source", "competition", "collaboration"],
+      "metaphors": ["competition platform"],
+      "source": {
+        "url": "https://github.com/ridgesai/ridges",
+        "medium": "docs",
+        "title": "ridgesai/ridges README",
+        "outlet": "Ridges GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-006",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Validators pull submitted code and run it on benchmark problems, evaluating the output. The highest-scoring agent earns emissions.",
+      "context": "README of ridgesai/ridges, describing the loop in two sentences.",
+      "about": "subnet:62",
+      "slots": ["subnet.self", "value.functional"],
+      "themes": ["incentive design", "verification"],
+      "metaphors": [],
+      "source": {
+        "url": "https://github.com/ridgesai/ridges",
+        "medium": "docs",
+        "title": "ridgesai/ridges README",
+        "outlet": "Ridges GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-007",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Ridges is evolving AI agents to be better and better able to solve software engineering problems end-to-end.",
+      "context": "First sentence of the Welcome page on docs.ridges.ai, read 15 September 2026.",
+      "about": "subnet:62",
+      "slots": ["messaging.h1", "foundation.mission", "subnet.self"],
+      "themes": ["agents", "evolution"],
+      "metaphors": ["evolution"],
+      "source": {
+        "url": "https://docs.ridges.ai",
+        "medium": "docs",
+        "title": "Welcome, Ridges docs",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-008",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "You can use our state of the art agents to solve your GitHub issues today with our product, Ridgeline. … You can also participate in the development of the Ridges' next generation agents by joining our competitions as a miner.",
+      "context": "Welcome page on docs.ridges.ai addressing its two audiences, customers and miners; two sentences joined with an ellipsis.",
+      "about": "subnet:62",
+      "slots": ["audience", "value.functional", "subnet.self"],
+      "themes": ["agents", "permissionless entry"],
+      "metaphors": ["competition"],
+      "source": {
+        "url": "https://docs.ridges.ai",
+        "medium": "docs",
+        "title": "Welcome, Ridges docs",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-009",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Your reward (emissions in the currency of Ridges Subnet on the Bittensor blockchain) is based on how much your agent improves...",
+      "context": "Intro to Mining Ridges page in the docs, the one place the docs name Bittensor when speaking to miners.",
+      "about": "network",
+      "slots": ["subnet.network", "value.functional", "audience"],
+      "themes": ["token economics", "incentive design"],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.ridges.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Intro to Mining Ridges",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-010",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "At any moment there is a leader: the best approved agent on the current evaluation set. … Emissions are split among every approved agent in proportion to how much it improved on the best agent at the time it was approved.",
+      "context": "Incentive Mechanism and The Flow pages in the docs; two sentences joined with an ellipsis; markdown emphasis removed.",
+      "about": "subnet:62",
+      "slots": ["subnet.self", "language.term", "positioning.differentiator"],
+      "themes": ["incentive design"],
+      "metaphors": ["leader"],
+      "source": {
+        "url": "https://docs.ridges.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Incentive Mechanism; The Flow",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-011",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Ridges is unusually inspectable for an AI coding product... much of the agent code competing on the platform is published for anyone to read...",
+      "context": "Privacy and Security page in the docs, turning open competition into a product claim.",
+      "about": "subnet:62",
+      "slots": ["positioning.differentiator", "foundation.values", "value.functional"],
+      "themes": ["open source", "transparency"],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.ridges.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Privacy and Security",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-012",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Optimizing for a niche is allowed and expected … recognizing a specific problem and applying a stored answer is hardcoding",
+      "context": "Participation Rules page in the docs, drawing the line between legitimate specialisation and cheating; two clauses joined with an ellipsis.",
+      "about": "subnet:62",
+      "slots": ["foundation.values", "voice"],
+      "themes": ["anti-gaming", "competition"],
+      "metaphors": ["niche"],
+      "source": {
+        "url": "https://docs.ridges.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Participation Rules",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn62-013",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "The agent works unattended, in a sandbox managed by Ridges.AI... which can only be merged with your approval just like a human developer would.",
+      "context": "Dispatch a Job page in the docs, describing Ridgeline to customers.",
+      "about": "subnet:62",
+      "slots": ["value.functional", "audience", "value.emotional"],
+      "themes": ["agents", "automation"],
+      "metaphors": ["human developer"],
+      "source": {
+        "url": "https://docs.ridges.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Dispatch a Job",
+        "outlet": "Ridges docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {"date": "2025-06", "title": "Shakeel Hussein: Ridges AI, Bittensor AI Agents, Decentralized Software Engineering | Ep. 47", "outlet": "Ventura Labs", "url": "https://www.youtube.com/watch?v=TodWj5-ki_c", "medium": "youtube", "note": "Founder interview on agents and decentralised software engineering; video did not render, Chain of Thought summary 404, one quote recorded from a search-surfaced summary."},
+    {"date": "2025-09", "title": "Shakeel Hussein: Ridges Subnet 62, AI Agents Coding, Alpha to Equity, Future of Software | Ep. 61", "outlet": "Ventura Labs", "url": "https://www.youtube.com/watch?v=bjWal960bYA", "medium": "youtube", "note": "Second founder interview; Spotify page carried no description; no transcript."},
+    {"date": "2025", "title": "Bittensor Revenue Search 19 - Shakeel Hussein - SN62 Ridges", "outlet": "Bittensor Revenue Search", "url": "https://www.youtube.com/watch?v=n6fIcQpQRy4", "medium": "youtube", "note": "Revenue-focused interview; backprop.finance analytics page blocked (403); no transcript."},
+    {"date": "2025", "title": "Bittensor Brief #6: Ridges (Subnet 62) AI Software Engineers", "outlet": "Bittensor Brief", "url": "https://www.youtube.com/watch?v=dPxsadRv7Io", "medium": "youtube", "note": "Explainer; not verified as featuring the team."},
+    {"date": "2025-10-29", "title": "Interview with Bittensor Founder Jacob", "outlet": "ChainCatcher via Bitget News", "url": "https://www.bitget.com/news/detail/12560605036813", "medium": "article", "note": "Not a Ridges appearance: Jacob Steeves describes Ridges as a large subnet working on coding agents optimized collectively by miners around the world."}
+  ],
+  "metaphors": [
+    {"label": "marketplace", "wording": "a decentralized, self-sustaining marketplace of autonomous software engineering agents", "first_statement": "sn62-001", "origin": "reused", "lineage_notes": "Market frame shared with the founder and foundation; Hippius uses marketplace for storage and compute (sn75-005)."},
+    {"label": "competition platform", "wording": "an open source agent competition platform, where miners both compete and collaborate", "first_statement": "sn62-005", "origin": "reused", "lineage_notes": "Competition is the common subnet frame; Ridges adds collaborate, since agent code is public."},
+    {"label": "evolution", "wording": "Ridges is evolving AI agents to be better and better", "first_statement": "sn62-007", "origin": "reused", "lineage_notes": "Evolution language also in BitMind's self-evolving service (sn34-013)."},
+    {"label": "human developer", "wording": "just like a human developer would", "first_statement": "sn62-013", "origin": "introduced", "lineage_notes": "Paired with the earlier claim to fully replace human coders (sn62-004)."},
+    {"label": "leader", "wording": "At any moment there is a leader: the best approved agent", "first_statement": "sn62-010", "origin": "introduced", "lineage_notes": "Softer cousin of Affine's king (sn120-014); rewards are split by improvement rather than winner-take-all."}
+  ],
+  "framework": {
+    "foundation.mission": {"summary": "Evolve AI agents that solve software engineering problems end to end.", "statements": ["sn62-007"]},
+    "foundation.vision": {"summary": "AI software engineers that fully replace human coders, on the logic that better coding models accelerate the path to AGI.", "statements": ["sn62-004", "sn62-002"]},
+    "foundation.values": {"summary": "Open source and inspectable; miners compete and collaborate; optimising for a niche is expected, hardcoding stored answers is not.", "statements": ["sn62-005", "sn62-011", "sn62-012"]},
+    "audience": {"summary": "Two audiences in one page: customers who dispatch GitHub issues to Ridgeline, and miners who build the next generation of agents for emissions.", "statements": ["sn62-008", "sn62-009", "sn62-013"]},
+    "positioning.category": {"summary": "A marketplace of autonomous software engineering agents, later an open source agent competition platform.", "statements": ["sn62-001", "sn62-005"]},
+    "positioning.differentiator": {"summary": "Unusually inspectable, with competing agent code published, and emissions split by measured improvement over the current leader.", "statements": ["sn62-011", "sn62-010"]},
+    "positioning.reason": {"summary": "Better coding models lead to more advanced AI.", "statements": ["sn62-002"]},
+    "positioning.against": {"summary": "Human coders, whom the agents are meant to replace.", "statements": ["sn62-004"]},
+    "value.functional": {"summary": "For customers, agents that fix GitHub issues unattended in a sandbox; for miners, emissions proportional to improvement.", "statements": ["sn62-008", "sn62-006", "sn62-009"]},
+    "value.emotional": {"summary": "Control: nothing merges without your approval, just like a human developer.", "statements": ["sn62-013"]},
+    "messaging.h1": {"summary": "Evolving AI agents to solve software engineering end to end; earlier, AI software engineers that fully replace human coders.", "statements": ["sn62-007", "sn62-004"]},
+    "voice": {"summary": "Casual founder speech about splitting steps and handoff layers; rulebook prose in the docs.", "statements": ["sn62-003", "sn62-012"]},
+    "language.term": {"summary": "Leader, approved agent, evaluation set, competitions and niches, Ridgeline, hardcoding.", "statements": ["sn62-010", "sn62-012"]},
+    "subnet.self": {"summary": "An open source competition where miners submit Python agents, validators run them in Docker sandboxes on benchmark problems, and emissions flow to approved agents by how much they beat the leader; the best agents are sold as Ridgeline.", "statements": ["sn62-005", "sn62-006", "sn62-010", "sn62-008", "sn62-003"]},
+    "subnet.network": {"summary": "Bittensor appears only as the blockchain whose currency pays miners; the docs and README do not describe the network beyond that, and the product pages do not name it.", "statements": ["sn62-009", "sn62-005"]}
+  },
+  "language": {
+    "words_used": ["agents", "software engineering", "competition", "miners", "validators", "leader", "approved agent", "emissions", "sandbox", "Ridgeline", "open source", "inspectable", "niche", "hardcoding"],
+    "words_avoided": ["decentralized AI as a slogan in the 2026 docs", "TAO", "market for intelligence", "Bittensor on customer-facing pages"],
+    "coinages": [
+      {"term": "Ridgeline", "meaning": "The product that runs the subnet's best agents on a customer's GitHub issues.", "statement": "sn62-008"},
+      {"term": "handoff layer", "meaning": "A planned layer that splits a problem into steps and passes each to a specialised miner agent.", "statement": "sn62-003"},
+      {"term": "hardcoding", "meaning": "Recognising a benchmark problem and returning a stored answer; prohibited.", "statement": "sn62-012"}
+    ]
+  },
+  "genealogy": [
+    {"era": "dtao", "summary": "In 2025 Ridges called itself a decentralised, self-sustaining marketplace of autonomous software engineering agents and said better coding models accelerate the path to AGI [sn62-001] [sn62-002]. The founder talked about miners specialising in steps behind a handoff layer, and the docs at the time promised AI software engineers that fully replace human coders [sn62-003] [sn62-004].", "dominant_metaphor": "marketplace", "shift": ""},
+    {"era": "current", "summary": "By September 2026 the README calls Ridges an open source agent competition platform where miners compete and collaborate, the docs lead with evolving agents to solve software engineering end to end, and a product, Ridgeline, is sold to customers who dispatch GitHub issues [sn62-005] [sn62-007] [sn62-008]. Bittensor is mentioned only as the chain that pays emissions [sn62-009].", "dominant_metaphor": "competition platform", "shift": "From marketplace and replacing coders to competition platform and a product that works like a human developer; the network recedes to a payment rail."}
+  ],
+  "relations": [
+    {"to": "sn120", "kind": "responds", "statement": "sn62-010", "note": "A leader-plus-proportional-split mechanism where Affine uses a single crowned king; Steeves cites Ridges approvingly in the ChainCatcher interview."},
+    {"to": "jacob-steeves", "kind": "borrows", "statement": "sn62-001", "note": "The marketplace framing echoes the founder's markets-for-commodities language."}
+  ],
+  "coverage": {
+    "searches_used": 3,
+    "fetches_used": 20,
+    "well_covered": ["current era docs and README"],
+    "thin": ["founder's own voice: four video interviews located, none transcribed", "2025 primary pages (the pre-2026 docs and ridges.ai homepage, which returned 429)", "X posts by @ridges_ai and Shakeel Hussein"],
+    "gaps": [
+      "https://www.ridges.ai/ returned 429 twice; homepage copy not recorded.",
+      "Ventura Labs episodes 47 and 61, Revenue Search 19: YouTube pages did not render and backprop.finance transcripts returned 403; the one founder quote is secondhand.",
+      "X account @ridges_ai: X did not render and web.archive.org is blocked from this session.",
+      "The 2025 wording (fully replace human coders) exists only through SimplyTao; the earlier docs were not archived."
+    ],
+    "unreachable": ["https://www.ridges.ai/", "https://podcasts.chainofthought.xyz/podcast-summaries/shakeel-hussein-ridges-ai-bittensor-ai-agents-decentralized-software-engineering-ep-47", "https://podcasts.chainofthought.xyz/podcast-summaries/bittensor-novelty-search-subnet-62-ridges-open-source-ai", "https://backprop.finance/analytics/podcasts/TodWj5-ki_c", "https://backprop.finance/analytics/podcasts/n6fIcQpQRy4", "https://web.archive.org/web/2026/https://x.com/ridges_ai", "https://docs.ridges.ai/the-ridges-way", "https://docs.ridges.ai/welcome", "https://www.imdb.com/title/tt37279348/"]
+  }
+}

@@ -1,0 +1,1893 @@
+{
+  "narrator": {
+    "id": "opentensor-foundation",
+    "name": "Opentensor Foundation",
+    "aka": [
+      "OTF",
+      "Openτensor Foundaτion",
+      "Opentensor",
+      "Bittensor (official)",
+      "Rao Foundation"
+    ],
+    "kind": "institution",
+    "role": "Steward of the Bittensor protocol, publisher of bittensor.com, the docs, the SDK and the official announcements",
+    "affiliation": "Opentensor Foundation",
+    "active_from": "2020",
+    "handles": {
+      "x": "@opentensor",
+      "github": "opentensor",
+      "medium": "opentensor.medium.com (blog.bittensor.com)",
+      "youtube": "@Opentensor"
+    },
+    "subnets": [],
+    "one_line": "The institutional voice of Bittensor: the foundation that ran the chain, wrote the docs and the site, and from 2026 signs its pages as the Rao Foundation after handing governance to the chain."
+  },
+  "statements": [
+    {
+      "id": "opentensor-foundation-001",
+      "date": "2020-03-09",
+      "date_precision": "day",
+      "era": "pre",
+      "quote": "As with other commodities, markets could help us efficiently produce machine intelligence. We propose a market where intelligence is priced by other intelligence systems peer-to-peer across the internet.",
+      "context": "Abstract of the original whitepaper, BitTensor: A Peer-to-Peer Intelligence Market, as submitted to arXiv (v1) and still hosted on bittensor.com/whitepaper.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "foundation.mission",
+        "messaging.h1"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://arxiv.org/abs/2003.03917",
+        "medium": "whitepaper",
+        "title": "BitTensor: A Peer-to-Peer Intelligence Market",
+        "outlet": "arXiv, Yuma Rao et al.",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-002",
+      "date": "2021-06-17",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "BitTensor code chat docs network research Run a Miner $ /bin/bash -c \"$( curl -fsSL https://raw.githubusercontent.com/opentensor/bittensor/master/scripts/install.sh )\"",
+      "context": "The entire visible text of the bittensor.com front page in June 2021: the only call to action is an install command for miners.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "voice"
+      ],
+      "themes": [
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20210617080706/https://www.bittensor.com/",
+        "medium": "other",
+        "title": "bittensor.com front page, June 2021 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20210617080706/https://www.bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-003",
+      "date": "2022-05-25",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Bittensor Learn Whitepaper Network Blog",
+      "context": "The entire visible text of the bittensor.com front page in May 2022; the wordmark has changed from BitTensor to Bittensor and there is still no tagline.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "language.term"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20220525162623/https://bittensor.com/",
+        "medium": "other",
+        "title": "bittensor.com front page, May 2022 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20220525162623/https://bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-004",
+      "date": "2022-08-08",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Internet-scale Neural Networks",
+      "context": "Tagline under the Bittensor wordmark in the README of the v3.0.0 release of the official repository; the same tagline still heads the archived README in 2026.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "language.term"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "neural network"
+      ],
+      "source": {
+        "url": "https://raw.githubusercontent.com/opentensor/bittensor/v3.0.0/README.md",
+        "medium": "docs",
+        "title": "Bittensor README, v3.0.0",
+        "outlet": "GitHub, opentensor/bittensor",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-005",
+      "date": "2022-08-08",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "At Bittensor, we are creating an open, decentralized, peer-to-peer network that functions as a market system for the development of artificial intelligence. Our purpose is not only to accelerate the development of AI by creating an environment optimally condusive to its evolution, but to democratize the global production and use of this valuable commodity.",
+      "context": "Opening paragraph of the README of the v3.0.0 release of the official repository.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "positioning.category",
+        "foundation.vision"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence",
+        "ownership"
+      ],
+      "metaphors": [
+        "market",
+        "evolution"
+      ],
+      "source": {
+        "url": "https://raw.githubusercontent.com/opentensor/bittensor/v3.0.0/README.md",
+        "medium": "docs",
+        "title": "Bittensor README, v3.0.0",
+        "outlet": "GitHub, opentensor/bittensor",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-006",
+      "date": "2022-08-08",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Our aim is to disrupt the status quo: a system that is centrally controlled, inefficient and unsustainable. In developing the Bittensor API, we are allowing engineers to monetize their work, gain access to machine intelligence and join our community of creative, forward-thinking individuals.",
+      "context": "Second paragraph of the v3.0.0 README, naming what the project is against and who it invites.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "problem.market",
+        "audience",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "anti-centralisation",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://raw.githubusercontent.com/opentensor/bittensor/v3.0.0/README.md",
+        "medium": "docs",
+        "title": "Bittensor README, v3.0.0",
+        "outlet": "GitHub, opentensor/bittensor",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-007",
+      "date": "2023-06-02",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Bittensor, Internet-scale machine learning",
+      "context": "Page title and tagline of the bittensor.com front page in June 2023, the first capture with a tagline.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "language.term"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20230602031710/https://bittensor.com/",
+        "medium": "other",
+        "title": "bittensor.com front page, June 2023 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230602031710/https://bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-008",
+      "date": "2023-06-02",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Open The protocol is accessible to anyone, anytime, anywhere. Join us and start building. Incentivized TAO serves as both reward for intelligence contributions and access to the network. Decentralized Structural dispersion doesn’t just improve the distribution model, it optimizes training. User-Governed The project is community-driven. Administrative power is relinquished as much as possible.",
+      "context": "The four numbered principles on the bittensor.com About page in June 2023.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "relationship",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "permissionless entry",
+        "incentive design",
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20230602054752/https://bittensor.com/about",
+        "medium": "other",
+        "title": "bittensor.com About page, June 2023 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230602054752/https://bittensor.com/about",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-009",
+      "date": "2023-06-02",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Incentivizing intelligence.",
+      "context": "Two-word line under the network statistics on the bittensor.com About page in June 2023.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "language.term"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20230602054752/https://bittensor.com/about",
+        "medium": "other",
+        "title": "bittensor.com About page, June 2023 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230602054752/https://bittensor.com/about",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-010",
+      "date": "2023-06-08",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Bittensor is an open-source protocol that powers a decentralized, blockchain-based machine learning network. Machine learning models train collaboratively and are rewarded in TAO according to the informational value they offer the collective.",
+      "context": "Opening definition on the front page of docs.bittensor.com in June 2023.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "incentive design"
+      ],
+      "metaphors": [
+        "collective"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20230608043040/https://docs.bittensor.com/",
+        "medium": "docs",
+        "title": "Introduction, docs.bittensor.com, June 2023 capture",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230608043040/https://docs.bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-011",
+      "date": "2023-06-08",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Ultimately, our vision is to create a pure market for artificial intelligence, an incentivized arena in which consumers and producers of this valuable commodity can interact in a trustless, open and transparent context.",
+      "context": "Vision sentence on the front page of docs.bittensor.com in June 2023.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "positioning.category"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "market",
+        "arena"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20230608043040/https://docs.bittensor.com/",
+        "medium": "docs",
+        "title": "Introduction, docs.bittensor.com, June 2023 capture",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230608043040/https://docs.bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-012",
+      "date": "2023-09-07",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "September is shaping up to be equally, if not more, important as we prepare to release user-created subnets and unleash Bittensor to a broader audience.",
+      "context": "Opening of the Foundation's September 2023 network update on Medium, ahead of the subnet launch.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "audience"
+      ],
+      "themes": [
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://opentensor.medium.com/september-network-update-4550354230b2",
+        "medium": "blog",
+        "title": "September Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230909201548/https://opentensor.medium.com/september-network-update-4550354230b2",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-013",
+      "date": "2023-09-07",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "By incentivizing developers to create their own markets, Bittensor is positioning itself to become a one-stop-shop for those seeking all the necessary requirements for building unstoppable applications. … The release of subnets offers the potential to pull these tools into a shared network, making all the ingredients necessary to create intelligence available within one network, governed by one token.",
+      "context": "The September 2023 network update describing what user-created subnets would do for developers.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "value.functional",
+        "language.term"
+      ],
+      "themes": [
+        "incentive design",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "one-stop-shop",
+        "ingredients"
+      ],
+      "source": {
+        "url": "https://opentensor.medium.com/september-network-update-4550354230b2",
+        "medium": "blog",
+        "title": "September Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230909201548/https://opentensor.medium.com/september-network-update-4550354230b2",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-014",
+      "date": "2023-09-20",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Bittensor’s currency (TAO) is a utility token designed to incentivize the production of machine intelligence. Thus, the team elected to have a fair launch — that is, no pre-mined tokens or ICOs, ensuring each TAO reflected real machine learning work. Just as Bitcoin introduced a decentralized currency free from centralized control, Bittensor promises a future of unbiased, anti-corporate intelligence.",
+      "context": "Opening of the Foundation's Medium explainer on the TAO token economy.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "positioning.category",
+        "messaging.proof"
+      ],
+      "themes": [
+        "token economics",
+        "anti-centralisation"
+      ],
+      "metaphors": [
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "medium": "blog",
+        "title": "TAO Token Economy Explained",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241209151236/https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-015",
+      "date": "2023-09-20",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "In January 2021, the first iteration of the main Bittensor network was launched, codenamed ‘Kusanagi’. … In November 2021, Kusanagi was forked and launched under a new codename: ‘Nakamoto’. On March 20, 2023, Nakamoto was then forked one last time to address a few performance issues in the network’s kernel code - this latest iteration is affectionately named ‘Finney’.",
+      "context": "The token economy explainer giving the official names and dates of the three mainnet iterations.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "messaging.proof"
+      ],
+      "themes": [
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "medium": "blog",
+        "title": "TAO Token Economy Explained",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241209151236/https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-016",
+      "date": "2023-09-20",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Bittensor has not allocated any tokens to anyone except those who have earned TAO through participation the network. No VC, insider, advisor, etc. has ever been allocated tokens that were not earned on the network. … This will never change.",
+      "context": "The token economy explainer answering why the tokenomics are simple.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "positioning.against",
+        "messaging.proof"
+      ],
+      "themes": [
+        "token economics",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "medium": "blog",
+        "title": "TAO Token Economy Explained",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241209151236/https://blog.bittensor.com/tao-token-economy-explained-17a3a90cd44e",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-017",
+      "date": "2023-09-27",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "Bittensor itself cannot have a charter. Its core technology is a consensus mechanism, which reaches agreement about how its preferences should be distributed to participants in an open and un−permissioned network. If it has preferences itself, they are openness and decentralization, which are immutably written into its code.",
+      "context": "Preamble of The Bittensor Delegates Charter on bittensor.com, signed by the Opentensor Foundation, in its earliest capture.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "governance",
+        "anti-centralisation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20230927052114/https://bittensor.com/charter",
+        "medium": "other",
+        "title": "The Bittensor Delegates Charter",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230927052114/https://bittensor.com/charter",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-018",
+      "date": "2023-09-27",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "We believe that excessive centralization of AI poses the greatest risk to the human race, within or without Bittensor. Concentration of power will inevitably create biased decision−making, controlled access to benefits and significant abuse.",
+      "context": "The Charter's first principle, headed Our Counterpoint To Centralized Control.",
+      "about": "network",
+      "slots": [
+        "problem.institutional",
+        "problem.cultural",
+        "positioning.against"
+      ],
+      "themes": [
+        "anti-centralisation",
+        "censorship resistance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20230927052114/https://bittensor.com/charter",
+        "medium": "other",
+        "title": "The Bittensor Delegates Charter",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20230927052114/https://bittensor.com/charter",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-019",
+      "date": "2023-10-02",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Bittensor is a mining network, similar to Bitcoin, that includes built-in incentives designed to encourage computers to provide access to machine learning models in an efficient and censorship-resistant manner.",
+      "context": "Opening definition in the README of v6.0.0, the release that shipped the Revolution upgrade and user-created subnets; the same sentence stayed through v7.0.0 in May 2024.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "foundation.mission"
+      ],
+      "themes": [
+        "censorship resistance",
+        "incentive design"
+      ],
+      "metaphors": [
+        "bitcoin",
+        "mining"
+      ],
+      "source": {
+        "url": "https://raw.githubusercontent.com/opentensor/bittensor/v6.0.0/README.md",
+        "medium": "docs",
+        "title": "Bittensor README, v6.0.0",
+        "outlet": "GitHub, opentensor/bittensor",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-020",
+      "date": "2023-11-15",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Do you want to generate images? There is a subnet for that. Would you like to create music with the assistance of AI? There is a subnet for that. How about scraping and indexing the entire internet in under four hours? There is a subnet for that too.",
+      "context": "The November 2023 network update, six weeks after subnets opened, reporting 26 registered subnets.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "voice"
+      ],
+      "themes": [
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://blog.bittensor.com/november-network-update-114234436dfb",
+        "medium": "blog",
+        "title": "November Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241002181221/https://blog.bittensor.com/november-network-update-114234436dfb",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-021",
+      "date": "2023-11-15",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Subnets bring out the very best in all of us: humanity’s most creative ideas, translated to code, brought to life by a distributed network of nodes. … In the free market we have built for AI, the only thing that matters is that nodes produce the best intelligence, as quickly as they can, and at the cheapest possible price.",
+      "context": "The November 2023 network update describing what subnets are.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "value.emotional",
+        "foundation.vision"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://blog.bittensor.com/november-network-update-114234436dfb",
+        "medium": "blog",
+        "title": "November Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241002181221/https://blog.bittensor.com/november-network-update-114234436dfb",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-022",
+      "date": "2023-11-15",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "OpenAI is following the playbook of a bygone era, one of technocratic global elitism and corporate war-machines. The Bittensor community stands in direct opposition to this archaic way of thinking — on Bittensor, value is rewarded, not your status.",
+      "context": "The November 2023 network update comparing OpenAI Dev Day to Apple product launches.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "problem.cultural",
+        "foundation.values"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "anti-centralisation"
+      ],
+      "metaphors": [
+        "war machine"
+      ],
+      "source": {
+        "url": "https://blog.bittensor.com/november-network-update-114234436dfb",
+        "medium": "blog",
+        "title": "November Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241002181221/https://blog.bittensor.com/november-network-update-114234436dfb",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-023",
+      "date": "2023-11-15",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "As an impartial foundation we do not endorse nor recommend any particular subnetwork. … We are on a mission to democratize access to intelligence, to help usher in a new paradigm for the world … Bittensor is nothing without we the people.",
+      "context": "Closing section of the November 2023 network update, on the Foundation's role and on community calls for subnet funding.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "messaging.h1",
+        "voice"
+      ],
+      "themes": [
+        "governance",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "we the people"
+      ],
+      "source": {
+        "url": "https://blog.bittensor.com/november-network-update-114234436dfb",
+        "medium": "blog",
+        "title": "November Network Update",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20241002181221/https://blog.bittensor.com/november-network-update-114234436dfb",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-024",
+      "date": "2024-04-29",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "The Yuma Consensus rewards subnet validators with dividends for producing miner-value evaluations that are in agreement with the subjective evaluations produced by other subnet validators, weighted by stake.",
+      "context": "The Yuma Consensus page of the official docs, last edited April 29, 2024, reached through a May 2024 capture.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.reason"
+      ],
+      "themes": [
+        "validator power",
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20240521082207/https://docs.bittensor.com/yuma-consensus",
+        "medium": "docs",
+        "title": "Yuma Consensus, docs.bittensor.com",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240521082207/https://docs.bittensor.com/yuma-consensus",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-025",
+      "date": "2024-05-17",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Each such incentive-based competition market is called a subnet. Subnets constitute the core of the Bittensor ecosystem. … A blockchain that runs the above subnets and supports their proper functioning so that the incentive-based competition market is decentralized, is permissionless and is collusion-resistant, i.e., is resistant to market manipulation.",
+      "context": "The Introduction page of the official docs, last edited May 17, 2024, defining the three components of the ecosystem.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "commodity markets",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20240528220439/https://docs.bittensor.com/learn/introduction",
+        "medium": "docs",
+        "title": "Introduction, docs.bittensor.com",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240528220439/https://docs.bittensor.com/learn/introduction",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-026",
+      "date": "2024-06-05",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "There is no greater story than people’s relentless and dogged endeavor to overcome repressive regimes. … centralized firms, markets and authorities are engaged in a never-ending disempowerment of human people’s autonomy. Bittensor is creating a new future for humanity, where new economies and new commodities are decentralized by design and where no single entity is a sole authority.",
+      "context": "Opening of the Bittensor Explained page on bittensor.com in June 2024; the same text is served at bittensor.com/intro in September 2026.",
+      "about": "network",
+      "slots": [
+        "problem.cultural",
+        "foundation.vision",
+        "messaging.h1"
+      ],
+      "themes": [
+        "anti-centralisation",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "repressive regime"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "medium": "other",
+        "title": "Bittensor Explained",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-027",
+      "date": "2024-06-05",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "At the core of the Bittensor ecosystem is the production, marketing and selling of digital commodities. … Digital commodities like compute, data, storage, predictions, and models are transformed into intelligence.",
+      "context": "The Bittensor Explained page defining what the ecosystem does.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term",
+        "foundation.mission"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "commodity"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "medium": "other",
+        "title": "Bittensor Explained",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-028",
+      "date": "2024-06-05",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Entrepreneurs with skills and ideas will use Bittensor when they are deprived of investments from traditional sources of capital. And most important, any such entrepreneur can participate profitably and thrive in the Bittensor ecosystem.",
+      "context": "The Bittensor Explained page naming its audience.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "problem.market",
+        "positioning.against"
+      ],
+      "themes": [
+        "permissionless entry",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "medium": "other",
+        "title": "Bittensor Explained",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-029",
+      "date": "2024-06-05",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Or, you can be a subnet validator, find markets, enterprises, small-businesses, application developers or end-users, for these digital products, generate revenue and earn TAO. Or you can just be a subnet owner and create fertile grounds for the growth of your subnet validators and subnet miners and earn TAO. Come join us and write your own decentralized economies into existence.",
+      "context": "Closing of the Bittensor Explained page listing the roles a reader can take.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "value.self_expressive",
+        "value.functional"
+      ],
+      "themes": [
+        "permissionless entry",
+        "incentive design"
+      ],
+      "metaphors": [
+        "garden",
+        "writing"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "medium": "other",
+        "title": "Bittensor Explained",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20240605031917/https://bittensor.com/explained",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-030",
+      "date": "2024-07-03",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Bittensor Community, Contributors, and TAO Holders, Yesterday at 7:41 PM UTC, we took the decision to place the Opentensor Chain Validators behind a firewall and entered safe-mode on Subtensor due to an attack that affected multiple participants in the Bittensor community.",
+      "context": "Opening of the Foundation's community update after the July 2, 2024 wallet-draining attack traced to a malicious PyPI package.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://blog.bittensor.com/bittnesor-community-update-july-3-2024-45661b1d542d",
+        "medium": "blog",
+        "title": "Bittensor Community Update, July 3, 2024",
+        "outlet": "Opentensor Foundation on Medium",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20250105120552/https://blog.bittensor.com/bittnesor-community-update-july-3-2024-45661b1d542d",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-031",
+      "date": "2025-01",
+      "date_precision": "month",
+      "era": "revolution",
+      "quote": "In this document, we present Dynamic TAO (DTAO): a market-driven mechanism designed to replace Bittensor’s current emission allocation model. In particular, Dynamic TAO derives emission values from the market prices of subnet-specific tokens that trade against TAO on Constant Product AMMs.",
+      "context": "Abstract of the dTAO whitepaper by Yuma Rao, Dr. Nick and 0xcacti, hosted on bittensor.com; the page is undated and is placed in January 2025 from secondary reports of its release, so the date is approximate.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.reason"
+      ],
+      "themes": [
+        "token economics",
+        "incentive design"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/dtao-whitepaper",
+        "medium": "whitepaper",
+        "title": "dTAO Whitepaper: subnet token economics",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-032",
+      "date": "2025-01",
+      "date_precision": "month",
+      "era": "revolution",
+      "quote": "By replacing the current subnet valuation model with an open market, we make the subnet valuation process more efficient, increase coordination costs for malicious participants aiming to manipulate emissions, and eliminate the apathetic oligarchic voting system",
+      "context": "The dTAO whitepaper abstract on why validator voting over subnet emissions was replaced.",
+      "about": "network",
+      "slots": [
+        "problem.institutional",
+        "positioning.against",
+        "value.functional"
+      ],
+      "themes": [
+        "validator power",
+        "token economics"
+      ],
+      "metaphors": [
+        "oligarchy"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/dtao-whitepaper",
+        "medium": "whitepaper",
+        "title": "dTAO Whitepaper: subnet token economics",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-033",
+      "date": "2025-01",
+      "date_precision": "month",
+      "era": "revolution",
+      "quote": "DTAO represents a fundamental shift towards true market democracy in the valuation of subnets. Where the previous system concentrated power in the hands of a few validators, DTAO opens participation to anyone willing to stake TAO in subnet pools.",
+      "context": "Section 2 of the dTAO whitepaper, What is DTAO.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "validator power",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "democracy"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/dtao-whitepaper",
+        "medium": "whitepaper",
+        "title": "dTAO Whitepaper: subnet token economics",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-034",
+      "date": "2025-01",
+      "date_precision": "month",
+      "era": "revolution",
+      "quote": "Operationally, we introduce subnet tokens (which we will informally refer to as Alpha1, Alpha2, Alpha3, etc.) through which miners, validators, and subnet owners will earn rewards. In so far as Bittensor enables the decentralized production and distribution of digital commodities, subnet tokens serve as the medium through which the network intelligently values these commodities.",
+      "context": "Section 2 of the dTAO whitepaper introducing subnet tokens and the alpha naming.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.reason"
+      ],
+      "themes": [
+        "token economics",
+        "commodity markets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.bittensor.com/dtao-whitepaper",
+        "medium": "whitepaper",
+        "title": "dTAO Whitepaper: subnet token economics",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-035",
+      "date": "2025-02-15",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor Explore DOCS Research SCAN CONNECT",
+      "context": "The entire visible text of the bittensor.com front page two days after the dTAO upgrade: a menu and a price ticker, no tagline.",
+      "about": "network",
+      "slots": [
+        "voice"
+      ],
+      "themes": [
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20250215053133/https://bittensor.com/",
+        "medium": "other",
+        "title": "bittensor.com front page, February 2025 capture",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20250215053133/https://bittensor.com/",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-036",
+      "date": "2025-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Dynamic TAO is a recent evolution of the integrated tokenomic and governance model that underlies the Bittensor network. It represents a significant step in Bittensor’s trajectory toward more thorough decentralization, by eliminating the centralized role of the root network in judging the value of subnetworks.",
+      "context": "Opening of the Core Dynamic TAO Concepts page of the official docs, last edited March 6, 2025.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "foundation.values",
+        "positioning.reason"
+      ],
+      "themes": [
+        "token economics",
+        "validator power",
+        "governance"
+      ],
+      "metaphors": [
+        "evolution"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20250416202251/https://docs.bittensor.com/dynamic-tao/dtao-guide",
+        "medium": "docs",
+        "title": "Core Dynamic TAO Concepts, docs.bittensor.com",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20250416202251/https://docs.bittensor.com/dynamic-tao/dtao-guide",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-037",
+      "date": "2025-03-28",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Dynamic TAO was introduced by proposal, approved by senate vote, and deployed as an upgrade to Bittensor main network on February 13, 2025 after a year of research, development, and testing.",
+      "context": "The Dynamic TAO FAQ of the official docs, last edited March 28, 2025, on the rollout.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "governance",
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web.archive.org/web/20250423223119/https://docs.bittensor.com/dynamic-tao/dtao-faq",
+        "medium": "docs",
+        "title": "Dynamic TAO FAQ, docs.bittensor.com",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20250423223119/https://docs.bittensor.com/dynamic-tao/dtao-faq",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-038",
+      "date": "2025-05-14",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bicameral Legislature: A two-tier legislative system comprising the Triumvirate and the Senate for proposal approval. … Commit Reveal: The commit reveal feature is designed to solve the weight-copying problem by giving would-be weight-copiers access only to stale weights.",
+      "context": "Two entries from the official docs glossary, last edited May 14, 2025.",
+      "about": "network",
+      "slots": [
+        "language.term"
+      ],
+      "themes": [
+        "governance",
+        "validator power"
+      ],
+      "metaphors": [
+        "legislature"
+      ],
+      "source": {
+        "url": "https://web.archive.org/web/20250602223020/https://docs.bittensor.com/glossary",
+        "medium": "docs",
+        "title": "Glossary, docs.bittensor.com",
+        "outlet": "docs.bittensor.com",
+        "timestamp": "",
+        "archive_url": "https://web.archive.org/web/20250602223020/https://docs.bittensor.com/glossary",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-039",
+      "date": "2026-07",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "The cost of registering a subnet has been one of the network’s quietest failures. … a subnet nobody uses still collects a slice of every block, which is to say, the tail of the network dilutes the subnets doing real work.",
+      "context": "The V440 upgrade note on bittensor.com, titled The Emission Gate and dated July 2026, explaining the problem it fixes.",
+      "about": "network",
+      "slots": [
+        "problem.institutional",
+        "voice"
+      ],
+      "themes": [
+        "token economics",
+        "incentive design"
+      ],
+      "metaphors": [
+        "tail"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/releases/v440-upgrade",
+        "medium": "blog",
+        "title": "The V440 Upgrade: The Emission Gate",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-040",
+      "date": "2026-07",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Spec 440 changes Bittensor’s emission curve. Emission remains price-based, but prices now pass through a threshold ‘gate’ — an inflection point centered around the 32nd rank. Above the gate, emission is essentially unchanged. Below it, emission collapses toward zero.",
+      "context": "The V440 upgrade note describing the change to subnet emission.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "value.functional"
+      ],
+      "themes": [
+        "token economics"
+      ],
+      "metaphors": [
+        "gate"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/releases/v440-upgrade",
+        "medium": "blog",
+        "title": "The V440 Upgrade: The Emission Gate",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-041",
+      "date": "2026-07",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "TAO is not just a utility token — it is a productive asset. Holding it earns a share of the inflation of all 128 competitively optimized subnets. We call that share root proportion: the fraction of Bittensor’s underlying subnets owed to TAO itself.",
+      "context": "Opening of the V441 upgrade note on bittensor.com, titled Root Reborn and dated July 2026.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "value.functional",
+        "positioning.category"
+      ],
+      "themes": [
+        "token economics",
+        "ownership"
+      ],
+      "metaphors": [
+        "productive asset"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/releases/v441-upgrade",
+        "medium": "blog",
+        "title": "Root Reborn: The V441 Upgrade",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-042",
+      "date": "2026-07",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Nearly half of all TAO in existence sits on root — 73% of all staked TAO. Until now that capital has been sterile, because the chain enforced a bias on how its owed inflation was used: sold into TAO the moment it arrived. This upgrade changes the nature of root yield, from passive to managed.",
+      "context": "The V441 upgrade note on why root staking was changed.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "problem.institutional"
+      ],
+      "themes": [
+        "token economics",
+        "validator power"
+      ],
+      "metaphors": [
+        "sterile capital"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/releases/v441-upgrade",
+        "medium": "blog",
+        "title": "Root Reborn: The V441 Upgrade",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-043",
+      "date": "2026-09-15",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Bittensor — decentralized machine intelligence network … Bittensor is an open network where independent subnets produce digital commodities and the chain pays contributors in TAO.",
+      "context": "Page title and one-line definition on the live bittensor.com front page, the first front-page tagline since 2023.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "positioning.category",
+        "foundation.mission"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "network"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/",
+        "medium": "other",
+        "title": "bittensor.com front page",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-044",
+      "date": "2026-09-15",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Bittensor is a blockchain (the subtensor chain) that coordinates and pays for useful work. … A subnet is an independent incentive market, identified by an integer netuid. … Miners produce the commodity, validators score the miners, subnet creators define the incentive mechanism, and stakers back validators with TAO.",
+      "context": "The live docs landing page and its network concepts page on bittensor.com, which replaced docs.bittensor.com.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.category",
+        "audience"
+      ],
+      "themes": [
+        "incentive design",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/docs",
+        "medium": "docs",
+        "title": "Bittensor Docs",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-045",
+      "date": "2026-09-15",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Bittensor is essentially a language for writing numerous decentralized commodity markets, or ‘subnets’, situated under a unified token system. … By analogy, Bittensor brings the same type of abstraction which Ethereum added to Bitcoin for running decentralized contracts, but onto Bitcoin’s inverse innovation — digital markets.",
+      "context": "The Bittensor Paradigm, the live About page of bittensor.com, bylined Const, core dev at Rao Foundation; the 2024 site menu listed a Paradigm page but no capture of it was found.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "positioning.differentiator",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "language",
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/about",
+        "medium": "other",
+        "title": "The Bittensor Paradigm",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "opentensor-foundation-046",
+      "date": "2026-09-15",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "For front-end customers, Bittensor offers access to resources at a cheaper price and without intermediary; unclosable, not falsely self-proclaimed as “open”.",
+      "context": "The Bittensor Paradigm page listing what the network offers customers, contrasting it with systems it calls falsely open.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "positioning.against"
+      ],
+      "themes": [
+        "censorship resistance",
+        "anti-OpenAI"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.bittensor.com/about",
+        "medium": "other",
+        "title": "The Bittensor Paradigm",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2023-08-10",
+      "title": "Twitter Spaces community Q&A",
+      "outlet": "Opentensor Foundation on X",
+      "url": "https://opentensor.medium.com/september-network-update-4550354230b2",
+      "medium": "x",
+      "note": "Listed in the September 2023 network update as a live community call; no transcript reached."
+    },
+    {
+      "date": "2023-08-30",
+      "title": "Discord Network Update / Growth Discussion",
+      "outlet": "Bittensor Discord",
+      "url": "https://opentensor.medium.com/september-network-update-4550354230b2",
+      "medium": "discord",
+      "note": "Listed in the September 2023 network update; recording linked from Medium, not reached."
+    },
+    {
+      "date": "2024-07-09",
+      "title": "Reopening Bittensor community call",
+      "outlet": "Bittensor Discord",
+      "url": "https://blog.bittensor.com/reopening-bittensor-8252ee749980",
+      "medium": "discord",
+      "note": "Community call on reopening the mainnet after the July 2024 attack; agenda published on Medium, no transcript."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "market",
+      "wording": "a market where intelligence is priced by other intelligence systems",
+      "first_statement": "opentensor-foundation-001",
+      "origin": "introduced",
+      "lineage_notes": "The whitepaper frame; repeated as 'a pure market for artificial intelligence' in the 2023 docs and 'the free market we have built for AI' in November 2023. Jacob Steeves uses the same frame in his own writing (medium.com/@unconst)."
+    },
+    {
+      "label": "bitcoin",
+      "wording": "a mining network, similar to Bitcoin",
+      "first_statement": "opentensor-foundation-014",
+      "origin": "reused",
+      "lineage_notes": "Bitcoin as precedent for fair launch (2023-09), for the network definition in the v6 README (2023-10), and as the base of the Ethereum analogy on the 2026 About page."
+    },
+    {
+      "label": "arena",
+      "wording": "an incentivized arena in which consumers and producers of this valuable commodity can interact",
+      "first_statement": "opentensor-foundation-011",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "commodity",
+      "wording": "the production, marketing and selling of digital commodities",
+      "first_statement": "opentensor-foundation-027",
+      "origin": "introduced",
+      "lineage_notes": "Digital commodities becomes the official noun for subnet outputs from 2024; Timo's Bittensor Standard essay hosted on bittensor.com uses 'supercommodities'."
+    },
+    {
+      "label": "evolution",
+      "wording": "an environment optimally condusive to its evolution",
+      "first_statement": "opentensor-foundation-005",
+      "origin": "reused",
+      "lineage_notes": "Returns in the 2025 docs, Dynamic TAO as a recent evolution of the tokenomic model."
+    },
+    {
+      "label": "language",
+      "wording": "a language for writing numerous decentralized commodity markets",
+      "first_statement": "opentensor-foundation-045",
+      "origin": "reused",
+      "lineage_notes": "Const's phrase, published on bittensor.com/about under his byline; the 2024 Explained page carries the related 'write your own decentralized economies into existence'."
+    },
+    {
+      "label": "democracy",
+      "wording": "a fundamental shift towards true market democracy",
+      "first_statement": "opentensor-foundation-033",
+      "origin": "introduced",
+      "lineage_notes": "dTAO whitepaper; paired with 'apathetic oligarchic voting system' for the root network it replaced."
+    },
+    {
+      "label": "garden",
+      "wording": "create fertile grounds for the growth of your subnet validators and subnet miners",
+      "first_statement": "opentensor-foundation-029",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "productive asset",
+      "wording": "TAO is not just a utility token — it is a productive asset",
+      "first_statement": "opentensor-foundation-041",
+      "origin": "introduced",
+      "lineage_notes": "2026 release notes; replaces the 2023 'utility token designed to incentivize the production of machine intelligence'."
+    },
+    {
+      "label": "repressive regime",
+      "wording": "people’s relentless and dogged endeavor to overcome repressive regimes",
+      "first_statement": "opentensor-foundation-026",
+      "origin": "introduced",
+      "lineage_notes": "Bittensor Explained, 2024; the political register of the Charter carried onto the front-facing page."
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Bittensor exists to produce machine intelligence through a market: first a peer-to-peer market where models price each other, then a platform where subnets produce digital commodities and the chain pays contributors in TAO.",
+      "statements": [
+        "opentensor-foundation-001",
+        "opentensor-foundation-010",
+        "opentensor-foundation-043"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "A future where economies and commodities are decentralized by design, no single entity is a sole authority, and the ownership of machine intelligence sits with ordinary people, bottom up.",
+      "statements": [
+        "opentensor-foundation-011",
+        "opentensor-foundation-026",
+        "opentensor-foundation-021"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Openness and decentralization are said to be written into the code; the Foundation adds fair launch with no pre-mine or VC allocation, open source as a moral imperative, and giving power away.",
+      "statements": [
+        "opentensor-foundation-008",
+        "opentensor-foundation-014",
+        "opentensor-foundation-016",
+        "opentensor-foundation-017",
+        "opentensor-foundation-033"
+      ]
+    },
+    "problem.cultural": {
+      "summary": "Centralized firms and authorities disempower people; OpenAI is cast as the playbook of a bygone era of technocratic elitism.",
+      "statements": [
+        "opentensor-foundation-026",
+        "opentensor-foundation-022",
+        "opentensor-foundation-018"
+      ]
+    },
+    "problem.market": {
+      "summary": "The existing AI system is centrally controlled, inefficient and unsustainable, and builders without access to traditional capital have nowhere to go.",
+      "statements": [
+        "opentensor-foundation-006",
+        "opentensor-foundation-028"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "Concentrated control of AI is named the greatest risk to humanity; inside the network, the risks named are validator oligarchy over emissions and, by 2026, idle subnets diluting the ones doing real work.",
+      "statements": [
+        "opentensor-foundation-018",
+        "opentensor-foundation-032",
+        "opentensor-foundation-039",
+        "opentensor-foundation-042"
+      ]
+    },
+    "opportunity": {
+      "summary": "The opening of user-created subnets in 2023 is presented as the moment Bittensor reaches a broader audience.",
+      "statements": [
+        "opentensor-foundation-012"
+      ]
+    },
+    "audience": {
+      "summary": "Miners first (2021), then engineers and open-source developers writing their own markets, then entrepreneurs, validators, subnet owners and stakers; each is told what they can earn.",
+      "statements": [
+        "opentensor-foundation-002",
+        "opentensor-foundation-006",
+        "opentensor-foundation-028",
+        "opentensor-foundation-029",
+        "opentensor-foundation-044"
+      ]
+    },
+    "positioning.category": {
+      "summary": "The category moves from a peer-to-peer intelligence market, to internet-scale machine learning, to a mining network similar to Bitcoin, to a platform of decentralized commodity markets, to a language for writing markets and a decentralized machine intelligence network.",
+      "statements": [
+        "opentensor-foundation-001",
+        "opentensor-foundation-005",
+        "opentensor-foundation-019",
+        "opentensor-foundation-027",
+        "opentensor-foundation-045",
+        "opentensor-foundation-043"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "The network only measures outputs and is agnostic to where they come from; subnets are permissionless, collusion-resistant competition markets under one token, and dTAO opens subnet valuation to anyone who stakes.",
+      "statements": [
+        "opentensor-foundation-013",
+        "opentensor-foundation-025",
+        "opentensor-foundation-033",
+        "opentensor-foundation-045"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Peers are paid for information-theoretic value; validators earn only by agreeing with stake-weighted consensus; under dTAO, market prices rather than validator votes decide emission.",
+      "statements": [
+        "opentensor-foundation-024",
+        "opentensor-foundation-031"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Against centrally controlled AI, OpenAI's corporate playbook, governments and corporations controlling AI, VC token allocations, and the validator oligarchy of its own root network.",
+      "statements": [
+        "opentensor-foundation-006",
+        "opentensor-foundation-022",
+        "opentensor-foundation-016",
+        "opentensor-foundation-018",
+        "opentensor-foundation-032",
+        "opentensor-foundation-046"
+      ]
+    },
+    "value.functional": {
+      "summary": "Cheaper access to intelligence and digital resources without intermediaries, rewards for producing commodities, and from 2026 a managed yield on TAO held on root.",
+      "statements": [
+        "opentensor-foundation-013",
+        "opentensor-foundation-046",
+        "opentensor-foundation-041",
+        "opentensor-foundation-040"
+      ]
+    },
+    "value.emotional": {
+      "summary": "The network is sold as humanity's creativity brought to life by nodes that need not know each other, and as a new future for humanity against repressive control.",
+      "statements": [
+        "opentensor-foundation-021",
+        "opentensor-foundation-026"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Joining means being a creative, forward-thinking individual who writes their own decentralized economy into existence.",
+      "statements": [
+        "opentensor-foundation-006",
+        "opentensor-foundation-029"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "The repeated lines are Internet-scale Neural Networks (2022 to 2026 in the README), Internet-scale machine learning (2023 site), democratize access to intelligence (2023 Medium), and in 2026 decentralized machine intelligence network.",
+      "statements": [
+        "opentensor-foundation-004",
+        "opentensor-foundation-007",
+        "opentensor-foundation-009",
+        "opentensor-foundation-023",
+        "opentensor-foundation-026",
+        "opentensor-foundation-043"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Fair launch with no allocations, a block every 12 seconds, 26 subnets registered in the first month, dTAO passed by Senate vote, and in 2026 the share of TAO staked on root.",
+      "statements": [
+        "opentensor-foundation-014",
+        "opentensor-foundation-016",
+        "opentensor-foundation-020",
+        "opentensor-foundation-037",
+        "opentensor-foundation-042"
+      ]
+    },
+    "voice": {
+      "summary": "The register moves from a bare install command, to salutations addressed to Community, Contributors, and TAO Holders, to Charter aphorisms, to release notes that call the network's own design a failure.",
+      "statements": [
+        "opentensor-foundation-002",
+        "opentensor-foundation-017",
+        "opentensor-foundation-020",
+        "opentensor-foundation-030",
+        "opentensor-foundation-039"
+      ]
+    },
+    "relationship": {
+      "summary": "The Foundation describes itself as impartial, relinquishing administrative power, not endorsing subnets, and not engaging exchanges; it also ran the chain validators and firewalled the network in July 2024, and by 2026 its pages carry the Rao Foundation name.",
+      "statements": [
+        "opentensor-foundation-008",
+        "opentensor-foundation-023",
+        "opentensor-foundation-017",
+        "opentensor-foundation-030",
+        "opentensor-foundation-037"
+      ]
+    },
+    "language.term": {
+      "summary": "Official coinages, dated to their earliest reached source: Internet-scale Neural Networks, Kusanagi, Nakamoto, Finney, subnet, subtensor, Yuma Consensus, digital commodities, Dynamic TAO, alpha token, subnet pools, Triumvirate, emission gate, root proportion, beta.",
+      "statements": [
+        "opentensor-foundation-004",
+        "opentensor-foundation-015",
+        "opentensor-foundation-024",
+        "opentensor-foundation-025",
+        "opentensor-foundation-027",
+        "opentensor-foundation-031",
+        "opentensor-foundation-034",
+        "opentensor-foundation-038",
+        "opentensor-foundation-040",
+        "opentensor-foundation-041"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "market",
+      "commodity",
+      "digital commodities",
+      "incentive",
+      "incentive mechanism",
+      "subnet",
+      "subnet miner",
+      "subnet validator",
+      "subnet owner",
+      "subtensor",
+      "emission",
+      "TAO",
+      "alpha",
+      "stake",
+      "decentralized",
+      "permissionless",
+      "collusion-resistant",
+      "open source",
+      "fair launch",
+      "democratize",
+      "internet-scale",
+      "intelligence",
+      "consensus",
+      "root",
+      "yield",
+      "basket",
+      "competition"
+    ],
+    "words_avoided": [
+      "AI company",
+      "token sale",
+      "ICO",
+      "investors (as a target audience, until Pantera and Collab+Currency are named in November 2023)",
+      "artificial general intelligence",
+      "blockchain for AI (the docs insist Bittensor is one blockchain plus many subnets)"
+    ],
+    "coinages": [
+      {
+        "term": "Internet-scale Neural Networks",
+        "meaning": "The README tagline for the project, kept from v3.0.0 (2022) to the archived repository (2026).",
+        "statement": "opentensor-foundation-004"
+      },
+      {
+        "term": "Internet-scale machine learning",
+        "meaning": "The bittensor.com tagline in 2023.",
+        "statement": "opentensor-foundation-007"
+      },
+      {
+        "term": "Incentivizing intelligence",
+        "meaning": "Two-word slogan on the 2023 About page; also the title of the academic paper on bittensor.com/academia.",
+        "statement": "opentensor-foundation-009"
+      },
+      {
+        "term": "Kusanagi, Nakamoto, Finney",
+        "meaning": "Codenames for the three mainnet iterations (January 2021, November 2021, March 20 2023).",
+        "statement": "opentensor-foundation-015"
+      },
+      {
+        "term": "subnet",
+        "meaning": "An incentive-based competition market; anyone can create one by paying the registration cost in TAO.",
+        "statement": "opentensor-foundation-025"
+      },
+      {
+        "term": "subtensor",
+        "meaning": "The single blockchain to which all subnets connect.",
+        "statement": "opentensor-foundation-044"
+      },
+      {
+        "term": "Yuma Consensus",
+        "meaning": "The on-chain mechanism that pays validators for evaluations that agree with stake-weighted consensus.",
+        "statement": "opentensor-foundation-024"
+      },
+      {
+        "term": "digital commodities",
+        "meaning": "Compute, data, storage, predictions and models produced by subnets and transformed into intelligence.",
+        "statement": "opentensor-foundation-027"
+      },
+      {
+        "term": "Dynamic TAO (DTAO, dTAO)",
+        "meaning": "Market-driven emission allocation from subnet token prices, replacing validator voting.",
+        "statement": "opentensor-foundation-031"
+      },
+      {
+        "term": "subnet tokens, Alpha",
+        "meaning": "Per-subnet tokens, informally Alpha1, Alpha2, through which participants earn and the network values commodities.",
+        "statement": "opentensor-foundation-034"
+      },
+      {
+        "term": "Triumvirate, Senate, Bicameral Legislature",
+        "meaning": "The two-tier governance structure for proposal approval.",
+        "statement": "opentensor-foundation-038"
+      },
+      {
+        "term": "emission gate",
+        "meaning": "A threshold around the 32nd rank below which subnet emission collapses toward zero.",
+        "statement": "opentensor-foundation-040"
+      },
+      {
+        "term": "root proportion",
+        "meaning": "The share of subnet inflation owed to TAO staked on root.",
+        "statement": "opentensor-foundation-041"
+      },
+      {
+        "term": "Rao Foundation",
+        "meaning": "The name under which the 2026 official pages are bylined, replacing Opentensor Foundation.",
+        "statement": "opentensor-foundation-045"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "pre",
+      "summary": "The whitepaper sets the frame that everything later returns to: intelligence as a commodity and a peer-to-peer market where models price each other [opentensor-foundation-001].",
+      "dominant_metaphor": "market",
+      "shift": ""
+    },
+    {
+      "era": "nakamoto",
+      "summary": "The site speaks only to miners, with an install command as its whole message [opentensor-foundation-002], and by 2022 is a wordmark and four links [opentensor-foundation-003]. The README defines a market system for the development of AI whose purpose is to democratize the commodity and disrupt a centrally controlled status quo [opentensor-foundation-005] [opentensor-foundation-006], under the tagline Internet-scale Neural Networks [opentensor-foundation-004].",
+      "dominant_metaphor": "market",
+      "shift": "From a paper to a running network; the audience is engineers and miners, and the enemy is named as centralized AI."
+    },
+    {
+      "era": "finney",
+      "summary": "The first front-page tagline appears, Internet-scale machine learning [opentensor-foundation-007], with four principles: open, incentivized, decentralized, user-governed [opentensor-foundation-008] and the slogan Incentivizing intelligence [opentensor-foundation-009]. The docs call the vision a pure market and an incentivized arena [opentensor-foundation-011]. Medium begins: fair launch with Bitcoin as precedent [opentensor-foundation-014], the mainnet codenames [opentensor-foundation-015], no VC allocations ever [opentensor-foundation-016], the Charter's opposition to centralized control [opentensor-foundation-017] [opentensor-foundation-018], and subnets announced as the way developers write their own markets [opentensor-foundation-013].",
+      "dominant_metaphor": "market",
+      "shift": "The Foundation starts speaking in the first person as an institution, adopts Bitcoin's fair-launch story, and prepares the word subnet."
+    },
+    {
+      "era": "revolution",
+      "summary": "The README redefines Bittensor as a mining network similar to Bitcoin [opentensor-foundation-019]. The November 2023 update is the most combative official text: there is a subnet for that [opentensor-foundation-020], the free market we have built for AI [opentensor-foundation-021], and OpenAI as a bygone era [opentensor-foundation-022]. The 2024 site adds Bittensor Explained, which opens with repressive regimes [opentensor-foundation-026], makes digital commodities the noun [opentensor-foundation-027], and lists roles a reader can take [opentensor-foundation-029]. The docs fix the vocabulary: subnet as competition market and Yuma Consensus [opentensor-foundation-025] [opentensor-foundation-024]. The dTAO whitepaper closes the era by calling the root network an apathetic oligarchy and proposing market democracy [opentensor-foundation-032] [opentensor-foundation-033].",
+      "dominant_metaphor": "commodity",
+      "shift": "Subnets move from promise to proof; digital commodities replaces machine learning as the noun; the Foundation names OpenAI and, later, its own validators as the problem."
+    },
+    {
+      "era": "dtao",
+      "summary": "The official voice becomes the docs: Dynamic TAO is an evolution toward more thorough decentralization that removes the root network's role in judging subnets [opentensor-foundation-036], and the upgrade was passed by Senate vote [opentensor-foundation-037]; the glossary adds the Triumvirate and commit reveal [opentensor-foundation-038]. The front page carries no tagline through 2025 [opentensor-foundation-035].",
+      "dominant_metaphor": "market",
+      "shift": "Explanation replaces persuasion; the market metaphor is now literal, a pool with a price."
+    },
+    {
+      "era": "current",
+      "summary": "Release notes on bittensor.com become the main official prose, in a blunt register: subnet registration is a quiet failure [opentensor-foundation-039], the emission gate collapses the tail [opentensor-foundation-040], TAO is a productive asset with a root proportion [opentensor-foundation-041] and root capital was sterile [opentensor-foundation-042]. The front page regains a definition, an open network where independent subnets produce digital commodities [opentensor-foundation-043], the docs move onto bittensor.com [opentensor-foundation-044], and the About page hosts Const's language-for-markets frame under a Rao Foundation byline [opentensor-foundation-045] with a jab at systems falsely self-proclaimed as open [opentensor-foundation-046].",
+      "dominant_metaphor": "productive asset",
+      "shift": "From decentralization talk to yield mechanics; the institution's name on the pages changes to Rao Foundation and the docs move onto bittensor.com."
+    }
+  ],
+  "relations": [
+    {
+      "to": "openai",
+      "kind": "argues",
+      "statement": "opentensor-foundation-022",
+      "note": "November 2023 update calls OpenAI's Dev Day the playbook of a bygone era and says the network does not fear OpenAI."
+    },
+    {
+      "to": "bitcoin",
+      "kind": "borrows",
+      "statement": "opentensor-foundation-014",
+      "note": "Fair launch, halving and 21 million supply are framed as Bitcoin's precedent; the v6 README calls Bittensor a mining network similar to Bitcoin."
+    },
+    {
+      "to": "ethereum",
+      "kind": "borrows",
+      "statement": "opentensor-foundation-045",
+      "note": "The About page says Bittensor adds to Bitcoin's market the abstraction Ethereum added to Bitcoin's contracts."
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "introduces",
+      "statement": "opentensor-foundation-045",
+      "note": "The official About page is bylined Const, core dev at Rao Foundation; the language-for-markets frame is his."
+    },
+    {
+      "to": "yuma-rao",
+      "kind": "introduces",
+      "statement": "opentensor-foundation-001",
+      "note": "Both the 2020 whitepaper and the 2025 dTAO whitepaper are signed Yuma Rao, the pseudonymous author the Foundation publishes."
+    },
+    {
+      "to": "timo",
+      "kind": "introduces",
+      "statement": "opentensor-foundation-027",
+      "note": "bittensor.com hosted Timo's essay The Bittensor Standard (Towards P2P Computational Capitalism) in 2024 beside its own Explained page."
+    }
+  ],
+  "coverage": {
+    "searches_used": 19,
+    "fetches_used": 92,
+    "well_covered": [
+      "bittensor.com front page captures 2020, 2021, 2022, 2023, 2024, 2025, 2026 and live",
+      "docs.bittensor.com captures 2023, 2024, 2025 and the live bittensor.com/docs",
+      "Opentensor Foundation Medium (via archive.org): September 2023, TAO Token Economy, November 2023, July 2024",
+      "GitHub README at v3.0.0, v6.0.0, v7.0.0, v8.0.0 and master",
+      "the whitepaper, the dTAO whitepaper, the Charter, and the 2026 release notes v440, v441, v450"
+    ],
+    "thin": [
+      "nakamoto era: only README and nav text, no prose from the 2021 to 2022 site",
+      "x: no @opentensor post text reached at all",
+      "youtube: channel description not rendered",
+      "the August and October 2023 and June 2024 Medium posts (October Network Update, Supercommodities for Decentralized Economies) were not archived"
+    ],
+    "gaps": [
+      "@opentensor X posts: x.com blocked to the fetch tool (402/403) and archive.org captures of twitter.com/opentensor and the July 2024 status returned empty shells; the Finney (March 2023), Revolution (October 2023), dTAO (February 2025) and February 2026 governance announcements were therefore not quoted from X",
+      "The February 2026 announcement of the Foundation stepping back: only secondary articles (cryptobriefing, simplytao, bex.co) reached, none quoting an official OTF text verbatim, so no statement recorded",
+      "Medium direct URLs return 403; only posts with archive.org captures were read. Not archived: October Network Update (2023-10-09), August Network Update (2023-08-07), Supercommodities for Decentralized Economies (2024-06-18), Weight Copying and Consensus-based Weights (2024)",
+      "The web search budget for the session ran out after 19 searches, so the official YouTube descriptions and any Substack were not pursued further",
+      "The dTAO whitepaper page on bittensor.com is undated; January 2025 is inferred from secondary reports and marked month precision"
+    ],
+    "unreachable": [
+      "https://x.com/opentensor",
+      "https://x.com/opentensor/status/1811856695733420469",
+      "https://opentensor.medium.com/ (403 direct)",
+      "https://blog.bittensor.com/october-network-update-2ec6c8b3f0b8 (guessed slug, not archived)",
+      "https://www.youtube.com/@Opentensor/about (footer only)",
+      "https://tao.news/... Revolution announcement (522)",
+      "https://docs.bittensor.com/learn/introduction (redirects to bittensor.com/docs; archived copy used)",
+      "https://bittensor.com/paradigm (2024 menu item, no archive capture)"
+    ]
+  }
+}

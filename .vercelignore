@@ -10,3 +10,5 @@ data/*.csv
 data/review-*
 data/verify-*
 data/index.md
+narrative-method.md
+data/narrative/raw/

@@ -95,7 +95,7 @@ def verdict_block(sub, comp):
     return f'<div class="verdict"><span class="mono">What {comp:.1f} means</span><p>{e(v["summary"])}</p><ul>{items}</ul></div>'
 
 
-def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css=""):
+def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explainer_html="", explainer_css="", narrative_html="", narrative_css=""):
     ident = sub["identity"]
     check = {c["field"]: c for c in sub.get("identity_check", [])}
     rows = []
@@ -169,6 +169,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
         "json": json.dumps({k: v for k, v in sub.items() if k != "alpha"}, ensure_ascii=False).replace("</", "<\\/"),
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
         "explainer": explainer_html, "explainer_css": explainer_css,
+        "narrative": narrative_html, "narrative_css": narrative_css if narrative_html else "",
     }
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)
 
@@ -336,7 +337,7 @@ def render_chart(data):
     return style + controls + f'<figure class="chart" data-show="composite">{"".join(out)}</figure>' + lists + script
 
 
-def build_all(data, partials, site, write_if_changed, explainers=None):
+def build_all(data, partials, site, write_if_changed, explainers=None, narrative_blocks=None, narrative_css=""):
     """Render subnet pages, the list, OG images, and return (changed list, chart html)."""
     changed = []
     subs = sorted(data["subnets"], key=lambda s: s["rank"])
@@ -351,7 +352,8 @@ def build_all(data, partials, site, write_if_changed, explainers=None):
         else:
             og_name = "default.png"
         ex_html, ex_css = (explainers or {}).get(sub["netuid"], ("", ""))
-        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name, ex_html, ex_css)
+        nb = (narrative_blocks or {}).get(sub["netuid"], "")
+        page = render_subnet(sub, data, partials, site, subs[i - 1] if i > 0 else None, subs[i + 1] if i + 1 < len(subs) else None, og_name, ex_html, ex_css, nb, narrative_css)
         if write_if_changed(REPO / "sn" / str(sub["netuid"]) / "index.html", page):
             changed.append(f"sn/{sub['netuid']}/")
     if render_default_og(data, OG_DIR / "default.png"):

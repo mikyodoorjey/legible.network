@@ -1,0 +1,381 @@
+{
+  "narrator": {
+    "id": "sn75",
+    "name": "Hippius (SN75)",
+    "aka": ["Hippius Cloud", "The Nerve Lab", "The Brain", "SN75", "Subnet 75"],
+    "kind": "subnet",
+    "role": "Subnet team, The Nerve Lab; community presenters Mog and Dubs speak for it on podcasts",
+    "affiliation": "The Nerve Lab",
+    "active_from": "2025",
+    "handles": {"x": "@Hippius_cloud", "github": "thenervelab"},
+    "subnets": [75],
+    "one_line": "Decentralised cloud storage subnet launched in March 2025 by The Nerve Lab, running its own Substrate chain and Arion erasure-coded storage with an S3-compatible front end; its 2025 writing calls it the storage Bittensor lacked, its 2026 docs sell storage without AWS and barely name Bittensor at all."
+  },
+  "statements": [
+    {
+      "id": "sn75-001",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "A comprehensive Bittensor subnet providing distributed storage, compute, and blockchain management capabilities.",
+      "context": "Repository description of thenervelab/thebrain, the Hippius chain codebase, read 15 September 2026; the repository dates from the 2025 launch.",
+      "about": "subnet:75",
+      "slots": ["subnet.self", "positioning.category"],
+      "themes": ["storage", "compute"],
+      "metaphors": [],
+      "source": {
+        "url": "https://github.com/thenervelab/thebrain",
+        "medium": "docs",
+        "title": "thenervelab/thebrain README",
+        "outlet": "The Nerve Lab GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-002",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Hippius is a Bittensor subnet that enables decentralized file storage and computation across the network. It leverages Bittensor's incentive mechanism while using a network of miners and validators to ensure secure and reliable data management.",
+      "context": "Opening of the thenervelab/thebrain README, describing how the subnet relates to Bittensor.",
+      "about": "network",
+      "slots": ["subnet.network", "subnet.self", "positioning.reason"],
+      "themes": ["incentive design", "storage"],
+      "metaphors": ["network"],
+      "source": {
+        "url": "https://github.com/thenervelab/thebrain",
+        "medium": "docs",
+        "title": "thenervelab/thebrain README",
+        "outlet": "The Nerve Lab GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-003",
+      "date": "2025-09-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "a groundbreaking decentralized cloud storage platform built on Bittensor. Subnet, launched on March 11, 2025",
+      "context": "The team's introductory essay on its Discourse forum, posted by the Hippius account; the essay's opening description, punctuation as in the original.",
+      "about": "subnet:75",
+      "slots": ["subnet.self", "positioning.category"],
+      "themes": ["storage"],
+      "metaphors": ["platform"],
+      "source": {
+        "url": "https://community.hippius.com/t/hippius-subnet-75-pioneering-transparent-decentralized-cloud-storage-on-bittensor/18",
+        "medium": "forum",
+        "title": "Hippius: Subnet 75. Pioneering Transparent Decentralized Cloud Storage on Bittensor",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-004",
+      "date": "2025-09-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Bittensor lacked robust decentralized storage and traceability mechanisms",
+      "context": "The same forum essay, describing the network before Hippius arrived.",
+      "about": "network",
+      "slots": ["subnet.network", "problem.market", "opportunity"],
+      "themes": ["storage", "decentralised intelligence"],
+      "metaphors": [],
+      "source": {
+        "url": "https://community.hippius.com/t/hippius-subnet-75-pioneering-transparent-decentralized-cloud-storage-on-bittensor/18",
+        "medium": "forum",
+        "title": "Hippius: Subnet 75. Pioneering Transparent Decentralized Cloud Storage on Bittensor",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-005",
+      "date": "2025-09-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "proof of stored data and miner uptime … fosters healthy competition, holding miners accountable beyond mere storage capacity",
+      "context": "The same forum essay, on how miners are rewarded; two phrases joined with an ellipsis.",
+      "about": "subnet:75",
+      "slots": ["subnet.self", "positioning.differentiator"],
+      "themes": ["incentive design", "competition", "verification"],
+      "metaphors": ["competition"],
+      "source": {
+        "url": "https://community.hippius.com/t/hippius-subnet-75-pioneering-transparent-decentralized-cloud-storage-on-bittensor/18",
+        "medium": "forum",
+        "title": "Hippius: Subnet 75. Pioneering Transparent Decentralized Cloud Storage on Bittensor",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-006",
+      "date": "2025-09-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "centralized storage systems … often lack transparency and expose data to potential breaches",
+      "context": "The same forum essay, setting Hippius against centralised providers that deny users control of their data; two phrases joined with an ellipsis.",
+      "about": "subnet:75",
+      "slots": ["positioning.against", "problem.market"],
+      "themes": ["ownership", "censorship resistance"],
+      "metaphors": [],
+      "source": {
+        "url": "https://community.hippius.com/t/hippius-subnet-75-pioneering-transparent-decentralized-cloud-storage-on-bittensor/18",
+        "medium": "forum",
+        "title": "Hippius: Subnet 75. Pioneering Transparent Decentralized Cloud Storage on Bittensor",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-007",
+      "date": "2025-09-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "build the future of cloud computing … committed to pushing the boundaries of decentralized storage",
+      "context": "The same forum essay's closing aims; two phrases joined with an ellipsis.",
+      "about": "subnet:75",
+      "slots": ["foundation.vision", "voice"],
+      "themes": ["storage", "cloud"],
+      "metaphors": ["future", "boundaries"],
+      "source": {
+        "url": "https://community.hippius.com/t/hippius-subnet-75-pioneering-transparent-decentralized-cloud-storage-on-bittensor/18",
+        "medium": "forum",
+        "title": "Hippius: Subnet 75. Pioneering Transparent Decentralized Cloud Storage on Bittensor",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-008",
+      "date": "2025-09-15",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "As a decentralized cloud storage solution provider, we use InterPlanetary File System (IPFS) and S3-Compatible storage to deliver secure, transparent and scalable hosting.",
+      "context": "Forum post by the Hippius account on hosting through IPFS and S3-compatible storage.",
+      "about": "subnet:75",
+      "slots": ["subnet.self", "value.functional"],
+      "themes": ["storage"],
+      "metaphors": [],
+      "source": {
+        "url": "https://community.hippius.com/t/offering-decentralized-hosting-through-ipfs-s3-compatible-storage/33",
+        "medium": "forum",
+        "title": "Offering Decentralized Hosting through IPFS & S3-Compatible Storage",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-009",
+      "date": "2025-09-15",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Built on Bittensor and powered by our blockchain, we redefine data storage by combining decentralization, reliability and accessibility. … Built on Bittensor and our blockchain, we offer a reliable, transparent platform that empowers users to control their data.",
+      "context": "Same forum post; two sentences joined with an ellipsis, showing the built-on-Bittensor-and-our-own-chain formula the team repeats.",
+      "about": "network",
+      "slots": ["subnet.network", "subnet.self", "foundation.values", "value.functional"],
+      "themes": ["ownership", "storage"],
+      "metaphors": ["platform"],
+      "source": {
+        "url": "https://community.hippius.com/t/offering-decentralized-hosting-through-ipfs-s3-compatible-storage/33",
+        "medium": "forum",
+        "title": "Offering Decentralized Hosting through IPFS & S3-Compatible Storage",
+        "outlet": "Hippius community forum",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-010",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Hippius is the solution to storage on Bittensor",
+      "context": "Tagline on the docs.hippius.com landing page, version 0.2.1, copyright 2026, read 15 September 2026.",
+      "about": "subnet:75",
+      "slots": ["messaging.h1", "subnet.self", "subnet.network"],
+      "themes": ["storage"],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.hippius.com",
+        "medium": "docs",
+        "title": "Hippius docs landing page",
+        "outlet": "Hippius docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-011",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Store files, host websites, run VMs — without relying on AWS, Google Cloud, or any single company.",
+      "context": "What is Hippius section of the 2026 docs; the docs otherwise do not mention Bittensor except to say TAO is only for paying credits.",
+      "about": "subnet:75",
+      "slots": ["positioning.against", "value.functional", "messaging.h1"],
+      "themes": ["censorship resistance", "ownership", "anti-hyperscaler"],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.hippius.com/llms-full.txt",
+        "medium": "docs",
+        "title": "What is Hippius?",
+        "outlet": "Hippius docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-012",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Distributed S3 storage — any client, no wallet required … Sign up with Google or GitHub — no KYC, no wallet required.",
+      "context": "Docs landing page and intro, addressing developers who do not hold crypto; two lines joined with an ellipsis.",
+      "about": "subnet:75",
+      "slots": ["audience", "value.functional", "voice"],
+      "themes": ["adoption", "developers"],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.hippius.com",
+        "medium": "docs",
+        "title": "Hippius docs landing page",
+        "outlet": "Hippius docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-013",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Use our intuitive console to pay using fiat or through the Bittensor network … Bittensor tracks transaction and service delivery, so you know exactly what you're getting",
+      "context": "hippius.com homepage, copyright 2026, read 15 September 2026; the two places the homepage names Bittensor, joined with an ellipsis.",
+      "about": "network",
+      "slots": ["subnet.network", "positioning.reason", "value.functional"],
+      "themes": ["transparency", "token economics"],
+      "metaphors": ["ledger"],
+      "source": {
+        "url": "https://hippius.com/",
+        "medium": "docs",
+        "title": "Hippius homepage",
+        "outlet": "hippius.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn75-014",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Transparent and Decentralized Cloud Storage … Keep your data decentralized with fast, self-healing Arion storage",
+      "context": "hippius.com homepage headline and feature line, joined with an ellipsis.",
+      "about": "subnet:75",
+      "slots": ["messaging.h1", "language.term", "subnet.self"],
+      "themes": ["storage", "transparency"],
+      "metaphors": ["self-healing"],
+      "source": {
+        "url": "https://hippius.com/",
+        "medium": "docs",
+        "title": "Hippius homepage",
+        "outlet": "hippius.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {"date": "2025", "title": "SN75 Hippius :: Decentralized Cloud Storage on Bittensor :: Cheaper + Faster than Datacenters", "outlet": "Novelty Search (YouTube)", "url": "https://www.youtube.com/watch?v=4qyWNKha7zY", "medium": "youtube", "note": "Team presentation; YouTube did not render and backprop.finance transcript returned 403."},
+    {"date": "2025-09", "title": "Bittensor Revenue Search 27 - Mog & Dubs - SN75 Hippius", "outlet": "Bittensor Revenue Search", "url": "https://www.youtube.com/watch?v=BmhMhqBE5FY", "medium": "youtube", "note": "Community presenters Mog and Dubs on Hippius revenue; no transcript reached."}
+  ],
+  "metaphors": [
+    {"label": "platform", "wording": "a groundbreaking decentralized cloud storage platform built on Bittensor", "first_statement": "sn75-003", "origin": "reused", "lineage_notes": "Cloud-vendor language; the team compares itself to AWS and Google Cloud rather than to other subnets."},
+    {"label": "competition", "wording": "fosters healthy competition, holding miners accountable", "first_statement": "sn75-005", "origin": "reused", "lineage_notes": "Foundation framing; used once, softened by healthy."},
+    {"label": "self-healing", "wording": "fast, self-healing Arion storage", "first_statement": "sn75-014", "origin": "introduced", "lineage_notes": "Arion is the team's name for its erasure-coded storage layer."},
+    {"label": "ledger", "wording": "Bittensor tracks transaction and service delivery, so you know exactly what you're getting", "first_statement": "sn75-013", "origin": "introduced", "lineage_notes": "Bittensor as an audit trail rather than as a market or brain; a third party (Uphold's Scott Guttenberger) reports the team's internal codename was The Brain and the positioning was a memory layer for Bittensor, but no primary carries that wording."}
+  ],
+  "framework": {
+    "foundation.mission": {"summary": "Provide decentralised file storage and computation across the Bittensor network, using its incentive mechanism with miners and validators.", "statements": ["sn75-002", "sn75-008"]},
+    "foundation.vision": {"summary": "Build the future of cloud computing by pushing the boundaries of decentralised storage.", "statements": ["sn75-007"]},
+    "foundation.values": {"summary": "Transparency and user control of data.", "statements": ["sn75-009", "sn75-014"]},
+    "problem.market": {"summary": "Bittensor lacked robust decentralised storage and traceability; centralised storage lacks transparency and exposes data to breaches.", "statements": ["sn75-004", "sn75-006"]},
+    "opportunity": {"summary": "The gap in the network's own stack: no storage layer before March 2025.", "statements": ["sn75-004"]},
+    "audience": {"summary": "Developers who want S3 storage from any client with no wallet or KYC, and users who pay in fiat or TAO.", "statements": ["sn75-012", "sn75-013"]},
+    "positioning.category": {"summary": "A decentralised cloud storage platform and a Bittensor subnet for storage and compute.", "statements": ["sn75-003", "sn75-001"]},
+    "positioning.differentiator": {"summary": "Proof of stored data and uptime rather than raw capacity, self-healing erasure-coded storage, and an on-chain record of what was delivered.", "statements": ["sn75-005", "sn75-014", "sn75-013"]},
+    "positioning.reason": {"summary": "Bittensor's incentive mechanism and its ledger of transactions and service delivery.", "statements": ["sn75-002", "sn75-013"]},
+    "positioning.against": {"summary": "Centralised storage systems and named hyperscalers: AWS, Google Cloud, any single company.", "statements": ["sn75-006", "sn75-011"]},
+    "value.functional": {"summary": "Secure, transparent, scalable hosting through IPFS and S3-compatible storage, files, websites and VMs, paid in fiat or TAO.", "statements": ["sn75-008", "sn75-011", "sn75-013"]},
+    "messaging.h1": {"summary": "The solution to storage on Bittensor; transparent and decentralised cloud storage without relying on any single company.", "statements": ["sn75-010", "sn75-014", "sn75-011"]},
+    "voice": {"summary": "Cloud-vendor marketing prose (groundbreaking, redefine, pushing the boundaries) and practical onboarding lines (no KYC, no wallet required).", "statements": ["sn75-007", "sn75-012"]},
+    "language.term": {"summary": "Arion, self-healing storage, hAlpha, credits; the team runs its own chain and token alongside the subnet.", "statements": ["sn75-014"]},
+    "subnet.self": {"summary": "A decentralised cloud storage platform on its own Substrate chain, with miners proven by stored data and uptime, IPFS and S3-compatible front ends, and erasure-coded Arion storage; sold as cloud without AWS.", "statements": ["sn75-003", "sn75-005", "sn75-008", "sn75-011", "sn75-014"]},
+    "subnet.network": {"summary": "Bittensor is the base the platform is built on and the incentive mechanism it leverages; it is also the network that lacked storage, and on the 2026 homepage a payment rail and audit trail. The 2026 docs barely name it.", "statements": ["sn75-002", "sn75-004", "sn75-009", "sn75-010", "sn75-013"]}
+  },
+  "language": {
+    "words_used": ["decentralized cloud storage", "transparent", "built on Bittensor", "our blockchain", "miners", "validators", "IPFS", "S3-compatible", "Arion", "self-healing", "credits", "no wallet required"],
+    "words_avoided": ["Bittensor in the 2026 docs body", "alpha token as a selling point", "market for intelligence", "AI in product copy beyond a model registry"],
+    "coinages": [
+      {"term": "Arion", "meaning": "Hippius's erasure-coded storage layer: files split into 30 shards, any 10 reconstruct.", "statement": "sn75-014"},
+      {"term": "the solution to storage on Bittensor", "meaning": "The docs tagline claiming the storage niche within the network.", "statement": "sn75-010"}
+    ]
+  },
+  "genealogy": [
+    {"era": "dtao", "summary": "In 2025 the team wrote as a Bittensor subnet: a comprehensive subnet for storage and compute that leverages Bittensor's incentive mechanism, arriving because Bittensor lacked robust decentralised storage, with miners held to proof of stored data and uptime [sn75-001] [sn75-002] [sn75-004] [sn75-005]. The formula built on Bittensor and powered by our blockchain recurs [sn75-009].", "dominant_metaphor": "platform", "shift": ""},
+    {"era": "current", "summary": "By 2026 the docs say Hippius is the solution to storage on Bittensor and then describe storage without AWS, Google Cloud or any single company, with sign-up by Google or GitHub and no wallet; the homepage names Bittensor as a way to pay and as the ledger that tracks service delivery [sn75-010] [sn75-011] [sn75-012] [sn75-013].", "dominant_metaphor": "ledger", "shift": "From subnet-first to cloud-vendor-first; Bittensor becomes a payment and audit rail behind an S3 product."}
+  ],
+  "relations": [
+    {"to": "opentensor-foundation", "kind": "borrows", "statement": "sn75-002", "note": "Leverages Bittensor's incentive mechanism is foundation-docs phrasing."},
+    {"to": "sn62", "kind": "agrees", "statement": "sn75-011", "note": "Both subnets front a conventional product (S3 storage, a coding agent) and push the network to the background in customer copy."}
+  ],
+  "coverage": {
+    "searches_used": 2,
+    "fetches_used": 24,
+    "well_covered": ["2025 forum essays", "2026 docs and homepage", "GitHub README"],
+    "thin": ["spoken voice: two YouTube appearances located, none transcribed", "X posts", "named founders: The Nerve Lab publishes no individual names; Mog and Dubs are community presenters"],
+    "gaps": [
+      "X accounts @Hippius_cloud and the earlier @hippius_subnet: X did not render and web.archive.org is blocked from this session.",
+      "Revenue Search 27 and the Novelty Search presentation: YouTube pages did not render and backprop.finance transcripts returned 403.",
+      "The memory layer and The Brain framing reported by Scott Guttenberger on LinkedIn (June 2026) is in the author's words, not the team's, so it is noted only in lineage.",
+      "The Hippius Updates forum category held no posts."
+    ],
+    "unreachable": ["https://web.archive.org/web/2026/https://x.com/Hippius_cloud", "https://backprop.finance/analytics/podcasts/BmhMhqBE5FY", "https://backprop.finance/analytics/podcasts/4qyWNKha7zY", "https://github.com/thenervelab/hippius", "https://www.youtube.com/watch?v=4qyWNKha7zY", "https://www.youtube.com/watch?v=BmhMhqBE5FY"]
+  }
+}

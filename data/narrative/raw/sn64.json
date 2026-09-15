@@ -1,0 +1,746 @@
+{
+  "narrator": {
+    "id": "sn64",
+    "name": "Chutes (SN64)",
+    "aka": [
+      "Chutes.ai",
+      "Rayon Labs Chutes"
+    ],
+    "kind": "subnet",
+    "role": "Subnet team: serverless AI compute on Bittensor subnet 64",
+    "affiliation": "Rayon Labs",
+    "active_from": "2024-12",
+    "handles": {
+      "x": "@chutes_ai",
+      "github": "rayonlabs",
+      "founder_x": "@jon_durbin"
+    },
+    "subnets": [
+      64
+    ],
+    "one_line": "Rayon Labs' serverless inference subnet, launched December 2024 and led in public by Jon Durbin, which describes itself as a decentralised compute provider and Bittensor as the decentralised AI network that powers it."
+  },
+  "statements": [
+    {
+      "id": "sn64-001",
+      "date": "2024-12-17",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Chutes is a new subnet coming to bittensor 🚀",
+      "context": "Jon Durbin replying on X to a question about what Chutes is, a week before the subnet launched.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/jon_durbin/status/1869111565158654260",
+        "medium": "x",
+        "title": "Reply to @DeFi_42069",
+        "outlet": "Jon Durbin on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn64-002",
+      "date": "2024-12-24",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Chutes has officially arrived—bringing permissionless AI compute to everyone, right in time for the holidays. Leveraging the same Bittensor network that powers many AI subnets, Chutes opens the door for anyone to run any AI model with minimal setup.",
+      "context": "Opening lines of the Chutes team's launch post on the Chutes blog.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "foundation.mission",
+        "subnet.network",
+        "value.functional"
+      ],
+      "themes": [
+        "permissionless entry",
+        "decentralised compute"
+      ],
+      "metaphors": [
+        "door"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/4",
+        "medium": "blog",
+        "title": "Chutes Has Landed! Just in time for Christmas, Permissionless AI Compute is Here",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-003",
+      "date": "2025-02-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Developers are embracing Chutes for everything from training custom models to real-time inference. Meanwhile, miners benefit from streamlined validation tasks and consistent TAO rewards.",
+      "context": "Chutes team blog post announcing product market fit, describing the two sides of the subnet.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "audience",
+        "value.functional"
+      ],
+      "themes": [
+        "incentive design",
+        "developers",
+        "miners"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://chutes.ai/news/3",
+        "medium": "blog",
+        "title": "Chutes Achieves PMF: Billions of Tokens Flowing Through the Open Router Daily",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-004",
+      "date": "2025-02-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "With fundamentals in place and an ever-growing node network, Chutes is on track to redefine decentralized compute at scale.",
+      "context": "Closing line of the Chutes team's product market fit post.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "messaging.h1",
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised compute",
+        "scale"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://chutes.ai/news/3",
+        "medium": "blog",
+        "title": "Chutes Achieves PMF: Billions of Tokens Flowing Through the Open Router Daily",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-005",
+      "date": "2025-02-23",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "2,779 GPUs on https://t.co/eYYRnXjXfW with 892 of those being H200s. 5.6 billion tokens per day, not including non-LLM apps. ~40 requests per second sustained. 53 unique apps. Only 64 days online... #bittensor",
+      "context": "Jon Durbin on X reporting Chutes usage numbers two months after launch.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "messaging.proof",
+        "voice"
+      ],
+      "themes": [
+        "scale",
+        "proof by numbers"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/jon_durbin/status/1893641035680497900",
+        "medium": "x",
+        "title": "Chutes usage numbers",
+        "outlet": "Jon Durbin on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn64-006",
+      "date": "2025-10-07",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Deploy any AI model in minutes with Chutes. Built on a serverless AI infrastructure atop the Bittensor network, Chutes eliminates costly and complex GPU hosting.",
+      "context": "Timon Agar of the Chutes engineering and product team, in a blog post explaining Chutes as a decentralised AI platform.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "value.functional",
+        "positioning.category"
+      ],
+      "themes": [
+        "serverless",
+        "decentralised compute"
+      ],
+      "metaphors": [
+        "cloud"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/chutes-a-decentralized-ai-platform",
+        "medium": "blog",
+        "title": "Chutes: A Decentralized AI Platform",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-007",
+      "date": "2025-10-07",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "With Chutes, you can run powerful AI without giving up control of your data",
+      "context": "Timon Agar's blog post setting Chutes against centralised cloud providers.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "positioning.against",
+        "value.emotional"
+      ],
+      "themes": [
+        "ownership",
+        "anti-hyperscaler"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://chutes.ai/news/chutes-a-decentralized-ai-platform",
+        "medium": "blog",
+        "title": "Chutes: A Decentralized AI Platform",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-008",
+      "date": "2025-11-12",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Chutes AI was founded by a global, decentralized collective of engineers, researchers, and builders working under the umbrella of … There is no CEO or central decision maker; responsibilities are shared across contributors through a collective governance process.",
+      "context": "Chutes blog post answering who the founders are; the elided words are a link to Rayon Labs.",
+      "about": "subnet:64",
+      "slots": [
+        "relationship",
+        "foundation.values",
+        "subnet.self"
+      ],
+      "themes": [
+        "collective governance",
+        "decentralisation"
+      ],
+      "metaphors": [
+        "collective"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/who-are-the-founders-of-chutes-ai",
+        "medium": "blog",
+        "title": "Who are the founders of Chutes AI?",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-009",
+      "date": "2025-11-12",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Chutes harnesses the Bittensor ecosystem—a decentralized network of specialized AI systems—to deliver aggregate performance and diversity of capabilities that are difficult to match with traditional centralized approaches.",
+      "context": "The same Chutes founders post describing what Bittensor is and why Chutes builds on it.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.differentiator",
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "anti-centralisation"
+      ],
+      "metaphors": [
+        "ecosystem"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/who-are-the-founders-of-chutes-ai",
+        "medium": "blog",
+        "title": "Who are the founders of Chutes AI?",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-010",
+      "date": "2025-11-12",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "With Chutes, you bring the code and the models; the network handles deployment, scaling, and reliability—powering the open‑source AI revolution with open infrastructure designed for real‑world workloads.",
+      "context": "Closing paragraph of the Chutes founders post, addressed to developers.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "audience",
+        "messaging.h1"
+      ],
+      "themes": [
+        "open source",
+        "developers"
+      ],
+      "metaphors": [
+        "revolution"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/who-are-the-founders-of-chutes-ai",
+        "medium": "blog",
+        "title": "Who are the founders of Chutes AI?",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-011",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Chutes is powered by Bittensor, a decentralized AI network - we are Subnet 64.",
+      "context": "The Chutes documentation homepage, read in September 2026, stating the relation to Bittensor.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "relationship",
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://docs.chutes.ai/",
+        "medium": "docs",
+        "title": "Chutes documentation",
+        "outlet": "Chutes docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-012",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Powering Trillions of Tokens per Month, Chutes is the leading open-source, decentralized compute provider for deploying, scaling and running open-source models in production.",
+      "context": "The chutes.ai homepage, read in September 2026, under the headline 'Breakthrough Serverless Compute for AI, at Scale'.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "messaging.h1",
+        "positioning.category",
+        "messaging.proof"
+      ],
+      "themes": [
+        "decentralised compute",
+        "open source",
+        "scale"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://chutes.ai",
+        "medium": "docs",
+        "title": "Chutes homepage",
+        "outlet": "chutes.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-013",
+      "date": "2026-03-20",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We processed 45% fewer tokens over the last six weeks. On the surface, that may seem like pretty bad news, but the true story is one of massive increases in efficiency and future sustainability.",
+      "context": "Timon Agar opening a Chutes blog post on moving from volume to value after a change to the subscription model.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "voice",
+        "messaging.proof"
+      ],
+      "themes": [
+        "sustainability",
+        "revenue"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://chutes.ai/news/from-volume-to-value-building-a-sustainable-ai-inference-platform-2",
+        "medium": "blog",
+        "title": "From Volume to Value: Building a Sustainable AI Inference Platform",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-014",
+      "date": "2026-03-20",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "No subsidies. No underwater deals. No abuse vectors. Just real customers paying for real usage, and a fleet that earns its keep.",
+      "context": "Timon Agar summing up the Chutes revenue position in the volume to value post.",
+      "about": "subnet:64",
+      "slots": [
+        "subnet.self",
+        "positioning.reason",
+        "voice"
+      ],
+      "themes": [
+        "sustainability",
+        "revenue"
+      ],
+      "metaphors": [
+        "fleet"
+      ],
+      "source": {
+        "url": "https://chutes.ai/news/from-volume-to-value-building-a-sustainable-ai-inference-platform-2",
+        "medium": "blog",
+        "title": "From Volume to Value: Building a Sustainable AI Inference Platform",
+        "outlet": "Chutes blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn64-015",
+      "date": "2026-05-15",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Chutes broke that cycle and unleashed the power of bittensor in a pretty huge way,",
+      "context": "Jon Durbin, quoted by tao.media from his article 'Chutes: a glance behind, and a leap ahead', on Bittensor usage having been limited before Chutes.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "adoption",
+        "network usage"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.tao.media/inside-chutes-next-phase-revenue-efficiency-ai-training-and-secure-infrastructure/",
+        "medium": "article",
+        "title": "Inside Chutes' Next Phase: Revenue Efficiency, AI Training, and Secure Infrastructure",
+        "outlet": "tao.media",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2025-01-13",
+      "title": "S2E6 - Chutes.ai Subnet 64 w/ Namoray and Jon Durbin",
+      "outlet": "Bittensor Guru",
+      "url": "https://bittensor.guru/s2e6-chutesai-subnet-64-w-namoray-and-jon-durbin",
+      "medium": "podcast",
+      "note": "Subnet 64 built for dTAO, TAO micropayments, validation rewrite; page unreachable this session (TLS error), no transcript reached"
+    },
+    {
+      "date": "2025-06",
+      "title": "Bittensor Revenue Search 06 - Jon Durbin - SN64 Chutes",
+      "outlet": "Revenue Search (YouTube)",
+      "url": "https://www.youtube.com/watch?v=qEbA0Bu_F-s",
+      "medium": "youtube",
+      "note": "Business side of Chutes; description not readable this session, no transcript"
+    },
+    {
+      "date": "2025",
+      "title": "Bittensor's Biggest Subnet Speaks Out - Jon Durbin (Chutes) | On Chain Ep.7",
+      "outlet": "On Chain (YouTube)",
+      "url": "https://www.youtube.com/watch?v=hbdrRbtMOS0",
+      "medium": "youtube",
+      "note": "Interview with Jon Durbin; description not readable this session, no transcript"
+    },
+    {
+      "date": "2025",
+      "title": "Jon Durbin: Chutes.ai, Bittensor Miner, AI Agents, Automation, Subnets | Ventura Labs Ep. 25",
+      "outlet": "Ventura Labs (YouTube)",
+      "url": "https://www.youtube.com/watch?v=ZTEvgt3_d9E",
+      "medium": "youtube",
+      "note": "Durbin on moving from mining to subnet ownership; not fetched, no transcript"
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "cloud",
+      "wording": "serverless AI infrastructure atop the Bittensor network",
+      "first_statement": "sn64-006",
+      "origin": "reused",
+      "lineage_notes": "The serverless cloud frame is the standard hyperscaler vocabulary; Manifold's Targon uses 'decentralized and trustless AI cloud' at https://www.manifold.inc/releases/series-a-announcement"
+    },
+    {
+      "label": "collective",
+      "wording": "a global, decentralized collective of engineers, researchers, and builders",
+      "first_statement": "sn64-008",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "ecosystem",
+      "wording": "the Bittensor ecosystem—a decentralized network of specialized AI systems",
+      "first_statement": "sn64-009",
+      "origin": "reused",
+      "lineage_notes": "Ecosystem is the foundation's usual word for the network; see bittensor.com"
+    },
+    {
+      "label": "fleet",
+      "wording": "a fleet that earns its keep",
+      "first_statement": "sn64-014",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "door",
+      "wording": "opens the door for anyone to run any AI model",
+      "first_statement": "sn64-002",
+      "origin": "reused",
+      "lineage_notes": ""
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Chutes says it exists to bring permissionless AI compute to everyone and to let developers deploy any model without owning GPUs.",
+      "statements": [
+        "sn64-002",
+        "sn64-006",
+        "sn64-010"
+      ]
+    },
+    "foundation.values": {
+      "summary": "The team presents itself as a decentralised collective with no CEO and shared governance.",
+      "statements": [
+        "sn64-008"
+      ]
+    },
+    "audience": {
+      "summary": "Two audiences are named: developers who bring code and models, and miners who earn TAO for validation work.",
+      "statements": [
+        "sn64-003",
+        "sn64-010"
+      ]
+    },
+    "positioning.category": {
+      "summary": "Chutes calls itself a decentralised compute provider and a serverless AI infrastructure; Bittensor is described as a decentralised AI network.",
+      "statements": [
+        "sn64-012",
+        "sn64-006",
+        "sn64-011",
+        "sn64-004"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "The stated difference is aggregate performance and diversity of capability from a network of specialised AI systems, which centralised approaches cannot match.",
+      "statements": [
+        "sn64-009"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "By 2026 the proof offered is revenue without subsidies: real customers paying for real usage.",
+      "statements": [
+        "sn64-014",
+        "sn64-013"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Chutes sets itself against centralised clouds where the user gives up control of data.",
+      "statements": [
+        "sn64-007"
+      ]
+    },
+    "value.functional": {
+      "summary": "Deploy any model in minutes, no GPU hosting, pay per use, and TAO rewards for miners.",
+      "statements": [
+        "sn64-006",
+        "sn64-003",
+        "sn64-002"
+      ]
+    },
+    "value.emotional": {
+      "summary": "Control of your own data is the feeling sold.",
+      "statements": [
+        "sn64-007"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "The repeated line is that Chutes is the leading decentralised compute provider redefining decentralised compute at scale.",
+      "statements": [
+        "sn64-012",
+        "sn64-004",
+        "sn64-010"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Proof is given in numbers: GPU counts, tokens per day, trillions of tokens per month, and later cost per token.",
+      "statements": [
+        "sn64-005",
+        "sn64-012",
+        "sn64-013",
+        "sn64-015"
+      ]
+    },
+    "voice": {
+      "summary": "Durbin's register on X is informal and boastful in a friendly way; the blog is plain product copy.",
+      "statements": [
+        "sn64-005",
+        "sn64-001",
+        "sn64-014"
+      ]
+    },
+    "relationship": {
+      "summary": "The team speaks as a subnet that runs on Bittensor and is powered by it, and Durbin speaks as the builder who unleashed the network's usage.",
+      "statements": [
+        "sn64-011",
+        "sn64-001",
+        "sn64-008",
+        "sn64-015"
+      ]
+    },
+    "subnet.self": {
+      "summary": "Chutes describes itself as serverless, permissionless compute for everyone, a cloud with a fleet of GPUs that must earn its keep.",
+      "statements": [
+        "sn64-002",
+        "sn64-006",
+        "sn64-012",
+        "sn64-014"
+      ]
+    },
+    "subnet.network": {
+      "summary": "Bittensor is described in its own words as a decentralised AI network and an ecosystem of specialised AI systems, closer to the foundation's language than to Steeves's market framing.",
+      "statements": [
+        "sn64-011",
+        "sn64-009",
+        "sn64-002",
+        "sn64-015"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "permissionless",
+      "serverless",
+      "decentralized compute",
+      "GPU",
+      "tokens",
+      "miners",
+      "TAO",
+      "fleet",
+      "collective"
+    ],
+    "words_avoided": [
+      "market for intelligence",
+      "commodity",
+      "Yuma",
+      "digital commodities"
+    ],
+    "coinages": [
+      {
+        "term": "Chute",
+        "meaning": "an application deployed on the platform; the product name doubles as the unit of deployment",
+        "statement": "sn64-002"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "revolution",
+      "summary": "At launch in December 2024 the frame was permissionless AI compute for everyone, leveraging the same Bittensor network that powers other subnets [sn64-002]. Durbin announced it simply as a new subnet coming to bittensor [sn64-001].",
+      "dominant_metaphor": "door",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "Through 2025 the language became scale and proof: GPU counts and tokens per day [sn64-005], product market fit and redefining decentralised compute at scale [sn64-004]. By late 2025 Chutes called itself a serverless AI infrastructure atop the Bittensor network [sn64-006] built by a decentralised collective [sn64-008], and by early 2026 the story turned to sustainability and revenue without subsidies [sn64-014]. Bittensor is named as a decentralised AI network and an ecosystem [sn64-011] [sn64-009].",
+      "dominant_metaphor": "cloud",
+      "shift": "from permissionless access to a revenue-bearing cloud"
+    },
+    {
+      "era": "current",
+      "summary": "The homepage in September 2026 leads with trillions of tokens per month and the claim to be the leading open-source decentralised compute provider [sn64-012].",
+      "dominant_metaphor": "cloud",
+      "shift": "proof by volume replaces proof by novelty"
+    }
+  ],
+  "relations": [
+    {
+      "to": "opentensor-foundation",
+      "kind": "borrows",
+      "statement": "sn64-009",
+      "note": "Uses the foundation's 'ecosystem' and 'decentralized AI network' wording rather than a market frame"
+    },
+    {
+      "to": "sn4",
+      "kind": "agrees",
+      "statement": "sn64-006",
+      "note": "Both Rayon Labs and Manifold describe their subnets as a cloud on Bittensor"
+    }
+  ],
+  "coverage": {
+    "searches_used": 4,
+    "fetches_used": 16,
+    "well_covered": [
+      "dtao era blog posts on chutes.ai/news",
+      "site and docs self-description"
+    ],
+    "thin": [
+      "Jon Durbin's own voice: only three X posts reached via search snippets and one secondary quote",
+      "revolution era: launch week only"
+    ],
+    "gaps": [
+      "Bittensor Guru S2E6 page failed with a TLS certificate error, so no podcast transcript",
+      "YouTube pages (Revenue Search, On Chain, Ventura Labs) returned only footer text, no descriptions",
+      "Durbin's 2026 article 'Chutes: a glance behind, and a leap ahead' was not located on chutes.ai/news; only tao.media's quotation reached",
+      "x.com posts could not be fetched directly; archive.org is blocked for this agent"
+    ],
+    "unreachable": [
+      "https://bittensor.guru/s2e6-chutesai-subnet-64-w-namoray-and-jon-durbin",
+      "https://www.youtube.com/watch?v=qEbA0Bu_F-s",
+      "https://www.youtube.com/watch?v=hbdrRbtMOS0",
+      "https://x.com/jon_durbin/status/1869111565158654260"
+    ]
+  }
+}

@@ -44,7 +44,16 @@ def main():
     if data and data.get("rubric_version") != md_ver:
         fails.append(f"index.json rubric_version {data.get('rubric_version')} != rubric.md {md_ver}")
 
-    pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html"]
+    pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html", "narrative/index.html", "narrative/method/index.html"]
+    npath = REPO / "data" / "narrative.json"
+    if npath.exists():
+        nd = json.loads(npath.read_text(encoding="utf-8"))
+        pages += ["narrative/metaphors/index.html"] + [f"narrative/{n['id']}/index.html" for n in nd["narrators"]]
+        if not (REPO / "assets" / "og" / "narrative.png").exists():
+            fails.append("assets/og/narrative.png missing")
+        for st in nd["statements"]:
+            if st["confidence"] == "verified" and not st["source"]["url"].startswith("http"):
+                fails.append(f"narrative {st['id']}: verified without a URL")
     if data:
         pages += ["sn/index.html"] + [f"sn/{s['netuid']}/index.html" for s in data["subnets"]]
         if any(s.get("alpha") for s in data["subnets"]):
@@ -89,6 +98,9 @@ def main():
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/rubric/", f"{SITE}/methodology/", f"{SITE}/about/", f"{SITE}/sn/"}
         if any(s.get("alpha") for s in data["subnets"]):
             want |= {f"{SITE}/alpha/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/alpha/"}
+        want |= {f"{SITE}/narrative/", f"{SITE}/narrative/method/"}
+        if npath.exists():
+            want |= {f"{SITE}/narrative/metaphors/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"]}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))
         if want != have:
             fails.append(f"sitemap mismatch: missing {sorted(want - have)[:3]} extra {sorted(have - want)[:3]}")

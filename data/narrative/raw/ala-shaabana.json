@@ -1,0 +1,2006 @@
+{
+  "narrator": {
+    "id": "ala-shaabana",
+    "name": "Ala Shaabana",
+    "aka": [
+      "shibshib",
+      "ShibShib",
+      "Ala S."
+    ],
+    "kind": "person",
+    "role": "Co-founder, Bittensor and the Opentensor Foundation; co-founder, Crucible Labs",
+    "affiliation": "Opentensor Foundation (2019 to 2026), Crucible Labs (2024 onward)",
+    "active_from": "2019",
+    "handles": {
+      "x": "@shibshib89",
+      "github": "shibshib",
+      "medium": "@shaabana",
+      "linkedin": "ashaabana"
+    },
+    "subnets": [],
+    "one_line": "The academic half of the founding pair: a McMaster applied-computing PhD and ex-VMware distributed-systems engineer who co-built Bittensor with Jacob Steeves from 2019, ran the foundation's operations, left for Crucible Labs, and explains the network in engineering and institutional terms rather than in Steeves's biological ones."
+  },
+  "statements": [
+    {
+      "id": "ala-shaabana-001",
+      "date": "2020",
+      "date_precision": "year",
+      "era": "pre",
+      "quote": "As with other commodities, markets could help us efficiently produce machine intelligence. We propose a market where intelligence is priced by other intelligence systems peer-to-peer across the internet.",
+      "context": "Opening of the abstract of the Bittensor whitepaper, published under the pseudonym Yuma Rao and credited to Steeves and Shaabana as co-authors.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "foundation.mission"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "market",
+        "commodity"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/whitepaper",
+        "medium": "whitepaper",
+        "title": "Bittensor: A Peer-to-Peer Intelligence Market",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-002",
+      "date": "2020",
+      "date_precision": "year",
+      "era": "pre",
+      "quote": "Standalone engineers cannot directly monetize their work and what results is centralization where a small set of large corporations control access to the best artificial intelligence.",
+      "context": "Introduction of the whitepaper, stating the problem the market is meant to solve; authorship is pseudonymous so the words are credited to the founding pair rather than to Shaabana alone.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "problem.institutional"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "ownership",
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.bittensor.com/whitepaper",
+        "medium": "whitepaper",
+        "title": "Bittensor: A Peer-to-Peer Intelligence Market",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-003",
+      "date": "2020",
+      "date_precision": "year",
+      "era": "pre",
+      "quote": "A new commodity needs a new type of market. This paper suggests a framework in which machine intelligence is measured by other intelligence systems.",
+      "context": "Whitepaper introduction, naming intelligence as a commodity and the network as the market for it.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets"
+      ],
+      "metaphors": [
+        "commodity",
+        "market"
+      ],
+      "source": {
+        "url": "https://www.bittensor.com/whitepaper",
+        "medium": "whitepaper",
+        "title": "Bittensor: A Peer-to-Peer Intelligence Market",
+        "outlet": "bittensor.com",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-004",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Bitcoin is designed in such a way that this digital commodity is very easy to to validate, right? Hashes are immediate to validate and everybody can agree",
+      "context": "On the Towards Data Science podcast with Jacob Steeves, explaining to host Jeremie Harris why validating intelligence is harder than validating Bitcoin hashes.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "problem.market"
+      ],
+      "themes": [
+        "commodity markets",
+        "incentive design"
+      ],
+      "metaphors": [
+        "bitcoin",
+        "commodity"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "00:12:09",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-005",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Any TAO on the system has actually been mined fairly. So it's actually contributed to the general knowledge of the whole system. We didn't kind of do any kind of initial coin offering.",
+      "context": "Towards Data Science podcast, answering how the token was distributed.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "positioning.reason"
+      ],
+      "themes": [
+        "token economics",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "mining"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "00:18:37",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-006",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "every 12 seconds or so there is a new block generated. And with that block, there's one TAO that is awarded to the highest performers",
+      "context": "Towards Data Science podcast, describing the block reward mechanism to a machine learning audience.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "messaging.proof"
+      ],
+      "themes": [
+        "incentive design",
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-007",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "One of the big inefficiencies of AI is...retraining stuff over and over, right? The other kind of side that is also inefficient is the idea of contribution. Today...if I want to contribute to, let's say, an open AI or some massive GPT model...I really kind of have to be either part of the Googles and the Facebooks of the world.",
+      "context": "Towards Data Science podcast, explaining what is broken in how AI is currently produced.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "problem.institutional",
+        "positioning.against"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-008",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "We're an API. And since we are effectively a gigantic, decentralized mixture of experts, what happens is at the mid-tensor layer, any model that you create is going to have...it's really a way to pick experts.",
+      "context": "Towards Data Science podcast, describing what Bittensor is in machine learning terms; the auto transcript renders Bittensor as mid-tensor.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "mixture of experts",
+        "api"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-009",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "At BitTensor, the idea is that you as a human have no input over what models you're talking to. It's your own model that's picking and choosing who to talk to, who is best for it. So we kind of remove this human bias part of it.",
+      "context": "Towards Data Science podcast, on why peer ranking by models replaces human benchmark curation.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "foundation.values"
+      ],
+      "themes": [
+        "incentive design",
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-010",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Information itself on the network also compounds. Right. You don't need to relearn things anymore because you're speaking to other models and might have already learned something that your model doesn't know yet.",
+      "context": "Towards Data Science podcast, on the benefit a researcher gets from plugging a model into the network.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "foundation.vision"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "compounding"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-011",
+      "date": "2022-05-12",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "I find it a little bit more terrifying that a single company, like I don't want to mention, would own AGI compared to all of us owning a piece of it",
+      "context": "Towards Data Science podcast, asked about the risks of powerful AI concentrated in a few labs.",
+      "about": "network",
+      "slots": [
+        "problem.institutional",
+        "positioning.against",
+        "value.emotional",
+        "foundation.values"
+      ],
+      "themes": [
+        "ownership",
+        "anti-OpenAI",
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+        "medium": "podcast",
+        "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+        "outlet": "Towards Data Science podcast",
+        "timestamp": "00:48:29",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-012",
+      "date": "2022-09-19",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Because BitTensor is essentially one large mixture of experts model, you can have it interface with these different environments",
+      "context": "Bittensor Hub AI Sessions episode 1 on Discord, discussing how models on the network could be pointed at tools; the auto transcript attributes this to Shaabana but speaker labels in that transcript are unreliable.",
+      "about": "network",
+      "slots": [
+        "positioning.category"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "mixture of experts"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/ai-sessions-with-bittensor-episode-1-sept-19-2022/",
+        "medium": "discord",
+        "title": "AI Sessions With Bittensor | Episode 1 (Sept 19, 2022)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-013",
+      "date": "2022-09-19",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "And I think that the way that BitTensor incentivizes intelligence is very much in that same vein. ... And to know that it's producing something that is incredibly valuable and incredibly productive to the betterment of mankind or humankind is fantastic.",
+      "context": "Bittensor Hub AI Sessions episode 1, closing remarks after a discussion of productive resources; the auto transcript attributes this to Shaabana but speaker labels are unreliable.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "value.emotional"
+      ],
+      "themes": [
+        "incentive design",
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/ai-sessions-with-bittensor-episode-1-sept-19-2022/",
+        "medium": "discord",
+        "title": "AI Sessions With Bittensor | Episode 1 (Sept 19, 2022)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "01:39:35",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-014",
+      "date": "2023-01-13",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "Nakamoto is going to stay the same. We are going to be either launching on Kusama or Polkadot, depending on how this Finney soft launch goes.",
+      "context": "TGIFT Finney update recorded on the Bittensor Discord with Jacob Steeves, telling the community how the Finney launch would proceed.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-tgift-finney-update-01-10-23/",
+        "medium": "discord",
+        "title": "Bittensor | TGIFT | Finney Update (01.10.23)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-015",
+      "date": "2023-01-13",
+      "date_precision": "day",
+      "era": "nakamoto",
+      "quote": "We will be winding down Nobunaga in the coming weeks. I will post up an announcement about it as we do it, but Nobunaga is becoming obsolete in the next couple weeks.",
+      "context": "Same TGIFT Finney update, announcing the retirement of the Nobunaga test network in the operator's voice.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-tgift-finney-update-01-10-23/",
+        "medium": "discord",
+        "title": "Bittensor | TGIFT | Finney Update (01.10.23)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-016",
+      "date": "2023-03-09",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "we decided to move as a solo chain so we can get back to our nimble development while simultaneously still looking into Polkadot.",
+      "context": "TGIFT Spaces session 2, explaining why Finney launched as its own chain instead of a Polkadot parachain.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "positioning.against",
+        "voice"
+      ],
+      "themes": [
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-session-2-tgift-march-9-2023/",
+        "medium": "discord",
+        "title": "Bittensor Spaces: Session 2 | TGIFT | (March 9, 2023)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-017",
+      "date": "2023-03-09",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "you don't have just one massive network or one massive monolith. Now you have small subnetworks...these subnetworks can actually take care of different aspects",
+      "context": "TGIFT Spaces session 2, introducing the subnet architecture that Finney enables to the community.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.differentiator",
+        "foundation.vision"
+      ],
+      "themes": [
+        "subnets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "monolith"
+      ],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-session-2-tgift-march-9-2023/",
+        "medium": "discord",
+        "title": "Bittensor Spaces: Session 2 | TGIFT | (March 9, 2023)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-018",
+      "date": "2023-03-09",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "delegation will actually allow you to maybe hold a few TAO and then be able to earn on that TAO as you delegate to some bigger validator.",
+      "context": "TGIFT Spaces session 2, explaining delegated staking to small holders.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "value.functional"
+      ],
+      "themes": [
+        "validator power",
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-session-2-tgift-march-9-2023/",
+        "medium": "discord",
+        "title": "Bittensor Spaces: Session 2 | TGIFT | (March 9, 2023)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-019",
+      "date": "2023-03-09",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "ChatTensor is actually intended to run in Fini to learn from all the subnetworks we're creating under Fini.",
+      "context": "TGIFT Spaces session 2, on the foundation's own chat front end; the auto transcript renders Finney as Fini.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "language.term"
+      ],
+      "themes": [
+        "subnets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-session-2-tgift-march-9-2023/",
+        "medium": "discord",
+        "title": "Bittensor Spaces: Session 2 | TGIFT | (March 9, 2023)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-020",
+      "date": "2023-03-30",
+      "date_precision": "day",
+      "era": "finney",
+      "quote": "it might make sense to talk a little bit about how this, um, really sets down the path for like to build things on top of the tensor for anybody, not just for us or for anybody else.",
+      "context": "TGIFT Spaces, steering a conversation led by Carro and Steeves toward the point that subnets let outside teams build on the network.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "foundation.values"
+      ],
+      "themes": [
+        "permissionless entry",
+        "subnets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-tgift-march-30-2023/",
+        "medium": "discord",
+        "title": "Bittensor Spaces: | TGIFT | (March 30, 2023)",
+        "outlet": "The Bittensor Hub",
+        "timestamp": "00:23:05",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-021",
+      "date": "2023-11-01",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Due to their public nature, open source AI projects, such as Bittensor, often lead these discussions, influencing the standards around responsible AI.",
+      "context": "Built In op-ed written by Shaabana the week of the Biden AI executive order, making the case for open source AI.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "foundation.values"
+      ],
+      "themes": [
+        "open source",
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://builtin.com/artificial-intelligence/ai-should-be-open-source",
+        "medium": "article",
+        "title": "3 Reasons AI Should Be Open Source",
+        "outlet": "Built In",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-022",
+      "date": "2023-11-01",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Contrast what we've learned about open source AI in this article with the recent executive order, which states that every company training an AI model must report this model to the U.S. government and obtain approval.",
+      "context": "Built In op-ed, turning from the case for open source to the executive order as its foil.",
+      "about": "network",
+      "slots": [
+        "problem.institutional",
+        "positioning.against"
+      ],
+      "themes": [
+        "governance",
+        "censorship resistance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://builtin.com/artificial-intelligence/ai-should-be-open-source",
+        "medium": "article",
+        "title": "3 Reasons AI Should Be Open Source",
+        "outlet": "Built In",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-023",
+      "date": "2023-11-01",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Further, the executive order maintains a status quo in which only a few corporations can wield AI for their own purposes. Open source AI seeks to democratize and decentralize this power for the greater good.",
+      "context": "Closing lines of the Built In op-ed.",
+      "about": "network",
+      "slots": [
+        "problem.cultural",
+        "foundation.mission",
+        "messaging.h1"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "open source",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://builtin.com/artificial-intelligence/ai-should-be-open-source",
+        "medium": "article",
+        "title": "3 Reasons AI Should Be Open Source",
+        "outlet": "Built In",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-024",
+      "date": "2023-11-21",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Bittensor's roadmap to dissolve its own foundation over time, completing the decentralized vision through demonstrable self-governance.",
+      "context": "Delphi Podcast with Tommy Shaughnessy recorded during the OpenAI board crisis; this wording is the show-notes summary of what Shaabana said about the foundation's role, not a transcript line.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "foundation.vision"
+      ],
+      "themes": [
+        "governance",
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podcasts.apple.com/us/podcast/ala-shaabana-beyond-the-openai-silicon-valley-echo/id1438148082?i=1000635595011",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Beyond the OpenAI Silicon Valley Echo Chamber: Decentralizing AI with Bittensor",
+        "outlet": "The Delphi Podcast",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=06cT9BeQ3KA",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-025",
+      "date": "2024-11-15",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "as Bittensor continues to scale, the community must further accelerate progress by expanding resources and capabilities, and most importantly, decentralizing away from the Opentensor Foundation and into the world",
+      "context": "Medium post announcing Crucible Labs as a validator working in parallel to the foundation; the page returned 403 and this wording comes from a search engine excerpt of it.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "foundation.vision"
+      ],
+      "themes": [
+        "governance",
+        "validator power"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://medium.com/@shaabana/new-beginnings-enter-the-crucible-0a97f4e73545",
+        "medium": "blog",
+        "title": "New Beginnings: Enter the Crucible",
+        "outlet": "Ala Shaabana on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "ala-shaabana-026",
+      "date": "2025-04-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Each project is almost its own independent entity that is tied to TAO directly.",
+      "context": "Zoom interview with Forbes contributor Tor Constantino, describing subnets after dynamic TAO; the Forbes page returned 403 and the wording comes from a search engine excerpt of the article.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.forbes.com/sites/torconstantino/2025/04/25/how-one-company-is-quietly-working-to-transform-ai-forever/",
+        "medium": "article",
+        "title": "This Open-Source Company Is Quietly Working To Transform AI",
+        "outlet": "Forbes",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-027",
+      "date": "2025-12-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "One of these subnets may finally bridge the crypto <> normal users gap, and that will make it an industry success, not just bittensor.",
+      "context": "X post quoting Sami Kassab's line that four or five successful subnets could make Bittensor a generational success and that more than ten are approaching product-market fit; reached through the fxtwitter mirror of the post.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "messaging.proof",
+        "audience"
+      ],
+      "themes": [
+        "subnets",
+        "adoption"
+      ],
+      "metaphors": [
+        "bridge"
+      ],
+      "source": {
+        "url": "https://x.com/shibshib89/status/1998462836817695218",
+        "medium": "x",
+        "title": "X post quoting Sami Kassab on the investment case for Bittensor",
+        "outlet": "@shibshib89 on X",
+        "timestamp": "",
+        "archive_url": "https://api.fxtwitter.com/shibshib89/status/1998462836817695218",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-028",
+      "date": "2025-12-18",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's like if three people in the world owned all the libraries, teachers and computers, and everyone else needed permission to use them",
+      "context": "Interview with CoinDesk's Margaux Nijkerk for the Most Influential profile of Sam Altman, describing the concentration of AI power.",
+      "about": "network",
+      "slots": [
+        "problem.cultural",
+        "positioning.against",
+        "voice"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "ownership",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "libraries"
+      ],
+      "source": {
+        "url": "https://www.coindesk.com/tech/2025/12/18/most-influential-sam-altman",
+        "medium": "article",
+        "title": "Most Influential: Sam Altman",
+        "outlet": "CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-029",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We looked at projects like Folding@Home or SETI@Home. They were distributed, but they lacked proper incentives, and ultimately they failed. That's when it became clear that blockchain was the missing piece.",
+      "context": "Written Q&A with Jeremy Le Bescont for CoinShares' The Node, asked what drew him to blockchain.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "positioning.reason",
+        "relationship"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [
+        "missing piece"
+      ],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-030",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "AI has a fundamental verification problem. Blockchains are very good at verification... you get a trustless, permissionless environment where work can be verified transparently. In many ways, AI verification is the use case blockchains have been waiting for.",
+      "context": "CoinShares Q&A, asked why AI and blockchain work well together.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "opportunity",
+        "messaging.h1"
+      ],
+      "themes": [
+        "verification",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-031",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "One way to think about it is as a brain. Another is as a city. Bittensor is made up of 'subnets', which you can think of as neighbourhoods or specialised regions. Each subnet solves a different problem — storage, inference, training, object generation, defect detection.",
+      "context": "CoinShares Q&A, asked whether it is correct to describe Bittensor as a brain.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "brain",
+        "city"
+      ],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-032",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "You also have researchers, including people from traditional Web2 AI labs, who are increasingly interested in decentralised training because it produces more resilient, generalist models.",
+      "context": "CoinShares Q&A, asked who is using Bittensor today.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "messaging.proof"
+      ],
+      "themes": [
+        "decentralised training",
+        "adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-033",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It all comes down to incentives. Without a token, everyone races to solve the same problem and earns nothing, which is exactly why earlier distributed compute projects failed. By aligning incentives properly, Bittensor gives everyone a fair opportunity to earn based on the value of their work.",
+      "context": "CoinShares Q&A, asked why a token is essential to the network.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "value.functional",
+        "foundation.values"
+      ],
+      "themes": [
+        "incentive design",
+        "token economics"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-034",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The OpenAI governance drama highlighted just how centralised AI power has become... At the same time, Bittensor is fully open-source, incentivising transparent AI development. And importantly, the ecosystem has reached a point where builders are moving faster than the core team.",
+      "context": "CoinShares Q&A, asked what is driving Bittensor's momentum.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "opportunity",
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "open source",
+        "governance"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-035",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Decentralised AI changes this by letting you talk to many models at once, with validators selecting the best responses. Instead of one ChatGPT, you're speaking to a room of them. That brings resilience, nuance, and scale, and it opens the door to models with trillions of parameters.",
+      "context": "CoinShares Q&A, asked whether decentralised AI is a way past current LLM limits.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "value.functional"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "validator power"
+      ],
+      "metaphors": [
+        "room of models"
+      ],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-036",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I think Bittensor could become something like TCP/IP for AI. Most people don't think about TCP/IP, but it underpins the entire internet. I see Bittensor becoming that underlying layer, quietly powering AI development everywhere.",
+      "context": "CoinShares Q&A, asked how he sees Bittensor evolving.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "positioning.category",
+        "messaging.h1"
+      ],
+      "themes": [
+        "infrastructure",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "tcp ip"
+      ],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-037",
+      "date": "2026-01-16",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Very early. We were among the first to coin the term 'crypto AI', and now you're seeing massive valuations being raised for problems we're already solving. That tells you two things: the market is only starting to understand the value here, and the wave is coming.",
+      "context": "CoinShares Q&A, asked whether decentralised AI is still early.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "language.term",
+        "relationship"
+      ],
+      "themes": [
+        "timing",
+        "crypto AI"
+      ],
+      "metaphors": [
+        "wave"
+      ],
+      "source": {
+        "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+        "medium": "article",
+        "title": "Interview: Ala Shaabana, Bittensor",
+        "outlet": "CoinShares, The Node",
+        "timestamp": "",
+        "archive_url": "https://www.youtube.com/watch?v=aMBA7gG5z-E",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "ala-shaabana-038",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's basically taking bitcoin's mining side and making that programmable on a new chain",
+      "context": "This Week in Startups appearance, explaining Bittensor to a startup audience; quoted in Crypto Briefing's writeup of the episode.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "messaging.h1"
+      ],
+      "themes": [
+        "incentive design",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "bitcoin",
+        "programmable mining"
+      ],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-039",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "There's a $100,000,000 a year that are handed out basically as a subsidy",
+      "context": "This Week in Startups, describing emissions as a subsidy that funds subnet builders; quoted in Crypto Briefing's writeup.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "messaging.proof",
+        "language.term"
+      ],
+      "themes": [
+        "token economics",
+        "incentive design"
+      ],
+      "metaphors": [
+        "subsidy"
+      ],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-040",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's five to seven times cheaper than Claude code and Codex at a comparable benchmark",
+      "context": "This Week in Startups, using Ridges (subnet 62) as the example of a subnet product competing with closed AI tools; quoted in Crypto Briefing's writeup.",
+      "about": "subnet:62",
+      "slots": [
+        "messaging.proof",
+        "positioning.against"
+      ],
+      "themes": [
+        "subnets",
+        "adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-041",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Anyone anywhere in the world can compete",
+      "context": "This Week in Startups, on who can mine on a subnet; quoted in Crypto Briefing's writeup.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "audience"
+      ],
+      "themes": [
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-042",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "You have to stake the TAO to get the subnet tokens",
+      "context": "This Week in Startups, explaining dynamic TAO mechanics to a non-crypto host; quoted in Crypto Briefing's writeup.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "language.term"
+      ],
+      "themes": [
+        "token economics",
+        "dTAO"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-043",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We look at these subnets like you would look at startups",
+      "context": "This Week in Startups, describing how Crucible Labs evaluates subnets; quoted in Crypto Briefing's writeup.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "relationship",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "investment"
+      ],
+      "metaphors": [
+        "startups"
+      ],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-044",
+      "date": "2026-03-25",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It's not enough to make the best product; you have to market it the best also",
+      "context": "This Week in Startups, advice to subnet teams; quoted in Crypto Briefing's writeup.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "voice"
+      ],
+      "themes": [
+        "subnets",
+        "adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+        "medium": "podcast",
+        "title": "Ala Shaabana: Bittensor's programmable mining model incentivizes AI development, Ridge's subnet 62 offers competitive pricing, and global talent can earn through subnet tokens",
+        "outlet": "This Week in Startups, via Crypto Briefing",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-045",
+      "date": "2026-06-02",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "We all know that Bitcoin really dwarfs the top 100 supercomputers. Does anybody know, in comparison, what the hash rate is? It's over 600,000 times the power of really what these supercomputers can do. And that's just, really, it's Bitcoin.",
+      "context": "On stage at Proof of Talk 2026 in Paris, arguing that decentralised incentive networks out-marshal corporate data centres; quoted by CoinDesk's Olivier Acuna.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "positioning.reason",
+        "opportunity"
+      ],
+      "themes": [
+        "incentive design",
+        "compute"
+      ],
+      "metaphors": [
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://www.coindesk.com/tech/2026/06/02/bitcoin-s-compute-power-dwarfs-top-100-supercomputers-by-600-000x-says-bittensor-co-founder",
+        "medium": "talk",
+        "title": "Bitcoin's compute power dwarfs top 100 supercomputers by 600k times, says Bittensor co-founder",
+        "outlet": "Proof of Talk 2026, via CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-046",
+      "date": "2026-06-02",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Show me the subnet, and I'll tell you what the miners are optimizing for.",
+      "context": "Proof of Talk 2026, adapting the incentives line attributed to Charlie Munger to subnet design; quoted by CoinDesk.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "positioning.reason",
+        "language.term"
+      ],
+      "themes": [
+        "incentive design",
+        "subnets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.coindesk.com/tech/2026/06/02/bitcoin-s-compute-power-dwarfs-top-100-supercomputers-by-600-000x-says-bittensor-co-founder",
+        "medium": "talk",
+        "title": "Bitcoin's compute power dwarfs top 100 supercomputers by 600k times, says Bittensor co-founder",
+        "outlet": "Proof of Talk 2026, via CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "ala-shaabana-047",
+      "date": "2026-06-02",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "The long-term bull case is no longer primarily technological. It is driven by debt, liquidity, and declining trust in traditional sovereign systems. Subnets really create markets. Intelligence really is no longer locked behind issues of organization; signals will define the truth, and performance is really rewarded.",
+      "context": "Proof of Talk 2026, closing his argument on why decentralised networks win; quoted by CoinDesk.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "positioning.category",
+        "foundation.vision"
+      ],
+      "themes": [
+        "commodity markets",
+        "subnets",
+        "macro"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://www.coindesk.com/tech/2026/06/02/bitcoin-s-compute-power-dwarfs-top-100-supercomputers-by-600-000x-says-bittensor-co-founder",
+        "medium": "talk",
+        "title": "Bitcoin's compute power dwarfs top 100 supercomputers by 600k times, says Bittensor co-founder",
+        "outlet": "Proof of Talk 2026, via CoinDesk",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2022-03-15",
+      "title": "ep 2: Building an Open, Decentralized, and Community-Driven Marketplace (for AI!)",
+      "outlet": "Meta-Averse podcast (Substack)",
+      "url": "https://metaaverse.substack.com/p/ep-2-building-an-open-decentralized",
+      "medium": "podcast",
+      "note": "Both co-founders on web3 for machine intelligence; episode page has no transcript."
+    },
+    {
+      "date": "2022-05-12",
+      "title": "123. Ala Shaabana and Jacob Steeves - AI on the blockchain (it actually might just make sense)",
+      "outlet": "Towards Data Science podcast",
+      "url": "https://podscript.ai/videos/towards-data-science/ala-shaabana-and-jacob-steeves-ai-on-the-blockchain-it-actually-might-just-make-sense/",
+      "medium": "podcast",
+      "note": "Long interview with Jeremie Harris; auto transcript on PodScript, YouTube at https://www.youtube.com/watch?v=sRn-Q_mSjAM."
+    },
+    {
+      "date": "2022-09-19",
+      "title": "AI Sessions With Bittensor | Episode 1",
+      "outlet": "The Bittensor Hub (Discord recording)",
+      "url": "https://podscript.ai/videos/the-bittensor-hub/ai-sessions-with-bittensor-episode-1-sept-19-2022/",
+      "medium": "discord",
+      "note": "Community session on AI capabilities and alignment; auto transcript with unreliable speaker labels."
+    },
+    {
+      "date": "2023-01-13",
+      "title": "Bittensor | TGIFT | Finney Update",
+      "outlet": "The Bittensor Hub (Discord recording)",
+      "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-tgift-finney-update-01-10-23/",
+      "medium": "discord",
+      "note": "Steeves and Shaabana on the Finney soft launch and Nobunaga wind-down; auto transcript."
+    },
+    {
+      "date": "2023-03-09",
+      "title": "Bittensor Spaces: Session 2 | TGIFT",
+      "outlet": "The Bittensor Hub",
+      "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-session-2-tgift-march-9-2023/",
+      "medium": "discord",
+      "note": "Finney as a solo chain, subnets, delegation, ChatTensor; auto transcript."
+    },
+    {
+      "date": "2023-03-30",
+      "title": "Bittensor Spaces | TGIFT",
+      "outlet": "The Bittensor Hub",
+      "url": "https://podscript.ai/videos/the-bittensor-hub/bittensor-spaces-tgift-march-30-2023/",
+      "medium": "discord",
+      "note": "Mostly Carro and Steeves; Shaabana makes two brief interjections; auto transcript."
+    },
+    {
+      "date": "2023-11-21",
+      "title": "Ala Shaabana: Beyond the OpenAI Silicon Valley Echo Chamber: Decentralizing AI with Bittensor",
+      "outlet": "The Delphi Podcast",
+      "url": "https://podcasts.apple.com/us/podcast/ala-shaabana-beyond-the-openai-silicon-valley-echo/id1438148082?i=1000635595011",
+      "medium": "podcast",
+      "note": "Hosted by Tommy Shaughnessy during the OpenAI board crisis; covers governance, subnets, and the plan to dissolve the foundation; no public transcript found, YouTube mirror at https://www.youtube.com/watch?v=06cT9BeQ3KA."
+    },
+    {
+      "date": "2023-12-19",
+      "title": "Bittensor and decentralized commodity markets with Ala Shaabana",
+      "outlet": "In Plaintext podcast (Nina Protocol)",
+      "url": "https://www.ninaprotocol.com/releases/bittensor-and-decentralized-commodity-markets-with-ala-shaabana",
+      "medium": "podcast",
+      "note": "43 minute episode; page rate-limited (429) so nothing verified from it."
+    },
+    {
+      "date": "2025-06-10",
+      "title": "Mining Intelligence on the Open Web | Proof of Talk 2025",
+      "outlet": "Proof of Talk (YouTube)",
+      "url": "https://www.youtube.com/watch?v=YZd0dZ4RWjw",
+      "medium": "talk",
+      "note": "Panel with Robert Myers, Marcus Graichen, Jose Rios, moderated by Victor Teixeira; no transcript read."
+    },
+    {
+      "date": "2025-09-25",
+      "title": "Robert Scoble interview with Ala Shaabana",
+      "outlet": "Robert Scoble on X",
+      "url": "https://x.com/Scobleizer/status/1971242794019864895",
+      "medium": "youtube",
+      "note": "Scoble called it the most important interview he had done that year; video not reached, no transcript."
+    },
+    {
+      "date": "2026-01-16",
+      "title": "Ala Shaabana (Bittensor) - 'The market is only starting to understand the value of decentralised AI'",
+      "outlet": "CoinShares, The Node",
+      "url": "https://coinshares.com/us/insights/the-node/interview-ala-shaabana-bittensor/",
+      "medium": "article",
+      "note": "Written Q&A with Jeremy Le Bescont plus a YouTube cut at https://www.youtube.com/watch?v=aMBA7gG5z-E; the written version is the primary."
+    },
+    {
+      "date": "2026-03-25",
+      "title": "Ala Shaabana on This Week in Startups",
+      "outlet": "This Week in Startups",
+      "url": "https://cryptobriefing.com/ala-shaabana-bittensors-programmable-mining-model-incentivizes-ai-development-ridges-subnet-62-offers-competitive-pricing-and-global-talent-can-earn-through-subnet-tokens-twist/",
+      "medium": "podcast",
+      "note": "Programmable mining, Ridges subnet 62, dTAO staking, Crucible's startup lens; also where he confirmed leaving the foundation to focus on Crucible Labs per A Bittensor Journey; episode page not reached, quotes via Crypto Briefing."
+    },
+    {
+      "date": "2026-06-02",
+      "title": "Proof of Talk 2026 fireside with Jacob Steeves",
+      "outlet": "Proof of Talk, Paris",
+      "url": "https://www.coindesk.com/tech/2026/06/02/bitcoin-s-compute-power-dwarfs-top-100-supercomputers-by-600-000x-says-bittensor-co-founder",
+      "medium": "talk",
+      "note": "Bitcoin hash rate versus supercomputers, subnets as markets; quotes via CoinDesk, no transcript."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "market",
+      "wording": "a market where intelligence is priced by other intelligence systems",
+      "first_statement": "ala-shaabana-001",
+      "origin": "reused",
+      "lineage_notes": "The whitepaper frame shared with Jacob Steeves under the Yuma Rao pseudonym; Shaabana returns to it in 2026 as 'Subnets really create markets' [ala-shaabana-047]."
+    },
+    {
+      "label": "commodity",
+      "wording": "A new commodity needs a new type of market",
+      "first_statement": "ala-shaabana-003",
+      "origin": "reused",
+      "lineage_notes": "Whitepaper wording; echoed in the 2022 Bitcoin comparison 'this digital commodity' [ala-shaabana-004] and in the In Plaintext episode title 'decentralized commodity markets'."
+    },
+    {
+      "label": "bitcoin",
+      "wording": "taking bitcoin's mining side and making that programmable on a new chain",
+      "first_statement": "ala-shaabana-004",
+      "origin": "reused",
+      "lineage_notes": "The Bitcoin frame is the founding pair's shared one; 21Shares repeats it as 'Just as Bitcoin monetized energy, Bittensor monetizes intelligence' at https://www.21shares.com/en-eu/insights/inside-bittensor-the-blockchain-for-ai. Shaabana uses it as an engineering analogy (validation, hash rate) rather than as 'the Bitcoin of AI'."
+    },
+    {
+      "label": "mixture of experts",
+      "wording": "a gigantic, decentralized mixture of experts",
+      "first_statement": "ala-shaabana-008",
+      "origin": "reused",
+      "lineage_notes": "Borrowed from machine learning literature; a technical frame he favours over biological ones in 2022."
+    },
+    {
+      "label": "api",
+      "wording": "We're an API",
+      "first_statement": "ala-shaabana-008",
+      "origin": "introduced",
+      "lineage_notes": "Engineering self-description from the 2022 Towards Data Science interview."
+    },
+    {
+      "label": "compounding",
+      "wording": "Information itself on the network also compounds",
+      "first_statement": "ala-shaabana-010",
+      "origin": "unknown",
+      "lineage_notes": ""
+    },
+    {
+      "label": "monolith",
+      "wording": "you don't have just one massive network or one massive monolith. Now you have small subnetworks",
+      "first_statement": "ala-shaabana-017",
+      "origin": "introduced",
+      "lineage_notes": "Software architecture frame (monolith versus services) applied to the subnet split in March 2023."
+    },
+    {
+      "label": "libraries",
+      "wording": "if three people in the world owned all the libraries, teachers and computers, and everyone else needed permission to use them",
+      "first_statement": "ala-shaabana-028",
+      "origin": "introduced",
+      "lineage_notes": "Not found in other narrators' mouths."
+    },
+    {
+      "label": "brain",
+      "wording": "One way to think about it is as a brain",
+      "first_statement": "ala-shaabana-031",
+      "origin": "reused",
+      "lineage_notes": "Offered only after the CoinShares interviewer asked whether Bittensor is a brain; the brain frame belongs to Jacob Steeves's telling and Shaabana immediately swaps it for a city."
+    },
+    {
+      "label": "city",
+      "wording": "Another is as a city. Bittensor is made up of 'subnets', which you can think of as neighbourhoods or specialised regions",
+      "first_statement": "ala-shaabana-031",
+      "origin": "introduced",
+      "lineage_notes": "Not found elsewhere in this session."
+    },
+    {
+      "label": "room of models",
+      "wording": "Instead of one ChatGPT, you're speaking to a room of them",
+      "first_statement": "ala-shaabana-035",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "tcp ip",
+      "wording": "Bittensor could become something like TCP/IP for AI",
+      "first_statement": "ala-shaabana-036",
+      "origin": "unknown",
+      "lineage_notes": "Infrastructure frame; check against Steeves and foundation material in the merge step."
+    },
+    {
+      "label": "wave",
+      "wording": "the wave is coming",
+      "first_statement": "ala-shaabana-037",
+      "origin": "reused",
+      "lineage_notes": "Common crypto idiom."
+    },
+    {
+      "label": "subsidy",
+      "wording": "a $100,000,000 a year that are handed out basically as a subsidy",
+      "first_statement": "ala-shaabana-039",
+      "origin": "unknown",
+      "lineage_notes": "Frames emissions as a subsidy for builders; compare with other narrators' 'emissions' and 'incentive' wording."
+    },
+    {
+      "label": "startups",
+      "wording": "We look at these subnets like you would look at startups",
+      "first_statement": "ala-shaabana-043",
+      "origin": "reused",
+      "lineage_notes": "Sami Kassab's 'largest collection of crypto-AI startups' at https://x.com/shibshib89/status/1998462836817695218 (quoted post) uses the same frame; Shaabana adopts it as Crucible's investment lens."
+    },
+    {
+      "label": "bridge",
+      "wording": "bridge the crypto <> normal users gap",
+      "first_statement": "ala-shaabana-027",
+      "origin": "reused",
+      "lineage_notes": "Common crypto idiom."
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "A market that prices machine intelligence peer to peer so that anyone can contribute and be paid for it, and so that AI's power is democratised and decentralised rather than held by a few corporations.",
+      "statements": [
+        "ala-shaabana-001",
+        "ala-shaabana-013",
+        "ala-shaabana-023"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "Bittensor as the unnoticed underlying layer for AI, a TCP/IP, made of many specialised subnetworks rather than one monolith, with the foundation itself dissolving into the network over time.",
+      "statements": [
+        "ala-shaabana-036",
+        "ala-shaabana-017",
+        "ala-shaabana-024",
+        "ala-shaabana-025",
+        "ala-shaabana-047",
+        "ala-shaabana-010"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Fair launch with no ICO, open source, permissionless competition from anywhere, and removing human bias from who gets to contribute.",
+      "statements": [
+        "ala-shaabana-005",
+        "ala-shaabana-009",
+        "ala-shaabana-011",
+        "ala-shaabana-020",
+        "ala-shaabana-021",
+        "ala-shaabana-033",
+        "ala-shaabana-041"
+      ]
+    },
+    "problem.cultural": {
+      "summary": "AI power is concentrated in a few hands, which he pictures as three people owning all the libraries and teachers and everyone else needing permission.",
+      "statements": [
+        "ala-shaabana-028",
+        "ala-shaabana-023"
+      ]
+    },
+    "problem.market": {
+      "summary": "AI is verified badly and produced inefficiently: work is retrained over and over, contribution requires belonging to Google or Facebook, and earlier distributed projects like SETI@Home died for lack of incentives.",
+      "statements": [
+        "ala-shaabana-007",
+        "ala-shaabana-029",
+        "ala-shaabana-004",
+        "ala-shaabana-002"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "A single company owning AGI, or a regulator requiring approval for every model, locks in a status quo where only a few corporations wield AI.",
+      "statements": [
+        "ala-shaabana-011",
+        "ala-shaabana-022",
+        "ala-shaabana-002",
+        "ala-shaabana-007"
+      ]
+    },
+    "opportunity": {
+      "summary": "AI verification is the use case blockchains were waiting for; the OpenAI governance drama, the arrival of subnet product-market fit, and a macro turn away from sovereign trust all favour open incentive networks.",
+      "statements": [
+        "ala-shaabana-030",
+        "ala-shaabana-034",
+        "ala-shaabana-037",
+        "ala-shaabana-027",
+        "ala-shaabana-047",
+        "ala-shaabana-045"
+      ]
+    },
+    "audience": {
+      "summary": "Machine learning researchers and Web2 labs in the early years; small TAO holders through delegation; subnet founders and startup investors after dTAO, told to market as well as build.",
+      "statements": [
+        "ala-shaabana-018",
+        "ala-shaabana-020",
+        "ala-shaabana-032",
+        "ala-shaabana-041",
+        "ala-shaabana-044",
+        "ala-shaabana-027"
+      ]
+    },
+    "positioning.category": {
+      "summary": "An intelligence market and a decentralised mixture of experts in 2022; a city of subnet neighbourhoods, TCP/IP for AI, and Bitcoin's mining side made programmable by 2026.",
+      "statements": [
+        "ala-shaabana-001",
+        "ala-shaabana-008",
+        "ala-shaabana-012",
+        "ala-shaabana-031",
+        "ala-shaabana-036",
+        "ala-shaabana-038",
+        "ala-shaabana-043",
+        "ala-shaabana-047"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "Models rank each other without human curation, many models answer at once, and each subnet is its own entity tied to TAO, unlike one monolithic model.",
+      "statements": [
+        "ala-shaabana-009",
+        "ala-shaabana-035",
+        "ala-shaabana-017",
+        "ala-shaabana-026",
+        "ala-shaabana-004"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Incentives are the whole argument: blockchains verify, tokens align contributors, and what a subnet rewards is what its miners will optimise for.",
+      "statements": [
+        "ala-shaabana-033",
+        "ala-shaabana-030",
+        "ala-shaabana-029",
+        "ala-shaabana-046",
+        "ala-shaabana-045",
+        "ala-shaabana-005",
+        "ala-shaabana-021"
+      ]
+    },
+    "positioning.against": {
+      "summary": "OpenAI and the closed labs, the Googles and Facebooks as gatekeepers of contribution, the Biden executive order's reporting regime, Polkadot as a home for the chain, and closed coding tools on price.",
+      "statements": [
+        "ala-shaabana-007",
+        "ala-shaabana-011",
+        "ala-shaabana-022",
+        "ala-shaabana-028",
+        "ala-shaabana-034",
+        "ala-shaabana-016",
+        "ala-shaabana-040"
+      ]
+    },
+    "value.functional": {
+      "summary": "Earn TAO for useful work or by delegating, plug into compounding knowledge, get many models' answers at once, and draw on a large annual emissions subsidy.",
+      "statements": [
+        "ala-shaabana-006",
+        "ala-shaabana-010",
+        "ala-shaabana-018",
+        "ala-shaabana-033",
+        "ala-shaabana-035",
+        "ala-shaabana-039",
+        "ala-shaabana-042"
+      ]
+    },
+    "value.emotional": {
+      "summary": "Relief from the fear of one company owning AGI, and pride in producing something valuable to humankind.",
+      "statements": [
+        "ala-shaabana-011",
+        "ala-shaabana-013"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "Open source AI decentralises power for the greater good; AI verification is the use case blockchains were waiting for; Bittensor is Bitcoin's mining made programmable and could be TCP/IP for AI.",
+      "statements": [
+        "ala-shaabana-023",
+        "ala-shaabana-030",
+        "ala-shaabana-036",
+        "ala-shaabana-038"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Block rewards, a 100 million dollar a year emissions subsidy, subnets approaching product-market fit, Web2 researchers joining, a subnet five to seven times cheaper than Claude Code, and Bitcoin's hash rate as the proof that incentives marshal compute.",
+      "statements": [
+        "ala-shaabana-006",
+        "ala-shaabana-019",
+        "ala-shaabana-032",
+        "ala-shaabana-034",
+        "ala-shaabana-027",
+        "ala-shaabana-039",
+        "ala-shaabana-040",
+        "ala-shaabana-045"
+      ]
+    },
+    "voice": {
+      "summary": "Operator's register: launch logistics, wind-downs, chain choices, and a Munger-style aphorism about miners; plain and institutional rather than prophetic.",
+      "statements": [
+        "ala-shaabana-014",
+        "ala-shaabana-015",
+        "ala-shaabana-016",
+        "ala-shaabana-028",
+        "ala-shaabana-044",
+        "ala-shaabana-046"
+      ]
+    },
+    "relationship": {
+      "summary": "Co-founder and operator who ran launches from the foundation, then built Crucible Labs to pull the network away from the foundation, and by 2026 speaks as an ecosystem investor who says builders now move faster than the core team.",
+      "statements": [
+        "ala-shaabana-014",
+        "ala-shaabana-016",
+        "ala-shaabana-024",
+        "ala-shaabana-025",
+        "ala-shaabana-029",
+        "ala-shaabana-034",
+        "ala-shaabana-037",
+        "ala-shaabana-043"
+      ]
+    },
+    "language.term": {
+      "summary": "Commodity and market from the whitepaper; mixture of experts and API in 2022; subnetworks in 2023; crypto AI as a term he claims to have coined; subnet tokens, subsidy, and subnets as startups after dTAO.",
+      "statements": [
+        "ala-shaabana-003",
+        "ala-shaabana-008",
+        "ala-shaabana-017",
+        "ala-shaabana-019",
+        "ala-shaabana-026",
+        "ala-shaabana-037",
+        "ala-shaabana-039",
+        "ala-shaabana-042",
+        "ala-shaabana-043",
+        "ala-shaabana-046"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "incentives",
+      "commodity",
+      "market",
+      "verification",
+      "trustless",
+      "permissionless",
+      "open source",
+      "mixture of experts",
+      "subnetworks",
+      "subnets",
+      "delegation",
+      "mined fairly",
+      "subsidy",
+      "product-market fit",
+      "startups",
+      "crypto AI",
+      "TCP/IP",
+      "decentralize"
+    ],
+    "words_avoided": [
+      "neurons",
+      "hive mind",
+      "Bitcoin of AI",
+      "AGI as goal",
+      "dTAO by name"
+    ],
+    "coinages": [
+      {
+        "term": "crypto AI",
+        "meaning": "The category label for token-incentivised AI networks, which he says the founders were among the first to coin.",
+        "statement": "ala-shaabana-037"
+      },
+      {
+        "term": "subnetworks",
+        "meaning": "His March 2023 name for what became subnets: small purpose-specific networks replacing one monolith.",
+        "statement": "ala-shaabana-017"
+      },
+      {
+        "term": "programmable mining",
+        "meaning": "Bittensor described as Bitcoin's mining side made programmable on a new chain.",
+        "statement": "ala-shaabana-038"
+      },
+      {
+        "term": "subsidy",
+        "meaning": "Emissions described as roughly 100 million dollars a year handed to builders.",
+        "statement": "ala-shaabana-039"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "pre",
+      "summary": "The whitepaper voice, shared with Steeves, frames intelligence as a commodity that needs a new kind of market and names corporate concentration as the failure to fix [ala-shaabana-001] [ala-shaabana-002] [ala-shaabana-003].",
+      "dominant_metaphor": "market",
+      "shift": ""
+    },
+    {
+      "era": "nakamoto",
+      "summary": "To a machine learning audience he describes Bittensor as an API and a decentralised mixture of experts, stresses the fair launch and the block reward, and states the anti-monopoly case as fear of one company owning AGI [ala-shaabana-008] [ala-shaabana-005] [ala-shaabana-011]. By early 2023 he is the operator announcing launches and wind-downs [ala-shaabana-014] [ala-shaabana-015].",
+      "dominant_metaphor": "mixture of experts",
+      "shift": "From market abstraction to engineering description and operational voice."
+    },
+    {
+      "era": "finney",
+      "summary": "He explains the move to a solo chain and introduces subnetworks against the monolith, delegation for small holders, and the idea that anyone can build on top [ala-shaabana-016] [ala-shaabana-017] [ala-shaabana-018] [ala-shaabana-020].",
+      "dominant_metaphor": "monolith",
+      "shift": "Subnets enter his vocabulary; the frame becomes software architecture rather than one big model."
+    },
+    {
+      "era": "revolution",
+      "summary": "In the week of the OpenAI board crisis and the Biden executive order he argues for open source AI as a matter of who may wield the technology [ala-shaabana-023] [ala-shaabana-022], tells Delphi the foundation should dissolve over time [ala-shaabana-024], and in late 2024 leaves to start a validator that decentralises away from the foundation [ala-shaabana-025].",
+      "dominant_metaphor": "open source",
+      "shift": "Institutional and policy framing replaces engineering framing; the foundation's role becomes a thing to shrink."
+    },
+    {
+      "era": "dtao",
+      "summary": "Subnets become independent entities tied to TAO and are judged like startups [ala-shaabana-026] [ala-shaabana-043]; he offers the city of neighbourhoods and TCP/IP frames, claims the term crypto AI, calls emissions a subsidy, and explains dTAO as staking TAO to get subnet tokens [ala-shaabana-031] [ala-shaabana-036] [ala-shaabana-037] [ala-shaabana-039] [ala-shaabana-042]. The anti-OpenAI line sharpens into the three-people-own-the-libraries image [ala-shaabana-028].",
+      "dominant_metaphor": "city",
+      "shift": "Investor and infrastructure register; the brain metaphor appears only when an interviewer offers it and is swapped for a city."
+    },
+    {
+      "era": "current",
+      "summary": "On stage in Paris he leans on Bitcoin's hash rate as the proof that incentives marshal compute, turns Munger's incentives line on subnets, and adds a macro bull case built on debt, liquidity, and sovereign distrust [ala-shaabana-045] [ala-shaabana-046] [ala-shaabana-047].",
+      "dominant_metaphor": "bitcoin",
+      "shift": "Macro and markets language on top of the incentives argument."
+    }
+  ],
+  "relations": [
+    {
+      "to": "jacob-steeves",
+      "kind": "borrows",
+      "statement": "ala-shaabana-031",
+      "note": "Accepts the brain frame associated with Steeves only when prompted, then substitutes a city; the market and Bitcoin frames are shared from the whitepaper."
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "agrees",
+      "statement": "ala-shaabana-016",
+      "note": "Speaks jointly with Steeves on the Finney launch and the solo-chain decision."
+    },
+    {
+      "to": "sami-kassab",
+      "kind": "responds",
+      "statement": "ala-shaabana-027",
+      "note": "Quote-posts Kassab's 'four or five successful subnets' investment case and extends it."
+    },
+    {
+      "to": "openai",
+      "kind": "argues",
+      "statement": "ala-shaabana-028",
+      "note": "Repeated foil from 2022 (one company owning AGI) to 2026 (governance drama, two board members)."
+    },
+    {
+      "to": "joe-biden",
+      "kind": "argues",
+      "statement": "ala-shaabana-022",
+      "note": "Op-ed against the AI executive order's reporting and approval regime."
+    },
+    {
+      "to": "opentensor-foundation",
+      "kind": "argues",
+      "statement": "ala-shaabana-025",
+      "note": "Co-founder of the foundation who publicly frames decentralising away from it as the priority."
+    },
+    {
+      "to": "polkadot",
+      "kind": "argues",
+      "statement": "ala-shaabana-016",
+      "note": "Explains leaving the parachain plan for a solo chain."
+    }
+  ],
+  "coverage": {
+    "searches_used": 34,
+    "fetches_used": 60,
+    "well_covered": [
+      "nakamoto (Towards Data Science 2022, Discord recordings)",
+      "dtao (CoinShares written Q&A, This Week in Startups via Crypto Briefing, CoinDesk, one X post)",
+      "media reached: podcast transcripts on PodScript, Built In op-ed, CoinShares Q&A, CoinDesk articles, Crypto Briefing, whitepaper, fxtwitter mirror of one X post"
+    ],
+    "thin": [
+      "finney (one Discord session carries all of it)",
+      "revolution (one op-ed, one show-notes summary, one unverified Medium excerpt; nothing from 2024 in his own reachable words)",
+      "current (one talk via CoinDesk)",
+      "X posts generally (only one reached; direct x.com returns 402)",
+      "his own long-form writing (Medium blocked)"
+    ],
+    "gaps": [
+      "Medium post New Beginnings: Enter the Crucible (2024-11-15) at https://medium.com/@shaabana/new-beginnings-enter-the-crucible-0a97f4e73545: 403 on medium.com, medium.com/p, scribe.rip, and archive.org is blocked for this tool; recorded one search-excerpt line as unverified.",
+      "Delphi Podcast 2023-11-21: no public transcript found; Tommy Shaughnessy's takes thread at https://x.com/Shaughnessy119/status/1727064243793740105 resolved only to the top post, so nothing verbatim from the episode.",
+      "Forbes 2025-04-25 interview: 403; one quote recorded from a search excerpt as probable.",
+      "Ala Shaabana's X timeline: x.com returns 402 and the syndication endpoint returned empty; the session's shared web search pool ran out before status ids for other posts (dTAO, foundation departure, OpenAI) could be found and mirrored.",
+      "This Week in Startups 2026-03-25 episode page and his statement about leaving the foundation: only Crypto Briefing's writeup and A Bittensor Journey's summary reached; no direct quote about the departure.",
+      "In Plaintext podcast 2023-12-19 (Nina Protocol): 429.",
+      "Proof of Talk 2025 panel video and Robert Scoble 2025-09 interview: video only, no transcript.",
+      "Opentensor Foundation Medium posts and Jacob Steeves raw file: not reached, so lineage notes cite only what was seen this session.",
+      "No Bittensor Guru, Bankless, Empire, Unchained, or Real Vision episode with Shaabana surfaced in search; Wired, Fortune, Decrypt, The Block, and Blockworks returned mentions but no direct quotes."
+    ],
+    "unreachable": [
+      "https://medium.com/@shaabana/new-beginnings-enter-the-crucible-0a97f4e73545",
+      "https://medium.com/@shaabana",
+      "https://medium.com/p/0a97f4e73545",
+      "https://scribe.rip/@shaabana/new-beginnings-enter-the-crucible-0a97f4e73545",
+      "https://www.forbes.com/sites/torconstantino/2025/04/25/how-one-company-is-quietly-working-to-transform-ai-forever/",
+      "https://x.com/shibshib89/status/1998462836817695218 (402 direct; reached via api.fxtwitter.com)",
+      "https://x.com/Scobleizer/status/1971242794019864895",
+      "https://www.proofoftalk.io/speakers/ala-shaabana",
+      "https://www.ninaprotocol.com/releases/bittensor-and-decentralized-commodity-markets-with-ala-shaabana",
+      "https://threadreaderapp.com/thread/1998462836817695218.html",
+      "https://threadreaderapp.com/thread/1727064243793740105.html",
+      "https://www.chaincatcher.com/en/article/2159974",
+      "https://www.mexc.com/news/982182",
+      "https://syndication.twitter.com/srv/timeline-profile/screen-name/shibshib89",
+      "https://web.archive.org/ (blocked for this tool)"
+    ]
+  }
+}

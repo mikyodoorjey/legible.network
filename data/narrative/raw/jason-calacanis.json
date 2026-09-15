@@ -1,0 +1,2175 @@
+{
+  "narrator": {
+    "id": "jason-calacanis",
+    "name": "Jason Calacanis",
+    "aka": [
+      "JCal",
+      "J Cal",
+      "Jason"
+    ],
+    "kind": "person",
+    "role": "Angel investor; host of This Week in Startups and co-host of the All-In Podcast; consulting partner, Stillcore Capital",
+    "affiliation": "LAUNCH, This Week in Startups, All-In Podcast, Stillcore Capital",
+    "active_from": "2025",
+    "handles": {
+      "x": "@Jason",
+      "youtube": "@twistartups"
+    },
+    "subnets": [],
+    "one_line": "Silicon Valley angel investor and podcast host who was introduced to Bittensor by Mark Jeffrey in 2025, bought TAO personally and joined Stillcore Capital in 2026, and now tells his audience to buy one TAO as a bet to learn and a vote for decentralised AI."
+  },
+  "statements": [
+    {
+      "id": "jason-calacanis-001",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "So Bittensor is the project. TAO is the coin. The network instead of doing gumball math is doing here is a competitor to AWS.",
+      "context": "Recapping Mark Jeffrey's explanation for the TWiST audience on E2119; Jeffrey answered that it is an incentivisation network with about 100 subnets, not only an AWS competitor.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets",
+        "incentive design"
+      ],
+      "metaphors": [
+        "gumball math"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:08:12",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-002",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "if you were running an AI job and you didn't need the stability corporate five nines of say AWS where you know at a company maybe you have to use AWS because nobody gets fired for using AWS, Azure, Oracle, whatever you could use this network that nobody owns and that is an open-source distributed project.",
+      "context": "Restating what Chutes (subnet 64) offers after Mark Jeffrey said it runs about 85 percent cheaper than AWS.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "positioning.differentiator",
+        "positioning.against"
+      ],
+      "themes": [
+        "commodity markets",
+        "cost"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:12:24",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-003",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "This may or may not be the next Bitcoin.",
+      "context": "Closing the Ready AI (subnet 33) discussion before asking Mark Jeffrey to plug his Hash Rate podcast.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "voice"
+      ],
+      "themes": [
+        "bitcoin comparison"
+      ],
+      "metaphors": [
+        "next bitcoin"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:18:57",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-004",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I think it's like it is too clever in the same way the United States of America was too clever ... Why do all these like states have these state rights? ... it turns out like sometimes if you do things that are not efficient, then you gain some other qualities like resilience or competition.",
+      "context": "Replying to Alex Wilhelm, who had said the per-subnet token economy was too clever by half.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "token economics",
+        "incentive design"
+      ],
+      "metaphors": [
+        "federalism"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:23:13",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-005",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "this has always been my problem with crypto in general ... in the early days of crypto I met with a 100 projects and ... in 95 96 97 of them it was unqualified people building outlandish things with spelling errors in their white papers",
+      "context": "After Mark Jeffrey said Barry Silbert was as all in on Bittensor as he had been on Bitcoin, Calacanis explained why he had stayed out of crypto.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "voice"
+      ],
+      "themes": [
+        "crypto scepticism"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:25:19",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-006",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "this idea that a decentralized Uber or a decentralized Google or a decentralized Twitter is going to or decentralized Facebook is going to beat all those things. I was like that's not possible or not probable, but probably more not possible ... And listen, maybe I'll turn out to be wrong.",
+      "context": "Same passage, stating his standing objection to decentralisation claims before saying what is different about Bittensor.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "voice"
+      ],
+      "themes": [
+        "decentralisation",
+        "crypto scepticism"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:25:58",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-007",
+      "date": "2025-04-30",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "what I like about this project you've identified is it seems like there's real entrepreneurs there, which is great. And it seems like they're building actual products and services with utility from in some cases companies that exist in the real world that have a board of directors that have a domiciled location.",
+      "context": "What he said was different about Bittensor compared with the crypto projects he had met earlier.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "foundation.values"
+      ],
+      "themes": [
+        "real products",
+        "entrepreneurs"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+        "medium": "youtube",
+        "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:26:27",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-008",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "we talked about the project known as Bitcoin, the tip of the spear that got everybody engaged in this, but the math problems and all the CPU was going towards busy work, not actually serving a purpose other than, you know, establishing the Bitcoin network ... but it also was using a lot of energy.",
+      "context": "To Lon Harris, after Mark Jeffrey described Bittensor as Bitcoin's mining side made programmable.",
+      "about": "network",
+      "slots": [
+        "problem.market",
+        "positioning.against"
+      ],
+      "themes": [
+        "useful work",
+        "energy"
+      ],
+      "metaphors": [
+        "tip of the spear"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:06:01",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-009",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "for full disclosure, uh you were starting a fund to take advantage of this called Stillcore and I joined you as a partner in that. I put some of my chips in. I think I'm going to be ready to put some more chips in, I'll be honest this year. I feel I'm feeling a little frisky.",
+      "context": "Disclosing his Stillcore Capital position to Mark Jeffrey on air before asking for the most inspiring subnets.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "investment"
+      ],
+      "metaphors": [
+        "poker chips"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:06:53",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-010",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "you can go buy TAO like you buy Bitcoin and I don't give financial advice but if anybody's listening and you had a hundy that you were going to spend on some margaritas I'm going to say maybe drink some water ... the other $99 into just buying a little TAO for yourself. Why not?",
+      "context": "After Mark Jeffrey described the Ridges (subnet 62) launch; the earliest reached instance of his buy-a-little-TAO line.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "messaging.h1",
+        "voice"
+      ],
+      "themes": [
+        "retail entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:08:30",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-011",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Open source is a gift to humanity. Fantastic. It's democratizing. But here, there's an incentive layer, which is the subnets tokens. So, I make this coder, this co-pilot better, I make some tokens and then I can put those tokens and I don't just get a high five ... instead of going to work for Cursor.",
+      "context": "Contrasting contributing to OpenClaw with mining on Ridges, checking his understanding with Mark Jeffrey, who confirmed it.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "value.functional"
+      ],
+      "themes": [
+        "incentive design",
+        "open source"
+      ],
+      "metaphors": [
+        "incentive layer"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:11:07",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-012",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "So this is like being in the early days, Ala, of Bitcoin where I don't know Mount Gox came out, some wallets came out. There were lots of different small projects.",
+      "context": "To Ala Shaabana, Bittensor co-founder, about Crucible Labs building a wallet for subnet tokens.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "positioning.category"
+      ],
+      "themes": [
+        "timing"
+      ],
+      "metaphors": [
+        "early bitcoin"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:13:54",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-013",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "You have this premise at Stillcore, hey, we know that TAO has the potential to be the next Bitcoin, Ethereum, whatever it is. It's not guaranteed. Nothing is. This is a bit of the wild west ... after you make that bet, you're making the second bet. And the second investment is which one of these will break out.",
+      "context": "Setting up a question to Mark Jeffrey about how Stillcore evaluates a subnet like Ridges at a 30 million dollar market cap.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "relationship",
+        "opportunity"
+      ],
+      "themes": [
+        "bitcoin comparison",
+        "subnet selection"
+      ],
+      "metaphors": [
+        "wild west",
+        "next bitcoin"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:17:11",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-014",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "As you can see, like Bitcoin, there's so many picks and shovels and services and application layer here. There's all different places to invest.",
+      "context": "Summing up after Mark Jeffrey explained Targon (subnet 4) as cheap inference with both equity and token exposure.",
+      "about": "network",
+      "slots": [
+        "opportunity"
+      ],
+      "themes": [
+        "investment"
+      ],
+      "metaphors": [
+        "picks and shovels"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:21:47",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-015",
+      "date": "2026-03-06",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "This one is less interesting to me because storage is such a commodity. Why would you consider this one if storage is a commodity?",
+      "context": "Pushing back when Mark Jeffrey named Hippius, the decentralised storage subnet, as Stillcore's third investment.",
+      "about": "subnet:75",
+      "slots": [
+        "voice"
+      ],
+      "themes": [
+        "commodity markets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+        "medium": "youtube",
+        "title": "Wisdom of the $TAO: the future is decentralized AI",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:22:18",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-016",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "A lot of people have been asking me my involvement in the ecosystem. A lot of people are like, “Oh my god, are you pumping?”",
+      "context": "Opening a segment on TWiST E2266 in which Alex Wilhelm asked how much TAO he owns.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "disclosure"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:00:00",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-017",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "if you go to stillcorecapital.com ... my friend Mark Jeffrey started this. He asked me to be a partner in it. So, I seeded this fund with couple of hundred thousand dollars. They've got a couple of million dollars under management ... I have probably a half million dollars in TAO I've bought. Personally.",
+      "context": "Answering Alex Wilhelm; this is the primary behind press reports that misprinted the figure as 500 million dollars.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "messaging.proof"
+      ],
+      "themes": [
+        "disclosure",
+        "investment"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:00:19",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-018",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I believe that that could become as big as Solana, let's say, or Ethereum. Probably not as big as Bitcoin cuz Bitcoin is, you know, a phenomenon that might only be a once",
+      "context": "Walking Elizabeth Yin through his back-of-the-envelope view of TAO's two to three billion dollar market cap.",
+      "about": "network",
+      "slots": [
+        "positioning.category"
+      ],
+      "themes": [
+        "market cap comparison"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:02:48",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-019",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I've always said there would be a better Bitcoin. Um and that there would be a better opportunity. I think the game of Bitcoin has ended and it ended when Michael Saylor got to three, four, five points of ownership of Bitcoin, Alex, and other corporate interests bought a certain amount. It's not punk rock anymore.",
+      "context": "Same segment, explaining why he is not making the bet on Bitcoin.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "language.term"
+      ],
+      "themes": [
+        "anti-bitcoin"
+      ],
+      "metaphors": [
+        "better bitcoin",
+        "punk rock"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:03:04",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-020",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Crypto is now legal and is becoming organized. I had the SEC chair and the CFTC chair on All-In ... I believe crypto now has been blessed, the rules of the road are there ... Therefore, I think making a bet on a crypto project that is distributed and that solves real world problems like startups",
+      "context": "Giving the regulatory reason for placing a crypto bet now.",
+      "about": "network",
+      "slots": [
+        "opportunity"
+      ],
+      "themes": [
+        "regulation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:03:28",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-021",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "There's something there that could compound to ... a $500 billion market cap for ... TAO, which would be roughly ... let's put it at 2.5 billion. That's a 200x from here. That's my base case is I think we could be sitting here and TAO in 5 to 10 years could go 200x.",
+      "context": "The 200x line that was reported across crypto press in the following days.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "positioning.reason"
+      ],
+      "themes": [
+        "price prediction"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:03:58",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-022",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I see entrepreneurs like Gavin and Pranav trying these things across 128 ... And if it works, it's going to be cloud computing, storage, and ... lead gen. It's going to be everything. Everybody's going to try to play one of these games to lower the cost of basic services. That's my bet.",
+      "context": "Explaining how he arrives at the number, with two subnet founders (Gavin and Pranav) as guests.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "value.functional"
+      ],
+      "themes": [
+        "commodity markets",
+        "cost"
+      ],
+      "metaphors": [
+        "games"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:04:29",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-023",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The chances of this happening are low. Like, 500 billion is a big number, but we've seen it happen before. Therefore, I am fine losing all my money, hundreds of thousands dollars, close to a million dollars, whatever I wind up putting in all this. I'm okay losing it. I haven't put any of my fund money in it",
+      "context": "Qualifying the 200x prediction and separating his personal bet from his venture funds.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "risk"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:04:54",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-024",
+      "date": "2026-03-24",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Anyway, I'm in the learning phase here. I like, Alex, place a bet and learn. Not deliberate forever and then place a bet. Given my experience in life doing this for a long time, I just go all in and place a bet.",
+      "context": "Closing the disclosure segment; the earliest reached instance of the bet-and-learn phrase he later posted as bet to learn.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "value.self_expressive",
+        "relationship"
+      ],
+      "themes": [
+        "learning by betting"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+        "medium": "youtube",
+        "title": "Jason Discloses his Holdings in Tao (clip from E2266, 2026-03-24)",
+        "outlet": "This Week in Startups Clips",
+        "timestamp": "00:05:20",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-025",
+      "date": "2026-04-03",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "the reason is because I did place a bet on TAO uh like a couple of weeks ago I went public with, “Hey, yeah, I've got a small bet here because I think these subnets are fascinating in distributed computing.” ... I might be five or six hundred thousand dollars. A tiny bet.",
+      "context": "On All-In, after Chamath Palihapitiya said his TAO question to Jensen Huang had caused a storm online and that he was not long TAO; co-hosts teased him about TAO maxing.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "messaging.proof"
+      ],
+      "themes": [
+        "disclosure",
+        "distributed computing"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=N-pust8qtGI",
+        "medium": "youtube",
+        "title": "SpaceX IPO, Iran War Fallout, Quantum Bitcoin Hack, The Space Opportunity",
+        "outlet": "All-In Podcast",
+        "timestamp": "01:17:56",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-026",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "it's a distributed network, and, just like Bitcoin, you can have uh, people compete to provide that service at the lowest possible price, which is super deflationary. And my thesis, and got an investment uh, in this space is I've got couple different investments in the subnets and I bought TAO directly.",
+      "context": "Opening the episode the morning after Covenant AI announced it was leaving Bittensor.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "value.functional",
+        "relationship"
+      ],
+      "themes": [
+        "deflation",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:01:45",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-027",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "making sure there aren't rug pulls like ... we saw all the time with ICOs or meme coins. This is a major vector of attack ... So, what TAO is trying to do is remove that possibility ... you have to have some control over the subnets and there has to be governance.",
+      "context": "Giving his first take when Alex Wilhelm read Covenant's statement accusing Bittensor of not being decentralised.",
+      "about": "network",
+      "slots": [
+        "problem.institutional"
+      ],
+      "themes": [
+        "governance",
+        "rug pulls"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:03:46",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-028",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "It would be like investing in a startup and then the startup just says, you know, “I don't like the way capitalism works, I'm out,” and then they take the money ... yes, you should be able to leave your subnet and go do something independent if you want, of course. But, you don't get to leave with everybody's tokens",
+      "context": "Disagreeing with Alex Wilhelm, who said he struggled to be angry at Sam Dare for moving Covenant elsewhere.",
+      "about": "subnet:3",
+      "slots": [
+        "positioning.against",
+        "foundation.values"
+      ],
+      "themes": [
+        "rug pulls",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:07:23",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-029",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "since the administrations changed and the folks who were running crypto policy have changed, I am now officially open for business in crypto ... I'm getting involved in TAO. I'm specifically looking though only for projects where there is a customer who is either making money, saving money, entertained, or otherwise delighted by a product or service.",
+      "context": "After Gareth Howells of Vidaio (subnet 85) demonstrated video upscaling.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "opportunity",
+        "relationship"
+      ],
+      "themes": [
+        "real products",
+        "regulation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:29:56",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-030",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I'm not looking for meme coins. I am not looking for pump and dumps. I'm looking for, you know, actual products that create value and use the technology ... And really, when you look at the Bittensor universe, incentives matter, tapping into a global workforce, tapping into global compute, having it be distributed",
+      "context": "Same passage, stating what he says Bittensor is for.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "foundation.values"
+      ],
+      "themes": [
+        "incentive design",
+        "global labour",
+        "compute"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:30:26",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-031",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "there's like fancy words used in crypto like permissionless. ... or you know, peer-to-peer, or distributed. All this stuff means is anybody can participate. The compute or storage or transit can come from anybody. And that means it moves faster, and it more violently removes cost.",
+      "context": "Translating crypto vocabulary for the TWiST audience.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "value.functional",
+        "foundation.mission"
+      ],
+      "themes": [
+        "permissionless entry",
+        "cost"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:30:50",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-032",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "if everybody in the world could work at your local Starbucks, or anybody in the world could magically sell coffee beans to your local coffee shop, and they basically had a competition, you would have a barista for $1 a day, $2 a day, living like a king or queen in their native location.",
+      "context": "His analogy for what a permissionless miner market does to the price of a service.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "positioning.reason"
+      ],
+      "themes": [
+        "global labour",
+        "competition"
+      ],
+      "metaphors": [
+        "global starbucks"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:31:13",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-033",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "this actually empowers, I believe, labor. If you consider labor, you know, the the supply side on these things ... So, the people who lose are the people who are charging a higher price uh or and or giving a lower level of service. The winner is best price, best service.",
+      "context": "Answering Alex Wilhelm's worry that winner-takes-most subnet rewards narrow the economic opportunity for miners.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "value.functional"
+      ],
+      "themes": [
+        "labour",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:33:18",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-034",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "the validator, which is the person who basically arbitrates, did you actually perform the task? Again, in crypto uses a lot of fancy terms or a lot of wonky terms. A validator is just the person who checks the work. Okay, you made a flat white. Is this a good flat white or is it garbage?",
+      "context": "Extending the coffee shop analogy to validators.",
+      "about": "network",
+      "slots": [
+        "language.term"
+      ],
+      "themes": [
+        "validator power"
+      ],
+      "metaphors": [
+        "flat white"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:33:48",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-035",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "This is capitalism at its finest. And if you ever dreamed of, you know, one human race working on projects beyond borders, beyond governments, beyond regulation, that's what makes this so um compelling to me. It kind of cuts across humanity and just makes a global competition for capitalism.",
+      "context": "The peak of the same answer, on why the miner market appeals to him.",
+      "about": "network",
+      "slots": [
+        "foundation.vision",
+        "value.emotional"
+      ],
+      "themes": [
+        "borderless work",
+        "capitalism"
+      ],
+      "metaphors": [
+        "global competition"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:34:38",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-036",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I'm not writing the code of Bittensor ... my job is to explain it in plain English and to explain my thesis. So, for people who are like you're pumping this, for people who are like you don't know what you're talking about, of course I don't know what I'm talking about. I am an investor. I am a commentator.",
+      "context": "Responding to critics in his X replies after Alex Wilhelm called buying TAO a call option on decentralised global intelligence.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "disclosure"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:36:18",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-037",
+      "date": "2026-04-10",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "My way is studying, placing bets, losing bets, learning, placing more bets, and that's the job of an investor. Is you learn by betting. My job is to learn by betting and to have conversations, which is what I'm doing here.",
+      "context": "Same passage, describing how he engages with the network.",
+      "about": "network",
+      "slots": [
+        "value.self_expressive",
+        "language.term"
+      ],
+      "themes": [
+        "learning by betting"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+        "medium": "youtube",
+        "title": "Bittensor Drama! TAO down 15%! | E2274",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:36:58",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-038",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Mark started telling me, Lon, about Bittensor and TAO cuz I was like, “Hey, what's going on?” Cuz I think crypto's turning a corner here. It's becoming legal. It's becoming regulated in a very intelligent way. And I'm curious, is there anybody doing anything where a consumer or an enterprise gets value other than store of value and money transfer?",
+      "context": "Introducing Mark Jeffrey and crediting him with bringing Bittensor to his attention.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "opportunity",
+        "problem.market"
+      ],
+      "themes": [
+        "regulation",
+        "real products"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:01:42",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-039",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I found him a little squirrely ... I kind of pushed him on, “Hey, what are you doing next and how does this work?” And the answers, Mark, weren't as crisp or as tight as I might have expected from somebody running something significant",
+      "context": "On Sam Dare of Covenant AI, whom he had interviewed on TWiST on 2026-03-27; auto captions do not mark speakers, so parts of this exchange may be Lon Harris.",
+      "about": "subnet:3",
+      "slots": [
+        "positioning.against",
+        "voice"
+      ],
+      "themes": [
+        "rug pulls"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:14:26",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "jason-calacanis-040",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "how can we avoid this in the future? And who owns a subnet? And who should own a subnet? Should it be the miners themselves or should there be governance here? Should there be a 51% rule where the people contributing to it own it? What's the best practice here",
+      "context": "Asking Mark Jeffrey how subnet ownership should be codified outside a Delaware corporation after the Covenant token sales.",
+      "about": "network",
+      "slots": [
+        "problem.institutional"
+      ],
+      "themes": [
+        "governance",
+        "ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:22:01",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-041",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I'm getting pulled in both directions. I've got my venture firm here, and then I'm a partner in Stillcore. Okay, I placed my bet here, but should I also be like, “Hmm, maybe Launch or my syndicate should talk to Ken about investing in his corporation.”",
+      "context": "Asking whether to hold subnet tokens or equity in the company behind BitMind (subnet 34), whose co-founder Ken Miyachi was a guest.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "token versus equity"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:33:18",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-042",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I think the easiest thing to do is buy a little bit of TAO. You get the mutual fund effect, which would be like if you asked me, “Should I be an angel investor, or should I put money into a VC firm?”",
+      "context": "Answering Lon Harris's question on whether a regular viewer should buy TAO or pick subnets.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "positioning.category"
+      ],
+      "themes": [
+        "retail entry",
+        "portfolio"
+      ],
+      "metaphors": [
+        "mutual fund"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:35:47",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-043",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "I don't have the time to evaluate every subnet, so I'm a partner and investor in Stillcore Capital, which Mark is doing. All of these things are incredibly speculative. 90% of the bets I make go to zero.",
+      "context": "Same answer, on why he delegates subnet selection to Stillcore.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "risk",
+        "portfolio"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:36:34",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-044",
+      "date": "2026-04-13",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "is this a corporation, Will, and you have venture capital backing it, or is it just a straight anachronistic uh crypto weirdo project? How is this running?",
+      "context": "To Will Squires of Macrocosmos after the Iota (subnet 9) training demo.",
+      "about": "network",
+      "slots": [
+        "voice"
+      ],
+      "themes": [
+        "real products"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+        "medium": "youtube",
+        "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:55:41",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-045",
+      "date": "2026-07-10",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "I talked a little bit about Bittensor on the program known as TAO, dollar sign TAO. It's a crypto project. Somebody who is creating a subnet that is putting GLM 5.2 and other models available at really cheap prices. So I all of a sudden experienced because they gave me an API key having my token cost go down 95%.",
+      "context": "On All-In, describing how he runs his own agents; a Bittensor inference subnet cut his token cost.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "value.functional"
+      ],
+      "themes": [
+        "inference cost"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=PHL1j2ti420",
+        "medium": "youtube",
+        "title": "OpenAI vs Anthropic IPOs, Anthropic $3T, Zuck's Price War, China Ends Open Source?, Trump Accounts",
+        "outlet": "All-In Podcast",
+        "timestamp": "00:25:38",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-046",
+      "date": "2026-07-15",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "bittensor:native = ai sovereignty \n\nPlease buy just one $tao on @coinbase for two reasons: \n\n1. “bet to to learn” while… \n\n2. …  you support “a third way” to protect sovereign intelligence \n\nThis is financial and philosophical advice. \n\nWorst case you lose $200, best case you",
+      "context": "Quote-posting @Raleigh_CA's thread Who owns your Intelligence; the X syndication endpoint truncates the post after best case you, and bittensor:native is X's cashtag markup for $TAO.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "language.term",
+        "foundation.vision",
+        "audience"
+      ],
+      "themes": [
+        "ai sovereignty",
+        "retail entry",
+        "learning by betting"
+      ],
+      "metaphors": [
+        "third way"
+      ],
+      "source": {
+        "url": "https://x.com/Jason/status/2077306951533318599",
+        "medium": "x",
+        "title": "bittensor:native = ai sovereignty",
+        "outlet": "@Jason on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-047",
+      "date": "2026-08-03",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "The $btc power bottom is in! 😂 \n\nSeriously, if you were my brother I would say “sell half your bitcoin and put it into productive projects like bittensor:native and solana:So11111111111111111111111111111111111111112, that are actually delivering new products — not just projects",
+      "context": "Post on X, truncated by the syndication endpoint; Yahoo Finance and TheStreet complete it as not just projects and promises; the cashtag markup is X's.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "audience",
+        "voice"
+      ],
+      "themes": [
+        "anti-bitcoin",
+        "productive assets"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/Jason/status/2084380682252329366",
+        "medium": "x",
+        "title": "The $btc power bottom is in!",
+        "outlet": "@Jason on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "none"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-048",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "I've been looking for a crypto project that would solve problems in the real world ... the second bet I made was on Bittensor. Why did I make it on Bittensor? I just saw these subnets actually solving problems in the real world. And I said, “This is what I've been waiting for.”",
+      "context": "Opening the Const interview with Lon Harris; his first bet was Bitcoin.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "relationship"
+      ],
+      "themes": [
+        "real products"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:00:48",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-049",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "If you're a neophyte to crypto or you think crypto is a scam, I really want you to pay attention to this one because there's two times in the history of crypto I said definitely not a scam ... It was Bitcoin. I made millions and it's TAO. I predict I'm going to make tens of millions.",
+      "context": "Framing the Const interview for viewers who distrust crypto.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "positioning.category",
+        "messaging.h1",
+        "voice"
+      ],
+      "themes": [
+        "bitcoin comparison"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "00:02:52",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-050",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "just buy one TAO is what I've been telling folks. Why? Because I think it is a ticket to watch ... a spectacular experiment occur ... It's a front row seat to like bet and learn and it's not financial advice",
+      "context": "Closing the Const interview; the latest reached instance of the buy one TAO line.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "value.self_expressive",
+        "audience"
+      ],
+      "themes": [
+        "retail entry",
+        "learning by betting"
+      ],
+      "metaphors": [
+        "ticket"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:16:19",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-051",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "it's also like in one way a vote ... a vote of confidence that maybe there could be a decentralized AI intelligence platform out there and that's good for humanity.",
+      "context": "Same passage, the second reason he gives for buying one TAO.",
+      "about": "network",
+      "slots": [
+        "value.emotional",
+        "foundation.vision"
+      ],
+      "themes": [
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "vote"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:16:54",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-052",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "non-builders like myself saying hey I want to invest in this because I think there's something here and I'm fascinated by it and I like to make a return ... maybe this thing can go 100 or a thousandx that's why I make the bet it's like a real long shot kind of bet in my mind",
+      "context": "Asking Const whether speculators like him help or distract the project.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "positioning.reason",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "speculation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:17:57",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-053",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "when you spend an hour talking to him, it reminds me of what I saw in the Bitcoin early ... True Believers and I had somebody on I think in 2011 ... and I saw it then I didn't make a big enough bet and now I see this and it just all the signaling is going off.",
+      "context": "To Lon Harris after Const left the call.",
+      "about": "network",
+      "slots": [
+        "positioning.reason",
+        "messaging.proof",
+        "relationship"
+      ],
+      "themes": [
+        "bitcoin comparison",
+        "timing"
+      ],
+      "metaphors": [
+        "true believers"
+      ],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:20:02",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-054",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "So I was like, “All right, let me put like I don't know if I put like half a million or 750 into this, something like that.” Not a lot of money for me. ... It's not out of my funds. It's just personal because I think there's something here that's notable.",
+      "context": "Same passage, restating the size of his personal position.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "messaging.proof"
+      ],
+      "themes": [
+        "disclosure"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:20:30",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-055",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "I think I might actually be down right now in my Bittensor bet which I made this year. And I like to be vocal and clear about this so that nobody thinks I have some nefarious reason. And that's why I told folks just buy one because I realized people were starting to take my tweets ...",
+      "context": "Explaining why the ask shrank to one TAO once trackers began copying his trades.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "voice",
+        "messaging.h1"
+      ],
+      "themes": [
+        "disclosure"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:22:14",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "jason-calacanis-056",
+      "date": "2026-08-17",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "I'm not day trading. I'm J trading. J trading is hold for a decade.",
+      "context": "Closing the episode, on how he holds public bets such as TAO.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "language.term"
+      ],
+      "themes": [
+        "holding period"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+        "medium": "youtube",
+        "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+        "outlet": "This Week in Startups",
+        "timestamp": "01:23:45",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2025-04-30",
+      "title": "Bittensor's Rise, Meta's Llama Goes Cloud, & AI Now Writes Your Code | E2119",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=16nd_lIy-lA",
+      "medium": "youtube",
+      "note": "Mark Jeffrey explains Bittensor to Jason, Alex Wilhelm and Lon Harris; auto captions read."
+    },
+    {
+      "date": "2026-03-06",
+      "title": "Wisdom of the $TAO: the future is decentralized AI",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=X0AJVcKieyA",
+      "medium": "youtube",
+      "note": "With Mark Jeffrey (Stillcore) and Ala Shaabana (Crucible Labs); Ridges, Targon, Hippius; auto captions read."
+    },
+    {
+      "date": "2026-03-24",
+      "title": "32 Million Dollar Fraud? Delve Scandal | E2266",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=kz24Ga0Ig2g",
+      "medium": "youtube",
+      "note": "Full episode behind the holdings and 200x segment; captions for the full episode were blocked, the official TWiST clip was read instead."
+    },
+    {
+      "date": "2026-03-25",
+      "title": "Jason Discloses his Holdings in Tao",
+      "outlet": "This Week in Startups Clips",
+      "url": "https://www.youtube.com/watch?v=txTnwkA1Rkw",
+      "medium": "youtube",
+      "note": "Official clip of the E2266 segment with Alex Wilhelm and Elizabeth Yin; auto captions read."
+    },
+    {
+      "date": "2026-03-25",
+      "title": "This Bittensor Subnet Could Cut Drug Discovery Costs in HALF | E2267",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=gjRt4eUyiYc",
+      "medium": "youtube",
+      "note": "Metanova, Bitcast and Score subnets; hosted by Alex Wilhelm and Lon Harris without Jason, so no statements taken."
+    },
+    {
+      "date": "2026-04-03",
+      "title": "SpaceX IPO, Iran War Fallout, Quantum Bitcoin Hack, The Space Opportunity",
+      "outlet": "All-In Podcast",
+      "url": "https://www.youtube.com/watch?v=N-pust8qtGI",
+      "medium": "youtube",
+      "note": "Brief TAO exchange at 1:17 after Chamath's Jensen Huang interview; auto captions read."
+    },
+    {
+      "date": "2026-04-10",
+      "title": "Bittensor Drama! TAO down 15%! | E2274",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=BaGVZI-sMK0",
+      "medium": "youtube",
+      "note": "Covenant AI exit, with Gareth Howells of Vidaio (subnet 85); auto captions read."
+    },
+    {
+      "date": "2026-04-13",
+      "title": "Bittensor's (alleged) $10M rug pull (feat. Mark Jeffrey) | E2275",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=sdhuUZbx5Sk",
+      "medium": "youtube",
+      "note": "Mark Jeffrey, then Macrocosmos and BitMind founders; auto captions read."
+    },
+    {
+      "date": "2026-07-10",
+      "title": "OpenAI vs Anthropic IPOs, Anthropic $3T, Zuck's Price War, China Ends Open Source?, Trump Accounts",
+      "outlet": "All-In Podcast",
+      "url": "https://www.youtube.com/watch?v=PHL1j2ti420",
+      "medium": "youtube",
+      "note": "Passing mention of a TAO inference subnet cutting his token cost; auto captions read."
+    },
+    {
+      "date": "2026-08-17",
+      "title": "Bittensor creator Const on Affine, dTAO, “mining reasoning,” and more | E2326",
+      "outlet": "This Week in Startups",
+      "url": "https://www.youtube.com/watch?v=quq00obUVQ4",
+      "medium": "youtube",
+      "note": "Interview with Jacob Steeves; auto captions read; the TWiST description says the show covered Bittensor all year."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "gumball math",
+      "wording": "instead of doing gumball math",
+      "first_statement": "jason-calacanis-001",
+      "origin": "reused",
+      "lineage_notes": "Mark Jeffrey introduced the gumballs-in-a-jar image for Bitcoin hashing minutes earlier in the same episode, https://www.youtube.com/watch?v=16nd_lIy-lA"
+    },
+    {
+      "label": "next bitcoin",
+      "wording": "This may or may not be the next Bitcoin",
+      "first_statement": "jason-calacanis-003",
+      "origin": "reused",
+      "lineage_notes": "Mark Jeffrey called Bittensor the third great coin in the same episode and relayed Barry Silbert's view that it may become more valuable than Bitcoin, https://www.youtube.com/watch?v=16nd_lIy-lA"
+    },
+    {
+      "label": "federalism",
+      "wording": "too clever in the same way the United States of America was too clever",
+      "first_statement": "jason-calacanis-004",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "tip of the spear",
+      "wording": "the project known as Bitcoin, the tip of the spear",
+      "first_statement": "jason-calacanis-008",
+      "origin": "reused",
+      "lineage_notes": "Common idiom; here Bitcoin is the spear tip and Bittensor the follow-on."
+    },
+    {
+      "label": "poker chips",
+      "wording": "I put some of my chips in",
+      "first_statement": "jason-calacanis-009",
+      "origin": "reused",
+      "lineage_notes": "His standard investing idiom, also used of Mark Jeffrey pushing his chips."
+    },
+    {
+      "label": "incentive layer",
+      "wording": "But here, there's an incentive layer, which is the subnets tokens",
+      "first_statement": "jason-calacanis-011",
+      "origin": "reused",
+      "lineage_notes": "Layer language is common in Bittensor press; press later attributed intelligence layer to him but he did not say it in reached material."
+    },
+    {
+      "label": "early bitcoin",
+      "wording": "like being in the early days of Bitcoin where Mount Gox came out, some wallets came out",
+      "first_statement": "jason-calacanis-012",
+      "origin": "reused",
+      "lineage_notes": ""
+    },
+    {
+      "label": "wild west",
+      "wording": "This is a bit of the wild west",
+      "first_statement": "jason-calacanis-013",
+      "origin": "reused",
+      "lineage_notes": ""
+    },
+    {
+      "label": "picks and shovels",
+      "wording": "like Bitcoin, there's so many picks and shovels and services and application layer here",
+      "first_statement": "jason-calacanis-014",
+      "origin": "reused",
+      "lineage_notes": ""
+    },
+    {
+      "label": "better bitcoin",
+      "wording": "I've always said there would be a better Bitcoin",
+      "first_statement": "jason-calacanis-019",
+      "origin": "reused",
+      "lineage_notes": "Stillcore materials and crypto press use Bitcoin of AI; Mark Jeffrey relayed Barry Silbert's more valuable than Bitcoin line on 2025-04-30, https://www.youtube.com/watch?v=16nd_lIy-lA"
+    },
+    {
+      "label": "punk rock",
+      "wording": "It's not punk rock anymore",
+      "first_statement": "jason-calacanis-019",
+      "origin": "introduced",
+      "lineage_notes": "Said of Bitcoin after Michael Saylor's accumulation."
+    },
+    {
+      "label": "games",
+      "wording": "Everybody's going to try to play one of these games to lower the cost of basic services",
+      "first_statement": "jason-calacanis-022",
+      "origin": "reused",
+      "lineage_notes": "Const uses league and game language for subnets on E2326, https://www.youtube.com/watch?v=quq00obUVQ4"
+    },
+    {
+      "label": "global starbucks",
+      "wording": "if everybody in the world could work at your local Starbucks ... you would have a barista for $1 a day",
+      "first_statement": "jason-calacanis-032",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "flat white",
+      "wording": "A validator is just the person who checks the work. Okay, you made a flat white",
+      "first_statement": "jason-calacanis-034",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "global competition",
+      "wording": "just makes a global competition for capitalism",
+      "first_statement": "jason-calacanis-035",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "mutual fund",
+      "wording": "buy a little bit of TAO. You get the mutual fund effect",
+      "first_statement": "jason-calacanis-042",
+      "origin": "introduced",
+      "lineage_notes": "Alex Wilhelm attributed an ETF into the Bittensor economy framing to him three days earlier on E2274, https://www.youtube.com/watch?v=BaGVZI-sMK0"
+    },
+    {
+      "label": "third way",
+      "wording": "you support “a third way” to protect sovereign intelligence",
+      "first_statement": "jason-calacanis-046",
+      "origin": "unknown",
+      "lineage_notes": "Posted while quoting @Raleigh_CA; Const said the third path for what artificial intelligence can be born out of on E2326, https://www.youtube.com/watch?v=quq00obUVQ4"
+    },
+    {
+      "label": "ticket",
+      "wording": "a ticket to watch a spectacular experiment occur ... a front row seat",
+      "first_statement": "jason-calacanis-050",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "vote",
+      "wording": "a vote of confidence that maybe there could be a decentralized AI intelligence platform out there",
+      "first_statement": "jason-calacanis-051",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "true believers",
+      "wording": "what I saw in the Bitcoin early True Believers",
+      "first_statement": "jason-calacanis-053",
+      "origin": "reused",
+      "lineage_notes": "Bitcoin community idiom."
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Bittensor is an incentive network that taps a global workforce and global compute so that anyone can supply a service, which he says moves faster and removes cost more violently than incumbents.",
+      "statements": [
+        "jason-calacanis-030",
+        "jason-calacanis-031"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "One human race competing on projects beyond borders and regulation, every basic service (cloud, storage, lead gen) run as a subnet game, and a decentralised AI platform that he calls good for humanity and, on X, sovereign intelligence.",
+      "statements": [
+        "jason-calacanis-035",
+        "jason-calacanis-022",
+        "jason-calacanis-051",
+        "jason-calacanis-046"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Real products with real customers, real entrepreneurs with boards and domiciles, no meme coins or pump and dumps, labour empowered by open competition, and no leaving with everybody's tokens.",
+      "statements": [
+        "jason-calacanis-007",
+        "jason-calacanis-027",
+        "jason-calacanis-030",
+        "jason-calacanis-033",
+        "jason-calacanis-028",
+        "jason-calacanis-029"
+      ]
+    },
+    "problem.market": {
+      "summary": "Bitcoin's mining is busy work that burns energy, most earlier crypto projects were unqualified people with typo-ridden white papers, and he doubted decentralised versions of Uber or Google could beat the originals; he wanted a project where a consumer or enterprise gets value beyond store of value and transfer.",
+      "statements": [
+        "jason-calacanis-008",
+        "jason-calacanis-005",
+        "jason-calacanis-006",
+        "jason-calacanis-038"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "Rug pulls are the main attack vector on the network; subnet ownership needs governance and a codified rule, since a founder can leave with the tokens.",
+      "statements": [
+        "jason-calacanis-027",
+        "jason-calacanis-040"
+      ]
+    },
+    "opportunity": {
+      "summary": "Crypto has become legal and regulated under the new administration and the SEC and CFTC chairs, which he says blesses a bet; it is early-days Bitcoin with picks and shovels still to be built.",
+      "statements": [
+        "jason-calacanis-020",
+        "jason-calacanis-012",
+        "jason-calacanis-014",
+        "jason-calacanis-029",
+        "jason-calacanis-038"
+      ]
+    },
+    "audience": {
+      "summary": "Retail newcomers and crypto sceptics: buy a little TAO, or just one, as a mutual-fund style ticket; he addresses his own X followers directly and tells Bitcoin holders to rotate half into TAO and SOL.",
+      "statements": [
+        "jason-calacanis-010",
+        "jason-calacanis-042",
+        "jason-calacanis-046",
+        "jason-calacanis-049",
+        "jason-calacanis-047"
+      ]
+    },
+    "positioning.category": {
+      "summary": "A Solana or Ethereum scale asset and a possible next or better Bitcoin, though probably not as big as Bitcoin; buying TAO is the index on the subnet economy.",
+      "statements": [
+        "jason-calacanis-018",
+        "jason-calacanis-003",
+        "jason-calacanis-013",
+        "jason-calacanis-042",
+        "jason-calacanis-049"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "Unlike plain open source, contributors earn tokens for improving a product, and unlike AWS the network is owned by nobody; the many-subnet structure trades efficiency for resilience and competition, as with US federalism.",
+      "statements": [
+        "jason-calacanis-011",
+        "jason-calacanis-002",
+        "jason-calacanis-004"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Subnets are solving real problems, competition among miners is deflationary, and the founders remind him of the Bitcoin true believers he under-bet in 2011; the upside he cites is 200x in five to ten years.",
+      "statements": [
+        "jason-calacanis-048",
+        "jason-calacanis-026",
+        "jason-calacanis-053",
+        "jason-calacanis-021",
+        "jason-calacanis-007",
+        "jason-calacanis-032"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Against Bitcoin as a finished, corporate-owned game that is no longer punk rock, against AWS-style clouds on price, and against Covenant's Sam Dare for leaving with holders' tokens.",
+      "statements": [
+        "jason-calacanis-019",
+        "jason-calacanis-047",
+        "jason-calacanis-002",
+        "jason-calacanis-028",
+        "jason-calacanis-039",
+        "jason-calacanis-008"
+      ]
+    },
+    "value.functional": {
+      "summary": "Cheaper services through open competition: 85 percent cheaper compute, a 95 percent cut in his own token costs, and a global miner market that drives prices toward the lowest bidder.",
+      "statements": [
+        "jason-calacanis-002",
+        "jason-calacanis-045",
+        "jason-calacanis-032",
+        "jason-calacanis-031",
+        "jason-calacanis-026"
+      ]
+    },
+    "value.emotional": {
+      "summary": "The thrill of a front row seat at a spectacular experiment and of capitalism at its finest crossing borders.",
+      "statements": [
+        "jason-calacanis-035",
+        "jason-calacanis-051",
+        "jason-calacanis-050"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Owning TAO marks you as someone who bets to learn rather than deliberates forever, and who is voting for a decentralised AI platform.",
+      "statements": [
+        "jason-calacanis-024",
+        "jason-calacanis-037",
+        "jason-calacanis-050",
+        "jason-calacanis-052"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "Two repeated lines: TAO could go 200x in five to ten years, and please buy just one TAO, a bet to learn and a vote for a third way.",
+      "statements": [
+        "jason-calacanis-021",
+        "jason-calacanis-046",
+        "jason-calacanis-050",
+        "jason-calacanis-010",
+        "jason-calacanis-055"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "His own money: roughly half a million dollars of TAO bought personally on Coinbase, a couple of hundred thousand seeded into Stillcore, and a subnet that cut his inference bill by 95 percent.",
+      "statements": [
+        "jason-calacanis-017",
+        "jason-calacanis-025",
+        "jason-calacanis-045",
+        "jason-calacanis-054"
+      ]
+    },
+    "voice": {
+      "summary": "Plain-English, self-deprecating and combative: he answers are you pumping with of course I don't know what I'm talking about, calls a bootstrapped subnet a crypto weirdo project, and says he is J trading, not day trading.",
+      "statements": [
+        "jason-calacanis-016",
+        "jason-calacanis-036",
+        "jason-calacanis-044",
+        "jason-calacanis-056",
+        "jason-calacanis-015"
+      ]
+    },
+    "relationship": {
+      "summary": "Self-described investor, commentator and non-builder: personal TAO holder since early 2026, consulting partner in Stillcore Capital, transparent about being underwater, and explicit that none of his venture fund money is in it.",
+      "statements": [
+        "jason-calacanis-009",
+        "jason-calacanis-017",
+        "jason-calacanis-023",
+        "jason-calacanis-025",
+        "jason-calacanis-036",
+        "jason-calacanis-041",
+        "jason-calacanis-043",
+        "jason-calacanis-055",
+        "jason-calacanis-038"
+      ]
+    },
+    "language.term": {
+      "summary": "He translates crypto vocabulary (permissionless means anybody can participate, a validator checks the work) and coins his own: bet and learn or bet to learn, better Bitcoin, J trading, gumball math for Bitcoin hashing.",
+      "statements": [
+        "jason-calacanis-031",
+        "jason-calacanis-034",
+        "jason-calacanis-024",
+        "jason-calacanis-046",
+        "jason-calacanis-019",
+        "jason-calacanis-056",
+        "jason-calacanis-001"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "bet",
+      "subnets",
+      "distributed",
+      "incentives",
+      "capitalism",
+      "plain English",
+      "real world problems",
+      "deflationary",
+      "speculative",
+      "pumping",
+      "rug pull",
+      "governance",
+      "Bitcoin",
+      "Solana",
+      "Ethereum",
+      "AWS",
+      "Coinbase",
+      "learn"
+    ],
+    "words_avoided": [
+      "Bitcoin of AI (used by Stillcore and press, not by him in reached material)",
+      "intelligence layer (attributed to him by press, not found in his words)",
+      "market for intelligence",
+      "Opentensor",
+      "decentralized as a slogan (he calls permissionless and peer-to-peer fancy words and restates them)"
+    ],
+    "coinages": [
+      {
+        "term": "bet and learn / bet to learn",
+        "meaning": "Place a small position to force yourself to study a thing rather than deliberate forever",
+        "statement": "jason-calacanis-024"
+      },
+      {
+        "term": "better Bitcoin",
+        "meaning": "His long-standing prediction that something would supersede Bitcoin once Bitcoin became corporate-owned; now applied to TAO",
+        "statement": "jason-calacanis-019"
+      },
+      {
+        "term": "J trading",
+        "meaning": "Hold for a decade, as opposed to day trading",
+        "statement": "jason-calacanis-056"
+      },
+      {
+        "term": "gumball math",
+        "meaning": "Bitcoin proof of work, borrowed from Mark Jeffrey's gumballs-in-a-jar image",
+        "statement": "jason-calacanis-001"
+      },
+      {
+        "term": "a third way",
+        "meaning": "Bittensor as an alternative to big tech and state AI, protecting sovereign intelligence; quoted from a community post",
+        "statement": "jason-calacanis-046"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "dtao",
+      "summary": "In April 2025 he is a crypto-sceptic host being walked through Bittensor by Mark Jeffrey, conceding it may or may not be the next Bitcoin and liking that real entrepreneurs are involved [jason-calacanis-003] [jason-calacanis-007]. By March 2026 he is a holder and Stillcore partner with a 200x base case and a claim that the game of Bitcoin has ended [jason-calacanis-017] [jason-calacanis-019] [jason-calacanis-021]. In April 2026, during the Covenant exit, he defends the network in plain English as global competition for capitalism while pressing for subnet governance [jason-calacanis-027] [jason-calacanis-035] [jason-calacanis-040].",
+      "dominant_metaphor": "better bitcoin",
+      "shift": ""
+    },
+    {
+      "era": "current",
+      "summary": "From July 2026 the ask shrinks to buy just one TAO and the frame turns civic: a bet to learn, a vote of confidence, a third way to protect sovereign intelligence [jason-calacanis-046] [jason-calacanis-050] [jason-calacanis-051]. The Bitcoin comparison hardens into a rotation call, sell half your bitcoin for productive projects like TAO and SOL [jason-calacanis-047], and he says he is probably underwater but holding for a decade [jason-calacanis-055] [jason-calacanis-056].",
+      "dominant_metaphor": "ticket",
+      "shift": "From an investor's price thesis (200x, better Bitcoin) to a participation pitch aimed at retail (one TAO, a vote, sovereignty), while disclosure becomes the recurring theme after trackers copied his trades."
+    }
+  ],
+  "relations": [
+    {
+      "to": "mark-jeffrey",
+      "kind": "introduces",
+      "statement": "jason-calacanis-038",
+      "note": "Credits Mark Jeffrey (Hash Rate podcast, Stillcore Capital) with bringing him to Bittensor and inviting him into the fund."
+    },
+    {
+      "to": "alex-wilhelm",
+      "kind": "responds",
+      "statement": "jason-calacanis-004",
+      "note": "Answers Wilhelm's too clever by half with the federalism defence; later disagrees with him over Sam Dare."
+    },
+    {
+      "to": "michael-saylor",
+      "kind": "argues",
+      "statement": "jason-calacanis-019",
+      "note": "Says Saylor's accumulation ended the game of Bitcoin."
+    },
+    {
+      "to": "chamath-palihapitiya",
+      "kind": "responds",
+      "statement": "jason-calacanis-025",
+      "note": "On All-In, after Chamath said he was not long TAO, discloses his own TAO bet."
+    },
+    {
+      "to": "sam-dare",
+      "kind": "argues",
+      "statement": "jason-calacanis-028",
+      "note": "Rejects Covenant AI's decentralisation grievance and says a founder cannot leave with holders' tokens."
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "agrees",
+      "statement": "jason-calacanis-053",
+      "note": "After interviewing Const, likens him to early Bitcoin true believers; his third way echoes Const's third path."
+    },
+    {
+      "to": "raleigh-ca",
+      "kind": "borrows",
+      "statement": "jason-calacanis-046",
+      "note": "The buy one TAO post quotes @Raleigh_CA's Who owns your Intelligence thread."
+    }
+  ],
+  "coverage": {
+    "searches_used": 31,
+    "fetches_used": 96,
+    "well_covered": [
+      "dtao era, March to April 2026: five TWiST video episodes plus one All-In episode, all read from YouTube auto captions",
+      "current era, July to August 2026: two X posts verified through X's syndication endpoint, one All-In mention, and the Const TWiST interview",
+      "his relationship to the network (holdings, Stillcore role, fund separation) is stated repeatedly in his own words"
+    ],
+    "thin": [
+      "2025: a single TWiST appearance (2025-04-30) before he invested; nothing found from him on Bittensor between May 2025 and February 2026 apart from the Stillcore launch he did not announce in a reached post",
+      "X: only two posts reached directly; the March 2026 $TAO > $BTC post reported by CaptainAltcoin and Bitget was not located, nor any post around the September 2025 Stillcore launch",
+      "All-In: the Ridges (subnet 62) remark reported by Bitget and Bitcoinsistemi for 2026-04-11 was not found in the four April 2026 All-In episodes checked"
+    ],
+    "gaps": [
+      "Full captions for TWiST E2266 (https://www.youtube.com/watch?v=kz24Ga0Ig2g) were blocked by YouTube after many caption pulls; the official TWiST clip of the same segment was used instead",
+      "TWiST 2026-03-27 episode with Sam Dare of Covenant AI was not reached, so his on-air questions to Dare are not recorded",
+      "His Substacks (calacanis.substack.com, twistartups.substack.com, jcalfromallin.substack.com) returned no Bittensor posts in archive search",
+      "Press claim that he invested 500 million dollars (Bitcoin.com, Stocktwits, Market Periodical) is contradicted by his own on-air figure of about half a million; recorded only via the primary",
+      "The 2026-03-25 Jensen Huang All-In interview where Bittensor came up was Chamath Palihapitiya's question, not his, and is not recorded",
+      "Web search budget for the session ran out after 29 searches, so later episode discovery used YouTube results pages via curl",
+      "Quotes from video are from YouTube auto captions with no speaker labels; coin and project names were normalised from caption spellings (tow, towel, Bit Tensor, Stillmark) and one statement is marked probable where the speaker could be Lon Harris",
+      "fetches_used counts 36 WebFetch calls plus about 60 direct pulls of YouTube pages, captions, oEmbed and X syndication JSON, which exceeds the 60 fetch budget"
+    ],
+    "unreachable": [
+      "https://x.com/Jason/status/2077306951533318599 (direct fetch 402; reached via cdn.syndication.twimg.com)",
+      "https://web.archive.org/web/2026/https://x.com/Jason/status/2077306951533318599 (archive.org blocked)",
+      "https://thisweekinstartups.com/episodes/E5snSk87PIs (404)",
+      "https://x.com/AltcoinDaily/status/1971272136859001007 (402)",
+      "https://blockchain.news/flashnews/jason-calacanis-launches-stillcore-capital-new-bittensor-tao-fund-focused-on-subnet-alpha-tokens-in-2025 (403)",
+      "https://99bitcoins.com/nl/nieuws/altcoins/bittensor-schiet-omhoog-na-tweet-jason-calacanis-is-tao-de-nieuwe-bitcoin/ (403)",
+      "https://www.openpr.com/news/4597529/jason-calacanis-rotation-call-revives-bittensor-tao-price (403)",
+      "https://www.thestreet.com/crypto/markets/angel-investor-says-bitcoin-has-bottomed-sell-it-and-buy-solana (403; Yahoo syndication used instead)",
+      "https://podscan.fm/podcasts/this-week-in-startups (403)",
+      "https://syndication.twitter.com/srv/timeline-profile/screen-name/Jason (rate limited)",
+      "https://open.spotify.com/episode/4jwQtJn3yjdVlpLRHFMuRF and https://open.spotify.com/episode/0o1dFYybAPZR5rj1KWEBWA (title only, no description)"
+    ]
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "narrator": {
+    "id": "sn34",
+    "name": "BitMind (SN34)",
+    "aka": ["BitMind AI", "BitMind Labs", "GAS", "SN34", "Subnet 34"],
+    "kind": "subnet",
+    "role": "Subnet team; Ken Jon Miyachi, co-founder and CEO, speaks for it; Dylan Uys, co-founder and head of AI",
+    "affiliation": "BitMind Holdings Limited",
+    "active_from": "2024",
+    "handles": {"x": "@bitmind", "github": "BitMind-AI"},
+    "subnets": [34],
+    "one_line": "Deepfake and AI-content detection subnet launched in 2024, rebuilt in late 2024 as GAS, a generative adversarial engine where generator miners forge and detector miners catch; its enterprise site sells a trust layer and rarely says Bittensor, while its founder tells the press Bittensor is the decentralised network where hundreds of developers compete to build the best detector."
+  },
+  "statements": [
+    {
+      "id": "sn34-001",
+      "date": "2024-09-02",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Deepfake detection is one of the toughest challenges in computer vision because different generative models create various types of fake images or videos",
+      "context": "The team's August 2024 recap on the BitMindAI Medium publication, explaining the problem after the subnet's first weeks on mainnet; reached through a text proxy because Medium blocks direct fetches.",
+      "about": "subnet:34",
+      "slots": ["problem.market", "subnet.self"],
+      "themes": ["deepfakes", "adversarial AI"],
+      "metaphors": [],
+      "source": {
+        "url": "https://medium.com/bitmindlabs/bitmind-subnet-34-august-2024-recap-06e90d13ec5b",
+        "medium": "blog",
+        "title": "BitMind Subnet 34 — August 2024 Recap",
+        "outlet": "BitMindAI on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-002",
+      "date": "2024-09-02",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "BitMind's decentralized architecture is well-suited to this problem. By leveraging a network of diverse models and miners, we can continuously adapt and improve deepfake detection methods",
+      "context": "Same August 2024 recap, giving the reason a subnet fits the problem.",
+      "about": "subnet:34",
+      "slots": ["subnet.self", "positioning.differentiator", "positioning.reason"],
+      "themes": ["decentralised intelligence", "adaptation"],
+      "metaphors": ["network"],
+      "source": {
+        "url": "https://medium.com/bitmindlabs/bitmind-subnet-34-august-2024-recap-06e90d13ec5b",
+        "medium": "blog",
+        "title": "BitMind Subnet 34 — August 2024 Recap",
+        "outlet": "BitMindAI on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-003",
+      "date": "2024-09-02",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "The incentive mechanism we implemented has effectively rewarded accurate deepfake detection models while mitigating malicious gaming",
+      "context": "Same August 2024 recap, reporting on the first month of mining, alongside a note about organic innovation from miners outperforming the base model.",
+      "about": "subnet:34",
+      "slots": ["messaging.proof", "subnet.self"],
+      "themes": ["incentive design", "anti-gaming"],
+      "metaphors": [],
+      "source": {
+        "url": "https://medium.com/bitmindlabs/bitmind-subnet-34-august-2024-recap-06e90d13ec5b",
+        "medium": "blog",
+        "title": "BitMind Subnet 34 — August 2024 Recap",
+        "outlet": "BitMindAI on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-004",
+      "date": "2024-10-03",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "BitMind's mission is to create the best deepfake detection solution on the market, demonstrating the potential of decentralized AI and building the infrastructure for AI engineers to develop powerful end-user applications.",
+      "context": "Opening mission statement of the September 2024 recap on the team's Medium publication.",
+      "about": "subnet:34",
+      "slots": ["foundation.mission", "subnet.self", "subnet.network", "messaging.h1"],
+      "themes": ["decentralised intelligence", "deepfakes"],
+      "metaphors": ["infrastructure"],
+      "source": {
+        "url": "https://medium.com/bitmindlabs/bitmind-subnet-34-september-2024-recap-2ca6470cf5b5",
+        "medium": "blog",
+        "title": "BitMind Subnet 34 — September 2024 Recap",
+        "outlet": "BitMindAI on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-005",
+      "date": "2024-10-03",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "We built the deepfake detection subnet on Bittensor (Subnet 34) which incentivizes identifying and mitigating AI-generated image content.",
+      "context": "Same September 2024 recap, describing the subnet in one line before listing applications built on its output.",
+      "about": "subnet:34",
+      "slots": ["subnet.self", "positioning.category"],
+      "themes": ["incentive design", "deepfakes"],
+      "metaphors": [],
+      "source": {
+        "url": "https://medium.com/bitmindlabs/bitmind-subnet-34-september-2024-recap-2ca6470cf5b5",
+        "medium": "blog",
+        "title": "BitMind Subnet 34 — September 2024 Recap",
+        "outlet": "BitMindAI on Medium",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-006",
+      "date": "2024-11-12",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Subnet 34 has transformed from a distributed inference network into GAS, a self-sustaining Generative Adversarial Engine that co-evolves detectors, generators, benchmarks, and data in a single, incentive-aligned loop.",
+      "context": "Ken Jon Miyachi's post on the BitMind blog announcing the GAS redesign of the subnet.",
+      "about": "subnet:34",
+      "slots": ["subnet.self", "language.term", "positioning.category"],
+      "themes": ["adversarial AI", "incentive design"],
+      "metaphors": ["engine", "co-evolution"],
+      "source": {
+        "url": "https://bitmind.ai/blog/gas-subnet-34-generative-adversarial-engine",
+        "medium": "blog",
+        "title": "GAS: Subnet 34 Becomes a Generative Adversarial Engine",
+        "outlet": "BitMind blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-007",
+      "date": "2024-11-12",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "The long-term goal is simple: turn SN34 into the default engine for trustworthy AIGC detection, an open network that continuously produces verifiable models and delivers them securely through private, production-ready infrastructure.",
+      "context": "Closing goal in Ken Jon Miyachi's GAS post; the same post lists mining cost, denial-of-service attacks and data privacy as reasons for moving from live miner endpoints to model submission.",
+      "about": "subnet:34",
+      "slots": ["foundation.vision", "subnet.self", "messaging.h1"],
+      "themes": ["verification", "open source", "enterprise"],
+      "metaphors": ["engine"],
+      "source": {
+        "url": "https://bitmind.ai/blog/gas-subnet-34-generative-adversarial-engine",
+        "medium": "blog",
+        "title": "GAS: Subnet 34 Becomes a Generative Adversarial Engine",
+        "outlet": "BitMind blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-008",
+      "date": "2025-05-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "In 2023, we had around 500,000 deepfakes circulating online. Now, we're looking at 8 million in 2025.",
+      "context": "Ken Jon Miyachi, BitMind CEO, in an interview with Omar Faridi of Crowdfund Insider, sizing the deepfake problem.",
+      "about": "subnet:34",
+      "slots": ["problem.cultural", "opportunity"],
+      "themes": ["deepfakes"],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.crowdfundinsider.com/2025/05/238988-bitmind-ceo-shares-insights-on-deepfake-detection-and-how-decentralized-networks-may-enhance-the-process/",
+        "medium": "article",
+        "title": "BitMind CEO Shares Insights On Deepfake Detection And How Decentralized Networks May Enhance The Process",
+        "outlet": "Crowdfund Insider",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn34-009",
+      "date": "2025-05-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The fundamental problem is that conventional detectors are static while generative AI is dynamic.",
+      "context": "Ken Jon Miyachi in the Crowdfund Insider interview, on why traditional detection fails.",
+      "about": "subnet:34",
+      "slots": ["problem.market", "positioning.against"],
+      "themes": ["adversarial AI", "adaptation"],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.crowdfundinsider.com/2025/05/238988-bitmind-ceo-shares-insights-on-deepfake-detection-and-how-decentralized-networks-may-enhance-the-process/",
+        "medium": "article",
+        "title": "BitMind CEO Shares Insights On Deepfake Detection And How Decentralized Networks May Enhance The Process",
+        "outlet": "Crowdfund Insider",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn34-010",
+      "date": "2025-05-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Instead of one team trying to keep up with thousands of deepfake creators, we've built BitMind on top of Bittensor, the decentralized network where hundreds of developers can come and compete to create the best detection algorithms, with automatic rewards for superior performance.",
+      "context": "Ken Jon Miyachi in the Crowdfund Insider interview, asked how a decentralised network helps detection; his fullest public description of Bittensor.",
+      "about": "network",
+      "slots": ["subnet.network", "positioning.category", "positioning.reason"],
+      "themes": ["decentralised intelligence", "competition", "incentive design"],
+      "metaphors": ["competition", "network"],
+      "source": {
+        "url": "https://www.crowdfundinsider.com/2025/05/238988-bitmind-ceo-shares-insights-on-deepfake-detection-and-how-decentralized-networks-may-enhance-the-process/",
+        "medium": "article",
+        "title": "BitMind CEO Shares Insights On Deepfake Detection And How Decentralized Networks May Enhance The Process",
+        "outlet": "Crowdfund Insider",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn34-011",
+      "date": "2025-05-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Traditional systems hit around 69% accuracy on real-world deepfakes, while our latest benchmarks reached 88%. And unlike static systems, we're continuously improving.",
+      "context": "Ken Jon Miyachi in the Crowdfund Insider interview, giving the accuracy comparison BitMind repeats across its press.",
+      "about": "subnet:34",
+      "slots": ["messaging.proof", "value.functional"],
+      "themes": ["accuracy", "adaptation"],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.crowdfundinsider.com/2025/05/238988-bitmind-ceo-shares-insights-on-deepfake-detection-and-how-decentralized-networks-may-enhance-the-process/",
+        "medium": "article",
+        "title": "BitMind CEO Shares Insights On Deepfake Detection And How Decentralized Networks May Enhance The Process",
+        "outlet": "Crowdfund Insider",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn34-012",
+      "date": "2025-10-01",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "building trustworthy AI detection technology that protects users and organizations from synthetic media threats",
+      "context": "Ken Jon Miyachi's roadmap post on the BitMind blog, stating the company's purpose; the post does not mention Bittensor or Subnet 34.",
+      "about": "subnet:34",
+      "slots": ["foundation.mission", "audience"],
+      "themes": ["trust", "enterprise"],
+      "metaphors": [],
+      "source": {
+        "url": "https://bitmind.ai/blog/bitmind-roadmap-2025-2026",
+        "medium": "blog",
+        "title": "BitMind Roadmap: Building the Future of Trustworthy AI Detection",
+        "outlet": "BitMind blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-013",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "The most authoritative AI fraud detection by building a dynamic, self-evolving service that instantly adapts to new threats.",
+      "context": "Mission line on the BitMind Overview page of docs.bitmind.ai, undated, copyright 2026, read 15 September 2026.",
+      "about": "subnet:34",
+      "slots": ["messaging.h1", "subnet.self", "positioning.differentiator"],
+      "themes": ["adaptation", "trust"],
+      "metaphors": ["self-evolving"],
+      "source": {
+        "url": "https://docs.bitmind.ai/bitmind-overview.md",
+        "medium": "docs",
+        "title": "BitMind Overview",
+        "outlet": "BitMind docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-014",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Decentralized AI (DeAI) network that realizes a continuous, dynamic, incentivized competition for producing accurate detection models … Generators push realism; discriminators improve detection — both co-evolve under aligned incentives.",
+      "context": "Architecture Summary page of docs.bitmind.ai describing Subnet 34; two lines joined with an ellipsis; undated, copyright 2026.",
+      "about": "subnet:34",
+      "slots": ["subnet.self", "positioning.category", "language.term"],
+      "themes": ["adversarial AI", "incentive design", "decentralised intelligence"],
+      "metaphors": ["competition", "co-evolution"],
+      "source": {
+        "url": "https://docs.bitmind.ai/llms-full.txt",
+        "medium": "docs",
+        "title": "Architecture Summary",
+        "outlet": "BitMind docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn34-015",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "BitMind secures the data your business depends on. We verify the authenticity of every data point before your AI acts on it … The trust layer for enterprises",
+      "context": "Headline copy on bitmind.ai, copyright 2026 BitMind Holdings Limited, read 15 September 2026; the homepage does not mention Bittensor or Subnet 34.",
+      "about": "subnet:34",
+      "slots": ["audience", "positioning.category", "value.functional"],
+      "themes": ["enterprise", "trust"],
+      "metaphors": ["layer"],
+      "source": {
+        "url": "https://bitmind.ai",
+        "medium": "docs",
+        "title": "BitMind homepage",
+        "outlet": "bitmind.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {"date": "2024-04-29", "title": "Free Tools to Detect AI Deep Fakes", "outlet": "Strawberry Letter (iHeart), Rushion McDonald", "url": "https://www.iheart.com/podcast/1141-strawberry-letter-22836089/episode/info-you-can-use-free-tools-271206339/", "medium": "podcast", "note": "Ken Miyachi on free detection tools; listed on bitmind.ai/podcasts; no transcript reached."},
+    {"date": "2024-08-15", "title": "BitMind Ventura Labs", "outlet": "Ventura Labs", "url": "https://www.youtube.com/watch?v=cPrJ3Ro8_1Q", "medium": "youtube", "note": "Deep dive into deepfake detection with BitMind leadership; listed on bitmind.ai/podcasts; YouTube did not render."},
+    {"date": "2024-09-10", "title": "BitMind Interview - Revenue Search", "outlet": "Bittensor Revenue Search", "url": "https://www.youtube.com/watch?v=aRNgfWwKsv4", "medium": "youtube", "note": "AI fraud prevention; listed on bitmind.ai/podcasts; no transcript."},
+    {"date": "2024-10-05", "title": "BitMind Interview - Episode 3", "outlet": "YouTube", "url": "https://www.youtube.com/watch?v=oJMcwi3c4X4", "medium": "youtube", "note": "AI safety and authentication; listed on bitmind.ai/podcasts; no transcript."},
+    {"date": "2025-05-09", "title": "BitMind CEO Shares Insights On Deepfake Detection And How Decentralized Networks May Enhance The Process", "outlet": "Crowdfund Insider", "url": "https://www.crowdfundinsider.com/2025/05/238988-bitmind-ceo-shares-insights-on-deepfake-detection-and-how-decentralized-networks-may-enhance-the-process/", "medium": "article", "note": "Text interview; quoted above."},
+    {"date": "2025-07-25", "title": "Interview: 'This is just the tip of the iceberg,' says BitMind founder Ken Jon Miyachi on deepfake scams", "outlet": "Invezz", "url": "https://invezz.com/news/2025/07/25/interview-this-is-just-the-tip-of-the-iceberg-says-bitmind-founder-ken-jon-miyachi-on-deepfake-scams/", "medium": "article", "note": "Text interview; page blocked (403), not quoted."},
+    {"date": "2025-12-18", "title": "#501: Ken Miyachi, Co-founder of BitMind, on Bittensor, The Escalation of AI-Driven Crypto Scams, and Deepfakes", "outlet": "CryptoNews Podcast", "url": "https://podcasts.apple.com/us/podcast/501-ken-miyachi-co-founder-of-bitmind-on-bittensor/id1559291408?i=1000741806712", "medium": "podcast", "note": "Description covers Bittensor, AI-driven crypto scams and real-time verification; no transcript reached."},
+    {"date": "2025", "title": "Elon musk is the most deepfaked person in the world, Ken Jon Miyachi Co-Founder BitMind", "outlet": "Irish Tech News", "url": "https://irishtechnews.ie/elon-musk-is-the-most-deepfaked-person-in-the-world-ken-jon-miyachi-co-founder-bitmind/", "medium": "article", "note": "Text interview; blocked by a CAPTCHA, not quoted."}
+  ],
+  "metaphors": [
+    {"label": "engine", "wording": "a self-sustaining Generative Adversarial Engine", "first_statement": "sn34-006", "origin": "introduced", "lineage_notes": "GAS as a name; the engine frame recurs in the 2026 docs as a self-evolving service."},
+    {"label": "co-evolution", "wording": "co-evolves detectors, generators, benchmarks, and data in a single, incentive-aligned loop", "first_statement": "sn34-006", "origin": "introduced", "lineage_notes": "Borrowed from GAN training; the Bittensor twist is that the two sides are paid miners."},
+    {"label": "competition", "wording": "hundreds of developers can come and compete to create the best detection algorithms", "first_statement": "sn34-010", "origin": "reused", "lineage_notes": "Foundation-era framing of subnets as competitions; also in Affine (sn120-004) and Ridges (sn62-003)."},
+    {"label": "layer", "wording": "The trust layer for enterprises", "first_statement": "sn34-015", "origin": "reused", "lineage_notes": "Enterprise-software framing; Hippius uses layer for memory (see sn75 coverage)."},
+    {"label": "self-evolving", "wording": "a dynamic, self-evolving service that instantly adapts to new threats", "first_statement": "sn34-013", "origin": "introduced", "lineage_notes": ""}
+  ],
+  "framework": {
+    "foundation.mission": {"summary": "Build the best deepfake detection on the market and, in doing so, demonstrate decentralised AI; later phrased as trustworthy detection protecting users and organisations from synthetic media.", "statements": ["sn34-004", "sn34-012"]},
+    "foundation.vision": {"summary": "Make SN34 the default engine for trustworthy AI-generated-content detection: an open network producing verifiable models delivered through private infrastructure.", "statements": ["sn34-007"]},
+    "problem.cultural": {"summary": "Deepfakes went from half a million in 2023 to eight million in 2025.", "statements": ["sn34-008"]},
+    "problem.market": {"summary": "Detectors are static while generative AI is dynamic, and detectors trained on one generator fail on others.", "statements": ["sn34-009", "sn34-001"]},
+    "opportunity": {"summary": "The explosion in deepfake volume is the tailwind the founder cites.", "statements": ["sn34-008"]},
+    "audience": {"summary": "Enterprises and organisations first; the 2026 site speaks to businesses whose AI acts on data, and the subnet's own miners appear only in docs and GitHub.", "statements": ["sn34-015", "sn34-012"]},
+    "positioning.category": {"summary": "For the subnet: a deepfake detection subnet, then a generative adversarial engine, then a trust layer for enterprises. For the network: the decentralised network where hundreds of developers compete for automatic rewards.", "statements": ["sn34-005", "sn34-006", "sn34-015", "sn34-010"]},
+    "positioning.differentiator": {"summary": "A network of diverse models and miners that adapts continuously, against static single-team detectors.", "statements": ["sn34-002", "sn34-013"]},
+    "positioning.reason": {"summary": "Bittensor lets hundreds of developers compete with automatic rewards, so detection improves as fast as generation.", "statements": ["sn34-010", "sn34-002"]},
+    "positioning.against": {"summary": "Conventional, static detectors and single teams trying to keep up with thousands of deepfake creators.", "statements": ["sn34-009"]},
+    "value.functional": {"summary": "Higher accuracy on real-world deepfakes (88 percent against 69) and verification of every data point before an AI acts on it.", "statements": ["sn34-011", "sn34-015"]},
+    "messaging.h1": {"summary": "The best deepfake detection on the market, demonstrating the potential of decentralised AI; by 2026, the most authoritative AI fraud detection through a self-evolving service.", "statements": ["sn34-004", "sn34-013", "sn34-007"]},
+    "messaging.proof": {"summary": "Miners beating the base model in the first month, an incentive mechanism that resisted gaming, and benchmark accuracy figures.", "statements": ["sn34-003", "sn34-011"]},
+    "language.term": {"summary": "GAS (Generative Adversarial Engine), detectors and generators as miner types, AIGC detection, DeAI.", "statements": ["sn34-006", "sn34-014"]},
+    "subnet.self": {"summary": "A deepfake detection subnet that became GAS: generator miners forge synthetic media, detector miners submit models, validators evaluate both, and the whole loop co-evolves under aligned incentives.", "statements": ["sn34-005", "sn34-006", "sn34-014", "sn34-002"]},
+    "subnet.network": {"summary": "Bittensor is the decentralised network where developers compete for automatic rewards; the subnet exists partly to demonstrate the potential of decentralised AI. On the enterprise site the network is not named.", "statements": ["sn34-010", "sn34-004"]}
+  },
+  "language": {
+    "words_used": ["deepfake", "detection", "trustworthy", "decentralized AI", "DeAI", "GAS", "generators", "discriminators", "detectors", "co-evolve", "incentive-aligned", "self-evolving", "enterprise", "trust layer", "accuracy"],
+    "words_avoided": ["Bittensor and Subnet 34 on the 2026 homepage and the 2025 roadmap post", "TAO", "alpha", "emissions in customer-facing copy"],
+    "coinages": [
+      {"term": "GAS", "meaning": "Generative Adversarial Subnet or Engine: the late 2024 redesign in which generator and detector miners compete in one loop.", "statement": "sn34-006"},
+      {"term": "the trust layer for enterprises", "meaning": "The 2026 category claim for the company product built on the subnet's models.", "statement": "sn34-015"}
+    ]
+  },
+  "genealogy": [
+    {"era": "revolution", "summary": "At launch the team wrote for the Bittensor community in Medium recaps: the mission was the best deepfake detector on the market while demonstrating the potential of decentralised AI, and the subnet's fit was a network of diverse models and miners that adapts continuously [sn34-004] [sn34-002] [sn34-003]. In November 2024 Miyachi renamed the mechanism GAS, a generative adversarial engine, and set the long-term goal of SN34 as the default engine for trustworthy AIGC detection [sn34-006] [sn34-007].", "dominant_metaphor": "engine", "shift": ""},
+    {"era": "dtao", "summary": "In press interviews Miyachi framed Bittensor as the decentralised network where hundreds of developers compete for automatic rewards, set against static detectors and single teams, and led with accuracy numbers [sn34-010] [sn34-009] [sn34-011]. The October 2025 roadmap post describes trustworthy detection technology without naming Bittensor [sn34-012].", "dominant_metaphor": "competition", "shift": "The network moves from mission statement to supporting argument; the company voice starts to separate from the subnet voice."},
+    {"era": "current", "summary": "The 2026 homepage sells a trust layer for enterprises and does not say Bittensor; the docs keep the subnet language, calling SN34 a DeAI network running a continuous incentivized competition where generators and discriminators co-evolve [sn34-015] [sn34-013] [sn34-014].", "dominant_metaphor": "layer", "shift": "Two registers: enterprise trust layer on the front page, adversarial competition in the docs."}
+  ],
+  "relations": [
+    {"to": "opentensor-foundation", "kind": "borrows", "statement": "sn34-010", "note": "Describes Bittensor in the foundation's competition-and-rewards language rather than in the founder's market or commodity language."},
+    {"to": "sn120", "kind": "agrees", "statement": "sn34-014", "note": "Both frame the subnet as a continuous incentivized competition with anti-gaming as a proof point."}
+  ],
+  "coverage": {
+    "searches_used": 3,
+    "fetches_used": 26,
+    "well_covered": ["revolution era team writing (Medium recaps, GAS blog post)", "2025 press quotes from Ken Miyachi", "2026 docs and homepage"],
+    "thin": ["podcast and YouTube appearances (six listed, none transcribed)", "X posts by @bitmind and Ken Miyachi", "2026 founder statements about Bittensor"],
+    "gaps": [
+      "https://irishtechnews.ie interview with Ken Miyachi: blocked by CAPTCHA directly and via proxy.",
+      "https://invezz.com July 2025 interview: 403 directly, tracker-only via proxy.",
+      "X account @bitmind and Ken Miyachi's account: X does not render and web.archive.org is blocked from this session; no X statements recorded.",
+      "Hash Rate Ep. 076 listed on bitmind.ai/podcasts with date 2023-11-01 predates the subnet and was not verified, so it is not recorded as an appearance."
+    ],
+    "unreachable": ["https://irishtechnews.ie/elon-musk-is-the-most-deepfaked-person-in-the-world-ken-jon-miyachi-co-founder-bitmind/", "https://invezz.com/news/2025/07/25/interview-this-is-just-the-tip-of-the-iceberg-says-bitmind-founder-ken-jon-miyachi-on-deepfake-scams/", "https://podcasts.chainofthought.xyz/podcast-summaries/novelty-search-bitmind-ai-bittensor-subnet-34-f2546", "https://web.archive.org/web/2026/https://x.com/bitmind", "https://www.youtube.com/watch?v=QF6ysHaBzhg"]
+  }
+}

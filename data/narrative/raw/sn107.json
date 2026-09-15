@@ -1,0 +1,404 @@
+{
+  "narrator": {
+    "id": "sn107",
+    "name": "Minos (SN107)",
+    "aka": ["MinosAI", "Minos Protocol", "SN107", "Subnet 107"],
+    "kind": "subnet",
+    "role": "Subnet team, MinosAI; Mamad Ahangari, Varun Goyal and Hassan Masoudi are the named authors of its research",
+    "affiliation": "MinosAI",
+    "active_from": "2026",
+    "handles": {"x": "@theminos_ai", "github": "minos-protocol"},
+    "subnets": [107],
+    "one_line": "Genomic variant-calling subnet launched in March 2026 that turns finding DNA mutations into a 72-minute winner-take-all competition scored against synthetic genomes with hidden mutations; it calls itself the foundational layer of genomics, says accuracy is the only thing that matters, and is ranked first by emission in September 2026."
+  },
+  "statements": [
+    {
+      "id": "sn107-001",
+      "date": "2026-02",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "As DNA sequencing costs have fallen from $1 million to under $200 per genome, the bottleneck in genomics has shifted from data generation to data analysis.",
+      "context": "Opening sentence of the Minos whitepaper, version 1.1, dated February 2026.",
+      "about": "subnet:107",
+      "slots": ["problem.market", "opportunity"],
+      "themes": ["genomics", "data analysis"],
+      "metaphors": ["bottleneck"],
+      "source": {
+        "url": "https://theminos.ai/whitepaper",
+        "medium": "whitepaper",
+        "title": "Minos whitepaper v1.1",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-002",
+      "date": "2026-02",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "Variant calling, the process of identifying DNA mutations from sequencing data, is the critical inference layer, and despite major investment from Google, the Broad Institute, and government agencies, no single tool is consistently the most accurate.",
+      "context": "Second sentence of the whitepaper, naming the incumbents the subnet measures itself against.",
+      "about": "subnet:107",
+      "slots": ["problem.market", "positioning.against"],
+      "themes": ["genomics", "accuracy"],
+      "metaphors": ["layer"],
+      "source": {
+        "url": "https://theminos.ai/whitepaper",
+        "medium": "whitepaper",
+        "title": "Minos whitepaper v1.1",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-003",
+      "date": "2026-02",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "Minos is a Bittensor subnet that addresses this through decentralized, incentive-driven optimization.",
+      "context": "The whitepaper's one sentence on Bittensor, immediately after the problem statement.",
+      "about": "network",
+      "slots": ["subnet.network", "subnet.self", "positioning.category"],
+      "themes": ["incentive design", "decentralised intelligence"],
+      "metaphors": [],
+      "source": {
+        "url": "https://theminos.ai/whitepaper",
+        "medium": "whitepaper",
+        "title": "Minos whitepaper v1.1",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-004",
+      "date": "2026-02",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "Winner-Take-All incentive design … The best-performing miner receives all the emissions",
+      "context": "The whitepaper's incentive section, describing the reward after each 72-minute evaluation cycle; heading and sentence joined with an ellipsis.",
+      "about": "subnet:107",
+      "slots": ["subnet.self", "language.term", "positioning.differentiator"],
+      "themes": ["incentive design", "token economics"],
+      "metaphors": ["winner take all"],
+      "source": {
+        "url": "https://theminos.ai/whitepaper",
+        "medium": "whitepaper",
+        "title": "Minos whitepaper v1.1",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-005",
+      "date": "2026-02",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "AI-powered variant calling infrastructure where hospitals, biobanks, and pharmaceutical companies can submit sequencing samples and receive high-accuracy variant calls",
+      "context": "The whitepaper's long-term objective, after validated genomic databases and a consensus caller.",
+      "about": "subnet:107",
+      "slots": ["foundation.vision", "audience"],
+      "themes": ["genomics", "enterprise"],
+      "metaphors": ["infrastructure"],
+      "source": {
+        "url": "https://theminos.ai/whitepaper",
+        "medium": "whitepaper",
+        "title": "Minos whitepaper v1.1",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-006",
+      "date": "2026-07-28",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Our goal in this study was not to create a single synthetic genome example but to build the infrastructure needed for a growing library of synthetic genomes at scale.",
+      "context": "Case study D of the OpenAI field report on scientific computing in the age of agentic AI, authored by Mamad Ahangari, Varun Goyal and Hassan Masoudi of MinosAI, describing HelixForge, the engine that generates the subnet's challenge genomes; the case study does not mention Bittensor.",
+      "about": "subnet:107",
+      "slots": ["messaging.proof", "subnet.self"],
+      "themes": ["genomics", "synthetic data"],
+      "metaphors": ["library"],
+      "source": {
+        "url": "https://cdn.openai.com/pdf/scientific-computing-in-the-age-of-agentic-ai-an-exploratory-field-report.pdf",
+        "medium": "article",
+        "title": "Scientific computing in the age of agentic AI: an exploratory field report, Case Study D",
+        "outlet": "OpenAI",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-007",
+      "date": "2026-07-28",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Although the agents handled much of the implementation, expert human judgment remained the most crucial part of the entire project.",
+      "context": "Same case study, in the section titled The human role.",
+      "about": "subnet:107",
+      "slots": ["voice", "foundation.values"],
+      "themes": ["agents", "expertise"],
+      "metaphors": [],
+      "source": {
+        "url": "https://cdn.openai.com/pdf/scientific-computing-in-the-age-of-agentic-ai-an-exploratory-field-report.pdf",
+        "medium": "article",
+        "title": "Scientific computing in the age of agentic AI: an exploratory field report, Case Study D",
+        "outlet": "OpenAI",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-008",
+      "date": "2026-07-28",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "Proud to share: we co-authored a new paper with @OpenAI on scientific computing in the age of agentic AI. HelixForge, our…",
+      "context": "Post by @theminos_ai announcing the OpenAI paper, reachable only as the truncated text of an Opentensor Foundation repost; date decoded from the repost id.",
+      "about": "subnet:107",
+      "slots": ["messaging.proof", "voice"],
+      "themes": ["research", "credibility"],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/opentensor/status/2082162531313877146",
+        "medium": "x",
+        "title": "Opentensor Foundation repost of @theminos_ai",
+        "outlet": "X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn107-009",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "THE FOUNDATIONAL LAYER OF GENOMICS … CLINICAL-GRADE VARIANT CALLING ◆ DECENTRALIZED GENOMICS ◆ POWERED BY BITTENSOR",
+      "context": "Headline and strapline of theminos.ai, read 15 September 2026; two lines joined with an ellipsis.",
+      "about": "subnet:107",
+      "slots": ["messaging.h1", "positioning.category", "subnet.network"],
+      "themes": ["genomics", "decentralised intelligence"],
+      "metaphors": ["layer"],
+      "source": {
+        "url": "https://theminos.ai",
+        "medium": "docs",
+        "title": "Minos homepage",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-010",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Minos transforms genomic variant calling, the process of identifying DNA mutations from sequencing data, into a decentralized competition where accuracy is continuously measured and economically rewarded.",
+      "context": "Opening sentence of the About page on theminos.ai.",
+      "about": "subnet:107",
+      "slots": ["subnet.self", "messaging.h1", "positioning.category"],
+      "themes": ["competition", "accuracy", "incentive design"],
+      "metaphors": ["competition"],
+      "source": {
+        "url": "https://theminos.ai/about",
+        "medium": "docs",
+        "title": "About Minos",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-011",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "transparent, continuous, incentive-aligned benchmarking",
+      "context": "About page, contrasting the subnet with self-reported laboratory accuracy.",
+      "about": "subnet:107",
+      "slots": ["positioning.differentiator", "foundation.values"],
+      "themes": ["verification", "transparency"],
+      "metaphors": [],
+      "source": {
+        "url": "https://theminos.ai/about",
+        "medium": "docs",
+        "title": "About Minos",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-012",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Minos is a decentralized genomic variant-calling network running on Bittensor Subnet 107. … accuracy is the only thing that matters.",
+      "context": "Overview page of docs.theminos.ai; two lines joined with an ellipsis.",
+      "about": "subnet:107",
+      "slots": ["subnet.self", "foundation.values", "subnet.network"],
+      "themes": ["accuracy", "genomics"],
+      "metaphors": ["network"],
+      "source": {
+        "url": "https://docs.theminos.ai/overview",
+        "medium": "docs",
+        "title": "Overview, Minos docs",
+        "outlet": "Minos docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-013",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "a merit-based competition for genomic variant calling on the Bittensor network … purely meritocratic",
+      "context": "Architecture page of the docs, describing how rewards are allocated; two phrases joined with an ellipsis.",
+      "about": "subnet:107",
+      "slots": ["subnet.self", "foundation.values", "value.self_expressive"],
+      "themes": ["competition", "meritocracy"],
+      "metaphors": ["competition"],
+      "source": {
+        "url": "https://docs.theminos.ai/architecture.md",
+        "medium": "docs",
+        "title": "Architecture, Minos docs",
+        "outlet": "Minos docs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-014",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Minos (SN107) is a subnet for genomic variant calling and benchmarking powered by Bittensor.",
+      "context": "Opening line of the minos-protocol/minos_subnet README, read 15 September 2026; the repository's first commit is dated 15 March 2026.",
+      "about": "subnet:107",
+      "slots": ["subnet.self", "subnet.network"],
+      "themes": ["genomics", "benchmarking"],
+      "metaphors": [],
+      "source": {
+        "url": "https://github.com/minos-protocol/minos_subnet",
+        "medium": "docs",
+        "title": "minos-protocol/minos_subnet README",
+        "outlet": "Minos GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn107-015",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Minos is being built in five phases, starting with hyperparameter optimization of proven tools and progressing toward fully custom algorithms, consensus AI, and production-grade genomic services. … Ship the consensus caller as a production-grade service: versioned Docker images, automatic updates from subnet learnings, clinical-friendly reporting, and state-of-the-art accuracy tracking.",
+      "context": "Roadmap page on theminos.ai, opening sentence and the phase-five vision, joined with an ellipsis.",
+      "about": "subnet:107",
+      "slots": ["foundation.vision", "subnet.self"],
+      "themes": ["genomics", "roadmap"],
+      "metaphors": ["consensus"],
+      "source": {
+        "url": "https://theminos.ai/roadmap",
+        "medium": "docs",
+        "title": "Roadmap, Minos",
+        "outlet": "theminos.ai",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {"date": "2026-07-28", "title": "Scientific computing in the age of agentic AI: an exploratory field report", "outlet": "OpenAI", "url": "https://openai.com/index/scientific-computing-agentic-ai/", "medium": "article", "note": "Co-authored paper; Minos team wrote Case Study D on HelixForge. Full PDF read."},
+    {"date": "2026", "title": "Podcast interview with Amad of Minos", "outlet": "unknown", "url": "https://subnetalpha.ai/subnet/minos/", "medium": "podcast", "note": "Subnet Alpha reports a podcast in which Amad of Minos says miners found unexpected weaknesses in widely used genomics tools; episode not located, no transcript."}
+  ],
+  "metaphors": [
+    {"label": "layer", "wording": "The foundational layer of genomics", "first_statement": "sn107-009", "origin": "introduced", "lineage_notes": "Also variant calling as the critical inference layer (sn107-002); layer language shared with BitMind's trust layer (sn34-015)."},
+    {"label": "competition", "wording": "a decentralized competition where accuracy is continuously measured and economically rewarded", "first_statement": "sn107-010", "origin": "reused", "lineage_notes": "The standard subnet frame, here made explicit as merit-based and purely meritocratic (sn107-013)."},
+    {"label": "winner take all", "wording": "Winner-Take-All incentive design", "first_statement": "sn107-004", "origin": "reused", "lineage_notes": "Same mechanism family as Affine's king-of-the-hill crown (sn120-014)."},
+    {"label": "bottleneck", "wording": "the bottleneck in genomics has shifted from data generation to data analysis", "first_statement": "sn107-001", "origin": "reused", "lineage_notes": "Standard genomics framing, used to make the case for compute-side competition."}
+  ],
+  "framework": {
+    "foundation.mission": {"summary": "Turn variant calling into a decentralised competition where accuracy is continuously measured and paid for.", "statements": ["sn107-010", "sn107-014"]},
+    "foundation.vision": {"summary": "Five phases from tuning existing tools to a consensus caller shipped as a clinical-grade service that hospitals, biobanks and pharma can submit samples to.", "statements": ["sn107-015", "sn107-005"]},
+    "foundation.values": {"summary": "Accuracy is the only thing that matters; rewards are purely meritocratic; benchmarking is transparent and continuous; expert human judgment stays in charge of the science.", "statements": ["sn107-012", "sn107-013", "sn107-011", "sn107-007"]},
+    "problem.market": {"summary": "Sequencing got cheap, analysis became the bottleneck, and no variant caller is consistently the most accurate despite Google, the Broad and government money.", "statements": ["sn107-001", "sn107-002"]},
+    "opportunity": {"summary": "Genome costs under 200 dollars shift the bottleneck to analysis, where a competition can help.", "statements": ["sn107-001"]},
+    "audience": {"summary": "Hospitals, biobanks and pharmaceutical companies as eventual customers; miners tuning GATK, DeepVariant, bcftools and freebayes today.", "statements": ["sn107-005", "sn107-015"]},
+    "positioning.category": {"summary": "The foundational layer of genomics; a decentralised variant-calling network and competition powered by Bittensor.", "statements": ["sn107-009", "sn107-010", "sn107-003"]},
+    "positioning.differentiator": {"summary": "Continuous, incentive-aligned benchmarking against synthetic genomes with hidden mutations, and winner-take-all rewards.", "statements": ["sn107-011", "sn107-004"]},
+    "positioning.against": {"summary": "Self-reported lab accuracy and the incumbent callers from Google and the Broad Institute.", "statements": ["sn107-002", "sn107-011"]},
+    "value.self_expressive": {"summary": "Joining is joining a meritocracy where only accuracy counts.", "statements": ["sn107-013"]},
+    "messaging.h1": {"summary": "The foundational layer of genomics.", "statements": ["sn107-009", "sn107-010"]},
+    "messaging.proof": {"summary": "A co-authored OpenAI field report on HelixForge, the engine that makes the subnet's challenge genomes.", "statements": ["sn107-006", "sn107-008"]},
+    "voice": {"summary": "Scientific-paper register with a marketing headline in capitals; the team names itself in a research paper and stays pseudonymous on the subnet.", "statements": ["sn107-007", "sn107-008"]},
+    "language.term": {"summary": "Winner-Take-All, HelixForge, consensus caller, challenge genome, hidden mutations.", "statements": ["sn107-004"]},
+    "subnet.self": {"summary": "A 72-minute cycle in which the platform generates a synthetic genome with hidden mutations, miners submit tool configurations, validators re-run them and score with hap.py, and the most accurate miner takes all the emission.", "statements": ["sn107-010", "sn107-004", "sn107-012", "sn107-014", "sn107-015"]},
+    "subnet.network": {"summary": "Bittensor is named as the thing Minos is powered by and runs on, and as decentralised, incentive-driven optimization; there is no description of the network beyond the subnet's own use of it, and the OpenAI paper omits it.", "statements": ["sn107-003", "sn107-009", "sn107-012", "sn107-014"]}
+  },
+  "language": {
+    "words_used": ["variant calling", "accuracy", "decentralized competition", "incentive-driven", "Winner-Take-All", "emissions", "miners", "validators", "truth set", "hap.py", "synthetic genome", "hidden mutations", "meritocratic", "clinical-grade", "foundational layer"],
+    "words_avoided": ["TAO or alpha price", "market for intelligence", "Bittensor in the OpenAI paper", "founder names on the subnet site"],
+    "coinages": [
+      {"term": "HelixForge", "meaning": "The team's GPU-native engine for inserting known mutations into real sequencing reads to make challenge genomes.", "statement": "sn107-006"},
+      {"term": "the foundational layer of genomics", "meaning": "The category claim for a subnet that benchmarks and eventually ships variant calling.", "statement": "sn107-009"},
+      {"term": "consensus caller", "meaning": "A planned model that aggregates the best-performing miner outputs into one variant caller.", "statement": "sn107-015"}
+    ]
+  },
+  "genealogy": [
+    {"era": "dtao", "summary": "The February 2026 whitepaper opens with the genomics bottleneck and the failure of any single tool, then gives Bittensor one sentence: a subnet for decentralised, incentive-driven optimization with winner-take-all rewards and a vision of clinical infrastructure [sn107-001] [sn107-002] [sn107-003] [sn107-004] [sn107-005].", "dominant_metaphor": "bottleneck", "shift": ""},
+    {"era": "current", "summary": "From July 2026 the team's proof point is a co-authored OpenAI paper on HelixForge that never mentions Bittensor, while the site calls Minos the foundational layer of genomics, a decentralised competition where accuracy is the only thing that matters, powered by Bittensor [sn107-006] [sn107-008] [sn107-009] [sn107-010] [sn107-012].", "dominant_metaphor": "layer", "shift": "Two audiences: the scientific one hears about GPU engines and human judgment, the Bittensor one hears about a meritocratic competition; the network is a power source, never described on its own terms."}
+  ],
+  "relations": [
+    {"to": "sn120", "kind": "agrees", "statement": "sn107-004", "note": "Winner-take-all mechanism, as in Affine's crown."},
+    {"to": "opentensor-foundation", "kind": "responds", "statement": "sn107-008", "note": "The Opentensor Foundation reposted the OpenAI paper announcement."}
+  ],
+  "coverage": {
+    "searches_used": 3,
+    "fetches_used": 21,
+    "well_covered": ["site, docs, whitepaper and README (all 2026)", "OpenAI field report case study"],
+    "thin": ["spoken voice: one podcast reported by Subnet Alpha, not located", "X posts by @theminos_ai (one truncated post via a repost)", "anything before February 2026, since the subnet did not exist"],
+    "gaps": [
+      "https://x.com/theminos_ai: X did not render and web.archive.org is blocked from this session; only the truncated OpenAI announcement is recorded.",
+      "Podcast with Amad of Minos reported by Subnet Alpha: not located before the session search budget ran out.",
+      "No statement from the team about being ranked first by emission in September 2026 was found; the ranking is the caller's premise, not the team's claim.",
+      "The team's own words on why Bittensor rather than a centralised benchmark do not exist beyond the one whitepaper sentence."
+    ],
+    "unreachable": ["https://x.com/theminos_ai", "https://x.com/opentensor/status/2082162531313877146", "https://web.archive.org/web/2026/https://x.com/theminos_ai"]
+  }
+}

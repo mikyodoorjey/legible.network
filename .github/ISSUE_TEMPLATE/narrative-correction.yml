@@ -1,0 +1,24 @@
+name: Narrative correction
+description: Report a misquote, a wrong date, a wrong speaker, a missing primary source, or a statement the map should carry
+title: "[Narrative] <narrator>"
+labels: [narrative, correction]
+body:
+  - type: input
+    id: narrator
+    attributes: { label: Narrator, placeholder: "jacob-steeves" }
+    validations: { required: true }
+  - type: input
+    id: statement
+    attributes: { label: Statement id, description: "The id shown on the statement, if it exists", placeholder: "jacob-steeves-014" }
+  - type: dropdown
+    id: kind
+    attributes: { label: What kind of correction, options: ["wording differs from the source", "wrong date", "wrong speaker", "source does not say this", "primary source found for a probable statement", "missing statement the map should carry", "other"] }
+    validations: { required: true }
+  - type: textarea
+    id: wrong
+    attributes: { label: What is wrong, description: "What the map says, and what the source actually says." }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Primary source URL, description: "The page, transcript, or post where the narrator's own words are." }
+    validations: { required: true }

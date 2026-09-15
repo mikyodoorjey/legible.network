@@ -1,5 +1,9 @@
-The dataset in this directory (index.json, summary.json, CHANGELOG.md and the
-scores it is built from) is licensed under Creative Commons Attribution 4.0
+The datasets in this directory (index.json, summary.json, CHANGELOG.md and the
+scores they are built from; narrative.json and the narrator files under
+narrative/raw/) are licensed under Creative Commons Attribution 4.0
 International (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/
 
-Attribution: "Subnet Legibility Index by Mikyö Clark, legible.network".
+Attribution: "Subnet Legibility Index by Mikyö Clark, legible.network" for the
+index, "Bittensor Narrative Map by Mikyö Clark, legible.network" for the map.
+Quotations inside the narrative dataset remain the words of the people quoted;
+each is at most 60 words, attributed, dated, and linked to its source.

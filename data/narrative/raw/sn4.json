@@ -1,0 +1,784 @@
+{
+  "narrator": {
+    "id": "sn4",
+    "name": "Targon (SN4)",
+    "aka": [
+      "Subnet 4",
+      "Manifold Labs Targon",
+      "Targon Virtual Machine"
+    ],
+    "kind": "subnet",
+    "role": "Subnet team: confidential compute and inference market on Bittensor subnet 4",
+    "affiliation": "Manifold Labs",
+    "active_from": "2023-10",
+    "handles": {
+      "x": "@manifoldlabs",
+      "github": "manifold-inc",
+      "ceo": "Rob Myers"
+    },
+    "subnets": [
+      4
+    ],
+    "one_line": "Manifold Labs' compute subnet, one of the first on Bittensor, which speaks in the foundation's marketplace-of-digital-commodities language, criticises the network's Python lock-in and subsidised miners, and frames its own subnet as a confidential cloud in hyperscaler territory."
+  },
+  "statements": [
+    {
+      "id": "sn4-001",
+      "date": "2024-03-18",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Bittensor is a powerful platform that seems to be limiting its growth by forcing applications to be locked into one stack.",
+      "context": "Manifold Labs blog post on rewriting the Bittensor client in Go.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "problem.market",
+        "positioning.against"
+      ],
+      "themes": [
+        "accessibility",
+        "developer tooling"
+      ],
+      "metaphors": [
+        "platform"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/bittensor-in-go",
+        "medium": "blog",
+        "title": "Bittensor in Go",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-002",
+      "date": "2024-03-18",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "There is currently no standard/language-agnostic format for senders or receivers. This keeps the ecosystem trapped into using Python for almost anyone who wants to build on Bittensor.",
+      "context": "The same Go post on why Manifold built its own client.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "problem.market",
+        "voice"
+      ],
+      "themes": [
+        "developer tooling"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.manifold.inc/releases/bittensor-in-go",
+        "medium": "blog",
+        "title": "Bittensor in Go",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-003",
+      "date": "2024-06-03",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Our aim is to move away from a plateau curve for the subnet, opting instead for an exponential curve where competition is not based on registration.",
+      "context": "Manifold Team's first monthly blog, explaining the subnet 4 redesign for Targon v2.",
+      "about": "subnet:4",
+      "slots": [
+        "subnet.self",
+        "foundation.mission"
+      ],
+      "themes": [
+        "incentive design",
+        "competition"
+      ],
+      "metaphors": [
+        "curve"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/june-blog",
+        "medium": "blog",
+        "title": "June Blog",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-004",
+      "date": "2024-09-05",
+      "date_precision": "day",
+      "era": "revolution",
+      "quote": "Introducing Epistula v2: The first truly open source networking protocol in Bittensor history, designed for secure, efficient, and language-agnostic communication.",
+      "context": "Manifold Labs release note for Epistula, as listed on its releases index.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "messaging.proof",
+        "language.term"
+      ],
+      "themes": [
+        "developer tooling",
+        "open source"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.manifold.inc/releases/",
+        "medium": "blog",
+        "title": "Epistula Release",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-005",
+      "date": "2025-03-31",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Our mission is to make Bittensor that kind of protocol. And to do that, we must think bigger.",
+      "context": "Manifold 2.0 announcement, after describing protocols that disappear into the background.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.mission",
+        "relationship"
+      ],
+      "themes": [
+        "protocol",
+        "ambition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.manifold.inc/releases/manifold-2.0",
+        "medium": "blog",
+        "title": "Manifold 2.0",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-006",
+      "date": "2025-03-31",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We believe we have a small window of opportunity to build the world's first decentralized frontier AI lab.",
+      "context": "Manifold 2.0 announcement on Bittensor's potential.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.vision",
+        "opportunity"
+      ],
+      "themes": [
+        "decentralised frontier lab",
+        "timing"
+      ],
+      "metaphors": [
+        "lab"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/manifold-2.0",
+        "medium": "blog",
+        "title": "Manifold 2.0",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-007",
+      "date": "2025-03-31",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "As of writing, the miners on Targon can afford approximately 1,400 H200s a day. This places us in hyperscaler territory.",
+      "context": "Manifold 2.0 announcement on Targon's scale.",
+      "about": "subnet:4",
+      "slots": [
+        "subnet.self",
+        "messaging.proof",
+        "positioning.against"
+      ],
+      "themes": [
+        "scale",
+        "compute"
+      ],
+      "metaphors": [
+        "hyperscaler"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/manifold-2.0",
+        "medium": "blog",
+        "title": "Manifold 2.0",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-008",
+      "date": "2025-05-04",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "There must be substance behind subnets for it to sustain long term",
+      "context": "Rob Myers, Manifold Labs CEO, quoted by Yogita Khatri in The Block on why investors are drawn to Bittensor.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.values",
+        "voice"
+      ],
+      "themes": [
+        "sustainability",
+        "subnet quality"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.theblock.co/post/353065/bittensor-tao-token-crypto-investors",
+        "medium": "article",
+        "title": "The Funding: Why Bittensor (TAO) is drawing in crypto investors",
+        "outlet": "The Block",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn4-009",
+      "date": "2025-05-22",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "At its core, Bittensor is a marketplace of digital commodities.",
+      "context": "Manifold Labs post 'No Free Gas' on Targon's compute allocation strategy.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category"
+      ],
+      "themes": [
+        "commodity markets"
+      ],
+      "metaphors": [
+        "marketplace"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+        "medium": "blog",
+        "title": "No Free Gas",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-010",
+      "date": "2025-05-22",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "If we opened a gas station and cut our prices to $0, we would expect a line of cars that stretched further than the eye could see.",
+      "context": "The 'No Free Gas' post explaining why subsidised compute attracts abuse.",
+      "about": "subnet:4",
+      "slots": [
+        "subnet.self",
+        "voice",
+        "problem.market"
+      ],
+      "themes": [
+        "subsidy",
+        "incentive design"
+      ],
+      "metaphors": [
+        "gas station"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+        "medium": "blog",
+        "title": "No Free Gas",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-011",
+      "date": "2025-05-22",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "There is a problem today in Bittensor, where many compute miners do not actually own their hardware.",
+      "context": "The 'No Free Gas' post on the shift from individual to institutional mining.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "problem.institutional",
+        "audience"
+      ],
+      "themes": [
+        "miners",
+        "compute ownership"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+        "medium": "blog",
+        "title": "No Free Gas",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-012",
+      "date": "2025-05-22",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "We are working to create a market where every $1 that a miner receives is funded by $1 in organic revenue.",
+      "context": "The 'No Free Gas' post stating Targon's revenue goal.",
+      "about": "subnet:4",
+      "slots": [
+        "subnet.self",
+        "foundation.mission",
+        "positioning.reason"
+      ],
+      "themes": [
+        "revenue",
+        "sustainability"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+        "medium": "blog",
+        "title": "No Free Gas",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-013",
+      "date": "2025-07-14",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Introducing Targon Order Book: A new market mechanism enabling miners to set ask prices for their H200s, creating a more efficient and transparent compute marketplace with predictable hourly rates.",
+      "context": "Manifold Labs release note for Targon v6.2.1, as listed on its releases index.",
+      "about": "subnet:4",
+      "slots": [
+        "subnet.self",
+        "positioning.category",
+        "value.functional"
+      ],
+      "themes": [
+        "commodity markets",
+        "pricing"
+      ],
+      "metaphors": [
+        "marketplace",
+        "order book"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/",
+        "medium": "blog",
+        "title": "Targon v6.2.1",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-014",
+      "date": "2025-07-28",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "At Manifold, we believe the future of AI infrastructure will not be owned by a few centralized labs, but rather powered by a network of independent and economically aligned contributors.",
+      "context": "Manifold Labs Series A announcement.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.vision",
+        "positioning.against"
+      ],
+      "themes": [
+        "anti-centralisation",
+        "economic alignment"
+      ],
+      "metaphors": [
+        "network"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/series-a-announcement",
+        "medium": "blog",
+        "title": "Series A Announcement",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn4-015",
+      "date": "2025-07-28",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "The future of AI will not be gated. It will be incentivized.",
+      "context": "Closing line of the Manifold Labs Series A announcement.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "messaging.h1",
+        "value.emotional"
+      ],
+      "themes": [
+        "incentive design",
+        "open access"
+      ],
+      "metaphors": [
+        "gate"
+      ],
+      "source": {
+        "url": "https://www.manifold.inc/releases/series-a-announcement",
+        "medium": "blog",
+        "title": "Series A Announcement",
+        "outlet": "Manifold Labs releases",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2024-10",
+      "title": "Ventura Labs Ep. 6 with Robert Myers, Joshua Brown and Ahmed Darwich",
+      "outlet": "Ventura Labs",
+      "url": "https://x.com/VenturaLabs/status/1852375071278457087",
+      "medium": "podcast",
+      "note": "Segments on understanding Bittensor, the vision behind Manifold, Targon; not fetched"
+    },
+    {
+      "date": "2025",
+      "title": "James Woodman & Joshua Brown: Targon, Manifold Labs, Bittensor Subnet 4, Compute Markets | Ep. 53",
+      "outlet": "Ventura Labs (YouTube)",
+      "url": "https://www.youtube.com/watch?v=6I6AlTuV1rA",
+      "medium": "youtube",
+      "note": "YouTube page returned only footer text; no transcript"
+    },
+    {
+      "date": "2026-03-23",
+      "title": "Decentralized Compute on Untrusted Hardware Using Intel TDX and Encrypted CVMs",
+      "outlet": "Manifold Labs and Intel whitepaper",
+      "url": "https://www.manifold.inc/releases/intel-whitepaper",
+      "medium": "whitepaper",
+      "note": "Joint whitepaper; index blurb only, not fetched"
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "marketplace",
+      "wording": "At its core, Bittensor is a marketplace of digital commodities.",
+      "first_statement": "sn4-009",
+      "origin": "reused",
+      "lineage_notes": "The foundation's and Jacob Steeves's 'digital commodities' vocabulary; see bittensor.com and Steeves's talks"
+    },
+    {
+      "label": "gas station",
+      "wording": "If we opened a gas station and cut our prices to $0",
+      "first_statement": "sn4-010",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "hyperscaler",
+      "wording": "This places us in hyperscaler territory.",
+      "first_statement": "sn4-007",
+      "origin": "reused",
+      "lineage_notes": "Chutes uses 'hyperscaling' on chutes.ai"
+    },
+    {
+      "label": "lab",
+      "wording": "the world's first decentralized frontier AI lab",
+      "first_statement": "sn4-006",
+      "origin": "reused",
+      "lineage_notes": "Macrocosmos's north star is parity with centralised labs at https://www.taopill.ai/p/an-interview-with-will-squires-from-macrocosmos"
+    },
+    {
+      "label": "gate",
+      "wording": "The future of AI will not be gated. It will be incentivized.",
+      "first_statement": "sn4-015",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "order book",
+      "wording": "Targon Order Book: A new market mechanism",
+      "first_statement": "sn4-013",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "curve",
+      "wording": "move away from a plateau curve for the subnet, opting instead for an exponential curve",
+      "first_statement": "sn4-003",
+      "origin": "introduced",
+      "lineage_notes": ""
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Manifold says its mission is to make Bittensor a protocol that disappears into the background, and Targon a market where each miner dollar is funded by organic revenue.",
+      "statements": [
+        "sn4-005",
+        "sn4-012",
+        "sn4-003"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "AI infrastructure not owned by a few labs but powered by aligned contributors; a decentralised frontier AI lab.",
+      "statements": [
+        "sn4-014",
+        "sn4-006"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Substance behind subnets, and no free gas: subsidies invite abuse.",
+      "statements": [
+        "sn4-008",
+        "sn4-010"
+      ]
+    },
+    "problem.market": {
+      "summary": "Bittensor's Python lock-in limits growth, and zero-price compute attracts abuse.",
+      "statements": [
+        "sn4-001",
+        "sn4-002",
+        "sn4-010"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "Many compute miners on Bittensor do not own their hardware, which Manifold treats as a structural problem.",
+      "statements": [
+        "sn4-011"
+      ]
+    },
+    "opportunity": {
+      "summary": "A small window to build the first decentralised frontier AI lab.",
+      "statements": [
+        "sn4-006"
+      ]
+    },
+    "audience": {
+      "summary": "Miners, and specifically mid-sized owners of hardware rather than renters.",
+      "statements": [
+        "sn4-011"
+      ]
+    },
+    "positioning.category": {
+      "summary": "Bittensor is a marketplace of digital commodities; Targon is a compute marketplace with an order book.",
+      "statements": [
+        "sn4-009",
+        "sn4-013"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "The reason to believe is organic revenue matching miner payouts.",
+      "statements": [
+        "sn4-012"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Against centralised labs, hyperscalers on scale, and against Bittensor's own single-stack lock-in.",
+      "statements": [
+        "sn4-014",
+        "sn4-007",
+        "sn4-001"
+      ]
+    },
+    "value.functional": {
+      "summary": "Predictable hourly compute rates set by miners.",
+      "statements": [
+        "sn4-013"
+      ]
+    },
+    "value.emotional": {
+      "summary": "AI that is not gated.",
+      "statements": [
+        "sn4-015"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "The future of AI will not be gated, it will be incentivized.",
+      "statements": [
+        "sn4-015"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Miners affording 1,400 H200s a day; the first open source networking protocol in Bittensor history.",
+      "statements": [
+        "sn4-007",
+        "sn4-004"
+      ]
+    },
+    "voice": {
+      "summary": "Blunt and engineer-critical of the network's tooling, with homely analogies like the gas station.",
+      "statements": [
+        "sn4-002",
+        "sn4-010",
+        "sn4-008"
+      ]
+    },
+    "relationship": {
+      "summary": "Manifold speaks as an early builder that takes the protocol's growth as its own mission.",
+      "statements": [
+        "sn4-005"
+      ]
+    },
+    "language.term": {
+      "summary": "Epistula, TVM, and Order Book are Manifold's own names.",
+      "statements": [
+        "sn4-004",
+        "sn4-013"
+      ]
+    },
+    "subnet.self": {
+      "summary": "Targon is a compute marketplace in hyperscaler territory that refuses free gas and aims to fund every miner dollar with revenue.",
+      "statements": [
+        "sn4-007",
+        "sn4-010",
+        "sn4-012",
+        "sn4-013",
+        "sn4-003"
+      ]
+    },
+    "subnet.network": {
+      "summary": "Manifold uses the foundation's marketplace-of-digital-commodities frame for Bittensor, but pairs it with open criticism of the network's tooling and miner economics, and a vision of a decentralised frontier lab.",
+      "statements": [
+        "sn4-009",
+        "sn4-001",
+        "sn4-011",
+        "sn4-006",
+        "sn4-014",
+        "sn4-005",
+        "sn4-008"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "marketplace",
+      "digital commodities",
+      "compute",
+      "miners",
+      "confidential",
+      "incentivized",
+      "organic revenue",
+      "H200s",
+      "hyperscaler"
+    ],
+    "words_avoided": [
+      "market for intelligence",
+      "swarm",
+      "collective"
+    ],
+    "coinages": [
+      {
+        "term": "Epistula",
+        "meaning": "Manifold's language-agnostic networking protocol for Bittensor",
+        "statement": "sn4-004"
+      },
+      {
+        "term": "Targon Order Book",
+        "meaning": "a market mechanism where miners set ask prices for H200s",
+        "statement": "sn4-013"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "revolution",
+      "summary": "In 2024 Manifold wrote about Bittensor as a powerful platform held back by a single Python stack [sn4-001] [sn4-002], answered with its own Go client and Epistula protocol [sn4-004], and described subnet 4's redesign in terms of incentive curves [sn4-003].",
+      "dominant_metaphor": "platform",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "In 2025 the frame widened: Manifold's mission is to make Bittensor a protocol that disappears [sn4-005] and to build the first decentralised frontier AI lab [sn4-006], while Bittensor is a marketplace of digital commodities [sn4-009] where free gas draws abuse [sn4-010] and miners should own their hardware [sn4-011]. The Series A line is that AI will be incentivized, not gated [sn4-015].",
+      "dominant_metaphor": "marketplace",
+      "shift": "from tooling critique to market economics and a lab ambition"
+    }
+  ],
+  "relations": [
+    {
+      "to": "opentensor-foundation",
+      "kind": "borrows",
+      "statement": "sn4-009",
+      "note": "Adopts the digital commodities frame"
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "borrows",
+      "statement": "sn4-009",
+      "note": "Marketplace language traces to Steeves's market for intelligence"
+    },
+    {
+      "to": "opentensor-foundation",
+      "kind": "argues",
+      "statement": "sn4-001",
+      "note": "Criticises the foundation's Python-only stack"
+    },
+    {
+      "to": "sn64",
+      "kind": "argues",
+      "statement": "sn4-010",
+      "note": "No Free Gas is a position against subsidised compute; Chutes later adopted a no-subsidies line at https://chutes.ai/news/from-volume-to-value-building-a-sustainable-ai-inference-platform-2"
+    }
+  ],
+  "coverage": {
+    "searches_used": 4,
+    "fetches_used": 13,
+    "well_covered": [
+      "Manifold Labs release blog 2024 to 2025",
+      "targon.com and README self-description"
+    ],
+    "thin": [
+      "founder voice: only one Rob Myers press quote; no podcast transcript",
+      "current era: 2026 releases (TargonOS, Intel whitepaper, Organizations) read only as index blurbs and left out"
+    ],
+    "gaps": [
+      "Ventura Labs YouTube episodes returned no description or transcript",
+      "Intel whitepaper and TargonOS posts not fetched within budget",
+      "OSS Capital, Own Your Mind and SimplyTao articles carried no direct Manifold quotes beyond the No Free Gas lines already sourced"
+    ],
+    "unreachable": [
+      "https://www.youtube.com/watch?v=6I6AlTuV1rA"
+    ]
+  }
+}

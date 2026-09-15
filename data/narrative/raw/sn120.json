@@ -1,0 +1,836 @@
+{
+  "narrator": {
+    "id": "sn120",
+    "name": "Affine (SN120)",
+    "aka": [
+      "Affine Foundation",
+      "SN120",
+      "Subnet 120"
+    ],
+    "kind": "subnet",
+    "role": "Subnet team; Jacob Steeves (Const), CEO of Affine and Bittensor co-founder, speaks for it",
+    "affiliation": "Affine Foundation",
+    "active_from": "2025",
+    "handles": {
+      "x": "@affine_io",
+      "github": "AffineFoundation"
+    },
+    "subnets": [
+      120
+    ],
+    "one_line": "Reinforcement-learning subnet founded in mid 2025 and run as a king-of-the-hill competition where miners upload model checkpoints and the reigning champion takes the emission; led by Bittensor co-founder Jacob Steeves after he left the Opentensor Foundation, so its language is the closest any subnet gets to the founder's own."
+  },
+  "statements": [
+    {
+      "id": "sn120-001",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Affine is building an incentivized RL environment that pays miners for incremental improvements on tasks like program synthesis and coding.",
+      "context": "Opening line of the About Affine section in the team's own job postings on web3.career (community moderator and research engineer roles), dated by the site as posted about a year before September 2026.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "foundation.mission",
+        "positioning.category"
+      ],
+      "themes": [
+        "incentive design",
+        "reinforcement learning"
+      ],
+      "metaphors": [
+        "environment"
+      ],
+      "source": {
+        "url": "https://web3.career/subnet-community-moderator-developer-relations-affine-io/124134",
+        "medium": "other",
+        "title": "Web3 Subnet Community Moderator & Developer Relations at Affine.io",
+        "outlet": "Affine.io job posting on web3.career",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-002",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Operating on Bittensor's Subnet 120, we've created a sybil-proof, decoy-proof, copy-proof, and overfitting-proof mechanism that rewards genuine model improvements.",
+      "context": "Second sentence of the About Affine section in the team's job postings; the same wording appears in the research engineer posting.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "positioning.differentiator",
+        "messaging.proof"
+      ],
+      "themes": [
+        "incentive design",
+        "anti-gaming"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web3.career/subnet-community-moderator-developer-relations-affine-io/124134",
+        "medium": "other",
+        "title": "Web3 Subnet Community Moderator & Developer Relations at Affine.io",
+        "outlet": "Affine.io job posting on web3.career",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-003",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Our vision is to commoditize reasoning—the highest form of intelligence—by directing and aggregating the work of a large, non-permissioned group on RL tasks to break the intelligence sound barrier.",
+      "context": "Vision sentence in the team's job postings; the phrase commoditize reasoning is repeated by third parties as the subnet's tagline and by Jacob Steeves's 2026 conference bios.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "foundation.vision",
+        "messaging.h1",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets",
+        "permissionless entry",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "commodity",
+        "sound barrier"
+      ],
+      "source": {
+        "url": "https://web3.career/i/yMzM0ITM",
+        "medium": "other",
+        "title": "Web3 Research Engineer, ML / RL / Agents at Affine.io",
+        "outlet": "Affine.io job posting on web3.career",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-004",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Affine's strength comes from its open, global network of miners, validators, and contributors competing to advance RL.",
+      "context": "From the community moderator posting, describing who the role would serve.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "positioning.reason",
+        "audience"
+      ],
+      "themes": [
+        "permissionless entry",
+        "competition"
+      ],
+      "metaphors": [
+        "competition"
+      ],
+      "source": {
+        "url": "https://web3.career/subnet-community-moderator-developer-relations-affine-io/124134",
+        "medium": "other",
+        "title": "Web3 Subnet Community Moderator & Developer Relations at Affine.io",
+        "outlet": "Affine.io job posting on web3.career",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-005",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "Success means a thriving, self-sustaining community where contributors are empowered to participate, compete, and innovate.",
+      "context": "Closing line of the community moderator posting, describing what the team counts as success.",
+      "about": "subnet:120",
+      "slots": [
+        "voice",
+        "audience",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "community",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://web3.career/subnet-community-moderator-developer-relations-affine-io/124134",
+        "medium": "other",
+        "title": "Web3 Subnet Community Moderator & Developer Relations at Affine.io",
+        "outlet": "Affine.io job posting on web3.career",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-006",
+      "date": "2025",
+      "date_precision": "year",
+      "era": "dtao",
+      "quote": "A direct market for engineers to upload open models that advance the frontier on RL tasks – and get paid for it, secured by the Bittensor blockchain and instant crypto payouts.",
+      "context": "Wording reproduced on the Subnet Alpha profile of Affine as the project's own pitch; the primary (an earlier README or site copy) was not reachable, so attribution rests on the aggregator.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "positioning.category",
+        "value.functional"
+      ],
+      "themes": [
+        "commodity markets",
+        "ownership"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://subnetalpha.ai/subnet/affine/",
+        "medium": "other",
+        "title": "Affine - Subnet Alpha",
+        "outlet": "Subnet Alpha",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "unverified"
+    },
+    {
+      "id": "sn120-007",
+      "date": "2025-10-29",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "One of the largest subnets on Bittensor, Affine, was built by Chinese developers and is becoming one of the most competitive mechanisms on the network.",
+      "context": "Jacob Steeves, Affine CEO and Bittensor co-founder, answering ChainCatcher's question about how engineers are distributed across the roughly 128 subnets; interview published in Chinese and read in Bitget's English translation.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "messaging.proof",
+        "positioning.reason"
+      ],
+      "themes": [
+        "competition",
+        "community"
+      ],
+      "metaphors": [
+        "competition"
+      ],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560605036813",
+        "medium": "article",
+        "title": "Interview with Bittensor Founder Jacob: Applying Mining to AI, Top 3 Subnets Built by Chinese Teams",
+        "outlet": "ChainCatcher via Bitget News",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-008",
+      "date": "2025-10-29",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Once Chinese miners enter a subnet, competition immediately becomes much fiercer, to the point that many of the original participants choose to exit.",
+      "context": "Jacob Steeves in the same ChainCatcher interview, asked what message he brought to Asian developers and investors.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "audience",
+        "voice"
+      ],
+      "themes": [
+        "competition",
+        "permissionless entry"
+      ],
+      "metaphors": [
+        "competition"
+      ],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560605036813",
+        "medium": "article",
+        "title": "Interview with Bittensor Founder Jacob: Applying Mining to AI, Top 3 Subnets Built by Chinese Teams",
+        "outlet": "ChainCatcher via Bitget News",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-009",
+      "date": "2025-10-29",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "about 128 subnets, each collaborating and competing around different tasks such as inference, training, reinforcement learning, code agents, storage, prediction/trading signals",
+      "context": "Jacob Steeves describing the network as a whole in the ChainCatcher interview, before naming Affine, Ridges and Lium as examples.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category"
+      ],
+      "themes": [
+        "commodity markets",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "competition"
+      ],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560605036813",
+        "medium": "article",
+        "title": "Interview with Bittensor Founder Jacob: Applying Mining to AI, Top 3 Subnets Built by Chinese Teams",
+        "outlet": "ChainCatcher via Bitget News",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-010",
+      "date": "2025-10-29",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "…launching a subnet and compete, good supply is amplified by incentives, poor supply is naturally eliminated",
+      "context": "Jacob Steeves on how subnets sort their miners, in the ChainCatcher interview; the translation renders the clause as a fragment.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.mission",
+        "positioning.reason"
+      ],
+      "themes": [
+        "incentive design",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://www.bitget.com/news/detail/12560605036813",
+        "medium": "article",
+        "title": "Interview with Bittensor Founder Jacob: Applying Mining to AI, Top 3 Subnets Built by Chinese Teams",
+        "outlet": "ChainCatcher via Bitget News",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-011",
+      "date": "2026-04",
+      "date_precision": "month",
+      "era": "dtao",
+      "quote": "Jacob Robert Steeves is the co-founder of Bittensor, an open-source protocol supporting a decentralized machine-learning network built on blockchain technology.",
+      "context": "Speaker bio for Jacob Steeves, listed as CEO of Affine, on the Paris Blockchain Week 2026 site (event 15 to 16 April 2026); conference bios are normally supplied by the speaker.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category",
+        "relationship"
+      ],
+      "themes": [
+        "decentralised intelligence",
+        "open source"
+      ],
+      "metaphors": [
+        "network"
+      ],
+      "source": {
+        "url": "https://parisblockchainweek.com/speaker-2026/jacob-robert-steeves",
+        "medium": "talk",
+        "title": "Jacob Robert Steeves - Bittensor, speaker page",
+        "outlet": "Paris Blockchain Week 2026",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-012",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "Affine is a Bittensor subnet (netuid 120) that crowns miners by a single teacher-anchored distillation score — Reason (Λ2), not an LLM judge.",
+      "context": "First sentence of AGENTS.md in the AffineFoundation/affine repository, the team's public command-center document, status-dated 10 September 2026; markdown emphasis removed.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "positioning.differentiator",
+        "language.term"
+      ],
+      "themes": [
+        "incentive design",
+        "verification"
+      ],
+      "metaphors": [
+        "crown"
+      ],
+      "source": {
+        "url": "https://raw.githubusercontent.com/AffineFoundation/affine/main/AGENTS.md",
+        "medium": "docs",
+        "title": "AGENTS.md, AffineFoundation/affine",
+        "outlet": "Affine Foundation GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-013",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "We want a score that stays benchmark-isomorphic under adversarial pressure on the capability axis.",
+      "context": "AGENTS.md stating the design goal, in a document that also records that the Reason score's correlation with coding ability inverts on the live SN120 board; markdown emphasis removed.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "foundation.values",
+        "voice"
+      ],
+      "themes": [
+        "verification",
+        "anti-gaming"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://raw.githubusercontent.com/AffineFoundation/affine/main/AGENTS.md",
+        "medium": "docs",
+        "title": "AGENTS.md, AffineFoundation/affine",
+        "outlet": "Affine Foundation GitHub",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-014",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "King-of-the-hill subnet. Miners upload checkpoints privately to a validator-controlled bucket … The validator crowns the reigning king by a single teacher-anchored distillation score … Replayability is the trust model: two checkpoints + public D + affine/score.py → recompute the verdict",
+      "context": "The llms.txt operating rules on affine.io, which carry rule changes dated 2 to 14 September 2026; three lines joined with ellipses.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "positioning.category",
+        "language.term",
+        "messaging.proof"
+      ],
+      "themes": [
+        "verification",
+        "incentive design"
+      ],
+      "metaphors": [
+        "king of the hill",
+        "crown"
+      ],
+      "source": {
+        "url": "https://www.affine.io/llms.txt",
+        "medium": "docs",
+        "title": "Affine llms.txt",
+        "outlet": "affine.io",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn120-015",
+      "date": "2026-09",
+      "date_precision": "month",
+      "era": "current",
+      "quote": "His work explores incentive-based computer networks and open systems for producing and coordinating machine intelligence.",
+      "context": "Speaker bio for Jacob Steeves, listed as CEO of Affine, on the Exploit Summit 2026 site (event 28 to 29 September 2026), read on 15 September 2026.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "relationship",
+        "positioning.category"
+      ],
+      "themes": [
+        "incentive design",
+        "decentralised intelligence"
+      ],
+      "metaphors": [
+        "open system"
+      ],
+      "source": {
+        "url": "https://exploitsummit.com/",
+        "medium": "talk",
+        "title": "Exploit Summit 2026 speakers",
+        "outlet": "Exploit Summit",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn120-016",
+      "date": "2026-09-14",
+      "date_precision": "day",
+      "era": "current",
+      "quote": "a crown is paid for at most 72 hours after it is won. Every crown inside its window gets one equal share (2 paid crowns = 50/50, 3 = thirds); an older crown earns nothing even while it still holds the throne for duels; no paid crown = the emission burns.",
+      "context": "The Payout rule block on the affine.io homepage, dated 2026-09-14.",
+      "about": "subnet:120",
+      "slots": [
+        "subnet.self",
+        "value.functional",
+        "voice"
+      ],
+      "themes": [
+        "incentive design",
+        "token economics"
+      ],
+      "metaphors": [
+        "crown",
+        "throne"
+      ],
+      "source": {
+        "url": "https://www.affine.io",
+        "medium": "docs",
+        "title": "Affine homepage, Payout rule",
+        "outlet": "affine.io",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2025-10-29",
+      "title": "Interview with Bittensor Founder Jacob: Applying Mining to AI, Top 3 Subnets Built by Chinese Teams",
+      "outlet": "ChainCatcher (Bitget News translation)",
+      "url": "https://www.bitget.com/news/detail/12560605036813",
+      "medium": "article",
+      "note": "Jacob Steeves on subnets as markets, Affine, Ridges, Lium and Chinese miners; text interview, translated."
+    },
+    {
+      "date": "2025",
+      "title": "This Week in Startups: special episode with Jacob Steeves (Const)",
+      "outlet": "This Week in Startups",
+      "url": "https://podcasts.apple.com/us/podcast/this-week-in-startups/id315114957",
+      "medium": "podcast",
+      "note": "Show listing says it covers dTAO, the Templar controversy and Subnet 120 Affine; episode page and transcript not reached."
+    },
+    {
+      "date": "2026-03-26",
+      "title": "What is Bittensor? 2026 Update with Co-Founder Jacob Steeves (Const)",
+      "outlet": "VirtualBacon",
+      "url": "https://www.youtube.com/watch?v=YmxqgTXfpDo",
+      "medium": "youtube",
+      "note": "State of Bittensor in 2026; YouTube page did not render, no transcript reached."
+    },
+    {
+      "date": "2026-04-15",
+      "title": "Paris Blockchain Week 2026",
+      "outlet": "Paris Blockchain Week",
+      "url": "https://parisblockchainweek.com/speaker-2026/jacob-robert-steeves",
+      "medium": "talk",
+      "note": "Speaker listing only; no talk transcript."
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Exploit Summit 2026",
+      "outlet": "Exploit Summit",
+      "url": "https://exploitsummit.com/",
+      "medium": "talk",
+      "note": "Upcoming at time of research; speaker bio only."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "commodity",
+      "wording": "commoditize reasoning—the highest form of intelligence",
+      "first_statement": "sn120-003",
+      "origin": "reused",
+      "lineage_notes": "Extends Jacob Steeves's long-running frame of Bittensor as a market for digital commodities; see the VirtualBacon interview summary at https://x.com/virtualbacon/status/2037312527143510415 (subnets create markets for digital commodities like gradients)."
+    },
+    {
+      "label": "sound barrier",
+      "wording": "break the intelligence sound barrier",
+      "first_statement": "sn120-003",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "market",
+      "wording": "A direct market for engineers to upload open models",
+      "first_statement": "sn120-006",
+      "origin": "reused",
+      "lineage_notes": "Foundation and founder language; also in Steeves's description of Lium as a permissionless market in the same ChainCatcher interview."
+    },
+    {
+      "label": "king of the hill",
+      "wording": "King-of-the-hill subnet",
+      "first_statement": "sn120-014",
+      "origin": "introduced",
+      "lineage_notes": "Crown, king, throne, reign, duel and dethrone run through the 2026 rules and code; winner-take-all framing is shared with Minos SN107 (see sn107-004)."
+    },
+    {
+      "label": "competition",
+      "wording": "one of the most competitive mechanisms on the network",
+      "first_statement": "sn120-007",
+      "origin": "reused",
+      "lineage_notes": "Common to most subnet teams; Steeves ties it to Chinese miners entering."
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Pay miners for incremental improvements on reinforcement-learning tasks such as program synthesis and coding, inside a mechanism built to resist sybils, decoys, copying and overfitting.",
+      "statements": [
+        "sn120-001",
+        "sn120-002"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "Commoditize reasoning by aggregating the work of a large, non-permissioned group on RL tasks until the intelligence sound barrier breaks.",
+      "statements": [
+        "sn120-003"
+      ]
+    },
+    "foundation.values": {
+      "summary": "A score that stays honest under adversarial pressure, with every verdict replayable and every crowned model published.",
+      "statements": [
+        "sn120-013",
+        "sn120-014"
+      ]
+    },
+    "audience": {
+      "summary": "Miners, validators and contributors described as an open, global network competing to advance RL; Steeves singles out Chinese miners as the force that makes subnets fiercer.",
+      "statements": [
+        "sn120-004",
+        "sn120-005",
+        "sn120-008"
+      ]
+    },
+    "positioning.category": {
+      "summary": "For the subnet: an incentivized RL environment, a direct market for engineers, and since 2026 a king-of-the-hill competition. For the network: an open-source protocol for a decentralised machine-learning network, in which subnets collaborate and compete around tasks.",
+      "statements": [
+        "sn120-001",
+        "sn120-006",
+        "sn120-014",
+        "sn120-009",
+        "sn120-011"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "A mechanism claimed to be sybil-proof, decoy-proof, copy-proof and overfitting-proof, and by 2026 a teacher-anchored distillation score rather than an LLM judge.",
+      "statements": [
+        "sn120-002",
+        "sn120-012"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "An open global network of competitors, and the claim that Affine is among the largest and most competitive mechanisms on Bittensor; the network filters supply by incentive.",
+      "statements": [
+        "sn120-004",
+        "sn120-007",
+        "sn120-010"
+      ]
+    },
+    "value.functional": {
+      "summary": "Engineers upload open models and get paid, with crown emission paid for at most 72 hours and burned when no crown qualifies.",
+      "statements": [
+        "sn120-006",
+        "sn120-016"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Contributors are cast as empowered participants who compete and innovate.",
+      "statements": [
+        "sn120-005"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "Commoditize reasoning.",
+      "statements": [
+        "sn120-003"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Anti-gaming properties, size and competitiveness on the network, and replayable verdicts.",
+      "statements": [
+        "sn120-002",
+        "sn120-007",
+        "sn120-014"
+      ]
+    },
+    "voice": {
+      "summary": "Terse engineering rules written for miners (crowns, windows, burns), and a founder who talks about competition getting fiercer.",
+      "statements": [
+        "sn120-016",
+        "sn120-013",
+        "sn120-008"
+      ]
+    },
+    "relationship": {
+      "summary": "The subnet's CEO is Bittensor's co-founder and presents himself as such in every bio; the subnet is his only subnet and his return to building.",
+      "statements": [
+        "sn120-011",
+        "sn120-015"
+      ]
+    },
+    "language.term": {
+      "summary": "Commoditize reasoning; king, crown, throne, reign, dethrone, duel; teacher-anchored distillation score; Reason and Grounding.",
+      "statements": [
+        "sn120-003",
+        "sn120-012",
+        "sn120-014"
+      ]
+    },
+    "subnet.self": {
+      "summary": "An incentivized RL environment that became a king-of-the-hill distillation contest: private checkpoint uploads, a frozen teacher, one crowned king, a 72-hour paid window, and published, replayable verdicts.",
+      "statements": [
+        "sn120-001",
+        "sn120-002",
+        "sn120-012",
+        "sn120-014",
+        "sn120-016"
+      ]
+    },
+    "subnet.network": {
+      "summary": "Bittensor is described in the founder's own vocabulary: an open-source protocol for a decentralised machine-learning network, incentive-based computer networks, about 128 subnets collaborating and competing, where incentives amplify good supply and eliminate poor supply.",
+      "statements": [
+        "sn120-009",
+        "sn120-010",
+        "sn120-011",
+        "sn120-015",
+        "sn120-008"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "commoditize reasoning",
+      "incentivized RL environment",
+      "miners",
+      "validators",
+      "non-permissioned",
+      "sybil-proof",
+      "king",
+      "crown",
+      "throne",
+      "reign",
+      "dethrone",
+      "duel",
+      "emission",
+      "burn",
+      "teacher",
+      "distillation",
+      "replayability"
+    ],
+    "words_avoided": [
+      "decentralised AI as a slogan",
+      "token price",
+      "alpha",
+      "community in the marketing sense on the 2026 site"
+    ],
+    "coinages": [
+      {
+        "term": "commoditize reasoning",
+        "meaning": "Treat reasoning as a commodity produced by an open, non-permissioned group and priced by the mechanism.",
+        "statement": "sn120-003"
+      },
+      {
+        "term": "intelligence sound barrier",
+        "meaning": "A threshold of machine reasoning the team says aggregated RL work will break through.",
+        "statement": "sn120-003"
+      },
+      {
+        "term": "king-of-the-hill subnet",
+        "meaning": "A single reigning model holds the emission until a challenger beats it by a statistical margin.",
+        "statement": "sn120-014"
+      },
+      {
+        "term": "teacher-anchored distillation score",
+        "meaning": "Scoring miners by likelihood under a frozen teacher model rather than by an LLM judge.",
+        "statement": "sn120-012"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "dtao",
+      "summary": "In 2025 Affine described itself as an incentivized RL environment with a mechanism proofed against sybils, decoys, copying and overfitting, and gave its vision as commoditizing reasoning to break the intelligence sound barrier [sn120-001] [sn120-002] [sn120-003]. Steeves, speaking for it in late 2025, framed Bittensor as subnets collaborating and competing where incentives amplify good supply, and pointed to Chinese miners as the source of Affine's competitiveness [sn120-009] [sn120-010] [sn120-007].",
+      "dominant_metaphor": "commodity",
+      "shift": ""
+    },
+    {
+      "era": "current",
+      "summary": "By September 2026 the public voice is the rulebook: a king-of-the-hill subnet scored by a frozen teacher, crowns paid for 72 hours, emission burned when no crown qualifies, every verdict replayable [sn120-012] [sn120-014] [sn120-016]. The vision sentence survives only in conference bios that describe incentive-based computer networks and open systems for coordinating machine intelligence [sn120-015].",
+      "dominant_metaphor": "king of the hill",
+      "shift": "From a vision statement about commoditizing reasoning to a mechanism-first register of kings, crowns and burns; the team's own AGENTS.md concedes the score measures distillation fidelity under adversarial pressure rather than raw capability."
+    }
+  ],
+  "relations": [
+    {
+      "to": "jacob-steeves",
+      "kind": "borrows",
+      "statement": "sn120-003",
+      "note": "The subnet's vocabulary (commodity, market, incentive-based networks) is the founder's own, since he runs it."
+    },
+    {
+      "to": "sn62",
+      "kind": "introduces",
+      "statement": "sn120-009",
+      "note": "Steeves names Ridges as a large coding-agent subnet optimized collectively by miners in the same interview."
+    },
+    {
+      "to": "sn107",
+      "kind": "agrees",
+      "statement": "sn120-014",
+      "note": "Both Affine and Minos run winner-take-all mechanisms; Minos calls it Winner-Take-All, Affine calls it a crown."
+    }
+  ],
+  "coverage": {
+    "searches_used": 4,
+    "fetches_used": 24,
+    "well_covered": [
+      "current era mechanism documents (affine.io, llms.txt, AGENTS.md)",
+      "2025 team self-description via job postings"
+    ],
+    "thin": [
+      "founder statements specifically about Affine in his own voice",
+      "X account @affine_io and @const_reborn posts",
+      "podcast appearances (This Week in Startups, VirtualBacon) without transcripts"
+    ],
+    "gaps": [
+      "https://x.com/affine_io and https://x.com/const_reborn: X did not render and web.archive.org is blocked from this session, so no X posts are recorded; a widely quoted Const line (My only subnet is Affine (SN120)) could not be sourced and is omitted.",
+      "This Week in Startups episode with Const on Affine: episode URL and transcript not located before the session search budget ran out.",
+      "https://github.com/AffineFoundation/affine README.md, MOTIVATION.md and PAPER_DRAFT.md returned 404 at the raw paths tried; the 2025 README wording (Pareto frontier, commoditize reasoning) survives only in aggregator paraphrase.",
+      "The Subnet Alpha market quote (sn120-006) has no reachable primary."
+    ],
+    "unreachable": [
+      "https://web.archive.org/web/2025/https://github.com/AffineFoundation/affine",
+      "https://web.archive.org/web/2026/https://x.com/affine_io",
+      "https://raw.githubusercontent.com/AffineFoundation/affine/main/README.md",
+      "https://raw.githubusercontent.com/AffineFoundation/affine/main/MOTIVATION.md",
+      "https://raw.githubusercontent.com/AffineFoundation/affine/main/PAPER_DRAFT.md",
+      "https://github.com/AffineFoundation/affine-cortex",
+      "https://x.com/JosephJacks_/status/1951049717988655278",
+      "https://www.youtube.com/watch?v=YmxqgTXfpDo"
+    ]
+  }
+}

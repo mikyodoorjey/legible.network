@@ -1,0 +1,14 @@
+{
+  "narrator": {"id": "sn64", "name": "Chutes", "aka": ["Rayon Labs"], "kind": "subnet", "role": "Subnet team", "affiliation": "Rayon Labs", "active_from": "2024", "handles": {"x": "@chutes_ai"}, "subnets": [64], "one_line": "Placeholder subnet narrator for the build fixture."},
+  "statements": [
+    {"id": "sn64-001", "date": "2024-12-01", "date_precision": "day", "era": "revolution", "quote": "Serverless AI compute, paid per request, run by a market instead of a cloud.", "context": "Front page copy, Jon Durbin's team.", "about": "subnet:64", "slots": ["subnet.self", "positioning.category"], "themes": ["compute"], "metaphors": ["market"], "source": {"url": "https://example.com/chutes", "medium": "docs", "title": "Chutes", "outlet": "Own channel", "timestamp": "", "archive_url": "", "transcript": "primary"}, "confidence": "verified"},
+    {"id": "sn64-002", "date": "2025-04-10", "date_precision": "day", "era": "dtao", "quote": "Bittensor is the only place where a compute business can bootstrap without a sales team.", "context": "Founder on a podcast.", "about": "network", "slots": ["subnet.network", "value.functional"], "themes": ["incentive design"], "metaphors": ["bootstrap"], "source": {"url": "https://example.com/pod2", "medium": "podcast", "title": "Ep 40", "outlet": "Example Show", "timestamp": "00:20:00", "archive_url": "", "transcript": "show-notes"}, "confidence": "probable"}
+  ],
+  "appearances": [],
+  "metaphors": [{"label": "market", "wording": "run by a market instead of a cloud", "first_statement": "sn64-001", "origin": "reused", "lineage_notes": "fixture-a uses market"}],
+  "framework": {"subnet.self": {"summary": "Serverless compute run by a market.", "statements": ["sn64-001"]}, "subnet.network": {"summary": "A place to bootstrap a compute business without sales.", "statements": ["sn64-002"]}},
+  "language": {"words_used": ["serverless", "market"], "words_avoided": [], "coinages": []},
+  "genealogy": [{"era": "revolution", "summary": "Launches with the market frame [sn64-001].", "dominant_metaphor": "market", "shift": ""}, {"era": "dtao", "summary": "Describes the network as a bootstrap [sn64-002].", "dominant_metaphor": "bootstrap", "shift": ""}],
+  "relations": [{"to": "fixture-a", "kind": "borrows", "statement": "sn64-001", "note": "Uses the market frame."}],
+  "coverage": {"searches_used": 2, "fetches_used": 2, "well_covered": ["dtao"], "thin": [], "gaps": [], "unreachable": []}
+}

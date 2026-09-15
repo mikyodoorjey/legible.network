@@ -80,6 +80,23 @@
 .explainer .srcs ul{font-family:var(--mono);font-size:11px;padding-left:18px}
 .scored-head{margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--rule)}
 
+
+.narr-block{border:1px solid var(--rule);border-left:3px solid var(--tag);background:var(--paper);padding:16px 18px;margin:0 0 26px}
+.narr-block .nb-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.narr-block .nb-link{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.narr-block .nb-h2{font-size:22px;margin:10px 0 4px}
+.narr-block .nb-col{margin-top:12px}.narr-block .nb-col h3{font-size:15px;margin-bottom:4px}.narr-block .nb-col>p{margin:0 0 8px;color:var(--ink-soft);font-size:14px}
+.narr-block .nb-mets{margin:12px 0 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.st{border-top:1px solid var(--rule);padding:10px 0}
+.st .quote{font-size:15px;margin:0 0 4px}
+.st .ctx{font-size:13px;color:var(--soft);margin:0 0 6px}
+.st .src{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--softer);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.st .src .m{text-transform:uppercase;letter-spacing:.08em}
+.st .src .who{color:var(--ink)}
+.st .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.st .tags .pill{font-size:9.5px;padding:2px 7px}
+.st .tags .pill.met{border-color:var(--tag);color:var(--tag)}
+
 @media (max-width:820px){
   .sn{grid-template-columns:1fr;gap:20px}
   .card{position:static}
@@ -89,7 +106,7 @@
 </head>
 <body>
 <div class="topbar"><div class="wrap">
-  <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>legible.network v2 · snapshot 2026-09-09 · rubric v1.0</span>
   <span>Exploit Summit 2026 · Montreal · <a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
 </div></div>
 
@@ -97,6 +114,7 @@
   <span class="wordmark"><a href="/">Legible</a><small>by <a href="https://www.mikyo.one" rel="author">Mikyö Clark</a></small></span>
   <div class="links">
     <a href="/">Index</a>
+    <a href="/narrative/">Narrative</a>
     <a href="/rubric/">Rubric</a>
     <a href="/methodology/">Methodology</a>
     <a href="/about/">About</a>
@@ -114,6 +132,8 @@
     </div>
 
     <section class="explainer" id="explainer"><span class="mono">Explained from zero · inference · written 2026-09-10</span><p class="lede one">SN53 engy sells answers from open AI models by the token, like a petrol station whose pump prints a receipt proving which grade you got, except the pumps are strangers' gaming cards.</p><h3>The commodity, explained from zero</h3><p><a class="term" href="#" data-term="inference">Inference</a> is asking a trained AI model a question and getting an answer; it is sold by the token, roughly a word. engy sells that for seven open models, priced per million tokens on the front page, from 0.045 dollars in to 9.75 dollars out. Billing is "Per-token, pay as you go. No subscriptions and no minimums."</p><p>The twist is the receipt. Anyone selling inference can quietly run a cut-down copy of a model and bill for the full one, the way a station could pump regular and charge for premium. engy's answer is a proof with every response: the model's weights are pinned by a published fingerprint (a Merkle root), and each reply carries a compact summary of the model's internal activity (TOPLOC) that a checker can compare against the real model. The README's phrase is that it "pins the math, not the machine."</p><p>The buyers named are AI agents and their builders; the docs give setup guides for Claude Code, Cursor, and Codex, and any OpenAI-compatible client can point at api.engy.ai/v1. No customer is named and no usage figure appears.</p><h3>Why it is on Bittensor at all</h3><p>The supply comes from consumer hardware: the reference <a class="term" href="#" data-term="miner">miner</a> setup is four RTX 4090 gaming cards, and the status page today lists 227 providers for the smallest model. That is what the petrol-station comparison breaks on: a station owns its pumps, while engy's pumps belong to strangers who dial in over the internet and are paid in the <a class="term" href="#" data-term="subnet">subnet</a>'s token. The proof exists because of that: the README says "No <a class="term" href="#" data-term="tee">TEEs</a>, no trusted hardware", so a stranger's card is trusted on the maths, not on a locked-down chip. Cost against a centralized provider is not compared on the site.</p><h3>How the work gets done</h3><p>Miners run an open model on their own <a class="term" href="#" data-term="gpu">GPUs</a>, take requests from engy's gateway, and return each answer with its proof. <a class="term" href="#" data-term="validator">Validators</a>, the judges who decide pay, sample requests and check the proofs; in the team's own test a cut-down model scores about 0.55 where an honest one scores about 0.2. Each week a miner passes four gates, 99 percent of requests accepted, two speed limits, and at most 1 percent cheat verdicts, or earns nothing that week; those that pass are paid in proportion to paid tokens served, and only paid traffic counts, so miners cannot buy their own requests. <a class="term" href="#" data-term="emission">Emission</a>, the subnet's share of new tokens, follows those weights.</p><h3>How you would know it works</h3><p>The status page at engy.ai/status shows each model, its provider count, and ninety-day uptime (99.71 percent for the gateway). A reader without an API key cannot try the model, and the cheat-detection experiment has no date.</p><h3>What is missing</h3><p>No usage or revenue figure exists on any page. There is no staker page, and the chain identity has no Discord field though the site links one. The cheat-detection numbers live in a technical one-pager, and the site never explains "verified inference" in plain words. <a class="term" href="#" data-term="registration-cost">Registration cost</a> is not stated. There is no customer SLA or escalation path beyond email and Discord.</p><h3>Go deeper</h3><ul><li><a href="https://engy.ai">Front page with model prices</a></li><li><a href="https://raw.githubusercontent.com/hanlinai/engy/main/README.md">README: how verification works</a></li><li><a href="https://raw.githubusercontent.com/hanlinai/engy/main/docs/SN53_ONE_PAGER.md">One-pager with scoring gates</a></li></ul><details class="srcs"><summary class="mono">Sources for this explainer</summary><ul><li><a href="https://engy.ai" target="_blank" rel="noopener">https://engy.ai</a></li><li><a href="https://engy.ai/pricing" target="_blank" rel="noopener">https://engy.ai/pricing</a></li><li><a href="https://engy.ai/docs" target="_blank" rel="noopener">https://engy.ai/docs</a></li><li><a href="https://engy.ai/status" target="_blank" rel="noopener">https://engy.ai/status</a></li><li><a href="https://raw.githubusercontent.com/hanlinai/engy/main/README.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/hanlinai/engy/main/README.md</a></li><li><a href="https://raw.githubusercontent.com/hanlinai/engy/main/docs/SN53_ONE_PAGER.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/hanlinai/engy/main/docs/SN53_ONE_PAGER.md</a></li><li><a href="https://raw.githubusercontent.com/hanlinai/engy/main/docs/MINER.md" target="_blank" rel="noopener">https://raw.githubusercontent.com/hanlinai/engy/main/docs/MINER.md</a></li></ul></details><p class="sm">Metaphor: a petrol station whose pump proves the grade. Every claim is drawn from the evidence set or the subnet's own materials; "(inferred)" marks a conclusion rather than a quote. <a href="/methodology/#corrections">Corrections</a>.</p></section>
+
+    <section class="narr-block" id="narrative"><div class="nb-head"><span class="mono">How they talk about it</span><a class="nb-link" href="/narrative/">The narrative map →</a></div><h2 class="nb-h2">What others say about it</h2><article class="st" id="keith-singery-012" data-era="revolution" data-conf="verified"><p class="quote">SignalPlus and team went into this crowded category anyway and have set a new bar for competitive investment strategies.</p><div class="src"><a class="who" href="/narrative/keith-singery/">Keith Singery</a> · <span class="d">1 Jan 2025</span> · <a href="https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d" target="_blank" rel="noopener">Bittensor Guru (Libsyn)</a><span class="m">podcast</span><span class="badge verified">verified</span><span class="badge live">live</span></div><div class="tags"><a class="pill" href="/sn/53/">SN53</a><span class="pill slot" data-slot="voice">Voice</span><span class="pill slot" data-slot="value.functional">Value proposition: Functional</span></div></article></section>
 
     <h2 class="scored-head">How we scored it</h2>
     <p class="sm">Four audiences, four questions each, scored on what a first-time reader can find in five minutes. Method in the <a href="/rubric/">rubric</a>.</p>

@@ -28,8 +28,9 @@ DOCS = [  # (source markdown, output dir, nav key)
     ("rubric.md", "rubric", "rubric"),
     ("methodology.md", "methodology", "methodology"),
     ("about.md", "about", "about"),
+    ("narrative-method.md", "narrative/method", "narrative"),
 ]
-HAND_PAGES = ["index.html", "404.html"]  # pages that carry partial markers
+HAND_PAGES = ["index.html", "404.html", "narrative/index.html"]  # pages that carry partial markers
 
 
 # ---------------- tiny markdown
@@ -84,7 +85,10 @@ def md_to_sections(md):
             if not ln.strip():
                 j += 1
                 continue
-            if ln.startswith("### "):
+            if re.fullmatch(r"<!-- \w+:(start|end) -->", ln.strip()):
+                out.append(ln.strip())  # injection markers pass through raw
+                j += 1
+            elif ln.startswith("### "):
                 out.append(f"<h3>{inline(ln[4:].strip())}</h3>")
                 j += 1
             elif ln.lstrip().startswith("|"):
@@ -121,7 +125,7 @@ def md_to_sections(md):
             else:
                 k = j
                 para = []
-                while k < len(buf) and buf[k].strip() and not re.match(r"^(### |\s*[-*] |\s*\d+\. |\||```)", buf[k]):
+                while k < len(buf) and buf[k].strip() and not re.match(r"^(### |\s*[-*] |\s*\d+\. |\||```|<!-- \w+:(start|end) -->)", buf[k]):
                     para.append(buf[k].strip())
                     k += 1
                 out.append(f"<p>{inline(' '.join(para))}</p>")
@@ -154,7 +158,7 @@ def partial(name, ctx):
 
 def nav_ctx(active, ctx):
     c = dict(ctx)
-    for k in ("index", "rubric", "methodology", "about"):
+    for k in ("index", "narrative", "rubric", "methodology", "about"):
         c[f"cur_{k}"] = ' aria-current="page"' if k == active else ""
     return c
 
@@ -167,7 +171,8 @@ def inject(page_html, name, body):
     return pat.sub(lambda m: f"{start}\n{body}\n{end}", page_html, count=1)
 
 
-def doc_page(title, meta, sections, active, ctx, description):
+def doc_page(title, meta, sections, active, ctx, description, outdir=None):
+    outdir = outdir or active
     toc_ctx = nav_ctx(active, ctx)
     meta_pills = "".join(f'<span class="pill">{html.escape(k.replace("_", " "))}: {html.escape(v)}</span>' for k, v in meta.items())
     body = "".join(f'<section id="{sid}"><h2>{html.escape(h)}</h2>{content}</section>' for sid, h, content in sections)
@@ -176,16 +181,16 @@ def doc_page(title, meta, sections, active, ctx, description):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)} · Subnet Legibility Index</title>
+<title>{html.escape(title)} · {"Bittensor Narrative Map" if active == "narrative" else "Subnet Legibility Index"}</title>
 {ctx.get("robots", "")}
 <meta name="description" content="{html.escape(description)}">
-<link rel="canonical" href="{SITE}/{active}/">
+<link rel="canonical" href="{SITE}/{outdir}/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{SITE}/{active}/">
-<meta property="og:title" content="{html.escape(title)} · Subnet Legibility Index">
+<meta property="og:url" content="{SITE}/{outdir}/">
+<meta property="og:title" content="{html.escape(title)} · {"Bittensor Narrative Map" if active == "narrative" else "Subnet Legibility Index"}">
 <meta property="og:description" content="{html.escape(description)}">
-<meta property="og:image" content="{SITE}/assets/og/default.png">
+<meta property="og:image" content="{SITE}/assets/og/{"narrative.png" if active == "narrative" else "default.png"}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -200,7 +205,7 @@ def doc_page(title, meta, sections, active, ctx, description):
 <main class="wrap doc">
   <nav class="toc" aria-label="Contents"><span class="mono">Contents</span></nav>
   <article class="prose">
-    <p class="kicker"><b>Subnet Legibility Index.</b> Reference</p>
+    <p class="kicker"><b>{"Bittensor Narrative Map." if active == "narrative" else "Subnet Legibility Index."}</b> Reference</p>
     <h1>{html.escape(title)}</h1>
     <div class="meta">{meta_pills}</div>
     {body}
@@ -233,6 +238,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="data/index.json")
     ap.add_argument("--launch", action="store_true", help="drop pre-launch notes")
+    ap.add_argument("--narrative-raw", default="data/narrative/raw", help="directory of narrator files; a fixture dir for a dry run")
     a = ap.parse_args()
 
     data_path = REPO / a.data
@@ -250,14 +256,24 @@ def main():
         "rubric": "How the Subnet Legibility Index scores what a first-time reader can find about a Bittensor subnet in five minutes.",
         "methodology": "Sources, scoring, evidence, corrections, and the changelog for the Subnet Legibility Index.",
         "about": "Who built the Subnet Legibility Index and why.",
+        "narrative": "How the Bittensor Narrative Map is built: narrators, verbatim statements, the framework, eras, sources, confidence, and corrections.",
     }
+    # the narrative map is built first so its dataset and blocks can feed the other pages
+    from build_narrative import build as build_narrative, subnet_block, home_block, coverage_report, SUBNET_BLOCK_CSS
+    nparts = {k: partial(k, nav_ctx("narrative", ctx)) for k in ("topbar", "nav", "footer")}
+    nparts["robots"] = ctx["robots"]
+    raw_dir = REPO / a.narrative_raw if a.narrative_raw else None
+    n_changed, ndata = build_narrative(nparts, SITE, write_if_changed, raw_dir) if raw_dir is None or raw_dir.exists() else ([], None)
+    changed += n_changed
     for src, outdir, active in DOCS:
         p = REPO / src
         if not p.exists():
             print(f"  missing {src}, skipped", file=sys.stderr)
             continue
         title, meta, sections = md_to_sections(p.read_text(encoding="utf-8"))
-        page = doc_page(title, meta, sections, active, ctx, descriptions.get(active, ""))
+        page = doc_page(title, meta, sections, active, ctx, descriptions.get(active, ""), outdir=outdir)
+        if active == "narrative":
+            page = inject(page, "coverage", coverage_report(ndata) if ndata else "<p>Pending.</p>")
         if data and active == "methodology" and data.get("changelog") is not None:
             items = "".join(
                 f'<li><span class="mono">{html.escape(c.get("date",""))} · {html.escape(c.get("kind",""))}</span> '
@@ -298,12 +314,16 @@ def main():
         if not p.exists():
             continue
         s = p.read_text(encoding="utf-8")
-        active = "index" if name == "index.html" else ""
+        active = "index" if name == "index.html" else ("narrative" if name.startswith("narrative/") else "")
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
         s2 = inject(s2, "robots", ctx["robots"])
         if name == "index.html":
             s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
+            s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
+        if name == "narrative/index.html" and ndata:
+            sm = ndata["summary"]
+            s2 = inject(s2, "nstats", f'<div><b>{sm["narrators"]}</b><span>narrators</span></div><div><b>{sm["statements"]}</b><span>sourced statements</span></div><div><b>{sm["metaphors"]}</b><span>metaphors traced</span></div><div><b>{sm["sources"]}</b><span>distinct sources</span></div>')
         if s2 != s:
             p.write_text(s2, encoding="utf-8")
             changed.append(name)
@@ -323,7 +343,8 @@ def main():
         for sub in data["subnets"]:
             ent = entries.get(sub["netuid"])
             explainers[sub["netuid"]] = ((render_entry_block(ent, terms, inline, sub) if ent else render_placeholder(sub)), EXPLAINER_CSS)
-        sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed, explainers)
+        narrative_blocks = {sub["netuid"]: (subnet_block(ndata, sub["netuid"]) if ndata else "") for sub in data["subnets"]}
+        sub_changed, chart_html = build_all(data, parts, SITE, write_if_changed, explainers, narrative_blocks, SUBNET_BLOCK_CSS)
         changed += sub_changed
         from render_alpha import build_alpha
         changed += build_alpha(data, parts, SITE, write_if_changed)
@@ -334,7 +355,9 @@ def main():
             p.write_text(s2, encoding="utf-8")
             changed.append("index.html chart")
 
-    urls = ["/", "/rubric/", "/methodology/", "/about/"]
+    urls = ["/", "/rubric/", "/methodology/", "/about/", "/narrative/", "/narrative/method/"]
+    if ndata:
+        urls += ["/narrative/metaphors/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"]]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
         if any(s.get("alpha") for s in data.get("subnets", [])):

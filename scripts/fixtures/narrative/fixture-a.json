@@ -1,0 +1,34 @@
+{
+  "narrator": {"id": "fixture-a", "name": "Fixture Person", "aka": ["fix"], "kind": "person", "role": "Co-founder", "affiliation": "Example Foundation", "active_from": "2019", "handles": {"x": "@fixture"}, "subnets": [], "one_line": "A placeholder narrator used to build the site before research lands."},
+  "statements": [
+    {"id": "fixture-a-001", "date": "2020-06", "date_precision": "month", "era": "pre", "quote": "We are building a market for intelligence, where machine learning models are paid for the value of the information they produce.", "context": "Whitepaper introduction.", "about": "network", "slots": ["positioning.category", "foundation.mission"], "themes": ["decentralised intelligence"], "metaphors": ["market"], "source": {"url": "https://example.com/paper", "medium": "whitepaper", "title": "Example paper", "outlet": "Own channel", "timestamp": "", "archive_url": "", "transcript": "primary"}, "confidence": "verified"},
+    {"id": "fixture-a-002", "date": "2022-03-14", "date_precision": "day", "era": "nakamoto", "quote": "Think of it as a brain that grows a new region every time someone contributes a model.", "context": "Podcast answer to a question about scale.", "about": "network", "slots": ["positioning.category", "voice"], "themes": ["decentralised intelligence"], "metaphors": ["brain"], "source": {"url": "https://example.com/pod1", "medium": "podcast", "title": "Episode 12", "outlet": "Example Show", "timestamp": "00:14:32", "archive_url": "", "transcript": "auto"}, "confidence": "probable"},
+    {"id": "fixture-a-003", "date": "2023-11-02", "date_precision": "day", "era": "revolution", "quote": "Every subnet is its own company. The network is the stock exchange they list on.", "context": "Thread on X after the Revolution upgrade.", "about": "network", "slots": ["positioning.category", "language.term"], "themes": ["commodity markets"], "metaphors": ["company", "stock exchange"], "source": {"url": "https://example.com/x1", "medium": "x", "title": "", "outlet": "Own channel", "timestamp": "", "archive_url": "https://web.archive.org/example", "transcript": "primary"}, "confidence": "verified"},
+    {"id": "fixture-a-004", "date": "2025-02-13", "date_precision": "day", "era": "dtao", "quote": "OpenAI sells you the output. We sell you the market that produces it.", "context": "Launch post for dynamic TAO.", "about": "network", "slots": ["positioning.against", "messaging.h1"], "themes": ["anti-OpenAI"], "metaphors": ["market"], "source": {"url": "https://example.com/blog1", "medium": "blog", "title": "Launch", "outlet": "Own channel", "timestamp": "", "archive_url": "", "transcript": "primary"}, "confidence": "verified"},
+    {"id": "fixture-a-005", "date": "2026", "date_precision": "year", "era": "current", "quote": "It was never a brain. It was a price signal for intelligence.", "context": "Interview reflecting on early framing.", "about": "network", "slots": ["positioning.category", "relationship"], "themes": ["commodity markets"], "metaphors": ["price signal"], "source": {"url": "https://example.com/pod9", "medium": "youtube", "title": "Retrospective", "outlet": "Example Show", "timestamp": "01:02:10", "archive_url": "", "transcript": "none"}, "confidence": "unverified"}
+  ],
+  "appearances": [{"date": "2022-03-14", "title": "Episode 12", "outlet": "Example Show", "url": "https://example.com/pod1", "medium": "podcast", "note": "Scale and incentives; auto transcript."}],
+  "metaphors": [
+    {"label": "market", "wording": "a market for intelligence", "first_statement": "fixture-a-001", "origin": "introduced", "lineage_notes": ""},
+    {"label": "brain", "wording": "a brain that grows a new region", "first_statement": "fixture-a-002", "origin": "introduced", "lineage_notes": ""},
+    {"label": "company", "wording": "its own company", "first_statement": "fixture-a-003", "origin": "introduced", "lineage_notes": ""},
+    {"label": "stock exchange", "wording": "the stock exchange they list on", "first_statement": "fixture-a-003", "origin": "introduced", "lineage_notes": ""},
+    {"label": "price signal", "wording": "a price signal for intelligence", "first_statement": "fixture-a-005", "origin": "introduced", "lineage_notes": ""}
+  ],
+  "framework": {
+    "foundation.mission": {"summary": "A market that pays models for the information they produce.", "statements": ["fixture-a-001"]},
+    "positioning.category": {"summary": "Moves from a brain to a market to a stock exchange to a price signal.", "statements": ["fixture-a-001", "fixture-a-002", "fixture-a-003", "fixture-a-005"]},
+    "positioning.against": {"summary": "Set against OpenAI as a seller of outputs.", "statements": ["fixture-a-004"]},
+    "messaging.h1": {"summary": "We sell the market, not the output.", "statements": ["fixture-a-004"]}
+  },
+  "language": {"words_used": ["market", "incentive", "commodity"], "words_avoided": ["platform", "app"], "coinages": [{"term": "price signal for intelligence", "meaning": "the network as a pricing mechanism", "statement": "fixture-a-005"}]},
+  "genealogy": [
+    {"era": "pre", "summary": "Opens with the market frame [fixture-a-001].", "dominant_metaphor": "market", "shift": ""},
+    {"era": "nakamoto", "summary": "The brain frame appears for general audiences [fixture-a-002].", "dominant_metaphor": "brain", "shift": "from market to brain"},
+    {"era": "revolution", "summary": "Subnets become companies and the network an exchange [fixture-a-003].", "dominant_metaphor": "company", "shift": "from brain to company"},
+    {"era": "dtao", "summary": "The market frame returns, set against OpenAI [fixture-a-004].", "dominant_metaphor": "market", "shift": "back to market"},
+    {"era": "current", "summary": "Disowns the brain [fixture-a-005].", "dominant_metaphor": "price signal", "shift": "retraction"}
+  ],
+  "relations": [{"to": "fixture-b", "kind": "argues", "statement": "fixture-a-004", "note": "Rejects the output framing fixture-b uses."}],
+  "coverage": {"searches_used": 3, "fetches_used": 5, "well_covered": ["dtao"], "thin": ["finney"], "gaps": ["no finney-era material reached"], "unreachable": []}
+}

@@ -1,0 +1,606 @@
+{
+  "narrator": {
+    "id": "sn56",
+    "name": "Gradients (SN56)",
+    "aka": [
+      "Gradients on Demand",
+      "G.O.D",
+      "gradients.io"
+    ],
+    "kind": "subnet",
+    "role": "Subnet team: competitive AutoML fine-tuning on Bittensor subnet 56",
+    "affiliation": "Rayon Labs",
+    "active_from": "2024-11",
+    "handles": {
+      "x": "@gradients_ai",
+      "github": "rayonlabs/G.O.D"
+    },
+    "subnets": [
+      56
+    ],
+    "one_line": "Rayon Labs' fine-tuning subnet, which frames itself as a tournament where miners race for hyperparameters and describes Bittensor as a marketplace whose incentives beat centralised AutoML."
+  },
+  "statements": [
+    {
+      "id": "sn56-001",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Current AutoML platforms leave substantial performance untapped. Testing 180 fine-tuning tasks across models from 70M to 70B parameters, we found that HuggingFace AutoTrain, TogetherAI, Databricks, and Google Cloud consistently produce suboptimal configurations.",
+      "context": "Opening of the abstract of Rayon Labs' Gradients paper by Christopher Subia-Waud, setting the competitors it benchmarks against.",
+      "about": "subnet:56",
+      "slots": [
+        "positioning.against",
+        "problem.market",
+        "subnet.self"
+      ],
+      "themes": [
+        "AutoML",
+        "benchmarks"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://arxiv.org/abs/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-002",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Gradients, built on the Bittensor network, attacks this problem through competition. Independent miners race to find optimal hyperparameters, earning rewards proportional to their models' performance. This tournament drives exploration of configuration spaces that single-strategy methods never examine.",
+      "context": "Abstract of the Gradients paper describing the subnet mechanism.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "positioning.differentiator",
+        "foundation.mission"
+      ],
+      "themes": [
+        "incentive design",
+        "competition"
+      ],
+      "metaphors": [
+        "race",
+        "tournament"
+      ],
+      "source": {
+        "url": "https://arxiv.org/abs/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-003",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "These findings demonstrate that decentralized systems with economic incentives can systematically outperform traditional AutoML, suggesting market dynamics may be key to achieving superior fine-tuning results.",
+      "context": "Closing sentence of the Gradients paper abstract, generalising from the subnet to decentralised systems.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.reason",
+        "messaging.h1"
+      ],
+      "themes": [
+        "incentive design",
+        "decentralised systems"
+      ],
+      "metaphors": [
+        "market"
+      ],
+      "source": {
+        "url": "https://arxiv.org/abs/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-004",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "Built on the Bittensor network, it creates a marketplace where independent miners compete to find optimal configurations.",
+      "context": "Introduction of the Gradients paper describing what the Bittensor network provides.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "positioning.category"
+      ],
+      "themes": [
+        "commodity markets",
+        "competition"
+      ],
+      "metaphors": [
+        "marketplace"
+      ],
+      "source": {
+        "url": "https://arxiv.org/html/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-005",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "When miners profit from finding better configurations, they develop novel optimization techniques, share successful strategies within their organizations, and continuously refine their approaches.",
+      "context": "Discussion section of the Gradients paper on why competition beats a single algorithm.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "positioning.reason",
+        "audience"
+      ],
+      "themes": [
+        "incentive design",
+        "miners"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://arxiv.org/html/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-006",
+      "date": "2025-06-09",
+      "date_precision": "day",
+      "era": "dtao",
+      "quote": "This suggests a fundamental shift in how we approach AutoML: from better algorithms to better incentive structures.",
+      "context": "Conclusion of the Gradients paper.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "foundation.vision",
+        "messaging.h1"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://arxiv.org/html/2506.07940",
+        "medium": "whitepaper",
+        "title": "Gradients: When Markets Meet Fine-tuning - A Distributed Approach to Model Optimisation",
+        "outlet": "arXiv (Rayon Labs)",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-007",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "The world's best AutoML platform, powered by Subnet 56 on Bittensor.",
+      "context": "The Gradients X account self-description, as embedded on the Subnet Alpha listing for Gradients.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "messaging.h1",
+        "positioning.category"
+      ],
+      "themes": [
+        "AutoML"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://subnetalpha.ai/subnet/gradients/",
+        "medium": "x",
+        "title": "Gradients (@gradients_ai)",
+        "outlet": "Gradients on X, via Subnet Alpha",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable"
+    },
+    {
+      "id": "sn56-008",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "With just a few clicks, gradients will be training your model for you, 0 AI training knowledge needed. The easiest and best place in the world to train a model",
+      "context": "The gradients.io homepage, read in September 2026, under the title 'Anyone Can Train AI'.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "value.functional",
+        "audience"
+      ],
+      "themes": [
+        "accessibility",
+        "no-code"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.gradients.io/",
+        "medium": "docs",
+        "title": "Gradients | Anyone Can Train AI",
+        "outlet": "gradients.io",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-009",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "We have built a platform that makes it easier than ever to train AI, powered by the new, revolutionary Bittensor Subnet 56",
+      "context": "The gradients.io homepage explaining the relation to Bittensor.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "relationship"
+      ],
+      "themes": [
+        "accessibility"
+      ],
+      "metaphors": [
+        "revolution"
+      ],
+      "source": {
+        "url": "https://www.gradients.io/",
+        "medium": "docs",
+        "title": "Gradients | Anyone Can Train AI",
+        "outlet": "gradients.io",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-010",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Anyone can Train on Bittensor.",
+      "context": "Footer line of the gradients.io homepage.",
+      "about": "network",
+      "slots": [
+        "subnet.network",
+        "messaging.h1",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "permissionless entry",
+        "accessibility"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.gradients.io/",
+        "medium": "docs",
+        "title": "Gradients | Anyone Can Train AI",
+        "outlet": "gradients.io",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-011",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "G.O.D is the subnet runtime behind Gradients.io training jobs and tournaments. Validators create tasks, coordinate miner and trainer infrastructure, evaluate results, and set weights. Miners expose training repositories for tournament tasks; trainers run those repositories on validator-controlled GPU infrastructure.",
+      "context": "The README of the rayonlabs/G.O.D repository, read in September 2026.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "language.term"
+      ],
+      "themes": [
+        "validator power",
+        "miners"
+      ],
+      "metaphors": [
+        "tournament"
+      ],
+      "source": {
+        "url": "https://github.com/rayonlabs/G.O.D",
+        "medium": "docs",
+        "title": "G.O.D Subnet README",
+        "outlet": "GitHub rayonlabs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    },
+    {
+      "id": "sn56-012",
+      "date": "2026",
+      "date_precision": "year",
+      "era": "current",
+      "quote": "Tournaments are recurring competitions where miners submit open-source training code.",
+      "context": "The G.O.D README describing how the subnet runs.",
+      "about": "subnet:56",
+      "slots": [
+        "subnet.self",
+        "foundation.values"
+      ],
+      "themes": [
+        "open source",
+        "competition"
+      ],
+      "metaphors": [
+        "tournament"
+      ],
+      "source": {
+        "url": "https://github.com/rayonlabs/G.O.D",
+        "medium": "docs",
+        "title": "G.O.D Subnet README",
+        "outlet": "GitHub rayonlabs",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2025",
+      "title": "What is Bittensor Subnet 56 | Gradients revealed?",
+      "outlet": "YouTube (third party)",
+      "url": "https://www.youtube.com/watch?v=jnTIrVzo-c8",
+      "medium": "youtube",
+      "note": "Third-party explainer, not the team speaking; not fetched"
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "tournament",
+      "wording": "This tournament drives exploration of configuration spaces",
+      "first_statement": "sn56-002",
+      "origin": "introduced",
+      "lineage_notes": "Also the README's word for the recurring competitions"
+    },
+    {
+      "label": "race",
+      "wording": "Independent miners race to find optimal hyperparameters",
+      "first_statement": "sn56-002",
+      "origin": "reused",
+      "lineage_notes": "The race frame is common in Bittensor subnet writing; Macrocosmos used 'compete to continuously improve models' at https://macrocosmosai.substack.com/p/subnet-9-scaling-up-parameters-to"
+    },
+    {
+      "label": "marketplace",
+      "wording": "it creates a marketplace where independent miners compete",
+      "first_statement": "sn56-004",
+      "origin": "reused",
+      "lineage_notes": "Jacob Steeves's 'market for intelligence' and Manifold's 'marketplace of digital commodities' at https://www.manifold.inc/releases/no-such-thing-as-free-gas"
+    },
+    {
+      "label": "revolution",
+      "wording": "the new, revolutionary Bittensor Subnet 56",
+      "first_statement": "sn56-009",
+      "origin": "reused",
+      "lineage_notes": ""
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Gradients says it exists to make fine-tuning better through competition and to let anyone train a model with no knowledge.",
+      "statements": [
+        "sn56-002",
+        "sn56-008"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "The paper's conclusion is a shift in AutoML from better algorithms to better incentive structures.",
+      "statements": [
+        "sn56-006"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Winning training code is open source and published.",
+      "statements": [
+        "sn56-012"
+      ]
+    },
+    "problem.market": {
+      "summary": "Commercial AutoML platforms leave performance untapped and produce suboptimal configurations.",
+      "statements": [
+        "sn56-001"
+      ]
+    },
+    "audience": {
+      "summary": "Two audiences: people with no training knowledge who want a model, and miners who profit from finding better configurations.",
+      "statements": [
+        "sn56-008",
+        "sn56-005"
+      ]
+    },
+    "positioning.category": {
+      "summary": "An AutoML platform powered by a subnet; the network beneath it is a marketplace.",
+      "statements": [
+        "sn56-007",
+        "sn56-004"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "Competition among independent miners explores what single-strategy methods never examine.",
+      "statements": [
+        "sn56-002"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Reason to believe is the 180-experiment benchmark and the claim that incentives make miners keep refining.",
+      "statements": [
+        "sn56-003",
+        "sn56-005"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Named opponents are HuggingFace AutoTrain, TogetherAI, Databricks and Google Cloud.",
+      "statements": [
+        "sn56-001"
+      ]
+    },
+    "value.functional": {
+      "summary": "A few clicks and your model is trained, with higher accuracy on domain tasks.",
+      "statements": [
+        "sn56-008"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Anyone can train on Bittensor: joining means being a trainer without credentials.",
+      "statements": [
+        "sn56-010"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "Two repeated lines: the world's best AutoML platform, and anyone can train AI on Bittensor.",
+      "statements": [
+        "sn56-007",
+        "sn56-010",
+        "sn56-003"
+      ]
+    },
+    "relationship": {
+      "summary": "The site says the platform is powered by subnet 56; the team speaks as builders of a product on top of a subnet.",
+      "statements": [
+        "sn56-009"
+      ]
+    },
+    "language.term": {
+      "summary": "G.O.D, Gradients on Demand, names the subnet runtime; tournaments and trainers are its own vocabulary.",
+      "statements": [
+        "sn56-011"
+      ]
+    },
+    "subnet.self": {
+      "summary": "Gradients describes itself as a tournament and a race among miners, and as the easiest place in the world to train a model.",
+      "statements": [
+        "sn56-002",
+        "sn56-008",
+        "sn56-011",
+        "sn56-012"
+      ]
+    },
+    "subnet.network": {
+      "summary": "Bittensor is a marketplace and a decentralised system with economic incentives; the paper generalises the subnet's result to market dynamics, which is closer to Steeves's market language than to the foundation's.",
+      "statements": [
+        "sn56-004",
+        "sn56-003",
+        "sn56-006",
+        "sn56-009",
+        "sn56-010"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "competition",
+      "tournament",
+      "miners",
+      "incentives",
+      "marketplace",
+      "AutoML",
+      "hyperparameters",
+      "anyone"
+    ],
+    "words_avoided": [
+      "digital commodities",
+      "Yuma",
+      "alpha",
+      "dTAO"
+    ],
+    "coinages": [
+      {
+        "term": "G.O.D (Gradients on Demand)",
+        "meaning": "the subnet runtime behind Gradients.io training jobs and tournaments",
+        "statement": "sn56-011"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "dtao",
+      "summary": "The June 2025 paper is the fullest statement: Gradients attacks AutoML through competition, miners race and are paid in proportion to performance [sn56-002], the Bittensor network is a marketplace [sn56-004], and the conclusion generalises to market dynamics and incentive structures [sn56-003] [sn56-006].",
+      "dominant_metaphor": "tournament",
+      "shift": ""
+    },
+    {
+      "era": "current",
+      "summary": "The 2026 site and README keep the tournament frame [sn56-012] [sn56-011] but the public pitch is accessibility: a few clicks, no knowledge needed [sn56-008], anyone can train on Bittensor [sn56-010].",
+      "dominant_metaphor": "tournament",
+      "shift": "from market proof to consumer accessibility"
+    }
+  ],
+  "relations": [
+    {
+      "to": "jacob-steeves",
+      "kind": "borrows",
+      "statement": "sn56-004",
+      "note": "The marketplace-of-miners frame echoes Steeves's market for intelligence"
+    },
+    {
+      "to": "sn64",
+      "kind": "agrees",
+      "statement": "sn56-009",
+      "note": "Same lab, same 'powered by Bittensor subnet' relationship wording"
+    }
+  ],
+  "coverage": {
+    "searches_used": 3,
+    "fetches_used": 7,
+    "well_covered": [
+      "the June 2025 arXiv paper",
+      "site and README self-description in 2026"
+    ],
+    "thin": [
+      "revolution era: nothing reached from the November 2024 launch",
+      "team voice on X: only the account bio via a third-party embed",
+      "no founder interview reached"
+    ],
+    "gaps": [
+      "gradients.io returned 403 to the fetch tool and archive.org is blocked; a curl read of the live page worked, but no dated launch-era copy",
+      "x.com/gradients_ai not fetchable; no dated posts",
+      "docs.gradients.io did not resolve; learnbittensor.org/subnets/56 returned 404"
+    ],
+    "unreachable": [
+      "https://docs.gradients.io/",
+      "https://learnbittensor.org/subnets/56",
+      "https://x.com/gradients_ai"
+    ]
+  }
+}

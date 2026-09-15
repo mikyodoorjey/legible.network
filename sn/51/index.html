@@ -80,6 +80,7 @@
 .explainer .srcs ul{font-family:var(--mono);font-size:11px;padding-left:18px}
 .scored-head{margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--rule)}
 
+
 @media (max-width:820px){
   .sn{grid-template-columns:1fr;gap:20px}
   .card{position:static}
@@ -89,7 +90,7 @@
 </head>
 <body>
 <div class="topbar"><div class="wrap">
-  <span>Subnet Legibility Index · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>legible.network v2 · snapshot 2026-09-09 · rubric v1.0</span>
   <span>Exploit Summit 2026 · Montreal · <a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
 </div></div>
 
@@ -97,6 +98,7 @@
   <span class="wordmark"><a href="/">Legible</a><small>by <a href="https://www.mikyo.one" rel="author">Mikyö Clark</a></small></span>
   <div class="links">
     <a href="/">Index</a>
+    <a href="/narrative/">Narrative</a>
     <a href="/rubric/">Rubric</a>
     <a href="/methodology/">Methodology</a>
     <a href="/about/">About</a>
@@ -114,6 +116,8 @@
     </div>
 
     <section class="explainer" id="explainer"><span class="mono">Explained from zero · compute · written 2026-09-10</span><p class="lede one">SN51 Lium rents out <a class="term" href="#" data-term="gpu">GPU</a> time by the second, like a holiday-let site where the properties belong to strangers and the site pays hosts a retainer even when nobody is staying.</p><h3>The commodity, explained from zero</h3><p>A GPU is the graphics chip that does most AI computing, and its time is sold by the hour the way a hire car is. Lium's unit is one GPU for one second. The front page is a list of machines, ninety-two available today, with a price per hour on each: a consumer RTX 4090 from about 0.35 dollars, an H100 at about 1 dollar, an eight-GPU B300 server at 64 dollars. The pricing page states "Every pod is billed per second with no minimum."</p><p>It has a price because AI work needs these chips, they are scarce, and most people who need one for an afternoon will not buy one. Each listing shows where the machine sits, how reliable it has been, and how fast its network is, the way a holiday let shows location and reviews.</p><p>The materials say the renters are developers and AI agents, and give them a one-line install and an API. No customer is named and no dated usage or revenue figure appears on any Lium page; the only numbers are supply.</p><h3>Why it is on Bittensor at all</h3><p>Two things change. First, anyone with a supported NVIDIA card, from a datacenter H200 down to an RTX 3060, can list it; the site calls this "permissionless". Second, the <a class="term" href="#" data-term="subnet">subnet</a>'s newly minted tokens pay hosts while their machines sit idle, provided the machine passes seven eligibility checks. That retainer for empty rooms is where the holiday-let comparison breaks: no letting site pays a host for a vacant week, and this one does, from token <a class="term" href="#" data-term="emission">emission</a> rather than rent. Whether Lium is cheaper than a centralized cloud is claimed on the front page ("Unmatched Prices") but not shown against any competitor's price.</p><h3>How the work gets done</h3><p><a class="term" href="#" data-term="miner">Miners</a>, called providers here, run a small coordinator program plus one or more GPU machines, and set their own hourly price. <a class="term" href="#" data-term="validator">Validators</a>, the judges who decide who gets paid, connect to each machine, check for a required container runtime called sysbox, measure its hardware and speed on a test workload, and score it; without sysbox a machine "earns no emission and cannot be rented." Emission, the subnet's share of new tokens, is split into three pools: a fixed 13 percent for machines currently rented, up to 87 percent for eligible idle machines, and the rest burned. The pages fetched do not say what share of a renter's dollars reaches the provider. The docs say Lium runs a single validator, operated by the Lium team.</p><h3>How you would know it works</h3><p>The front page at lium.io is a live marketplace: each pod shows its price, its uptime, and its reliability percentage, and a reader can browse it without an account. That is the artifact. There is no dated usage figure and no public benchmark.</p><h3>What is missing</h3><p>The on-chain description is a slogan, "revolutionizing the democratization of compute", and the contact field is empty. There is no staker or tokenomics page. The one validator is run by the team. There is no status page and no service-level agreement; support is a Discord ticket or an email. The docs do not state an immunity period or when a provider is dropped.</p><h3>Go deeper</h3><ul><li><a href="https://lium.io">Live marketplace and prices</a></li><li><a href="https://docs.lium.io/bittensor-subnet/overview">How subnet 51 works</a></li><li><a href="https://docs.lium.io/providers/rewards/emission.md">Emission pools and scoring</a></li></ul><details class="srcs"><summary class="mono">Sources for this explainer</summary><ul><li><a href="https://lium.io" target="_blank" rel="noopener">https://lium.io</a></li><li><a href="https://lium.io/pricing" target="_blank" rel="noopener">https://lium.io/pricing</a></li><li><a href="https://lium.io/llms.txt" target="_blank" rel="noopener">https://lium.io/llms.txt</a></li><li><a href="https://docs.lium.io/bittensor-subnet/overview" target="_blank" rel="noopener">https://docs.lium.io/bittensor-subnet/overview</a></li><li><a href="https://docs.lium.io/providers/rewards/emission.md" target="_blank" rel="noopener">https://docs.lium.io/providers/rewards/emission.md</a></li><li><a href="https://docs.lium.io/providers/rewards/penalties.md" target="_blank" rel="noopener">https://docs.lium.io/providers/rewards/penalties.md</a></li><li><a href="https://docs.lium.io/providers/architecture.md" target="_blank" rel="noopener">https://docs.lium.io/providers/architecture.md</a></li><li><a href="https://docs.lium.io/validators/index.md" target="_blank" rel="noopener">https://docs.lium.io/validators/index.md</a></li><li><a href="https://docs.lium.io/security/official-support-and-scams.md" target="_blank" rel="noopener">https://docs.lium.io/security/official-support-and-scams.md</a></li></ul></details><p class="sm">Metaphor: a holiday-let site whose properties belong to strangers. Every claim is drawn from the evidence set or the subnet's own materials; "(inferred)" marks a conclusion rather than a quote. <a href="/methodology/#corrections">Corrections</a>.</p></section>
+
+    
 
     <h2 class="scored-head">How we scored it</h2>
     <p class="sm">Four audiences, four questions each, scored on what a first-time reader can find in five minutes. Method in the <a href="/rubric/">rubric</a>.</p>
