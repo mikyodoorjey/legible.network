@@ -18,42 +18,39 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/narrative.css">
 <style>
-.arg{padding-top:58px;padding-bottom:8px}
-.arg .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:44px;align-items:end}
-.arg h1{max-width:15ch}
-.arg .lede{font-size:17px;color:var(--ink-soft);max-width:60ch;margin:20px 0 0}
+.arg{padding-top:58px;padding-bottom:8px;overflow-x:hidden}
+.arg .top{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
+.arg h1{max-width:17ch;font-size:clamp(40px,6.2vw,76px)}
+.arg .lede{font-size:19px;color:var(--ink-soft);max-width:58ch;margin:28px 0 0;line-height:1.55}
 .arg .lede p{margin:0 0 12px}
-.arg .demo{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.arg .demo a{color:var(--soft);border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
-.arg .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--tag)}
-.sealgrid{display:grid;grid-template-columns:auto repeat(3,1fr);border:1px solid var(--rule-strong);background:var(--paper);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
-.sealgrid>div{padding:12px 12px;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);min-height:54px;display:flex;align-items:center}
-.sealgrid>div:nth-child(4n){border-right:0}
-.sealgrid>div:nth-last-child(-n+4){border-bottom:0}
-.sealgrid .h{color:var(--softer);font-family:var(--disp);font-size:14px;font-weight:600;letter-spacing:-.01em;text-transform:none}
+.arg .demo{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.arg .demo a{color:var(--ink)}
+.arg .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--ink)}
+.sealgrid{display:grid;grid-template-columns:110px repeat(3,1fr);gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.sealgrid>div{display:flex;align-items:center;min-height:52px}
+.sealgrid .h{min-height:0;padding:0 12px 6px;color:var(--soft)}
 .sealgrid .h.c{color:var(--ink)}
-.sealgrid .rl{color:var(--softer)}
-.sealgrid .sealed{color:var(--softer)}
-.sealgrid .sealed::before{content:"";display:inline-block;width:9px;height:9px;border:1px solid var(--rule-strong);margin-right:8px;background:var(--rule)}
-.sealgrid .open{color:var(--tag);font-weight:500;background:var(--tagbg);box-shadow:inset 0 0 0 1px var(--tag)}
-.sealgrid .open::before{content:"";display:inline-block;width:9px;height:9px;border:1px solid var(--tag);margin-right:8px;background:var(--tag)}
-.sealcap{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--softer);margin:8px 0 0}
+.sealgrid .rl{padding:14px 0;color:var(--soft)}
+.sealgrid .sealed{padding:14px 12px;border:1px solid var(--rule);color:var(--soft)}
+.sealgrid .open{padding:14px 12px;border:1px solid var(--red);color:var(--red)}
+
+.sealcap{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft);margin:12px 0 0;max-width:80ch}
 
 .lin{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule-strong);margin-top:40px}
 .lin>div{padding:18px 20px 20px;border-right:1px solid var(--rule-strong);display:flex;flex-direction:column;gap:10px;min-width:0}
 .lin>div:last-child{border-right:0}
-.lin .n{font-family:var(--pix);font-size:22px;letter-spacing:.04em;color:var(--tag)}
+.lin .n{font-family:var(--disp);font-size:22px;letter-spacing:.04em;color:var(--ink)}
 .lin h3{font-size:20px;line-height:1.1}
 .lin p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-soft)}
 .lin .viz{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--soft);white-space:pre;overflow:hidden}
 .lin .viz .dim{color:var(--softer)}
 .lin .viz .lit{color:var(--ink);background:var(--paper-deep);padding:0 4px}
-.lin .viz .red{color:var(--tag)}
-.lin .viz .cur{display:inline-block;width:7px;height:12px;background:var(--tag);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+.lin .viz .red{color:var(--ink)}
+.lin .viz .cur{display:inline-block;width:7px;height:12px;background:var(--ink);vertical-align:-2px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 
 #puzzle{padding-top:44px;padding-bottom:10px}
@@ -61,40 +58,40 @@
 .sim{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;margin-top:18px;align-items:start}
 .sim .left,.sim .right{min-width:0}
 .tasks{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.code{border:1px solid var(--rule-strong);background:var(--paper);padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.7;white-space:pre;overflow-x:auto;color:var(--ink-soft)}
+.code{border:1px solid var(--rule-strong);padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.7;white-space:pre;overflow-x:auto;color:var(--ink-soft)}
 .code .k{color:var(--softer)}.code .f{color:var(--ink);font-weight:500}.code .c{color:var(--softer)}
-.code .add{display:inline-block;width:100%;background:var(--tagbg);color:var(--ink);box-shadow:-3px 0 0 var(--tag)}
+.code .add{display:inline-block;width:100%;background:var(--tagbg);color:var(--ink);box-shadow:-3px 0 0 var(--ink)}
 .code .del{display:inline-block;width:100%;color:var(--softer);text-decoration:line-through}
 .simbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .simbtns .btn[disabled]{opacity:.35;cursor:default}
 .simbtns .btn[disabled]:hover{background:none;color:var(--ink)}
 .simbtns .btn.red[disabled]:hover{background:var(--acc);color:var(--acc-ink)}
-.field{border:1px solid var(--rule-strong);background:var(--paper);position:relative}
+.field{border:1px solid var(--rule-strong);position:relative}
 .field svg{display:block;width:100%;height:auto}
 .field .cap{padding:10px 14px 12px;border-top:1px solid var(--rule);font-size:13.5px;line-height:1.5;color:var(--ink-soft);min-height:52px}
 .field .cap b{color:var(--ink)}
-.field .cap.warn b{color:var(--tag)}
+.field .cap.warn b{color:var(--ink)}
 .gauges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-.gauge{border:1px solid var(--rule);background:var(--paper);padding:12px 14px}
+.gauge{border:1px solid var(--rule);padding:12px 14px}
 .gauge .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);display:flex;justify-content:space-between}
-.gauge .lab b{font-family:var(--pix);font-size:20px;letter-spacing:.04em;color:var(--ink);font-weight:400}
-.gauge .lab b.red{color:var(--tag)}
+.gauge .lab b{font-family:var(--disp);font-size:20px;letter-spacing:.04em;color:var(--ink);font-weight:400}
+.gauge .lab b.red{color:var(--ink)}
 .gauge .bar{height:6px;background:var(--rule);margin-top:8px;overflow:hidden}
 .gauge .bar i{display:block;height:100%;background:var(--ink);transition:width .25s}
-.gauge .bar i.red{background:var(--tag)}
-.split{margin-top:14px;border:1px solid var(--rule);background:var(--paper);padding:12px 14px}
+.gauge .bar i.red{background:var(--ink)}
+.split{margin-top:14px;border:1px solid var(--rule);padding:12px 14px}
 .split .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);margin-bottom:8px}
 .split .row{display:grid;grid-template-columns:70px 1fr 44px;gap:10px;align-items:center;font-family:var(--mono);font-size:11px;padding:3px 0}
 .split .row .who{color:var(--soft)}
-.split .row .who.red{color:var(--tag)}
+.split .row .who.red{color:var(--ink)}
 .split .row .b{height:8px;background:var(--rule);overflow:hidden}
 .split .row .b i{display:block;height:100%;background:var(--ink);transition:width .25s}
-.split .row .b i.red{background:var(--tag)}
+.split .row .b i.red{background:var(--ink)}
 .split .row .pct{text-align:right;color:var(--ink)}
 
 .plain{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.plain>div{border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--paper);padding:14px 16px}
-.plain>div.red{border-left-color:var(--tag)}
+.plain>div{border:1px solid var(--rule);border-left:0;padding:14px 16px}
+.plain>div.red{border-left-color:var(--ink)}
 .plain h3{font-size:17px;margin-bottom:6px}
 .plain p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
 
@@ -102,8 +99,8 @@
 .prov{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
 .plain p a.ref,.sm a.ref{white-space:nowrap}
 #puzzle .quote{font-size:19px;line-height:1.35}
-.prov a.p{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule);border-left:3px solid var(--tag);background:var(--paper);padding:14px 16px;color:var(--ink)}
-.prov a.p:hover{text-decoration:none;border-color:var(--ink);border-left-color:var(--tag)}
+.prov a.p{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule);border-left:0;padding:14px 16px;color:var(--ink)}
+.prov a.p:hover{text-decoration:none;border-color:var(--ink);border-left-color:var(--ink)}
 .prov .d{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);display:flex;justify-content:space-between;gap:8px}
 .prov .q{font-family:var(--disp);font-weight:500;font-size:15.5px;line-height:1.4;letter-spacing:-.01em}
 .prov .w{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft)}
@@ -112,9 +109,9 @@
 
 #instruments{padding-top:44px;padding-bottom:16px;border-top:1px solid var(--rule);margin-top:36px}
 .inst{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.inst a{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule-strong);background:var(--paper);padding:18px 20px;color:var(--ink)}
+.inst a{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule-strong);padding:18px 20px;color:var(--ink)}
 .inst a:hover{text-decoration:none;border-color:var(--ink)}
-.inst .n{font-family:var(--pix);font-size:22px;letter-spacing:.04em;color:var(--tag)}
+.inst .n{font-family:var(--disp);font-size:22px;letter-spacing:.04em;color:var(--ink)}
 .inst h3{font-size:20px}
 .inst p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-soft)}
 .inst .go{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:auto;padding-top:8px}
@@ -132,8 +129,11 @@
   .inst{grid-template-columns:1fr}
 }
 @media (max-width:600px){
-  .sealgrid{font-size:9.5px}
-  .sealgrid>div{padding:10px 8px;min-height:46px}
+  .sealgrid{grid-template-columns:58px repeat(3,minmax(0,1fr));gap:4px;font-size:9px;letter-spacing:.04em}
+  .sealgrid>div{min-height:44px}
+  .sealgrid .h{padding:0 6px 4px}
+  .sealgrid .rl{padding:8px 0}
+  .sealgrid .sealed,.sealgrid .open{padding:8px 6px;overflow-wrap:anywhere}
   .gauges{grid-template-columns:1fr}
 }
 
@@ -141,27 +141,23 @@
 .close{padding-top:8px}
 .close .sm{max-width:70ch}
 .programs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.prog{display:flex;flex-direction:column;gap:6px;border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--paper);padding:14px 16px;color:var(--ink)}
-.prog:hover{text-decoration:none;border-color:var(--ink);border-left-color:var(--tag)}
+.prog{display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--rule);padding:14px 0;color:var(--ink)}
+.prog:hover{text-decoration:none;border-top-color:var(--ink)}
 .prog .h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .prog .h b{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.02em}
 .prog .h span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
 .prog .work{font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
 .prog .row{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--softer);border-top:1px solid var(--rule);padding-top:6px;margin-top:2px}
-.prog .row b{font-family:var(--pix);font-weight:400;font-size:12px;color:var(--ink);letter-spacing:.04em}
-.close .demo{margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.close .demo a{color:var(--soft);border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
-.close .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--tag)}
+.prog .row b{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--ink);letter-spacing:-.01em}
+.close .demo{margin-top:18px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.close .demo a{color:var(--ink)}
+.close .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--ink)}
 @media (max-width:820px){.programs{grid-template-columns:1fr}}
 
 </style>
 </head>
 <body data-snapshot="2026-09-09">
 <!-- topbar:start -->
-<div class="topbar"><div class="wrap">
-  <span>Legible v2 · snapshot 2026-09-09 · scale v1.0</span>
-  <span><a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
-</div></div>
 
 <!-- topbar:end -->
 <!-- nav:start -->
@@ -181,8 +177,18 @@
 <header class="wrap arg" id="top">
   <div class="top">
     <div>
-      <p class="kicker"><b>The argument.</b> One idea about what Bittensor is, built from the two instruments below it.</p>
+      <p class="kicker"><b>The argument.</b> One idea about what Bittensor is</p>
       <h1>Ethereum made Bitcoin's money programmable. Bittensor makes the <em>mining</em> programmable.</h1>
+    </div>
+    <div>
+      <div class="sealgrid" role="table" aria-label="What each network leaves open">
+        <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
+        <div class="rl">The money</div><div class="sealed">sealed</div><div class="open">open</div><div class="sealed">same as Bitcoin</div>
+        <div class="rl">The mining</div><div class="sealed">sealed</div><div class="sealed">sealed</div><div class="open">open</div>
+      </div>
+      <p class="sealcap">Sealed: fixed at birth. Open: anyone can write it. TAO keeps Bitcoin's money on purpose: no pre-mine, 21 million, halvings, paid out by the block.</p>
+    </div>
+    <div>
       <div class="lede">
         <p>Bitcoin's invention was not the coin. It was a way to pay strangers, every block, for work the network defined, with no employer and no contract. Then it defined one job: find a hash.</p>
         <p>Ethereum took the invention and opened the money. The mining stayed sealed. Bittensor opens the mining. A subnet is a mining program: what work is wanted, how it is judged, who gets paid. The design space is no longer the layer above the work. It is the work.</p>
@@ -192,14 +198,6 @@
         <a href="#lineage">Where the phrase came from</a>
         <a href="/sn/">Open the subnets</a>
       </div>
-    </div>
-    <div>
-      <div class="sealgrid" role="table" aria-label="What each network leaves open">
-        <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
-        <div class="rl">The money</div><div class="sealed">sealed</div><div class="open">open</div><div class="sealed">same as Bitcoin</div>
-        <div class="rl">The mining</div><div class="sealed">sealed</div><div class="sealed">sealed</div><div class="open">open</div>
-      </div>
-      <p class="sealcap">Sealed: fixed at birth. Open: anyone can write it. TAO keeps Bitcoin's money on purpose: no pre-mine, 21 million, halvings, paid out by the block.</p>
     </div>
   </div>
 
@@ -237,7 +235,8 @@
 
 <section class="wrap" id="puzzle">
   <span class="mono">Write the puzzle</span>
-  <h2>Pick a job. Watch the miners come. <em>Then watch one of them cheat.</em></h2>
+  <h2>Judgment can <em>be gamed.</em></h2>
+  <p class="lede" style="max-width:56ch;margin:10px 0 0">Pick a job. Watch the miners come. Then watch one of them cheat. On a programmable mine, the bugs are in the incentive, not the hash.</p>
   <p class="quote" style="max-width:60ch;margin-top:14px">"Show me the subnet, and I'll tell you what the miners are optimizing for."</p>
   <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: two dozen simulated miners optimizing for a scoring function you choose. Nothing touches the chain. What the puzzle pays is one axis. What the world gets is the other. On an honest mine they are the same line.</p>
   <div class="sim">
@@ -264,7 +263,7 @@
           <text x="600" y="34" text-anchor="end" fill="var(--softer)">honest line: paid what it is worth</text>
           <text x="336" y="372" text-anchor="middle" fill="var(--soft)">what the puzzle pays →</text>
           <text transform="translate(22 180) rotate(-90)" text-anchor="middle" fill="var(--soft)">what the world gets →</text>
-          <text x="560" y="332" text-anchor="end" fill="var(--tag)" id="fieldWarn" opacity="0">paid a lot, worth little</text>
+          <text x="560" y="332" text-anchor="end" fill="var(--ink)" id="fieldWarn" opacity="0">paid a lot, worth little</text>
           <g id="dots"></g>
         </svg>
         <div class="cap" id="cap"><b>Miners are adapting to your puzzle.</b> Pay flows by score. So far the score and the work agree.</div>
@@ -290,7 +289,7 @@
 
 <section class="wrap" id="lineage">
   <span class="mono">From the map</span>
-  <h2>Where the phrase came from</h2>
+  <h2>Where the phrase came from.</h2>
   <p class="sm" style="max-width:70ch">The argument above is one person's. The lineage below is not. Every line is a sourced statement in the narrative map, dated and linked, and the map records it whether or not the argument holds.</p>
   <div class="prov">
     <a class="p" href="/narrative/jacob-steeves/#jacob-steeves-039">
@@ -339,7 +338,7 @@
 
 <section class="wrap close" id="programs">
   <span class="mono">A hundred puzzles, live</span>
-  <h2>Six of the programs, <em>as the index reads them.</em></h2>
+  <h2>Six of the programs, as the index reads them.</h2>
   <p class="sm">This is not a thesis. It is running. Each card is one subnet the way the index reads it: the work it pays for, what it makes, its share of the block reward, and how legible it is, meaning whether a first-time reader can find any of that out in five minutes.</p>
   <!-- programs:start -->
 <div class="programs"><a class="prog" href="/sn/107/"><div class="h"><b>Minos</b><span>SN107 · science</span></div><p class="work">SN107 Minos runs a recipe contest for reading DNA, where miners submit settings for mutation-finding software and the judges cook every recipe themselves on synthetic genomes with planted mutations.</p><div class="row"><span>block reward <b>11.3%</b></span><span>legibility <b>3.4</b> of 5</span></div></a><a class="prog" href="/sn/51/"><div class="h"><b>lium.io</b><span>SN51 · compute</span></div><p class="work">SN51 Lium rents out GPU time by the second, like a holiday-let site where the properties belong to strangers and the site pays hosts a retainer even when nobody is staying.</p><div class="row"><span>block reward <b>8.0%</b></span><span>legibility <b>3.8</b> of 5</span></div></a><a class="prog" href="/sn/15/"><div class="h"><b>ORO</b><span>SN15 · agents</span></div><p class="work">SN15 ORO runs a daily talent contest for robot personal shoppers, scores every performance, and keeps the footage as training material for a shopping assistant it plans to sell later.</p><div class="row"><span>block reward <b>6.7%</b></span><span>legibility <b>3.8</b> of 5</span></div></a><a class="prog" href="/sn/120/"><div class="h"><b>Affine</b><span>SN120 · training</span></div><p class="work">SN120 Affine runs a boxing title for AI coding models, where one champion checkpoint holds the belt, each challenger gets a single shot, and the purse is split among the last five champions.</p><div class="row"><span>block reward <b>6.0%</b></span><span>legibility <b>2.4</b> of 5</span></div></a><a class="prog" href="/sn/64/"><div class="h"><b>Chutes</b><span>SN64 · inference</span></div><p class="work">SN64 Chutes rents out AI model computing power by the request, the way a cloud provider does, except the machines belong to strangers who are paid in the subnet&#x27;s token.</p><div class="row"><span>block reward <b>5.9%</b></span><span>legibility <b>4.1</b> of 5</span></div></a><a class="prog" href="/sn/97/"><div class="h"><b>Albedo</b><span>SN97 · training</span></div><p class="work">SN97 Albedo is a playground game of king of the hill for coding models, where one fine-tuned model stands on top and earns most of the prize until a challenger knocks it off by a clear margin, twice.</p><div class="row"><span>block reward <b>5.2%</b></span><span>legibility <b>2.1</b> of 5</span></div></a></div>
@@ -349,7 +348,7 @@
 
 <section class="wrap close" id="voices">
   <span class="mono">Who says what</span>
-  <h2>The people who say what Bittensor is, <em>in their own words.</em></h2>
+  <h2>Who says what.</h2>
   <p class="sm">The argument above borrows four of their lines. The map holds the rest: verbatim, dated, sourced, and read through one framework so the voices can be compared slot by slot.</p>
   <!-- narrative:start -->
 <div class="nhome"><div class="nhome-strip"><a class="nstrip" href="/narrative/jacob-steeves/"><b>JS</b><span>Jacob Steeves</span><small>60 quotes</small></a><a class="nstrip" href="/narrative/jason-calacanis/"><b>JC</b><span>Jason Calacanis</span><small>56 quotes</small></a><a class="nstrip" href="/narrative/ala-shaabana/"><b>AS</b><span>Ala Shaabana</span><small>47 quotes</small></a><a class="nstrip" href="/narrative/barry-silbert/"><b>BS</b><span>Barry Silbert</span><small>39 quotes</small></a><a class="nstrip" href="/narrative/mark-jeffrey/"><b>MJ</b><span>Mark Jeffrey</span><small>35 quotes</small></a><a class="nstrip" href="/narrative/sami-kassab/"><b>SK</b><span>Sami Kassab</span><small>25 quotes</small></a><a class="nstrip" href="/narrative/teng-yan/"><b>TY</b><span>Teng Yan</span><small>23 quotes</small></a><a class="nstrip" href="/narrative/keith-singery/"><b>KS</b><span>Keith Singery</span><small>21 quotes</small></a></div><p class="sm">18 voices, 482 quotes on record, 198 frames. Most shared: <a class="pill met" href="/narrative/frames/#market">market <span class="n">7</span></a><a class="pill met" href="/narrative/frames/#competition">competition <span class="n">6</span></a><a class="pill met" href="/narrative/frames/#network">network <span class="n">6</span></a><a class="pill met" href="/narrative/frames/#marketplace">marketplace <span class="n">5</span></a><a class="pill met" href="/narrative/frames/#bitcoin">bitcoin <span class="n">4</span></a><a class="pill met" href="/narrative/frames/#commodity">commodity <span class="n">4</span></a></p><p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Frame lineage</a><a href="/narrative/#view=framework">Voice by voice</a><a href="/method/#the-map-what-it-records">Method</a></p></div>
@@ -415,7 +414,7 @@
     const rows = miners.map(m => ({ m, paid: paidOf(m), use: usefulOf(m) }));
     const totPaid = rows.reduce((n, r) => n + Math.pow(r.paid, 3), 0) || 1;
     rows.forEach(r => r.share = Math.pow(r.paid, 3) / totPaid);
-    dotsEl.innerHTML = rows.map(r => { const x = 56 + r.paid * 560, y = 340 - r.use * 320; const bad = r.m.s > 0.5; return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(4 + r.share * 40).toFixed(1)}" fill="${bad ? "var(--tag)" : "var(--ink)"}" fill-opacity="${bad ? ".9" : ".75"}" stroke="var(--bg)" stroke-width="1.5"><title>miner ${r.m.id}: paid ${(r.paid * 100).toFixed(0)}, worth ${(r.use * 100).toFixed(0)}, share ${(r.share * 100).toFixed(1)}%</title></circle>`; }).join("");
+    dotsEl.innerHTML = rows.map(r => { const x = 56 + r.paid * 560, y = 340 - r.use * 320; const bad = r.m.s > 0.5; return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(4 + r.share * 40).toFixed(1)}" fill="${bad ? "var(--ink)" : "var(--ink)"}" fill-opacity="${bad ? ".9" : ".75"}" stroke="var(--bg)" stroke-width="1.5"><title>miner ${r.m.id}: paid ${(r.paid * 100).toFixed(0)}, worth ${(r.use * 100).toFixed(0)}, share ${(r.share * 100).toFixed(1)}%</title></circle>`; }).join("");
     const meanPaid = rows.reduce((n, r) => n + r.paid * r.share, 0), meanUse = rows.reduce((n, r) => n + r.use * r.share, 0);
     const gap = meanPaid - meanUse;
     $("#gPaid").textContent = Math.round(meanPaid * 100) + "%"; $("#gPaidBar").style.width = (meanPaid * 100) + "%";
@@ -438,8 +437,9 @@
 </script>
 <!-- footer:start -->
 <footer class="site"><div class="wrap">
+  <span>Legible v2 · snapshot 2026-09-09 · scale v1.0</span>
   <span>Correction: <a href="/method/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
-  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · scale v1.0</span>
+  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a></span>
   <span>Built by Mikyö Clark (they/them) · <a href="https://www.mikyo.one">mikyo.one</a></span>
 </div></footer>
 

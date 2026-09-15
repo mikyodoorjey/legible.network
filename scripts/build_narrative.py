@@ -438,12 +438,11 @@ def render_metaphors(data, partials, site):
 <meta property="og:description" content="Who said it first, who picked it up, whether it is still in use.">
 <meta property="og:image" content="{site}/assets/og/narrative.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/narrative.css">
 </head>
 <body>
-{partials["topbar"]}
 {partials["nav"]}
 <main class="wrap" style="padding-top:32px">
   <p class="kicker"><b>Voices.</b> The frames</p>
@@ -481,7 +480,7 @@ def subnet_narrative(data, netuid):
 
 
 SUBNET_BLOCK_CSS = """
-.narr-block{border:1px solid var(--rule);border-left:3px solid var(--tag);background:var(--paper);padding:16px 18px;margin:0 0 26px}
+.narr-block{border-top:1px solid var(--rule);padding:16px 0;margin:0 0 26px}
 .narr-block .nb-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .narr-block .nb-link{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
 .narr-block .nb-h2{font-size:22px;margin:10px 0 4px}
@@ -495,7 +494,7 @@ SUBNET_BLOCK_CSS = """
 .st .src .who{color:var(--ink)}
 .st .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
 .st .tags .pill{font-size:9.5px;padding:2px 7px}
-.st .tags .pill.met{border-color:var(--tag);color:var(--tag)}
+
 """
 
 
@@ -568,7 +567,7 @@ def render_og_default(data, out_path):
         y += 30
     x = 640
     for n in [x for x in data["narrators"] if x["kind"] != "subnet"][:6]:
-        d.text((x, 380), n["glyph"], font=_font(["Silkscreen-Regular.ttf"], 22), fill=P["ink"])
+        d.text((x, 380), n["glyph"], font=F["mono"], fill=P["ink"])
         d.text((x, 410), n["name"][:18], font=F["mono_xs"], fill=P["softer"])
         x += 170
         if x > 1100:

@@ -158,7 +158,7 @@ def nav_ctx(active, ctx):
     c = dict(ctx)
     for k in ("index", "narrative", "method", "about"):
         c[f"cur_{k}"] = ' aria-current="page"' if k == active else ""
-    c["summit"] = "Exploit Summit 2026 · Montreal · " if active == "about" else ""
+    c["summit"] = " · Exploit Summit 2026 · Montreal" if active == "about" else ""
     return c
 
 
@@ -193,7 +193,7 @@ def doc_page(title, meta, sections, active, ctx, description, outdir=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/doc.css">
 </head>

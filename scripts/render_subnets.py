@@ -23,10 +23,10 @@ BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
 BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"]
 CONF_LABEL = {"verified": "verified", "inferred": "secondhand", "unknown": "unconfirmed"}
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
-LIGHT = {"bg": (10, 10, 10), "paper": (18, 18, 18), "ink": (242, 242, 242), "soft": (163, 166, 169), "softer": (116, 119, 122),
-         "teal": (231, 38, 48), "rule": (52, 52, 52),
-         "bands": [(231, 38, 48), (111, 114, 117), (143, 146, 149), (176, 179, 182), (210, 212, 214), (242, 242, 242)],
-         "aud": {"stakers": (242, 242, 242), "miners": (242, 242, 242), "buyers": (242, 242, 242), "newcomers": (242, 242, 242)}}
+LIGHT = {"bg": (247, 246, 243), "paper": (239, 237, 232), "ink": (26, 26, 26), "soft": (107, 107, 107), "softer": (138, 138, 138),
+         "teal": (231, 38, 48), "rule": (228, 226, 221),
+         "bands": [(231, 38, 48), (138, 138, 138), (107, 107, 107), (74, 74, 74), (42, 42, 42), (26, 26, 26)],
+         "aud": {"stakers": (26, 26, 26), "miners": (26, 26, 26), "buyers": (26, 26, 26), "newcomers": (26, 26, 26)}}
 
 
 def e(s):
@@ -253,10 +253,10 @@ def og_canvas(kicker):
     img = Image.new("RGB", (1200, 630), P["bg"])
     d = ImageDraw.Draw(img)
     F = {"mono": _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22), "mono_s": _font(["IBMPlexMono-Regular.ttf"], 18),
-         "mono_xs": _font(["IBMPlexMono-Regular.ttf"], 14), "sans": _font(["IBMPlexSans.ttf"], 24), "pix": _font(["Silkscreen-Regular.ttf"], 20)}
-    d.text((70, 60), kicker, font=F["mono"], fill=P["teal"])
+         "mono_xs": _font(["IBMPlexMono-Regular.ttf"], 14), "sans": _font(["IBMPlexSans.ttf"], 24), "pix": _font(["InterTight.ttf"], 26)}
+    d.text((70, 60), kicker, font=F["mono"], fill=P["soft"])
     d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 580), "LEGIBLE.NETWORK", font=F["pix"], fill=P["ink"])
+    d.text((70, 578), "Legible", font=_font(["InterTight.ttf"], 26), fill=P["ink"])
     d.text((1130 - d.textlength("Built by Mikyö Clark", font=F["sans"]), 578), "Built by Mikyö Clark", font=F["sans"], fill=P["soft"])
     return img, d, F, P
 
@@ -281,7 +281,7 @@ def render_og(sub, out_path):
     d.text((66, 150), name, font=_font(["InterTight.ttf"], size), fill=P["ink"])
     comp = float(sub["composite"])
     col = P["bands"][band(comp)]
-    d.text((770, 120), f"{comp:.1f}", font=_font(["Silkscreen-Regular.ttf"], 150), fill=col)
+    d.text((770, 100), f"{comp:.1f}", font=_font(["InterTight.ttf"], 190), fill=col)
     d.text((780, 300), f"/ 5  ·  LEGIBILITY  ·  {BAND_WORD[band(comp)].upper()}", font=F["mono_s"], fill=P["softer"])
     y = 360
     for a in AUD:

@@ -69,8 +69,8 @@ def main():
         for m in re.finditer(r'(?:property="og:image"|rel="canonical") (?:content|href)="([^"]+)"', t):
             if not m.group(1).startswith(SITE + "/"):
                 fails.append(f"{rel}: non-absolute og/canonical url {m.group(1)}")
-        if "topbar:start" in t and "class=\"topbar\"" not in t:
-            fails.append(f"{rel}: topbar partial not injected")
+        if "nav:start" in t and "class=\"nav\"" not in t:
+            fails.append(f"{rel}: nav partial not injected")
         if rel.startswith("sn/") and rel != "sn/index.html" and t.count("<details open>") != 16:
             fails.append(f"{rel}: expected 16 evidence cells, found {t.count("<details open>")}")
 
