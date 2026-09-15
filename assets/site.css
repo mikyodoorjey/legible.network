@@ -11,17 +11,10 @@
   --teal:#1a1a1a;--teal-deep:#000;--teal-soft:rgba(26,26,26,.05);--warm:#e72630;--warm-soft:rgba(231,38,48,.08);
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
   --disp:'Inter Tight','Inter',-apple-system,'Helvetica Neue',sans-serif;--pix:var(--disp);--serif:var(--disp);
-  color-scheme:light dark;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0e0e0e;--paper:#0e0e0e;--paper-deep:#171717;--ink:#f2f2f2;--ink-soft:#dedede;--soft:#9a9a9a;--softer:#777;
-    --rule:#262626;--rule-strong:#3a3a3a;--acc:#f2f2f2;--acc-ink:#0e0e0e;--tag:#f2f2f2;--tagbg:rgba(242,242,242,.08);--tape:#f2f2f2;--tape-ink:#0e0e0e;
-    --b1:#777;--b2:#9a9a9a;--b3:#b8b8b8;--b4:#d6d6d6;--b5:#f2f2f2;
-    --a-stakers:#f2f2f2;--a-miners:#f2f2f2;--a-buyers:#f2f2f2;--a-newcomers:#f2f2f2;
-    --teal:#f2f2f2;--teal-deep:#fff;--teal-soft:rgba(242,242,242,.06);}
+  color-scheme:light;
 }
 :root[data-theme="dark"]{
+  color-scheme:dark;
   --bg:#0e0e0e;--paper:#0e0e0e;--paper-deep:#171717;--ink:#f2f2f2;--ink-soft:#dedede;--soft:#9a9a9a;--softer:#777;
   --rule:#262626;--rule-strong:#3a3a3a;--acc:#f2f2f2;--acc-ink:#0e0e0e;--tag:#f2f2f2;--tagbg:rgba(242,242,242,.08);--tape:#f2f2f2;--tape-ink:#0e0e0e;
   --b1:#777;--b2:#9a9a9a;--b3:#b8b8b8;--b4:#d6d6d6;--b5:#f2f2f2;
@@ -65,6 +58,7 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .tape{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
 footer.site{border-top:1px solid var(--rule);margin-top:96px;padding:28px 0 48px;color:var(--soft);font-size:13px}
 footer.site .wrap{display:flex;flex-direction:column;gap:6px}
+footer.site .theme{color:var(--soft);text-decoration:underline;text-underline-offset:3px;padding:0;font-size:13px}
 footer.site a{color:var(--ink)}
 
 /* words that are data: statuses, labels, units. Never bordered. */

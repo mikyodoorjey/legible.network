@@ -240,8 +240,24 @@ def programs_block(data, n=6):
     return '<div class="programs">' + "".join(cards) + "</div>"
 
 
+ASSET_RE = re.compile(r'(href="/assets/(site|narrative|doc)\.css)(\?v=[0-9a-f]+)?"')
+
+
+def stamp_assets(text):
+    """Append ?v=<hash> to every stylesheet link so browsers and CDNs fetch the sheet that matches the page."""
+    import hashlib
+
+    def sub(m):
+        p = REPO / "assets" / f"{m.group(2)}.css"
+        h = hashlib.sha1(p.read_bytes()).hexdigest()[:10] if p.exists() else "0"
+        return f'{m.group(1)}?v={h}"'
+    return ASSET_RE.sub(sub, text)
+
+
 def write_if_changed(path, text):
     path = Path(path)
+    if str(path).endswith(".html"):
+        text = stamp_assets(text)
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -340,6 +356,7 @@ def main():
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
         s2 = inject(s2, "robots", ctx["robots"])
+        s2 = stamp_assets(s2)
         if name in ("index.html", "sn/index.html"):
             s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
         if name == "index.html":
