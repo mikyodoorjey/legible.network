@@ -30,7 +30,7 @@ DOCS = [  # (source markdown, output dir, nav key)
     ("about.md", "about", "about"),
     ("narrative-method.md", "narrative/method", "narrative"),
 ]
-HAND_PAGES = ["index.html", "404.html", "narrative/index.html"]  # pages that carry partial markers
+HAND_PAGES = ["index.html", "sn/index.html", "404.html", "narrative/index.html"]  # pages that carry partial markers
 
 
 # ---------------- tiny markdown
@@ -218,6 +218,29 @@ def doc_page(title, meta, sections, active, ctx, description, outdir=None):
 """
 
 
+def programs_block(data, n=6):
+    """Six subnets as the index reads them, for the home page close: the work, what it makes, emission, legibility."""
+    try:
+        from render_learn import load_entries
+        entries = load_entries()
+    except Exception:
+        entries = {}
+    subs = sorted(data["subnets"], key=lambda s: s["rank"])
+    cards = []
+    for sub in subs:
+        ent = entries.get(sub["netuid"])
+        if not ent:
+            continue
+        fm = ent["fm"]
+        cards.append(
+            f'<a class="prog" href="/sn/{sub["netuid"]}/"><div class="h"><b>{html.escape(sub["name"])}</b><span>SN{sub["netuid"]} · {html.escape(fm.get("commodity", ""))}</span></div>'
+            f'<p class="work">{html.escape(fm.get("one_sentence", ""))}</p>'
+            f'<div class="row"><span>block reward <b>{html.escape(sub["emission_pct"])}</b></span><span>legibility <b>{float(sub["composite"]):.1f}</b> of 5</span></div></a>')
+        if len(cards) >= n:
+            break
+    return '<div class="programs">' + "".join(cards) + "</div>"
+
+
 def write_if_changed(path, text):
     path = Path(path)
     if path.exists() and path.read_text(encoding="utf-8") == text:
@@ -314,13 +337,15 @@ def main():
         if not p.exists():
             continue
         s = p.read_text(encoding="utf-8")
-        active = "index" if name == "index.html" else ("narrative" if name.startswith("narrative/") else "")
+        active = "index" if name == "sn/index.html" else ("narrative" if name.startswith("narrative/") else "")
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
         s2 = inject(s2, "robots", ctx["robots"])
-        if name == "index.html":
+        if name in ("index.html", "sn/index.html"):
             s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
+        if name == "index.html":
             s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
+            s2 = inject(s2, "programs", programs_block(data) if data else '<p class="sm">The index is being assembled.</p>')
         if name == "narrative/index.html" and ndata:
             sm = ndata["summary"]
             s2 = inject(s2, "nstats", f'<div><b>{sm["narrators"]}</b><span>narrators</span></div><div><b>{sm["statements"]}</b><span>sourced statements</span></div><div><b>{sm["metaphors"]}</b><span>metaphors traced</span></div><div><b>{sm["sources"]}</b><span>distinct sources</span></div>')
@@ -348,12 +373,12 @@ def main():
         changed += sub_changed
         from render_alpha import build_alpha
         changed += build_alpha(data, parts, SITE, write_if_changed)
-        p = REPO / "index.html"
+        p = REPO / "sn" / "index.html"
         s = p.read_text(encoding="utf-8")
         s2 = inject(s, "chart", chart_html)
         if s2 != s:
             p.write_text(s2, encoding="utf-8")
-            changed.append("index.html chart")
+            changed.append("sn/index.html chart")
 
     urls = ["/", "/rubric/", "/methodology/", "/about/", "/narrative/", "/narrative/method/"]
     if ndata:

@@ -174,16 +174,6 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
     return fill(TEMPLATE.read_text(encoding="utf-8"), ctx)
 
 
-def render_list(data, partials, site):
-    items = "".join(
-        f'<li><a href="/sn/{s["netuid"]}/">SN{s["netuid"]} {e(s["name"])}</a> <span class="mono" style="letter-spacing:0">composite {float(s["composite"]):.1f} · emission {e(s["emission_pct"])}</span></li>'
-        for s in sorted(data["subnets"], key=lambda s: s["rank"]))
-    return f"""<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All subnets · Subnet Legibility Index</title>{partials.get("robots", "")}<link rel="canonical" href="{site}/sn/"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/site.css"><style>ol{{padding-left:22px;line-height:1.9}}</style></head>
-<body>{partials["topbar"]}{partials["nav"]}<main class="wrap" style="padding-top:32px"><span class="mono">By emission rank</span><h1>All {len(data["subnets"])} subnets</h1><ol>{items}</ol></main>{partials["footer"]}</body></html>
-"""
 
 
 # ---------------- OpenGraph images
@@ -358,8 +348,6 @@ def build_all(data, partials, site, write_if_changed, explainers=None, narrative
             changed.append(f"sn/{sub['netuid']}/")
     if render_default_og(data, OG_DIR / "default.png"):
         changed.append("assets/og/default.png")
-    if write_if_changed(REPO / "sn" / "index.html", render_list(data, partials, site)):
-        changed.append("sn/index.html")
     if og_ok is False:
         print("  Pillow missing or font error: subnet OG images skipped, default card used", file=__import__("sys").stderr)
     return changed, render_chart(data)
