@@ -21,6 +21,7 @@ AUD_Q = {"stakers": "Should I allocate here?", "miners": "Can I compete, and wha
          "buyers": "Can I use this today?", "newcomers": "What is this and why does it matter?"}
 BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
 BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"]
+CONF_LABEL = {"verified": "verified", "inferred": "secondhand", "unknown": "unconfirmed"}
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
 LIGHT = {"bg": (10, 10, 10), "paper": (18, 18, 18), "ink": (242, 242, 242), "soft": (163, 166, 169), "softer": (116, 119, 122),
          "teal": (231, 38, 48), "rule": (52, 52, 52),
@@ -78,7 +79,7 @@ def description(sub):
     scores = {a: float(sub["audiences"][a]["score"]) for a in AUD}
     hi = max(scores, key=scores.get)
     lo = min(scores, key=scores.get)
-    return (f"Composite {float(sub['composite']):.1f} of 5. Most legible to {hi} ({scores[hi]:.1f}), least to {lo} ({scores[lo]:.1f}). "
+    return (f"Legibility {float(sub['composite']):.1f} of 5. Most legible to {hi} ({scores[hi]:.1f}), least to {lo} ({scores[lo]:.1f}). "
             f"What a first-time reader can find in five minutes, snapshot {sub.get('last_verified', '')}.")
 
 
@@ -130,7 +131,7 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
             cells.append(
                 f'<details open><summary><span><span class="qn">{e(c["q"].upper())}</span>{e(c["label"])}</span>'
                 f'<span>{dots(c["score"])} <b class="band-{band(c["score"])}" style="font-family:var(--mono);font-weight:500">{c["score"] if c["score"] is not None else "?"}</b></span></summary>'
-                f'<div class="ev">{quote}<div class="src">{src}<span class="badge {e(c["status"])}">{e(c["status"])}</span><span class="badge {e(link)}">{e(link)}</span></div>'
+                f'<div class="ev">{quote}<div class="src">{src}<span class="badge {e(c["status"])}">{e(CONF_LABEL.get(c["status"], c["status"]))}</span><span class="badge {e(link)}">{e(link)}</span></div>'
                 f'{("<p class=note>" + e(note) + "</p>") if note else ""}</div></details>')
         panels.append(
             f'<section class="panel" style="--accent:var(--a-{a})"><h3><span class="aud-{a}">{AUD_LABEL[a]}</span>'

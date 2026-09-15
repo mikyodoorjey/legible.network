@@ -1,6 +1,7 @@
 scripts/
 agents/
-rubric.md
+method.md
+about.md
 README.md
 .claude/
 .env*
@@ -10,5 +11,4 @@ data/*.csv
 data/review-*
 data/verify-*
 data/index.md
-narrative-method.md
 data/narrative/raw/

@@ -2,16 +2,16 @@
 
 Two instruments for reading the Bittensor ecosystem, one site.
 
-**The Subnet Legibility Index** (v1): what a first-time reader can find out about the 32 Bittensor subnets with the largest share of emission, in five minutes, from the subnet's own public materials. Scored for four audiences (stakers, miners, buyers, newcomers) on a four-question spine, 0 to 5 per cell. Findability, not quality. Live at [legible.network](https://legible.network). Rubric at [/rubric/](https://legible.network/rubric/). Method at [/methodology/](https://legible.network/methodology/).
+**The Subnet Legibility Index** (v1): what a first-time reader can find out about the 32 Bittensor subnets with the largest share of emission, in five minutes, from the subnet's own public materials. Scored for four audiences (stakers, miners, buyers, newcomers) on a four-question spine, 0 to 5 per cell. Findability, not quality. Live at [legible.network](https://legible.network). Rubric at [/method/#the-index-what-it-scores](https://legible.network/method/#the-index-what-it-scores). Method at [/method/#the-index-how-it-was-applied](https://legible.network/method/#the-index-how-it-was-applied).
 
-**The Bittensor Narrative Map** (v2): who says what Bittensor is, in their own words, dated and sourced. The core object is a narrator (a person, the foundation, or a subnet team). Each narrator's entry is built only from verbatim statements with a source URL and a confidence level, read through one framework (a brand strategy skeleton turned on the narrator: mission, problem, opportunity, audience, what it is set against, positioning, value, the line they repeat, voice, their relation to the network, language, and for subnets their own frame) so narrators can be compared slot by slot. Metaphors are traced across narrators from first sourced use. Live at [/narrative/](https://legible.network/narrative/). Method at [/narrative/method/](https://legible.network/narrative/method/).
+**The Bittensor Narrative Map** (v2): who says what Bittensor is, in their own words, dated and sourced. The core object is a narrator (a person, the foundation, or a subnet team). Each narrator's entry is built only from verbatim statements with a source URL and a confidence level, read through one framework (a brand strategy skeleton turned on the narrator: mission, problem, opportunity, audience, what it is set against, positioning, value, the line they repeat, voice, their relation to the network, language, and for subnets their own frame) so narrators can be compared slot by slot. Metaphors are traced across narrators from first sourced use. Live at [/narrative/](https://legible.network/narrative/). Method at [/method/#the-map-what-it-records](https://legible.network/method/#the-map-what-it-records).
 
 ## Layout
 
 | Path | What |
 |---|---|
 | `index.html` | The ranked index. Fetches `/data/summary.json`. |
-| `rubric.md`, `methodology.md`, `about.md` | Source of truth for the three document pages, rendered by the build. |
+| `about.md` | Source of truth for the about page, rendered by the build. |
 | `sn/<netuid>/` | One page per subnet, generated. |
 | `alpha/<netuid>/` | One page per alpha token: price, pool stats, and where it trades, generated. |
 | `data/tokens-<date>.json` | Alpha token snapshot: Taostats pool data, Kraken and MEXC pairs, CoinGecko tickers. |
@@ -21,7 +21,8 @@ Two instruments for reading the Bittensor ecosystem, one site.
 | `agents/` | The scoring brief, per-agent slices, calibration set, summaries; `NARRATIVE-PROMPT.md` is the narrative research brief. |
 | `scripts/` | The pipeline (below) and the site build. |
 | `narrative/index.html` | The narrative map. Fetches `/data/narrative.json`. |
-| `narrative/<id>/` | One page per narrator, generated. `narrative/metaphors/` is the metaphor index, `narrative/method/` the method page from `narrative-method.md`. |
+| `narrative/<id>/` | One page per narrator, generated. `narrative/metaphors/` is the frames index. |
+| `method.md` | Source of truth for the single method page at `/method/`: the scale, how the index was applied, what the map records, confidence, coverage, corrections, changelog. |
 | `data/narrative/raw/<id>.json` | One file per narrator, written by a research agent against `agents/NARRATIVE-PROMPT.md` and validated by `scripts/narrative_check.py`. |
 | `data/narrative.json` | The merged, published narrative dataset (CC BY 4.0). `narrative-pretty.json` is the same, indented. |
 
@@ -45,7 +46,7 @@ python3 scripts/check_site.py                     # read-only checks
 
 `build_site.py --narrative-raw <dir>` builds the map from a different directory of narrator files (a fixture, or a subset while research is still landing).
 
-Narrative corrections (a misquote, a wrong date, a wrong speaker, a missing primary) are edits to the narrator's raw file, then a rebuild; the [narrative correction form](https://github.com/mikyodoorjey/legible.network/issues/new?template=narrative-correction.yml) collects them. Index corrections after publication go in `data/corrections.csv` and are applied with `scripts/apply_corrections.py`, which stamps provenance, rebuilds, and adds to the changelog.
+Narrative corrections (a misquote, a wrong date, a wrong speaker, a missing primary) are edits to the narrator's raw file, then a rebuild; the [narrative correction form](https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml) collects them. Index corrections after publication go in `data/corrections.csv` and are applied with `scripts/apply_corrections.py`, which stamps provenance, rebuilds, and adds to the changelog.
 
 ## Local preview
 

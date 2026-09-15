@@ -158,7 +158,7 @@ def render_entry_block(ent, terms, inline_fn, sub=None):
     if urls:
         parts.append('<details class="srcs"><summary class="mono">Sources for this explainer</summary><ul>' +
                      "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(u[:90])}</a></li>' for u in urls) + "</ul></details>")
-    parts.append(f'<p class="sm">Metaphor: {e(fm.get("metaphor", ""))}. Every claim is drawn from the evidence set or the subnet\'s own materials; "(inferred)" marks a conclusion rather than a quote. <a href="/methodology/#corrections">Corrections</a>.</p>')
+    parts.append(f'<p class="sm">Metaphor: {e(fm.get("metaphor", ""))}. Every claim is drawn from the evidence set or the subnet\'s own materials; "(inferred)" marks a conclusion rather than a quote. <a href="/method/#corrections">Corrections</a>.</p>')
     parts.append("</section>")
     return "".join(parts)
 

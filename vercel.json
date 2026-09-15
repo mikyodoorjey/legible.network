@@ -9,6 +9,36 @@
       "source": "/learn/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/rubric",
+      "destination": "/method/#the-index-what-it-scores",
+      "permanent": true
+    },
+    {
+      "source": "/rubric/",
+      "destination": "/method/#the-index-what-it-scores",
+      "permanent": true
+    },
+    {
+      "source": "/methodology",
+      "destination": "/method/#the-index-how-it-was-applied",
+      "permanent": true
+    },
+    {
+      "source": "/methodology/",
+      "destination": "/method/#the-index-how-it-was-applied",
+      "permanent": true
+    },
+    {
+      "source": "/narrative/method",
+      "destination": "/method/#the-map-what-it-records",
+      "permanent": true
+    },
+    {
+      "source": "/narrative/method/",
+      "destination": "/method/#the-map-what-it-records",
+      "permanent": true
     }
   ],
   "headers": [

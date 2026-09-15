@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-15T16:46:48+00:00",
+ "generated_at": "2026-09-15T16:53:11+00:00",
  "links_checked": "2026-09-15",
  "license": "CC BY 4.0, attribution: Bittensor Narrative Map by Mikyö Clark, legible.network",
  "eras": [
@@ -50,112 +50,112 @@
  "slots": [
   {
    "id": "foundation.mission",
-   "label": "Foundation: Mission",
+   "label": "What it is for",
    "section": "foundation"
   },
   {
    "id": "foundation.vision",
-   "label": "Foundation: Vision",
+   "label": "The world it builds",
    "section": "foundation"
   },
   {
    "id": "foundation.values",
-   "label": "Foundation: Values",
+   "label": "What it stands for",
    "section": "foundation"
   },
   {
    "id": "problem.cultural",
-   "label": "The problem: Cultural",
+   "label": "What is broken",
    "section": "problem"
   },
   {
    "id": "problem.market",
-   "label": "The problem: Market",
+   "label": "What is missing",
    "section": "problem"
   },
   {
    "id": "problem.institutional",
-   "label": "The problem: Institutional",
+   "label": "What is at risk",
    "section": "problem"
   },
   {
    "id": "opportunity",
-   "label": "The opportunity",
+   "label": "Why now",
    "section": "opportunity"
   },
   {
    "id": "audience",
-   "label": "Audience",
+   "label": "Who they address",
    "section": "audience"
   },
   {
-   "id": "positioning.against",
-   "label": "Competitive positioning",
-   "section": "against"
-  },
-  {
    "id": "positioning.category",
-   "label": "Positioning statement: Category frame",
+   "label": "What they call it",
    "section": "positioning"
   },
   {
    "id": "positioning.differentiator",
-   "label": "Positioning statement: Differentiator",
+   "label": "What makes it different",
    "section": "positioning"
   },
   {
    "id": "positioning.reason",
-   "label": "Positioning statement: Reason to believe",
+   "label": "Why believe them",
    "section": "positioning"
   },
   {
+   "id": "positioning.against",
+   "label": "What it is against",
+   "section": "against"
+  },
+  {
    "id": "value.functional",
-   "label": "Value proposition: Functional",
+   "label": "What you get",
    "section": "value"
   },
   {
    "id": "value.emotional",
-   "label": "Value proposition: Emotional",
+   "label": "How it feels",
    "section": "value"
   },
   {
    "id": "value.self_expressive",
-   "label": "Value proposition: Self-expressive",
+   "label": "What joining says about you",
    "section": "value"
   },
   {
    "id": "messaging.h1",
-   "label": "Messaging hierarchy: The line",
+   "label": "The line they repeat",
    "section": "messaging"
   },
   {
    "id": "messaging.proof",
-   "label": "Messaging hierarchy: Proof",
+   "label": "The proof they point to",
    "section": "messaging"
   },
   {
    "id": "voice",
-   "label": "Voice",
+   "label": "How they sound",
    "section": "voice"
   },
   {
    "id": "relationship",
-   "label": "Narrator and network",
+   "label": "Their stake in it",
    "section": "relationship"
   },
   {
    "id": "language.term",
-   "label": "Language conventions",
+   "label": "Their words for things",
    "section": "language"
   },
   {
    "id": "subnet.self",
-   "label": "Subnet frames: Their subnet",
+   "label": "Their subnet, in their words",
    "section": "subnet"
   },
   {
    "id": "subnet.network",
-   "label": "Subnet frames: The network",
+   "label": "Bittensor, in their words",
    "section": "subnet"
   }
  ],

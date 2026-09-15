@@ -130,8 +130,8 @@ main.grid.open aside{display:block}
 <body data-snapshot="2026-09-09">
 <!-- topbar:start -->
 <div class="topbar"><div class="wrap">
-  <span>legible.network v2 · snapshot 2026-09-09 · rubric v1.0</span>
-  <span>Exploit Summit 2026 · Montreal · <a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
+  <span>Legible v2 · snapshot 2026-09-09 · scale v1.0</span>
+  <span><a href="https://www.mikyo.one" rel="author">Built by Mikyö Clark</a></span>
 </div></div>
 
 <!-- topbar:end -->
@@ -139,12 +139,11 @@ main.grid.open aside{display:block}
 <nav class="nav"><div class="wrap">
   <span class="wordmark"><a href="/">Legible</a><small>by <a href="https://www.mikyo.one" rel="author">Mikyö Clark</a></small></span>
   <div class="links">
-    <a href="/sn/" aria-current="page">Index</a>
-    <a href="/narrative/">Narrative</a>
-    <a href="/rubric/">Rubric</a>
-    <a href="/methodology/">Methodology</a>
+    <a href="/sn/" aria-current="page">Subnets</a>
+    <a href="/narrative/">Voices</a>
+    <a href="/method/">Method</a>
     <a href="/about/">About</a>
-    <a class="cta" href="/methodology/#corrections">Corrections</a>
+    <a class="cta" href="/method/#corrections">Correction</a>
   </div>
 </div></nav>
 
@@ -153,8 +152,8 @@ main.grid.open aside{display:block}
 <header class="wrap hero" id="index-section">
   <p class="kicker"><b>Subnets.</b> The Subnet Legibility Index: the top 32 subnets, scored on whether a newcomer can understand them.</p>
   <h1>Can a first-time reader understand this subnet <em>in five minutes?</em></h1>
-  <p class="lede">Each subnet is scored on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/rubric/">rubric</a> measures findability, not quality. Every score links to its evidence, and every subnet opens with a plain-language explainer.</p>
-  <div class="stats" id="stats"><div><b>32</b><span>subnets</span></div><div><b id="st-share">90%</b><span>of emission</span></div><div><b id="st-cells">512</b><span>cells scored</span></div><div><b id="st-median">3.3</b><span>median score</span></div></div>
+  <p class="lede">Each subnet is rated on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/method/#the-index-what-it-scores">scale</a> measures findability, not quality. Every score links to its evidence, and every subnet opens with a plain-language explainer.</p>
+  <div class="stats" id="stats"><div><b>32</b><span>subnets</span></div><div><b id="st-share">90%</b><span>of emission</span></div><div><b id="st-cells">512</b><span>checks made</span></div><div><b id="st-median">3.3</b><span>median legibility</span></div></div>
   <div class="demo">
     <a href="#sort=emission">Ranked by emission</a>
     <a href="#sort=buyers">Re-rank by what a buyer can find</a>
@@ -168,7 +167,7 @@ main.grid.open aside{display:block}
     <p><b>Bittensor</b> is a network of small, independent marketplaces for digital work that share one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund. The fund is <a class="term" href="#" data-term="tao">TAO</a>, a coin created at a steady rate.</p>
     <p>A <b>subnet</b> is one booth. It is a set of rules for a single kind of work: <a class="term" href="#" data-term="miner">miners</a> do the task, <a class="term" href="#" data-term="validator">validators</a> score it, and pay flows by score. Each subnet has its own <a class="term" href="#" data-term="alpha-token">token</a>, and since June 2026 its share of the prize fund follows that token's price, so the market decides which booths get funded.</p>
     <p><b>This index</b> asks one question of the 32 best-funded booths: has the subnet told the people who fund it, work for it, buy from it, and encounter it what it sells, in a place they will look, in five minutes? It scores findability, not quality. Every score links to its evidence, and every subnet page opens with a plain-language explainer. Dotted words open a definition.</p>
-    <p class="links"><a href="/rubric/">How scoring works</a> · <a href="/methodology/">Method and corrections</a> · <a href="/alpha/">Alpha tokens</a></p>
+    <p class="links"><a href="/method/#the-index-what-it-scores">How legibility is rated</a> · <a href="/method/#the-index-how-it-was-applied">Method and corrections</a> · <a href="/alpha/">Alpha tokens</a></p>
   </div>
 </details>
 
@@ -178,7 +177,7 @@ main.grid.open aside{display:block}
       <input class="search" id="q" type="search" placeholder="Search by name, number, or what it makes" autocomplete="off">
       <div class="seg" id="seg" role="group" aria-label="Rank by">
         <button data-sort="emission" class="on">Emission</button>
-        <button data-sort="composite">Composite</button>
+        <button data-sort="composite">Legibility</button>
         <button data-sort="stakers">Stakers</button>
         <button data-sort="miners">Miners</button>
         <button data-sort="buyers">Buyers</button>
@@ -186,7 +185,7 @@ main.grid.open aside{display:block}
       </div>
       <button class="chip" id="pinnedOnly">★ Pinned <span class="n" id="pinCount">0</span></button>
     </div>
-    <div class="frow"><span class="flabel">Composite</span><span id="fBand"></span></div>
+    <div class="frow"><span class="flabel">Legibility</span><span id="fBand"></span></div>
     <div class="frow"><span class="flabel">Makes</span><span id="fComm"></span></div>
     <div class="frow"><span class="flabel">Identity</span><span id="fIdentity"></span>
       <button class="chip" data-toggle="docsOnly">Has docs</button>
@@ -206,7 +205,7 @@ main.grid.open aside{display:block}
         <th data-k="name">Subnet</th>
         <th data-k="emission">Emission</th>
         <th data-k="alpha" title="Alpha token: symbol, price in TAO, exchange listings. Click for the token page.">Alpha token</th>
-        <th data-k="composite">Composite</th>
+        <th data-k="composite">Legibility</th>
         <th data-k="stakers">Stakers</th>
         <th data-k="miners">Miners</th>
         <th data-k="buyers">Buyers</th>
@@ -234,8 +233,8 @@ main.grid.open aside{display:block}
 <script src="/assets/terms.js"></script>
 <!-- footer:start -->
 <footer class="site"><div class="wrap">
-  <span>Corrections: <a href="/methodology/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
-  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · rubric v1.0</span>
+  <span>Correction: <a href="/method/#corrections">how to file one</a> · <a href="https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml">GitHub issue</a></span>
+  <span>Data <a href="/data/LICENSE">CC BY 4.0</a> · code <a href="https://github.com/mikyodoorjey/legible.network">MIT</a> · snapshot 2026-09-09 · scale v1.0</span>
   <span>Built by Mikyö Clark (they/them) · <a href="https://www.mikyo.one">mikyo.one</a></span>
 </div></footer>
 
@@ -251,6 +250,7 @@ main.grid.open aside{display:block}
   const COMM = ["inference","compute","training","data","agents","forecasting","storage","security","media","science","other"];
   const commOf = r => (r.explainer && r.explainer.commodity) || "other";
   const QL = {q1:"What it is", q2:"Who it is for", q3:"Resists gaming", q4:"Identity and docs"};
+  const CONF_LABEL = {verified:"verified", inferred:"secondhand", unknown:"unconfirmed"};
   const BAND_WORD = ["sparse","thin","partial","workable","clear","exemplary"];
   const BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"];
   const scoreTip = (v, label) => `${label ? label + " " : ""}${Number(v).toFixed(1)} of 5 · ${BAND_WORD[band(v)]}: ${BAND_DEF[band(v)]}`;
@@ -263,7 +263,7 @@ main.grid.open aside{display:block}
     const tip = (quote ? "\u201c" + quote + "\u201d " : "") + (rest || "");
     return `<div class="cellwrap"><div class="cell" title="${esc(tip)}" tabindex="0"><span>${esc(QL[c.q] || c.q)}</span>${scoreDots(c.score)}</div>
       <div class="ev">${quote ? `<p class="quote">${esc(quote)}</p>` : ""}${rest ? `<p class="note">${esc(rest)}</p>` : ""}
-      <div class="src">${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(hostOf(c.url))}</a>` : "<span>no source</span>"}<span class="badge ${esc(c.status || "unknown")}">${esc(c.status || "unknown")}</span>${c.link ? `<span class="badge ${esc(c.link)}">${esc(c.link)}</span>` : ""}</div></div></div>`;
+      <div class="src">${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(hostOf(c.url))}</a>` : "<span>no source</span>"}<span class="badge ${esc(c.status || "unknown")}">${esc(CONF_LABEL[c.status] || "unconfirmed")}</span>${c.link ? `<span class="badge ${esc(c.link)}">${esc(c.link)}</span>` : ""}</div></div></div>`;
   }
 
   let data = [], meta = {}, loaded = false, loadError = null;
@@ -361,7 +361,7 @@ main.grid.open aside{display:block}
         <td class="name"><div class="nm"><span class="star${pins[r.netuid] ? " on" : ""}" data-star="${r.netuid}" title="Pin">${pins[r.netuid] ? "★" : "☆"}</span><a href="/sn/${r.netuid}/">${esc(r.name)}</a><span class="sn">SN ${r.netuid}</span></div>${oneLine(r)}</td>
         <td class="num">${esc(r.emission_pct)}</td>
         <td class="num alpha">${alphaCell(r)}</td>
-        <td class="comp${hiCol === "composite" ? " hi" : ""}" title="${esc(((r.verdict && r.verdict.summary) ? r.verdict.summary + "\n\n" : "") + scoreTip(r.composite, "Composite") + "\n" + split(r))}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
+        <td class="comp${hiCol === "composite" ? " hi" : ""}" title="${esc(((r.verdict && r.verdict.summary) ? r.verdict.summary + "\n\n" : "") + scoreTip(r.composite, "Legibility") + "\n" + split(r))}"><b class="band-${band(r.composite)}">${Number(r.composite).toFixed(1)}</b><span class="bar"><i class="bg-band-${band(r.composite)}" style="width:${Number(r.composite) / 5 * 100}%"></i></span></td>
         ${AUD.map(a => `<td class="${hiCol === a ? "hi" : ""}" title="${esc((r.verdict && r.verdict[a] ? r.verdict[a] + "\n\n" : "") + scoreTip(aScore(r, a), AUD_LABEL[a]))}">${scoreDots(aScore(r, a))}</td>`).join("")}
         <td>${meter(r)}</td>
         <td class="num">${r.active_miners ?? "?"} · ${r.active_validators ?? "?"}</td>
@@ -381,7 +381,7 @@ main.grid.open aside{display:block}
       <button class="close" id="closeBtn" title="Close">×</button>
       <span class="mono">SN ${r.netuid} · rank ${r.rank} by emission · ${esc(r.emission_pct)}</span>
       <h2>${esc(r.name)}</h2>
-      <div class="meta"><span class="comp band-${band(r.composite)}" title="${esc(scoreTip(r.composite, "Composite"))}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
+      <div class="meta"><span class="comp band-${band(r.composite)}" title="${esc(scoreTip(r.composite, "Legibility"))}">${Number(r.composite).toFixed(1)}<small>${BAND_WORD[band(r.composite)]}</small></span><span class="spacer"></span><button class="starbtn${pins[n] ? " on" : ""}" id="starBtn">${pins[n] ? "★ Pinned" : "☆ Pin"}</button></div>
       <p class="banddef">${esc(BAND_WORD[band(r.composite)])}: ${esc(BAND_DEF[band(r.composite)])}.</p>
       ${r.verdict && r.verdict.summary ? `<div class="verdict"><span class="mono">What ${Number(r.composite).toFixed(1)} means</span><p>${esc(r.verdict.summary)}</p>
         <ul>${AUD.map(a => r.verdict[a] ? `<li><b>If you were a ${a === "stakers" ? "staker" : a === "miners" ? "miner" : a === "buyers" ? "buyer" : "newcomer"}</b> <span class="band-${band(aScore(r, a))}" style="font-family:var(--pix)">${aScore(r, a).toFixed(1)}</span> ${esc(r.verdict[a])}</li>` : "").join("")}</ul></div>` : ""}

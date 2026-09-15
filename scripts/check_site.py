@@ -34,17 +34,17 @@ def main():
     else:
         data = json.loads(data_path.read_text(encoding="utf-8"))
 
-    rubric_md = (REPO / "rubric.md").read_text(encoding="utf-8")
-    md_ver = next((ln.split(":", 1)[1].strip() for ln in rubric_md.splitlines() if ln.startswith("Version:")), None)
-    rubric_page = (REPO / "rubric" / "index.html").read_text(encoding="utf-8") if (REPO / "rubric" / "index.html").exists() else ""
-    if not rubric_page:
-        fails.append("rubric/index.html missing")
-    elif f"version: {md_ver}" not in rubric_page.lower() and f"rubric v{md_ver}" not in rubric_page.lower():
-        fails.append(f"rubric page does not show version {md_ver}")
+    method_md = (REPO / "method.md").read_text(encoding="utf-8")
+    md_ver = next((ln.split(":", 1)[1].strip() for ln in method_md.splitlines() if ln.startswith("Scale version:")), None)
+    method_page = (REPO / "method" / "index.html").read_text(encoding="utf-8") if (REPO / "method" / "index.html").exists() else ""
+    if not method_page:
+        fails.append("method/index.html missing")
+    elif f"scale version: {md_ver}" not in method_page.lower():
+        fails.append(f"method page does not show scale version {md_ver}")
     if data and data.get("rubric_version") != md_ver:
-        fails.append(f"index.json rubric_version {data.get('rubric_version')} != rubric.md {md_ver}")
+        fails.append(f"index.json rubric_version {data.get('rubric_version')} != method.md scale version {md_ver}")
 
-    pages = ["index.html", "rubric/index.html", "methodology/index.html", "about/index.html", "404.html", "narrative/index.html", "narrative/method/index.html"]
+    pages = ["index.html", "method/index.html", "about/index.html", "404.html", "narrative/index.html"]
     npath = REPO / "data" / "narrative.json"
     if npath.exists():
         nd = json.loads(npath.read_text(encoding="utf-8"))
@@ -95,10 +95,10 @@ def main():
                 if "claim_labels" in s or "identity_check" in s:
                     fails.append(f"summary.json carries provenance for SN{s['netuid']}")
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""
-        want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/rubric/", f"{SITE}/methodology/", f"{SITE}/about/", f"{SITE}/sn/"}
+        want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/method/", f"{SITE}/about/", f"{SITE}/sn/"}
         if any(s.get("alpha") for s in data["subnets"]):
             want |= {f"{SITE}/alpha/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/alpha/"}
-        want |= {f"{SITE}/narrative/", f"{SITE}/narrative/method/"}
+        want |= {f"{SITE}/narrative/"}
         if npath.exists():
             want |= {f"{SITE}/narrative/metaphors/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"]}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))

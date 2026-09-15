@@ -1,24 +1,24 @@
 name: Correction
-description: Report a wrong score, a missed page, or a dead link in the Subnet Legibility Index
-title: "[Correction] SN<netuid> <subnet name>"
+description: A wrong legibility score, a misquote or misdated quote in the map, or a dead link
+title: "[Correction] "
 labels: [correction]
 body:
+  - type: dropdown
+    id: about
+    attributes: { label: What is this about, options: ["a legibility score on the index", "a quote in the map", "a link, on either side", "something else"] }
+    validations: { required: true }
   - type: input
-    id: netuid
-    attributes: { label: Subnet netuid, placeholder: "64" }
+    id: subject
+    attributes: { label: Subnet or narrator, placeholder: "SN64 Chutes, or jacob-steeves" }
     validations: { required: true }
-  - type: dropdown
-    id: audience
-    attributes: { label: Audience, options: [stakers, miners, buyers, newcomers, identity] }
-    validations: { required: true }
-  - type: dropdown
-    id: question
-    attributes: { label: Question, options: ["q1 What it is", "q2 Who it is for", "q3 How it resists gaming or fails", "q4 Identity and documentation"] }
+  - type: input
+    id: where
+    attributes: { label: The cell or the statement id, description: "For a score: audience and question, like buyers q2. For a quote: the id shown on it, like jacob-steeves-014.", placeholder: "buyers q2, or jacob-steeves-014" }
   - type: textarea
     id: wrong
-    attributes: { label: What is wrong, description: "What the index says, and what a reader can actually find." }
+    attributes: { label: What is wrong, description: "What Legible says, and what the source actually shows or says." }
     validations: { required: true }
   - type: input
     id: url
-    attributes: { label: Source URL, description: "The public page a first-time reader would find this on." }
+    attributes: { label: Source URL, description: "The public page a first-time reader would find this on, or the primary source of the quote." }
     validations: { required: true }

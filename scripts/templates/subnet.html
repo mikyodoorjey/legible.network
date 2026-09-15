@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SN{{netuid}} {{name}} · Subnet Legibility Index</title>
+<title>SN{{netuid}} {{name}} · Legible</title>
 {{{robots}}}
 <meta name="description" content="{{description}}">
 <link rel="canonical" href="{{site}}/sn/{{netuid}}/">
@@ -94,8 +94,8 @@
 
     {{{narrative}}}
 
-    <h2 class="scored-head">How we scored it</h2>
-    <p class="sm">Four audiences, four questions each, scored on what a first-time reader can find in five minutes. Method in the <a href="/rubric/">rubric</a>.</p>
+    <h2 class="scored-head" id="legibility">How legible it is</h2>
+    <p class="sm">Four audiences, four questions each, rated on what a first-time reader can find in five minutes. The <a href="/method/#the-index-what-it-scores">scale</a> measures findability, not quality.</p>
 
     <div class="identity">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
@@ -110,17 +110,17 @@
 
     <div class="prov">
       <span class="mono">Provenance</span>
-      <p class="sm">How this score came to be. Verified means the scorer fetched the page and the words are on it; inferred means concluded from code, absence, or a third party. The link badge is a separate automated check made before publication.</p>
+      <p class="sm">How this rating came to be. Verified means the scorer fetched the page and the words are on it; secondhand means concluded from code, absence, or a third party. The link badge is a separate automated check made before publication.</p>
       <div class="pills">{{{provenance}}}</div>
     </div>
 
-    <p class="corr">Something wrong? Corrections of fact are applied as they arrive during the window; score disputes are batched at its close. <a href="/methodology/#corrections">How to file one</a> · <a href="{{issue_url}}">GitHub issue</a> · <a href="mailto:m@cmprssn.xyz?subject={{mail_subject}}">email</a>.</p>
+    <p class="corr">Something wrong? Corrections of fact are applied as they arrive during the window; rating disputes are batched at its close. <a href="/method/#corrections">How to file one</a> · <a href="{{issue_url}}">GitHub issue</a> · <a href="mailto:m@cmprssn.xyz?subject={{mail_subject}}">email</a>.</p>
 
     <div class="prevnext">{{{prevnext}}}</div>
   </div>
 
   <aside class="card">
-    <div class="comp band-{{band}}" title="{{band_def}}">{{composite}}<small>{{band_word}} · composite of 5</small></div>
+    <div class="comp band-{{band}}" title="{{band_def}}">{{composite}}<small>{{band_word}} · legibility, of 5</small></div>
     <p class="banddef">{{band_def}}</p>
     {{{verdict_block}}}
     {{{score_rows}}}

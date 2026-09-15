@@ -59,11 +59,21 @@ SECTIONS = [  # the brand strategy skeleton, turned on the narrator
     ("subnet", "12. Subnet frames", "How a subnet team describes itself, and the network it lives in.",
      [("subnet.self", "Their subnet"), ("subnet.network", "The network")]),
 ]
-SLOT_LABEL = {sid: f"{title.split('. ', 1)[1]}: {lab}" if len(slots) > 1 else title.split(". ", 1)[1]
-              for _, title, _, slots in SECTIONS for sid, lab in slots}
+SLOT_LABEL = {
+    "foundation.mission": "What it is for", "foundation.vision": "The world it builds", "foundation.values": "What it stands for",
+    "problem.cultural": "What is broken", "problem.market": "What is missing", "problem.institutional": "What is at risk",
+    "opportunity": "Why now", "audience": "Who they address",
+    "positioning.category": "What they call it", "positioning.differentiator": "What makes it different", "positioning.reason": "Why believe them",
+    "positioning.against": "What it is against",
+    "value.functional": "What you get", "value.emotional": "How it feels", "value.self_expressive": "What joining says about you",
+    "messaging.h1": "The line they repeat", "messaging.proof": "The proof they point to", "voice": "How they sound",
+    "relationship": "Their stake in it", "language.term": "Their words for things",
+    "subnet.self": "Their subnet, in their words", "subnet.network": "Bittensor, in their words",
+}
 SLOT_SECTION = {sid: key for key, _, _, slots in SECTIONS for sid, _ in slots}
 
 KIND_LABEL = {"person": "Person", "institution": "Institution", "subnet": "Subnet"}
+CONF_LABEL = {"verified": "verified", "probable": "secondhand", "unverified": "unconfirmed"}
 
 
 def e(s):
@@ -230,7 +240,7 @@ def merge(raws):
 
 # ---------------- html pieces
 def badge(conf):
-    return f'<span class="badge {e(conf)}">{e(conf)}</span>'
+    return f'<span class="badge {e(conf)}">{e(CONF_LABEL.get(conf, conf))}</span>'
 
 
 def quote_card(s, by_id, show_narrator=False, compact=False):
@@ -346,7 +356,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
     # card
     conf = n["confidence"]
     total = max(1, n["statement_count"])
-    bars = "".join(f'<div class="row"><span>{k}</span><span><i class="bar"><b style="width:{100 * v / total:.0f}%"></b></i> <b class="n">{v}</b></span></div>' for k, v in conf.items())
+    bars = "".join(f'<div class="row"><span>{CONF_LABEL.get(k, k)}</span><span><i class="bar"><b style="width:{100 * v / total:.0f}%"></b></i> <b class="n">{v}</b></span></div>' for k, v in conf.items())
     era_pills = "".join(f'<a class="pill" href="#era-{era}">{e(ERA_LABEL[era])}</a>' for era in n["eras"])
     mine_mets = [m for m in data["metaphors"] if any(u["narrator"] == n["id"] for u in m["users"])]
     met_rows = "".join(f'<li><a href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a> <span class="n">{sum(u["count"] for u in m["users"] if u["narrator"] == n["id"])}</span></li>'
@@ -362,7 +372,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
     prevnext = (f'<a href="/narrative/{e(prev_n["id"])}/">← {e(prev_n["name"])}</a>' if prev_n else "<span></span>") + \
                (f'<a href="/narrative/{e(next_n["id"])}/">{e(next_n["name"])} →</a>' if next_n else "<span></span>")
     first_h1 = next((s for s in mine if "messaging.h1" in s["slots"]), None) or (mine[0] if mine else None)
-    desc = f'{n["one_line"]} {n["statement_count"]} sourced statements, {conf["verified"]} verified, across {len(n["eras"])} era{"s" if len(n["eras"]) != 1 else ""}.'
+    desc = f'{n["one_line"]} {n["statement_count"]} quotes on record, {conf["verified"]} verified, across {len(n["eras"])} era{"s" if len(n["eras"]) != 1 else ""}.'
     ctx = {
         "id": n["id"], "name": n["name"], "kind": KIND_LABEL[n["kind"]], "one_line": n["one_line"], "site": site, "og_image": og_name,
         "description": desc, "glyph": n["glyph"], "pills": narrator_pills(n),
@@ -372,7 +382,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
         "count": n["statement_count"], "bars": bars, "era_pills": era_pills, "met_rows": met_rows or "<li class=sm>none tagged</li>",
         "coverage": cov_html or '<p class="sm">No coverage notes.</p>', "prevnext": prevnext,
         "aka": (" · ".join(n["aka"])) if n["aka"] else "",
-        "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=narrative-correction.yml&title=%5BNarrative%5D%20{e(n['name']).replace(' ', '%20')}",
+        "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml&title=%5BCorrection%5D%20{e(n['name']).replace(' ', '%20')}",
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
         "json": json.dumps({k: v for k, v in n.items()}, ensure_ascii=False).replace("</", "<\\/"),
     }
@@ -393,7 +403,7 @@ def render_metaphors(data, partials, site):
         eras = "".join(f'<i class="{"on" if era in m["eras"] else ""}" title="{e(ERA_LABEL[era])}"></i>' for era in ERAS)
         rows.append(
             f'<article class="met" id="{e(m["label"])}"><div class="mh"><h3><a href="#{e(m["label"])}">{e(m["label"])}</a></h3>'
-            f'<span class="badge {e(m["status"])}">{e(m["status"])}</span><span class="mono">{m["count"]} use{"s" if m["count"] != 1 else ""} · {len(m["users"])} narrator{"s" if len(m["users"]) != 1 else ""}</span><span class="eras" title="Eras in use">{eras}</span></div>'
+            f'<span class="badge {e(m["status"])}">{e(m["status"])}</span><span class="mono">{m["count"]} use{"s" if m["count"] != 1 else ""} · {len(m["users"])} voice{"s" if len(m["users"]) != 1 else ""}</span><span class="eras" title="Eras in use">{eras}</span></div>'
             + (f'<p class="quote">{e(fs["quote"])}</p><p class="src">First on record: <a href="/narrative/{e(first["narrator"])}/#{e(first["statement"])}">{e(by_id[first["narrator"]]["name"])}</a>, {e(fs["date_label"])} · <a href="{e(fs["source"]["url"])}" target="_blank" rel="noopener">{e(fs["source"]["outlet"] or fs["source"]["host"])}</a> {badge(fs["confidence"])}</p>' if fs else "")
             + f'<div class="users"><span class="mono">Used by, in order of first use</span><div class="pills">{users}</div></div></article>')
     active = sum(1 for m in data["metaphors"] if m["status"] == "active")
@@ -403,13 +413,13 @@ def render_metaphors(data, partials, site):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Metaphor index · Bittensor Narrative Map</title>
+<title>The frames · Legible</title>
 {partials.get("robots", "")}
 <meta name="description" content="Every figurative frame used for Bittensor on the record: who said it first, who picked it up, and whether it is still in use.">
 <link rel="canonical" href="{site}/narrative/metaphors/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:url" content="{site}/narrative/metaphors/">
-<meta property="og:title" content="Metaphor index · Bittensor Narrative Map">
+<meta property="og:title" content="The frames · Legible">
 <meta property="og:description" content="Who said it first, who picked it up, whether it is still in use.">
 <meta property="og:image" content="{site}/assets/og/narrative.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -421,10 +431,10 @@ def render_metaphors(data, partials, site):
 {partials["topbar"]}
 {partials["nav"]}
 <main class="wrap" style="padding-top:32px">
-  <p class="kicker"><b>Narrative map.</b> Metaphor index</p>
+  <p class="kicker"><b>Voices.</b> The frames</p>
   <h1>The frames, <em>and who reached for them first.</em></h1>
-  <p class="lede" style="max-width:62ch">A metaphor is a figurative frame for the network or a subnet: a brain, a market, a language, a Bitcoin. Each one below is dated to its earliest sourced use and followed through every narrator who picked it up. Active means used since dynamic TAO.</p>
-  <div class="stats"><div><b>{len(data["metaphors"])}</b><span>metaphors</span></div><div><b>{shared}</b><span>shared by two or more</span></div><div><b>{active}</b><span>still active</span></div></div>
+  <p class="lede" style="max-width:62ch">A frame is a figurative way of saying what the network or a subnet is: a brain, a market, a language, a Bitcoin. Each one below is dated to its earliest sourced use and followed through every voice that picked it up. Active means used since dynamic TAO.</p>
+  <div class="stats"><div><b>{len(data["metaphors"])}</b><span>frames</span></div><div><b>{shared}</b><span>shared by two or more</span></div><div><b>{active}</b><span>still active</span></div></div>
   <div class="metgrid">{"".join(rows)}</div>
 </main>
 {partials["footer"]}
@@ -440,20 +450,20 @@ def subnet_block(data, netuid):
     about = [s for s in data["statements"] if s["about"] == f"subnet:{netuid}" and s["narrator"] not in {n["id"] for n in own}]
     if not own and not about:
         return ""
-    parts = ['<section class="narr-block" id="narrative"><div class="nb-head"><span class="mono">How they talk about it</span>'
-             '<a class="nb-link" href="/narrative/">The narrative map →</a></div>']
+    parts = ['<section class="narr-block" id="narrative"><div class="nb-head"><span class="mono">What they say</span>'
+             '<a class="nb-link" href="/narrative/">All the voices →</a></div>']
     for n in own:
         selfs = [s for s in data["statements"] if s["narrator"] == n["id"] and "subnet.self" in s["slots"]]
         nets = [s for s in data["statements"] if s["narrator"] == n["id"] and "subnet.network" in s["slots"]]
         fw = n["framework"]
-        parts.append(f'<h2 class="nb-h2">In their own frame</h2><p class="sm">{e(n["one_line"])} <a href="/narrative/{e(n["id"])}/">Full narrator page</a> · {n["statement_count"]} sourced statements.</p>')
+        parts.append(f'<h2 class="nb-h2">In their own frame</h2><p class="sm">{e(n["one_line"])} <a href="/narrative/{e(n["id"])}/">Their page in the map</a> · {n["statement_count"]} quotes on record.</p>')
         if fw.get("subnet.self"):
             parts.append(f'<div class="nb-col"><h3>Their subnet</h3><p>{e(fw["subnet.self"]["summary"])}</p>{"".join(quote_card(s, by_id, compact=True) for s in selfs[:3])}</div>')
         if fw.get("subnet.network"):
             parts.append(f'<div class="nb-col"><h3>The network</h3><p>{e(fw["subnet.network"]["summary"])}</p>{"".join(quote_card(s, by_id, compact=True) for s in nets[:3])}</div>')
         mets = [m for m in data["metaphors"] if any(u["narrator"] == n["id"] for u in m["users"])]
         if mets:
-            parts.append('<p class="nb-mets"><span class="mono">Metaphors</span> ' + " ".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets) + "</p>")
+            parts.append('<p class="nb-mets"><span class="mono">Frames</span> ' + " ".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets) + "</p>")
     if about:
         parts.append(f'<h2 class="nb-h2">What others say about it</h2>' + "".join(quote_card(s, by_id, show_narrator=True, compact=True) for s in about[:4]))
     parts.append("</section>")
@@ -482,13 +492,13 @@ SUBNET_BLOCK_CSS = """
 def home_block(data):
     """A section for the home page: the map in one paragraph, the narrators as a strip, three live metaphors."""
     persons = [n for n in data["narrators"] if n["kind"] != "subnet"][:8]
-    strip = "".join(f'<a class="nstrip" href="/narrative/{e(n["id"])}/"><b>{e(n["glyph"])}</b><span>{e(n["name"])}</span><small>{n["statement_count"]} statements</small></a>' for n in persons)
+    strip = "".join(f'<a class="nstrip" href="/narrative/{e(n["id"])}/"><b>{e(n["glyph"])}</b><span>{e(n["name"])}</span><small>{n["statement_count"]} quotes</small></a>' for n in persons)
     mets = data["metaphors"][:6]
     met_html = "".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])} <span class="n">{len(m["users"])}</span></a>' for m in mets)
     sm = data["summary"]
     return (f'<div class="nhome"><div class="nhome-strip">{strip}</div>'
-            f'<p class="sm">{sm["narrators"]} narrators, {sm["statements"]} sourced statements, {sm["metaphors"]} metaphors. Most shared frames: {met_html}</p>'
-            f'<p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Metaphor lineage</a><a href="/narrative/#view=framework">Narrator by narrator</a><a href="/narrative/method/">Method</a></p></div>')
+            f'<p class="sm">{sm["narrators"]} voices, {sm["statements"]} quotes on record, {sm["metaphors"]} frames. Most shared: {met_html}</p>'
+            f'<p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Frame lineage</a><a href="/narrative/#view=framework">Voice by voice</a><a href="/method/#the-map-what-it-records">Method</a></p></div>')
 
 
 # ---------------- OG cards
@@ -540,8 +550,8 @@ def render_og_narrator(n, data, out_path):
     mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
     mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
     sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "BITTENSOR NARRATIVE MAP", font=mono, fill=red)
-    d.text((70, 100), f"{KIND_LABEL[n['kind']].upper()}  ·  {n['statement_count']} SOURCED STATEMENTS  ·  {n['confidence']['verified']} VERIFIED", font=mono_s, fill=softer)
+    d.text((70, 60), "LEGIBLE  ·  VOICES", font=mono, fill=red)
+    d.text((70, 100), f"{KIND_LABEL[n['kind']].upper()}  ·  {n['statement_count']} QUOTES ON RECORD  ·  {n['confidence']['verified']} VERIFIED", font=mono_s, fill=softer)
     size = 72
     while size > 40 and d.textlength(n["name"], font=_font(["InterTight.ttf"], size)) > 1060:
         size -= 6
@@ -580,14 +590,14 @@ def render_og_default(data, out_path):
     mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
     mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
     sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "BITTENSOR NARRATIVE MAP", font=mono, fill=red)
+    d.text((70, 60), "LEGIBLE  ·  VOICES", font=mono, fill=red)
     big = _font(["InterTight.ttf"], 70)
     d.text((66, 110), "Who says what Bittensor is,", font=big, fill=ink)
     d.text((66, 186), "and when they started", font=big, fill=ink)
     d.text((66, 262), "saying it.", font=big, fill=red)
     sm = data["summary"]
     y = 380
-    for lab, v in (("narrators", sm["narrators"]), ("sourced statements", sm["statements"]), ("metaphors traced", sm["metaphors"])):
+    for lab, v in (("voices", sm["narrators"]), ("quotes on record", sm["statements"]), ("frames traced", sm["metaphors"])):
         d.text((70, y), f"{v:<6}{lab}", font=mono_s, fill=soft)
         y += 30
     x = 640
@@ -614,7 +624,7 @@ def coverage_report(data):
                     f'<td>{c["verified"]}</td><td>{c["probable"]}</td><td>{c["unverified"]}</td>'
                     f'<td>{e(", ".join(ERA_LABEL[x] for x in n["eras"]))}</td><td>{e(", ".join(n["media"]))}</td>'
                     f'<td>{e("; ".join((n["coverage"].get("gaps") or [])[:3]))}</td></tr>')
-    return ('<div class="table-wrap data-table"><table><thead><tr><th>Narrator</th><th>Kind</th><th>Statements</th><th>Verified</th><th>Probable</th><th>Unverified</th><th>Eras</th><th>Media</th><th>Largest gaps</th></tr></thead><tbody>'
+    return ('<div class="table-wrap data-table"><table><thead><tr><th>Voice</th><th>Kind</th><th>Quotes</th><th>Verified</th><th>Secondhand</th><th>Unconfirmed</th><th>Eras</th><th>Media</th><th>Largest gaps</th></tr></thead><tbody>'
             + "".join(rows) + "</tbody></table></div>")
 
 

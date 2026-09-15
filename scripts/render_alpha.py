@@ -36,7 +36,7 @@ def head(title, description, canonical, partials, site, extra_css=""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)} · Subnet Legibility Index</title>
+<title>{e(title)} · Legible</title>
 {partials.get("robots", "")}
 <meta name="description" content="{e(description)}">
 <link rel="canonical" href="{site}{canonical}">
