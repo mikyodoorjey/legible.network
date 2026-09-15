@@ -246,22 +246,34 @@ def _font(name, size):
     return ImageFont.load_default()
 
 
-def render_og(sub, out_path):
-    """1200 x 630 card: name, composite in its band color, four audience bars. Returns True on success."""
-    try:
-        from PIL import Image, ImageDraw
-    except ImportError:
-        return False
+def og_canvas(kicker):
+    """One card family for the whole site: header kicker, footer strip, shared palette and faces."""
+    from PIL import Image, ImageDraw
     P = LIGHT
     img = Image.new("RGB", (1200, 630), P["bg"])
     d = ImageDraw.Draw(img)
-    serif = _font(["InterTight.ttf"], 78)
-    serif_big = _font(["Silkscreen-Regular.ttf"], 150)
-    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
-    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
-    sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "SUBNET LEGIBILITY INDEX", font=mono, fill=P["teal"])
-    d.text((70, 100), f"SN {sub['netuid']}  ·  RANK {sub['rank']} BY EMISSION", font=mono_s, fill=P["softer"])
+    F = {"mono": _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22), "mono_s": _font(["IBMPlexMono-Regular.ttf"], 18),
+         "mono_xs": _font(["IBMPlexMono-Regular.ttf"], 14), "sans": _font(["IBMPlexSans.ttf"], 24), "pix": _font(["Silkscreen-Regular.ttf"], 20)}
+    d.text((70, 60), kicker, font=F["mono"], fill=P["teal"])
+    d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
+    d.text((70, 580), "LEGIBLE.NETWORK", font=F["pix"], fill=P["ink"])
+    d.text((1130 - d.textlength("Built by Mikyö Clark", font=F["sans"]), 578), "Built by Mikyö Clark", font=F["sans"], fill=P["soft"])
+    return img, d, F, P
+
+
+def _save(img, out_path):
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "PNG", optimize=True)
+    return True
+
+
+def render_og(sub, out_path):
+    """A subnet: name, legibility in its band colour, four audience bars."""
+    try:
+        img, d, F, P = og_canvas("LEGIBLE  ·  SUBNETS")
+    except ImportError:
+        return False
+    d.text((70, 100), f"SN {sub['netuid']}  ·  RANK {sub['rank']} BY EMISSION  ·  {sub['emission_pct']} OF THE BLOCK REWARD", font=F["mono_s"], fill=P["softer"])
     name = sub["name"]
     size = 78
     while size > 40 and d.textlength(name, font=_font(["InterTight.ttf"], size)) > 640:
@@ -269,54 +281,70 @@ def render_og(sub, out_path):
     d.text((66, 150), name, font=_font(["InterTight.ttf"], size), fill=P["ink"])
     comp = float(sub["composite"])
     col = P["bands"][band(comp)]
-    d.text((770, 120), f"{comp:.1f}", font=serif_big, fill=col)
-    d.text((780, 300), f"/ 5  ·  {BAND_WORD[band(comp)].upper()}", font=mono_s, fill=P["softer"])
+    d.text((770, 120), f"{comp:.1f}", font=_font(["Silkscreen-Regular.ttf"], 150), fill=col)
+    d.text((780, 300), f"/ 5  ·  LEGIBILITY  ·  {BAND_WORD[band(comp)].upper()}", font=F["mono_s"], fill=P["softer"])
     y = 360
     for a in AUD:
         v = float(sub["audiences"][a]["score"])
-        d.text((70, y), AUD_LABEL[a].split(" and ")[0].upper(), font=mono_s, fill=P["aud"][a])
+        d.text((70, y), AUD_LABEL[a].split(" and ")[0].upper(), font=F["mono_s"], fill=P["aud"][a])
         d.rectangle([260, y + 6, 1130, y + 16], fill=P["rule"])
         d.rectangle([260, y + 6, 260 + int(870 * v / 5), y + 16], fill=P["aud"][a])
-        d.text((1140 - d.textlength(f"{v:.1f}", font=mono_s), y - 2), f"{v:.1f}", font=mono_s, fill=P["ink"])
+        d.text((1140 - d.textlength(f"{v:.1f}", font=F["mono_s"]), y - 2), f"{v:.1f}", font=F["mono_s"], fill=P["ink"])
         y += 46
-    d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=P["ink"])
-    d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=P["soft"])
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG", optimize=True)
-    return True
+    return _save(img, out_path)
 
 
-def render_default_og(data, out_path):
+def render_index_og(data, out_path):
+    """The index page: the question, and the five most legible subnets."""
     try:
-        from PIL import Image, ImageDraw
+        img, d, F, P = og_canvas("LEGIBLE  ·  SUBNETS")
     except ImportError:
         return False
-    P = LIGHT
-    img = Image.new("RGB", (1200, 630), P["bg"])
-    d = ImageDraw.Draw(img)
-    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
-    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
-    sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "SUBNET LEGIBILITY INDEX", font=mono, fill=P["teal"])
-    d.text((66, 110), "Can a first-time reader", font=_font(["InterTight.ttf"], 74), fill=P["ink"])
-    d.text((66, 190), "understand this subnet", font=_font(["InterTight.ttf"], 74), fill=P["ink"])
-    d.text((66, 270), "in five minutes?", font=_font(["InterTight.ttf"], 74), fill=P["teal"])
+    big = _font(["InterTight.ttf"], 74)
+    d.text((66, 110), "Can a first-time reader", font=big, fill=P["ink"])
+    d.text((66, 190), "understand this subnet", font=big, fill=P["ink"])
+    d.text((66, 270), "in five minutes?", font=big, fill=P["teal"])
     top = sorted(data["subnets"], key=lambda s: -float(s["composite"]))[:5]
     y = 380
     for s in top:
-        d.text((70, y), f"SN{s['netuid']:<4} {s['name'][:28]}", font=mono_s, fill=P["soft"])
-        d.text((640, y), f"{float(s['composite']):.1f}", font=mono_s, fill=P["bands"][band(s["composite"])])
+        d.text((70, y), f"SN{s['netuid']:<4} {s['name'][:28]}", font=F["mono_s"], fill=P["soft"])
+        d.text((640, y), f"{float(s['composite']):.1f}", font=F["mono_s"], fill=P["bands"][band(s["composite"])])
         y += 30
-    d.text((760, 380), f"{len(data['subnets'])} subnets", font=mono_s, fill=P["softer"])
-    d.text((760, 410), f"snapshot {data.get('chain_snapshot', '')}", font=mono_s, fill=P["softer"])
-    d.text((760, 440), f"rubric v{data.get('rubric_version', '')}", font=mono_s, fill=P["softer"])
-    d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=P["ink"])
-    d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=P["soft"])
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG", optimize=True)
-    return True
+    d.text((760, 380), f"{len(data['subnets'])} subnets", font=F["mono_s"], fill=P["softer"])
+    d.text((760, 410), f"snapshot {data.get('chain_snapshot', '')}", font=F["mono_s"], fill=P["softer"])
+    d.text((760, 440), f"scale v{data.get('rubric_version', '')}", font=F["mono_s"], fill=P["softer"])
+    return _save(img, out_path)
+
+
+def render_default_og(data, out_path):
+    """The site card: the argument, with the sealed-and-open grid."""
+    try:
+        img, d, F, P = og_canvas("LEGIBLE")
+    except ImportError:
+        return False
+    big = _font(["InterTight.ttf"], 62)
+    d.text((66, 108), "Ethereum made Bitcoin's", font=big, fill=P["ink"])
+    d.text((66, 176), "money programmable.", font=big, fill=P["ink"])
+    d.text((66, 244), "Bittensor makes the", font=big, fill=P["ink"])
+    d.text((66, 312), "mining programmable.", font=big, fill=P["teal"])
+    # the grid, across the lower band: three networks, two rows, sealed or open
+    x0, y0, cw, rh, gap = 210, 426, 290, 44, 12
+    heads = ["Bitcoin", "Ethereum", "Bittensor"]
+    rows = [("The money", ["sealed", "open", "same as bitcoin"]), ("The mining", ["sealed", "sealed", "open"])]
+    for j, h in enumerate(heads):
+        d.text((x0 + j * (cw + gap) + 12, y0 - 24), h.upper(), font=F["mono_xs"], fill=P["ink"] if h == "Bittensor" else P["softer"])
+    for i, (lab, cells) in enumerate(rows):
+        y = y0 + i * (rh + gap)
+        d.text((70, y + rh / 2 - 8), lab.upper(), font=F["mono_xs"], fill=P["softer"])
+        for j, c in enumerate(cells):
+            x = x0 + j * (cw + gap)
+            if c == "open":
+                d.rectangle([x, y, x + cw, y + rh], outline=P["teal"], width=3)
+                d.text((x + 12, y + rh / 2 - 8), "OPEN", font=F["mono_xs"], fill=P["teal"])
+            else:
+                d.rectangle([x, y, x + cw, y + rh], fill=P["paper"], outline=P["rule"], width=2)
+                d.text((x + 12, y + rh / 2 - 8), c.upper(), font=F["mono_xs"], fill=P["softer"])
+    return _save(img, out_path)
 
 
 # ---------------- chart
@@ -394,6 +422,8 @@ def build_all(data, partials, site, write_if_changed, explainers=None, narrative
             changed.append(f"sn/{sub['netuid']}/")
     if render_default_og(data, OG_DIR / "default.png"):
         changed.append("assets/og/default.png")
+    if render_index_og(data, OG_DIR / "subnets.png"):
+        changed.append("assets/og/subnets.png")
     if og_ok is False:
         print("  Pillow missing or font error: subnet OG images skipped, default card used", file=__import__("sys").stderr)
     return changed, render_chart(data)

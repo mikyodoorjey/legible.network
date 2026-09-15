@@ -511,57 +511,15 @@ def home_block(data):
             f'<p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Frame lineage</a><a href="/narrative/#view=framework">Voice by voice</a><a href="/method/#the-map-what-it-records">Method</a></p></div>')
 
 
-# ---------------- OG cards
-def _font(name, size):
-    from PIL import ImageFont
-    for cand in ([name] if isinstance(name, str) else name):
-        p = FONTS / cand
-        if p.exists():
-            try:
-                f = ImageFont.truetype(str(p), size)
-                if cand.startswith("InterTight"):
-                    try:
-                        f.set_variation_by_axes([600])
-                    except Exception:
-                        pass
-                elif cand.startswith("IBMPlexSans"):
-                    try:
-                        f.set_variation_by_axes([100, 400])
-                    except Exception:
-                        pass
-                return f
-            except Exception:
-                continue
-    return ImageFont.load_default()
-
-
-def _wrap(d, text, font, width):
-    words, lines, cur = text.split(), [], ""
-    for w in words:
-        t = (cur + " " + w).strip()
-        if d.textlength(t, font=font) <= width:
-            cur = t
-        else:
-            lines.append(cur)
-            cur = w
-    if cur:
-        lines.append(cur)
-    return lines
-
-
+# ---------------- OG cards, in the site's one family
 def render_og_narrator(n, data, out_path):
     try:
-        from PIL import Image, ImageDraw
+        from render_subnets import og_canvas, _font, _save
+        img, d, F, P = og_canvas("LEGIBLE  ·  VOICES")
     except ImportError:
         return False
-    bg, ink, soft, softer, red, rule = (10, 10, 10), (242, 242, 242), (163, 166, 169), (116, 119, 122), (231, 38, 48), (52, 52, 52)
-    img = Image.new("RGB", (1200, 630), bg)
-    d = ImageDraw.Draw(img)
-    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
-    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
-    sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "LEGIBLE  ·  VOICES", font=mono, fill=red)
-    d.text((70, 100), f"{KIND_LABEL[n['kind']].upper()}  ·  {n['statement_count']} QUOTES ON RECORD  ·  {n['confidence']['verified']} VERIFIED", font=mono_s, fill=softer)
+    ink, soft, softer, rule = P["ink"], P["soft"], P["softer"], P["rule"]
+    d.text((70, 100), f"{KIND_LABEL[n['kind']].upper()}  ·  {n['statement_count']} QUOTES ON RECORD  ·  {n['confidence']['verified']} VERIFIED", font=F["mono_s"], fill=softer)
     size = 72
     while size > 40 and d.textlength(n["name"], font=_font(["InterTight.ttf"], size)) > 1060:
         size -= 6
@@ -571,58 +529,51 @@ def render_og_narrator(n, data, out_path):
     y = 250
     if q:
         qf = _font(["InterTight.ttf"], 34)
-        for ln in _wrap(d, "“" + q["quote"] + "”", qf, 1060)[:4]:
+        words, lines, cur = ("\u201c" + q["quote"] + "\u201d").split(), [], ""
+        for w in words:
+            t = (cur + " " + w).strip()
+            if d.textlength(t, font=qf) <= 1060:
+                cur = t
+            else:
+                lines.append(cur); cur = w
+        if cur:
+            lines.append(cur)
+        for ln in lines[:4]:
             d.text((70, y), ln, font=qf, fill=soft)
             y += 44
-        d.text((70, y + 10), f"{q['date_label'].upper()}  ·  {(q['source']['outlet'] or q['source']['host']).upper()[:60]}", font=mono_s, fill=softer)
+        d.text((70, y + 10), f"{q['date_label'].upper()}  ·  {(q['source']['outlet'] or q['source']['host']).upper()[:60]}", font=F["mono_s"], fill=softer)
     ex = 70
     for era in ERAS:
         on = era in n["eras"]
         d.rectangle([ex, 500, ex + 160, 512], fill=ink if on else rule)
-        d.text((ex, 520), ERA_LABEL[era].upper(), font=_font(["IBMPlexMono-Regular.ttf"], 14), fill=ink if on else softer)
+        d.text((ex, 520), ERA_LABEL[era].upper(), font=F["mono_xs"], fill=ink if on else softer)
         ex += 176
-    d.line([70, 566, 1130, 566], fill=rule, width=2)
-    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=ink)
-    d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=soft)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG", optimize=True)
-    return True
+    return _save(img, out_path)
 
 
 def render_og_default(data, out_path):
     try:
-        from PIL import Image, ImageDraw
+        from render_subnets import og_canvas, _font, _save
+        img, d, F, P = og_canvas("LEGIBLE  ·  VOICES")
     except ImportError:
         return False
-    bg, ink, soft, softer, red, rule = (10, 10, 10), (242, 242, 242), (163, 166, 169), (116, 119, 122), (231, 38, 48), (52, 52, 52)
-    img = Image.new("RGB", (1200, 630), bg)
-    d = ImageDraw.Draw(img)
-    mono = _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22)
-    mono_s = _font(["IBMPlexMono-Regular.ttf"], 18)
-    sans = _font(["IBMPlexSans.ttf"], 24)
-    d.text((70, 60), "LEGIBLE  ·  VOICES", font=mono, fill=red)
     big = _font(["InterTight.ttf"], 70)
-    d.text((66, 110), "Who says what Bittensor is,", font=big, fill=ink)
-    d.text((66, 186), "and when they started", font=big, fill=ink)
-    d.text((66, 262), "saying it.", font=big, fill=red)
+    d.text((66, 110), "Who says what Bittensor is,", font=big, fill=P["ink"])
+    d.text((66, 186), "and when they started", font=big, fill=P["ink"])
+    d.text((66, 262), "saying it.", font=big, fill=P["teal"])
     sm = data["summary"]
     y = 380
     for lab, v in (("voices", sm["narrators"]), ("quotes on record", sm["statements"]), ("frames traced", sm["metaphors"])):
-        d.text((70, y), f"{v:<6}{lab}", font=mono_s, fill=soft)
+        d.text((70, y), f"{v:<6}{lab}", font=F["mono_s"], fill=P["soft"])
         y += 30
     x = 640
     for n in [x for x in data["narrators"] if x["kind"] != "subnet"][:6]:
-        d.text((x, 380), n["glyph"], font=_font(["Silkscreen-Regular.ttf"], 22), fill=ink)
-        d.text((x, 410), n["name"][:18], font=_font(["IBMPlexMono-Regular.ttf"], 14), fill=softer)
+        d.text((x, 380), n["glyph"], font=_font(["Silkscreen-Regular.ttf"], 22), fill=P["ink"])
+        d.text((x, 410), n["name"][:18], font=F["mono_xs"], fill=P["softer"])
         x += 170
         if x > 1100:
             break
-    d.line([70, 566, 1130, 566], fill=rule, width=2)
-    d.text((70, 580), "LEGIBLE.NETWORK", font=_font(["Silkscreen-Regular.ttf"], 20), fill=ink)
-    d.text((1130 - d.textlength("Built by Mikyö Clark", font=sans), 578), "Built by Mikyö Clark", font=sans, fill=soft)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG", optimize=True)
-    return True
+    return _save(img, out_path)
 
 
 # ---------------- coverage report (for the method page)
