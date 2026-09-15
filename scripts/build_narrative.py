@@ -445,7 +445,6 @@ def render_metaphors(data, partials, site):
 <body>
 {partials["nav"]}
 <main class="wrap" style="padding-top:32px">
-  <p class="kicker"><b>Voices.</b> The frames</p>
   <h1>The frames, <em>and who reached for them first.</em></h1>
   <p class="lede" style="max-width:62ch">A frame is a figurative way of saying what the network or a subnet is: a brain, a market, a language, a Bitcoin. Each one below is dated to its earliest sourced use and followed through every voice that picked it up. Active means used since dynamic TAO.</p>
   <div class="stats"><div><b>{len(data["metaphors"])}</b><span>frames</span></div><div><b>{shared}</b><span>shared by two or more</span></div><div><b>{active}</b><span>still active</span></div></div>
@@ -506,7 +505,7 @@ def home_block(data):
     met_html = "".join(f'<a class="pill met" href="/narrative/frames/#{e(m["label"])}">{e(m["label"])} <span class="n">{len(m["users"])}</span></a>' for m in mets)
     sm = data["summary"]
     return (f'<div class="nhome"><div class="nhome-strip">{strip}</div>'
-            f'<p class="sm">{sm["narrators"]} voices, {sm["statements"]} quotes on record, {sm["metaphors"]} frames. Most shared: {met_html}</p>'
+
             f'<p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Frame lineage</a><a href="/narrative/#view=framework">Voice by voice</a><a href="/method/#the-map-what-it-records">Method</a></p></div>')
 
 

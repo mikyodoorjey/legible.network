@@ -49,17 +49,17 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .links{display:flex;gap:26px;align-items:center;font-size:15px}
 .links a{color:var(--soft);padding-bottom:2px;border-bottom:1px solid transparent}
 .links a:hover,.links a[aria-current]{color:var(--ink);text-decoration:none;border-bottom-color:var(--ink)}
-.links a.cta{color:var(--ink)}
+.links a.cta{color:var(--soft)}
 .brk::before,.brk::after{display:none}
 .btn{display:inline-block;font-size:14px;font-weight:500;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);border-radius:2px}
 .btn:hover{text-decoration:none;background:var(--ink);color:var(--bg)}
 .btn.red{background:var(--red);border-color:var(--red);color:#fff}
 .btn.red:hover{background:var(--red-deep);border-color:var(--red-deep);color:#fff}
 .tape{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
-footer.site{border-top:1px solid var(--rule);margin-top:96px;padding:28px 0 48px;color:var(--soft);font-size:13px}
-footer.site .wrap{display:flex;flex-direction:column;gap:6px}
+footer.site{border-top:1px solid var(--rule);margin-top:120px;padding:28px 0 56px;color:var(--soft);font-size:13px}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:6px 22px}
 footer.site .theme{color:var(--soft);text-decoration:underline;text-underline-offset:3px;padding:0;font-size:13px}
-footer.site a{color:var(--ink)}
+footer.site a{color:var(--soft)}footer.site a:hover{color:var(--ink)}
 
 /* words that are data: statuses, labels, units. Never bordered. */
 .badge{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;color:var(--soft)}

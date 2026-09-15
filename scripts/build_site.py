@@ -204,7 +204,6 @@ def doc_page(title, meta, sections, active, ctx, description, outdir=None):
 <main class="wrap doc">
   <nav class="toc" aria-label="Contents"><span class="mono">Contents</span></nav>
   <article class="prose">
-    <p class="kicker"><b>Legible.</b> Reference</p>
     <h1>{html.escape(title)}</h1>
     <div class="meta">{meta_pills}</div>
     {body}

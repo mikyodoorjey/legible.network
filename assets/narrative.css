@@ -95,13 +95,13 @@ a.ref:hover{color:var(--ink);text-decoration:underline}
 .met .users .mono{display:block;margin-bottom:6px}
 
 /* home strip */
-.nhome-strip{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 12px}
+.nhome-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0 24px;margin:28px 0 12px}
 .nstrip{display:flex;flex-direction:column;border-top:1px solid var(--rule);padding:12px 0;min-width:150px;color:var(--ink)}
 .nstrip:hover{text-decoration:none;border-top-color:var(--ink)}
 .nstrip b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--soft);font-weight:400}
 .nstrip span{font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:-.01em;margin-top:4px}
 .nstrip small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--softer);margin-top:2px}
-.nhome .demo{margin-top:16px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.nhome .demo{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap;font-size:15px}
 .nhome .demo a{color:var(--ink)}
 
 @media (max-width:900px){
