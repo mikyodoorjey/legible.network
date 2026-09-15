@@ -1,0 +1,1970 @@
+{
+  "narrator": {
+    "id": "joseph-jacks",
+    "name": "Joseph Jacks",
+    "aka": [
+      "JJ"
+    ],
+    "kind": "person",
+    "role": "Founder and General Partner, OSS Capital; co-founder and CEO, Latent Holdings",
+    "affiliation": "OSS Capital / Latent Holdings",
+    "active_from": "2023",
+    "handles": {
+      "x": "@JosephJacks_",
+      "linkedin": "josephjacks",
+      "blog": "josephjacks.com"
+    },
+    "subnets": [],
+    "one_line": "Commercial open source investor who bought TAO in early 2023, committed a dedicated $25M in January 2024, then became a builder through Latent Holdings (subnets 14 and 5) and co-hosted The TAO Pod, framing Bittensor as Bitcoin and Linux applied to AI and as a transformation of capitalism itself."
+  },
+  "statements": [
+    {
+      "id": "joseph-jacks-001",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "The AI founder I'm most inspired by ... over the last year is Jake Steeves (@const_reborn), father of Bittensor. ... Instead of easily joining or founding a closed and heavily VC-funded foundation model startup, Jake decided to commit to a different path… one that would change the course of his life and, over time, everyone else's forever.",
+      "context": "Opening of his first long blog post on Bittensor, posted the same day as a thread on X, introducing Jacob Steeves to his open source audience.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "relationship"
+      ],
+      "themes": [
+        "anti-VC AI",
+        "founder story"
+      ],
+      "metaphors": [
+        "father"
+      ],
+      "source": {
+        "url": "https://josephjacks.com/2024/01/12/bittensor-and-tao/",
+        "medium": "blog",
+        "title": "Bittensor and $TAO",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-002",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "a type of specialized blockchain engineered to scalably train and run AI models of all kinds, sizes, levels of sophistication and purpose… without censorship… without discrimination… and one of the fundamental aspects of this system would lie in how it incentivizes the production of better and better intelligences for the benefit of all species",
+      "context": "Describing what Steeves conceived in 2016, in the same blog post.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "positioning.category"
+      ],
+      "themes": [
+        "censorship resistance",
+        "incentive design",
+        "decentralised intelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://josephjacks.com/2024/01/12/bittensor-and-tao/",
+        "medium": "blog",
+        "title": "Bittensor and $TAO",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-003",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "A handful of very early believers like @BarrySilbert and some others invested in the project at the very early stages of its development — I personally invested in early 2023.",
+      "context": "Placing himself in the investor lineage of the project, in the same blog post.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "ownership",
+        "investor"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://josephjacks.com/2024/01/12/bittensor-and-tao/",
+        "medium": "blog",
+        "title": "Bittensor and $TAO",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-004",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "the mission they are on is deeply profound … create robust and incorruptible systems that enable open source and permissionless AI (and AGI + ASI + whatever other goal-post-moving acronyms materialize from here) in a way that truly does ensure equal opportunity and access to the best intelligences possible in all domains.",
+      "context": "Stating the mission as he reads it, in the same blog post.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "foundation.values"
+      ],
+      "themes": [
+        "permissionless entry",
+        "open source AI",
+        "equal access"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://josephjacks.com/2024/01/12/bittensor-and-tao/",
+        "medium": "blog",
+        "title": "Bittensor and $TAO",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-005",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "This last year brought on high levels of awareness and participation across a broad set of stakeholders, miners, developers, end users, speculators, analysts and researchers all working toward the same mission: make AI a sustainable common good.",
+      "context": "Naming the audiences of the network and the one line mission, in the X version of the post.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "audience"
+      ],
+      "themes": [
+        "commons",
+        "open source AI"
+      ],
+      "metaphors": [
+        "common good"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1745884808201302513",
+        "medium": "x",
+        "title": "The AI founder I'm most inspired by",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-006",
+      "date": "2024-01-12",
+      "date_precision": "day",
+      "quote": "I'm extremely excited about the future of this project and this is absolutely not investment advice, but you should go out and figure out how to acquire some $TAO. Then do yourself a favor and hold it forever.",
+      "context": "Closing line of the X thread, addressed to his followers.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "voice"
+      ],
+      "themes": [
+        "ownership",
+        "long term holding"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1745884808201302513",
+        "medium": "x",
+        "title": "The AI founder I'm most inspired by",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-007",
+      "date": "2024-01-22",
+      "date_precision": "day",
+      "quote": "OSS Capital is committing $25M to invest exclusively in the Bittensor ecosystem. We believe Bittensor represents the most vibrant community and network focused on accelerating decentralized and truly open AI for all.",
+      "context": "Announcement post on his blog and LinkedIn of a dedicated OSS Capital allocation to Bittensor.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "positioning.reason",
+        "messaging.proof"
+      ],
+      "themes": [
+        "investor",
+        "open source AI",
+        "community"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://josephjacks.com/2024/01/22/25-million-commitment-to-bittensor/",
+        "medium": "blog",
+        "title": "$25 Million Commitment to Bittensor",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-008",
+      "date": "2024-01-27",
+      "date_precision": "day",
+      "quote": "Bittensor is generating > $150M in revenue compensation for developers building AI services on the network. Growing exponentially. As a VC funded startup, it would be valued at > $15 Billion. Instead, it's a decentralized cap table for all. Trading at $2B~. Let it be known.",
+      "context": "Post on X comparing the network's emission spend with how a venture backed startup would be valued.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "positioning.against",
+        "language.term"
+      ],
+      "themes": [
+        "token economics",
+        "anti-VC AI",
+        "ownership"
+      ],
+      "metaphors": [
+        "cap table"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1751076985286369495",
+        "medium": "x",
+        "title": "Bittensor is generating > $150M in revenue",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-009",
+      "date": "2024-03-29",
+      "date_precision": "day",
+      "quote": "7,200 Bittensor $TAO tokens get emitted to the network every day until the first halving in September 2025. That's $4 million per day, $120 million per month and $1.5 billion annually. ... A whopping THIRD of these teams are earning millions of dollars every month… and the bar is still low given the nascency of Bittensor. Jump in. You're welcome.",
+      "context": "LinkedIn post pointing developers at the emission budget and the size of subnet teams.",
+      "about": "network",
+      "slots": [
+        "audience",
+        "messaging.proof",
+        "opportunity"
+      ],
+      "themes": [
+        "token economics",
+        "developer opportunity"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.linkedin.com/posts/josephjacks_7200-bittensor-tao-tokens-get-emitted-to-activity-7179489687084965888-Zx18",
+        "medium": "other",
+        "title": "7,200 Bittensor $TAO tokens get emitted to the network every day",
+        "outlet": "Joseph Jacks on LinkedIn",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-010",
+      "date": "2024-07-29",
+      "date_precision": "day",
+      "quote": "Bittensor was envisioned and founded before OpenAI.",
+      "context": "Quote post of a Jacob Steeves tweet, asserting the network's priority over the closed lab.",
+      "about": "network",
+      "slots": [
+        "positioning.against"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "founder story"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1817968311113760975",
+        "medium": "x",
+        "title": "Bittensor was envisioned and founded before OpenAI",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-011",
+      "date": "2024-08-31",
+      "date_precision": "day",
+      "quote": "The number (15+) of Bittensor-dedicated startups is growing exponentially 📈 … ! How many Bittensor competitors can remotely boast the same? Zero.",
+      "context": "Post on X listing fifteen subnet and tooling teams as evidence of ecosystem growth.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "ecosystem growth",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1829755367825555894",
+        "medium": "x",
+        "title": "The number (15+) of Bittensor-dedicated startups is growing exponentially",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-012",
+      "date": "2024-09-25",
+      "date_precision": "day",
+      "quote": "Pack it up folks. Bittensor is a scam. Looks too much like Bitcoin. 😬",
+      "context": "Sarcastic quote post replying to @defi_mochi, who had argued that half of circulating supply would hit the market within a year.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "positioning.against"
+      ],
+      "themes": [
+        "token economics",
+        "critics"
+      ],
+      "metaphors": [
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1838733222177632745",
+        "medium": "x",
+        "title": "Pack it up folks. Bittensor is a scam.",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-013",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "We invest in open source startups exclusively. We're not really a crypto or Web 3 or like blockchain investor.",
+      "context": "Answering Laura Shin's opening question about what OSS Capital is, on Unchained with Sami Kassab.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "open source",
+        "investor"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:02:46",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-014",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "I learned about BitTensor early last year, January, February timeframe. And initially was very skeptical of BitTenser, I think, as most kind of non-crypto, non-blockchain native people tend to be",
+      "context": "Asked on Unchained how OSS Capital came to the project; wording as rendered by the auto transcript.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "investor",
+        "skepticism"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:03:30",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-015",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "And so we actually think there's going to be a huge shift from the centralized AI, proprietary AI kind of closed companies to BitTensor really incentivizing this large commodity marketplace.",
+      "context": "Explaining the investment thesis on Unchained.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "positioning.category"
+      ],
+      "themes": [
+        "commodity markets",
+        "anti-closed AI"
+      ],
+      "metaphors": [
+        "commodity marketplace"
+      ],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:06:58",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-016",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "I think BitTensor is really, for the first time, kind of like putting a stake in the ground and saying, we should apply these same types of principles, Bitcoin with fiat currencies, Linux, with closed proprietary operating systems.",
+      "context": "On Unchained, drawing the precedent of Bitcoin and Linux for what Bittensor does to AI.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "positioning.reason"
+      ],
+      "themes": [
+        "open source",
+        "precedent"
+      ],
+      "metaphors": [
+        "linux",
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:16:24",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-017",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "You should not have to go and get a job at one of these big tech companies. You should not have to go and raise capital from a VC...you should not have to go and get someone's sign off and okay.",
+      "context": "On Unchained, describing what permissionless participation means for a builder.",
+      "about": "network",
+      "slots": [
+        "value.functional",
+        "foundation.values"
+      ],
+      "themes": [
+        "permissionless entry",
+        "anti-VC AI"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:17:35",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-018",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "What BitTensor is actually doing is inverting capitalism...get rewarded by this token, which is increasingly worth more as you have more activity contribution on the network...you're only producing open commodities.",
+      "context": "On Unchained, contrasting the network's model with a venture funded AI company.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "incentive design",
+        "ownership",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "capitalism"
+      ],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "00:20:53",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-019",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "I personally believe that all of these kind of fear-mongering concerns...are completely baseless...technology is amoral and apolitical...Where the risk comes from is how humans apply the technology.",
+      "context": "On Unchained, asked whether AI poses dangers to humanity.",
+      "about": "network",
+      "slots": [
+        "foundation.values",
+        "problem.cultural"
+      ],
+      "themes": [
+        "AI safety",
+        "regulation"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "01:10:11",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-020",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "they really want to do what's called regulatory capture...this is the most powerful and interesting kind of development that humans have ever kind of discovered...It's never been more important to create a platform...democratically.",
+      "context": "On Unchained, on what the large AI labs want from regulators and why that argues for an open platform.",
+      "about": "network",
+      "slots": [
+        "problem.institutional"
+      ],
+      "themes": [
+        "regulatory capture",
+        "anti-closed AI"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "01:12:06",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-021",
+      "date": "2024-10-01",
+      "date_precision": "day",
+      "quote": "From first principles about the amount of capital and talent that you could aggregate in a decentralized permissionless system, it vastly vastly outstrips all of the big internet companies combined.",
+      "context": "Closing argument on Unchained for why the network can compete with the largest AI companies.",
+      "about": "network",
+      "slots": [
+        "opportunity",
+        "positioning.reason"
+      ],
+      "themes": [
+        "talent aggregation",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+        "medium": "podcast",
+        "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+        "outlet": "Unchained with Laura Shin",
+        "timestamp": "01:17:48",
+        "archive_url": "",
+        "transcript": "auto"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-022",
+      "date": "2024-12-05",
+      "date_precision": "day",
+      "quote": "I own no Bitcoin, my only massive exposure to a proof-of-useful-work token is Bittensor $TAO which will get to $100K in 1/2 the time it took $BTC. But this is a happy day. Am immensely important milestone. Bitcoin is the MOTHER of Bittensor.",
+      "context": "Post on X on the day Bitcoin first crossed $100,000.",
+      "about": "network",
+      "slots": [
+        "relationship",
+        "positioning.category",
+        "voice"
+      ],
+      "themes": [
+        "bitcoin lineage",
+        "proof of useful work"
+      ],
+      "metaphors": [
+        "mother"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1864507868579549396",
+        "medium": "x",
+        "title": "Bitcoin is the MOTHER of Bittensor",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-023",
+      "date": "2025-01-27",
+      "date_precision": "day",
+      "quote": "Bittensor is showing us what the potentially perfect form of direct democracy (dd) could look like. ... My prediction is that Bittensor dTAO (dynamic TAO) will be the most interesting and potentially successful form of dd in human history.",
+      "context": "Thread on X pushing back on Marc Andreessen's dismissal of direct democracy on the Lex Fridman podcast, weeks before dTAO went live.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "foundation.vision"
+      ],
+      "themes": [
+        "governance",
+        "dTAO"
+      ],
+      "metaphors": [
+        "direct democracy"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1883677844825686197",
+        "medium": "x",
+        "title": "Bittensor is showing us what the potentially perfect form of direct democracy could look like",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-024",
+      "date": "2025-01-27",
+      "date_precision": "day",
+      "quote": "But instead of a single commodity on the network like SHA256 Hashes on Bitcoin, there's N commodities … ! Each commodity takes a slice of the network to express its \"incentive mechanism\" ..which is basically an arbitrarily complex program that specifies the boot-loader logic for a loss function that optimizes over a problem space.",
+      "context": "Same thread, explaining subnets to a general audience.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "language.term"
+      ],
+      "themes": [
+        "commodity markets",
+        "incentive design",
+        "subnets"
+      ],
+      "metaphors": [
+        "boot-loader"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1883677844825686197",
+        "medium": "x",
+        "title": "Bittensor is showing us what the potentially perfect form of direct democracy could look like",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "revolution"
+    },
+    {
+      "id": "joseph-jacks-025",
+      "date": "2025-02-08",
+      "date_precision": "day",
+      "quote": "Bittensor $TAO is the only borderless incentive layer for accelerating the continuously improving production of open source AI on many dimensions. This layer has already surpassed critical mass adoption by builders. It still lags cutting edge centralized open source efforts — but it will surpass those over the coming years just as open always does with closed when properly applied.",
+      "context": "Long post on X a few days before the dTAO upgrade, restating his thesis.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "positioning.category",
+        "positioning.against"
+      ],
+      "themes": [
+        "open source AI",
+        "incentive design",
+        "open beats closed"
+      ],
+      "metaphors": [
+        "incentive layer"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1888291229206770092",
+        "medium": "x",
+        "title": "Bittensor $TAO is the only borderless incentive layer",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-026",
+      "date": "2025-02-08",
+      "date_precision": "day",
+      "quote": "Bittensor uses the exact same architectural principles to enable anyone to express an incentive mechanism and unlock latent talent toward a common objective function: proof of useful utility work, directly undergirding the applications that are redefining the future of computing.",
+      "context": "Same post, after comparing Bittensor's design with Bitcoin's SHA-256 commodity production.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "language.term"
+      ],
+      "themes": [
+        "proof of useful work",
+        "bitcoin lineage",
+        "incentive design"
+      ],
+      "metaphors": [
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1888291229206770092",
+        "medium": "x",
+        "title": "Bittensor $TAO is the only borderless incentive layer",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-027",
+      "date": "2025-02-14",
+      "date_precision": "day",
+      "quote": "By example, on the first few moments of the dTAO merge a few hours ago, many subnets were trading at $10-20 billion FDVs… bringing the \"total synthetic\" FDV of Bittensor itself to well over $100B.",
+      "context": "Post on X hours after dynamic TAO went live, explaining alpha token supply and valuation.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "language.term"
+      ],
+      "themes": [
+        "dTAO",
+        "token economics",
+        "alpha tokens"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1890203898369175737",
+        "medium": "x",
+        "title": "Alpha tokens on Bittensor have 21m finite supply",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-028",
+      "date": "2025-04-03",
+      "date_precision": "day",
+      "quote": "I have changed my mind about Bittensor subnet owner teams mining their own network. They should. If the incentive mechanism is rigorously well designed to produce an infinitely improving commodity - and heavily resistant to exploitation.",
+      "context": "Post on X reversing an earlier position on subnet owners mining their own subnets, addressed to subnet teams.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "subnet economics",
+        "reversal",
+        "alpha tokens"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1907888262620000530",
+        "medium": "x",
+        "title": "I have changed my mind about Bittensor subnet owner teams mining their own network",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-029",
+      "date": "2025-04-03",
+      "date_precision": "day",
+      "quote": "Focus on the beauty and fundamental advantage of Bittensor: Permissionless extrinsic ($TAO and corresponding alpha) incentives for producing continuously improving N dimensional digital commodities. The entire point is to create a sustainable \"bootstrapped\" activation energy for teams anywhere to create asymmetrical contributions without the need to get ANYONE's permission for anything... especially a VC.",
+      "context": "Same post, advising subnet teams against raising venture capital.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "positioning.against",
+        "value.functional"
+      ],
+      "themes": [
+        "permissionless entry",
+        "anti-VC AI",
+        "commodity markets"
+      ],
+      "metaphors": [
+        "activation energy"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1907888262620000530",
+        "medium": "x",
+        "title": "I have changed my mind about Bittensor subnet owner teams mining their own network",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-030",
+      "date": "2025-04-10",
+      "date_precision": "day",
+      "quote": "Chutes (sn64) is (currently) the top ranked #1 subnet on Bittensor with a $50M~ valuation. If Chutes were a startup, 100% of VCs would price it at a valuation somewhere between 10-20X higher.",
+      "context": "Post on X about subnet 64 after dTAO price discovery.",
+      "about": "subnet:64",
+      "slots": [
+        "messaging.proof",
+        "positioning.against"
+      ],
+      "themes": [
+        "subnet valuation",
+        "anti-VC AI"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1910382082393858098",
+        "medium": "x",
+        "title": "Chutes (sn64) is the top ranked #1 subnet on Bittensor",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-031",
+      "date": "2025-04-22",
+      "date_precision": "day",
+      "quote": "What is @TAOHash? The first and leading subnet for decentralizing PoW (proof-of-work) mining hashrate, rental and exchange. ... Bittensor itself was created after being heavily inspired by the original incentive mechanism (rewarding SHA-256 hashrate).",
+      "context": "Announcing that his company Latent Holdings had acquired subnet 14 and would launch TAOHash on it.",
+      "about": "subnet:14",
+      "slots": [
+        "relationship",
+        "positioning.category"
+      ],
+      "themes": [
+        "builder",
+        "bitcoin lineage",
+        "hashrate"
+      ],
+      "metaphors": [
+        "bitcoin"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1914706126249320860",
+        "medium": "x",
+        "title": "Announcing @TAOHash, Bittensor Subnet 14",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-032",
+      "date": "2025-04-25",
+      "date_precision": "day",
+      "quote": "Bittensor Subnet 3 (@tplr_ai) and the overall Bittensor network itself solves this … Scam Altcoin can kiss his paternalistic god mode ambitions goodbye.",
+      "context": "Post on X setting Templar's decentralized training and the network against Sam Altman, whom he renames.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "voice"
+      ],
+      "themes": [
+        "anti-OpenAI",
+        "decentralised training"
+      ],
+      "metaphors": [
+        "god mode"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1915901726537978216",
+        "medium": "x",
+        "title": "Bittensor Subnet 3 and the overall Bittensor network itself solves this",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-033",
+      "date": "2025-05-04",
+      "date_precision": "day",
+      "quote": "Bittensor is to capitalism what Bitcoin is to fiat.",
+      "context": "Quoted by Yogita Khatri in The Block's newsletter on why investors are drawn to TAO.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "positioning.category"
+      ],
+      "themes": [
+        "capitalism",
+        "bitcoin lineage"
+      ],
+      "metaphors": [
+        "capitalism"
+      ],
+      "source": {
+        "url": "https://www.theblock.co/post/353065/bittensor-tao-token-crypto-investors",
+        "medium": "article",
+        "title": "The Funding: Why Bittensor (TAO) is drawing in crypto investors",
+        "outlet": "The Block",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-034",
+      "date": "2025-05-04",
+      "date_precision": "day",
+      "quote": "Bittensor has raised zero dollars from venture capital.",
+      "context": "Quoted in the same Block piece, contrasting the network with crypto AI projects that raised hundreds of millions.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "messaging.proof"
+      ],
+      "themes": [
+        "anti-VC AI",
+        "fair launch"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.theblock.co/post/353065/bittensor-tao-token-crypto-investors",
+        "medium": "article",
+        "title": "The Funding: Why Bittensor (TAO) is drawing in crypto investors",
+        "outlet": "The Block",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-035",
+      "date": "2025-05-08",
+      "date_precision": "day",
+      "quote": "Bitcoin transforms capital. Bittensor transforms capitalism.",
+      "context": "Standalone post on X, four days after The Block ran his longer version of the line.",
+      "about": "network",
+      "slots": [
+        "messaging.h1",
+        "positioning.category"
+      ],
+      "themes": [
+        "capitalism",
+        "bitcoin lineage"
+      ],
+      "metaphors": [
+        "capitalism"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1920544501988241454",
+        "medium": "x",
+        "title": "Bitcoin transforms capital. Bittensor transforms capitalism.",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-036",
+      "date": "2025-05-12",
+      "date_precision": "day",
+      "quote": "Bittensor has accomplished 100X more with ZERO venture funding vs. all other \"crypto AI\" networks combined... But the world doesn't know. Bittensor sucks at engaging the conventional way — papers, conferences, etc. That's going to change.",
+      "context": "Post on X announcing that Latent Holdings would publish papers on its subnet 14 incentive mechanism at ML venues.",
+      "about": "network",
+      "slots": [
+        "messaging.proof",
+        "voice",
+        "problem.market"
+      ],
+      "themes": [
+        "anti-VC AI",
+        "self-criticism",
+        "research"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1921941353614942369",
+        "medium": "x",
+        "title": "Bittensor has accomplished 100X more with ZERO venture funding",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-037",
+      "date": "2025-07-22",
+      "date_precision": "day",
+      "quote": "Bittensor TAO is the incentive for continuously improving, humanity-owned, decentralized, permissionless, open source, open weights, open data, digital machine intelligence commodities. Across all categories of capability, including all the way to SUPERINTELLIGENCE.",
+      "context": "Post on X about emissions ahead of the first halving, quoting his own post on Elon Musk's compute ambitions.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "messaging.h1"
+      ],
+      "themes": [
+        "open weights",
+        "commodity markets",
+        "superintelligence"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1947731515707895962",
+        "medium": "x",
+        "title": "7,200 TAO are emitted everyday until December 2025",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-038",
+      "date": "2025-07-25",
+      "date_precision": "day",
+      "quote": "Subnets are stocks for ideas until those ideas become reality.",
+      "context": "Co-hosting The TAO Pod with James Altucher; wording from the iHeart episode page, attributed there to Jacks.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "language.term"
+      ],
+      "themes": [
+        "subnets",
+        "alpha tokens"
+      ],
+      "metaphors": [
+        "stocks for ideas"
+      ],
+      "source": {
+        "url": "https://www.iheart.com/podcast/1333-the-tao-pod-286034115/episode/ep03-why-humanity-needs-permissionless-ai-287522130/",
+        "medium": "podcast",
+        "title": "EP03: Why Humanity Needs Permissionless AI Incentives Now: Bittensor's Revolution Against Control",
+        "outlet": "The TAO Pod",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-039",
+      "date": "2025-07-25",
+      "date_precision": "day",
+      "quote": "Incentives transcend currencies because it's a meta language.",
+      "context": "Same TAO Pod episode, on incentives as something above any single currency.",
+      "about": "network",
+      "slots": [
+        "language.term",
+        "positioning.category"
+      ],
+      "themes": [
+        "incentive design"
+      ],
+      "metaphors": [
+        "meta language"
+      ],
+      "source": {
+        "url": "https://www.iheart.com/podcast/1333-the-tao-pod-286034115/episode/ep03-why-humanity-needs-permissionless-ai-287522130/",
+        "medium": "podcast",
+        "title": "EP03: Why Humanity Needs Permissionless AI Incentives Now: Bittensor's Revolution Against Control",
+        "outlet": "The TAO Pod",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-040",
+      "date": "2025-07-25",
+      "date_precision": "day",
+      "quote": "Bittensor is a series of continuously learning reinforcement models economically incentivized and permissionless.",
+      "context": "Same TAO Pod episode, defining the network.",
+      "about": "network",
+      "slots": [
+        "foundation.mission",
+        "positioning.category"
+      ],
+      "themes": [
+        "reinforcement learning",
+        "permissionless entry"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.iheart.com/podcast/1333-the-tao-pod-286034115/episode/ep03-why-humanity-needs-permissionless-ai-287522130/",
+        "medium": "podcast",
+        "title": "EP03: Why Humanity Needs Permissionless AI Incentives Now: Bittensor's Revolution Against Control",
+        "outlet": "The TAO Pod",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "show-notes"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-041",
+      "date": "2025-08-04",
+      "date_precision": "day",
+      "quote": "An adaptation… 🧘‍♂️ Bittensor subnets will replace networks with markets. Humans are the networked species.",
+      "context": "Opening of a long post on X that rewrites Naval Ravikant's 2017 thread on blockchains replacing networks with markets, substituting Bittensor subnets.",
+      "about": "network",
+      "slots": [
+        "positioning.category",
+        "foundation.vision"
+      ],
+      "themes": [
+        "markets",
+        "governance"
+      ],
+      "metaphors": [
+        "networks to markets"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1952498989099802899",
+        "medium": "x",
+        "title": "Bittensor subnets will replace networks with markets",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-042",
+      "date": "2025-08-04",
+      "date_precision": "day",
+      "quote": "Bittensor subnets are a new invention that allows meritorious participants in an open network to govern without a ruler and without money. They are merit-based, tamper-proof, open, voting systems. ... Bittensor subnet-based market networks will replace existing networks. Slowly, then suddenly. In one thing, then in many things. Ultimately, the nation-state is just a network (of networks).",
+      "context": "Same post, the core claim and the closing lines.",
+      "about": "network",
+      "slots": [
+        "positioning.differentiator",
+        "value.functional",
+        "foundation.vision"
+      ],
+      "themes": [
+        "governance",
+        "merit",
+        "markets"
+      ],
+      "metaphors": [
+        "networks to markets"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1952498989099802899",
+        "medium": "x",
+        "title": "Bittensor subnets will replace networks with markets",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-043",
+      "date": "2025-08-16",
+      "date_precision": "day",
+      "quote": "There are no direct competitors to Bittensor itself, but there are many VC-funded competitors to many Bittensor subnets ... The common pattern we observe across all of these below is pre-mine token sales (unfair distribution of economics) to VCs and no live mainnet launches on any, after years of effort and > $300M in funding.",
+      "context": "Quote post on X replying to a project pitching itself as a Bittensor alternative.",
+      "about": "network",
+      "slots": [
+        "positioning.against",
+        "positioning.differentiator"
+      ],
+      "themes": [
+        "anti-VC AI",
+        "fair launch",
+        "competition"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1956529851063824743",
+        "medium": "x",
+        "title": "There are no direct competitors to Bittensor itself",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-044",
+      "date": "2025-08-26",
+      "date_precision": "day",
+      "quote": "I'm excited to collaborate with the first and largest pure-play public TAO treasury company.",
+      "context": "Quoted in the TAO Synergies press release naming him an advisor to its treasury strategy, filed with the SEC.",
+      "about": "network",
+      "slots": [
+        "relationship"
+      ],
+      "themes": [
+        "treasury companies",
+        "institutional adoption"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1571934/000110465925085770/tm2524680d1_ex99-1.htm",
+        "medium": "article",
+        "title": "TAO Synergies Welcomes Top Bittensor (TAO) Leader as Advisor for AI-Focused Crypto Treasury Strategy",
+        "outlet": "TAO Synergies press release via SEC EDGAR",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "secondary"
+      },
+      "confidence": "probable",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-045",
+      "date": "2025-08-31",
+      "date_precision": "day",
+      "quote": "Today, in 2025, Bittensor is akin to those early speed-of-light experiments: Clever but lossy, and very imperfect.",
+      "context": "Blog post comparing the history of measuring the speed of light with refining subnet incentive mechanisms.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "foundation.vision"
+      ],
+      "themes": [
+        "incentive design",
+        "self-criticism"
+      ],
+      "metaphors": [
+        "speed of light"
+      ],
+      "source": {
+        "url": "https://josephjacks.com/2025/08/31/measuring-the-speed-of-light-is-like-shaping-perfect-bittensor-subnet-incentive-mechanisms/",
+        "medium": "blog",
+        "title": "Measuring the speed of light is like shaping perfect Bittensor subnet incentive mechanisms",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-046",
+      "date": "2025-08-31",
+      "date_precision": "day",
+      "quote": "Subnet 62 (Ridges) achieved 80% on SWE-Bench in under 45 days with minimal capital, showing Bittensor incentives unlocking efficiencies orders of magnitude beyond centralized incumbents.",
+      "context": "Same blog post, offered as evidence that the incentives already work.",
+      "about": "subnet:62",
+      "slots": [
+        "messaging.proof"
+      ],
+      "themes": [
+        "subnet results",
+        "efficiency"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://josephjacks.com/2025/08/31/measuring-the-speed-of-light-is-like-shaping-perfect-bittensor-subnet-incentive-mechanisms/",
+        "medium": "blog",
+        "title": "Measuring the speed of light is like shaping perfect Bittensor subnet incentive mechanisms",
+        "outlet": "Joseph Jacks' Personal Blog",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-047",
+      "date": "2025-10-14",
+      "date_precision": "day",
+      "quote": "The same dynamic will occur with every Bittensor halving (first one occurring next month!). Inverse ~ Jevons: More digital scarcity will create more incentive consumption.",
+      "context": "Quote post on X of a chart showing Bitcoin hashrate rising after its halving.",
+      "about": "network",
+      "slots": [
+        "opportunity"
+      ],
+      "themes": [
+        "halving",
+        "token economics",
+        "bitcoin lineage"
+      ],
+      "metaphors": [
+        "jevons"
+      ],
+      "source": {
+        "url": "https://x.com/JosephJacks_/status/1978129734589382684",
+        "medium": "x",
+        "title": "The same dynamic will occur with every Bittensor halving",
+        "outlet": "@JosephJacks_ on X",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    },
+    {
+      "id": "joseph-jacks-048",
+      "date": "2026-01-11",
+      "date_precision": "day",
+      "quote": "Jacob Steeves. The man. The myth. The legend.",
+      "context": "LinkedIn post sharing a YouTube video titled About Bittensor.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "relationship"
+      ],
+      "themes": [
+        "founder story"
+      ],
+      "metaphors": [],
+      "source": {
+        "url": "https://www.linkedin.com/posts/josephjacks_about-bittensor-activity-7416216191901323265-NoaV",
+        "medium": "other",
+        "title": "About Bittensor",
+        "outlet": "Joseph Jacks on LinkedIn",
+        "timestamp": "",
+        "archive_url": "",
+        "transcript": "primary"
+      },
+      "confidence": "verified",
+      "era": "dtao"
+    }
+  ],
+  "appearances": [
+    {
+      "date": "2024-10-01",
+      "title": "Could Bittensor End Up Being the Only Crypto/AI Project That Matters? (Ep. 712)",
+      "outlet": "Unchained with Laura Shin",
+      "url": "https://podscripts.co/podcasts/unchained/could-bittensor-end-up-being-the-only-cryptoai-project-that-matters-ep-712",
+      "medium": "podcast",
+      "note": "With Sami Kassab; OSS Capital thesis, subnets, Polkadot SDK, EVM, competing with big labs, AI risk. Auto transcript on podscripts; art19 page returned 404."
+    },
+    {
+      "date": "2024-11-13",
+      "title": "Crypto Mixer ft. Bittensor by OSS Capital",
+      "outlet": "OSS Capital meetup, Bangalore",
+      "url": "https://www.linkedin.com/posts/josephjacks_crypto-mixer-ft-bittensor-by-oss-capital-activity-7260329260605689857-bQuM",
+      "medium": "talk",
+      "note": "In-person talk on open source decentralized and incentivized AI; no recording or transcript found."
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Joseph Jacks | Accelerating an Open Future | Bittensor x Google x Dippy Open-Source AI Summit",
+      "outlet": "YouTube",
+      "url": "https://www.youtube.com/watch?v=lFlvipR6ZdM",
+      "medium": "youtube",
+      "note": "Conference talk; date from search listing; YouTube page returned no description or transcript."
+    },
+    {
+      "date": "2025-07-25",
+      "title": "EP03: Why Humanity Needs Permissionless AI Incentives Now: Bittensor's Revolution Against Control",
+      "outlet": "The TAO Pod",
+      "url": "https://www.iheart.com/podcast/1333-the-tao-pod-286034115/episode/ep03-why-humanity-needs-permissionless-ai-287522130/",
+      "medium": "podcast",
+      "note": "Co-hosted with James Altucher; subnets as stocks for ideas, incentivism, Bittensor as a neural network, Metcalfe and Reed's law. Episode page carries show notes and attributed quotes, no full transcript reached."
+    },
+    {
+      "date": "2025-08-29",
+      "title": "EP06: Why Bittensor Will Outpace Bitcoin and VC Funding",
+      "outlet": "The TAO Pod",
+      "url": "https://www.youtube.com/watch?v=UA4QqAHzCbk",
+      "medium": "youtube",
+      "note": "Co-hosted with James Altucher; no transcript reached."
+    },
+    {
+      "date": "2025-09-08",
+      "title": "EP07: How Bittensor Transcends Incentives to Revolutionize Venture Capital",
+      "outlet": "The TAO Pod",
+      "url": "https://www.listennotes.com/podcasts/the-tao-pod-james-altucher-joseph-jacks-PxcEyeQLzdl/",
+      "medium": "podcast",
+      "note": "Co-hosted; description only."
+    },
+    {
+      "date": "2025-12-17",
+      "title": "EP13: TAO's Philosophical Depth: Bittensor Digital Capitalism vs Bitcoin Evolution",
+      "outlet": "The TAO Pod",
+      "url": "https://podcasts.apple.com/us/podcast/the-tao-pod/id1826606143",
+      "medium": "podcast",
+      "note": "Co-hosted; description frames Bittensor as digital capitalism and Bitcoin as digital capital; no transcript reached."
+    },
+    {
+      "date": "2026-02-24",
+      "title": "EP14: Quantum Biology Meets Bittensor: Engineering Life & AI Compute",
+      "outlet": "The TAO Pod",
+      "url": "https://podcasts.apple.com/us/podcast/the-tao-pod/id1826606143",
+      "medium": "podcast",
+      "note": "Last Season 1 episode; the Season 2 opener (2026-08-08) states Jacks is no longer part of the show. Description only."
+    }
+  ],
+  "metaphors": [
+    {
+      "label": "father",
+      "wording": "Jake Steeves, father of Bittensor",
+      "first_statement": "joseph-jacks-001",
+      "origin": "unknown",
+      "lineage_notes": "Common community honorific for Steeves; Jacks uses it in his first long post."
+    },
+    {
+      "label": "common good",
+      "wording": "make AI a sustainable common good",
+      "first_statement": "joseph-jacks-005",
+      "origin": "unknown",
+      "lineage_notes": ""
+    },
+    {
+      "label": "cap table",
+      "wording": "a decentralized cap table for all",
+      "first_statement": "joseph-jacks-008",
+      "origin": "introduced",
+      "lineage_notes": "Investor framing; not seen in other narrator files reviewed."
+    },
+    {
+      "label": "commodity marketplace",
+      "wording": "incentivizing this large commodity marketplace",
+      "first_statement": "joseph-jacks-015",
+      "origin": "reused",
+      "lineage_notes": "Commodity market framing comes from Jacob Steeves and Opentensor materials; see data/narrative/raw/jacob-steeves.json."
+    },
+    {
+      "label": "linux",
+      "wording": "Bitcoin with fiat currencies, Linux, with closed proprietary operating systems",
+      "first_statement": "joseph-jacks-016",
+      "origin": "reused",
+      "lineage_notes": "Linux comparison is widespread in Bittensor talk; Jacks pairs it with Bitcoin as a two-part precedent."
+    },
+    {
+      "label": "bitcoin",
+      "wording": "Bitcoin is the MOTHER of Bittensor",
+      "first_statement": "joseph-jacks-012",
+      "origin": "reused",
+      "lineage_notes": "Bitcoin-for-AI framing originates with Steeves; Jacks adds the MOTHER wording (joseph-jacks-022) and 'the exact same architectural principles' (joseph-jacks-026)."
+    },
+    {
+      "label": "mother",
+      "wording": "Bitcoin is the MOTHER of Bittensor",
+      "first_statement": "joseph-jacks-022",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "capitalism",
+      "wording": "inverting capitalism; Bittensor is to capitalism what Bitcoin is to fiat; Bitcoin transforms capital. Bittensor transforms capitalism.",
+      "first_statement": "joseph-jacks-018",
+      "origin": "introduced",
+      "lineage_notes": "Earliest instance is the Unchained interview (joseph-jacks-018); the aphorism form appears in The Block (joseph-jacks-033) and on X (joseph-jacks-035). The TAO Pod EP13 description later calls it 'digital capitalism'."
+    },
+    {
+      "label": "direct democracy",
+      "wording": "the potentially perfect form of direct democracy",
+      "first_statement": "joseph-jacks-023",
+      "origin": "introduced",
+      "lineage_notes": "Framed as a reply to Marc Andreessen on Lex Fridman."
+    },
+    {
+      "label": "boot-loader",
+      "wording": "the boot-loader logic for a loss function that optimizes over a problem space",
+      "first_statement": "joseph-jacks-024",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "incentive layer",
+      "wording": "the only borderless incentive layer for accelerating the continuously improving production of open source AI",
+      "first_statement": "joseph-jacks-025",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "activation energy",
+      "wording": "a sustainable \"bootstrapped\" activation energy for teams anywhere",
+      "first_statement": "joseph-jacks-029",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "god mode",
+      "wording": "Scam Altcoin can kiss his paternalistic god mode ambitions goodbye",
+      "first_statement": "joseph-jacks-032",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "stocks for ideas",
+      "wording": "Subnets are stocks for ideas until those ideas become reality",
+      "first_statement": "joseph-jacks-038",
+      "origin": "introduced",
+      "lineage_notes": "Attributed to Jacks on the iHeart TAO Pod page; probable."
+    },
+    {
+      "label": "meta language",
+      "wording": "Incentives transcend currencies because it's a meta language",
+      "first_statement": "joseph-jacks-039",
+      "origin": "introduced",
+      "lineage_notes": "Show notes call the idea 'incentivism'."
+    },
+    {
+      "label": "networks to markets",
+      "wording": "Bittensor subnets will replace networks with markets",
+      "first_statement": "joseph-jacks-041",
+      "origin": "reused",
+      "lineage_notes": "Jacks labels the post 'An adaptation'; it rewrites Naval Ravikant's 2017 thread 'Blockchains will replace networks with markets' with subnets in place of blockchains. Naval's original was not fetched this session."
+    },
+    {
+      "label": "speed of light",
+      "wording": "Bittensor is akin to those early speed-of-light experiments: Clever but lossy, and very imperfect",
+      "first_statement": "joseph-jacks-045",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "jevons",
+      "wording": "Inverse ~ Jevons: More digital scarcity will create more incentive consumption",
+      "first_statement": "joseph-jacks-047",
+      "origin": "reused",
+      "lineage_notes": "Borrows the economics term Jevons paradox."
+    }
+  ],
+  "framework": {
+    "foundation.mission": {
+      "summary": "Bittensor exists to incentivize the production of ever better, open, permissionless intelligence that anyone can access, with AI as a sustainable common good rather than a closed product.",
+      "statements": [
+        "joseph-jacks-002",
+        "joseph-jacks-004",
+        "joseph-jacks-005",
+        "joseph-jacks-037",
+        "joseph-jacks-040"
+      ]
+    },
+    "foundation.vision": {
+      "summary": "He sees subnets as merit-based market networks that replace networks run by kings, corporations and mobs, a workable direct democracy with capitalism embedded, and a system whose incentives will tighten toward mathematical precision over time.",
+      "statements": [
+        "joseph-jacks-023",
+        "joseph-jacks-041",
+        "joseph-jacks-042",
+        "joseph-jacks-045"
+      ]
+    },
+    "foundation.values": {
+      "summary": "Permissionless participation without a job at big tech, a VC or anyone's sign off; equal access; technology treated as amoral, with the risk located in human application.",
+      "statements": [
+        "joseph-jacks-004",
+        "joseph-jacks-017",
+        "joseph-jacks-019"
+      ]
+    },
+    "problem.cultural": {
+      "summary": "AI fear-mongering is baseless in his telling; the real danger is how humans and institutions apply the technology.",
+      "statements": [
+        "joseph-jacks-019"
+      ]
+    },
+    "problem.market": {
+      "summary": "The network's builders outperform venture funded rivals but fail to engage the conventional research world, so the world does not know.",
+      "statements": [
+        "joseph-jacks-036"
+      ]
+    },
+    "problem.institutional": {
+      "summary": "Large labs seek regulatory capture over the most powerful technology humans have discovered, which makes a democratically built platform urgent.",
+      "statements": [
+        "joseph-jacks-020",
+        "joseph-jacks-032"
+      ]
+    },
+    "opportunity": {
+      "summary": "A permissionless system can aggregate more capital and talent than all big internet companies combined; emission budgets, halvings and subnet revenue are cited as tailwinds.",
+      "statements": [
+        "joseph-jacks-021",
+        "joseph-jacks-009",
+        "joseph-jacks-047"
+      ]
+    },
+    "audience": {
+      "summary": "He talks to developers and subnet teams (jump in, mine your own subnet, do not raise VC) and to holders (acquire TAO and hold it forever).",
+      "statements": [
+        "joseph-jacks-005",
+        "joseph-jacks-006",
+        "joseph-jacks-009",
+        "joseph-jacks-028"
+      ]
+    },
+    "positioning.category": {
+      "summary": "Bittensor is Bitcoin and Linux applied to AI: a commodity marketplace, an incentive layer, a form of direct democracy, and a transformation of capitalism the way Bitcoin transformed capital.",
+      "statements": [
+        "joseph-jacks-016",
+        "joseph-jacks-015",
+        "joseph-jacks-025",
+        "joseph-jacks-023",
+        "joseph-jacks-033",
+        "joseph-jacks-035",
+        "joseph-jacks-022",
+        "joseph-jacks-038"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "N commodities instead of one, permissionless extrinsic incentives, no venture funding and a fairer ownership distribution than early Bitcoin; it inverts the AI business model by rewarding open outputs.",
+      "statements": [
+        "joseph-jacks-018",
+        "joseph-jacks-024",
+        "joseph-jacks-026",
+        "joseph-jacks-029",
+        "joseph-jacks-034",
+        "joseph-jacks-042",
+        "joseph-jacks-011"
+      ]
+    },
+    "positioning.reason": {
+      "summary": "Open beat closed before (Linux, Bitcoin), the community is full of builders, and OSS Capital has committed its own capital for ten plus years.",
+      "statements": [
+        "joseph-jacks-016",
+        "joseph-jacks-007",
+        "joseph-jacks-021"
+      ]
+    },
+    "positioning.against": {
+      "summary": "Set against closed, VC-funded foundation model startups and OpenAI (which the network predates), against VC-funded imitators with pre-mine sales and no mainnet, against critics of emissions, and against regulatory capture by big labs.",
+      "statements": [
+        "joseph-jacks-001",
+        "joseph-jacks-010",
+        "joseph-jacks-015",
+        "joseph-jacks-008",
+        "joseph-jacks-012",
+        "joseph-jacks-032",
+        "joseph-jacks-043",
+        "joseph-jacks-029",
+        "joseph-jacks-025"
+      ]
+    },
+    "value.functional": {
+      "summary": "Builders get paid in TAO and alpha for useful work without permission, a job, or a fundraise; subnets let merit govern without a ruler.",
+      "statements": [
+        "joseph-jacks-017",
+        "joseph-jacks-029",
+        "joseph-jacks-042"
+      ]
+    },
+    "messaging.h1": {
+      "summary": "The repeated line moves from 'make AI a sustainable common good' to 'the only borderless incentive layer' to the aphorism 'Bitcoin transforms capital. Bittensor transforms capitalism.'",
+      "statements": [
+        "joseph-jacks-005",
+        "joseph-jacks-025",
+        "joseph-jacks-033",
+        "joseph-jacks-035",
+        "joseph-jacks-037"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "Emission spend in dollars, counts of dedicated startups, subnet valuations versus startup comps (Chutes, Ridges), founder ownership under one percent, and zero venture dollars raised.",
+      "statements": [
+        "joseph-jacks-008",
+        "joseph-jacks-009",
+        "joseph-jacks-011",
+        "joseph-jacks-027",
+        "joseph-jacks-030",
+        "joseph-jacks-034",
+        "joseph-jacks-036",
+        "joseph-jacks-046",
+        "joseph-jacks-007"
+      ]
+    },
+    "voice": {
+      "summary": "Sarcastic toward critics, profane when rallying, willing to reverse himself in public and to call the network lossy and bad at outreach.",
+      "statements": [
+        "joseph-jacks-012",
+        "joseph-jacks-032",
+        "joseph-jacks-028",
+        "joseph-jacks-036",
+        "joseph-jacks-045",
+        "joseph-jacks-048",
+        "joseph-jacks-006"
+      ]
+    },
+    "relationship": {
+      "summary": "An open source investor, not a crypto investor, who bought early in 2023 after initial skepticism, committed a dedicated fund, then became a builder and steward through Latent Holdings and an advisor to a TAO treasury company.",
+      "statements": [
+        "joseph-jacks-003",
+        "joseph-jacks-007",
+        "joseph-jacks-013",
+        "joseph-jacks-014",
+        "joseph-jacks-022",
+        "joseph-jacks-031",
+        "joseph-jacks-044",
+        "joseph-jacks-048"
+      ]
+    },
+    "language.term": {
+      "summary": "He coins investor-flavored terms: decentralized cap table, proof of useful utility work, synthetic FDV, stocks for ideas, incentives as a meta language, and describes incentive mechanisms as boot-loader logic for a loss function.",
+      "statements": [
+        "joseph-jacks-008",
+        "joseph-jacks-024",
+        "joseph-jacks-026",
+        "joseph-jacks-027",
+        "joseph-jacks-038",
+        "joseph-jacks-039"
+      ]
+    }
+  },
+  "language": {
+    "words_used": [
+      "incentive mechanism",
+      "commodity",
+      "digital commodities",
+      "permissionless",
+      "proof-of-useful-work",
+      "alpha",
+      "dTAO",
+      "open source",
+      "open weights",
+      "humanity-owned",
+      "VC-funded",
+      "cap table",
+      "FDV",
+      "halving",
+      "treasury holdcos",
+      "capitalism"
+    ],
+    "words_avoided": [
+      "crypto investor or Web3 investor as self description",
+      "AGI as a serious term (goal-post-moving acronyms)",
+      "investment advice (explicitly disclaimed)"
+    ],
+    "coinages": [
+      {
+        "term": "decentralized cap table for all",
+        "meaning": "the network's emission-based ownership, contrasted with a startup cap table",
+        "statement": "joseph-jacks-008"
+      },
+      {
+        "term": "proof of useful utility work",
+        "meaning": "his name for the Bitcoin-style principle applied to any objective function",
+        "statement": "joseph-jacks-026"
+      },
+      {
+        "term": "total synthetic FDV",
+        "meaning": "the sum of alpha token valuations expressed in TAO",
+        "statement": "joseph-jacks-027"
+      },
+      {
+        "term": "stocks for ideas",
+        "meaning": "subnet alpha tokens as equity in an idea before it is real",
+        "statement": "joseph-jacks-038"
+      },
+      {
+        "term": "incentivism",
+        "meaning": "incentives as a meta language above currencies; the term appears in the EP03 show notes, not in a verified quote",
+        "statement": "joseph-jacks-039"
+      },
+      {
+        "term": "Scam Altcoin",
+        "meaning": "his renaming of Sam Altman",
+        "statement": "joseph-jacks-032"
+      }
+    ]
+  },
+  "genealogy": [
+    {
+      "era": "revolution",
+      "summary": "Jacks goes public in January 2024 with a founder tribute and a $25M commitment, framing Bittensor through Steeves' refusal of the closed, VC-funded path and the mission to make AI a sustainable common good [joseph-jacks-001] [joseph-jacks-007] [joseph-jacks-005]. On Unchained he sets the precedent as Bitcoin plus Linux and says the network is inverting capitalism [joseph-jacks-016] [joseph-jacks-018], and his proof is dollars: emission spend, startup counts, startup comps [joseph-jacks-008] [joseph-jacks-011]. By late January 2025 he is previewing dTAO as direct democracy [joseph-jacks-023].",
+      "dominant_metaphor": "linux",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "After the upgrade he speaks as a builder as much as an investor: Latent Holdings launches TAOHash on subnet 14 and he advises subnet teams to mine their own networks and refuse VC money [joseph-jacks-031] [joseph-jacks-028] [joseph-jacks-029]. The capitalism line hardens into an aphorism [joseph-jacks-033] [joseph-jacks-035], subnets become stocks for ideas and market networks replacing rulers [joseph-jacks-038] [joseph-jacks-041], VC-funded imitators become the foil [joseph-jacks-043], and he turns critical of the network's own outreach and precision [joseph-jacks-036] [joseph-jacks-045].",
+      "dominant_metaphor": "capitalism",
+      "shift": "From investor advocacy built on precedent and dollar proof to builder and steward voice, with the Bitcoin comparison compressed into slogans and new self-criticism."
+    },
+    {
+      "era": "current",
+      "summary": "No Bittensor statements from June 2026 onward were reached. His last found Bittensor item is a January 2026 LinkedIn tribute to Steeves [joseph-jacks-048]; his April 2026 post on Anthropic's Mythos argues for open weights without naming Bittensor, and the TAO Pod's August 2026 relaunch says he is no longer a co-host.",
+      "dominant_metaphor": "",
+      "shift": "Public Bittensor output thins; whether this is a step back or a search gap is unresolved."
+    }
+  ],
+  "relations": [
+    {
+      "to": "jacob-steeves",
+      "kind": "agrees",
+      "statement": "joseph-jacks-001",
+      "note": "Casts Steeves as father of Bittensor and the founder he most admires; later 'The man. The myth. The legend.'"
+    },
+    {
+      "to": "jacob-steeves",
+      "kind": "responds",
+      "statement": "joseph-jacks-010",
+      "note": "Quote posts Steeves to assert Bittensor predates OpenAI."
+    },
+    {
+      "to": "barry-silbert",
+      "kind": "agrees",
+      "statement": "joseph-jacks-003",
+      "note": "Names Silbert as an early believer alongside his own 2023 entry."
+    },
+    {
+      "to": "sami-kassab",
+      "kind": "agrees",
+      "statement": "joseph-jacks-015",
+      "note": "Co-guest and OSS Capital partner on the Unchained episode."
+    },
+    {
+      "to": "defi-mochi",
+      "kind": "argues",
+      "statement": "joseph-jacks-012",
+      "note": "Sarcastic reply to a critic of TAO emissions."
+    },
+    {
+      "to": "marc-andreessen",
+      "kind": "argues",
+      "statement": "joseph-jacks-023",
+      "note": "Defends direct democracy against Andreessen's remarks on Lex Fridman, using Bittensor as the example."
+    },
+    {
+      "to": "sam-altman",
+      "kind": "argues",
+      "statement": "joseph-jacks-032",
+      "note": "Renames Altman 'Scam Altcoin' and sets subnet 3 and the network against him."
+    },
+    {
+      "to": "naval-ravikant",
+      "kind": "borrows",
+      "statement": "joseph-jacks-041",
+      "note": "Adapts Naval's networks-to-markets thread to Bittensor subnets."
+    },
+    {
+      "to": "james-altucher",
+      "kind": "agrees",
+      "statement": "joseph-jacks-038",
+      "note": "Co-host of The TAO Pod through Season 1."
+    }
+  ],
+  "coverage": {
+    "searches_used": 40,
+    "fetches_used": 59,
+    "well_covered": [
+      "X posts 2024-01 to 2025-10 (23 verified via fxtwitter)",
+      "his own blog (three Bittensor posts, primary)",
+      "Unchained ep. 712 via podscripts auto transcript with timestamps",
+      "The Block May 2025 quotes",
+      "LinkedIn posts (dates decoded from activity ids)"
+    ],
+    "thin": [
+      "2023 (nakamoto and finney eras): no statements; his only 2023 trace is the retrospective 'I personally invested in early 2023'",
+      "current era (2026-06 onward): no statements found",
+      "podcast and talk transcripts: TAO Pod episodes and YouTube talks have no reachable transcript"
+    ],
+    "gaps": [
+      "No 2023 posts found: search engines surfaced no JosephJacks_ status from 2023 mentioning Bittensor; xcancel.com returned HTTP 451",
+      "No June to September 2026 Bittensor statements found across three targeted searches; April 2026 Mythos post (x.com/JosephJacks_/status/2041625567473365166) does not mention Bittensor",
+      "Bittensor x Google x Dippy Open-Source AI Summit talk (youtube.com/watch?v=lFlvipR6ZdM): YouTube returned only footer, no transcript",
+      "The TAO Pod episodes 1 to 14: only descriptions reached; EP03 quotes are probable from the iHeart page",
+      "TAO Synergies press release: only the first sentence of his quote was returned by the SEC exhibit fetch",
+      "Bankless, Empire, The Rollup, Real Vision, Bittensor Guru, Endgame, Tao Summit: no appearance by Jacks found in search",
+      "CoinDesk, Fortune, Decrypt, Blockworks: no direct quotes found; The Block is the only press quote",
+      "NUS Computer Science Club 'Linux of AI' video (youtube.com/watch?v=XRhTE9MtJpA): speaker not identified",
+      "Naval Ravikant's original thread not fetched to pin the lineage of the networks-to-markets adaptation"
+    ],
+    "unreachable": [
+      "https://art19.com/shows/late-confirmation/episodes/6fcbe99f-1590-46e8-af47-8f6f16371a47 (404)",
+      "https://xcancel.com/JosephJacks_ (451)",
+      "https://subnetedge.substack.com/p/james-altucher-and-jj-bittensor-the (404)",
+      "https://www.youtube.com/watch?v=lFlvipR6ZdM (no content returned)",
+      "https://www.youtube.com/watch?v=UA4QqAHzCbk (no content returned)",
+      "https://www.youtube.com/watch?v=m5k6qgc-cQI (no content returned)",
+      "https://www.youtube.com/watch?v=XRhTE9MtJpA (no content returned)"
+    ]
+  }
+}
