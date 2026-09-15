@@ -69,6 +69,16 @@
       "source": "/narrative/sn:n(\\d+)/",
       "destination": "/sn/:n/#says",
       "permanent": true
+    },
+    {
+      "source": "/narrative/metaphors",
+      "destination": "/narrative/frames/",
+      "permanent": true
+    },
+    {
+      "source": "/narrative/metaphors/",
+      "destination": "/narrative/frames/",
+      "permanent": true
     }
   ],
   "headers": [

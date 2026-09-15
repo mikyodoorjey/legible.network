@@ -51,6 +51,11 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
 .viz{min-width:0}
 .viz svg{width:100%;height:auto;display:block;font-family:var(--mono);font-size:11px}
 .viz .row-label{fill:var(--ink);font-family:var(--disp);font-weight:600;font-size:13px}
+.viz .lane{cursor:pointer}.viz .lane:hover .row-label,.viz .lane.on .row-label{fill:var(--tag)}
+.viz .row-page{fill:var(--softer);font-size:12px}.viz a:hover .row-page{fill:var(--ink)}
+.viz .band{cursor:pointer}.viz .band:hover{fill:var(--teal-soft)}.viz .band.on{fill:var(--tagbg)}
+#filters{display:flex;flex-direction:column;gap:8px;padding-top:2px}
+.detail details.more{margin-top:6px}.detail details.more summary{cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
 .viz .row-glyph{fill:var(--tag);font-family:var(--pix);font-size:10px;letter-spacing:.06em}
 .viz .era-lab{fill:var(--softer);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
 .viz .tick{fill:var(--softer)}
@@ -171,29 +176,33 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     <p><b>A voice</b> is a person, a foundation, or a subnet team that has said, in public, what Bittensor is. The map records only what they said themselves, on the record: a quote of at most sixty words, dated, with the page it came from. Nothing is paraphrased in a quote. The readings above the quotes are written from the quotes alone and name the quotes they rest on.</p>
     <p><b>The framework</b> is a brand strategy skeleton turned on the speaker. Not what Bittensor's brand is, but what this voice's Bittensor is: what it is for, what it fixes, who it is for, what it is against, what makes it different, what it is worth, what line they repeat, how they sound, and what they call things. <b>A frame</b> is the figurative way of saying what it is, a brain or a market or a Bitcoin, dated to its earliest sourced use and followed to everyone who picked it up.</p>
     <p><b>Confidence</b> is shown on every quote. Verified means the primary source was reached and the words are on it. Secondhand means a secondary source quotes them, or the primary exists but could not be read. Unconfirmed quotes are hidden unless you switch them on.</p>
-    <p class="links"><a href="/method/#the-map-what-it-records">Method and corrections</a> · <a href="/narrative/metaphors/">The frames</a> · <a href="/data/narrative.json">The data, CC BY 4.0</a> · <a href="/sn/">The subnets</a></p>
+    <p class="links"><a href="/method/#the-map-what-it-records">Method and corrections</a> · <a href="/narrative/frames/">The frames</a> · <a href="/data/narrative.json">The data, CC BY 4.0</a> · <a href="/sn/">The subnets</a></p>
   </div>
 </details>
 
 <div class="controls" id="controls">
   <div class="wrap">
     <div class="tools">
-      <input class="search" id="q" type="search" placeholder="Search quotes, contexts, frames, themes" autocomplete="off">
+      <input class="search" id="q" type="search" placeholder="Search the record" autocomplete="off">
       <div class="seg" id="views" role="group" aria-label="View">
-        <button data-view="timeline" class="on">Timeline</button>
+        <button data-view="timeline" class="on">Who said what, when</button>
         <button data-view="metaphors">Frames</button>
-        <button data-view="framework">Framework</button>
+        <button data-view="framework">Side by side</button>
         <button data-view="list">List</button>
       </div>
-    </div>
-    <div class="frow"><span class="flabel">Voices</span><span id="fNar"></span></div>
-    <div class="frow"><span class="flabel">Eras</span><span id="fEra"></span>
-      <select id="fSlot" aria-label="Framework slot"><option value="">Any slot</option></select>
-      <select id="fAbout" aria-label="About"><option value="">Network and subnets</option><option value="network">About the network</option><option value="subnet">About a subnet</option></select>
-      <button class="chip" data-toggle="unv">Include unconfirmed</button>
+      <button class="chip" data-toggle="filters" id="filtersBtn">Filter <span class="n" id="filterCount"></span></button>
       <span class="spacer"></span>
       <span class="summary" id="summary">Loading…</span>
       <button class="reset" id="reset">Reset</button>
+    </div>
+    <div id="filters" hidden>
+    <div class="frow"><span class="flabel">Voices</span><span id="fNar"></span></div>
+    <div class="frow"><span class="flabel">Eras</span><span id="fEra"></span></div>
+    <div class="frow"><span class="flabel">Slot</span>
+      <select id="fSlot" aria-label="Framework slot"><option value="">Any slot</option></select>
+      <select id="fAbout" aria-label="About"><option value="">Network and subnets</option><option value="network">About the network</option><option value="subnet">About a subnet</option></select>
+      <button class="chip" data-toggle="unv">Include unconfirmed</button>
+    </div>
     </div>
   </div>
 </div>
@@ -223,7 +232,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   let D = null, byN = {}, byS = {}, slotLabel = {}, eraLabel = {}, eraStart = {};
-  const state = {view:"timeline", n:new Set(), era:new Set(), slot:"", about:"", q:"", unv:false, allmet:false, sel:null, cell:null};
+  const state = {view:"timeline", n:new Set(), era:new Set(), slot:"", about:"", q:"", unv:false, allmet:false, sel:null, cell:null, filters:false};
   const ERA_ORDER = ["pre","nakamoto","finney","revolution","dtao","current"];
   const CONF_LABEL = {verified:"verified", probable:"secondhand", unverified:"unconfirmed"};
 
@@ -279,11 +288,12 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     const arch = src.archive_url ? ` · <a href="${esc(src.archive_url)}" target="_blank" rel="noopener">archive</a>` : "";
     const about = s.about.startsWith("subnet:") ? `<a class="pill" href="/sn/${esc(s.about.split(":")[1])}/">SN${esc(s.about.split(":")[1])}</a>` : "";
     const slots = s.slots.map(sl => `<button class="pill slot" data-slot="${esc(sl)}" title="Filter by this slot">${esc(slotLabel[sl] || sl)}</button>`).join("");
-    const mets = s.metaphors.map(m => `<a class="pill met" href="/narrative/metaphors/#${esc(m)}">${esc(m)}</a>`).join("");
+    const mets = s.metaphors.map(m => `<a class="pill met" href="/narrative/frames/#${esc(m)}">${esc(m)}</a>`).join("");
+    const tags = opts.details ? `<details class="more"><summary>Details</summary><div class="tags">${about}${slots}${mets}</div>${s.themes.length ? `<p class="sm">Themes: ${s.themes.map(esc).join(", ")}</p>` : ""}</details>` : `<div class="tags">${about}${slots}${mets}</div>`;
     return `<article class="st ${s.id === state.sel ? "hit" : ""}" data-id="${esc(s.id)}">
       <p class="quote">${esc(s.quote)}</p>${opts.compact ? "" : `<p class="ctx">${esc(s.context)}</p>`}
       <div class="src">${who}<span class="d">${esc(s.date_label)}</span> · <a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.outlet || src.host)}</a><span class="m">${esc(src.medium)}${ts}</span>${arch}<span class="badge ${esc(s.confidence)}">${esc(CONF_LABEL[s.confidence] || s.confidence)}</span>${src.link && src.link !== "unchecked" ? `<span class="badge ${esc(src.link)}">${esc(src.link)}</span>` : ""}</div>
-      <div class="tags">${about}${slots}${mets}</div></article>`;
+      ${tags}</article>`;
   }
   function narHead(n){
     return `<a class="nlink" href="${esc(n.url)}"><b>${esc(n.glyph)}</b>${esc(n.name)}</a>`;
@@ -302,7 +312,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     D.eras.forEach((e, i) => {
       const x0 = Math.max(L, X(dnum(e.start))), x1 = i + 1 < D.eras.length ? X(dnum(D.eras[i+1].start)) : W - R;
       if (x1 <= L) return;
-      out.push(`<rect x="${x0.toFixed(1)}" y="${T - 20}" width="${(x1 - x0).toFixed(1)}" height="${H - T + 20}" fill="${i % 2 ? "var(--stripe)" : "transparent"}"/>`);
+      out.push(`<rect class="band ${state.era.has(e.id) ? "on" : ""}" data-era="${esc(e.id)}" x="${x0.toFixed(1)}" y="${T - 20}" width="${(x1 - x0).toFixed(1)}" height="${H - T + 20}" fill="${i % 2 ? "var(--stripe)" : "transparent"}"><title>${esc(e.label)}, ${esc(e.span)}: click to keep only this era</title></rect>`);
       out.push(`<line x1="${x0.toFixed(1)}" y1="${T - 20}" x2="${x0.toFixed(1)}" y2="${H - 10}" stroke="var(--rule)"/>`);
       if (x1 - x0 > 60) out.push(`<text class="era-lab" x="${(x0 + 6).toFixed(1)}" y="${T - 8}">${esc(e.label)}</text>`);
     });
@@ -310,7 +320,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     rows.forEach((n, i) => {
       const cy = T + i * RH + RH / 2;
       out.push(`<line x1="${L}" y1="${(cy + RH/2).toFixed(1)}" x2="${W - R}" y2="${(cy + RH/2).toFixed(1)}" stroke="var(--rule)"/>`);
-      out.push(`<a href="${esc(n.url)}"><text class="row-glyph" x="8" y="${(cy - 4).toFixed(1)}">${esc(n.glyph)}</text><text class="row-label" x="8" y="${(cy + 11).toFixed(1)}">${esc(n.name.length > 20 ? n.name.slice(0, 19) + "…" : n.name)}</text></a>`);
+      out.push(`<g class="lane ${state.n.has(n.id) ? "on" : ""}" data-n="${esc(n.id)}" tabindex="0"><rect x="0" y="${(cy - RH/2).toFixed(1)}" width="${L - 4}" height="${RH}" fill="transparent"/><text class="row-glyph" x="8" y="${(cy - 4).toFixed(1)}">${esc(n.glyph)}</text><text class="row-label" x="8" y="${(cy + 11).toFixed(1)}">${esc(n.name.length > 18 ? n.name.slice(0, 17) + "…" : n.name)}</text><title>${esc(n.name)}: click to keep only this voice</title></g><a href="${esc(n.url)}"><text class="row-page" x="${L - 10}" y="${(cy + 4).toFixed(1)}" text-anchor="end">↗</text></a>`);
       const mine = sts.filter(s => s.narrator === n.id);
       const seen = {};
       mine.forEach(s => {
@@ -320,7 +330,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
       });
     });
     out.push("</svg>");
-    return out.join("") + `<div class="legend"><span><i class="v"></i>verified</span><span><i class="p"></i>secondhand</span><span><i class="u"></i>unconfirmed</span><span>click a dot to read it</span></div>`;
+    return out.join("") + `<div class="legend"><span><i class="v"></i>verified</span><span><i class="p"></i>secondhand</span><span><i class="u"></i>unconfirmed</span><span>click a dot to read it · a name to keep one voice · a band to keep one era</span></div>`;
   }
 
   function renderMetaphors(sts){
@@ -353,7 +363,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     shown.forEach(m => {
       const h = rowH(m); const off = (h - m.users.length * UH) / 2;
       out.push(`<line x1="${L}" y1="${(y + h).toFixed(1)}" x2="${W - R}" y2="${(y + h).toFixed(1)}" stroke="var(--rule)"/>`);
-      out.push(`<a href="/narrative/metaphors/#${esc(m.label)}"><text class="met-label" x="8" y="${(y + 16).toFixed(1)}">${esc(m.label.length > 20 ? m.label.slice(0, 19) + "…" : m.label)}</text></a>`);
+      out.push(`<a href="/narrative/frames/#${esc(m.label)}"><text class="met-label" x="8" y="${(y + 16).toFixed(1)}">${esc(m.label.length > 20 ? m.label.slice(0, 19) + "…" : m.label)}</text></a>`);
       out.push(`<text class="met-count" x="8" y="${(y + 30).toFixed(1)}">${m.users.length} voice${m.users.length !== 1 ? "s" : ""} · ${m.users.reduce((a, u) => a + u.count, 0)} use${m.users.reduce((a, u) => a + u.count, 0) !== 1 ? "s" : ""}</text>`);
       m.users.sort((a, b) => dnum(a.first.date) - dnum(b.first.date)).forEach((u, j) => {
         const cy = y + off + j * UH + UH / 2, x0 = X(dnum(u.first.date)), x1 = Math.max(x0 + 2, X(dnum(u.last.date)));
@@ -403,8 +413,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
       const s = byS[state.sel]; const n = byN[s.narrator];
       const i = sts.findIndex(x => x.id === s.id);
       d.innerHTML = `<div class="dh"><span class="mono">Quote</span><button class="close" data-close>Close</button></div>${narHead(n)}
-        ${stCard(s)}
-        ${s.themes.length ? `<p class="sm">Themes: ${s.themes.map(esc).join(", ")}</p>` : ""}
+        ${stCard(s, {details:true})}
         <div class="actions"><a href="${esc(n.url.split("#")[0])}#${esc(s.id)}">On their page</a><a href="${esc(s.source.url)}" target="_blank" rel="noopener">Open the source</a></div>
         <div class="nav2"><button data-step="-1" ${i <= 0 ? "disabled" : ""}>← Earlier</button><span class="mono">${i + 1} of ${sts.length}</span><button data-step="1" ${i < 0 || i >= sts.length - 1 ? "disabled" : ""}>Later →</button></div>`;
       return;
@@ -417,7 +426,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
         d.innerHTML = `<div class="dh"><span class="mono">Frame · ${esc(a)}</span><button class="close" data-close>Close</button></div>${narHead(n)}
           ${u && u.wording ? `<p class="fsum">“${esc(u.wording)}” <span class="sm">· ${esc(u.origin)}</span></p>` : ""}
           ${mine.map(s => stCard(s, {compact:true})).join("")}
-          <div class="actions"><a href="/narrative/metaphors/#${esc(a)}">In the frames</a><a href="${esc(byN[b].url)}">Their page</a></div>`;
+          <div class="actions"><a href="/narrative/frames/#${esc(a)}">In the frames</a><a href="${esc(byN[b].url)}">Their page</a></div>`;
         return;
       }
       const n = byN[b]; const mine = sts.filter(s => s.narrator === b && s.slots.includes(a));
@@ -431,7 +440,7 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     const top = D.metaphors.slice(0, 5);
     d.innerHTML = `<div class="dh"><span class="mono">How to read this</span></div>
       <p class="hint"><b>Timeline</b> puts every quote on a line per voice; the shading is the era. <b>Frames</b> shows each frame from its first use to everyone who picked it up. <b>Framework</b> lays the voices side by side, slot by slot. <b>List</b> is the same quotes as text, newest first.</p>
-      <p class="hint"><b>Most shared frames</b></p><ul class="hint">${top.map(m => `<li><a href="/narrative/metaphors/#${esc(m.label)}">${esc(m.label)}</a> · ${m.users.length} voice${m.users.length !== 1 ? "s" : ""}, first ${esc(byN[m.first.narrator]?.name || "")} ${esc(m.first.date.slice(0, 7))}</li>`).join("")}</ul>
+      <p class="hint"><b>Most shared frames</b></p><ul class="hint">${top.map(m => `<li><a href="/narrative/frames/#${esc(m.label)}">${esc(m.label)}</a> · ${m.users.length} voice${m.users.length !== 1 ? "s" : ""}, first ${esc(byN[m.first.narrator]?.name || "")} ${esc(m.first.date.slice(0, 7))}</li>`).join("")}</ul>
       <div class="actions"><a href="/method/#the-map-what-it-records">Method</a><a href="/data/narrative.json">Data</a></div>`;
   }
 
@@ -445,6 +454,10 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
     }
     sel.value = state.slot; $("#fAbout").value = state.about; $("#q").value = state.q;
     document.querySelector('[data-toggle="unv"]').classList.toggle("on", state.unv);
+    const nf = state.n.size + state.era.size + (state.slot ? 1 : 0) + (state.about ? 1 : 0) + (state.unv ? 1 : 0);
+    $("#filters").hidden = !state.filters;
+    $("#filtersBtn").classList.toggle("on", state.filters || nf > 0);
+    $("#filterCount").textContent = nf ? String(nf) : "";
     document.querySelectorAll("#views button").forEach(b => b.classList.toggle("on", b.dataset.view === state.view));
   }
   function renderNarrators(){
@@ -468,11 +481,12 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
   document.addEventListener("click", ev => {
     const t = ev.target.closest("[data-n],[data-era],[data-view],[data-toggle],[data-id],[data-cell],[data-close],[data-step],[data-slot],#reset");
     if (!t) return;
-    if (t.matches("a")) return;
+    if (t.matches("a") || ev.target.closest("a")) return;
     if (t.dataset.n !== undefined){ state.n.has(t.dataset.n) ? state.n.delete(t.dataset.n) : state.n.add(t.dataset.n); state.sel = null; state.cell = null; }
     else if (t.dataset.era !== undefined){ state.era.has(t.dataset.era) ? state.era.delete(t.dataset.era) : state.era.add(t.dataset.era); }
     else if (t.dataset.view !== undefined){ state.view = t.dataset.view; state.cell = null; }
     else if (t.dataset.toggle === "unv"){ state.unv = !state.unv; }
+    else if (t.dataset.toggle === "filters"){ state.filters = !state.filters; }
     else if (t.dataset.toggle === "allmet"){ state.allmet = !state.allmet; }
     else if (t.dataset.id !== undefined){ state.sel = state.sel === t.dataset.id ? null : t.dataset.id; state.cell = null; }
     else if (t.dataset.cell !== undefined){ state.cell = state.cell === t.dataset.cell ? null : t.dataset.cell; state.sel = null; }

@@ -48,7 +48,7 @@ def main():
     npath = REPO / "data" / "narrative.json"
     if npath.exists():
         nd = json.loads(npath.read_text(encoding="utf-8"))
-        pages += ["narrative/metaphors/index.html"] + [f"narrative/{n['id']}/index.html" for n in nd["narrators"] if n["kind"] != "subnet"]
+        pages += ["narrative/frames/index.html"] + [f"narrative/{n['id']}/index.html" for n in nd["narrators"] if n["kind"] != "subnet"]
         if not (REPO / "assets" / "og" / "narrative.png").exists():
             fails.append("assets/og/narrative.png missing")
         for st in nd["statements"]:
@@ -96,7 +96,7 @@ def main():
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/method/", f"{SITE}/about/", f"{SITE}/sn/"}
         want |= {f"{SITE}/narrative/"}
         if npath.exists():
-            want |= {f"{SITE}/narrative/metaphors/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"] if n["kind"] != "subnet"}
+            want |= {f"{SITE}/narrative/frames/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"] if n["kind"] != "subnet"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))
         if want != have:
             fails.append(f"sitemap mismatch: missing {sorted(want - have)[:3]} extra {sorted(have - want)[:3]}")

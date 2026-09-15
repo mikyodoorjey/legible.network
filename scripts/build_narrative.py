@@ -5,7 +5,7 @@ Imported by build_site.py. Standard library only, except Pillow for the OG cards
 
 - data/narrative/raw/<id>.json  ->  data/narrative.json (published, CC BY 4.0)
 - narrative/<id>/index.html      one page per narrator
-- narrative/metaphors/index.html the metaphor index
+- narrative/frames/index.html   the frames
 - narrative/index.html           the map (hand-written; the build injects partials and stats)
 - a block per subnet page and a block for the home page
 """
@@ -257,7 +257,7 @@ def quote_card(s, by_id, show_narrator=False, compact=False):
     arch = f' · <a href="{e(src["archive_url"])}" target="_blank" rel="noopener">archive</a>' if src.get("archive_url") else ""
     about = f'<a class="pill" href="/sn/{e(s["about"].split(":")[1])}/">SN{e(s["about"].split(":")[1])}</a>' if s["about"].startswith("subnet:") else ""
     slots = "".join(f'<span class="pill slot" data-slot="{e(sl)}">{e(SLOT_LABEL.get(sl, sl))}</span>' for sl in s["slots"])
-    mets = "".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m)}">{e(m)}</a>' for m in s["metaphors"])
+    mets = "".join(f'<a class="pill met" href="/narrative/frames/#{e(m)}">{e(m)}</a>' for m in s["metaphors"])
     body = "" if compact else f'<p class="ctx">{e(s["context"])}</p>'
     return (f'<article class="st" id="{e(s["id"])}" data-era="{e(s["era"])}" data-conf="{e(s["confidence"])}">'
             f'<p class="quote">{e(s["quote"])}</p>{body}'
@@ -288,7 +288,7 @@ def narrator_pills(n):
     return "".join(pills)
 
 
-def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
+def render_narrator(n, data, partials, site, og_name, prev_n, next_n, subnet_names=None):
     by_id = {x["id"]: x for x in data["narrators"]}
     st_by_id = {s["id"]: s for s in data["statements"]}
     mine = [s for s in data["statements"] if s["narrator"] == n["id"]]
@@ -307,7 +307,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
             dom = f'<span class="pill met">{e(g["dominant_metaphor"])}</span>' if g.get("dominant_metaphor") else ""
             shift = f'<p class="shift"><span class="mono">Shift</span> {e(g["shift"])}</p>' if g.get("shift") else ""
             summ = f'<div class="gen"><p>{text}</p>{dom}{shift}</div>'
-        eras_html.append(f'<section class="era" id="era-{era}"><h3><span>{e(meta[1])}</span><span class="mono">{e(meta[2])} · {len(sts)} statement{"s" if len(sts) != 1 else ""}</span></h3>{summ}'
+        eras_html.append(f'<section class="era" id="era-{era}"><h3><span>{e(meta[1])}</span><span class="mono">{e(meta[2])} · {len(sts)} quote{"s" if len(sts) != 1 else ""}</span></h3>{summ}'
                          + "".join(quote_card(s, by_id) for s in sts) + "</section>")
     # framework
     fw_html = []
@@ -353,8 +353,17 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
         users = [u["narrator"] for u in m["users"]]
         if n["id"] in users and len(users) > 1:
             others = [by_id[u]["name"] for u in users if u != n["id"] and u in by_id]
-            shared.append(f'<li><a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a> shared with {e(", ".join(others))}</li>')
+            shared.append(f'<li><a class="pill met" href="/narrative/frames/#{e(m["label"])}">{e(m["label"])}</a> shared with {e(", ".join(others))}</li>')
     relations = ("<ul>" + "".join(rel_html) + "</ul>") if rel_html else '<p class="sm">No explicit relations recorded.</p>'
+    # subnets they speak for or about
+    counts = Counter(int(s["about"].split(":")[1]) for s in mine if s["about"].startswith("subnet:"))
+    for sn in n.get("subnets") or []:
+        counts[sn] += 0
+    sub_rows = "".join(
+        f'<li><a href="/sn/{sn}/#{"says" if sn in (n.get("subnets") or []) else "said"}">SN{sn} {e((subnet_names or {}).get(sn, ""))}</a> '
+        f'<span class="mono">{"speaks for it · " if sn in (n.get("subnets") or []) else ""}{c} quote{"s" if c != 1 else ""}</span></li>'
+        for sn, c in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])))
+    subnets_html = ("<ul>" + sub_rows + "</ul>") if sub_rows else '<p class="sm">No quote about a particular subnet on record.</p>'
     shared_html = ("<ul>" + "".join(shared) + "</ul>") if shared else '<p class="sm">No metaphor shared with another narrator yet.</p>'
     # appearances
     app = n.get("appearances") or []
@@ -365,7 +374,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
     bars = "".join(f'<div class="row"><span>{CONF_LABEL.get(k, k)}</span><span><i class="bar"><b style="width:{100 * v / total:.0f}%"></b></i> <b class="n">{v}</b></span></div>' for k, v in conf.items())
     era_pills = "".join(f'<a class="pill" href="#era-{era}">{e(ERA_LABEL[era])}</a>' for era in n["eras"])
     mine_mets = [m for m in data["metaphors"] if any(u["narrator"] == n["id"] for u in m["users"])]
-    met_rows = "".join(f'<li><a href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a> <span class="n">{sum(u["count"] for u in m["users"] if u["narrator"] == n["id"])}</span></li>'
+    met_rows = "".join(f'<li><a href="/narrative/frames/#{e(m["label"])}">{e(m["label"])}</a> <span class="n">{sum(u["count"] for u in m["users"] if u["narrator"] == n["id"])}</span></li>'
                        for m in mine_mets[:10])
     if len(mine_mets) > 10:
         met_rows += f'<li><a href="/narrative/#view=metaphors&n={e(n["id"])}">and {len(mine_mets) - 10} more, in the map</a><span class="n"></span></li>'
@@ -383,7 +392,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n):
         "id": n["id"], "name": n["name"], "kind": KIND_LABEL[n["kind"]], "one_line": n["one_line"], "site": site, "og_image": og_name,
         "description": desc, "glyph": n["glyph"], "pills": narrator_pills(n),
         "lead_quote": (f'<p class="quote big">{e(first_h1["quote"])}</p><span class="qsrc">{e(first_h1["date_label"])} · <a href="#{e(first_h1["id"])}">in context</a></span>' if first_h1 else ""),
-        "eras": "".join(eras_html), "framework": "".join(fw_html), "relations": relations, "shared": shared_html,
+        "eras": "".join(eras_html), "framework": "".join(fw_html), "relations": relations, "shared": shared_html, "subnets": subnets_html,
         "appearances": (f'<section class="fsec"><h3>Appearances</h3><p class="sm">Public appearances on the record, whether or not a quote was taken.</p>{app_html}</section>' if app_html else ""),
         "count": n["statement_count"], "bars": bars, "era_pills": era_pills, "met_rows": met_rows or "<li class=sm>none tagged</li>",
         "coverage": cov_html or '<p class="sm">No coverage notes.</p>', "prevnext": prevnext,
@@ -422,9 +431,9 @@ def render_metaphors(data, partials, site):
 <title>The frames · Legible</title>
 {partials.get("robots", "")}
 <meta name="description" content="Every figurative frame used for Bittensor on the record: who said it first, who picked it up, and whether it is still in use.">
-<link rel="canonical" href="{site}/narrative/metaphors/">
+<link rel="canonical" href="{site}/narrative/frames/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website"><meta property="og:url" content="{site}/narrative/metaphors/">
+<meta property="og:type" content="website"><meta property="og:url" content="{site}/narrative/frames/">
 <meta property="og:title" content="The frames · Legible">
 <meta property="og:description" content="Who said it first, who picked it up, whether it is still in use.">
 <meta property="og:image" content="{site}/assets/og/narrative.png"><meta name="twitter:card" content="summary_large_image">
@@ -465,7 +474,7 @@ def subnet_narrative(data, netuid):
         out["self"] = "".join(quote_card(s, by_id, compact=True) for s in selfs[:5])
         out["network"] = "".join(quote_card(s, by_id, compact=True) for s in nets[:4])
         mets = [m for m in data["metaphors"] if any(u["narrator"] == own["id"] for u in m["users"])]
-        out["frames"] = " ".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets)
+        out["frames"] = " ".join(f'<a class="pill met" href="/narrative/frames/#{e(m["label"])}">{e(m["label"])}</a>' for m in mets)
         out["map"] = f'/narrative/#n={e(own["id"])}'
     out["said"] = "".join(quote_card(s, by_id, show_narrator=True, compact=True) for s in about[:6])
     return out
@@ -495,7 +504,7 @@ def home_block(data):
     persons = [n for n in data["narrators"] if n["kind"] != "subnet"][:8]
     strip = "".join(f'<a class="nstrip" href="/narrative/{e(n["id"])}/"><b>{e(n["glyph"])}</b><span>{e(n["name"])}</span><small>{n["statement_count"]} quotes</small></a>' for n in persons)
     mets = data["metaphors"][:6]
-    met_html = "".join(f'<a class="pill met" href="/narrative/metaphors/#{e(m["label"])}">{e(m["label"])} <span class="n">{len(m["users"])}</span></a>' for m in mets)
+    met_html = "".join(f'<a class="pill met" href="/narrative/frames/#{e(m["label"])}">{e(m["label"])} <span class="n">{len(m["users"])}</span></a>' for m in mets)
     sm = data["summary"]
     return (f'<div class="nhome"><div class="nhome-strip">{strip}</div>'
             f'<p class="sm">{sm["narrators"]} voices, {sm["statements"]} quotes on record, {sm["metaphors"]} frames. Most shared: {met_html}</p>'
@@ -630,7 +639,7 @@ def coverage_report(data):
 
 
 # ---------------- entry point
-def build(partials, site, write_if_changed, raw_dir=RAW):
+def build(partials, site, write_if_changed, raw_dir=RAW, subnet_names=None):
     changed = []
     raws = load_raw(raw_dir)
     if not raws:
@@ -652,11 +661,11 @@ def build(partials, site, write_if_changed, raw_dir=RAW):
                 og_name = "narrative.png"
         else:
             og_name = "narrative.png"
-        page = render_narrator(n, data, partials, site, og_name, ns[i - 1] if i > 0 else None, ns[i + 1] if i + 1 < len(ns) else None)
+        page = render_narrator(n, data, partials, site, og_name, ns[i - 1] if i > 0 else None, ns[i + 1] if i + 1 < len(ns) else None, subnet_names)
         if write_if_changed(REPO / "narrative" / n["id"] / "index.html", page):
             changed.append(f"narrative/{n['id']}/")
     if render_og_default(data, OG_DIR / "narrative.png"):
         changed.append("assets/og/narrative.png")
-    if write_if_changed(REPO / "narrative" / "metaphors" / "index.html", render_metaphors(data, partials, site)):
-        changed.append("narrative/metaphors/")
+    if write_if_changed(REPO / "narrative" / "frames" / "index.html", render_metaphors(data, partials, site)):
+        changed.append("narrative/frames/")
     return changed, data

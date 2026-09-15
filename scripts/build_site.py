@@ -284,7 +284,8 @@ def main():
     nparts = {k: partial(k, nav_ctx("narrative", ctx)) for k in ("topbar", "nav", "footer")}  # narrator pages
     nparts["robots"] = ctx["robots"]
     raw_dir = REPO / a.narrative_raw if a.narrative_raw else None
-    n_changed, ndata = build_narrative(nparts, SITE, write_if_changed, raw_dir) if raw_dir is None or raw_dir.exists() else ([], None)
+    subnet_names = {sub["netuid"]: sub["name"] for sub in (data or {}).get("subnets", [])}
+    n_changed, ndata = build_narrative(nparts, SITE, write_if_changed, raw_dir, subnet_names) if raw_dir is None or raw_dir.exists() else ([], None)
     changed += n_changed
     for src, outdir, active in DOCS:
         p = REPO / src
@@ -377,7 +378,7 @@ def main():
 
     urls = ["/", "/method/", "/about/", "/narrative/"]
     if ndata:
-        urls += ["/narrative/metaphors/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"] if n["kind"] != "subnet"]
+        urls += ["/narrative/frames/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"] if n["kind"] != "subnet"]
     if data:
         urls += ["/sn/"] + [f"/sn/{s['netuid']}/" for s in data.get("subnets", [])]
     lastmod = ctx["snapshot"] if ctx["snapshot"] != "pending" else TODAY

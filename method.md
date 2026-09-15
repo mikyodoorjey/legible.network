@@ -211,7 +211,7 @@ It is a companion to the [index](/sn/). The index asks what a subnet shows a rea
 | Statement | A verbatim quote of at most 60 words, dated, with a source URL, medium, and confidence | on the narrator's page and in the map |
 | Source | The URL the quote was taken from, the outlet, the medium, a timestamp for audio or video, and an archive link when one exists | inside each statement |
 | Slot | The framework position a statement evidences (below) | tags on each statement |
-| Metaphor | A figurative frame, recorded in its exact wording and labelled in one to three words | the [frames](/narrative/metaphors/) |
+| Metaphor | A figurative frame, recorded in its exact wording and labelled in one to three words | the [frames](/narrative/frames/) |
 | Theme | A literal idea a statement carries, such as incentive design or permissionless entry | tags on each statement |
 | Era | The dated phase of the network a statement falls in | tags on each statement |
 | Relation | Agrees, borrows, argues, responds, introduces, from one narrator to another, backed by a statement | on the narrator's page |
