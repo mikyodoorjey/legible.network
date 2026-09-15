@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Subnet Legibility Index</title>
+<title>Programmable mining · Legible</title>
 <!-- robots:start -->
 <meta name="robots" content="noindex">
 <!-- robots:end -->
-<meta name="description" content="What a first-time reader can find out about the top 32 Bittensor subnets in five minutes, scored for stakers, miners, buyers, and newcomers.">
+<meta name="description" content="Ethereum made Bitcoin's money programmable. Bittensor makes the mining programmable. One argument about what Bittensor is, and two instruments that record whether the network says so: the Subnet Legibility Index and the Bittensor Narrative Map.">
 <link rel="canonical" href="https://www.legible.network/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.legible.network/">
-<meta property="og:title" content="Subnet Legibility Index">
-<meta property="og:description" content="What a first-time reader can find out about the top 32 Bittensor subnets in five minutes.">
+<meta property="og:title" content="Programmable mining">
+<meta property="og:description" content="Ethereum made Bitcoin's money programmable. Bittensor makes the mining programmable. The argument, the index, and the map.">
 <meta property="og:image" content="https://www.legible.network/assets/og/default.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,6 +125,121 @@ main.grid.open aside{display:block}
   aside{height:auto;position:static}
   .hero .stats{gap:24px}
 }
+/* the argument (top of the home page) */
+.arg{padding-top:58px;padding-bottom:8px}
+.arg .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:44px;align-items:end}
+.arg h1{max-width:15ch}
+.arg .lede{font-size:17px;color:var(--ink-soft);max-width:60ch;margin:20px 0 0}
+.arg .lede p{margin:0 0 12px}
+.arg .demo{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.arg .demo a{color:var(--soft);border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
+.arg .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--tag)}
+.sealgrid{display:grid;grid-template-columns:auto repeat(3,1fr);border:1px solid var(--rule-strong);background:var(--paper);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.sealgrid>div{padding:12px 12px;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);min-height:54px;display:flex;align-items:center}
+.sealgrid>div:nth-child(4n){border-right:0}
+.sealgrid>div:nth-last-child(-n+4){border-bottom:0}
+.sealgrid .h{color:var(--softer);font-family:var(--disp);font-size:14px;font-weight:600;letter-spacing:-.01em;text-transform:none}
+.sealgrid .h.c{color:var(--ink)}
+.sealgrid .rl{color:var(--softer)}
+.sealgrid .sealed{color:var(--softer)}
+.sealgrid .sealed::before{content:"";display:inline-block;width:9px;height:9px;border:1px solid var(--rule-strong);margin-right:8px;background:var(--rule)}
+.sealgrid .open{color:var(--tag);font-weight:500;background:var(--tagbg);box-shadow:inset 0 0 0 1px var(--tag)}
+.sealgrid .open::before{content:"";display:inline-block;width:9px;height:9px;border:1px solid var(--tag);margin-right:8px;background:var(--tag)}
+.sealcap{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--softer);margin:8px 0 0}
+
+.lin{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule-strong);margin-top:40px}
+.lin>div{padding:18px 20px 20px;border-right:1px solid var(--rule-strong);display:flex;flex-direction:column;gap:10px;min-width:0}
+.lin>div:last-child{border-right:0}
+.lin .n{font-family:var(--pix);font-size:22px;letter-spacing:.04em;color:var(--tag)}
+.lin h3{font-size:20px;line-height:1.1}
+.lin p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.lin .viz{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--soft);white-space:pre;overflow:hidden}
+.lin .viz .dim{color:var(--softer)}
+.lin .viz .lit{color:var(--ink);background:var(--paper-deep);padding:0 4px}
+.lin .viz .red{color:var(--tag)}
+.lin .viz .cur{display:inline-block;width:7px;height:12px;background:var(--tag);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+#puzzle{padding-top:44px;padding-bottom:10px}
+#puzzle h2{margin:6px 0 10px}
+.sim{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;margin-top:18px;align-items:start}
+.sim .left,.sim .right{min-width:0}
+.tasks{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.code{border:1px solid var(--rule-strong);background:var(--paper);padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.7;white-space:pre;overflow-x:auto;color:var(--ink-soft)}
+.code .k{color:var(--softer)}.code .f{color:var(--ink);font-weight:500}.code .c{color:var(--softer)}
+.code .add{display:inline-block;width:100%;background:var(--tagbg);color:var(--ink);box-shadow:-3px 0 0 var(--tag)}
+.code .del{display:inline-block;width:100%;color:var(--softer);text-decoration:line-through}
+.simbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.simbtns .btn[disabled]{opacity:.35;cursor:default}
+.simbtns .btn[disabled]:hover{background:none;color:var(--ink)}
+.simbtns .btn.red[disabled]:hover{background:var(--acc);color:var(--acc-ink)}
+.field{border:1px solid var(--rule-strong);background:var(--paper);position:relative}
+.field svg{display:block;width:100%;height:auto}
+.field .cap{padding:10px 14px 12px;border-top:1px solid var(--rule);font-size:13.5px;line-height:1.5;color:var(--ink-soft);min-height:52px}
+.field .cap b{color:var(--ink)}
+.field .cap.warn b{color:var(--tag)}
+.gauges{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.gauge{border:1px solid var(--rule);background:var(--paper);padding:12px 14px}
+.gauge .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);display:flex;justify-content:space-between}
+.gauge .lab b{font-family:var(--pix);font-size:20px;letter-spacing:.04em;color:var(--ink);font-weight:400}
+.gauge .lab b.red{color:var(--tag)}
+.gauge .bar{height:6px;background:var(--rule);margin-top:8px;overflow:hidden}
+.gauge .bar i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.gauge .bar i.red{background:var(--tag)}
+.split{margin-top:14px;border:1px solid var(--rule);background:var(--paper);padding:12px 14px}
+.split .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);margin-bottom:8px}
+.split .row{display:grid;grid-template-columns:70px 1fr 44px;gap:10px;align-items:center;font-family:var(--mono);font-size:11px;padding:3px 0}
+.split .row .who{color:var(--soft)}
+.split .row .who.red{color:var(--tag)}
+.split .row .b{height:8px;background:var(--rule);overflow:hidden}
+.split .row .b i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.split .row .b i.red{background:var(--tag)}
+.split .row .pct{text-align:right;color:var(--ink)}
+
+.plain{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plain>div{border:1px solid var(--rule);border-left:3px solid var(--ink);background:var(--paper);padding:14px 16px}
+.plain>div.red{border-left-color:var(--tag)}
+.plain h3{font-size:17px;margin-bottom:6px}
+.plain p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+
+#lineage{padding-top:44px;padding-bottom:6px}
+.prov{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+.plain p a.ref,.sm a.ref{white-space:nowrap}
+#puzzle .quote{font-size:19px;line-height:1.35}
+.prov a.p{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule);border-left:3px solid var(--tag);background:var(--paper);padding:14px 16px;color:var(--ink)}
+.prov a.p:hover{text-decoration:none;border-color:var(--ink);border-left-color:var(--tag)}
+.prov .d{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer);display:flex;justify-content:space-between;gap:8px}
+.prov .q{font-family:var(--disp);font-weight:500;font-size:15.5px;line-height:1.4;letter-spacing:-.01em}
+.prov .w{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft)}
+.prov .w b{color:var(--ink);font-weight:500}
+.provnote{font-size:13.5px;color:var(--ink-soft);max-width:78ch;margin:14px 0 0}
+
+#instruments{padding-top:44px;padding-bottom:16px;border-top:1px solid var(--rule);margin-top:36px}
+.inst{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.inst a{display:flex;flex-direction:column;gap:8px;border:1px solid var(--rule-strong);background:var(--paper);padding:18px 20px;color:var(--ink)}
+.inst a:hover{text-decoration:none;border-color:var(--ink)}
+.inst .n{font-family:var(--pix);font-size:22px;letter-spacing:.04em;color:var(--tag)}
+.inst h3{font-size:20px}
+.inst p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.inst .go{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:auto;padding-top:8px}
+
+#index-section{padding-top:44px;padding-bottom:26px;border-top:1px solid var(--rule);margin-top:30px}
+#index-section h2{font-size:clamp(28px,3.6vw,44px);max-width:22ch;margin-top:6px}
+
+@media (max-width:900px){
+  .arg .top{grid-template-columns:1fr;gap:28px}
+  .lin{grid-template-columns:1fr}
+  .lin>div{border-right:0;border-bottom:1px solid var(--rule-strong)}
+  .lin>div:last-child{border-bottom:0}
+  .sim{grid-template-columns:1fr}
+  .plain,.prov{grid-template-columns:1fr}
+  .inst{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .sealgrid{font-size:9.5px}
+  .sealgrid>div{padding:10px 8px;min-height:46px}
+  .gauges{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body data-snapshot="2026-09-09">
@@ -150,9 +265,168 @@ main.grid.open aside{display:block}
 
 <!-- nav:end -->
 
-<header class="wrap hero">
-  <p class="kicker"><b>Read the room.</b> The top 32 subnets, scored on whether a newcomer can understand them.</p>
-  <h1>Can a first-time reader understand this subnet <em>in five minutes?</em></h1>
+<header class="wrap arg" id="top">
+  <div class="top">
+    <div>
+      <p class="kicker"><b>The argument.</b> One idea about what Bittensor is, built from the two instruments below it.</p>
+      <h1>Ethereum made Bitcoin's money programmable. Bittensor makes the <em>mining</em> programmable.</h1>
+      <div class="lede">
+        <p>Bitcoin's invention was not the coin. It was a way to pay strangers, every block, for work the network defined, with no employer and no contract. Then it defined one job: find a hash.</p>
+        <p>Ethereum took the invention and opened the money. The mining stayed sealed. Bittensor opens the mining. A subnet is a mining program: what work is wanted, how it is judged, who gets paid. The design space is no longer the layer above the work. It is the work.</p>
+      </div>
+      <div class="demo">
+        <a href="#puzzle">Write the puzzle</a>
+        <a href="#lineage">Where the phrase came from</a>
+        <a href="#index-section">Skip to the index</a>
+      </div>
+    </div>
+    <div>
+      <div class="sealgrid" role="table" aria-label="What each network leaves open">
+        <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
+        <div class="rl">The money</div><div class="sealed">sealed</div><div class="open">open</div><div class="sealed">same as Bitcoin</div>
+        <div class="rl">The mining</div><div class="sealed">sealed</div><div class="sealed">sealed</div><div class="open">open</div>
+      </div>
+      <p class="sealcap">Sealed: fixed at birth. Open: anyone can write it. TAO keeps Bitcoin's money on purpose: no pre-mine, 21 million, halvings, paid out by the block.</p>
+    </div>
+  </div>
+
+  <div class="lin" id="lin">
+    <div>
+      <span class="n">01</span>
+      <h3>Bitcoin taught the world one trick.</h3>
+      <p>Pay strangers, every block, for work you define. Bitcoin defined one job, and the job was guessing a number. The hash bought security and nothing else. The mining was never the waste. The fixed puzzle was.</p>
+      <div class="viz"><span class="dim">target  </span>00000000ffff…
+<span class="dim">nonce   </span><span id="v-nonce">2a91f0c4</span>
+<span class="dim">sha256  </span><span id="v-hash">7c3e19b0d5a2…</span>
+<span class="dim">product </span><span class="red">none</span></div>
+    </div>
+    <div>
+      <span class="n">02</span>
+      <h3>Ethereum opened the money.</h3>
+      <p>The design space moved up a layer, to contracts. A decade of chains lives there. Nobody reprogrammed the mine. They reprogrammed what its output could do.</p>
+      <div class="viz"><span class="lit">contract Vault { transfer(to, amt) … }</span>
+<span class="dim">──────── settles on ────────</span>
+<span class="dim">target  </span><span class="dim">00000000ffff…</span>
+<span class="dim">nonce   </span><span class="dim" id="v-nonce2">2a91f0c4</span>
+<span class="dim">product </span><span class="dim">still none</span></div>
+    </div>
+    <div>
+      <span class="n">03</span>
+      <h3>Bittensor opens the mining.</h3>
+      <p>The puzzle is a program. A subnet owner writes what the work is, how it is scored, and how the block reward splits. Miners compete on the work. Validators compete on the judgment. The chain does not run the puzzle. It pays the answer.</p>
+      <div class="viz"><span class="lit">score(response) {</span>
+<span class="lit">  return quality(response)</span><span class="cur"></span>
+<span class="lit">}</span>
+<span class="dim">product </span>whatever the puzzle asks for</div>
+    </div>
+  </div>
+</header>
+
+<section class="wrap" id="puzzle">
+  <span class="mono">Write the puzzle</span>
+  <h2>Pick a job. Watch the miners come. <em>Then watch one of them cheat.</em></h2>
+  <p class="quote" style="max-width:60ch;margin-top:14px">"Show me the subnet, and I'll tell you what the miners are optimizing for."</p>
+  <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: two dozen simulated miners optimizing for a scoring function you choose. Nothing touches the chain. What the puzzle pays is one axis. What the world gets is the other. On an honest mine they are the same line.</p>
+  <div class="sim">
+    <div class="left">
+      <div class="tasks" id="tasks" role="group" aria-label="Choose the work"></div>
+      <div class="code" id="code" aria-live="polite"></div>
+      <div class="simbtns">
+        <button class="btn red" id="btnGame">Let a miner game it</button>
+        <button class="btn" id="btnPatch" disabled>Patch the puzzle</button>
+        <button class="btn" id="btnReset" style="border-color:var(--rule-strong);color:var(--soft)">Reset</button>
+      </div>
+      <div class="gauges">
+        <div class="gauge"><div class="lab"><span>What the puzzle pays</span><b id="gPaid">0%</b></div><div class="bar"><i id="gPaidBar" style="width:0"></i></div></div>
+        <div class="gauge"><div class="lab"><span>What the world gets</span><b id="gUse">0%</b></div><div class="bar"><i id="gUseBar" style="width:0"></i></div></div>
+      </div>
+      <div class="split"><div class="lab">Block reward, top five</div><div id="split"></div></div>
+    </div>
+    <div class="right">
+      <div class="field">
+        <svg id="fieldSvg" viewBox="0 0 640 400" role="img" aria-label="Simulated miners: what the puzzle pays against what the world gets" font-family="var(--mono)" font-size="10.5">
+          <line x1="56" y1="340" x2="616" y2="340" stroke="var(--rule-strong)"/>
+          <line x1="56" y1="20" x2="56" y2="340" stroke="var(--rule-strong)"/>
+          <line x1="56" y1="340" x2="616" y2="20" stroke="var(--rule-strong)" stroke-dasharray="4 4"/>
+          <text x="600" y="34" text-anchor="end" fill="var(--softer)">honest line: paid what it is worth</text>
+          <text x="336" y="372" text-anchor="middle" fill="var(--soft)">what the puzzle pays →</text>
+          <text transform="translate(22 180) rotate(-90)" text-anchor="middle" fill="var(--soft)">what the world gets →</text>
+          <text x="560" y="332" text-anchor="end" fill="var(--tag)" id="fieldWarn" opacity="0">paid a lot, worth little</text>
+          <g id="dots"></g>
+        </svg>
+        <div class="cap" id="cap"><b>Miners are adapting to your puzzle.</b> Pay flows by score. So far the score and the work agree.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="plain">
+    <div>
+      <h3>Verified by re-running, or verified by judging.</h3>
+      <p>Bitcoin's work is trivial to check: "hashes are immediate to validate and everybody can agree" <a class="ref" href="/narrative/ala-shaabana/#ala-shaabana-004">AS 2022</a>. Ethereum's is checked by re-running it. Bittensor's can only be checked by judging it, and the network's own docs call the judgments subjective <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-024">OTF 2024</a>. So the judging is a paid, competitive market of its own. That is the whole innovation and the whole risk.</p>
+    </div>
+    <div class="red">
+      <h3>On a programmable mine, the bugs are in the incentive.</h3>
+      <p>A hash cannot be gamed. A judgment can. The subnets already write against it: Affine sells a mechanism that is "sybil-proof, decoy-proof, copy-proof, and overfitting-proof" <a class="ref" href="/narrative/sn120/#sn120-002">SN120</a>, and Ridges names "applying a stored answer" as hardcoding <a class="ref" href="/narrative/sn62/#sn62-012">SN62</a>. Reward hacking is to Bittensor what reentrancy was to early Ethereum: the native exploit of the new design space.</p>
+    </div>
+    <div>
+      <h3>Three fights, one fight.</h3>
+      <p>Research versus revenue, the pace of rule changes, enterprise readiness. Each asks the same thing of a different puzzle: is this work worth paying for before anyone has bought it? The foundation says it plainly: "a subnet nobody uses still collects a slice of every block" <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-039">OTF 2026</a>. Targon's target is a dollar of revenue for every dollar a miner earns <a class="ref" href="/narrative/sn4/#sn4-012">SN4</a>. Bitcoin subsidised security for years before fees mattered. The frame names the bet. It does not settle it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="lineage">
+  <span class="mono">From the map</span>
+  <h2>Where the phrase came from</h2>
+  <p class="sm" style="max-width:70ch">The argument above is one person's. The lineage below is not. Every line is a sourced statement in the narrative map, dated and linked, and the map records it whether or not the argument holds.</p>
+  <div class="prov">
+    <a class="p" href="/narrative/jacob-steeves/#jacob-steeves-039">
+      <span class="d"><span>Oct 2025</span><span class="badge probable">probable</span></span>
+      <span class="q">"Bittensor is an open protocol that applies a Bitcoin-like mining mechanism to AI: we use programmable economic incentives to organize decentralized computing power, models, data, and applications into a fair market."</span>
+      <span class="w"><b>Jacob Steeves</b> · co-founder · the antecedent</span>
+    </a>
+    <a class="p" href="/narrative/mark-jeffrey/#mark-jeffrey-013">
+      <span class="d"><span>19 Feb 2026</span><span class="badge verified">verified</span></span>
+      <span class="q">"This 'task contest' mining idea worked exceedingly well once. Maybe it can be replicated across multiple AI (and other) domains. So Bittensor takes Bitcoin's mining idea and expands it. Bittensor makes mining programmable."</span>
+      <span class="w"><b>Mark Jeffrey</b> · first exact use on the record</span>
+    </a>
+    <a class="p" href="/narrative/ala-shaabana/#ala-shaabana-038">
+      <span class="d"><span>25 Mar 2026</span><span class="badge probable">probable</span></span>
+      <span class="q">"It's basically taking bitcoin's mining side and making that programmable on a new chain."</span>
+      <span class="w"><b>Ala Shaabana</b> · co-founder · the shorthand</span>
+    </a>
+    <a class="p" href="/narrative/opentensor-foundation/#opentensor-foundation-045">
+      <span class="d"><span>15 Sep 2026</span><span class="badge verified">verified</span></span>
+      <span class="q">"Bittensor brings the same type of abstraction which Ethereum added to Bitcoin for running decentralized contracts, but onto Bitcoin's inverse innovation — digital markets."</span>
+      <span class="w"><b>Opentensor Foundation</b> · bittensor.com/about · the Ethereum step, in the foundation's words</span>
+    </a>
+  </div>
+  <p class="provnote">Two of eighteen narrators use the phrase, against seven for <a href="/narrative/metaphors/#market">market</a>, the network's dominant frame. The foundation's own about page now makes the Ethereum comparison and lands it on markets. The argument lands it on mining, on purpose: a Bitcoin reader already holds that slot, and mining names the work where market names the venue. The lineage is theirs. The choice of word, and the line about work that can only be verified by judging it, are the argument's. Trace the phrase across every narrator in the <a href="/narrative/metaphors/#programmable%20mining">metaphor index</a>.</p>
+</section>
+
+<section class="wrap" id="instruments">
+  <span class="mono">The instruments</span>
+  <h2>The argument is mine. <em>The instruments are not.</em></h2>
+  <p class="sm" style="max-width:70ch">"If you ask five people what Bittensor is, you will get five different answers" <a class="ref" href="/narrative/barry-silbert/#barry-silbert-005">BS 2024</a>. That is why the instruments exist. The index measures what a subnet shows a first-time reader. The map records what the people around the network say it is. Both have a method page and a correction form, and neither depends on the argument being right.</p>
+  <div class="inst">
+    <a href="#index-section">
+      <span class="n">I</span>
+      <h3>The Subnet Legibility Index</h3>
+      <p>Thirty-two puzzles, scored on whether a staker, a miner, a buyer, or a newcomer can find out what they pay for in five minutes. If a subnet is a mining program, this is whether anyone can read it.</p>
+      <span class="go">Below, on this page ↓</span>
+    </a>
+    <a href="/narrative/">
+      <span class="n">II</span>
+      <h3>The Bittensor Narrative Map</h3>
+      <p>Eighteen narrators, verbatim and dated, read through one framework so they can be compared slot by slot. Which frame appeared first, in whose mouth, who picked it up, and whether it is still in use.</p>
+      <span class="go">Open the map →</span>
+    </a>
+  </div>
+</section>
+
+<header class="wrap hero" id="index-section">
+  <p class="kicker"><b>Instrument I.</b> The Subnet Legibility Index. The top 32 subnets, scored on whether a newcomer can understand them.</p>
+  <h2>Can a first-time reader understand this subnet <em>in five minutes?</em></h2>
   <p class="lede">Each subnet is scored on what a staker, a miner, a buyer, and a newcomer can find out from its own public materials. The <a href="/rubric/">rubric</a> measures findability, not quality. Every score links to its evidence, and every subnet opens with a plain-language explainer.</p>
   <div class="stats" id="stats"><div><b>32</b><span>subnets</span></div><div><b id="st-share">90%</b><span>of emission</span></div><div><b id="st-cells">512</b><span>cells scored</span></div><div><b id="st-median">3.3</b><span>median score</span></div></div>
   <div class="demo">
@@ -239,6 +513,86 @@ main.grid.open aside{display:block}
 <!-- narrative:end -->
 </section>
 
+<script>
+(function(){
+  // 01: the hash ticker. Nothing is produced, on purpose.
+  const hex = n => { let s = ""; for (let i = 0; i < n; i++) s += "0123456789abcdef"[Math.random() * 16 | 0]; return s; };
+  const nonce = document.getElementById("v-nonce"), nonce2 = document.getElementById("v-nonce2"), hash = document.getElementById("v-hash");
+  let tick = 0;
+  const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced) setInterval(() => { const n = hex(8); nonce.textContent = n; nonce2.textContent = n; hash.textContent = (++tick % 23 === 0 ? "00000000" + hex(4) : hex(12)) + "…"; }, 140);
+
+  // 03: the puzzle. A toy: simulated miners adapting to a scoring function.
+  const TASKS = {
+    summarize: { label: "Summarize a paragraph",
+      code: ['<span class="k">function</span> <span class="f">score</span>(summary, source) {', '  <span class="k">const</span> short = 1 - summary.length / source.length', '  <span class="k">return</span> short * fluency(summary)', '}'],
+      patch: ['<span class="k">function</span> <span class="f">score</span>(summary, source) {', '  <span class="k">const</span> short = 1 - summary.length / source.length', '<span class="del">  return short * fluency(summary)</span>', '<span class="add">  const kept = coverage(summary, facts(source))</span>', '<span class="add">  return short * fluency(summary) * kept</span>', '}'],
+      cheat: "One miner returns the first sentence and stops. Short and fluent scores as good. Nothing was summarized.",
+      fix: "You rewrote the puzzle to check that the facts survived. The first-sentence trick stopped paying." },
+    forecast: { label: "Forecast a price",
+      code: ['<span class="k">function</span> <span class="f">score</span>(forecast, actual) {', '  <span class="k">return</span> 1 / (1 + abs(forecast - actual))', '}'],
+      patch: ['<span class="k">function</span> <span class="f">score</span>(forecast, actual, yesterday) {', '<span class="del">  return 1 / (1 + abs(forecast - actual))</span>', '<span class="add">  const naive = 1 / (1 + abs(yesterday - actual))</span>', '<span class="add">  const mine  = 1 / (1 + abs(forecast - actual))</span>', '<span class="add">  return max(0, mine - naive)</span>', '}'],
+      cheat: "One miner submits yesterday's price as tomorrow's forecast. Low error, every day. No forecast was made.",
+      fix: "You rewrote the puzzle to pay only for beating the naive guess. Persistence stopped paying." },
+    serve: { label: "Serve a model",
+      code: ['<span class="k">function</span> <span class="f">score</span>(reply, ms) {', '  <span class="k">return</span> correct(reply) * (1000 / ms)', '}'],
+      patch: ['<span class="k">function</span> <span class="f">score</span>(reply, ms, prompt) {', '<span class="add">  if (!fresh(prompt)) return 0   <span class="c">// unseen prompts only</span></span>', '  <span class="k">return</span> correct(reply) * (1000 / ms)', '}'],
+      cheat: "One miner caches the validator's fixed prompts and returns stored answers instantly. Fast and correct. No model was served. Subnets call this hardcoding.",
+      fix: "You rewrote the puzzle to use prompts nobody has seen. The cache stopped paying." },
+    label: { label: "Label an image",
+      code: ['<span class="k">function</span> <span class="f">score</span>(label, truth) {', '  <span class="k">return</span> label === truth ? 1 : 0', '}'],
+      patch: ['<span class="k">function</span> <span class="f">score</span>(label, truth, freq) {', '<span class="del">  return label === truth ? 1 : 0</span>', '<span class="add">  return label === truth ? 1 / freq[truth] : 0</span>', '}'],
+      cheat: "One miner answers the majority class every time without looking. Right most of the time. Nothing was labeled.",
+      fix: "You rewrote the puzzle to pay more for the rare classes. Guessing the majority stopped paying." }
+  };
+  const $ = s => document.querySelector(s);
+  const tasksEl = $("#tasks"), codeEl = $("#code"), dotsEl = $("#dots"), capEl = $("#cap"), warnEl = $("#fieldWarn");
+  const btnGame = $("#btnGame"), btnPatch = $("#btnPatch"), btnReset = $("#btnReset");
+  let task = "summarize", miners = [], gamed = false, patched = false, timer = null, visible = true;
+
+  function mk(i, cheat){ return { id: i, q: cheat ? 0.15 + Math.random() * 0.1 : 0.15 + Math.random() * 0.45, s: cheat ? 1 : 0, cheat: !!cheat, x: 0, y: 0 }; }
+  function reset(){ miners = []; for (let i = 0; i < 24; i++) miners.push(mk(i)); gamed = false; patched = false; renderCode(); syncBtns(); setCap("<b>Miners are adapting to your puzzle.</b> Pay flows by score. So far the score and the work agree.", false); }
+  function renderTasks(){ tasksEl.innerHTML = Object.keys(TASKS).map(k => `<button class="chip${k === task ? " on" : ""}" data-task="${k}">${TASKS[k].label}</button>`).join(""); tasksEl.querySelectorAll("button").forEach(b => b.onclick = () => { task = b.dataset.task; renderTasks(); reset(); }); }
+  function renderCode(){ codeEl.innerHTML = (patched ? TASKS[task].patch : TASKS[task].code).join("\n"); }
+  function syncBtns(){ btnGame.disabled = gamed; btnPatch.disabled = !gamed || patched; }
+  function setCap(html, warn){ capEl.innerHTML = html; capEl.classList.toggle("warn", !!warn); }
+
+  function paidOf(m){ const honest = m.q * (1 - m.s); const exploit = m.s * (patched ? 0.06 : 0.97); return Math.min(1, honest + exploit); }
+  function usefulOf(m){ return m.q * (1 - m.s); }
+
+  function step(){
+    for (const m of miners){
+      m.q = Math.min(0.98, Math.max(0.05, m.q + (Math.random() - 0.42) * 0.012));
+      if (gamed && !patched && !m.cheat){ if (Math.random() < 0.07) m.s = Math.min(1, m.s + 0.08 + Math.random() * 0.08); }
+      if (patched){ m.s = Math.max(0, m.s - 0.05); if (m.cheat && m.s < 0.15){ m.cheat = false; } }
+    }
+    draw();
+  }
+  function draw(){
+    const rows = miners.map(m => ({ m, paid: paidOf(m), use: usefulOf(m) }));
+    const totPaid = rows.reduce((n, r) => n + Math.pow(r.paid, 3), 0) || 1;
+    rows.forEach(r => r.share = Math.pow(r.paid, 3) / totPaid);
+    dotsEl.innerHTML = rows.map(r => { const x = 56 + r.paid * 560, y = 340 - r.use * 320; const bad = r.m.s > 0.5; return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(4 + r.share * 40).toFixed(1)}" fill="${bad ? "var(--tag)" : "var(--ink)"}" fill-opacity="${bad ? ".9" : ".75"}" stroke="var(--bg)" stroke-width="1.5"><title>miner ${r.m.id}: paid ${(r.paid * 100).toFixed(0)}, worth ${(r.use * 100).toFixed(0)}, share ${(r.share * 100).toFixed(1)}%</title></circle>`; }).join("");
+    const meanPaid = rows.reduce((n, r) => n + r.paid * r.share, 0), meanUse = rows.reduce((n, r) => n + r.use * r.share, 0);
+    const gap = meanPaid - meanUse;
+    $("#gPaid").textContent = Math.round(meanPaid * 100) + "%"; $("#gPaidBar").style.width = (meanPaid * 100) + "%";
+    $("#gUse").textContent = Math.round(meanUse * 100) + "%"; $("#gUseBar").style.width = (meanUse * 100) + "%";
+    $("#gUse").classList.toggle("red", gap > 0.25); $("#gUseBar").classList.toggle("red", gap > 0.25);
+    warnEl.setAttribute("opacity", gap > 0.25 ? "1" : "0");
+    const top = [...rows].sort((a, b) => b.share - a.share).slice(0, 5);
+    $("#split").innerHTML = top.map(r => `<div class="row"><span class="who${r.m.s > 0.5 ? " red" : ""}">miner ${r.m.id}</span><span class="b"><i class="${r.m.s > 0.5 ? "red" : ""}" style="width:${Math.min(100, r.share * 300)}%"></i></span><span class="pct">${(r.share * 100).toFixed(0)}%</span></div>`).join("");
+  }
+
+  btnGame.onclick = () => { if (gamed) return; gamed = true; miners.push(mk(miners.length, true)); syncBtns(); setCap(`<b>${TASKS[task].cheat}</b> The score went up. The work went down. Watch the others copy it.`, true); };
+  btnPatch.onclick = () => { if (!gamed || patched) return; patched = true; renderCode(); syncBtns(); setCap(`<b>${TASKS[task].fix}</b> On a programmable mine, the bugs are in the incentive, not the hash. And the next shortcut is already being looked for.`, false); };
+  btnReset.onclick = () => reset();
+
+  renderTasks(); reset(); draw();
+  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => { visible = es.some(e => e.isIntersecting); }, { threshold: 0.05 }) : null;
+  if (io) io.observe($("#puzzle"));
+  timer = setInterval(() => { if (visible && !document.hidden) step(); }, reduced ? 400 : 110);
+})();
+</script>
 <script src="/assets/glossary.js"></script>
 <script src="/assets/terms.js"></script>
 <!-- footer:start -->
