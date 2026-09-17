@@ -70,39 +70,26 @@
 .checkgrid .sealed{color:var(--ink-soft)}
 .checkgrid .open{color:var(--red);font-weight:500}
 #puzzle h2{margin:6px 0 10px}
-.sim{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;margin-top:18px;align-items:start}
-.sim .left,.sim .right{min-width:0}
-.tasks{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px}
-.code{padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:12.5px;line-height:1.7;white-space:pre;overflow-x:auto;color:var(--ink-soft)}
-.code .k{color:var(--softer)}.code .f{color:var(--ink);font-weight:500}.code .c{color:var(--softer)}
-.code .add{display:inline-block;width:100%;color:var(--ink);background:var(--paper-deep)}
-.code .del{display:inline-block;width:100%;color:var(--softer);text-decoration:line-through}
-.simbtns{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:16px}
-.simbtns .btn[disabled]{opacity:.35;cursor:default}
-.simbtns .btn[disabled]:hover{background:none;color:var(--ink)}
-.simbtns .btn.red[disabled]:hover{background:var(--acc);color:var(--acc-ink)}
-.field{position:relative}
-.field svg{display:block;width:100%;height:auto}
-.field .cap{padding:12px 0 0;font-size:14px;line-height:1.5;color:var(--soft);min-height:52px}
-.field .cap b{color:var(--ink)}
-.field .cap.warn b{color:var(--ink)}
-.gauges{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}
-.gauge{padding:0}
-.gauge .lab{font-size:13px;color:var(--soft);display:flex;justify-content:space-between;align-items:baseline}
-.gauge .lab b{font-family:var(--disp);font-size:26px;letter-spacing:-.03em;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
-.gauge .lab b.red{color:var(--ink)}
-.gauge .bar{height:2px;background:var(--rule);margin-top:8px;overflow:hidden}
-.gauge .bar i{display:block;height:100%;background:var(--ink);transition:width .25s}
-.gauge .bar i.red{background:var(--ink)}
-.split{margin-top:22px;padding:0}
-.split .lab{font-size:13px;color:var(--soft);margin-bottom:8px}
-.split .row{display:grid;grid-template-columns:70px 1fr 44px;gap:10px;align-items:center;font-family:var(--mono);font-size:11px;padding:3px 0}
-.split .row .who{color:var(--soft)}
-.split .row .who.red{color:var(--ink)}
-.split .row .b{height:2px;background:var(--rule);overflow:hidden}
-.split .row .b i{display:block;height:100%;background:var(--ink);transition:width .25s}
-.split .row .b i.red{background:var(--ink)}
-.split .row .pct{text-align:right;color:var(--ink)}
+.tasks{display:flex;gap:18px;flex-wrap:wrap;margin:26px 0 14px}
+.states{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;border-top:1px solid var(--ink)}
+.state{min-width:0;padding:16px 0 18px;display:flex;flex-direction:column;gap:10px}
+.state .step{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.state.bad .step{color:var(--red)}
+.state h4{margin:0;font-family:var(--disp);font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.2}
+.state .code{padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:11.5px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink-soft)}
+.state .code .k{color:var(--softer)}.state .code .f{color:var(--ink);font-weight:500}.state .code .c{color:var(--softer)}
+.state .code .add{display:inline-block;width:100%;color:var(--ink);background:var(--paper-deep)}
+.state .code .del{display:inline-block;width:100%;color:var(--softer);text-decoration:line-through}
+.state .code .bad{display:inline-block;width:100%;color:var(--red)}
+.state .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-top:4px}
+.state p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-soft)}
+.state .gauges{display:grid;gap:8px;margin-top:auto;padding-top:8px}
+.state .gauge .glab{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--soft)}
+.state .gauge .glab b{font-family:var(--disp);font-size:22px;letter-spacing:-.03em;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.state.bad .gauge.gets .glab b{color:var(--red)}
+.state .gauge .bar{height:2px;background:var(--rule);margin-top:6px;overflow:hidden}
+.state .gauge .bar i{display:block;height:100%;background:var(--ink)}
+.state.bad .gauge.gets .bar i{background:var(--red)}
 
 .plain{margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .plain>div{padding:0}
@@ -138,7 +125,9 @@
   .arg .top{grid-template-columns:1fr;gap:28px;margin-top:56px}
   .lin{grid-template-columns:1fr}
   .lin{gap:36px}
-  .sim{grid-template-columns:1fr}
+  .states{grid-template-columns:1fr;gap:0}
+  .state{border-bottom:1px solid var(--rule)}
+  .state:last-child{border-bottom:0}
   .plain,.prov{grid-template-columns:1fr}
   .inst{grid-template-columns:1fr}
 }
@@ -150,7 +139,6 @@
   .sealgrid .rl{font-size:12px}
   .sealgrid .sealed,.sealgrid .open{overflow-wrap:anywhere}
   .programs{grid-template-columns:1fr}
-  .gauges{grid-template-columns:1fr}
 }
 
 /* the close: six programs from the index, the voices from the map */
@@ -174,8 +162,6 @@
 .tasks .chip{border:0;padding:0;font-size:15px;color:var(--soft);border-bottom:1px solid transparent;border-radius:0}
 .tasks .chip:hover{color:var(--ink)}
 .tasks .chip.on{background:none;color:var(--ink);border-bottom-color:var(--ink)}
-.txt{font-size:15px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;padding:0}
-.txt[disabled]{color:var(--softer);text-decoration:none;cursor:default}
 #puzzle h2,#lineage h2,#instruments h2,.close h2{font-size:clamp(30px,3.6vw,44px);max-width:22ch}
 </style>
 </head>
@@ -270,38 +256,10 @@
     <div class="rl">Can it be gamed</div><div class="sealed">no</div><div class="sealed">no</div><div class="open">yes</div>
   </div>
   <p class="quote" style="max-width:60ch;margin-top:26px">"Show me the subnet, and I'll tell you what the miners are optimizing for."</p>
-  <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: pick a job, write the score, and watch two dozen simulated miners optimize for it. Then watch one of them cheat. Nothing touches the chain.</p>
-  <div class="sim">
-    <div class="left">
-      <div class="tasks" id="tasks" role="group" aria-label="Choose the work"></div>
-      <div class="code" id="code" aria-live="polite"></div>
-      <div class="simbtns">
-        <button class="btn red" id="btnGame">Let a miner game it</button>
-        <button class="txt" id="btnPatch" disabled>Patch the puzzle</button>
-        <button class="txt" id="btnReset">Reset</button>
-      </div>
-      <div class="gauges">
-        <div class="gauge"><div class="lab"><span>What the puzzle pays</span><b id="gPaid">0%</b></div><div class="bar"><i id="gPaidBar" style="width:0"></i></div></div>
-        <div class="gauge"><div class="lab"><span>What the world gets</span><b id="gUse">0%</b></div><div class="bar"><i id="gUseBar" style="width:0"></i></div></div>
-      </div>
-      <div class="split"><div class="lab">Block reward, top five</div><div id="split"></div></div>
-    </div>
-    <div class="right">
-      <div class="field">
-        <svg id="fieldSvg" viewBox="0 0 640 400" role="img" aria-label="Simulated miners: what the puzzle pays against what the world gets" font-family="var(--mono)" font-size="10.5">
-          <line x1="56" y1="340" x2="616" y2="340" stroke="var(--rule-strong)"/>
-          <line x1="56" y1="20" x2="56" y2="340" stroke="var(--rule-strong)"/>
-          <line x1="56" y1="340" x2="616" y2="20" stroke="var(--rule-strong)" stroke-dasharray="4 4"/>
-          <text x="600" y="34" text-anchor="end" fill="var(--softer)">honest line: paid what it is worth</text>
-          <text x="336" y="372" text-anchor="middle" fill="var(--soft)">what the puzzle pays →</text>
-          <text transform="translate(22 180) rotate(-90)" text-anchor="middle" fill="var(--soft)">what the world gets →</text>
-          <text x="560" y="332" text-anchor="end" fill="var(--ink)" id="fieldWarn" opacity="0">paid a lot, worth little</text>
-          <g id="dots"></g>
-        </svg>
-        <div class="cap" id="cap"><b>Miners are adapting to your puzzle.</b> Pay flows by score. So far the score and the work agree.</div>
-      </div>
-    </div>
-  </div>
+  <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: pick a job. The same puzzle in three states: as written, gamed, and patched. Nothing touches the chain.</p>
+  <div class="tasks" id="tasks" role="group" aria-label="Choose the work"></div>
+  <div class="states" id="states"></div>
+  <p class="sm" style="max-width:70ch;margin-top:14px">The numbers are illustrative: a toy scoring function, a toy miner, nothing on chain. The shape is not. Every subnet's incentive mechanism is a function like the one on the left, and every one of them has a right-hand panel somewhere.</p>
 
   <div class="plain">
     <div>
@@ -388,75 +346,58 @@
   const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduced) setInterval(() => { const n = hex(8); nonce.textContent = n; nonce2.textContent = n; hash.textContent = (++tick % 23 === 0 ? "00000000" + hex(4) : hex(12)) + "…"; }, 140);
 
-  // 03: the puzzle. A toy: simulated miners adapting to a scoring function.
+  // 03: the puzzle, at rest. One scoring function, three states: honest, gamed, patched. Nothing runs; the story is on the page.
   const TASKS = {
     summarize: { label: "Summarize a paragraph",
       code: ['<span class="k">function</span> <span class="f">score</span>(summary, source) {', '  <span class="k">const</span> short = 1 - summary.length / source.length', '  <span class="k">return</span> short * fluency(summary)', '}'],
+      exploit: ['<span class="k">function</span> <span class="f">mine</span>(source) {', '<span class="bad">  return source.split(".")[0]  <span class="c">// first sentence, stop</span></span>', '}'],
       patch: ['<span class="k">function</span> <span class="f">score</span>(summary, source) {', '  <span class="k">const</span> short = 1 - summary.length / source.length', '<span class="del">  return short * fluency(summary)</span>', '<span class="add">  const kept = coverage(summary, facts(source))</span>', '<span class="add">  return short * fluency(summary) * kept</span>', '}'],
-      cheat: "One miner returns the first sentence and stops. Short and fluent scores as good. Nothing was summarized.",
-      fix: "You rewrote the puzzle to check that the facts survived. The first-sentence trick stopped paying." },
+      honest: "Miners write short, fluent summaries. Pay and value move together.",
+      cheat: "One miner returns the first sentence and stops. Short and fluent scores as good. Nothing was summarized, and the others copy it.",
+      fix: "The score now checks that the facts survived. The first-sentence trick stops paying." },
     forecast: { label: "Forecast a price",
       code: ['<span class="k">function</span> <span class="f">score</span>(forecast, actual) {', '  <span class="k">return</span> 1 / (1 + abs(forecast - actual))', '}'],
+      exploit: ['<span class="k">function</span> <span class="f">mine</span>(yesterday) {', '<span class="bad">  return yesterday  <span class="c">// low error, every day</span></span>', '}'],
       patch: ['<span class="k">function</span> <span class="f">score</span>(forecast, actual, yesterday) {', '<span class="del">  return 1 / (1 + abs(forecast - actual))</span>', '<span class="add">  const naive = 1 / (1 + abs(yesterday - actual))</span>', '<span class="add">  const mine  = 1 / (1 + abs(forecast - actual))</span>', '<span class="add">  return max(0, mine - naive)</span>', '}'],
+      honest: "Miners model the market. Low error pays.",
       cheat: "One miner submits yesterday's price as tomorrow's forecast. Low error, every day. No forecast was made.",
-      fix: "You rewrote the puzzle to pay only for beating the naive guess. Persistence stopped paying." },
+      fix: "The score now pays only for beating the naive guess. Persistence stops paying." },
     serve: { label: "Serve a model",
       code: ['<span class="k">function</span> <span class="f">score</span>(reply, ms) {', '  <span class="k">return</span> correct(reply) * (1000 / ms)', '}'],
+      exploit: ['<span class="k">function</span> <span class="f">mine</span>(prompt) {', '<span class="bad">  return cache[prompt]  <span class="c">// stored answer, instantly</span></span>', '}'],
       patch: ['<span class="k">function</span> <span class="f">score</span>(reply, ms, prompt) {', '<span class="add">  if (!fresh(prompt)) return 0   <span class="c">// unseen prompts only</span></span>', '  <span class="k">return</span> correct(reply) * (1000 / ms)', '}'],
+      honest: "Miners run the model. Fast and correct pays.",
       cheat: "One miner caches the validator's fixed prompts and returns stored answers instantly. Fast and correct. No model was served. Subnets call this hardcoding.",
-      fix: "You rewrote the puzzle to use prompts nobody has seen. The cache stopped paying." },
+      fix: "The score now uses prompts nobody has seen. The cache stops paying." },
     label: { label: "Label an image",
       code: ['<span class="k">function</span> <span class="f">score</span>(label, truth) {', '  <span class="k">return</span> label === truth ? 1 : 0', '}'],
+      exploit: ['<span class="k">function</span> <span class="f">mine</span>(image) {', '<span class="bad">  return "cat"  <span class="c">// the majority class, every time</span></span>', '}'],
       patch: ['<span class="k">function</span> <span class="f">score</span>(label, truth, freq) {', '<span class="del">  return label === truth ? 1 : 0</span>', '<span class="add">  return label === truth ? 1 / freq[truth] : 0</span>', '}'],
+      honest: "Miners look at the image. Right answers pay.",
       cheat: "One miner answers the majority class every time without looking. Right most of the time. Nothing was labeled.",
-      fix: "You rewrote the puzzle to pay more for the rare classes. Guessing the majority stopped paying." }
+      fix: "The score now pays more for the rare classes. Guessing the majority stops paying." }
   };
-  const $ = s => document.querySelector(s);
-  const tasksEl = $("#tasks"), codeEl = $("#code"), dotsEl = $("#dots"), capEl = $("#cap"), warnEl = $("#fieldWarn");
-  const btnGame = $("#btnGame"), btnPatch = $("#btnPatch"), btnReset = $("#btnReset");
-  let task = "summarize", miners = [], gamed = false, patched = false, timer = null, visible = true;
-
-  function mk(i, cheat){ return { id: i, q: cheat ? 0.15 + Math.random() * 0.1 : 0.15 + Math.random() * 0.45, s: cheat ? 1 : 0, cheat: !!cheat, x: 0, y: 0 }; }
-  function reset(){ miners = []; for (let i = 0; i < 24; i++) miners.push(mk(i)); gamed = false; patched = false; renderCode(); syncBtns(); setCap("<b>Miners are adapting to your puzzle.</b> Pay flows by score. So far the score and the work agree.", false); }
-  function renderTasks(){ tasksEl.innerHTML = Object.keys(TASKS).map(k => `<button class="chip${k === task ? " on" : ""}" data-task="${k}">${TASKS[k].label}</button>`).join(""); tasksEl.querySelectorAll("button").forEach(b => b.onclick = () => { task = b.dataset.task; renderTasks(); reset(); }); }
-  function renderCode(){ codeEl.innerHTML = (patched ? TASKS[task].patch : TASKS[task].code).join("\n"); }
-  function syncBtns(){ btnGame.disabled = gamed; btnPatch.disabled = !gamed || patched; }
-  function setCap(html, warn){ capEl.innerHTML = html; capEl.classList.toggle("warn", !!warn); }
-
-  function paidOf(m){ const honest = m.q * (1 - m.s); const exploit = m.s * (patched ? 0.06 : 0.97); return Math.min(1, honest + exploit); }
-  function usefulOf(m){ return m.q * (1 - m.s); }
-
-  function step(){
-    for (const m of miners){
-      m.q = Math.min(0.98, Math.max(0.05, m.q + (Math.random() - 0.42) * 0.012));
-      if (gamed && !patched && !m.cheat){ if (Math.random() < 0.07) m.s = Math.min(1, m.s + 0.08 + Math.random() * 0.08); }
-      if (patched){ m.s = Math.max(0, m.s - 0.05); if (m.cheat && m.s < 0.15){ m.cheat = false; } }
-    }
-    draw();
+  const STATES = [
+    { key: "honest", step: "1 · Honest", title: "The puzzle, as written.", code: "code", lab: "The scoring function", text: "honest", pays: 62, gets: 62, bad: false },
+    { key: "gamed", step: "2 · Gamed", title: "The score, without the work.", code: "exploit", lab: "What one miner submits", text: "cheat", pays: 96, gets: 9, bad: true },
+    { key: "patched", step: "3 · Patched", title: "The puzzle, rewritten.", code: "patch", lab: "The scoring function, patched", text: "fix", pays: 58, gets: 56, bad: false }
+  ];
+  const tasksEl = document.getElementById("tasks"), statesEl = document.getElementById("states");
+  let task = "summarize";
+  function gauge(cls, label, v){ return `<div class="gauge ${cls}"><div class="glab"><span>${label}</span><b>${v}%</b></div><div class="bar"><i style="width:${v}%"></i></div></div>`; }
+  function renderTasks(){ tasksEl.innerHTML = Object.keys(TASKS).map(k => `<button class="chip${k === task ? " on" : ""}" data-task="${k}">${TASKS[k].label}</button>`).join(""); tasksEl.querySelectorAll("button").forEach(b => b.onclick = () => { task = b.dataset.task; renderTasks(); renderStates(); }); }
+  function renderStates(){
+    const t = TASKS[task];
+    statesEl.innerHTML = STATES.map(st => `<div class="state${st.bad ? " bad" : ""}">
+      <span class="step">${st.step}</span>
+      <h4>${st.title}</h4>
+      <span class="lab">${st.lab}</span>
+      <div class="code">${t[st.code].join("\n")}</div>
+      <p>${t[st.text]}</p>
+      <div class="gauges">${gauge("pays", "What the puzzle pays", st.pays)}${gauge("gets", "What the world gets", st.gets)}</div>
+    </div>`).join("");
   }
-  function draw(){
-    const rows = miners.map(m => ({ m, paid: paidOf(m), use: usefulOf(m) }));
-    const totPaid = rows.reduce((n, r) => n + Math.pow(r.paid, 3), 0) || 1;
-    rows.forEach(r => r.share = Math.pow(r.paid, 3) / totPaid);
-    dotsEl.innerHTML = rows.map(r => { const x = 56 + r.paid * 560, y = 340 - r.use * 320; const bad = r.m.s > 0.5; return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(4 + r.share * 40).toFixed(1)}" fill="${bad ? "var(--ink)" : "var(--ink)"}" fill-opacity="${bad ? ".9" : ".75"}" stroke="var(--bg)" stroke-width="1.5"><title>miner ${r.m.id}: paid ${(r.paid * 100).toFixed(0)}, worth ${(r.use * 100).toFixed(0)}, share ${(r.share * 100).toFixed(1)}%</title></circle>`; }).join("");
-    const meanPaid = rows.reduce((n, r) => n + r.paid * r.share, 0), meanUse = rows.reduce((n, r) => n + r.use * r.share, 0);
-    const gap = meanPaid - meanUse;
-    $("#gPaid").textContent = Math.round(meanPaid * 100) + "%"; $("#gPaidBar").style.width = (meanPaid * 100) + "%";
-    $("#gUse").textContent = Math.round(meanUse * 100) + "%"; $("#gUseBar").style.width = (meanUse * 100) + "%";
-    $("#gUse").classList.toggle("red", gap > 0.25); $("#gUseBar").classList.toggle("red", gap > 0.25);
-    warnEl.setAttribute("opacity", gap > 0.25 ? "1" : "0");
-    const top = [...rows].sort((a, b) => b.share - a.share).slice(0, 5);
-    $("#split").innerHTML = top.map(r => `<div class="row"><span class="who${r.m.s > 0.5 ? " red" : ""}">miner ${r.m.id}</span><span class="b"><i class="${r.m.s > 0.5 ? "red" : ""}" style="width:${Math.min(100, r.share * 300)}%"></i></span><span class="pct">${(r.share * 100).toFixed(0)}%</span></div>`).join("");
-  }
-
-  btnGame.onclick = () => { if (gamed) return; gamed = true; miners.push(mk(miners.length, true)); syncBtns(); setCap(`<b>${TASKS[task].cheat}</b> The score went up. The work went down. Watch the others copy it.`, true); };
-  btnPatch.onclick = () => { if (!gamed || patched) return; patched = true; renderCode(); syncBtns(); setCap(`<b>${TASKS[task].fix}</b> On a programmable mine, the bugs are in the incentive, not the hash. And the next shortcut is already being looked for.`, false); };
-  btnReset.onclick = () => reset();
-
-  renderTasks(); reset(); draw();
-  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => { visible = es.some(e => e.isIntersecting); }, { threshold: 0.05 }) : null;
-  if (io) io.observe($("#puzzle"));
-  timer = setInterval(() => { if (visible && !document.hidden) step(); }, reduced ? 400 : 110);
+  renderTasks(); renderStates();
 })();
 </script>
 <!-- footer:start -->
