@@ -331,11 +331,10 @@ def render_default_og(data, out_path):
         img, d, F, P = og_canvas("LEGIBLE")
     except ImportError:
         return False
-    big = _font([DISPLAY + ":600"], 62)
-    d.text((66, 108), "Ethereum made Bitcoin's", font=big, fill=P["ink"])
-    d.text((66, 176), "money programmable.", font=big, fill=P["ink"])
-    d.text((66, 244), "Bittensor makes the", font=big, fill=P["ink"])
-    d.text((66, 312), "mining programmable.", font=big, fill=P["teal"])
+    big = _font([DISPLAY + ":600"], 51)
+    d.text((66, 116), "Bitcoin gave us digital gold.", font=big, fill=P["ink"])
+    d.text((66, 196), "Ethereum gave us programmable money.", font=big, fill=P["ink"])
+    d.text((66, 276), "Bittensor gives us programmable mining.", font=big, fill=P["teal"])
     # the grid, across the lower band: three networks, two rows, sealed or open
     x0, y0, cw, rh, gap = 210, 426, 290, 44, 12
     heads = ["Bitcoin", "Ethereum", "Bittensor"]
