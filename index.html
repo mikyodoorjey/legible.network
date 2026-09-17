@@ -62,6 +62,13 @@
 @keyframes blink{50%{opacity:0}}
 
 #puzzle{padding-top:112px;padding-bottom:10px}
+.checkgrid{display:grid;grid-template-columns:130px repeat(3,1fr);gap:0 24px;font-size:15px;max-width:760px;border-top:1px solid var(--ink);margin-top:22px}
+.checkgrid>div{display:flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
+.checkgrid .h{min-height:0;padding:10px 0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.checkgrid .h.c{color:var(--ink)}
+.checkgrid .rl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.checkgrid .sealed{color:var(--ink-soft)}
+.checkgrid .open{color:var(--red);font-weight:500}
 #puzzle h2{margin:6px 0 10px}
 .sim{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;margin-top:18px;align-items:start}
 .sim .left,.sim .right{min-width:0}
@@ -137,6 +144,9 @@
 }
 @media (max-width:600px){
   .sealgrid{grid-template-columns:64px repeat(3,minmax(0,1fr));gap:0 12px;font-size:13px}
+  .checkgrid{grid-template-columns:84px repeat(3,minmax(0,1fr));gap:0 10px;font-size:12.5px}
+  .checkgrid .rl,.checkgrid .h{font-size:9.5px}
+  .checkgrid>div{overflow-wrap:anywhere}
   .sealgrid .rl{font-size:12px}
   .sealgrid .sealed,.sealgrid .open{overflow-wrap:anywhere}
   .programs{grid-template-columns:1fr}
@@ -252,9 +262,15 @@
 
 <section class="wrap" id="puzzle">
   <h2>Judgment can <em>be gamed.</em></h2>
-  <p class="lede" style="max-width:56ch;margin:10px 0 0">Pick a job. Watch the miners come. Then watch one of them cheat.</p>
-  <p class="quote" style="max-width:60ch;margin-top:14px">"Show me the subnet, and I'll tell you what the miners are optimizing for."</p>
-  <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: two dozen simulated miners optimizing for a scoring function you choose. Nothing touches the chain. What the puzzle pays is one axis. What the world gets is the other. On an honest mine they are the same line.</p>
+  <p class="lede" style="max-width:58ch;margin:10px 0 0">Ethereum's work is verified by re-running it. Bittensor's work can only be verified by judging it. A hash is right or wrong. A judgment can be gamed, and on Bittensor the judges are a paid market of their own.</p>
+  <div class="checkgrid" role="table" aria-label="How each network checks its work">
+    <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
+    <div class="rl">The work</div><div class="sealed">find a hash</div><div class="sealed">run a contract</div><div class="sealed">whatever the puzzle asks</div>
+    <div class="rl">How it is checked</div><div class="sealed">re-hash it</div><div class="sealed">re-run it</div><div class="open">judge it</div>
+    <div class="rl">Can it be gamed</div><div class="sealed">no</div><div class="sealed">no</div><div class="open">yes</div>
+  </div>
+  <p class="quote" style="max-width:60ch;margin-top:26px">"Show me the subnet, and I'll tell you what the miners are optimizing for."</p>
+  <p class="sm" style="max-width:70ch"><a href="/narrative/ala-shaabana/#ala-shaabana-046">Ala Shaabana, June 2026</a>. Below: pick a job, write the score, and watch two dozen simulated miners optimize for it. Then watch one of them cheat. Nothing touches the chain.</p>
   <div class="sim">
     <div class="left">
       <div class="tasks" id="tasks" role="group" aria-label="Choose the work"></div>
