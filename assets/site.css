@@ -56,12 +56,7 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .links a:hover,.links a[aria-current]{color:var(--ink);text-decoration:none;border-bottom-color:var(--ink)}
 .links a.cta{color:var(--soft)}
 .links a.cta:hover{color:var(--ink)}
-.brk::before,.brk::after{display:none}
-.btn{display:inline-block;font-size:14px;font-weight:500;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);border-radius:8px}
-.btn:hover{text-decoration:none;background:var(--ink);color:var(--bg)}
-.btn.red{background:var(--red);border-color:var(--red);color:#fff}
-.btn.red:hover{background:var(--red-deep);border-color:var(--red-deep);color:#fff}
-.tape{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+
 footer.site{border-top:1px solid var(--rule);margin-top:120px;padding:28px 0 56px;color:var(--soft);font-size:13px}
 footer.site .wrap{display:flex;flex-wrap:wrap;gap:6px 22px}
 footer.site .theme{color:var(--soft);text-decoration:underline;text-underline-offset:3px;padding:0;font-size:13px}
@@ -79,7 +74,6 @@ a.pill:hover{color:var(--ink)}
 .dots{font-family:var(--mono);letter-spacing:1px;white-space:nowrap}
 .dots .off{color:var(--rule-strong)}
 .band-0{color:var(--b0)}.band-1{color:var(--b1)}.band-2{color:var(--b2)}.band-3{color:var(--b3)}.band-4{color:var(--b4)}.band-5{color:var(--b5)}
-.bg-band-0{background:var(--b0)}.bg-band-1{background:var(--b1)}.bg-band-2{background:var(--b2)}.bg-band-3{background:var(--b3)}.bg-band-4{background:var(--b4)}.bg-band-5{background:var(--b5)}
 .aud-stakers,.aud-miners,.aud-buyers,.aud-newcomers{color:var(--ink)}
 .meter{display:inline-flex;gap:2px;vertical-align:middle}
 .meter i{display:block;width:9px;height:9px;background:var(--rule-strong)}

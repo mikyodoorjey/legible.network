@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=52445e40dc">
+<link rel="stylesheet" href="/assets/site.css?v=4c94bff0bd">
 <link rel="stylesheet" href="/assets/narrative.css?v=ba4454fd70">
 <style>
 .arg{padding-top:64px;padding-bottom:24px;overflow-x:hidden}
@@ -34,9 +34,7 @@
 .arg .demo a::after{content:" \203A"}
 .arg .demo a:hover{text-decoration:underline;text-decoration-color:var(--link)}
 .hero-b .stats{justify-content:center;margin-top:44px}
-.arg .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 64px;align-items:start;margin-top:80px;padding-top:8px}
-.arg-body{font-size:17px;color:var(--ink);max-width:56ch;line-height:1.55}
-.arg-body p{margin:0 0 16px}
+.arg .top{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;margin-top:72px}
 .arg .top .group{padding-top:0}
 .sealgrid{display:grid;grid-template-columns:96px repeat(3,1fr);gap:0 24px;font-size:15px;max-width:760px;border-top:1px solid var(--ink)}
 .sealgrid>div{display:flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
@@ -91,7 +89,7 @@
 .state .gauge .bar i{display:block;height:100%;background:var(--ink)}
 .state.bad .gauge.gets .bar i{background:var(--red)}
 
-.plain{margin-top:72px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.plain{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:48px;max-width:900px}
 .plain>div{padding:0}
 
 .plain h3{font-size:19px;margin-bottom:8px}
@@ -109,27 +107,17 @@
 .prov .w b{color:var(--ink);font-weight:500}
 .provnote{font-size:15px;color:var(--ink-soft);max-width:66ch;margin:28px 0 0;line-height:1.55}
 
-#instruments{padding-top:112px;padding-bottom:16px;margin-top:0}
-.inst{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:28px;max-width:900px}
-.inst a{display:flex;flex-direction:column;gap:8px;padding:0;color:var(--ink)}
-.inst a:hover{text-decoration:none}.inst a:hover .go{text-decoration:underline}
-.inst .n{display:none}
-.inst h3{font-size:22px}
-.inst p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink-soft)}
-.inst .go{font-size:15px;color:var(--ink);margin-top:auto;padding-top:6px}
-
 #index-section{padding-top:44px;padding-bottom:26px;border-top:1px solid var(--rule);margin-top:30px}
 #index-section h2{font-size:clamp(28px,3.6vw,44px);max-width:22ch;margin-top:6px}
 
 @media (max-width:900px){
-  .arg .top{grid-template-columns:1fr;gap:28px;margin-top:56px}
+  .arg .top{margin-top:48px}
   .lin{grid-template-columns:1fr}
   .lin{gap:36px}
   .states{grid-template-columns:1fr;gap:0}
   .state{border-bottom:1px solid var(--rule)}
   .state:last-child{border-bottom:0}
   .plain,.prov{grid-template-columns:1fr}
-  .inst{grid-template-columns:1fr}
 }
 @media (max-width:600px){
   .sealgrid{grid-template-columns:64px repeat(3,minmax(0,1fr));gap:0 12px;font-size:13px}
@@ -202,10 +190,6 @@
   </div>
 
   <div class="top">
-    <div class="arg-body">
-      <p>Bitcoin's invention was not the coin. It was a way to pay strangers, every block, for work the network defined, with no employer and no contract. Then it defined one job: find a hash.</p>
-      <p>Ethereum took the invention and opened the money. The mining stayed sealed. Bittensor opens the mining. A subnet is a mining program: what work is wanted, how it is judged, who gets paid. The design space is no longer the layer above the work. It is the work.</p>
-    </div>
     <div>
       <span class="group">What each network leaves open</span>
       <div class="sealgrid" role="table" aria-label="What each network leaves open">
@@ -217,7 +201,7 @@
     </div>
   </div>
 
-  <div class="lin" id="lin">
+    <div class="lin" id="lin">
     <div>
             <h3>Bitcoin taught the world one trick.</h3>
       <p>Pay strangers, every block, for work you define. Bitcoin defined one job, and the job was guessing a number. The hash bought security and nothing else. The mining was never the waste. The fixed puzzle was.</p>
@@ -248,7 +232,7 @@
 
 <section class="wrap" id="puzzle">
   <h2>Judgment can <em>be gamed.</em></h2>
-  <p class="lede" style="max-width:58ch;margin:10px 0 0">Ethereum's work is verified by re-running it. Bittensor's work can only be verified by judging it. A hash is right or wrong. A judgment can be gamed, and on Bittensor the judges are a paid market of their own.</p>
+  <p class="lede" style="max-width:58ch;margin:10px 0 0">Ethereum's work is verified by re-running it. Bittensor's work can only be verified by judging it, and the network's own docs call the judgments subjective <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-024">OTF 2024</a>. A hash is right or wrong <a class="ref" href="/narrative/ala-shaabana/#ala-shaabana-004">AS 2022</a>. A judgment can be gamed, and on Bittensor the judges are a paid market of their own.</p>
   <div class="checkgrid" role="table" aria-label="How each network checks its work">
     <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
     <div class="rl">The work</div><div class="sealed">find a hash</div><div class="sealed">run a contract</div><div class="sealed">whatever the puzzle asks</div>
@@ -262,17 +246,13 @@
   <p class="sm" style="max-width:70ch;margin-top:14px">The numbers are illustrative: a toy scoring function, a toy miner, nothing on chain. The shape is not. Every subnet's incentive mechanism is a function like the one on the left, and every one of them has a right-hand panel somewhere.</p>
 
   <div class="plain">
-    <div>
-      <h3>Verified by re-running, or verified by judging.</h3>
-      <p>Bitcoin's work is trivial to check: "hashes are immediate to validate and everybody can agree" <a class="ref" href="/narrative/ala-shaabana/#ala-shaabana-004">AS 2022</a>. Ethereum's is checked by re-running it. Bittensor's can only be checked by judging it, and the network's own docs call the judgments subjective <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-024">OTF 2024</a>. So the judging is a paid, competitive market of its own. That is the whole innovation and the whole risk.</p>
-    </div>
     <div class="red">
       <h3>On a programmable mine, the bugs are in the incentive.</h3>
-      <p>A hash cannot be gamed. A judgment can. The subnets already write against it: Affine sells a mechanism that is "sybil-proof, decoy-proof, copy-proof, and overfitting-proof" <a class="ref" href="/narrative/sn120/#sn120-002">SN120</a>, and Ridges names "applying a stored answer" as hardcoding <a class="ref" href="/narrative/sn62/#sn62-012">SN62</a>. Reward hacking is to Bittensor what reentrancy was to early Ethereum: the native exploit of the new design space.</p>
+      <p>A hash cannot be gamed. A judgment can. The subnets already write against it: Affine sells a mechanism that is "sybil-proof, decoy-proof, copy-proof, and overfitting-proof" <a class="ref" href="/sn/120/#says">SN120</a>, and Ridges names "applying a stored answer" as hardcoding <a class="ref" href="/sn/62/#says">SN62</a>. Reward hacking is to Bittensor what reentrancy was to early Ethereum: the native exploit of the new design space.</p>
     </div>
     <div>
       <h3>Three fights, one fight.</h3>
-      <p>Research versus revenue, the pace of rule changes, enterprise readiness. Each asks the same thing of a different puzzle: is this work worth paying for before anyone has bought it? The foundation says it plainly: "a subnet nobody uses still collects a slice of every block" <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-039">OTF 2026</a>. Targon's target is a dollar of revenue for every dollar a miner earns <a class="ref" href="/narrative/sn4/#sn4-012">SN4</a>. Bitcoin subsidised security for years before fees mattered. The frame names the bet. It does not settle it.</p>
+      <p>Research versus revenue, the pace of rule changes, enterprise readiness. Each asks the same thing of a different puzzle: is this work worth paying for before anyone has bought it? The foundation says it plainly: "a subnet nobody uses still collects a slice of every block" <a class="ref" href="/narrative/opentensor-foundation/#opentensor-foundation-039">OTF 2026</a>. Targon's target is a dollar of revenue for every dollar a miner earns <a class="ref" href="/sn/4/#says">SN4</a>. Bitcoin subsidised security for years before fees mattered. The frame names the bet. It does not settle it.</p>
     </div>
   </div>
 </section>
@@ -305,25 +285,9 @@
   <p class="provnote">Two of eighteen narrators use the phrase, against seven for <a href="/narrative/frames/#market">market</a>, the network's dominant frame. The foundation's own about page now makes the Ethereum comparison and lands it on markets. The argument lands it on mining, on purpose: a Bitcoin reader already holds that slot, and mining names the work where market names the venue. The lineage is theirs. The choice of word, and the line about work that can only be verified by judging it, are the argument's. Trace the phrase across every narrator in the <a href="/narrative/frames/#programmable%20mining">metaphor index</a>.</p>
 </section>
 
-<section class="wrap" id="instruments">
-  <h2>The argument is mine. <em>The instruments are not.</em></h2>
-  <p class="sm" style="max-width:70ch">"If you ask five people what Bittensor is, you will get five different answers" <a class="ref" href="/narrative/barry-silbert/#barry-silbert-005">BS 2024</a>. That is why the instruments exist. The index measures what a subnet shows a first-time reader. The map records what the people around the network say it is. Both have a method page and a correction form, and neither depends on the argument being right.</p>
-  <div class="inst">
-    <a href="/sn/">
-            <h3>The subnets</h3>
-      <p>Thirty-two puzzles, rated on whether a staker, a miner, a buyer, or a newcomer can find out what they pay for in five minutes. If a subnet is a mining program, this is whether anyone can read it.</p>
-      <span class="go">Open the subnets</span>
-    </a>
-    <a href="/narrative/">
-            <h3>The voices</h3>
-      <p>Eighteen voices, verbatim and dated, read through one framework so they can be compared slot by slot. Which frame appeared first, in whose mouth, who picked it up, and whether it is still in use.</p>
-      <span class="go">Open the map</span>
-    </a>
-  </div>
-</section>
-
 <section class="wrap close" id="programs">
-  <h2>Six of the programs, as the index reads them.</h2>
+  <h2>Six of the programs, <em>as the index reads them.</em></h2>
+  <p class="sm">Thirty-two puzzles, rated on whether a staker, a miner, a buyer, or a newcomer can find out what they pay for in five minutes. If a subnet is a mining program, this is whether anyone can read it. The index has a method page and a correction form, and does not depend on the argument being right.</p>
   <!-- programs:start -->
 <div class="programs"><a class="prog" href="/sn/107/"><div class="h"><b>Minos</b><span>SN107 · science</span></div><p class="work">SN107 Minos runs a recipe contest for reading DNA, where miners submit settings for mutation-finding software and the judges cook every recipe themselves on synthetic genomes with planted mutations.</p><div class="row"><span>block reward <b>11.3%</b></span><span>legibility <b>3.4</b> of 5</span></div></a><a class="prog" href="/sn/51/"><div class="h"><b>lium.io</b><span>SN51 · compute</span></div><p class="work">SN51 Lium rents out GPU time by the second, like a holiday-let site where the properties belong to strangers and the site pays hosts a retainer even when nobody is staying.</p><div class="row"><span>block reward <b>8.0%</b></span><span>legibility <b>3.8</b> of 5</span></div></a><a class="prog" href="/sn/15/"><div class="h"><b>ORO</b><span>SN15 · agents</span></div><p class="work">SN15 ORO runs a daily talent contest for robot personal shoppers, scores every performance, and keeps the footage as training material for a shopping assistant it plans to sell later.</p><div class="row"><span>block reward <b>6.7%</b></span><span>legibility <b>3.8</b> of 5</span></div></a><a class="prog" href="/sn/120/"><div class="h"><b>Affine</b><span>SN120 · training</span></div><p class="work">SN120 Affine runs a boxing title for AI coding models, where one champion checkpoint holds the belt, each challenger gets a single shot, and the purse is split among the last five champions.</p><div class="row"><span>block reward <b>6.0%</b></span><span>legibility <b>2.4</b> of 5</span></div></a><a class="prog" href="/sn/64/"><div class="h"><b>Chutes</b><span>SN64 · inference</span></div><p class="work">SN64 Chutes rents out AI model computing power by the request, the way a cloud provider does, except the machines belong to strangers who are paid in the subnet&#x27;s token.</p><div class="row"><span>block reward <b>5.9%</b></span><span>legibility <b>4.1</b> of 5</span></div></a><a class="prog" href="/sn/97/"><div class="h"><b>Albedo</b><span>SN97 · training</span></div><p class="work">SN97 Albedo is a playground game of king of the hill for coding models, where one fine-tuned model stands on top and earns most of the prize until a challenger knocks it off by a clear margin, twice.</p><div class="row"><span>block reward <b>5.2%</b></span><span>legibility <b>2.1</b> of 5</span></div></a></div>
 <!-- programs:end -->
@@ -331,7 +295,8 @@
 </section>
 
 <section class="wrap close" id="voices">
-  <h2>Who says what.</h2>
+  <h2>Who says what, <em>and who said it first.</em></h2>
+  <p class="sm">"If you ask five people what Bittensor is, you will get five different answers" <a class="ref" href="/narrative/barry-silbert/#barry-silbert-005">BS 2024</a>. The map records the answers, verbatim and dated, reads every voice through one framework, and traces each frame to its first use. It has its own method page and correction form.</p>
   <!-- narrative:start -->
 <div class="nhome"><div class="nhome-strip"><a class="nstrip" href="/narrative/jacob-steeves/"><b>JS</b><span>Jacob Steeves</span><small>60 quotes</small></a><a class="nstrip" href="/narrative/jason-calacanis/"><b>JC</b><span>Jason Calacanis</span><small>56 quotes</small></a><a class="nstrip" href="/narrative/joseph-jacks/"><b>JJ</b><span>Joseph Jacks</span><small>48 quotes</small></a><a class="nstrip" href="/narrative/ala-shaabana/"><b>AS</b><span>Ala Shaabana</span><small>47 quotes</small></a><a class="nstrip" href="/narrative/barry-silbert/"><b>BS</b><span>Barry Silbert</span><small>39 quotes</small></a><a class="nstrip" href="/narrative/mark-jeffrey/"><b>MJ</b><span>Mark Jeffrey</span><small>35 quotes</small></a><a class="nstrip" href="/narrative/sami-kassab/"><b>SK</b><span>Sami Kassab</span><small>25 quotes</small></a><a class="nstrip" href="/narrative/teng-yan/"><b>TY</b><span>Teng Yan</span><small>23 quotes</small></a></div><p class="demo"><a href="/narrative/">Open the map</a><a href="/narrative/#view=metaphors">Frame lineage</a><a href="/narrative/#view=framework">Voice by voice</a><a href="/method/#the-map-what-it-records">Method</a></p></div>
 <!-- narrative:end -->

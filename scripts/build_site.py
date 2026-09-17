@@ -364,6 +364,8 @@ def main():
                 s2 = inject(s2, "homestats", f'<div><b>{len(data["subnets"])}</b><span>subnets scored</span></div><div><b>{sm["statements"]}</b><span>quotes on record</span></div><div><b>{sm["narrators"]}</b><span>voices</span></div><div><b>{sm["metaphors"]}</b><span>frames traced</span></div>')
             s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
             s2 = inject(s2, "programs", programs_block(data) if data else '<p class="sm">The index is being assembled.</p>')
+        if name == "narrative/index.html" and data:
+            s2 = inject(s2, "knownsn", "<script>window.KNOWN_SN=new Set(" + json.dumps(sorted(str(sub["netuid"]) for sub in data["subnets"])) + ");</script>")
         if name == "narrative/index.html" and ndata:
             sm = ndata["summary"]
             s2 = inject(s2, "nstats", f'<div><b>{sm["narrators"]}</b><span>voices</span></div><div><b>{sm["statements"]}</b><span>quotes on record</span></div><div><b>{sm["metaphors"]}</b><span>frames traced</span></div><div><b>{sm["sources"]}</b><span>distinct sources</span></div>')

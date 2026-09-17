@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=52445e40dc">
+<link rel="stylesheet" href="/assets/site.css?v=4c94bff0bd">
 <link rel="stylesheet" href="/assets/narrative.css?v=ba4454fd70">
 <style>
 .hero{padding-top:52px;padding-bottom:26px}
@@ -161,7 +161,7 @@ main.grid.open aside{display:block}
     <p><b>Bittensor</b> is a network of small, independent marketplaces for digital work that share one currency. Think of a trade fair with a hundred booths: each booth runs its own competition, pays its own winners, and sells its own product, but every booth is paid out of one shared prize fund. The fund is <a class="term" href="#" data-term="tao">TAO</a>, a coin created at a steady rate.</p>
     <p>A <b>subnet</b> is one booth. It is a set of rules for a single kind of work: <a class="term" href="#" data-term="miner">miners</a> do the task, <a class="term" href="#" data-term="validator">validators</a> score it, and pay flows by score. Each subnet has its own <a class="term" href="#" data-term="alpha-token">token</a>, and since June 2026 its share of the prize fund follows that token's price, so the market decides which booths get funded.</p>
     <p><b>This index</b> asks one question of the 32 best-funded booths: has the subnet told the people who fund it, work for it, buy from it, and encounter it what it sells, in a place they will look, in five minutes? It scores findability, not quality. Every score links to its evidence, and every subnet page opens with a plain-language explainer. Dotted words open a definition.</p>
-    <p class="links"><a href="/method/#the-index-what-it-scores">How legibility is rated</a> · <a href="/method/#the-index-how-it-was-applied">Method and corrections</a> · <a href="/alpha/">Alpha tokens</a></p>
+    <p class="links"><a href="/method/#the-index-what-it-scores">How legibility is rated</a> · <a href="/method/#the-index-how-it-was-applied">Method and corrections</a></p>
   </div>
 </details>
 
@@ -292,7 +292,7 @@ b.textContent=document.documentElement.getAttribute("data-theme")==="dark"?"Ligh
     const t = r.alpha; if (!t) return '<span class="sm">n/a</span>';
     const ex = (t.exchanges || []).length;
     const usd = t.price_usd != null ? ` · $${t.price_usd >= 1 ? t.price_usd.toFixed(2) : t.price_usd.toFixed(3)}` : "";
-    return `<a href="/alpha/${r.netuid}/" title="${esc((t.symbol || "α") + " " + (t.price_tao != null ? t.price_tao.toFixed(4) + " TAO" : "") + usd + (ex ? " · listed on " + t.exchanges.join(", ") : " · on-chain only"))}"><b>${esc(t.symbol || "α")}</b> ${t.price_tao != null ? t.price_tao.toFixed(4) : "?"}<span class="ex">${ex ? ex + " exch" : "pool"}</span></a>`;
+    return `<a href="https://taostats.io/subnets/${r.netuid}" target="_blank" rel="noopener" title="${esc((t.symbol || "α") + " " + (t.price_tao != null ? t.price_tao.toFixed(4) + " TAO" : "") + usd + (ex ? " · listed on " + t.exchanges.join(", ") : " · on-chain only"))}"><b>${esc(t.symbol || "α")}</b> ${t.price_tao != null ? t.price_tao.toFixed(4) : "?"}<span class="ex">${ex ? ex + " exch" : "pool"}</span></a>`;
   }
   function meter(r){ const c = r.identity_completeness; let s = ""; for (let i = 0; i < c.of; i++) s += `<i class="${i < c.filled ? "on" : ""}"></i>`; return `<span class="meter" title="${c.filled} of ${c.of} identity fields set">${s}</span> <span class="mono" style="letter-spacing:0">${c.filled}/${c.of}</span>`; }
 

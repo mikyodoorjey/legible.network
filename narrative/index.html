@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=52445e40dc">
+<link rel="stylesheet" href="/assets/site.css?v=4c94bff0bd">
 <link rel="stylesheet" href="/assets/narrative.css?v=ba4454fd70">
 <style>
 .hero{padding-top:52px;padding-bottom:22px}
@@ -213,6 +213,9 @@ main.map{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-i
   <div class="grid" id="ngrid"></div>
 </section>
 
+<!-- knownsn:start -->
+<script>window.KNOWN_SN=new Set(["107", "110", "114", "118", "120", "124", "15", "19", "28", "3", "34", "38", "4", "44", "5", "51", "53", "56", "58", "61", "62", "64", "68", "75", "8", "80", "83", "9", "90", "91", "93", "97"]);</script>
+<!-- knownsn:end -->
 <!-- footer:start -->
 <footer class="site"><div class="wrap">
   <span>Legible v2 · snapshot 2026-09-09</span>
@@ -287,7 +290,8 @@ b.textContent=document.documentElement.getAttribute("data-theme")==="dark"?"Ligh
     const who = opts.who ? `<a class="who" href="${esc(byN[s.narrator] ? byN[s.narrator].url : "/narrative/")}">${esc(n ? n.name : s.narrator)}</a> · ` : "";
     const ts = src.timestamp ? ` · ${esc(src.timestamp)}` : "";
     const arch = src.archive_url ? ` · <a href="${esc(src.archive_url)}" target="_blank" rel="noopener">archive</a>` : "";
-    const about = s.about.startsWith("subnet:") ? `<a class="pill" href="/sn/${esc(s.about.split(":")[1])}/">SN${esc(s.about.split(":")[1])}</a>` : "";
+    const aboutSn = s.about.startsWith("subnet:") ? s.about.split(":")[1] : null;
+    const about = aboutSn ? ((window.KNOWN_SN && window.KNOWN_SN.has(aboutSn)) ? `<a class="pill" href="/sn/${esc(aboutSn)}/">SN${esc(aboutSn)}</a>` : `<span class="pill">SN${esc(aboutSn)}</span>`) : "";
     const slots = s.slots.map(sl => `<button class="pill slot" data-slot="${esc(sl)}" title="Filter by this slot">${esc(slotLabel[sl] || sl)}</button>`).join("");
     const mets = s.metaphors.map(m => `<a class="pill met" href="/narrative/frames/#${esc(m)}">${esc(m)}</a>`).join("");
     const tags = opts.details ? `<details class="more"><summary>Details</summary><div class="tags">${about}${slots}${mets}</div>${s.themes.length ? `<p class="sm">Themes: ${s.themes.map(esc).join(", ")}</p>` : ""}</details>` : `<div class="tags">${about}${slots}${mets}</div>`;

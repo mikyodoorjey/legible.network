@@ -249,13 +249,20 @@ def badge(conf):
     return f'<span class="badge {e(conf)}">{e(CONF_LABEL.get(conf, conf))}</span>'
 
 
+KNOWN_SUBNETS = set()  # netuids in the current index; filled by build(), used to decide whether a subnet pill links
+
+
+def sn_pill(sn):
+    return f'<a class="pill" href="/sn/{e(sn)}/">SN{e(sn)}</a>' if str(sn) in KNOWN_SUBNETS else f'<span class="pill">SN{e(sn)}</span>'
+
+
 def quote_card(s, by_id, show_narrator=False, compact=False):
     src = s["source"]
     n = by_id.get(s["narrator"])
     who = f'<a class="who" href="{e(n["url"]) if n else "/narrative/"}">{e(n["name"]) if n else e(s["narrator"])}</a> · ' if show_narrator else ""
     ts = f' · {e(src["timestamp"])}' if src.get("timestamp") else ""
     arch = f' · <a href="{e(src["archive_url"])}" target="_blank" rel="noopener">archive</a>' if src.get("archive_url") else ""
-    about = f'<a class="pill" href="/sn/{e(s["about"].split(":")[1])}/">SN{e(s["about"].split(":")[1])}</a>' if s["about"].startswith("subnet:") else ""
+    about = sn_pill(s["about"].split(":")[1]) if s["about"].startswith("subnet:") else ""
     slots = "".join(f'<span class="pill slot" data-slot="{e(sl)}">{e(SLOT_LABEL.get(sl, sl))}</span>' for sl in s["slots"])
     mets = "".join(f'<a class="pill met" href="/narrative/frames/#{e(m)}">{e(m)}</a>' for m in s["metaphors"])
     body = "" if compact else f'<p class="ctx">{e(s["context"])}</p>'
@@ -360,7 +367,7 @@ def render_narrator(n, data, partials, site, og_name, prev_n, next_n, subnet_nam
     for sn in n.get("subnets") or []:
         counts[sn] += 0
     sub_rows = "".join(
-        f'<li><a href="/sn/{sn}/#{"says" if sn in (n.get("subnets") or []) else "said"}">SN{sn} {e((subnet_names or {}).get(sn, ""))}</a> '
+        f'<li>{("<a href=\"/sn/" + str(sn) + "/#" + ("says" if sn in (n.get("subnets") or []) else "said") + "\">") if str(sn) in KNOWN_SUBNETS else "<span>"}SN{sn} {e((subnet_names or {}).get(sn, ""))}{"</a>" if str(sn) in KNOWN_SUBNETS else "</span>"} '
         f'<span class="mono">{"speaks for it · " if sn in (n.get("subnets") or []) else ""}{c} quote{"s" if c != 1 else ""}</span></li>'
         for sn, c in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])))
     subnets_html = ("<ul>" + sub_rows + "</ul>") if sub_rows else '<p class="sm">No quote about a particular subnet on record.</p>'
@@ -589,6 +596,8 @@ def coverage_report(data):
 
 # ---------------- entry point
 def build(partials, site, write_if_changed, raw_dir=RAW, subnet_names=None):
+    KNOWN_SUBNETS.clear()
+    KNOWN_SUBNETS.update(str(k) for k in (subnet_names or {}))
     changed = []
     raws = load_raw(raw_dir)
     if not raws:
