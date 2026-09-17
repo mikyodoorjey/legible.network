@@ -11,11 +11,13 @@ a.pill:hover{text-decoration:none;border-color:var(--ink)}
 .badge.active{color:var(--ink)}.badge.dormant{color:var(--softer)}
 
 /* statements */
-.st{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px;border-top:1px solid var(--rule);padding:12px 0;scroll-margin-top:24px}
+.st{border-top:1px solid var(--rule);padding:12px 0;scroll-margin-top:24px}
+/* narrator pages render each statement as a row with the date as its label; cards built elsewhere (the map's panel) keep the plain block */
+.st:has(> .when){display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px}
 .st .when{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);padding-top:4px}
 .st .body{min-width:0}
-.st .src .d{display:none}
-@media (max-width:600px){.st{grid-template-columns:1fr;gap:2px}.st .when{padding-top:0}}
+.st:has(> .when) .src .d{display:none}
+@media (max-width:600px){.st:has(> .when){grid-template-columns:1fr;gap:2px}.st .when{padding-top:0}}
 .st.hit{background:var(--paper-deep);box-shadow:0 0 0 10px var(--paper-deep)}
 .st .quote{font-size:17px;margin:0 0 6px}
 .st .ctx{font-size:13px;color:var(--soft);margin:0 0 6px}
