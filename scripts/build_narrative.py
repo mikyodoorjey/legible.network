@@ -512,21 +512,21 @@ def home_block(data):
 # ---------------- OG cards, in the site's one family
 def render_og_narrator(n, data, out_path):
     try:
-        from render_subnets import og_canvas, _font, _save
+        from render_subnets import og_canvas, _font, _save, DISPLAY
         img, d, F, P = og_canvas("LEGIBLE  ·  VOICES")
     except ImportError:
         return False
     ink, soft, softer, rule = P["ink"], P["soft"], P["softer"], P["rule"]
     d.text((70, 100), f"{KIND_LABEL[n['kind']].upper()}  ·  {n['statement_count']} QUOTES ON RECORD  ·  {n['confidence']['verified']} VERIFIED", font=F["mono_s"], fill=softer)
     size = 72
-    while size > 40 and d.textlength(n["name"], font=_font(["InterTight.ttf"], size)) > 1060:
+    while size > 40 and d.textlength(n["name"], font=_font([DISPLAY + ":600"], size)) > 1060:
         size -= 6
-    d.text((66, 150), n["name"], font=_font(["InterTight.ttf"], size), fill=ink)
+    d.text((66, 150), n["name"], font=_font([DISPLAY + ":600"], size), fill=ink)
     mine = [s for s in data["statements"] if s["narrator"] == n["id"]]
     q = next((s for s in mine if "messaging.h1" in s["slots"]), mine[0] if mine else None)
     y = 250
     if q:
-        qf = _font(["InterTight.ttf"], 34)
+        qf = _font([DISPLAY + ":600"], 34)
         words, lines, cur = ("\u201c" + q["quote"] + "\u201d").split(), [], ""
         for w in words:
             t = (cur + " " + w).strip()
@@ -551,11 +551,11 @@ def render_og_narrator(n, data, out_path):
 
 def render_og_default(data, out_path):
     try:
-        from render_subnets import og_canvas, _font, _save
+        from render_subnets import og_canvas, _font, _save, DISPLAY
         img, d, F, P = og_canvas("LEGIBLE  ·  VOICES")
     except ImportError:
         return False
-    big = _font(["InterTight.ttf"], 70)
+    big = _font([DISPLAY + ":600"], 70)
     d.text((66, 110), "Who says what Bittensor is,", font=big, fill=P["ink"])
     d.text((66, 186), "and when they started", font=big, fill=P["ink"])
     d.text((66, 262), "saying it.", font=big, fill=P["teal"])

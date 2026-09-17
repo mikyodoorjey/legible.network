@@ -23,10 +23,10 @@ BAND_WORD = ["sparse", "thin", "partial", "workable", "clear", "exemplary"]
 BAND_DEF = ["nobody can tell you", "only other people can tell you; the subnet itself doesn't say", "it's in there somewhere, but scattered, out of date, or buried in code", "you'd find it, but you'd need to already know Bittensor or dig for a while", "you'd get your answer on your own in about five minutes", "you'd have everything, with proof you can check, in a couple of clicks"]
 CONF_LABEL = {"verified": "verified", "inferred": "secondhand", "unknown": "unconfirmed"}
 IDENTITY_FIELDS = ["subnet_name", "github_repo", "subnet_contact", "subnet_url", "discord", "description", "additional"]
-LIGHT = {"bg": (247, 246, 243), "paper": (239, 237, 232), "ink": (26, 26, 26), "soft": (107, 107, 107), "softer": (138, 138, 138),
-         "teal": (231, 38, 48), "rule": (228, 226, 221),
-         "bands": [(231, 38, 48), (138, 138, 138), (107, 107, 107), (74, 74, 74), (42, 42, 42), (26, 26, 26)],
-         "aud": {"stakers": (26, 26, 26), "miners": (26, 26, 26), "buyers": (26, 26, 26), "newcomers": (26, 26, 26)}}
+LIGHT = {"bg": (255, 255, 255), "paper": (245, 245, 247), "ink": (29, 29, 31), "soft": (110, 110, 115), "softer": (134, 134, 139),
+         "teal": (191, 45, 36), "rule": (210, 210, 215),
+         "bands": [(191, 45, 36), (134, 134, 139), (110, 110, 115), (74, 74, 79), (44, 44, 48), (29, 29, 31)],
+         "aud": {"stakers": (29, 29, 31), "miners": (29, 29, 31), "buyers": (29, 29, 31), "newcomers": (29, 29, 31)}}
 
 
 def e(s):
@@ -231,23 +231,24 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
 
 
 # ---------------- OpenGraph images
+# The card faces match the site: Geist for display and reading, Fira Code for labels. Both are variable fonts;
+# a name may carry a weight after a colon ("Geist:600"), default 500 for Geist and 400 for Fira Code.
+DISPLAY, MONO = "Geist[wght].ttf", "FiraCode[wght].ttf"
+
+
 def _font(name, size):
     from PIL import ImageFont
     for cand in ([name] if isinstance(name, str) else name):
-        p = FONTS / cand
+        file, _, wght = cand.partition(":")
+        p = FONTS / file
         if p.exists():
             try:
                 f = ImageFont.truetype(str(p), size)
-                if cand.startswith("InterTight"):
-                    try:
-                        f.set_variation_by_axes([600])  # wght
-                    except Exception:
-                        pass
-                elif cand.startswith("IBMPlexSans"):
-                    try:
-                        f.set_variation_by_axes([100, 400])  # wdth, wght
-                    except Exception:
-                        pass
+                w = int(wght) if wght else (500 if file.startswith("Geist") else 400)
+                try:
+                    f.set_variation_by_axes([w])  # wght
+                except Exception:
+                    pass
                 return f
             except Exception:
                 continue
@@ -260,11 +261,11 @@ def og_canvas(kicker):
     P = LIGHT
     img = Image.new("RGB", (1200, 630), P["bg"])
     d = ImageDraw.Draw(img)
-    F = {"mono": _font(["IBMPlexMono-Medium.ttf", "IBMPlexMono-Regular.ttf"], 22), "mono_s": _font(["IBMPlexMono-Regular.ttf"], 18),
-         "mono_xs": _font(["IBMPlexMono-Regular.ttf"], 14), "sans": _font(["IBMPlexSans.ttf"], 24), "pix": _font(["InterTight.ttf"], 26)}
+    F = {"mono": _font([MONO + ":500"], 22), "mono_s": _font([MONO], 18),
+         "mono_xs": _font([MONO], 14), "sans": _font([DISPLAY + ":400"], 24), "pix": _font([DISPLAY + ":600"], 26)}
     d.text((70, 60), kicker, font=F["mono"], fill=P["soft"])
     d.line([70, 566, 1130, 566], fill=P["rule"], width=2)
-    d.text((70, 578), "Legible", font=_font(["InterTight.ttf"], 26), fill=P["ink"])
+    d.text((70, 578), "Legible", font=_font([DISPLAY + ":600"], 26), fill=P["ink"])
     d.text((1130 - d.textlength("Built by Mikyö Clark", font=F["sans"]), 578), "Built by Mikyö Clark", font=F["sans"], fill=P["soft"])
     return img, d, F, P
 
@@ -284,12 +285,12 @@ def render_og(sub, out_path):
     d.text((70, 100), f"SN {sub['netuid']}  ·  RANK {sub['rank']} BY EMISSION  ·  {sub['emission_pct']} OF THE BLOCK REWARD", font=F["mono_s"], fill=P["softer"])
     name = sub["name"]
     size = 78
-    while size > 40 and d.textlength(name, font=_font(["InterTight.ttf"], size)) > 640:
+    while size > 40 and d.textlength(name, font=_font([DISPLAY + ":600"], size)) > 640:
         size -= 6
-    d.text((66, 150), name, font=_font(["InterTight.ttf"], size), fill=P["ink"])
+    d.text((66, 150), name, font=_font([DISPLAY + ":600"], size), fill=P["ink"])
     comp = float(sub["composite"])
     col = P["bands"][band(comp)]
-    d.text((770, 100), f"{comp:.1f}", font=_font(["InterTight.ttf"], 190), fill=col)
+    d.text((770, 100), f"{comp:.1f}", font=_font([DISPLAY + ":600"], 190), fill=col)
     d.text((780, 300), f"/ 5  ·  LEGIBILITY  ·  {BAND_WORD[band(comp)].upper()}", font=F["mono_s"], fill=P["softer"])
     y = 360
     for a in AUD:
@@ -308,7 +309,7 @@ def render_index_og(data, out_path):
         img, d, F, P = og_canvas("LEGIBLE  ·  SUBNETS")
     except ImportError:
         return False
-    big = _font(["InterTight.ttf"], 74)
+    big = _font([DISPLAY + ":600"], 74)
     d.text((66, 110), "Can a first-time reader", font=big, fill=P["ink"])
     d.text((66, 190), "understand this subnet", font=big, fill=P["ink"])
     d.text((66, 270), "in five minutes?", font=big, fill=P["teal"])
@@ -330,7 +331,7 @@ def render_default_og(data, out_path):
         img, d, F, P = og_canvas("LEGIBLE")
     except ImportError:
         return False
-    big = _font(["InterTight.ttf"], 62)
+    big = _font([DISPLAY + ":600"], 62)
     d.text((66, 108), "Ethereum made Bitcoin's", font=big, fill=P["ink"])
     d.text((66, 176), "money programmable.", font=big, fill=P["ink"])
     d.text((66, 244), "Bittensor makes the", font=big, fill=P["ink"])
