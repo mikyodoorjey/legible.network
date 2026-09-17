@@ -1,8 +1,6 @@
 /* Narrative map pages: narrator profiles, the metaphor index, the map. Tokens come from site.css. */
 .lede{font-size:17px;color:var(--ink-soft);max-width:62ch;margin:14px 0 0}
-.stats{display:flex;gap:40px;margin:22px 0 26px;flex-wrap:wrap}
-.stats b{display:block;font-family:var(--disp);font-weight:600;font-size:34px;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
-.stats span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
+.stats{margin:22px 0 26px}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
 .pill.off{color:var(--softer);text-decoration:line-through}
 .pill.met{color:var(--ink)}
@@ -13,7 +11,11 @@ a.pill:hover{text-decoration:none;border-color:var(--ink)}
 .badge.active{color:var(--ink)}.badge.dormant{color:var(--softer)}
 
 /* statements */
-.st{border-top:1px solid var(--rule);padding:12px 0;scroll-margin-top:24px}
+.st{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 16px;border-top:1px solid var(--rule);padding:12px 0;scroll-margin-top:24px}
+.st .when{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);padding-top:4px}
+.st .body{min-width:0}
+.st .src .d{display:none}
+@media (max-width:600px){.st{grid-template-columns:1fr;gap:2px}.st .when{padding-top:0}}
 .st.hit{background:var(--paper-deep);box-shadow:0 0 0 10px var(--paper-deep)}
 .st .quote{font-size:17px;margin:0 0 6px}
 .st .ctx{font-size:13px;color:var(--soft);margin:0 0 6px}
@@ -105,7 +107,8 @@ a.ref:hover{color:var(--ink);text-decoration:underline}
 .nhome .demo a{color:var(--ink)}
 
 @media (max-width:900px){
-  .nr{grid-template-columns:1fr;gap:20px}
+  .nr{grid-template-columns:minmax(0,1fr);gap:20px}
+  .nr>div{min-width:0}
   .card{position:static}
   .metgrid{grid-template-columns:1fr}
   .coin{grid-template-columns:1fr}

@@ -29,7 +29,8 @@
 h2 a.anchor{opacity:0;margin-left:8px;font-size:14px;color:var(--softer)}
 h2:hover a.anchor{opacity:1}
 @media (max-width:900px){
-  .doc{grid-template-columns:1fr;gap:20px}
+  .doc{grid-template-columns:minmax(0,1fr);gap:20px}
+  .prose{min-width:0;max-width:100%}
   .toc{position:static;max-height:none;display:flex;flex-wrap:wrap;gap:4px 14px;padding:0 0 12px;border-bottom:1px solid var(--rule)}
   .toc .mono{width:100%}
   .toc a{border-left:0;padding:2px 0}

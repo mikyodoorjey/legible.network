@@ -18,17 +18,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=040e02b641">
-<link rel="stylesheet" href="/assets/narrative.css?v=e72e518f8f">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=52445e40dc">
+<link rel="stylesheet" href="/assets/narrative.css?v=894dee6f35">
 <style>
 .hero{padding-top:52px;padding-bottom:26px}
 .hero .demo{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
 .hero .demo a{color:var(--ink)}
 .hero .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--ink)}
-.hero .stats{display:flex;gap:40px;margin-top:26px}
-.hero .stats b{display:block;font-family:var(--disp);font-size:34px;letter-spacing:-.03em;line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
-.hero .stats span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--softer)}
+.hero .stats{margin-top:26px}
 .controls{position:sticky;top:0;z-index:5;background:var(--bg);padding-bottom:4px}
 .controls .wrap{display:flex;flex-direction:column;gap:9px}
 .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
@@ -44,7 +42,7 @@ main.grid{display:grid;grid-template-columns:minmax(0,1fr) 0;transition:grid-tem
 main.grid.open{grid-template-columns:minmax(0,1fr) min(440px,40vw)}
 .tablewrap{overflow-x:auto;padding:0 0 60px}
 table{border-collapse:collapse;width:100%;min-width:1080px}
-th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:0;color:var(--softer);padding:12px 10px 8px;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none}
+th{background:var(--bg);text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);padding:12px 10px 8px;border-bottom:1px solid var(--ink);white-space:nowrap;cursor:pointer;user-select:none}
 th:hover{color:var(--ink)}
 th.sorted{color:var(--ink)}
 th .arrow{opacity:.7;margin-left:3px}

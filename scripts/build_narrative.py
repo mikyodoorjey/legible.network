@@ -260,10 +260,10 @@ def quote_card(s, by_id, show_narrator=False, compact=False):
     mets = "".join(f'<a class="pill met" href="/narrative/frames/#{e(m)}">{e(m)}</a>' for m in s["metaphors"])
     body = "" if compact else f'<p class="ctx">{e(s["context"])}</p>'
     return (f'<article class="st" id="{e(s["id"])}" data-era="{e(s["era"])}" data-conf="{e(s["confidence"])}">'
-            f'<p class="quote">{e(s["quote"])}</p>{body}'
+            f'<span class="when">{e(s["date_label"])}</span><div class="body"><p class="quote">{e(s["quote"])}</p>{body}'
             f'<div class="src">{who}<span class="d">{e(s["date_label"])}</span> · <a href="{e(src["url"])}" target="_blank" rel="noopener">{e(src["outlet"] or src["host"])}</a>'
             f'<span class="m">{e(src["medium"])}{ts}</span>{arch}{badge(s["confidence"])}{(f'<span class="badge {e(src["link"])}">{e(src["link"])}</span>') if src.get("link") and src["link"] != "unchecked" else ""}</div>'
-            f'<div class="tags">{about}{slots}{mets}</div></article>')
+            f'<div class="tags">{about}{slots}{mets}</div></div></article>')
 
 
 def narrator_pills(n):
@@ -438,7 +438,7 @@ def render_metaphors(data, partials, site):
 <meta property="og:description" content="Who said it first, who picked it up, whether it is still in use.">
 <meta property="og:image" content="{site}/assets/og/narrative.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/narrative.css">
 </head>
