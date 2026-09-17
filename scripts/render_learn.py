@@ -218,6 +218,7 @@ EXPLAINER_CSS = """
 .explainer .one{font-family:var(--disp);font-weight:600;font-size:22px;line-height:1.25;letter-spacing:-.025em;color:var(--ink);margin:8px 0 16px}
 .explainer h3{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tag);margin:18px 0 6px;font-weight:500}
 .explainer p{margin:0 0 10px;color:var(--ink-soft);max-width:74ch}
+.explainer p,.explainer li{overflow-wrap:anywhere}
 .explainer ul{padding-left:20px;color:var(--ink-soft)}
 .explainer .srcs{margin-top:10px}
 .explainer .srcs summary{cursor:pointer}

@@ -193,7 +193,7 @@ def doc_page(title, meta, sections, active, ctx, description, outdir=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/doc.css">
 </head>
@@ -359,6 +359,9 @@ def main():
         if name in ("index.html", "sn/index.html"):
             s2 = re.sub(r"<body[^>]*>", f'<body data-snapshot="{html.escape(ctx["snapshot"])}">', s2, count=1)
         if name == "index.html":
+            if ndata and data:
+                sm = ndata["summary"]
+                s2 = inject(s2, "homestats", f'<div><b>{len(data["subnets"])}</b><span>subnets scored</span></div><div><b>{sm["statements"]}</b><span>quotes on record</span></div><div><b>{sm["narrators"]}</b><span>voices</span></div><div><b>{sm["metaphors"]}</b><span>frames traced</span></div>')
             s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
             s2 = inject(s2, "programs", programs_block(data) if data else '<p class="sm">The index is being assembled.</p>')
         if name == "narrative/index.html" and ndata:

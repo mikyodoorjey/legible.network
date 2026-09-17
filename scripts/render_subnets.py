@@ -173,8 +173,8 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
                 note = (note[:m.start()] + note[m.end():]).strip(" ,;.")
             link = c.get("link") or "unchecked"
             cells.append(
-                f'<details open><summary><span><span class="qn">{e(c["q"].upper())}</span>{e(c["label"])}</span>'
-                f'<span>{dots(c["score"])} <b class="band-{band(c["score"])}" style="font-family:var(--mono);font-weight:500">{c["score"] if c["score"] is not None else "?"}</b></span></summary>'
+                f'<details open><summary><span class="qn">{e(c["q"].upper())}</span><span class="ql">{e(c["label"])}</span>'
+                f'<span class="qs">{dots(c["score"])} <b class="band-{band(c["score"])}" style="font-family:var(--mono);font-weight:500">{c["score"] if c["score"] is not None else "?"}</b></span></summary>'
                 f'<div class="ev">{quote}<div class="src">{src}<span class="badge {e(c["status"])}">{e(CONF_LABEL.get(c["status"], c["status"]))}</span><span class="badge {e(link)}">{e(link)}</span></div>'
                 f'{("<p class=note>" + e(note) + "</p>") if note else ""}</div></details>')
         panels.append(
@@ -183,8 +183,16 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
             f'<p class="who">{AUD_Q[a]} · rank {au.get("rank", "?")} of {len(data["subnets"])} for this audience</p>{"".join(cells)}</section>')
 
     score_rows = "".join(
-        f'<div class="row" title="{e(AUD_LABEL[a])} {float(sub["audiences"][a]["score"]):.1f} of 5: {BAND_WORD[band(sub["audiences"][a]["score"])]}, {BAND_DEF[band(sub["audiences"][a]["score"])]}"><span class="aud-{a}">{AUD_LABEL[a].split(" and ")[0]}</span><span>{dots(sub["audiences"][a]["score"])} <b>{float(sub["audiences"][a]["score"]):.1f}</b></span></div>'
+        f'<div class="srow" title="{e(AUD_LABEL[a])} {float(sub["audiences"][a]["score"]):.1f} of 5: {BAND_WORD[band(sub["audiences"][a]["score"])]}, {BAND_DEF[band(sub["audiences"][a]["score"])]}"><span class="k aud-{a}">{AUD_LABEL[a].split(" and ")[0]}</span>'
+        f'<span class="v"><b>{float(sub["audiences"][a]["score"]):.1f}</b><span>{BAND_WORD[band(sub["audiences"][a]["score"])]} · rank {sub["audiences"][a].get("rank", "?")} of {len(data["subnets"])}</span></span></div>'
         for a in AUD)
+    chain_rows = [
+        f'<div class="srow"><span class="k">Emission</span><span class="v"><b>{e(sub["emission_pct"])}</b><span>of the block reward · rank {e(sub["rank"])} of {len(data["subnets"])}</span></span></div>',
+        f'<div class="srow"><span class="k">Participants</span><span class="v"><b>{e(sub.get("active_miners", "?"))} miners · {e(sub.get("active_validators", "?"))} validators</b></span></div>',
+    ]
+    if sub.get("registration_cost_tao") is not None:
+        chain_rows.append(f'<div class="srow"><span class="k">Registration</span><span class="v"><b>{float(sub["registration_cost_tao"]):.4g} TAO</b></span></div>')
+    chain_rows.append(f'<div class="srow"><span class="k">Verified</span><span class="v"><b>{e(sub.get("last_verified", ""))}</b><span>links checked and scores merged</span></span></div>')
     prov = "".join(f'<span class="pill">{e(p.strip())}</span>' for p in (sub.get("claim_labels") or "").split(";") if p.strip())
     corrections = sub.get("corrections") or []
     if corrections:
@@ -207,10 +215,10 @@ def render_subnet(sub, data, partials, site, prev_sub, next_sub, og_name, explai
         "verdict_block": verdict_block(sub, comp),
         "og_image": og_name, "pills": "".join(pills), "own_words": own, "meter": meter(sub), "identity_rows": "".join(rows),
         "panels": "".join(panels), "provenance": prov or '<span class="pill">no provenance recorded</span>',
-        "score_rows": score_rows, "prevnext": prevnext,
+        "score_rows": score_rows, "chain_rows": "".join(chain_rows), "prevnext": prevnext,
         "issue_url": f"https://github.com/mikyodoorjey/legible.network/issues/new?template=correction.yml&title=%5BCorrection%5D%20SN{sub['netuid']}%20{e(sub['name']).replace(' ', '%20')}",
         "mail_subject": f"[SLI] Correction: SN{sub['netuid']} {sub['name']}".replace(" ", "%20"),
-        "alpha_row": (lambda t: f'<div class="row" id="token"><span>Token</span><a href="https://taostats.io/subnets/{sub["netuid"]}" target="_blank" rel="noopener"><b style="font-family:var(--mono);font-weight:500">{e(t.get("symbol") or "α")}</b> {(t.get("price_tao") or 0):.4f} τ · {", ".join(sorted({v["name"] for v in (t.get("venues") or []) if v["kind"] == "exchange"})) or "on-chain only"}</a></div>' if t else "")(sub.get("alpha") or {}),
+        "alpha_row": (lambda t: f'<div class="srow" id="token"><span class="k">Token</span><span class="v"><a href="https://taostats.io/subnets/{sub["netuid"]}" target="_blank" rel="noopener"><b>{e(t.get("symbol") or "α")} {(t.get("price_tao") or 0):.4f} τ</b></a><span>{", ".join(sorted({v["name"] for v in (t.get("venues") or []) if v["kind"] == "exchange"})) or "on-chain only"}</span></span></div>' if t else "")(sub.get("alpha") or {}),
         "json": json.dumps({k: v for k, v in sub.items() if k != "alpha"}, ensure_ascii=False).replace("</", "<\\/"),
         "topbar": partials["topbar"], "nav": partials["nav"], "footer": partials["footer"], "robots": partials.get("robots", ""),
         "explainer": explainer_html, "explainer_css": explainer_css,

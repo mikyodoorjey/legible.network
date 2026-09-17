@@ -18,29 +18,35 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=040e02b641">
-<link rel="stylesheet" href="/assets/narrative.css?v=e72e518f8f">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=52445e40dc">
+<link rel="stylesheet" href="/assets/narrative.css?v=894dee6f35">
 <style>
-.arg{padding-top:96px;padding-bottom:24px;overflow-x:hidden}
-.arg .top{display:grid;grid-template-columns:1fr;gap:56px;align-items:start}
-.arg h1{max-width:17ch;font-size:clamp(40px,6.2vw,76px)}
-.arg .lede{font-size:21px;color:var(--ink);max-width:56ch;margin:0;line-height:1.5;letter-spacing:-.01em}
-.arg .lede p{margin:0 0 16px}
-.arg .demo{margin-top:28px;display:flex;gap:26px;flex-wrap:wrap;font-size:15px}
-.arg .demo a{color:var(--ink)}
-.arg .demo a:hover{text-decoration:none;color:var(--ink);border-color:var(--ink)}
-.sealgrid{display:grid;grid-template-columns:96px repeat(3,1fr);gap:0 24px;font-size:16px;max-width:760px}
-.sealgrid>div{display:flex;align-items:center;min-height:44px}
-.sealgrid .h{min-height:0;padding:0 0 10px;color:var(--soft);font-weight:500}
+.arg{padding-top:64px;padding-bottom:24px;overflow-x:hidden}
+.hero-b{text-align:center;max-width:880px;margin:0 auto}
+.hero-b .kicker{margin:0 0 18px}
+.hero-b h1{max-width:none;margin:0 auto;font-size:clamp(40px,5.6vw,60px);font-weight:600;letter-spacing:-.035em;line-height:1.02}
+.hero-b .lede{margin:22px auto 0;max-width:46ch;color:var(--soft);font-size:21px;line-height:1.4;letter-spacing:-.01em}
+.arg .demo{margin-top:22px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap;font-size:17px}
+.arg .demo a{color:var(--link)}
+.arg .demo a::after{content:" \203A"}
+.arg .demo a:hover{text-decoration:underline;text-decoration-color:var(--link)}
+.hero-b .stats{justify-content:center;margin-top:44px}
+.arg .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 64px;align-items:start;margin-top:80px;padding-top:8px}
+.arg-body{font-size:17px;color:var(--ink);max-width:56ch;line-height:1.55}
+.arg-body p{margin:0 0 16px}
+.arg .top .group{padding-top:0}
+.sealgrid{display:grid;grid-template-columns:96px repeat(3,1fr);gap:0 24px;font-size:15px;max-width:760px;border-top:1px solid var(--ink)}
+.sealgrid>div{display:flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
+.sealgrid .h{min-height:0;padding:10px 0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);font-weight:400}
 .sealgrid .h.c{color:var(--ink)}
-.sealgrid .rl{color:var(--soft);font-size:14px}
+.sealgrid .rl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
 .sealgrid .sealed{color:var(--soft)}
 .sealgrid .open{color:var(--red);font-weight:500}
 
 .sealcap{font-size:13.5px;color:var(--soft);margin:18px 0 0;max-width:66ch;line-height:1.5}
 
-.lin{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:96px}
+.lin{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:88px}
 .lin>div{display:flex;flex-direction:column;gap:10px;min-width:0}
 
 .lin .n{display:none}
@@ -120,7 +126,7 @@
 #index-section h2{font-size:clamp(28px,3.6vw,44px);max-width:22ch;margin-top:6px}
 
 @media (max-width:900px){
-  .arg .top{grid-template-columns:1fr;gap:28px}
+  .arg .top{grid-template-columns:1fr;gap:28px;margin-top:56px}
   .lin{grid-template-columns:1fr}
   .lin{gap:36px}
   .sim{grid-template-columns:1fr}
@@ -181,28 +187,35 @@
 <!-- nav:end -->
 
 <header class="wrap arg" id="top">
+  <div class="hero-b">
+    <p class="kicker">Programmable mining</p>
+    <h1>Ethereum made Bitcoin's money programmable. Bittensor makes the <em>mining</em> programmable.</h1>
+    <p class="lede">One argument about what Bittensor is, and two instruments that record whether the network says so.</p>
+    <div class="demo">
+      <a href="#puzzle">Write the puzzle</a>
+      <a href="#lineage">Where the phrase came from</a>
+      <a href="/sn/">Open the subnets</a>
+    </div>
+    <div class="stats" id="homestats">
+      <!-- homestats:start -->
+<div><b>32</b><span>subnets scored</span></div><div><b>530</b><span>quotes on record</span></div><div><b>19</b><span>voices</span></div><div><b>213</b><span>frames traced</span></div>
+<!-- homestats:end -->
+    </div>
+  </div>
+
   <div class="top">
-    <div>
-      <h1>Ethereum made Bitcoin's money programmable. Bittensor makes the <em>mining</em> programmable.</h1>
+    <div class="arg-body">
+      <p>Bitcoin's invention was not the coin. It was a way to pay strangers, every block, for work the network defined, with no employer and no contract. Then it defined one job: find a hash.</p>
+      <p>Ethereum took the invention and opened the money. The mining stayed sealed. Bittensor opens the mining. A subnet is a mining program: what work is wanted, how it is judged, who gets paid. The design space is no longer the layer above the work. It is the work.</p>
     </div>
     <div>
+      <span class="group">What each network leaves open</span>
       <div class="sealgrid" role="table" aria-label="What each network leaves open">
         <div class="h"></div><div class="h">Bitcoin</div><div class="h">Ethereum</div><div class="h c">Bittensor</div>
         <div class="rl">The money</div><div class="sealed">sealed</div><div class="open">open</div><div class="sealed">same as Bitcoin</div>
         <div class="rl">The mining</div><div class="sealed">sealed</div><div class="sealed">sealed</div><div class="open">open</div>
       </div>
       <p class="sealcap">Sealed: fixed at birth. Open: anyone can write it. TAO keeps Bitcoin's money on purpose: no pre-mine, 21 million, halvings, paid out by the block.</p>
-    </div>
-    <div>
-      <div class="lede">
-        <p>Bitcoin's invention was not the coin. It was a way to pay strangers, every block, for work the network defined, with no employer and no contract. Then it defined one job: find a hash.</p>
-        <p>Ethereum took the invention and opened the money. The mining stayed sealed. Bittensor opens the mining. A subnet is a mining program: what work is wanted, how it is judged, who gets paid. The design space is no longer the layer above the work. It is the work.</p>
-      </div>
-      <div class="demo">
-        <a href="#puzzle">Write the puzzle</a>
-        <a href="#lineage">Where the phrase came from</a>
-        <a href="/sn/">Open the subnets</a>
-      </div>
     </div>
   </div>
 

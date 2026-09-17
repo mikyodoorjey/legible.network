@@ -1,40 +1,45 @@
-/* legible.network: the quiet surface.
-   Paper ground, one grey, one rule, one red used once per screen. Inter Tight for display, Inter for reading,
-   IBM Plex Mono for anything that is data. Light first; the dark theme is a variant with the same care. */
+/* legible.network: the spec sheet.
+   White ground, Apple's greys, one red used only for an open finding. Geist (SF Pro on Apple devices) for reading
+   and display, Fira Code in letterspaced uppercase for every label, the nav, and anything that is data.
+   Labels are the docs' voice, values are Apple's. Light first; the dark theme is Apple's black. */
 
 :root{
-  --bg:#f7f6f3;--paper:#f7f6f3;--paper-deep:#efede8;--ink:#1a1a1a;--ink-soft:#2a2a2a;--soft:#6b6b6b;--softer:#8a8a8a;
-  --rule:#e4e2dd;--rule-strong:#cfccc5;--red:#e72630;--red-deep:#b81c25;
-  --acc:#1a1a1a;--acc-ink:#f7f6f3;--tag:#1a1a1a;--tagbg:rgba(26,26,26,.06);--stripe:transparent;--tape:#1a1a1a;--tape-ink:#f7f6f3;
-  --b0:#e72630;--b1:#8a8a8a;--b2:#6b6b6b;--b3:#4a4a4a;--b4:#2a2a2a;--b5:#1a1a1a;
-  --a-stakers:#1a1a1a;--a-miners:#1a1a1a;--a-buyers:#1a1a1a;--a-newcomers:#1a1a1a;
-  --teal:#1a1a1a;--teal-deep:#000;--teal-soft:rgba(26,26,26,.05);--warm:#e72630;--warm-soft:rgba(231,38,48,.08);
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
-  --disp:'Inter Tight','Inter',-apple-system,'Helvetica Neue',sans-serif;--pix:var(--disp);--serif:var(--disp);
+  --bg:#ffffff;--paper:#ffffff;--paper-deep:#f5f5f7;--ink:#1d1d1f;--ink-soft:#2c2c30;--soft:#6e6e73;--softer:#86868b;
+  --rule:#d2d2d7;--rule-strong:#b4b4b9;--red:#bf2d24;--red-deep:#9e2119;
+  --acc:#1d1d1f;--acc-ink:#ffffff;--tag:#1d1d1f;--tagbg:rgba(29,29,31,.06);--stripe:transparent;--tape:#1d1d1f;--tape-ink:#ffffff;
+  --b0:#bf2d24;--b1:#86868b;--b2:#6e6e73;--b3:#4a4a4f;--b4:#2c2c30;--b5:#1d1d1f;
+  --a-stakers:#1d1d1f;--a-miners:#1d1d1f;--a-buyers:#1d1d1f;--a-newcomers:#1d1d1f;
+  --teal:#1d1d1f;--teal-deep:#000;--teal-soft:rgba(29,29,31,.05);--warm:#bf2d24;--warm-soft:rgba(191,45,36,.08);
+  --link:#0066cc;
+  --sans:-apple-system,BlinkMacSystemFont,'Geist','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --disp:-apple-system,BlinkMacSystemFont,'Geist','Helvetica Neue',Helvetica,Arial,sans-serif;--pix:var(--disp);--serif:var(--disp);
   color-scheme:light;
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0e0e0e;--paper:#0e0e0e;--paper-deep:#171717;--ink:#f2f2f2;--ink-soft:#dedede;--soft:#9a9a9a;--softer:#777;
-  --rule:#262626;--rule-strong:#3a3a3a;--acc:#f2f2f2;--acc-ink:#0e0e0e;--tag:#f2f2f2;--tagbg:rgba(242,242,242,.08);--tape:#f2f2f2;--tape-ink:#0e0e0e;
-  --b1:#777;--b2:#9a9a9a;--b3:#b8b8b8;--b4:#d6d6d6;--b5:#f2f2f2;
-  --a-stakers:#f2f2f2;--a-miners:#f2f2f2;--a-buyers:#f2f2f2;--a-newcomers:#f2f2f2;
-  --teal:#f2f2f2;--teal-deep:#fff;--teal-soft:rgba(242,242,242,.06);
+  --bg:#000000;--paper:#000000;--paper-deep:#1d1d1f;--ink:#f5f5f7;--ink-soft:#d2d2d7;--soft:#86868b;--softer:#6e6e73;
+  --rule:#424245;--rule-strong:#5a5a5e;--red:#ff6961;--red-deep:#e0524a;
+  --acc:#f5f5f7;--acc-ink:#000000;--tag:#f5f5f7;--tagbg:rgba(245,245,247,.08);--tape:#f5f5f7;--tape-ink:#000000;
+  --b1:#6e6e73;--b2:#86868b;--b3:#a1a1a6;--b4:#d2d2d7;--b5:#f5f5f7;
+  --a-stakers:#f5f5f7;--a-miners:#f5f5f7;--a-buyers:#f5f5f7;--a-newcomers:#f5f5f7;
+  --teal:#f5f5f7;--teal-deep:#fff;--teal-soft:rgba(245,245,247,.06);
+  --link:#2997ff;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--ink);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}
+a{color:var(--ink);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rule-strong)}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 h1,h2,h3{margin:0;font-family:var(--disp);font-weight:600;letter-spacing:-.03em;text-wrap:balance}
-h1{font-size:clamp(38px,5.6vw,64px);line-height:1.02;letter-spacing:-.035em;max-width:16ch}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.04;letter-spacing:-.03em;max-width:18ch;font-weight:500}
 h1 em,h2 em{font-style:normal;color:var(--red)}
-h2{font-size:clamp(26px,3vw,32px);line-height:1.1}
+h2{font-size:clamp(24px,2.8vw,30px);line-height:1.12;font-weight:500}
 h3{font-size:19px;letter-spacing:-.02em}
 .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
-.mono{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
 .sm{font-size:14px;color:var(--soft);line-height:1.55}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
 .kicker b{color:var(--ink);font-weight:500}
 .pix{font-family:var(--disp);letter-spacing:-.02em}
 
@@ -46,12 +51,13 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .wordmark a{color:inherit}.wordmark a:hover{text-decoration:none}
 .wordmark small{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--softer);margin-left:12px;text-transform:uppercase;font-weight:400}
 .wordmark small a{color:var(--soft)}
-.links{display:flex;gap:26px;align-items:center;font-size:15px}
-.links a{color:var(--soft);padding-bottom:2px;border-bottom:1px solid transparent}
+.links{display:flex;gap:26px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.links a{color:var(--ink);padding-bottom:2px;border-bottom:1px solid transparent}
 .links a:hover,.links a[aria-current]{color:var(--ink);text-decoration:none;border-bottom-color:var(--ink)}
 .links a.cta{color:var(--soft)}
+.links a.cta:hover{color:var(--ink)}
 .brk::before,.brk::after{display:none}
-.btn{display:inline-block;font-size:14px;font-weight:500;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);border-radius:2px}
+.btn{display:inline-block;font-size:14px;font-weight:500;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);border-radius:8px}
 .btn:hover{text-decoration:none;background:var(--ink);color:var(--bg)}
 .btn.red{background:var(--red);border-color:var(--red);color:#fff}
 .btn.red:hover{background:var(--red-deep);border-color:var(--red-deep);color:#fff}
@@ -67,7 +73,7 @@ footer.site a{color:var(--soft)}footer.site a:hover{color:var(--ink)}
 .badge.inferred,.badge.probable,.badge.live_unconfirmed,.badge.redirected,.badge.manual{color:var(--soft)}
 .badge.unknown,.badge.unverified,.badge.unchecked{color:var(--softer)}
 .badge.unreachable,.badge.malformed,.badge.mismatch{color:var(--red)}
-.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);white-space:normal;overflow-wrap:anywhere}
 .pill+.pill::before{content:"·";margin:0 8px 0 2px;color:var(--rule-strong)}
 a.pill:hover{color:var(--ink)}
 .dots{font-family:var(--mono);letter-spacing:1px;white-space:nowrap}
@@ -80,11 +86,11 @@ a.pill:hover{color:var(--ink)}
 .meter i.on{background:var(--ink)}
 
 /* controls: sentence case, one hairline */
-.chip{padding:6px 11px;border:1px solid var(--rule-strong);font-size:13px;color:var(--soft);background:transparent;border-radius:2px}
+.chip{padding:6px 11px;border:1px solid var(--rule-strong);font-size:13px;color:var(--soft);background:transparent;border-radius:8px}
 .chip:hover{border-color:var(--ink);color:var(--ink)}
 .chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .chip .n{opacity:.6;margin-left:6px}
-.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:2px;overflow:hidden}
+.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:8px;overflow:hidden}
 .seg button{padding:7px 13px;font-size:13px;color:var(--soft);border-right:1px solid var(--rule-strong)}
 .seg button:last-child{border-right:0}
 .seg button.on{background:var(--ink);color:var(--bg)}
@@ -112,3 +118,19 @@ a.term:hover{color:var(--ink);text-decoration:none}
 .termpop .tp-body p{margin:0 0 8px;color:var(--ink-soft)}
 .termpop .tp-body p:last-child{margin:0}
 @media (prefers-reduced-motion:no-preference){.termpop{animation:tp .12s ease-out}@keyframes tp{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}}
+
+/* the sheet: label left in mono, value right, hairline between rows. The register of every subnet and narrator page. */
+.sheet{border-top:1px solid var(--ink)}
+.sheet .srow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 16px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline;font-size:15px}
+.sheet .srow .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);padding-top:3px}
+.sheet .srow .v{min-width:0;display:grid;gap:2px}
+.sheet .srow .v b{font-family:var(--disp);font-weight:500;font-size:17px;letter-spacing:-.015em;color:var(--ink)}
+.sheet .srow .v span,.sheet .srow .v .sub{color:var(--soft);font-size:14px}
+.sheet .srow .v .open{color:var(--red)}
+.sheet .srow .v p{margin:0;color:var(--ink);line-height:1.5}
+.group{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:500;padding:26px 0 8px}
+.group+.sheet{border-top-color:var(--ink)}
+.stats{display:flex;gap:44px;flex-wrap:wrap}
+.stats b{display:block;font-family:var(--disp);font-weight:600;font-size:40px;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+@media (max-width:600px){.sheet .srow{grid-template-columns:1fr;gap:2px}.stats{gap:24px 32px}}
