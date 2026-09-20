@@ -14,7 +14,7 @@ The [voices](/narrative/) are the second instrument. Perception is made of words
 
 ## Who built it
 
-Mikyö Clark. I built the community function at EigenLayer from zero through its token launch, ran go-to-market for Ritual, an AI-native Layer 1, and for Inversed, an agent governance layer, and now run Compression, a firm for organizational redesign around agentic AI. The longer version is at [mikyo.one](https://www.mikyo.one). The argument behind this index is in [The Network That Wrote Its Org Chart in Code](https://www.mikyo.one/bittensor/).
+Mikyö Clark. I built the community function at EigenLayer from zero through its token launch, ran go-to-market for Ritual, an AI-native Layer 1, and for Inversed, an agent governance layer, and now run Compression, a firm for organizational redesign around agentic AI. The longer version is at [mikyo.one](https://www.mikyo.one). The argument behind this index is on the [home page](/).
 
 ## How to use it
 
