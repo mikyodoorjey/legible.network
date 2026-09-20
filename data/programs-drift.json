@@ -1,0 +1,82 @@
+{
+ "checked_at": "2026-09-19",
+ "programs": {
+  "107": {
+   "repo": "https://github.com/minos-protocol/minos_subnet",
+   "commit": "289e54ae4cc913be93f5dfe8c44febb29363dc7b",
+   "head": "289e54ae4cc913be93f5dfe8c44febb29363dc7b",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "120": {
+   "repo": "https://github.com/AffineFoundation/affine",
+   "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
+   "head": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "44": {
+   "repo": "https://github.com/score-technologies/turbovision",
+   "commit": "d6c55296e2be449c56ed9738707730e4e300fa65",
+   "head": "d6c55296e2be449c56ed9738707730e4e300fa65",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "51": {
+   "repo": "https://github.com/Datura-ai/lium-io",
+   "commit": "6102031346d7ee50c3fca16c44e3864971643217",
+   "head": "6102031346d7ee50c3fca16c44e3864971643217",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "64": {
+   "repo": "https://github.com/chutesai/chutes-api",
+   "commit": "3b5609f42f84e29dea374382ef1fa95b0fda329c",
+   "head": "3b5609f42f84e29dea374382ef1fa95b0fda329c",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "8": {
+   "repo": "https://github.com/taoshidev/vanta-network",
+   "commit": "3fd1dcfa87cc92a72e45a56f389ef346c57e7f54",
+   "head": "3fd1dcfa87cc92a72e45a56f389ef346c57e7f54",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "80": {
+   "repo": "https://github.com/openroboto-ai/openroboto-subnet",
+   "commit": "726e42aea3a8901dc2f431ab8d17c7d5c46594a4",
+   "head": "726e42aea3a8901dc2f431ab8d17c7d5c46594a4",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "97": {
+   "repo": "https://github.com/unarbos/albedo",
+   "commit": "16049169c71a353965407625037d2fd86de6b7d8",
+   "head": "16049169c71a353965407625037d2fd86de6b7d8",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  }
+ },
+ "summary": {
+  "programs": 8,
+  "with_stale_fields": 0,
+  "errors": 0
+ }
+}

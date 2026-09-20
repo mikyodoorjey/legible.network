@@ -219,14 +219,30 @@ def program_card(m, sub=None):
     for name in FIELDS:
         f = (m.get("fields") or {}).get(name) or {"text": "", "trust": "unknown"}
         rows.append(
-            f'<div class="pf trust-{e(f.get("trust", "unknown"))}"><span class="mono" title="{e(FIELD_QUESTION[name])}">{e(FIELD_LABEL[name])}</span>'
+            f'<div class="pf trust-{e(f.get("trust", "unknown"))}" data-f="{name}"><span class="mono" title="{e(FIELD_QUESTION[name])}">{e(FIELD_LABEL[name])}</span>'
             f'<div><p>{e(f.get("text", ""))}</p>{source_line(f, m)}</div></div>')
     foot = (f'<p class="sm pfoot">{strength(m)} of 7 fields rest on the chain or the code. '
             f'A manifest is the site\'s reading of the subnet\'s program, not a review; each field links its source. '
             f'<a href="/programs/">All programs</a> · <a href="/method/#the-programs-what-they-record">What a field means</a> · '
             f'<a href="{issue_url(m)}">Correct a field</a></p>')
+    drift = DRIFT_JS.replace("__UID__", str(m["netuid"])) if repo.get("commit") else ""
     return (f'<section class="program" id="program"><div class="pg-head">{"".join(head)}</div>'
-            f'{"".join(rows)}{foot}</section>')
+            f'{"".join(rows)}{foot}{drift}</section>')
+
+
+DRIFT_JS = """<script>
+(function(){
+  var el=document.getElementById('program');if(!el)return;
+  fetch('/data/programs-drift.json').then(function(r){return r.ok?r.json():null}).then(function(d){
+    if(!d||!d.programs)return;var p=d.programs['__UID__'];if(!p||p.error||!p.ahead_by)return;
+    var f=el.querySelector('.pfoot');
+    var msg='Code moved '+p.ahead_by+' commit'+(p.ahead_by===1?'':'s')+' since this reading, checked '+d.checked_at+
+      (p.stale_fields&&p.stale_fields.length?'; the file behind '+p.stale_fields.join(', ')+' changed, so that field may be stale.':'; the cited files are unchanged.');
+    if(f)f.insertAdjacentHTML('afterbegin','<span class="drift">'+msg+'</span> ');
+    (p.stale_fields||[]).forEach(function(k){var row=el.querySelector('.pf[data-f="'+k+'"] .src');if(row)row.insertAdjacentHTML('beforeend','<span class="badge stale">stale</span>')});
+  }).catch(function(){});
+})();
+</script>"""
 
 
 PROGRAM_CSS = """

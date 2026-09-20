@@ -140,3 +140,5 @@ a.term:hover{color:var(--ink);text-decoration:none}
 .tdot.trust-read{background:var(--rule-strong)}
 .tdot.trust-unknown{background:transparent;border:1px solid var(--rule-strong)}
 .prog .row .tdots{margin-right:4px}
+.badge.stale{color:var(--red)}
+.program .drift{display:block;color:var(--red);margin-bottom:6px}
