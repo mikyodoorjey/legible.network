@@ -1,6 +1,8 @@
 # legible.network
 
-Two instruments for reading the Bittensor ecosystem, one site.
+Three instruments for reading the Bittensor ecosystem, one site, under one argument: Ethereum made Bitcoin's money programmable, Bittensor makes the mining programmable.
+
+**The Mining Programs** (v1): each of the 32 indexed subnets as a mining program, written down. Seven fields per subnet (the work, how it is scored, how the pay splits, who judges, how often it turns, who buys, what has been gamed), each with a source and a six-value trust level naming what the claim rests on: the chain, the code at a pinned commit, the subnet's own docs, a statement on record, the site's own reading, or not found. Where the sources disagree, the field says so. Live at [/programs/](https://legible.network/programs/) and on each subnet page as The program. Method at [/method/#the-programs-what-they-record](https://legible.network/method/#the-programs-what-they-record). A weekly drift check marks fields whose cited file has changed since the reading.
 
 **The Subnet Legibility Index** (v1): what a first-time reader can find out about the 32 Bittensor subnets with the largest share of emission, in five minutes, from the subnet's own public materials. Scored for four audiences (stakers, miners, buyers, newcomers) on a four-question spine, 0 to 5 per cell. Findability, not quality. Live at [legible.network](https://legible.network). Rubric at [/method/#the-index-what-it-scores](https://legible.network/method/#the-index-what-it-scores). Method at [/method/#the-index-how-it-was-applied](https://legible.network/method/#the-index-how-it-was-applied).
 
