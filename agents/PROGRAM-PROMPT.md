@@ -55,8 +55,8 @@ When the sources disagree, and they often do, the field carries the highest-trus
     "work":     { "text": "...", "trust": "docs", "url": "...", "quote": "..." },
     "scoring":  { "text": "...", "trust": "code", "path": "affine/affine/score.py", "url": "...", "quote": "...", "disagrees": "..." },
     "split":    { "text": "...", "trust": "code", "path": "...", "url": "...", "quote": "..." },
-    "judges":   { "text": "...", "trust": "chain", "snapshot": "data/hyperparams-2026-09-20.json", "quote": "..." },
-    "cadence":  { "text": "...", "trust": "chain", "snapshot": "data/hyperparams-2026-09-20.json", "quote": "..." },
+    "judges":   { "text": "...", "trust": "chain", "snapshot": "data/hyperparams-2026-09-19.json", "quote": "..." },
+    "cadence":  { "text": "...", "trust": "chain", "snapshot": "data/hyperparams-2026-09-19.json", "quote": "..." },
     "buyer":    { "text": "...", "trust": "read", "url": "...", "quote": "..." },
     "exploits": { "text": "...", "trust": "said", "statement": "sn120-002", "url": "...", "quote": "..." }
   },

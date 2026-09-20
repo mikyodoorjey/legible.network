@@ -2,7 +2,7 @@
   "netuid": 107,
   "name": "Minos",
   "version": "1.0",
-  "read_on": "2026-09-20",
+  "read_on": "2026-09-19",
   "commodity": "science",
   "repo": {
     "url": "https://github.com/minos-protocol/minos_subnet",
@@ -28,18 +28,18 @@
       "trust": "docs",
       "url": "https://api.theminos.ai/scoring/network-config",
       "quote": "winner_weight 0.8, dust_top_n 20, dust_decay 0.9, min_participation_rounds 5, participation_window 20",
-      "disagrees": "The about page and whitepaper say the top miner wins 100 percent of emissions (sn107-004, Winner-Take-All); the code's fallback defaults are 0.9 winner and 0.8 decay (utils/weight_tracking.py); the live config on 2026-09-20 is 0.8 and 0.9."
+      "disagrees": "The about page and whitepaper say the top miner wins 100 percent of emissions (sn107-004, Winner-Take-All); the code's fallback defaults are 0.9 winner and 0.8 decay (utils/weight_tracking.py); the live config on 2026-09-19 is 0.8 and 0.9."
     },
     "judges": {
       "text": "Seven validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on. A validator re-runs every submitted configuration itself, in an isolated container, with hap.py as referee, so judging is a full re-execution rather than a sample. Round files are hashed before serving and released after the round, so any participant can reproduce a score. Validators below a stake floor are left out of the canonical ranking.",
       "trust": "chain",
-      "snapshot": "data/hyperparams-2026-09-20.json",
+      "snapshot": "data/hyperparams-2026-09-19.json",
       "quote": "commit_reveal_weights_enabled True, weights_version 20; chain-2026-09-09.json active_validators 7"
     },
     "cadence": {
       "text": "A round every 72 minutes, the subnet's tempo of 360 blocks, each with a fresh synthetic genome carrying hidden mutations. Weights are set every round. A new registration is immune from deregistration for 14,400 blocks, about 48 hours, three times the 5,000 most subnets use.",
       "trust": "chain",
-      "snapshot": "data/hyperparams-2026-09-20.json",
+      "snapshot": "data/hyperparams-2026-09-19.json",
       "quote": "tempo 360, immunity_period 14400"
     },
     "buyer": {
@@ -49,7 +49,7 @@
       "quote": "05 Production Deployment Ship the consensus caller as a production-grade service"
     },
     "exploits": {
-      "text": "Over-calling: a callset that emits far more variants than targets is penalized by the overcall guardrail, and an implausible ratio of variant types is gated to zero. Memorizing the answer: mutations are planted fresh each round at positions not published in advance. Sybil hotkeys: the code pays one representative per coldkey, but the live config on 2026-09-20 has reward_normalization set to false.",
+      "text": "Over-calling: a callset that emits far more variants than targets is penalized by the overcall guardrail, and an implausible ratio of variant types is gated to zero. Memorizing the answer: mutations are planted fresh each round at positions not published in advance. Sybil hotkeys: the code pays one representative per coldkey, but the live config on 2026-09-19 has reward_normalization set to false.",
       "trust": "code",
       "path": "utils/reward_normalization.py",
       "url": "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/reward_normalization.py",
