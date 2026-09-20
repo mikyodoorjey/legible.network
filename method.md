@@ -18,6 +18,8 @@ Two vocabularies are kept apart on purpose. **Scoring** belongs to the puzzle: a
 
 The home page opens with one argument: Ethereum made Bitcoin's money programmable, and Bittensor makes the mining programmable. It is one person's reading of the network, and the instruments do not depend on it. The index would score the same subnets the same way if the argument were wrong, and the map records what narrators say whether or not it agrees with them.
 
+The [programs](/programs/) are the argument turned into an instrument: each subnet's puzzle written down in seven sourced fields. They are a reading, labelled as such, and the index would rate the same subnets the same way without them.
+
 What the argument takes from the record is its lineage. The phrase has four sourced uses in the map: Jacob Steeves in October 2025 as the antecedent, Mark Jeffrey on 19 February 2026 as the first exact use on record, Ala Shaabana on 25 March 2026 as the shorthand, and the foundation's own about page on 15 September 2026 for the Ethereum comparison, which the foundation lands on markets and the argument lands on mining. The home page links each. The choice of word, and the line that Bittensor programs work that can only be verified by judging it, are the argument's own, and are credited to nobody in the record.
 
 ## The index: what it scores
@@ -298,6 +300,67 @@ The map is only as good as what could be reached. The coverage table below says,
 ### Limits
 
 Transcripts of podcasts and videos are often machine generated, and a quote from one carries that transcript's errors; the transcript kind is recorded on every statement. Posts on X frequently fail to fetch, and much of the early network's talk happened on Discord, which is not read. Statements were collected in English. The map is a sample of what could be reached in a bounded session, not a census of everything said. Absence from the map is not evidence of silence.
+
+## The programs: what they record
+
+### What a program is
+
+The home page argues that a subnet is a mining program: what Bitcoin hard-coded, a subnet writes. The programs are that argument turned into an instrument. For each of the 32 indexed subnets, one manifest records what the program says, in seven fields, each with a source and a trust level that names what kind of thing the claim rests on. The index measures whether a first-time reader can find the puzzle. The program records what the puzzle is. Neither judges whether the puzzle is worth solving.
+
+A program is the site's reading of the mechanism, not a review of it. "The scoring pays one representative per coldkey" is a field. "The scoring is weak" is not.
+
+### The seven fields
+
+| Field | The question | Where it usually lives |
+|---|---|---|
+| The work | What is a miner paid to produce? | The README, the docs, the explainer's one sentence |
+| How it is scored | How does a validator judge it, against what, with what formula? | Validator code, a scoring document, a scoring endpoint |
+| How the pay splits | How does the subnet's miner share divide between miners: winner takes all, equal shares, proportional, decaying? | Weight-setting code, a network configuration |
+| Who judges | Who validates, how many, and what may they do: set weights, commit and reveal, re-run the work, sample it? | The chain hyperparameters, validator code, the metagraph |
+| How often it turns | How often does the puzzle turn: tempo, rounds, windows, challenges? | The chain tempo, a round interval in code or configuration |
+| Who buys | Who pays for the output today, and how? | A pricing page, a customer statement, or nothing |
+| What has been gamed | What have miners optimized instead of the work, and what did the program do about it? | Anti-gaming documentation, guardrails in code, a statement in the map, an audit log |
+
+The protocol's default division of emission between miners, validators and the subnet owner is not a field. The split field records how the miner share divides among miners, because that is what the program decides.
+
+### Trust, six values
+
+Trust says what kind of thing a claim rests on, highest first. It is a different question from the index's verified, inferred, unknown, which says whether the scorer fetched the page. A validator or a buyer asks the trust question first: can I check this myself, and against what?
+
+| On screen | Identifier | Means | Carries |
+|---|---|---|---|
+| chain | chain | A value read from the chain: a hyperparameter, a metagraph count | The snapshot file it was read from |
+| code | code | Read in the subnet's repository at a pinned commit | The path, the file at that commit, the line or value quoted |
+| own docs | docs | The subnet's own prose: README, docs site, front page, paper, llms.txt | The URL, fetched on the reading date, and a quote under 25 words |
+| on record | said | A statement in the narrative map | The statement id, its URL, its quote |
+| our reading | read | The site's own inference from code, absence, or a third party | The URL inferred from, and what it shows |
+| not found | unknown | Looked for and not found | What was looked for and where; no URL, no quote |
+
+Each manifest pins one repository commit and its date. Everything at code trust was read at that commit. The subnet page shows the commit and the reading date beside the program, so a reader knows how old the reading is before trusting it.
+
+### When the sources disagree
+
+They often do. A field carries the highest-trust reading in its text and the disagreement beneath it, naming both readings and both sources. The three hand-written calibration programs each found one: a scoring page describing four weighted metrics over seven days where the code scores one metric over one day; a whitepaper saying winner takes all where the live configuration pays 0.8 to the winner; an anti-sybil rule present in code and switched off in the live configuration. A program that finds a disagreement is doing its job. The site does not decide which source is right; it records that they differ and lets the reader, or the subnet team, settle it.
+
+### Sources, in the order a reader looks
+
+1. The index's evidence for the subnet: its own words, its artifacts, the sixteen cells. The cells for how it resists gaming usually point at the scoring.
+2. The explainer: its one sentence is a candidate for the work; its account of how the work gets done names the file to open.
+3. The narrative map: every statement about the subnet, for what has been gamed and sometimes for who buys.
+4. The chain hyperparameters, snapshotted on the reading date: tempo, immunity period, commit and reveal, the weights rate limit.
+5. The repository: cloned, the head commit pinned, the validator, the scoring module and the weight-setting code read.
+6. The subnet's own documentation and any scoring or configuration endpoint it publishes.
+7. At most three web searches, only for who buys and what has been gamed.
+
+Discord is never read. Three programs (SN120, SN64, SN107) were read by hand as the calibration set. The other 29 were read by four agents against one brief, `agents/PROGRAM-PROMPT.md`, in the index's slices, with 25 minutes and 20 searches per subnet. A check script gates publication: every field present, trust in the set, a URL and a quote for every field that is not unknown, a path and a pinned commit for every code field, a statement id that exists for every on-record field, quotes under 25 words, and every cited URL in the manifest's source list. Fields at our-reading or not-found trust were reviewed by hand before publication.
+
+### Freshness
+
+Subnet code changes weekly. Each program shows the date it was read and the commit it was read at. A weekly check compares the pinned commit against the repository's current head and marks a field stale when a file it cites has changed since; the page says so beside the field. Re-reading a stale program is a human-triggered run of the brief against that subnet, followed by the check, the review and the build. A stale program that says it is stale is still a record. A stale program that pretends to be current is not.
+
+### Limits
+
+A program records what the code, the docs, and the chain say. It cannot see what a validator actually runs if that differs from the published repository, and several subnets publish their validator elsewhere than the repository the chain identity names. A field at own-docs trust is a claim by the team, not a fact the site verified. A field at not-found trust means the reading agent did not find it within budget, not that it does not exist. Corrections are expected.
 
 ## Confidence, on both sides
 

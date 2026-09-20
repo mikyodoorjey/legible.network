@@ -101,8 +101,16 @@ def first_sentences(text, n=2):
     return " ".join(parts[:n]).strip()
 
 
+PROGRAMS = {}  # netuid -> mining program manifest; set by build_site before build_all
+
+
 def program_card(sub, ent):
-    """The subnet as a mining program: the work, how it is scored, what it emits."""
+    """The subnet as a mining program. From the manifest when one exists (seven sourced fields),
+    otherwise the three-row card assembled from the explainer."""
+    m = PROGRAMS.get(sub["netuid"])
+    if m:
+        from programs import program_card as manifest_card
+        return manifest_card(m, sub)
     fm = (ent or {}).get("fm", {})
     secs = dict((ent or {}).get("sections", []))
     work = fm.get("one_sentence") or (sub.get("own_words") or {}).get("quote") or ""

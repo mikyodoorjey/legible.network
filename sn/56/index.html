@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=4c94bff0bd">
+<link rel="stylesheet" href="/assets/site.css?v=10997e3b4b">
 <link rel="stylesheet" href="/assets/narrative.css?v=ba4454fd70">
 <style>
 .sn{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start;padding-top:32px}
@@ -82,6 +82,15 @@
 .program>div:not(.pg-head){display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)}
 .program>div:not(.pg-head) .mono{padding-top:3px}
 .program>div p{margin:0;font-size:16px;color:var(--ink);line-height:1.5}
+.program .pf>div{min-width:0}
+.program .pf .src{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft);display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+.program .pf .src code{font-family:var(--mono);font-size:10.5px;letter-spacing:0;color:var(--soft)}
+.program .pf .quote{margin-top:4px;font-size:13.5px;color:var(--ink-soft);font-style:italic;line-height:1.45}
+.program .pf .quote::before{content:"\201C"}.program .pf .quote::after{content:"\201D"}
+.program .pf .dis{margin-top:6px;font-size:13.5px;color:var(--ink-soft);line-height:1.45;border-left:2px solid var(--rule-strong);padding-left:10px}
+.program .pf .dis .mono{display:block;margin-bottom:2px;color:var(--ink)}
+.program .pfoot{padding:12px 0 0;max-width:70ch}
+.program .pf.trust-unknown p:first-child{color:var(--soft)}
 .says .sm,.said .sm{margin:2px 0 6px}
 .says h3{font-size:15px;margin:16px 0 4px}
 .says .fsum{margin:0 0 4px;font-size:14px;color:var(--ink-soft)}
@@ -135,6 +144,7 @@
   <span class="wordmark"><a href="/">Legible</a></span>
   <div class="links">
     <a href="/sn/">Subnets</a>
+    <a href="/programs/">Programs</a>
     <a href="/narrative/">Voices</a>
     <a href="/method/">Method</a>
     <a href="/about/">About</a>

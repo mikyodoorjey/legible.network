@@ -45,6 +45,20 @@ def main():
         fails.append(f"index.json rubric_version {data.get('rubric_version')} != method.md scale version {md_ver}")
 
     pages = ["index.html", "method/index.html", "about/index.html", "404.html", "narrative/index.html"]
+    ppath = REPO / "data" / "programs.json"
+    praw = sorted((REPO / "data" / "programs" / "raw").glob("*.json"))
+    if praw:
+        pages.append("programs/index.html")
+        if not ppath.exists():
+            fails.append("data/programs.json missing while raw manifests exist")
+        else:
+            pd = json.loads(ppath.read_text(encoding="utf-8"))
+            if pd.get("total") != len(praw):
+                fails.append(f"programs.json has {pd.get('total')} programs, raw has {len(praw)}")
+            for m in pd.get("programs", []):
+                page = REPO / "sn" / str(m["netuid"]) / "index.html"
+                if page.exists() and 'class="pf trust-' not in page.read_text(encoding="utf-8"):
+                    fails.append(f"sn/{m['netuid']}: program card not rendered from the manifest")
     npath = REPO / "data" / "narrative.json"
     if npath.exists():
         nd = json.loads(npath.read_text(encoding="utf-8"))
@@ -95,6 +109,8 @@ def main():
         sm = (REPO / "sitemap.xml").read_text(encoding="utf-8") if (REPO / "sitemap.xml").exists() else ""
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/method/", f"{SITE}/about/", f"{SITE}/sn/"}
         want |= {f"{SITE}/narrative/"}
+        if praw:
+            want |= {f"{SITE}/programs/"}
         if npath.exists():
             want |= {f"{SITE}/narrative/frames/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"] if n["kind"] != "subnet"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))

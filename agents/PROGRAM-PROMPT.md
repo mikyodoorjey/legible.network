@@ -48,7 +48,7 @@ When the sources disagree, and they often do, the field carries the highest-trus
   "netuid": 120,
   "name": "Affine",
   "version": "1.0",
-  "read_on": "2026-09-20",
+  "read_on": "2026-09-19",
   "commodity": "training",
   "repo": { "url": "https://github.com/AffineFoundation/affine", "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea", "committed": "2026-09-10" },
   "fields": {
