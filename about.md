@@ -16,8 +16,6 @@ The [voices](/narrative/) are the second instrument. Perception is made of words
 
 Mikyö Clark. I built the community function at EigenLayer from zero through its token launch, ran go-to-market for Ritual, an AI-native Layer 1, and for Inversed, an agent governance layer, and now run Compression, a firm for organizational redesign around agentic AI. The longer version is at [mikyo.one](https://www.mikyo.one). The argument behind this index is in [The Network That Wrote Its Org Chart in Code](https://www.mikyo.one/bittensor/).
 
-I hold no position in any subnet token and have not been paid by any subnet, validator, or foundation for this work. If that changes it will be stated here.
-
 ## How to use it
 
 On the map, pick a narrator and read them by era, or pick a metaphor and follow it across narrators. The framework view lays narrators side by side, slot by slot. Every statement carries its source and its confidence, and unverified statements are hidden until you switch them on. On the index, sort by an audience and read the deltas: a subnet that moves a long way between its emission rank and its buyer-legibility rank is telling you something about who it has been talking to. Open a subnet page for the evidence behind every score. Every subnet page opens with a plain-language explainer, and dotted terms open a definition where you are. If a rating or a quote is wrong, the [method](/method/#corrections) page says how to fix it.
