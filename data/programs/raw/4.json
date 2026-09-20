@@ -1,0 +1,72 @@
+{
+  "netuid": 4,
+  "name": "Targon",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "compute",
+  "repo": {
+    "url": "https://github.com/manifold-inc/targon",
+    "commit": "511128aabc6416ae11179306e57c144a906c9894",
+    "committed": "2026-09-17"
+  },
+  "fields": {
+    "work": {
+      "text": "Attested GPU cards. A miner installs TargonOS, a signed operating system that wipes the machine and attests it to the network on every boot, and keeps confidential virtual machines available for rent. What is paid for is a live, verified card inside an auction class, whether or not a customer is using it. There is no request or response the miner answers.",
+      "trust": "code",
+      "path": "docs/miner/miner.md",
+      "url": "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/docs/miner/miner.md",
+      "quote": "Miner emissions are paid per card based on each auction's target price and the amount of compute live on the network"
+    },
+    "scoring": {
+      "text": "No quality score. Each auction, fetched from the Tower service, names target cards, a target price and a cap in cents per card hour. The pool is target price times target cards; each verified card earns the lesser of pool divided by live cards and the cap, times 1.2, as a fraction of the dollar value of the miner emission pool, itself computed from chain emission and the TAO price.",
+      "trust": "code",
+      "path": "internal/validator/callbacks/weights.go",
+      "url": "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/internal/validator/callbacks/weights.go",
+      "quote": "perMiner := min(pool/nodes, aucInfo.MaxPrice); minerIncentive := (float64(perMiner) * 1.2 * float64(bid.Count)) / (*c.EmissionPool * 100)"
+    },
+    "split": {
+      "text": "Proportional to verified cards in each auction, capped per card. Weight no auction covers is burned: split among the burn keys Tower names, remainder to uid 28. If payouts exceed the pool, every weight scales down pro rata. A node reporting fewer cards than the auction's min_cluster_size, 8 for the H200 and B200 classes in the docs example, earns nothing from that auction.",
+      "trust": "code",
+      "path": "internal/validator/callbacks/weights.go",
+      "url": "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/internal/validator/callbacks/weights.go",
+      "quote": "forBurn := max(setup.U16MAX-sumScores, 0); finalUids = append(finalUids, uint16(28))"
+    },
+    "judges": {
+      "text": "Seven validators were active on the 2026-09-09 chain snapshot, against five miners. Commit-reveal is on, weights at most once per 100 blocks. A validator re-attests each miner node during the interval, counts its GPU cards against the auction's cluster minimum, prices it from Tower's auction table, and posts the weight extrinsic through a weights-api sidecar. Nothing about the compute's quality is judged, only its presence and attestation.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 7"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes, and the validator works in the same interval: it fetches auctions and the emission pool at the start, polls miner nodes every 30 blocks, and sets weights once per interval. A new registration is immune from deregistration for 7,520 blocks, about 25 hours, half again the usual 5,000.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 7520"
+    },
+    "buyer": {
+      "text": "Renters of confidential GPU and CPU machines by the hour, through the site and an unauthenticated inventory API. Prices run from $0.45 an hour for one RTX 4090 to $60 for an eight-card B300 class. On 2026-09-19 the inventory listed 33 SKUs, of which 7 showed any availability. No customer is named; the front page shows a logo strip and counters that read zero.",
+      "trust": "docs",
+      "url": "https://api.targon.com/tha/v3/inventory",
+      "quote": "\"name\":\"rtx4090-small\", \"type\":\"rental\", \"cost_per_hour\":0.45, \"available\":0"
+    },
+    "exploits": {
+      "text": "Free compute drew abuse. The May 2025 post says subsidised inference on other companies' models attracts a queue that leaves when prices rise, so emission will not fund it. The guard in code is attestation: only nodes that pass TargonOS attestation and report at least the cluster minimum enter an auction, and weight no auction covers burns rather than paying idle registrations.",
+      "trust": "said",
+      "statement": "sn4-010",
+      "url": "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+      "quote": "If we opened a gas station and cut our prices to $0, we would expect a line of cars"
+    }
+  },
+  "sources": [
+    "https://targon.com",
+    "https://docs.targon.com/providers/miner/",
+    "https://docs.targon.com/api/inventory",
+    "https://api.targon.com/tha/v3/inventory",
+    "https://www.manifold.inc/releases/no-such-thing-as-free-gas",
+    "https://github.com/manifold-inc/targon",
+    "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/docs/miner/miner.md",
+    "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/internal/validator/callbacks/weights.go",
+    "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/docs/sn4/sn4.md",
+    "https://raw.githubusercontent.com/manifold-inc/targon/511128aabc6416ae11179306e57c144a906c9894/README.md"
+  ]
+}

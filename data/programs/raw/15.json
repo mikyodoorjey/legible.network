@@ -1,0 +1,73 @@
+{
+  "netuid": 15,
+  "name": "ORO",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "agents",
+  "repo": {
+    "url": "https://github.com/ORO-AI/oro",
+    "commit": "fd0476f7aaf570d38dc405ab8b975683dfdbd285",
+    "committed": "2026-09-18"
+  },
+  "fields": {
+    "work": {
+      "text": "A shopping agent: one Python file exporting agent_main that, given a shopper's request and budget, searches a catalogue, compares listings and places an order inside a sealed environment. What is paid for is that agent's performance on the day's hidden tasks. Every run's trajectory is kept by the subnet as training data for its own model.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/README.md",
+      "quote": "Miners submit Python agents that search products, compare prices, and make purchase decisions."
+    },
+    "scoring": {
+      "text": "Per task, a verifier in the sealed runtime pays a reward from the episode receipt; a validator's run score is the mean reward over its tasks, failures count zero. In code the aggregate is success rate times a reasoning coefficient from 0.3 to 1.0. Race results are measured against a field baseline, the top-half mean; and the top agent holds the highest Overall, an average of its last three races.",
+      "trust": "code",
+      "path": "src/agent/scoring.py",
+      "url": "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/src/agent/scoring.py",
+      "quote": "final_score = success_rate * coefficient; COEFF_FLOOR = 0.3; COEFF_CEILING_THRESHOLD = 0.80",
+      "disagrees": "The docs scoring page fetched 2026-09-19 describes per-family verifier rewards averaged into run and race scores with no reasoning coefficient, while src/agent/scoring.py at the pinned commit still multiplies success rate by a 0.3 to 1.0 reasoning coefficient."
+    },
+    "split": {
+      "text": "Winner-heavy with a large burn. The Backend's designated top agent gets one slot, 25 percent of the weight vector under the default 0.75 burn rate. Every survivor of the last race gets a small integer taper, M down to 1, paid out of the burn budget so it keeps nonzero emission and escapes pruning. The rest burns to uid 0. Eliminated agents get nothing.",
+      "trust": "code",
+      "path": "subnet/validator/weight_distribution.py",
+      "url": "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/subnet/validator/weight_distribution.py",
+      "quote": "When `t_burn >= t_top` (e.g. 0.75 / 0.25 today): burn slot pinned at U16_MAX",
+      "disagrees": "The architecture page says the top agent receives the large majority of emissions with an optional burn; weight_setter.py at the pinned commit defaults _DEFAULT_BURN_RATE to 0.75, so the top slot is 25 percent of the vector and most of the rest burns."
+    },
+    "judges": {
+      "text": "Eleven validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on, weights at most once per 100 blocks. Validators run every agent themselves in Docker sandboxes and report episode receipts; the Backend aggregates included runs under an X-of-Y rule and designates the top. Each validator then fetches epoch-pinned standings and submits a deterministic vector, so the ranking comes from the Backend, not from the validator.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100; chain-2026-09-09.json active_validators 11"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The puzzle turns daily: qualifying is open for 24 hours, the race runs at once on hidden problems, and the next window opens when it completes. The validator ticks weights every 22 minutes, about three sets per epoch. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000, weights_rate_limit 100"
+    },
+    "buyer": {
+      "text": "Nobody is named. The front page sells nothing: it counts 3,947,209 scored trajectories and says the traces train the team's own model, which a June 2026 post lifted from 18.0 to 42.7 percent on the benchmark. There is no price, no customer and no product a buyer can use; a shopping assistant is promised for later. The miner's income is emission.",
+      "trust": "read",
+      "url": "https://oroagents.com",
+      "quote": "The best agent earns the rewards, and every run becomes training data."
+    },
+    "exploits": {
+      "text": "Hardcoding: within weeks agents matched queries to pre-computed product IDs, hid them in Caesar ciphers and planted benchmark keywords. Defences, dated April 2026: AST analysis and hash matching at upload, a hidden race problem bank nobody has seen, a qualifying bar that ratchets to 90 percent of the last winner, a reasoning judge that discounts fake thinking, and elimination of the bottom 65 percent of each race.",
+      "trust": "docs",
+      "url": "https://oroagents.com/blog/how-we-stop-miners-from-abusing-our-incentive-mechanism",
+      "quote": "the leaderboard was dominated by agents that didn't shop at all"
+    }
+  },
+  "sources": [
+    "https://oroagents.com",
+    "https://oroagents.com/blog",
+    "https://oroagents.com/blog/how-we-stop-miners-from-abusing-our-incentive-mechanism",
+    "https://oroagents.com/docs/miners/scoring",
+    "https://oroagents.com/docs/architecture",
+    "https://docs.oroagents.com/docs/miners/scoring",
+    "https://github.com/ORO-AI/oro",
+    "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/README.md",
+    "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/src/agent/scoring.py",
+    "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/subnet/validator/weight_distribution.py",
+    "https://raw.githubusercontent.com/ORO-AI/oro/fd0476f7aaf570d38dc405ab8b975683dfdbd285/subnet/validator/weight_setter.py"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "netuid": 97,
+  "name": "Albedo",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "training",
+  "repo": {
+    "url": "https://github.com/unarbos/albedo",
+    "commit": "16049169c71a353965407625037d2fd86de6b7d8",
+    "committed": "2026-09-18"
+  },
+  "fields": {
+    "work": {
+      "text": "A fine-tuned checkpoint of Qwen3.6-35B-A3B, an open 35 billion parameter model, trained further to act as a coding agent: read a real repository, run shell commands, make edits over several turns. The miner uploads it to HuggingFace or Hippius and commits a v7 reveal on chain. What is paid for is a checkpoint that beats the reigning king in a duel, twice.",
+      "trust": "docs",
+      "url": "https://albedo.tech/llms.txt",
+      "quote": "King-of-the-hill trajectory-distillation subnet on Bittensor (netuid 97, finney)."
+    },
+    "scoring": {
+      "text": "A duel on sampled coding-task prefixes. Per task an evaluator model rolls three reference runs, reduces them to milestones and writes yes-or-no questions. King and challenger each roll every task twice; judge models answer each question, and a side's score is its mean yes-rate over its runs. A run that collapses into a command loop scores 0 unjudged. The challenger wins when its score beats the king's by 0.025.",
+      "trust": "code",
+      "path": "src/albedo_eval_service/judge_core.py",
+      "url": "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/albedo_eval_service/judge_core.py",
+      "quote": "CHALLENGER_WIN_MARGIN = 0.025"
+    },
+    "split": {
+      "text": "Equal shares across a chain of at most five kings. A new winner takes slot 1 and the sitting kings shift down; the sixth drops off. The weight of 10,000 basis points is split evenly among the members, so the reigning king earns the same as a king it displaced. A member that has been deregistered, or an empty reign, sends its share to burn UID 0.",
+      "trust": "code",
+      "path": "src/set_reign_worker/service.py",
+      "url": "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/set_reign_worker/service.py",
+      "quote": "new_challenger_slot_1; shift_existing_down; split_weight_evenly"
+    },
+    "judges": {
+      "text": "Three validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Commit-reveal is off; weights may change at most once per 100 blocks, and the code refreshes them every 101. The judge is a backend pipeline of services on one Postgres state machine: it ingests commits, validates files, runs the whole duel on remote GPUs with judge models, crowns, and sets weights. Nothing is sampled from miners.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 3"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The puzzle turns per duel, not per epoch: a challenger is evaluated when it reaches the front of the queue and must win two separate evals, so a first win only re-queues it at priority 0. A king stands until displaced, then fades out over four further coronations. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000"
+    },
+    "buyer": {
+      "text": "Nobody is named. The front page offers a Chat with the King link to the current champion and nothing else: no price, no API, no customer and no unit of sale, on the site, in llms.txt or in the repository docs. The miner's income is emission.",
+      "trust": "read",
+      "url": "https://albedo.tech",
+      "quote": "Chat with the King"
+    },
+    "exploits": {
+      "text": "Re-rolling the duel: a hotkey is written to a used_hotkeys ledger once its submission finishes eval and cannot submit again, and a first win only re-queues the challenger, so the win must repeat. Copies: a secret-seeded sketch of each tensor rejects earlier entries and noised versions. Looping: 0.61 duplicate commands or a run of 5 scores 0 unjudged. Verdict-shaped text in a candidate's output is stripped before judging.",
+      "trust": "code",
+      "path": "src/chain_guard/db.py",
+      "url": "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/chain_guard/db.py",
+      "quote": "SELECT 1 FROM used_hotkeys WHERE hotkey = $1"
+    }
+  },
+  "sources": [
+    "https://albedo.tech/llms.txt",
+    "https://albedo.tech",
+    "https://github.com/unarbos/albedo",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/albedo_eval_service/judge_core.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/set_reign_worker/service.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/weight_setter/service.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/albedo_eval_service/control/repository.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/chain_guard/db.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/src/albedo_config/config.py",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/docs/SCORING.md",
+    "https://raw.githubusercontent.com/unarbos/albedo/16049169c71a353965407625037d2fd86de6b7d8/docs/MINING.md"
+  ]
+}

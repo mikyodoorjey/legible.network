@@ -10,6 +10,33 @@
    "stale_fields": [],
    "error": null
   },
+  "110": {
+   "repo": null,
+   "commit": null,
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "no pinned repository commit"
+  },
+  "114": {
+   "repo": "https://github.com/DendriteHQ/SOMA",
+   "commit": "83b828d695ae9551c1d4cd105a9965d29e778d75",
+   "head": "83b828d695ae9551c1d4cd105a9965d29e778d75",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
+  "118": {
+   "repo": "https://github.com/ditto-assistant/ditto-subnet",
+   "commit": "2b05b32b4f0b76e967b302c5a0bd0742207b4719",
+   "head": "2b05b32b4f0b76e967b302c5a0bd0742207b4719",
+   "ahead_by": 0,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": null
+  },
   "120": {
    "repo": "https://github.com/AffineFoundation/affine",
    "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
@@ -19,64 +46,253 @@
    "stale_fields": [],
    "error": null
   },
-  "44": {
-   "repo": "https://github.com/score-technologies/turbovision",
-   "commit": "d6c55296e2be449c56ed9738707730e4e300fa65",
-   "head": "d6c55296e2be449c56ed9738707730e4e300fa65",
+  "124": {
+   "repo": "https://github.com/swarm-subnet/swarm",
+   "commit": "fce8d303fc74d8d9d0731599a43964096a0b5d35",
+   "head": "fce8d303fc74d8d9d0731599a43964096a0b5d35",
    "ahead_by": 0,
    "changed_paths": [],
    "stale_fields": [],
    "error": null
+  },
+  "15": {
+   "repo": "https://github.com/ORO-AI/oro",
+   "commit": "fd0476f7aaf570d38dc405ab8b975683dfdbd285",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "19": {
+   "repo": "https://github.com/taostat/blockmachine-validator",
+   "commit": "25ca87c6227902d4af077423b4e4cce8c58c046c",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "28": {
+   "repo": "https://github.com/taostat/gm-validator",
+   "commit": "6993bb22dbe00f5e50c9e97d490f87c74cb67d8a",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "3": {
+   "repo": "https://github.com/unarbos/teutonic",
+   "commit": "72a9f8598b61568dafc416954d52d5f48b691678",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "34": {
+   "repo": "https://github.com/BitMind-AI/bitmind-subnet",
+   "commit": "45e92d821bca7928dbfdaac9630b012016972d23",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "38": {
+   "repo": "https://github.com/chronollm/sn38",
+   "commit": "01f596b424a01d40ec14db10493d329c0d1c97be",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "4": {
+   "repo": "https://github.com/manifold-inc/targon",
+   "commit": "511128aabc6416ae11179306e57c144a906c9894",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "44": {
+   "repo": "https://github.com/score-technologies/turbovision",
+   "commit": "d6c55296e2be449c56ed9738707730e4e300fa65",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "5": {
+   "repo": "https://github.com/hone-subnet-org/hone-subnet",
+   "commit": "34de7f646002a1d2fea96451aa2f1091fcbe0c13",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
   },
   "51": {
    "repo": "https://github.com/Datura-ai/lium-io",
    "commit": "6102031346d7ee50c3fca16c44e3864971643217",
-   "head": "6102031346d7ee50c3fca16c44e3864971643217",
-   "ahead_by": 0,
+   "head": null,
+   "ahead_by": null,
    "changed_paths": [],
    "stale_fields": [],
-   "error": null
+   "error": "HTTP 403"
+  },
+  "53": {
+   "repo": "https://github.com/hanlinai/engy",
+   "commit": "9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "56": {
+   "repo": "https://github.com/gradients-ai/G.O.D",
+   "commit": "8b673e2439273c4eff85f6de4a6d72d133f2a97f",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "58": {
+   "repo": "https://github.com/greevils-ai/greevils-cli",
+   "commit": "dd4decc28a3dcfc7883717625408dbc40229b9b5",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "61": {
+   "repo": "https://github.com/RedTeamSubnet/RedTeam",
+   "commit": "593cbaa51f8417d8daf6ecde41a32ca2a7e15623",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "62": {
+   "repo": "https://github.com/ridgesai/ridges",
+   "commit": "6ada4b77b476b22c414c76408194259ae663550b",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
   },
   "64": {
    "repo": "https://github.com/chutesai/chutes-api",
    "commit": "3b5609f42f84e29dea374382ef1fa95b0fda329c",
-   "head": "3b5609f42f84e29dea374382ef1fa95b0fda329c",
-   "ahead_by": 0,
+   "head": null,
+   "ahead_by": null,
    "changed_paths": [],
    "stale_fields": [],
-   "error": null
+   "error": "HTTP 403"
+  },
+  "68": {
+   "repo": "https://github.com/metanova-labs/nova",
+   "commit": "623f3456088f651609a1bcb870ab0587b0dc0520",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "75": {
+   "repo": "https://github.com/thenervelab/thebrain",
+   "commit": "3187525a9317ff70f7157c930124e19858dfe235",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
   },
   "8": {
    "repo": "https://github.com/taoshidev/vanta-network",
    "commit": "3fd1dcfa87cc92a72e45a56f389ef346c57e7f54",
-   "head": "3fd1dcfa87cc92a72e45a56f389ef346c57e7f54",
-   "ahead_by": 0,
+   "head": null,
+   "ahead_by": null,
    "changed_paths": [],
    "stale_fields": [],
-   "error": null
+   "error": "HTTP 403"
   },
   "80": {
    "repo": "https://github.com/openroboto-ai/openroboto-subnet",
    "commit": "726e42aea3a8901dc2f431ab8d17c7d5c46594a4",
-   "head": "726e42aea3a8901dc2f431ab8d17c7d5c46594a4",
-   "ahead_by": 0,
+   "head": null,
+   "ahead_by": null,
    "changed_paths": [],
    "stale_fields": [],
-   "error": null
+   "error": "HTTP 403"
+  },
+  "83": {
+   "repo": "https://github.com/toptensor/CliqueAI",
+   "commit": "0d3488ab808ee95bd350712ab99c2dc564f7a904",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "9": {
+   "repo": "https://github.com/macrocosm-os/iota",
+   "commit": "22d702acd07453dabb187abedfad185826091341",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "90": {
+   "repo": "https://github.com/KubeTEE-AI/kubetee-subnet",
+   "commit": "030c99226a2bbd02adebd9a05daabc4e7ac928da",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "91": {
+   "repo": "https://github.com/TensorLink-AI/cascade",
+   "commit": "e745a3271b4114b3d54b8acb8ea1350acaa7b112",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
+  },
+  "93": {
+   "repo": "https://github.com/bitcast-network/bitcast",
+   "commit": "e27397ed0a10402d0a14e6ae8a327802fcee8c43",
+   "head": null,
+   "ahead_by": null,
+   "changed_paths": [],
+   "stale_fields": [],
+   "error": "HTTP 403"
   },
   "97": {
    "repo": "https://github.com/unarbos/albedo",
    "commit": "16049169c71a353965407625037d2fd86de6b7d8",
-   "head": "16049169c71a353965407625037d2fd86de6b7d8",
-   "ahead_by": 0,
+   "head": null,
+   "ahead_by": null,
    "changed_paths": [],
    "stale_fields": [],
-   "error": null
+   "error": "HTTP 403"
   }
  },
  "summary": {
-  "programs": 8,
+  "programs": 32,
   "with_stale_fields": 0,
-  "errors": 0
+  "errors": 27
  }
 }

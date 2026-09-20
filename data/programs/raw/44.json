@@ -1,0 +1,72 @@
+{
+  "netuid": 44,
+  "name": "Score",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "inference",
+  "repo": {
+    "url": "https://github.com/score-technologies/turbovision",
+    "commit": "d6c55296e2be449c56ed9738707730e4e300fa65",
+    "committed": "2026-09-16"
+  },
+  "fields": {
+    "work": {
+      "text": "A hosted computer-vision model. The miner trains a model for one or more Elements (named tasks such as detecting players in football footage), deploys it on Chutes, a separate Bittensor subnet that rents model hosting, and records its fingerprint on chain. What is paid for is the model's answers to validator challenges, frame by frame, under a latency gate.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/README.md",
+      "quote": "raw footage becomes structured, decision-ready data in real time, with early deployments focused on professional sports"
+    },
+    "scoring": {
+      "text": "Per Element, each answer is scored on pillars (for example overlap with the answer key, player count, smoothness, role), each pillar times its manifest weight, summed. The sum is gated: subtract the Element's baseline theta, floor at delta_floor, multiply by beta, a difficulty factor. The answer key is real ground truth or a SAM3 segmentation. The winner is the highest average over at least 30 challenges in a 3-day window.",
+      "trust": "code",
+      "path": "scorevision/utils/manifest.py",
+      "url": "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/utils/manifest.py",
+      "quote": "return max(self.apply_baseline_gate(score=score), self.delta_floor); return self.beta * improvement"
+    },
+    "split": {
+      "text": "Winner takes all, per Element. Each Element carries a weight in the signed manifest, and the whole of that weight goes to the Element's single winner on the open-source track. On the private track the top three split the Element weight 0.80, 0.15, 0.05. Weight left unassigned, for an Element with no winner, goes to a fallback UID, 6 by default.",
+      "trust": "code",
+      "path": "scorevision/validator/core/weights.py",
+      "url": "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/validator/core/weights.py",
+      "quote": "PRIVATE_TRACK_RANKED_WEIGHT_SHARES = (0.80, 0.15, 0.05); share = float(elem_weight); weights_by_uid[winner_uid] = weights_by_uid.get(winner_uid, 0.0) + share"
+    },
+    "judges": {
+      "text": "Nine validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. The code names one central validator whose scoring shards pick the winners; audit validators spot-check miners rather than score them. A validator that finds no central registry on chain falls back to its own local scores. Weights go through a separate signer service.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 9",
+      "disagrees": "The draft whitepaper (notes/toward-manako/wp.md) describes an aggregation service merging every validator's shards with stake-weighted MAD outlier pruning; the code at the pinned commit reads winners from a single SCOREVISION_CENTRAL_VALIDATOR_HOTKEY and falls back to local data when it is absent."
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator's weights loop runs every 150 blocks, 30 minutes, by default; the runner scores each Element every 300 blocks unless the manifest sets its own window. Winners are chosen over a rolling 3-day window with a 30-challenge minimum. A new registration is immune from deregistration for 7,500 blocks, about 25 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 7500; central_validator.py --tempo default 150; SCOREVISION_PUBLIC_EVAL_WINDOW_DAYS 3.0"
+    },
+    "buyer": {
+      "text": "Nobody is named. The front page describes a research company building models and offers a Console link and a Let's Talk contact form. There is no price, no product page, no endpoint and no customer named in text on the site or in the repository; the README says early deployments focus on professional sports. The miner's income is emission.",
+      "trust": "read",
+      "url": "https://www.wearescore.com/",
+      "quote": "We're building models that turn raw video into structured intelligence."
+    },
+    "exploits": {
+      "text": "Copying a rival's model: when two miners score alike on the same challenges, recent and historical samples are compared, and a confirmed copy loses the tie to the earlier on-chain commit block. Slow but accurate models are zeroed by the latency gate. A blacklist file in the repository holds 120 hotkeys, reason unstated, and any weight to them is removed before signing.",
+      "trust": "code",
+      "path": "scorevision/validator/core/weights.py",
+      "url": "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/validator/core/weights.py",
+      "quote": "if hk and hk in blacklisted_hotkeys: weights_by_uid.pop(uid, None)"
+    }
+  },
+  "sources": [
+    "https://www.wearescore.com/",
+    "https://github.com/score-technologies/turbovision",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/README.md",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/VALIDATOR.md",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/utils/manifest.py",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/validator/core/weights.py",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/scorevision/miner/open_source/MINER.md",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/blacklist",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/notes/documentation/validator.md",
+    "https://raw.githubusercontent.com/score-technologies/turbovision/d6c55296e2be449c56ed9738707730e4e300fa65/notes/toward-manako/wp.md"
+  ]
+}

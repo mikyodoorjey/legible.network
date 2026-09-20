@@ -1,0 +1,77 @@
+{
+  "netuid": 114,
+  "name": "SOMA",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "inference",
+  "repo": {
+    "url": "https://github.com/DendriteHQ/SOMA",
+    "commit": "83b828d695ae9551c1d4cd105a9965d29e778d75",
+    "committed": "2026-09-16"
+  },
+  "fields": {
+    "work": {
+      "text": "Compression code. A miner submits an algorithm, model or hybrid that shrinks the context a coding agent sends to a language model: conversation history, tool output, repository files. The miner runs no server; the platform and validators run the agent with and without the compressor. What is paid for is the compressor that saves the most weighted tokens while the agent still solves its tasks.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/README.md",
+      "quote": "SOMA is a Bittensor subnet focused on context compression for AI agents."
+    },
+    "scoring": {
+      "text": "Per task, x is how many baseline runs solved it and y how many miner runs did. The token score is log2(baseline tokens / miner tokens) clamped to [-2, 2], output tokens counted at 3, cached input at 0.1. At y/x of 0.5 or under the score runs from -2 to -1; from 0.5 to 0.8 it blends toward the token score; above, token score plus a bonus to 0.1.",
+      "trust": "code",
+      "path": "mcp_platform/app/api/routes/scoring.py",
+      "url": "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/mcp_platform/app/api/routes/scoring.py",
+      "quote": "SCORING_BONUS_MAX = 0.1",
+      "disagrees": "docs/miner/scoring.md at the pinned commit, mirrored at thesoma.ai/docs/miner/scoring, gives a bonus cap of 3.0, a penalty floor of -4.0 and a threshold of floor(0.8x); mcp_platform/app/api/routes/scoring.py at the same commit caps the bonus at 0.1, starts the penalty at -2 and uses ceil(0.8x)."
+    },
+    "split": {
+      "text": "Winner takes each contest. Tasks are classed short, medium or long; the three-way contest carries 0.25 of the miner weight, the three pairs 0.15 each, the three singles 0.10 each. The top scorer in each contest takes its weight, ties split evenly, and a miner with no score in a member class is not in that contest. Whatever the platform's burn ratio withholds goes to burn.",
+      "trust": "code",
+      "path": "mcp_platform/app/services/incentive_calculator.py",
+      "url": "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/mcp_platform/app/services/incentive_calculator.py",
+      "quote": "LAYER_WEIGHTS_BY_SUBSET_SIZE: dict[int, float] = {3: 0.25, 2: 0.45, 1: 0.30}"
+    },
+    "judges": {
+      "text": "Nine validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Commit-reveal is off; weights may change at most once per 100 blocks, and the code sets them every 110. A validator runs agent tasks and grades patches in a container, but the weights it submits arrive signed from the platform's get_best_miners endpoint, with a cached copy as fallback. The burn ratio is a platform database setting.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 9"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes, and weights are set every 110 blocks. The puzzle turns per competition, not per epoch: an upload window, an idle gap, then a screening stage and full evaluation on hidden tasks whose images go public only for the evaluation window plus a grace period. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000"
+    },
+    "buyer": {
+      "text": "Developers routing model calls through SOMA. The front page prices one model, DeepSeek V4 Pro, at $1.32 per million tokens direct and $1.19 through SOMA, about 10 percent off, with two more models marked coming soon. The tools listed are SOMARIZER, a Compressor for OpenClaw and a SOMA App. No customer is named and no dated usage figure appears on the site.",
+      "trust": "docs",
+      "url": "https://thesoma.ai",
+      "quote": "$1.32 / 1M $1.19 / 1M ~10% off"
+    },
+    "exploits": {
+      "text": "Prompt edits that change the agent instead of compressing it: the miner rules allow only compression markers and loop guards, and forbid rewriting instructions or forcing shortcuts to cut tokens. Memorizing the test: evaluation tasks live in a private image repository made public only for the evaluation window. Blind deletion: a miner at or below half of baseline quality scores the penalty alone. Top submissions get an integrity review.",
+      "trust": "code",
+      "path": "miner/README_prompting.md",
+      "url": "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/miner/README_prompting.md",
+      "quote": "Prompt edits that force shortcuts to reduce token usage."
+    }
+  },
+  "sources": [
+    "https://thesoma.ai",
+    "https://thesoma.ai/docs",
+    "https://thesoma.ai/docs/miner/INCENTIVE_MECHANISM",
+    "https://thesoma.ai/docs/miner/scoring",
+    "https://github.com/DendriteHQ/SOMA",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/README.md",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/mcp_platform/app/api/routes/scoring.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/mcp_platform/app/services/incentive_calculator.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/mcp_platform/app/api/routes/frontend.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/validator/validator.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/validator/chain/weigt_setter.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/validator/config/settings.py",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/docs/miner/INCENTIVE_MECHANISM.md",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/docs/miner/scoring.md",
+    "https://raw.githubusercontent.com/DendriteHQ/SOMA/83b828d695ae9551c1d4cd105a9965d29e778d75/miner/README_prompting.md"
+  ]
+}

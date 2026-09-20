@@ -1,0 +1,73 @@
+{
+  "netuid": 34,
+  "name": "BitMind",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "media",
+  "repo": {
+    "url": "https://github.com/BitMind-AI/bitmind-subnet",
+    "commit": "45e92d821bca7928dbfdaac9630b012016972d23",
+    "committed": "2026-09-19"
+  },
+  "fields": {
+    "work": {
+      "text": "A media-provenance classifier: a model that takes an image, video or audio clip and returns class scores for real against synthetic. Detector miners submit the model to the platform and run no servers. Generator miners make synthetic media on demand for validators. What is paid for is, per lane, the reigning best classifier on the current benchmark, and for generators verified output that fools the detectors.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/README.md",
+      "quote": "Detectors and generators compete in a dynamic loop: detectors sharpen their ability to spot synthetic media, while generators push to create more convincing fakes."
+    },
+    "scoring": {
+      "text": "Per modality a detector is benchmarked on public, private holdout and generator-made samples and scored by sn34_score, which combines classification performance, the Matthews correlation coefficient, with probability calibration, the Brier score, under round-specific sample weights. A challenger takes a lane's crown when its sn34_score is at least 0.01 above the sitting king on the same benchmark version. Generators score pass rate x a volume ramp x a model-price multiplier.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/docs/Incentive.md",
+      "quote": "combines classification performance (MCC) with probability calibration (Brier score)"
+    },
+    "split": {
+      "text": "Fixed lanes: image 0.40, video 0.40, audio 0.04, generators 0.16. Inside each detector lane the current king takes 0.85, the previous distinct king 0.10 and the one before 0.05; unused slots roll up to the king and an unresolvable king's share burns. The generator pot is proportional to score among qualified miners, image weighted 0.30 and video 0.70. All detector lanes burn while GAS reports emissions disabled.",
+      "trust": "code",
+      "path": "gas/koth_weights.py",
+      "url": "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/gas/koth_weights.py",
+      "quote": "KOTH_LANE_RESIDUAL = (0.85, 0.10, 0.05)"
+    },
+    "judges": {
+      "text": "Five validators were active on the 2026-09-09 chain snapshot, of 64 permitted, against 117 miners. Weights are committed then revealed, at most once per 100 blocks, with weights_version 404020. A validator generates synthetic media, challenges generator miners, and every epoch fetches the reigning kings per lane from the platform's kings API, caching the last answer if it is down. Detector benchmarking runs on the platform, not on the validator.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, weights_version 404020; chain-2026-09-09.json active_validators 5"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes, and validators set lane weights on the reigning hotkeys every tempo. The puzzle turns per benchmark round: a throne is held until a challenger clears the margin, and when a new benchmark version ships the king is marked defending until re-evaluated. Generator qualification looks back 7 days, base rewards 24 hours. A new registration is immune for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000"
+    },
+    "buyer": {
+      "text": "Developers and enterprises. The API pricing page lists Free at $0 a month for up to 100 requests, Pro at $100 a month for 10,000 or more, and Custom for large organisations with SLAs and on-premise deployment. Consumers get a web app, mobile apps and browser extensions. No customer is named on the pages fetched and no dated usage figure appears.",
+      "trust": "docs",
+      "url": "https://docs.bitmind.ai/pricing.md",
+      "quote": "Pro | $100/mo | Teams and power users who need 10,000+ requests/month"
+    },
+    "exploits": {
+      "text": "Overfitting the test: each round has holdout datasets unreleased until it ends, and each hotkey gets one counted submission per registration, so a miner cannot spam variants. Recycling a hotkey: a replacement hotkey cannot inherit the prior owner's generator eligibility at the same UID. Generator wash: pay only in a modality whose 7-day fool rate clears 2 percent for image, 1 for video, on at least 20 samples.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/docs/Incentive.md",
+      "quote": "A replacement hotkey cannot inherit the previous owner's eligibility at the same UID."
+    }
+  },
+  "sources": [
+    "https://docs.bitmind.ai",
+    "https://docs.bitmind.ai/getting-started.md",
+    "https://docs.bitmind.ai/pricing.md",
+    "https://bitmind.ai/pricing",
+    "https://github.com/BitMind-AI/bitmind-subnet",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/README.md",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/docs/Incentive.md",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/docs/Discriminative-Mining.md",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/docs/Generative-Mining.md",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/gas/koth_weights.py",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/gas/evaluation/rewards.py",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/gas/evaluation/generator_scores.py",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/gas/config.py",
+    "https://raw.githubusercontent.com/BitMind-AI/bitmind-subnet/45e92d821bca7928dbfdaac9630b012016972d23/neurons/validator/validator.py"
+  ]
+}

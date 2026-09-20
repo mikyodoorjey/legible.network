@@ -1,0 +1,72 @@
+{
+  "netuid": 28,
+  "name": "SayGM",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "inference",
+  "repo": {
+    "url": "https://github.com/taostat/gm-validator",
+    "commit": "6993bb22dbe00f5e50c9e97d490f87c74cb67d8a",
+    "committed": "2026-09-05"
+  },
+  "fields": {
+    "work": {
+      "text": "Resold access to closed models. A miner brings its own Anthropic, OpenAI, Google or other provider keys into a confidential virtual machine on Phala Cloud, declares which models it serves at what discount off gm's retail price, and serves buyer requests the gateway routes to it. The index lists the miner repository, taostat/gm-miner; the validator lives in taostat/gm-validator.",
+      "trust": "docs",
+      "url": "https://docs.saygm.com/mining/overview/",
+      "quote": "GM miners supply upstream model capacity and earn the spread between their declared offer and GM's buyer price."
+    },
+    "scoring": {
+      "text": "Dollars served. Each epoch the gm-operated finalizer publishes an artifact set to a public bucket; the validator sums each miner's earnings plus surcharge in nano-dollars across every product it served, and does not re-derive cost or re-verify signatures. Reliability appears on the miners page but is not in the weight formula at the pinned commit.",
+      "trust": "code",
+      "path": "validator/src/gm_validator/scoring.py",
+      "url": "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/scoring.py",
+      "quote": "A miner's epoch score is the sum of earnings_ndollars + surcharge_ndollars across every product they served."
+    },
+    "split": {
+      "text": "Cap and burn. A miner's weight is the dollars it served divided by the dollar value of the epoch's miner pool: 41 percent of the alpha issued that epoch, at the close price. Whatever the pool exceeds total served dollars is set as weight on the owner UID 3, the burn. If demand exceeds the pool, miners share it pro rata and the burn is rounding dust.",
+      "trust": "code",
+      "path": "validator/src/gm_validator/alpha_economics.py",
+      "url": "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/alpha_economics.py",
+      "quote": "weight_i = consumed_usd_i / pool_usd where pool_usd = emissions_alpha * MINER_EMISSION_PCT * alpha_price_usd; MINER_EMISSION_PCT = Decimal(\"0.41\")"
+    },
+    "judges": {
+      "text": "Twelve validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on; the weights rate limit is 1 block and the bonds moving average is 0. Validators do not see requests: each mirrors the finalized epoch artifacts from a public bucket, treats them as authoritative, and computes only the weight vector, re-deriving no cost and re-verifying no signature.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 1, bonds_moving_avg 0; chain-2026-09-09.json active_validators 12"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator defines an epoch as 361 blocks, tempo plus one, and scores only the newest closed epoch, once. The miners page on 2026-09-19 listed epoch 25,203 finalized at 02:28 UTC and 25,204 at 03:42 UTC. A new registration is immune from deregistration for 3,600 blocks, about 12 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 3600; gm-validator README BLOCKS_PER_EPOCH 361 (tempo + 1)"
+    },
+    "buyer": {
+      "text": "Developers paying per million tokens through an OpenAI-compatible gateway at api.saygm.com/v1, signing up by email, Google or Bittensor with no card required. No customer is named. The miners page publishes every finalized epoch: epoch 25,222, finalized 2026-09-20 01:38 UTC, carried $702.74 of traffic over 13,712 requests across 59 earning miners.",
+      "trust": "docs",
+      "url": "https://saygm.com/",
+      "quote": "Point Cursor, Cline, Claude Code, or your AI SDK at the gm gateway. One base URL. No rewrites."
+    },
+    "exploits": {
+      "text": "No incident is recorded. The validator zeroes any miner the finalizer marks blacklisted, so a banned hotkey earns nothing that epoch. On the miner side, the gateway checks that each reply echoes the model the offer claims, provider keys sit in verified key slots inside the TEE, and the miner image is pinned by digest and attested. No public log of gaming was found on the site, docs or repositories.",
+      "trust": "code",
+      "path": "validator/src/gm_validator/alpha_economics.py",
+      "url": "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/alpha_economics.py",
+      "quote": "consumed = _ZERO if miner.is_blacklisted else miner.consumed_usd"
+    }
+  },
+  "sources": [
+    "https://saygm.com/",
+    "https://saygm.com/miners",
+    "https://docs.saygm.com/mining/overview/",
+    "https://github.com/taostat/gm-validator",
+    "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/README.md",
+    "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/scoring.py",
+    "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/alpha_economics.py",
+    "https://raw.githubusercontent.com/taostat/gm-validator/6993bb22dbe00f5e50c9e97d490f87c74cb67d8a/validator/src/gm_validator/config.py",
+    "https://github.com/taostat/gm-miner",
+    "https://raw.githubusercontent.com/taostat/gm-miner/50f6b9b50035f453af0dd2d4ee17e4614959888e/README.md",
+    "https://raw.githubusercontent.com/taostat/gm-miner/50f6b9b50035f453af0dd2d4ee17e4614959888e/docs/provider-model-support.md"
+  ]
+}

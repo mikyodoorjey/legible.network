@@ -1,0 +1,66 @@
+{
+  "netuid": 58,
+  "name": "greevils",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "agents",
+  "repo": {
+    "url": "https://github.com/greevils-ai/greevils-cli",
+    "commit": "dd4decc28a3dcfc7883717625408dbc40229b9b5",
+    "committed": "2026-07-06"
+  },
+  "fields": {
+    "work": {
+      "text": "A trading record. A miner is an account on Hyperliquid, a perpetuals exchange, trading its own money. It may be a human or an agent: a program packaged as a directory with entry.py, encrypted, and run inside a Confidential Space TEE the miner rents, trading through a local harness that holds a trade-only key. What is scored is the account's daily equity series.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/greevils-ai/greevils-cli/dd4decc28a3dcfc7883717625408dbc40229b9b5/README.md",
+      "quote": "Your agent is a directory that MUST contain entry.py (the fixed entrypoint, run as python entry.py inside the TEE)"
+    },
+    "scoring": {
+      "text": "A pairwise tournament. Every eligible account plays every other over the days both traded, floored at 30. On each overlap a utility U rewards compounded return and absolute profit and penalizes drawdown, downside volatility and profit concentrated in few days; G = (e^(1.5U) - 1)/(e^1.5 - 1), halved if trailing-30-day PnL is negative or recent volume is thin. The winner banks the margin; margins sum to the score.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/greevils-ai/greevils-validator/main/incentive.md",
+      "quote": "U = ln(1 + R) + 0.08 * ln(1 + X / 1000) - 0.308 * (D / 0.10)^2",
+      "disagrees": "The incentive document scores agents and humans in one tournament with a separate agent pool; the validator README says the agent classifier is not deployed, so the agent lane is inert and every account is classified human."
+    },
+    "split": {
+      "text": "Proportional within two pools. Emission splits into a human pool and an agent pool; within each, weight is the pool share times the account's score over the pool's total score. The human pool is capped at emission worth one tenth of what the winning humans made that day, and never above half; agents take the rest. Anything unawarded burns to the burn UID.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/greevils-ai/greevils-validator/main/incentive.md",
+      "quote": "human_share = min( 50% , k · human_PnL_$ / emission_value_$ ) # k = 0.1; agent_share = 1 − human_share"
+    },
+    "judges": {
+      "text": "Five validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on; weights may be set once per 100 blocks. A validator pulls each account's daily equity from Hyperliquid, verifies the on-chain commitment binding a hotkey to an account, checks every fill carries the builder fee, classifies, runs the tournament and sets weights. The highest-staked validator approves agent code by hand.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, yuma_version 3; chain-2026-09-09.json active_validators 5"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. Scoring runs once a day at 00:00 UTC on the daily equity snapshot; between rounds the validator re-sets the cached weight vector every epoch so it stays live in consensus. An account needs 60 days of runtime and 40 active days to be eligible. A new registration is immune for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000; validator README: scoring then fires at 00:00 UTC each day, while weights are re-set every epoch"
+    },
+    "buyer": {
+      "text": "Nobody. The site sells an arena, not a product: traders bring their own money, and the only money that changes hands beyond that is a builder fee of about 5 basis points on every fill routed through the Greevils app, stated in the validator README. No buyer of the agents, their signals or the scorecard is named on the site, in the app, or in the three repositories.",
+      "trust": "read",
+      "url": "https://www.greevils.ai",
+      "quote": "Agents against the humans. Real money on the line."
+    },
+    "exploits": {
+      "text": "Faking returns with deposits and withdrawals: the daily percent is flow-adjusted so a rescue deposit after a loss or a withdrawal after a profit can only lower it. Trading around the fee: any fill without the builder fee is permanent disqualification. One lucky day: a concentration penalty. Copying an agent: agents earn only once open-sourced and approved on chain by the top validator. The live leaderboard read empty on 2026-09-19.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/greevils-ai/greevils-validator/main/incentive.md",
+      "quote": "You cannot game the % with flows. Any deposit/withdrawal can only lower your daily % versus the no-flow case"
+    }
+  },
+  "sources": [
+    "https://www.greevils.ai",
+    "https://app.greevils.ai/leaderboard",
+    "https://github.com/greevils-ai/greevils-cli",
+    "https://raw.githubusercontent.com/greevils-ai/greevils-cli/dd4decc28a3dcfc7883717625408dbc40229b9b5/README.md",
+    "https://raw.githubusercontent.com/greevils-ai/greevils-validator/main/incentive.md",
+    "https://raw.githubusercontent.com/greevils-ai/greevils-validator/main/README.md",
+    "https://raw.githubusercontent.com/greevils-ai/greevils-docs/main/README.md"
+  ]
+}

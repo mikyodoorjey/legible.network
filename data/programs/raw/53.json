@@ -1,0 +1,71 @@
+{
+  "netuid": 53,
+  "name": "engy",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "inference",
+  "repo": {
+    "url": "https://github.com/hanlinai/engy",
+    "commit": "9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff",
+    "committed": "2026-09-13"
+  },
+  "fields": {
+    "work": {
+      "text": "Tokens of a named open model, served on the miner's own GPUs. The miner runs an inference engine, dials out to engy's gateway, serves the buyer requests routed to it, and attaches a TOPLOC activation fingerprint to every response as proof that the canonical checkpoint ran. What is paid for is paid tokens served, on a model the miner has committed to and qualified on.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/README.md",
+      "quote": "engy serves frontier open models on consumer GPUs, with cryptographic verification that the model you pay for is the model that ran."
+    },
+    "scoring": {
+      "text": "Per miner and model, score = floor(sum of prompt plus completion tokens x score_rate[model] / 1000), where score_rate is a per-model rate the operator sets, not the price card. Only requests with HTTP 2xx and a positive cost count. Four gates, any of which zeroes the epoch: acceptance under 99 percent, time to first token p99, time per token p99, cheat verdicts above 1 percent.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/SN53_ONE_PAGER.md",
+      "quote": "score = floor( Σ tokens(r) · score_rate[model] / 1000 ) if every gate passes"
+    },
+    "split": {
+      "text": "Proportional. Each miner-model row's share is its score divided by the sum of all scores, scaled onto 65,535 with the rounding remainder to the top row. No model pools, no floor, no winner bonus. When an epoch has no billed traffic, or every score is zero, the whole 65,535 goes to the owner hotkey as a burn.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/SN53_ONE_PAGER.md",
+      "quote": "each row's share is `score_micro ÷ Σ score_micro`, with the rounding remainder going to the highest-scoring row"
+    },
+    "judges": {
+      "text": "Twelve validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Weights are committed then revealed, at most once per 100 blocks. The validator in this repository is a light one: it fetches a weight vector from provider.engy.ai, checks the master hotkey's signature, and resubmits it every 120 blocks. Proof checking runs on the provider's audit box, whose code is not in the repository.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 12",
+      "disagrees": "The one-pager says a validator samples requests, verifies the proof and sets weights; validator/sync.py at the pinned commit says the provider owns scoring and the validator checks only that the payload came from the master hotkey, and VALIDATOR.md calls the GPU audit box a different component."
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes, and the light validator resubmits the same vector every 120 blocks to stay inside the activity cutoff. Scoring is per epoch on the provider's clock; the one-pager says weekly in production. A new registration is immune from deregistration for 1 block, so a fresh key has no grace period at all.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 1",
+      "disagrees": "The one-pager says epochs are weekly in production and 4 hours on staging; the docstring of validator/sync.py at the pinned commit says the code once pinned 604800 seconds while production ran 86400 and staging 3600, one day and one hour."
+    },
+    "buyer": {
+      "text": "Developers and agents paying per token through one OpenAI-compatible endpoint at api.engy.ai with prepaid billing. The front page prices eight models per million tokens, from $0.04 input and $0.08 output for deepseek-v4.1-flash to $1.95 and $9.75 for kimi-k3, with cached-input rates. Integration guides cover Claude Code, Cursor and Codex. No customer is named and no dated usage figure appears.",
+      "trust": "docs",
+      "url": "https://engy.ai",
+      "quote": "engy serves frontier open models so you can trust the answer."
+    },
+    "exploits": {
+      "text": "Serving a cheaper model under the canonical name: in the team's live test an INT4 checkpoint claiming the FP8 root scored about 0.55 on TOPLOC against 0.18 to 0.23 for honest miners and was caught. Buying your own traffic: only requests with a positive cost count, so free-tier, internal and probe traffic mint no weight. Registration churn: a fresh key starts at zero. A tripped gate costs one epoch.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/SN53_ONE_PAGER.md",
+      "quote": "Only traffic somebody actually paid for scores; free-tier, internal, and probe traffic cannot mint weight."
+    }
+  },
+  "sources": [
+    "https://engy.ai",
+    "https://engy.ai/docs",
+    "https://github.com/hanlinai/engy",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/README.md",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/SN53_ONE_PAGER.md",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/MINER.md",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/docs/VALIDATOR.md",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/validator/validator.py",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/validator/sync.py",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/validator/schedule.py",
+    "https://raw.githubusercontent.com/hanlinai/engy/9dc14b4ac2aeb66a35c430e5bca650ceae08a6ff/validator/chain.py"
+  ]
+}

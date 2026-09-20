@@ -1,0 +1,76 @@
+{
+  "netuid": 38,
+  "name": "ChronoLLM",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "training",
+  "repo": {
+    "url": "https://github.com/chronollm/sn38",
+    "commit": "01f596b424a01d40ec14db10493d329c0d1c97be",
+    "committed": "2026-09-14"
+  },
+  "fields": {
+    "work": {
+      "text": "A set of twelve language models, one per vintage year from 2013 to 2024, each trained only on text available up to its cutoff so it cannot know later events. Each is at most 2.2 billion parameters in safetensors, uploaded to Hugging Face and registered on chain. What is paid for is a slate that passes the leak test and wins text-completion duels.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/README.md",
+      "quote": "Each model must be trained only on data available up to its cutoff year. A model for 2018 must know nothing about 2019 or beyond."
+    },
+    "scoring": {
+      "text": "Stage 1 is a gate: per year the model must recognise at least 70 percent of pre-cutoff items and at most 10 percent of post-cutoff ones, the year average must beat -3.0. Up to 30 survivors then duel round-robin: each writes completions for prompts a judge model invents fresh that round, and GPT-5.4 picks the winner per pair. Final score is leak_weight x normalised leak plus quality_weight x win rate.",
+      "trust": "code",
+      "path": "sn38/neurons/validator.py",
+      "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
+      "quote": "final_scores[uid] = leak_weight * normalized_leak[uid] + quality_weight * win_rates[uid]",
+      "disagrees": "The code's fallback defaults at the pinned commit are leak_weight 0.7, quality_weight 0.3 and top_n_for_quality 10; api.chronollm.com/config on 2026-09-19 returned leak_weight 0.0, quality_weight 1.0 and top_n_for_quality 30, so the README's final_score = quality_win_rate is what runs."
+    },
+    "split": {
+      "text": "Winner-heavy exponential decay. The top ten by final score are paid exp(-0.8 x rank^0.9) normalised to one, which gives about 52, 23, 12, 6, 3, 2, 1 percent and under, and rank eleven and below get nothing. An emission_pct below 1 sends the remainder to the owner UID; the live config has it at 1.0. The owner UID itself is excluded from the ranking.",
+      "trust": "code",
+      "path": "sn38/neurons/validator.py",
+      "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
+      "quote": "rewards = np.exp(-0.8 * (np.arange(n) ** 0.9))"
+    },
+    "judges": {
+      "text": "Six validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Commit-reveal is off; weights may change at most once per 100 blocks. A validator runs inside an Intel TDX enclave on Phala Cloud with an H200, fetches private evaluation data from the team's backend over attested TLS, downloads every model, re-runs the leak test and duels itself, sets weights once, and exits. The compose hash is publicly attestable.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 6"
+    },
+    "cadence": {
+      "text": "Emission settles every 1,440 blocks, about 4.8 hours, four times the usual tempo. The puzzle turns weekly: a round opens every Monday at 12:00 UTC, all prior submissions are wiped, miners resubmit, and validators evaluate the previous round once. A new registration is immune from deregistration for 50,400 blocks, about a week, ten times the usual 5,000.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 1440, immunity_period 50400"
+    },
+    "buyer": {
+      "text": "Quants and researchers, on three tiers with no price. Individual: full weights free to download and self-host. Academic research: free hosted API for non-commercial work behind a request form. Institutional: on-premises deployment fine-tuned on the buyer's data, with support and SLAs, priced to the deployment via a contact form. No customer of the subnet's output is named and no usage figure appears.",
+      "trust": "docs",
+      "url": "https://chronollm.com/",
+      "quote": "The full model, free to download and run on your own hardware."
+    },
+    "exploits": {
+      "text": "Copying a rival's weights: an identical checksum is rejected and the first submitter keeps priority; near-copies are caught pairwise by SVD spectral distance under 0.001, weight cosine over 0.95 or logit KL under 1.0, invariant to rotation, permutation and scaling. Overfitting the leak set: it stays inside the enclave, and duel prompts are invented fresh each round. Stale models: the slate is wiped every Monday.",
+      "trust": "code",
+      "path": "sn38/template/svd_gate.py",
+      "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/svd_gate.py",
+      "quote": "SVD_THRESHOLD = 0.001 ... COSINE_THRESHOLD = 0.95 ... KL_THRESHOLD = 1.0"
+    }
+  },
+  "sources": [
+    "https://chronollm.com/",
+    "https://api.chronollm.com/config",
+    "https://leaderboard.chronollm.com/",
+    "https://github.com/chronollm/sn38",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/README.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/docs/miner.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/docs/validator.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/constants.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/quality.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/leak.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/dedup.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/svd_gate.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/tee.py"
+  ]
+}
