@@ -1,0 +1,33 @@
+name: Program drift
+
+# Weekly: compare each mining program's pinned commit against its repository head and
+# commit data/programs-drift.json. The pages read it client-side, so no site rebuild.
+# Re-reading a stale program stays a human-triggered run of agents/PROGRAM-PROMPT.md.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check drift
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/program_drift.py
+      - name: Commit the result
+        run: |
+          git config user.name "legible drift check"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/programs-drift.json
+          git diff --cached --quiet && echo "no change" || git commit -m "programs: weekly drift check $(date -u +%F)"
+          git push

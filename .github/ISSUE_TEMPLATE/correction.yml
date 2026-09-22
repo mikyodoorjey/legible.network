@@ -1,11 +1,11 @@
 name: Correction
-description: A wrong legibility score, a misquote or misdated quote in the map, or a dead link
+description: A wrong legibility score, a field on a mining program, a misquote or misdated quote in the map, or a dead link
 title: "[Correction] "
 labels: [correction]
 body:
   - type: dropdown
     id: about
-    attributes: { label: What is this about, options: ["a legibility score on the index", "a quote in the map", "a link, on either side", "something else"] }
+    attributes: { label: What is this about, options: ["a legibility score on the index", "a field on a mining program", "a quote in the map", "a link, on either side", "something else"] }
     validations: { required: true }
   - type: input
     id: subject
@@ -13,10 +13,10 @@ body:
     validations: { required: true }
   - type: input
     id: where
-    attributes: { label: The cell or the statement id, description: "For a score: audience and question, like buyers q2. For a quote: the id shown on it, like jacob-steeves-014.", placeholder: "buyers q2, or jacob-steeves-014" }
+    attributes: { label: The cell or the statement id, description: "For a score: audience and question, like buyers q2. For a program: the field, like scoring or split. For a quote: the id shown on it, like jacob-steeves-014.", placeholder: "buyers q2, scoring, or jacob-steeves-014" }
   - type: textarea
     id: wrong
-    attributes: { label: What is wrong, description: "What Legible says, and what the source actually shows or says." }
+    attributes: { label: What is wrong, description: "What Legible says, and what the source actually shows or says. For a program field: the reading you dispute, and the file, page, or chain value that settles it." }
     validations: { required: true }
   - type: input
     id: url

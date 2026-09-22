@@ -1,0 +1,68 @@
+{
+  "netuid": 124,
+  "name": "Swarm",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "training",
+  "repo": {
+    "url": "https://github.com/swarm-subnet/swarm",
+    "commit": "fce8d303fc74d8d9d0731599a43964096a0b5d35",
+    "committed": "2026-09-17"
+  },
+  "fields": {
+    "work": {
+      "text": "A trained flight policy for a simulated Crazyflie quadcopter: a model that reads a depth camera and the drone's state and outputs control, packaged as an archive. The miner commits the archive's digest on chain, uploads it to the Swarm backend, and exits. Five mission families are active; a model that never wins stays in the backend's vault and is never published.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/README.md",
+      "quote": "Anyone can train a drone pilot, submit it, and watch it compete on a public leaderboard across thousands of fresh worlds it has never seen."
+    },
+    "scoring": {
+      "text": "Every validator flies each submitted policy through the same 1,000 secret seeds per family per epoch and scores each flight 0.45 for reaching the goal, 0.45 for time against a target with a 6 percent buffer, 0.10 for obstacle clearance, clamped to 0 to 1; a crash, tilt, timeout or infeasible run scores 0.01. The seed key is published after the epoch so anyone can rebuild the worlds.",
+      "trust": "code",
+      "path": "swarm/validator/reward.py",
+      "url": "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/swarm/validator/reward.py",
+      "quote": "score = 0.45 * success_term + 0.45 * time_term + 0.10 * safety_term; PARTICIPATION_REWARD = 0.01"
+    },
+    "split": {
+      "text": "King of the hill per family, not winner take all. Each family holds a fixed slice: Office Interceptor 30 percent, Swarm Autopilot 20, Swarm Search and Rescue 20, Autopilot 15, Search and Rescue 15. Within a family the last five crowned kings share the slice on a ladder, each older seat keeping 0.7 of the seat above, scaled up to 1.3 by improvement. An empty slice burns to UID 0.",
+      "trust": "code",
+      "path": "swarm/validator/koth.py",
+      "url": "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/swarm/validator/koth.py",
+      "quote": "WINDOW_SIZE: int = 5; RESERVED_BURN_UID: int = 0; RANK_LADDER_RATIO: float = 0.7; GAIN_BONUS: float = 0.3; GAIN_BONUS_CAP: float = 1.0"
+    },
+    "judges": {
+      "text": "Ten validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on; weights may be set once per 100 blocks. Each validator runs the full 1,000-seed benchmark itself, generating its own seeds with the system random source and publishing them after the epoch; it then refreshes the king windows from the backend, recomputes the ladder weights locally, and sets them on chain.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 10"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The benchmark epoch is 14 days from epoch 19, anchored Monday 16:00 UTC, with 1,000 fresh seeds per family; submissions freeze for the final 5,400 seconds, 1.5 hours, of each epoch. A crown turns whenever a challenger clears the floor, and every champion is re-evaluated on the new epoch's seeds. A new registration is immune for 5,000 blocks.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000; constants.py EPOCH_DURATION_LONG_SECONDS = 14 * 86400, EPOCH_FREEZE_SECONDS = 5400"
+    },
+    "buyer": {
+      "text": "Nobody is named. The site calls Swarm the lab for autonomous drone AI, lists sectors from warehouses to defence, and offers model adapters for airframes and sensors, but names no customer, price, endpoint or way to buy; the way in is a contact form. No pricing page, API reference or customer statement was found on the site or in the repository.",
+      "trust": "read",
+      "url": "https://swarm124.com/",
+      "quote": "Our open benchmark accelerates model development, while our physical lab turns leading flight policies into deployable, end-to-end systems."
+    },
+    "exploits": {
+      "text": "Copycat models are the named problem: under winner take all a miner could clone the champion, add noise to clear the floor, and take everything. The answer is the five-king ladder, a crowning floor of 0.015 that decays to 0.005 as scores near 1.0, refusal at upload of an archive whose code and weights match an existing submission, secret seeds while the epoch runs, and a fresh hotkey per crowning.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/docs/king_of_the_hill.md",
+      "quote": "a miner can clone the current champion, add just enough noise to clear the crowning floor, and take 100% of emissions"
+    }
+  },
+  "sources": [
+    "https://swarm124.com/",
+    "https://github.com/swarm-subnet/swarm",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/README.md",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/swarm/validator/reward.py",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/swarm/validator/koth.py",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/swarm/constants.py",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/miner/docs/miner.md",
+    "https://raw.githubusercontent.com/swarm-subnet/swarm/fce8d303fc74d8d9d0731599a43964096a0b5d35/docs/king_of_the_hill.md"
+  ]
+}

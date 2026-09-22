@@ -1,0 +1,72 @@
+{
+  "netuid": 118,
+  "name": "Ditto",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "agents",
+  "repo": {
+    "url": "https://github.com/ditto-assistant/ditto-subnet",
+    "commit": "2b05b32b4f0b76e967b302c5a0bd0742207b4719",
+    "committed": "2026-09-19"
+  },
+  "fields": {
+    "work": {
+      "text": "A memory harness: the software that decides what an AI assistant stores, finds again and which tools it calls, with the language model held fixed. The miner packages it as a Docker build context serving a fixed HTTP contract and submits it for a platform-set fee, 0.1 TAO in the guide at this commit. Validators run it; the miner needs no hardware.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/README.md",
+      "quote": "Miners submit a Docker build context that serves the public harness HTTP contract; the implementation may use Rust, Python, TypeScript, Go, or any other language."
+    },
+    "scoring": {
+      "text": "Validators run the harness in a sandbox against a dataset regenerated from a seed every run: tool-calling cases and a memory haystack with distractors. Every harness is driven by the same locked model. Grading is by rule, no model as judge: composite = 0.5 tool accuracy + 0.5 memory recall, times bounded efficiency, consistency and canary gates. Finalized on the median across assigned validators; 100 eligible cases per entry minimum.",
+      "trust": "docs",
+      "url": "https://heyditto.ai/docs/mining-scoring",
+      "quote": "composite = (0.5 × tool_mean + 0.5 × memory_mean) × efficiency × consistency × canary",
+      "disagrees": "The site scoring page, updated 2026-07-13, says the locked model is Qwen3-32B; docs/MINER.md at the pinned commit says the current contract, Bench v12, is openai/gpt-oss-20b served through the platform's OpenRouter boundary."
+    },
+    "split": {
+      "text": "King of the hill with a tail. The champion takes 65 percent of the miner weight, the next four distinct miners 14, 10, 7 and 4, ordered by first-seen on ties. A challenger dethrones only by beating the champion by more than the larger of 0.007 composite points and 1.64 combined standard errors, on a median of 3 seeds. With no eligible miner, everything goes to the burn hotkey.",
+      "trust": "code",
+      "path": "ditto/validator/config.py",
+      "url": "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/ditto/validator/config.py",
+      "quote": "KOTH_RANK_SHARES = (0.65, 0.14, 0.10, 0.07, 0.04); KOTH_MARGIN = 0.007; KOTH_DETHRONE_Z = 1.64",
+      "disagrees": "The site scoring page dated 2026-07-13 says the champion holds about 90 percent of emissions and the dethroning margin is about 5 percent; the repository at the pinned commit sets 65/14/10/7/4 and a 0.007 gate, and docs/MINER.md matches the code."
+    },
+    "judges": {
+      "text": "Eleven validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on. The platform's ledger assigns each submission to validators, who pull the screened image, run it in a sandbox and post signed scores; the ledger finalizes on the median and every validator recomputes the same weight vector from it with the same function. Weights go on chain through Pylon, an identity-based weight-setting service.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 11"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator sweeps the ledger every 30 seconds and pushes weights every 3,600 seconds. The puzzle turns per submission, not per epoch: a crown stands until a challenger clears the gate. A new registration is immune from deregistration for only 300 blocks, one hour, against the 5,000 most subnets use.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 300; config.py VALIDATOR_EPOCH_SECONDS default 3600, VALIDATOR_SWEEP_SECONDS default 30"
+    },
+    "buyer": {
+      "text": "End users of the Ditto app, paying per message in credits after 30 free messages, with no price table. The numbers page dated 2026-09-06 gives 2,505 registered users, 267 monthly active and an annual run rate of $6,648. Whether the winning harness runs inside the product is not stated on the pages fetched. The miner's income is emission.",
+      "trust": "docs",
+      "url": "https://heyditto.ai/dashboard/",
+      "quote": "Monthly active 267 last 30 days ARR $6,648 current run rate"
+    },
+    "exploits": {
+      "text": "Memorizing the benchmark: the dataset is rebuilt from a seed every run, with the bench version mixed in. Self-reporting tool calls instead of hitting the grader's mock server: capped at 0.5 on those cases. Echoing a planted bait value: composite times 0.5. Copying the champion: first-seen timestamps plus near-duplicate detection, copies earn nothing. Dethroning on seed luck: the z-band and a 3-seed median.",
+      "trust": "docs",
+      "url": "https://heyditto.ai/docs/mining-scoring",
+      "quote": "a harness that skips the server and self-reports its calls is capped at 0.5 on the affected cases"
+    }
+  },
+  "sources": [
+    "https://heyditto.ai/docs/mining-scoring",
+    "https://heyditto.ai/pricing/",
+    "https://heyditto.ai/dashboard/",
+    "https://github.com/ditto-assistant/ditto-subnet",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/README.md",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/docs/MINER.md",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/docs/VALIDATOR.md",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/ditto/validator/weights.py",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/ditto/validator/config.py",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/ditto/validator/tracks.py",
+    "https://raw.githubusercontent.com/ditto-assistant/ditto-subnet/2b05b32b4f0b76e967b302c5a0bd0742207b4719/ditto/validator/worker.py"
+  ]
+}

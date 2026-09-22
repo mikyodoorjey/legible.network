@@ -128,3 +128,17 @@ a.term:hover{color:var(--ink);text-decoration:none}
 .stats b{display:block;font-family:var(--disp);font-weight:600;font-size:40px;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .stats span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
 @media (max-width:600px){.sheet .srow{grid-template-columns:1fr;gap:2px}.stats{gap:24px 32px}}
+
+/* mining programs: trust badges and the seven-dot strip, shared by the subnet page, the home close and /programs/ */
+.badge.trust-chain,.badge.trust-code{color:var(--ink)}
+.badge.trust-docs,.badge.trust-said{color:var(--soft)}
+.badge.trust-read,.badge.trust-unknown{color:var(--softer)}
+.badge.trust-unknown{font-style:italic}
+.tdots{display:inline-flex;gap:3px;align-items:center;vertical-align:middle}
+.tdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink)}
+.tdot.trust-docs,.tdot.trust-said{background:var(--soft)}
+.tdot.trust-read{background:var(--rule-strong)}
+.tdot.trust-unknown{background:transparent;border:1px solid var(--rule-strong)}
+.prog .row .tdots{margin-right:4px}
+.badge.stale{color:var(--red)}
+.program .drift{display:block;color:var(--red);margin-bottom:6px}

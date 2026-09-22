@@ -1,0 +1,72 @@
+{
+  "netuid": 61,
+  "name": "RedTeam",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "security",
+  "repo": {
+    "url": "https://github.com/RedTeamSubnet/RedTeam",
+    "commit": "593cbaa51f8417d8daf6ecde41a32ca2a7e15623",
+    "committed": "2026-09-19"
+  },
+  "fields": {
+    "work": {
+      "text": "Code that solves a security challenge. Two are active at this commit: bot_virus_v1, a bot that spreads across a test network, and ada_detection_v3, detecting commercial anti-detect browsers. A miner packages the solution as a Docker image, commits an encrypted pointer on chain, and it is revealed after 24 hours. What is paid for is a solution that scores above the previous best and is not a copy.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/README.md",
+      "quote": "The subnet incentivizes miners to develop and submit code solutions to various technical challenges, with a focus on enhancing security."
+    },
+    "scoring": {
+      "text": "Per challenge, the validator runs the submission in a sandbox and gives a raw score from 0 to 1 against the previous best; below the challenge minimum, 0.85 for bot_virus_v1 and 0.5 for ada_detection_v3, it is not accepted. The penalty is the highest code-similarity score against other submissions. The final score is raw less penalty by a scoring algorithm, then decays linearly over 14 days.",
+      "trust": "docs",
+      "url": "https://docs.theredteam.io/latest/",
+      "quote": "points decaying linearly over a 14-day period",
+      "disagrees": "The docs root and the repository's docs/README.md say points decay linearly over 14 days; the dashboard concept page says decay starts once a submission is 10 days old and runs over approximately 10 to 15 days; the per-challenge managers that apply the decay run inside the challenge Docker images and are not in the repository."
+    },
+    "split": {
+      "text": "Proportional within each challenge, then weighted across challenges: ada_detection_v3 carries 0.6 of the miner share and bot_virus_v1 0.4. Within a challenge each miner's decayed final score is normalised over all miners and only the best entry per entity is kept. A challenge with no scores has its weight redistributed to the others in proportion. No burn is applied in the code at this commit.",
+      "trust": "code",
+      "path": "src/redteam_core/challenge_pool/active_challenges.yaml",
+      "url": "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/challenge_pool/active_challenges.yaml",
+      "quote": "challenge_incentive_weight: 0.6"
+    },
+    "judges": {
+      "text": "Eleven validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Weights are committed then revealed, at most once per 100 blocks. A validator decrypts each commit after 24 hours, pulls the miner's Docker image, runs it against the challenge container in its own sandbox with 4 CPUs and 12 GB, and calls a challenge scoring API. The loop that calls set_weights is not in the repository.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 11"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator's own epoch is 1,200 seconds, 20 minutes, and a commit is scored only once it is 24 hours old, the commit cooldown, so a new submission enters scoring a day after it lands. Submissions are scored once a day and a score fades over about two weeks. A new registration is immune from deregistration for 14,400 blocks, about 48 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 14400"
+    },
+    "buyer": {
+      "text": "Nobody today. The front page promises a library of security solutions accessible to enterprises and the README says solutions can be integrated into real-world products, but there is no product page, API, price or named customer, and the site's copyright reads 2024. The miner's income is emission.",
+      "trust": "read",
+      "url": "https://www.theredteam.io/",
+      "quote": "A secure platform for 'red team' actors to earn TAO while competing against the best minds in the industry."
+    },
+    "exploits": {
+      "text": "Copying: the penalty is the highest similarity to any other submission, past or same-day, identical re-submissions are rejected, and commits stay encrypted for 24 hours so a rival cannot copy inside the window. Many hotkeys for one operator: submissions sharing an IP, a Docker Hub username or a coldkey are grouped and only the best is paid. An earlier alpha-burn weight in the scoring is commented out.",
+      "trust": "code",
+      "path": "src/redteam_core/validator/miner_manager.py",
+      "url": "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/validator/miner_manager.py",
+      "quote": "Keep only the best-scoring submission among miners that are considered the same entity."
+    }
+  },
+  "sources": [
+    "https://www.theredteam.io/",
+    "https://docs.theredteam.io/latest/",
+    "https://docs.theredteam.io/latest/challenges/",
+    "https://docs.theredteam.io/latest/miner/concepts/dashboard/",
+    "https://docs.theredteam.io/latest/getting-started/miner/",
+    "https://github.com/RedTeamSubnet/RedTeam",
+    "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/README.md",
+    "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/validator/miner_manager.py",
+    "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/validator/challenge_manager.py",
+    "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/challenge_pool/active_challenges.yaml",
+    "https://raw.githubusercontent.com/RedTeamSubnet/RedTeam/593cbaa51f8417d8daf6ecde41a32ca2a7e15623/src/redteam_core/config/main.py"
+  ]
+}

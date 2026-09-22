@@ -1,0 +1,70 @@
+{
+  "netuid": 120,
+  "name": "Affine",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "training",
+  "repo": {
+    "url": "https://github.com/AffineFoundation/affine",
+    "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
+    "committed": "2026-09-10"
+  },
+  "fields": {
+    "work": {
+      "text": "A trained checkpoint: the saved weights of a coding model, uploaded to a private bucket and signalled on chain. The subnet pays whoever holds or recently held the crown, so the thing produced is a model that beats the reigning king in a duel.",
+      "trust": "docs",
+      "url": "https://www.affine.io/llms.txt",
+      "quote": "King-of-the-hill subnet. Miners upload checkpoints privately to a validator-controlled bucket"
+    },
+    "scoring": {
+      "text": "One duel, challenger against king, over 1,300 turns of a coding corpus. A frozen teacher model scores each turn as min(R, G): R is how much the miner's written reasoning helps the teacher predict the right action, G is whether that reasoning sits inside the teacher's own band. The challenger crowns only if its mean margin clears max(2 standard errors, 0.002).",
+      "trust": "code",
+      "path": "affine/affine/score.py",
+      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
+      "quote": "Per turn: turn = min(R, G); paired mean(turn_c - turn_k) > max(k_sigma * SE, min_margin)",
+      "disagrees": "llms.txt on 2026-09-19 opens with a newer meter, min(z_R, typ_c, z_A) with a floor of 0.2 teacher sd, while its own fork history and the repository at the pinned commit give min(R, G) with the 0.002 floor and n_turns = 1300 in affine/affine.toml."
+    },
+    "split": {
+      "text": "Not proportional. Every crown won in the last 72 hours gets one equal share of the miner emission, whether or not it still holds the throne. A crown older than 72 hours earns nothing. When no crown is inside the window, the share goes to the burn UID. Effective 2026-09-14.",
+      "trust": "docs",
+      "url": "https://www.affine.io/llms.txt",
+      "quote": "a crown is paid for at most 72 hours; every crown inside its window gets one equal share",
+      "disagrees": "The repository at the pinned commit of 2026-09-10 pays equal shares to the current king and prior distinct kings with no time window (affine/affine/chain.py, set_rolling_weights); the 72-hour rule postdates the commit, and the payout module llms.txt cites is published on Hippius, not GitHub."
+    },
+    "judges": {
+      "text": "Three validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Weights are committed then revealed, at most once per 100 blocks. The validator does the work itself: it rents a GPU pod, loads both checkpoints, runs the whole duel, and seeds it from the reveal-block hash so anyone can replay the verdict. Nothing is sampled.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100, max_validators 64; chain-2026-09-09.json active_validators 3"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The puzzle turns per duel, not per epoch: a challenger is evaluated when it reaches the front of the queue, and a crown stands until a challenger clears the bar. The snapshot on 2026-09-19 showed reign 20. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000; api/v1/snapshot reign_number 20, crowned_at 2026-09-19"
+    },
+    "buyer": {
+      "text": "Nobody is named. The front page offers a chat box with the reigning model, and every crowned checkpoint is free to download with a signed manifest. There is no price, no customer and no usage figure on the site, in llms.txt or in the repository. The miner's income is emission.",
+      "trust": "read",
+      "url": "https://www.affine.io/",
+      "quote": "Talk directly to the reigning SN120 king"
+    },
+    "exploits": {
+      "text": "The program records its own hacks. A king was crowned on a constant filler suffix and scored 0 of 50 on the bench, which is why the score became min(R, G). Reign 13, a re-upload of reign 12's weights, won on noise and was uncrowned. Defences: one evaluation slot per hotkey, burned at enqueue; identical weights rejected as copies; a published exploit audit after every crowning that can revert it.",
+      "trust": "code",
+      "path": "affine/affine.toml",
+      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
+      "quote": "wvk-9 king crowned on a constant filler suffix and benched 0/50"
+    }
+  },
+  "sources": [
+    "https://www.affine.io/llms.txt",
+    "https://www.affine.io/",
+    "https://affine.io/api/v1/snapshot",
+    "https://github.com/AffineFoundation/affine",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/chain.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/state.py"
+  ]
+}

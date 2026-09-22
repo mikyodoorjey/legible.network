@@ -28,7 +28,7 @@ DOCS = [  # (source markdown, output dir, nav key)
     ("method.md", "method", "method"),
     ("about.md", "about", "about"),
 ]
-HAND_PAGES = ["index.html", "sn/index.html", "404.html", "narrative/index.html"]  # pages that carry partial markers
+HAND_PAGES = ["index.html", "sn/index.html", "404.html", "narrative/index.html", "programs/index.html"]  # pages that carry partial markers
 
 
 # ---------------- tiny markdown
@@ -156,7 +156,7 @@ def partial(name, ctx):
 
 def nav_ctx(active, ctx):
     c = dict(ctx)
-    for k in ("index", "narrative", "method", "about"):
+    for k in ("index", "programs", "narrative", "method", "about"):
         c[f"cur_{k}"] = ' aria-current="page"' if k == active else ""
     c["summit"] = " · Exploit Summit 2026 · Montreal" if active == "about" else ""
     return c
@@ -290,6 +290,14 @@ def main():
         "byline": "Built by Mikyö Clark",
     }
     changed = []
+    # the mining programs: raw manifests merged into data/programs.json, read by the subnet pages, the home close and /programs/
+    import programs as prog
+    programs = prog.load_programs()
+    pmerged = None
+    if programs:
+        pmerged, pchanged = prog.write_merged(programs, (data or {}).get("subnets", []), write_if_changed)
+        if pchanged:
+            changed.append("data/programs.json")
     descriptions = {
         "method": "How Legible measures what a subnet shows a reader and what the people around Bittensor say it is: the scale, the sources, confidence, coverage, corrections, and the changelog.",
         "about": "Who built Legible and why.",
@@ -317,7 +325,9 @@ def main():
                 f'{("<a href=/sn/" + str(c["netuid"]) + "/>SN" + str(c["netuid"]) + " " + html.escape(c.get("name","")) + "</a> ") if c.get("netuid") else ""}'
                 f'{html.escape(c.get("audience",""))} {html.escape(c.get("q",""))}: {html.escape(str(c.get("old","")))} to {html.escape(str(c.get("new","")))}. {html.escape(c.get("reason",""))}'
                 f'{(" Requested by " + html.escape(c["requested_by"]) + ".") if c.get("requested_by") else ""}</li>'
-                for c in data["changelog"]) or "<li>No corrections yet.</li>"
+                for c in data["changelog"])
+            items += prog.changelog_items(programs) if programs else ""
+            items = items or "<li>No corrections yet.</li>"
             page = inject(page, "changelog", f"<ul>{items}</ul>")
         if write_if_changed(REPO / outdir / "index.html", page):
             changed.append(f"{outdir}/index.html")
@@ -351,7 +361,7 @@ def main():
         if not p.exists():
             continue
         s = p.read_text(encoding="utf-8")
-        active = "index" if name == "sn/index.html" else ("narrative" if name.startswith("narrative/") else "")
+        active = "index" if name == "sn/index.html" else ("narrative" if name.startswith("narrative/") else ("programs" if name.startswith("programs/") else ""))
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
         s2 = inject(s2, "robots", ctx["robots"])
@@ -363,7 +373,22 @@ def main():
                 sm = ndata["summary"]
                 s2 = inject(s2, "homestats", f'<div><b>{len(data["subnets"])}</b><span>subnets scored</span></div><div><b>{sm["statements"]}</b><span>quotes on record</span></div><div><b>{sm["narrators"]}</b><span>voices</span></div><div><b>{sm["metaphors"]}</b><span>frames traced</span></div>')
             s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
-            s2 = inject(s2, "programs", programs_block(data) if data else '<p class="sm">The index is being assembled.</p>')
+            if data and programs:
+                try:
+                    from render_learn import load_entries as _le2
+                    _entries = _le2()
+                except Exception:
+                    _entries = {}
+                s2 = inject(s2, "programs", prog.home_cards(programs, data["subnets"], _entries))
+            else:
+                s2 = inject(s2, "programs", programs_block(data) if data else '<p class="sm">The index is being assembled.</p>')
+        if name == "programs/index.html":
+            if pmerged:
+                s2 = inject(s2, "pstats", prog.list_stats(pmerged))
+                s2 = inject(s2, "programs", prog.list_rows(pmerged))
+                s2 = inject(s2, "pdata", "<script>window.PROGRAMS=" + json.dumps({str(m["netuid"]): m for m in pmerged["programs"]}, ensure_ascii=False).replace("</", "<\\/") + ";</script>")
+            else:
+                s2 = inject(s2, "programs", '<tr><td colspan="7" class="sm">The programs are being read.</td></tr>')
         if name == "narrative/index.html" and data:
             s2 = inject(s2, "knownsn", "<script>window.KNOWN_SN=new Set(" + json.dumps(sorted(str(sub["netuid"]) for sub in data["subnets"])) + ");</script>")
         if name == "narrative/index.html" and ndata:
@@ -375,6 +400,8 @@ def main():
 
     if data:
         from render_subnets import build_all
+        import render_subnets as _rs
+        _rs.PROGRAMS = programs
         from render_learn import EXPLAINER_CSS, load_entries, load_glossary, render_entry_block, render_placeholder
         parts = {k: partial(k, nav_ctx("", ctx)) for k in ("topbar", "nav", "footer")}
         parts["robots"] = ctx["robots"]
@@ -397,7 +424,7 @@ def main():
             p.write_text(s2, encoding="utf-8")
             changed.append("sn/index.html chart")
 
-    urls = ["/", "/method/", "/about/", "/narrative/"]
+    urls = ["/", "/method/", "/about/", "/narrative/"] + (["/programs/"] if programs else [])
     if ndata:
         urls += ["/narrative/frames/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"] if n["kind"] != "subnet"]
     if data:

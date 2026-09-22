@@ -1,0 +1,71 @@
+{
+  "netuid": 107,
+  "name": "Minos",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "science",
+  "repo": {
+    "url": "https://github.com/minos-protocol/minos_subnet",
+    "commit": "289e54ae4cc913be93f5dfe8c44febb29363dc7b",
+    "committed": "2026-09-03"
+  },
+  "fields": {
+    "work": {
+      "text": "A configuration file: the parameter settings for one of the supported variant callers, the software that decides which differences in a sequenced genome are real mutations. The miner never runs the genome itself. What is paid for is the recipe that, when the validator runs it on this round's synthetic genome, finds the planted mutations best.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/README.md",
+      "quote": "Miners will never be asked to upload outputs, they submit their variant-calling configuration"
+    },
+    "scoring": {
+      "text": "Validators run each configuration in a Docker container on the round's genome and compare the calls to the planted truth with hap.py, a standard genomics referee. Under v2, live per the network config: score = 100 x (0.70 x core + 0.30 x germline). Core is F1 per variant class by fixed difficulty weights, one-base indels heaviest at 0.40; germline penalizes false positives; a plausibility gate zeroes an implausible callset.",
+      "trust": "code",
+      "path": "utils/scoring.py",
+      "url": "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/scoring.py",
+      "quote": "V2_CORE_WEIGHT = 0.70; V2_GERMLINE_WEIGHT = 0.30"
+    },
+    "split": {
+      "text": "Winner-heavy. The top eligible miner of the round gets 0.8 of the weight; ranks 2 to 20 split the remaining 0.2 in slices that shrink by 0.9 each rank; everyone else gets nothing. A miner is eligible only after scoring in 5 of the last 20 finalized rounds. Validators fetch these values live; the code's defaults are fallbacks.",
+      "trust": "docs",
+      "url": "https://api.theminos.ai/scoring/network-config",
+      "quote": "winner_weight 0.8, dust_top_n 20, dust_decay 0.9, min_participation_rounds 5, participation_window 20",
+      "disagrees": "The about page and whitepaper say the top miner wins 100 percent of emissions (sn107-004, Winner-Take-All); the code's fallback defaults are 0.9 winner and 0.8 decay (utils/weight_tracking.py); the live config on 2026-09-19 is 0.8 and 0.9."
+    },
+    "judges": {
+      "text": "Seven validators were active on the 2026-09-09 chain snapshot. Commit-reveal is on. A validator re-runs every submitted configuration itself, in an isolated container, with hap.py as referee, so judging is a full re-execution rather than a sample. Round files are hashed before serving and released after the round, so any participant can reproduce a score. Validators below a stake floor are left out of the canonical ranking.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled True, weights_version 20; chain-2026-09-09.json active_validators 7"
+    },
+    "cadence": {
+      "text": "A round every 72 minutes, the subnet's tempo of 360 blocks, each with a fresh synthetic genome carrying hidden mutations. Weights are set every round. A new registration is immune from deregistration for 14,400 blocks, about 48 hours, three times the 5,000 most subnets use.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 14400"
+    },
+    "buyer": {
+      "text": "Nobody yet. The roadmap marks a production variant-calling service as phase five, labelled vision, with phase one, parameter tuning, the only active phase. The whitepaper names hospitals, biobanks and pharmaceutical companies as future customers. There is no price anywhere. Emission is the only income.",
+      "trust": "docs",
+      "url": "https://theminos.ai/roadmap",
+      "quote": "05 Production Deployment Ship the consensus caller as a production-grade service"
+    },
+    "exploits": {
+      "text": "Over-calling: a callset that emits far more variants than targets is penalized by the overcall guardrail, and an implausible ratio of variant types is gated to zero. Memorizing the answer: mutations are planted fresh each round at positions not published in advance. Sybil hotkeys: the code pays one representative per coldkey, but the live config on 2026-09-19 has reward_normalization set to false.",
+      "trust": "code",
+      "path": "utils/reward_normalization.py",
+      "url": "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/reward_normalization.py",
+      "quote": "an operator registering K hotkeys occupies K rank slots and is paid K times for one round's work",
+      "disagrees": "The coldkey normalization exists in code at the pinned commit; the live network config returns reward_normalization false, so it is not applied."
+    }
+  },
+  "sources": [
+    "https://theminos.ai/about",
+    "https://theminos.ai/roadmap",
+    "https://api.theminos.ai/scoring/network-config",
+    "https://github.com/minos-protocol/minos_subnet",
+    "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/README.md",
+    "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/scoring.py",
+    "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/weight_tracking.py",
+    "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/utils/reward_normalization.py",
+    "https://raw.githubusercontent.com/minos-protocol/minos_subnet/289e54ae4cc913be93f5dfe8c44febb29363dc7b/docs/scoring.md"
+  ]
+}

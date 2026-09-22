@@ -1,0 +1,69 @@
+{
+  "netuid": 9,
+  "name": "iota",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "training",
+  "repo": {
+    "url": "https://github.com/macrocosm-os/iota",
+    "commit": "22d702acd07453dabb187abedfad185826091341",
+    "committed": "2026-08-30"
+  },
+  "fields": {
+    "work": {
+      "text": "Forward-pass work on one slice of a language model. An orchestrator run by Macrocosmos assigns each miner one layer of a model being pretrained; the miner computes activations, the numbers passed between layers, streams them through a shared bucket, and periodically uploads its weights. What is paid for is validated activation work, not a finished model.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/README.md",
+      "quote": "Miners compete to process as many activations as possible in the training stage."
+    },
+    "scoring": {
+      "text": "Validators score each miner's forward-pass activations in short windows on several checks: consistency over time, agreement with peers on the same layer, expected signal shape, and anti-gaming patterns. Scores sum over a rolling window of about a day. On-chain weight is the miner's share of its run's total score, times one minus the run's burn factor, times the run's allocation.",
+      "trust": "docs",
+      "url": "https://docs.macrocosmos.ai/subnets/subnet-9-iota/scoring-rewards-and-kicking.md",
+      "quote": "validators independently measure the forward-pass activations each miner produces during training and assign a score for the work done in each validation window",
+      "disagrees": "The docs say the exact thresholds live in the code; the repository at the pinned commit holds no scoring function. task_execution.py loads validation functions from an orchestrator directory that is not in the repository, and weight_setting.py fetches finished scores from /validator/global_miner_scores."
+    },
+    "split": {
+      "text": "Proportional. Every miner with positive verified work gets its share of its run's score; the validator normalizes the vector to sum to one. Whatever miners do not earn is set as weight on the owner UID 209, the burn. The orchestrator decides the burn share; settings.py defines FALLBACK_BURN_FACTOR = 0.8 but nothing in the repository reads it.",
+      "trust": "code",
+      "path": "src/validator/src/validator/utils/weight_setting.py",
+      "url": "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/src/validator/src/validator/utils/weight_setting.py",
+      "quote": "raw_weights = torch.nn.functional.normalize(scores, p=1, dim=0); burn_factor = next((weight for uid, weight in weights.items() if uid == common_settings.OWNER_UID), None)"
+    },
+    "judges": {
+      "text": "Ten validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off; weights may be set once per 100 blocks. A validator fetches validation tasks from the orchestrator every minute and runs them, but the scores it submits are the orchestrator's global miner scores, fetched whole; if that call fails it copies the stake-weighted weights already on chain.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100, weights_version 4062; chain-2026-09-09.json active_validators 10"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator submits weights every 21 minutes, on a timer independent of training epochs. Scores aggregate over a rolling window of about a day; kick policies apply at the end of each training epoch. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000; validator settings.py WEIGHT_SUBMIT_INTERVAL: int = 60 * 21"
+    },
+    "buyer": {
+      "text": "Nobody is named. The front page on 2026-09-19 sells two routes: an SDK to run your own training on IOTA, and a managed route where you bring a workload and talk to the founding team. There is no price, no customer and no checkpoint for download. The index's dashboard fetch on 2026-09-09 read zero on every counter.",
+      "trust": "docs",
+      "url": "https://iota.macrocosmos.ai/",
+      "quote": "Bring a defined workload, and we take it from qualification through to a result you can act on."
+    },
+    "exploits": {
+      "text": "The docs name the prior design's failure: under winner-takes-all, miners hoarded whole models, which IOTA answered by splitting the model into layers and paying per validated slice. Against faked work, scoring includes checks for tell-tale repetition or shortcuts; miners can be kicked each epoch by a bottom-by-score or threshold policy, removed by an operator, or banned by tier.",
+      "trust": "docs",
+      "url": "https://docs.macrocosmos.ai/subnets/subnet-9-iota.md",
+      "quote": "every miner had to fit an entire model locally, and \"winner-takes-all\" rewards encouraged model hoarding"
+    }
+  },
+  "sources": [
+    "https://iota.macrocosmos.ai/",
+    "https://docs.macrocosmos.ai/subnets/subnet-9-iota.md",
+    "https://docs.macrocosmos.ai/subnets/subnet-9-iota/scoring-rewards-and-kicking.md",
+    "https://github.com/macrocosm-os/iota",
+    "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/README.md",
+    "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/src/validator/src/validator/utils/weight_setting.py",
+    "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/src/validator/src/validator/settings.py",
+    "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/shared/common/src/common/settings.py",
+    "https://raw.githubusercontent.com/macrocosm-os/iota/22d702acd07453dabb187abedfad185826091341/src/validator/src/validator/utils/task_execution.py"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "netuid": 62,
+  "name": "Ridges",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "agents",
+  "repo": {
+    "url": "https://github.com/ridgesai/ridges",
+    "commit": "6ada4b77b476b22c414c76408194259ae663550b",
+    "committed": "2026-09-15"
+  },
+  "fields": {
+    "work": {
+      "text": "A software engineering agent: one Python file exporting agent_main that takes a problem statement and returns a unified diff. The miner pays a burn of about $5 per upload and its own inference. What is paid for is an approved improvement over the competition's current leader on a hidden problem set within a niche such as linting or database queries.",
+      "trust": "docs",
+      "url": "https://docs.ridges.ai/scoring.md",
+      "quote": "agents submit a patch, the platform applies the diff and runs the hidden test suite"
+    },
+    "scoring": {
+      "text": "Deterministic: apply the patch, run the hidden tests, score the fraction that pass. Two screeners of 20 problems at 45 and 60 percent, then three validators on 50 problems each; a problem counts only when every assigned validator marks it solved. Test names, logs and inference results are hidden from miners. Each competition carries its own thresholds and problem counts.",
+      "trust": "docs",
+      "url": "https://docs.ridges.ai/scoring.md",
+      "quote": "the platform computes a consensus score: for each problem, the agent gets credit only if every assigned validator marks that problem solved"
+    },
+    "split": {
+      "text": "Proportional to decaying reward scores across every approved agent, summed per hotkey. An agent qualifies only by beating the leader by 3 percent on score, or 6 percent on cost at equal score. Its score is improvement units, log-compounded 3 percent steps, times a time multiplier 1 + sqrt(hours stalled / scale), then halves every 336 hours. Each competition holds a fixed share.",
+      "trust": "code",
+      "path": "utils/incentives.py",
+      "url": "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/utils/incentives.py",
+      "quote": "return value * 2 ** (-max(0.0, elapsed_hours) / half_life_hours)",
+      "disagrees": "The incentive page says the multiplier doubles after a 6-hour stall; api/config.py at the pinned commit defaults INCENTIVE_TIME_MULTIPLIER_SCALE_HOURS to 12, and each competition's policy may override it."
+    },
+    "judges": {
+      "text": "Eleven validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. Validators run the agent in sandboxes on their assigned problems, but the weight vector itself comes from the platform: each validator fetches a hotkey-to-weight mapping from /scoring/weights, checks it sums to one and every hotkey is registered, and submits it unchanged. If any hotkey is missing, on-chain weights are left as they were.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_version 6; chain-2026-09-09.json active_validators 11"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. Validators fetch and set weights every 600 seconds by the example configuration. The puzzle turns per approval: a leader stands until an agent clears the bar, one submission per hotkey every 12 hours, and every reward halves over 14 days. A new registration is immune from deregistration for 7,400 blocks, about 25 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 7400"
+    },
+    "buyer": {
+      "text": "Developers with a GitHub repository, through Ridgeline: one credit turns one issue into one pull request from an isolated machine. $9.99 a month buys 10 credits, or locking 1,000 alpha on the subnet earns one credit every three days. No usage or customer count is published; the third parties in the map cite cost per benchmark run, not paying customers.",
+      "trust": "docs",
+      "url": "https://docs.ridges.ai/ridgeline/credits.md",
+      "quote": "A recurring subscription of $9.99/month grants 10 credits."
+    },
+    "exploits": {
+      "text": "Hardcoding: agents were written to pass known tests, so test names, logs and inference results are now hidden and problem sets are built and mutated per niche. Copying the leader and adjusting earns nothing below the 3 percent threshold. The rules allow optimising for a niche and ban stored answers. Agents whose hotkey deregisters are dropped before the split.",
+      "trust": "docs",
+      "url": "https://docs.ridges.ai/scoring.md",
+      "quote": "Miners previously hardcoded agents to pass known specific tests."
+    }
+  },
+  "sources": [
+    "https://docs.ridges.ai/scoring.md",
+    "https://docs.ridges.ai/incentive-mechanism.md",
+    "https://docs.ridges.ai/ridgeline/credits.md",
+    "https://docs.ridges.ai/llms-full.txt",
+    "https://docs.ridges.ai/guides/mining-intro",
+    "https://github.com/ridgesai/ridges",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/README.md",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/utils/incentives.py",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/api/config.py",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/api/incentives.py",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/validator/set_weights.py",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/validator/.env.example",
+    "https://raw.githubusercontent.com/ridgesai/ridges/6ada4b77b476b22c414c76408194259ae663550b/validator/background_loops.py"
+  ]
+}

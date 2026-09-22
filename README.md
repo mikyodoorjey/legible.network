@@ -1,6 +1,8 @@
 # legible.network
 
-Two instruments for reading the Bittensor ecosystem, one site.
+Three instruments for reading the Bittensor ecosystem, one site, under one argument: Ethereum made Bitcoin's money programmable, Bittensor makes the mining programmable.
+
+**The Mining Programs** (v1): each of the 32 indexed subnets as a mining program, written down. Seven fields per subnet (the work, how it is scored, how the pay splits, who judges, how often it turns, who buys, what has been gamed), each with a source and a six-value trust level naming what the claim rests on: the chain, the code at a pinned commit, the subnet's own docs, a statement on record, the site's own reading, or not found. Where the sources disagree, the field says so. Live at [/programs/](https://legible.network/programs/) and on each subnet page as The program. Method at [/method/#the-programs-what-they-record](https://legible.network/method/#the-programs-what-they-record). A weekly drift check marks fields whose cited file has changed since the reading.
 
 **The Subnet Legibility Index** (v1): what a first-time reader can find out about the 32 Bittensor subnets with the largest share of emission, in five minutes, from the subnet's own public materials. Scored for four audiences (stakers, miners, buyers, newcomers) on a four-question spine, 0 to 5 per cell. Findability, not quality. Live at [legible.network](https://legible.network). Rubric at [/method/#the-index-what-it-scores](https://legible.network/method/#the-index-what-it-scores). Method at [/method/#the-index-how-it-was-applied](https://legible.network/method/#the-index-how-it-was-applied).
 
@@ -24,6 +26,9 @@ Two instruments for reading the Bittensor ecosystem, one site.
 | `method.md` | Source of truth for the single method page at `/method/`: the scale, how the index was applied, what the map records, confidence, coverage, corrections, changelog. |
 | `data/narrative/raw/<id>.json` | One file per narrator, written by a research agent against `agents/NARRATIVE-PROMPT.md` and validated by `scripts/narrative_check.py`. |
 | `data/narrative.json` | The merged, published narrative dataset (CC BY 4.0). `narrative-pretty.json` is the same, indented. |
+| `data/programs/raw/<netuid>.json` | One mining program manifest per subnet: seven sourced fields with a trust level each, written by a reading agent against `agents/PROGRAM-PROMPT.md` (three by hand as calibration) and gated by `scripts/program_check.py`. |
+| `data/programs.json` | The merged, published programs dataset (CC BY 4.0). Rendered on each subnet page as The program, on the home close, and at `/programs/`. |
+| `data/hyperparams-<date>.json` | Chain hyperparameters per subnet (tempo, immunity, commit-reveal), pulled by `scripts/pull_hyperparams.py`; cited by program fields at chain trust. |
 
 ## Pipeline
 
@@ -39,6 +44,10 @@ python3 scripts/review.py                         # review queue; fill decisions
 python3 scripts/build.py                          # -> data/index.json (publication gate)
 # run one research agent per narrator with agents/NARRATIVE-PROMPT.md -> data/narrative/raw/<id>.json
 python3 scripts/narrative_check.py                # validate every raw narrator file
+.venv/bin/python scripts/pull_hyperparams.py      # chain hyperparameters for the 32, cited by the programs
+# run four reading agents with agents/PROGRAM-PROMPT.md -> data/programs/raw/<netuid>.json
+python3 scripts/program_check.py                  # validate every manifest (the publication gate)
+python3 scripts/apply_program_corrections.py      # pending rows in data/program-corrections.csv -> the raw manifests
 python3 scripts/build_site.py                     # narrative dataset and pages, index pages, subnet pages, OG images, chart, sitemap
 python3 scripts/check_site.py                     # read-only checks
 ```

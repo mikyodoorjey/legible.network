@@ -1,0 +1,68 @@
+{
+  "netuid": 64,
+  "name": "Chutes",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "inference",
+  "repo": {
+    "url": "https://github.com/chutesai/chutes-api",
+    "commit": "3b5609f42f84e29dea374382ef1fa95b0fda329c",
+    "committed": "2026-09-03"
+  },
+  "fields": {
+    "work": {
+      "text": "Compute time. A miner runs a Kubernetes cluster of GPU servers inside confidential virtual machines and hosts chutes, the platform's word for a deployable model or workload. What is paid for is the seconds an instance is live and serving, weighted by the GPU class it runs on. The index lists the SDK repository; the validator lives in chutes-api.",
+      "trust": "docs",
+      "url": "https://chutes.ai/docs/miner-resources/overview",
+      "quote": "The goal of mining on chutes is to provide as much compute as possible, optimizing for cold start times"
+    },
+    "scoring": {
+      "text": "A miner's score is the sum, over the last day, of the seconds each of its instances was live times that instance's compute multiplier, which folds in GPU class, bounties, urgency, and the confidential-compute and private-chute bonuses. Only instances with at least one successful invocation count. The sums are normalized to a distribution and set as weights.",
+      "trust": "code",
+      "path": "metasync/constants.py",
+      "url": "https://raw.githubusercontent.com/chutesai/chutes-api/3b5609f42f84e29dea374382ef1fa95b0fda329c/metasync/constants.py",
+      "quote": "SCORING_INTERVAL = \"1 day\"; sum (overlap_seconds * multiplier) across all history intervals",
+      "disagrees": "The docs scoring page fetched 2026-09-19 describes four weighted metrics, compute units 55 percent, invocations 25, unique chutes 15, bounties 5, over a default 7-day window; the code at the pinned commit scores instance compute units alone over one day, per the spec dated 2026-04-13 in docs/specs/scoring-window.md."
+    },
+    "split": {
+      "text": "Proportional. Every eligible miner is paid its share of the day's compute units, with no winner bonus and no floor. The split is the score vector itself, normalized to sum to one and submitted as weights.",
+      "trust": "code",
+      "path": "docs/specs/scoring-window.md",
+      "url": "https://raw.githubusercontent.com/chutesai/chutes-api/3b5609f42f84e29dea374382ef1fa95b0fda329c/docs/specs/scoring-window.md",
+      "quote": "normalizes to a distribution, and the result is set as on-chain weights"
+    },
+    "judges": {
+      "text": "Fourteen validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. The judge is the platform: the scoring query runs against the API's own billing database, and other validators run a lite auditor package against exported audit data. The judges verify the platform's accounting rather than re-run the work. Weights are set at the top of each UTC hour.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100; chain-2026-09-09.json active_validators 14"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes. The score is recomputed hourly at :00 UTC over a rolling one-day window, so a new miner reaches full parity in a day and a misbehaving one phases out in a day. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 5000"
+    },
+    "buyer": {
+      "text": "Developers and resellers paying per million tokens or per GPU hour. The pricing page lists per-model rates from $0.0245 per million input tokens and confidential GPU time from $1.80 an hour with a one-time deploy fee. The front page shows OpenRouter, Kilo, Fetch.AI, Phala and Pax Historia as logos and claims trillions of tokens a month, undated.",
+      "trust": "docs",
+      "url": "https://chutes.ai/pricing",
+      "quote": "Pay per token. No subscription, no minimum, no markup."
+    },
+    "exploits": {
+      "text": "Many hotkeys under one owner: only the top scorer per coldkey is paid, the rest get zero. Manipulated step and token times: resisted with medians over two days. Inflated GPU counts: checked against chute history. Invocations reported as faulty are excluded. In April 2026 the scoring window was cut from seven days to one so that misbehaviour phases out in a day rather than a week.",
+      "trust": "docs",
+      "url": "https://chutes.ai/docs/miner-resources/scoring",
+      "quote": "For each coldkey, only the highest-scoring hotkey receives rewards All other hotkeys sharing the same coldkey receive zero score"
+    }
+  },
+  "sources": [
+    "https://chutes.ai",
+    "https://chutes.ai/pricing",
+    "https://chutes.ai/docs/miner-resources/overview",
+    "https://chutes.ai/docs/miner-resources/scoring",
+    "https://github.com/chutesai/chutes-api",
+    "https://raw.githubusercontent.com/chutesai/chutes-api/3b5609f42f84e29dea374382ef1fa95b0fda329c/metasync/constants.py",
+    "https://raw.githubusercontent.com/chutesai/chutes-api/3b5609f42f84e29dea374382ef1fa95b0fda329c/docs/specs/scoring-window.md"
+  ]
+}

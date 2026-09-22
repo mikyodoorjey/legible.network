@@ -1,0 +1,79 @@
+{
+  "netuid": 19,
+  "name": "blockmachine",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "other",
+  "repo": {
+    "url": "https://github.com/taostat/blockmachine-validator",
+    "commit": "25ca87c6227902d4af077423b4e4cce8c58c046c",
+    "committed": "2026-09-17"
+  },
+  "fields": {
+    "work": {
+      "text": "Answered JSON-RPC requests. The miner runs its own full or archive node for one of eleven chains behind a gateway the network supplies, passes a per-chain eligibility battery, sets a price in US dollars per compute unit, and serves whatever customer traffic the gateway routes to it. What is paid for is compute units served at the bid price, checked for correctness afterwards.",
+      "trust": "docs",
+      "url": "https://raw.githubusercontent.com/taostat/blockmachine-miner/ef5e876c3a09a4858a9e05aa586a546bab34e7a5/README.md",
+      "quote": "You earn emissions proportional to the CUs you served at your bid price"
+    },
+    "scoring": {
+      "text": "Work times price. Each epoch the validator reads the gateway's manifest of compute units each miner served, multiplies non-archive and archive units by that miner's own bid prices in dollars, and that dollar figure is the score. Quality is not in the formula; it acts earlier, in the routing score and burst tests that decide how much traffic a node gets. Correctness is checked afterwards against reference nodes.",
+      "trust": "code",
+      "path": "common/scoring/weights.py",
+      "url": "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/common/scoring/weights.py",
+      "quote": "consumed_usd = miner.cu_non_archive * miner.price_non_archive + miner.cu_archive * miner.price_archive"
+    },
+    "split": {
+      "text": "Proportional to dollars consumed. Each miner's weight is its consumed USD over the total. The miner pool is 41 percent of epoch emission. The scale between pool and consumption is unclamped both ways, so the pool is filled exactly and nothing burns, unless the scale exceeds 10: then consumption is paid at face value and the rest goes to burn sink UID 103. Banned coldkeys get zero.",
+      "trust": "code",
+      "path": "common/scoring/weights.py",
+      "url": "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/common/scoring/weights.py",
+      "quote": "MINER_EMISSION_PCT = 0.41; scale = miner_pool_usd / total_consumed_usd; they reduce to consumed_i / consumed_total",
+      "disagrees": "The whitepaper fetched 2026-09-19 says an emission burn sink removes excess unearned alpha from circulation; the code comment at the pinned commit says the pool-over-consumption cap was removed so that burn is zero every epoch, with burn only on the sanity bound or an epoch with no gateway activity."
+    },
+    "judges": {
+      "text": "Nine validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. A validator never sees customer traffic: it reads the gateway's logs from public storage, re-executes the logged requests against its own reference nodes, sampling 100 percent up to 100,000 per miner by default, and bans a coldkey permanently on one mismatch. It sets weights from the gateway's compute-unit manifest and a price snapshot, once per epoch.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_rate_limit 100; chain-2026-09-09.json active_validators 9; config.py logged_sample_pct: float = 1"
+    },
+    "cadence": {
+      "text": "Emission settles every 7,200 blocks, a full day, twenty times the 360 most subnets use. The validator commits once per chain epoch, from the finalized epoch manifest, inside a commit window it computes from the chain's own epoch clock. A new registration is immune from deregistration for 3,600 blocks, about 12 hours.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 7200, immunity_period 3600; validator README: each epoch (7,200 blocks, ~24 hours)",
+      "disagrees": "The miner README at commit ef5e876 says validators submit weights on-chain each epoch (~72 minutes); the chain hyperparameters on 2026-09-19 and the validator README at the pinned commit give 7,200 blocks, about 24 hours."
+    },
+    "buyer": {
+      "text": "Apps that call blockchains, paying per request unit: as low as $1 per million requests at scale, with a calculator putting 100 million requests a month at $165 against Alchemy at $979, and failed requests not billed. The buybacks page lists five settled cycles from May to September 2026, 6,613 alpha bought for $16,296, each row linked to a Taostats proof, the last on 2026-09-17.",
+      "trust": "docs",
+      "url": "https://blockmachine.io/pricing",
+      "quote": "blockmachine $165 per month; Alchemy $979 per month; QuickNode $999 per month; dRPC $600 per month."
+    },
+    "exploits": {
+      "text": "Serving wrong data: a logged response that mismatches the reference node on a deterministic query is a permanent coldkey ban, applied before weights are built. Claiming archive without archive state, or masking the client software: eligibility failures, re-checked continuously. Dodging the burst test: refused or slow requests each cost 20 seconds in the capacity score. Inflated consumption: a pool-to-consumption scale above 10 fails closed.",
+      "trust": "code",
+      "path": "verification/blacklist.py",
+      "url": "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/verification/blacklist.py",
+      "quote": "A single incorrect response results in permanent coldkey ban."
+    }
+  },
+  "sources": [
+    "https://blockmachine.io/pricing",
+    "https://blockmachine.io/technology",
+    "https://blockmachine.io/whitepaper",
+    "https://blockmachine.io/buybacks",
+    "https://blockmachine.io/llms.txt",
+    "https://github.com/taostat/blockmachine",
+    "https://github.com/taostat/blockmachine-validator",
+    "https://github.com/taostat/blockmachine-miner",
+    "https://raw.githubusercontent.com/taostat/blockmachine-miner/ef5e876c3a09a4858a9e05aa586a546bab34e7a5/README.md",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/README.md",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/weights/loop.py",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/weights/types.py",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/common/scoring/weights.py",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/verification/loop.py",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/verification/blacklist.py",
+    "https://raw.githubusercontent.com/taostat/blockmachine-validator/25ca87c6227902d4af077423b4e4cce8c58c046c/chain/submitter.py"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "netuid": 83,
+  "name": "CliqueAI",
+  "version": "1.0",
+  "read_on": "2026-09-19",
+  "commodity": "other",
+  "repo": {
+    "url": "https://github.com/toptensor/CliqueAI",
+    "commit": "0d3488ab808ee95bd350712ab99c2dc564f7a904",
+    "committed": "2026-07-22"
+  },
+  "fields": {
+    "work": {
+      "text": "A clique: a set of vertices in a validator-supplied graph in which every pair is connected, returned inside a time limit of 6 to 30 seconds. Graphs are general, 290 to 900 vertices in the code. Problems come from the validators' own database, each served at most once across all validators; no outside party supplies a graph.",
+      "trust": "code",
+      "path": "docs/mechanism.md",
+      "url": "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/docs/mechanism.md",
+      "quote": "A `solution` is a set of vertices"
+    },
+    "scoring": {
+      "text": "Validity first: an invalid or non-maximal clique scores zero. Optimality is exp of minus the share of miners with a larger clique divided by the miner's size relative to the round's largest, normalised to the round's best. Diversity is one over the count of miners returning the identical vertex set, normalised. The final score is optimality times one plus difficulty, plus diversity.",
+      "trust": "code",
+      "path": "CliqueAI/scoring/clique_scoring.py",
+      "url": "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/scoring/clique_scoring.py",
+      "quote": "rewards = optimality * (1 + self.difficulty) + diversity",
+      "disagrees": "docs/mechanism.md gives three problem classes at difficulty 0.2, 0.4 and 1; CliqueAI/selection/problem_selector.py at the same commit ships four classes at 0.7, 0.8, 0.9 and 1.0, the fourth at 890 to 900 vertices."
+    },
+    "split": {
+      "text": "Top-heavy, not proportional. Per-problem scores fold into a debiased exponential moving average with alpha 0.01, a half-life of about 69 samples. At weight time the averages are min-max normalised, passed through a sigmoid centred on the median with the interquartile range as steepness, then raised to a power chosen so the top half of miners takes 80 percent of the weight.",
+      "trust": "code",
+      "path": "common/base/validator.py",
+      "url": "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/common/base/validator.py",
+      "quote": "POWER_TARGET_TOP_HALF_SHARE: float = 0.80"
+    },
+    "judges": {
+      "text": "Seven validators were active on the 2026-09-09 chain snapshot, against 232 miners. Commit-reveal is off. A validator checks each answer itself, that it is a valid maximal clique in the graph it sent, so judging is verification rather than re-running. Each eligible miner is sampled with the same probability, lowered for harder problems, after validator hotkeys and recently updated miners are filtered out.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "commit_reveal_weights_enabled False, weights_version 1; chain-2026-09-09.json active_validators 7, active_miners 232"
+    },
+    "cadence": {
+      "text": "Emission settles every 360 blocks, about 72 minutes, and the validator sets weights every 361 blocks by default. Problems are dispatched continuously, one at a time, with time limits sampled from 6 to 30 seconds. A new registration is immune from deregistration for 6,000 blocks, about 20 hours. The repository's last commit is 2026-07-22.",
+      "trust": "chain",
+      "snapshot": "data/hyperparams-2026-09-19.json",
+      "quote": "tempo 360, immunity_period 6000"
+    },
+    "buyer": {
+      "text": "Unknown. Looked for a customer, a price or a way to submit a graph on cliqueai.toptensor.ai, which is a title and an empty shell to a fetcher, in the README, docs/mechanism.md, min_compute.yml, the wandb table link, the chain identity and the narrative map; found none. The only paying party is emission.",
+      "trust": "unknown"
+    },
+    "exploits": {
+      "text": "Copying another miner's answer: identical vertex sets split the diversity credit, one over the count of miners returning them. Memorising answers: each problem is served at most once, even across validators. Invalid or non-maximal cliques score zero. Recently updated miners and validator hotkeys are excluded from sampling. No incident is recorded in the repository or on the site.",
+      "trust": "code",
+      "path": "CliqueAI/scoring/clique_scoring.py",
+      "url": "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/scoring/clique_scoring.py",
+      "quote": "unq = np.array([1 / counts[sol] for sol in canonical_responses])"
+    }
+  },
+  "sources": [
+    "https://cliqueai.toptensor.ai/",
+    "https://github.com/toptensor/CliqueAI",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/README.md",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/docs/mechanism.md",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/min_compute.yml",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/scoring/clique_scoring.py",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/selection/problem_selector.py",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/selection/miner_selector.py",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/common/base/validator.py",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/common/utils/config.py",
+    "https://raw.githubusercontent.com/toptensor/CliqueAI/0d3488ab808ee95bd350712ab99c2dc564f7a904/CliqueAI/validator.py"
+  ]
+}
