@@ -1,6 +1,6 @@
 {
  "version": "2.0",
- "generated_at": "2026-09-20T02:29:46+00:00",
+ "generated_at": "2026-09-22T15:19:08+00:00",
  "links_checked": "2026-09-15",
  "license": "CC BY 4.0, attribution: Bittensor Narrative Map by Mikyö Clark, legible.network",
  "eras": [
@@ -13069,8 +13069,8 @@
    "date_precision": "day",
    "era": "revolution",
    "quote": "SignalPlus and team went into this crowded category anyway and have set a new bar for competitive investment strategies.",
-   "context": "His episode description for the Subnet 53 Efficient Frontier episode, on a trading subnet entering a field he calls crowded.",
-   "about": "subnet:53",
+   "context": "His episode description for the Subnet 53 Efficient Frontier episode, on a trading subnet entering a field he calls crowded. Netuid 53 was later re-registered as engy; this statement is about Efficient Frontier and not about the subnet that holds the number today.",
+   "about": "network",
    "slots": [
     "voice",
     "value.functional"

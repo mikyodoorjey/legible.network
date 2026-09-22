@@ -2,12 +2,19 @@
   "narrator": {
     "id": "keith-singery",
     "name": "Keith Singery",
-    "aka": ["Bittensor Guru", "The Guru"],
+    "aka": [
+      "Bittensor Guru",
+      "The Guru"
+    ],
     "kind": "person",
     "role": "Host, Bittensor Guru podcast; validator operator; Chief Evangelist, TAO.com (Tensora) from March 2025",
     "affiliation": "Bittensor Guru podcast; TAO.com (Tensora)",
     "active_from": "2023",
-    "handles": {"x": "@KeithSingery", "site": "bittensor.guru", "libsyn": "directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d"},
+    "handles": {
+      "x": "@KeithSingery",
+      "site": "bittensor.guru",
+      "libsyn": "directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d"
+    },
     "subnets": [],
     "one_line": "Host of the Bittensor Guru, the longest-running subnet-by-subnet interview podcast in the ecosystem, who ran the sixth-largest validator until it became the TAO.com validator in March 2025 and now speaks as TAO.com's Chief Evangelist."
   },
@@ -20,9 +27,18 @@
       "quote": "The Bittensor Guru focuses on Bittensor, the project that combines artificial intelligence and blockchain technology to create an incentivized marketplace for machine learning. This podcast covers the Bittensor ecosystem, community, projects, developments and much more. Hosted by Keith Singery, a Bittensor enthusiast who runs a validator and volunteers as a moderator on the project's official Discord server.",
       "context": "The standing show description he wrote for the podcast when it launched on Apple Podcasts and Libsyn in late 2023; the same text is still carried by every directory.",
       "about": "network",
-      "slots": ["positioning.category", "relationship", "audience"],
-      "themes": ["incentive design", "community"],
-      "metaphors": ["marketplace"],
+      "slots": [
+        "positioning.category",
+        "relationship",
+        "audience"
+      ],
+      "themes": [
+        "incentive design",
+        "community"
+      ],
+      "metaphors": [
+        "marketplace"
+      ],
       "source": {
         "url": "https://www.listennotes.com/podcasts/bittensor-guru-keith-singery-6tzbkRjvULC/",
         "medium": "podcast",
@@ -42,8 +58,14 @@
       "quote": "Bittensor is home to two subnets formed by members of a team that has introduced more than 150 million users to AI.",
       "context": "His episode description for Episode 22 on Omega Labs (subnet 24) and WOMBO (subnet 30), pitching the guests by the size of their prior user base.",
       "about": "network",
-      "slots": ["messaging.proof", "opportunity"],
-      "themes": ["team pedigree", "adoption"],
+      "slots": [
+        "messaging.proof",
+        "opportunity"
+      ],
+      "themes": [
+        "team pedigree",
+        "adoption"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -64,9 +86,17 @@
       "quote": "Subnet 24 on Bittensor is an always-on trading competition between 200+ rotating miners brought to you by the Taoshi team.",
       "context": "His episode description for the Proprietary Trading Network episode; the title says Subnet 8 while the description text says Subnet 24, which is how he wrote it.",
       "about": "subnet:8",
-      "slots": ["value.functional", "voice"],
-      "themes": ["competition", "trading"],
-      "metaphors": ["competition"],
+      "slots": [
+        "value.functional",
+        "voice"
+      ],
+      "themes": [
+        "competition",
+        "trading"
+      ],
+      "metaphors": [
+        "competition"
+      ],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
         "medium": "podcast",
@@ -86,9 +116,20 @@
       "quote": "And now, with the intelligence of the people participating in the network — they are going in and pruning out the subnets that didn't really grow into an effective branch that is contributing to the overall project. Once that is done — what you'll see is an explosion of subnets on Bittensor",
       "context": "Quoted in a Genfinity explainer where he was asked, as a validator, about subnet deregistration and where the network goes next.",
       "about": "network",
-      "slots": ["opportunity", "positioning.reason", "value.functional"],
-      "themes": ["subnet competition", "deregistration", "validator power"],
-      "metaphors": ["pruning", "explosion"],
+      "slots": [
+        "opportunity",
+        "positioning.reason",
+        "value.functional"
+      ],
+      "themes": [
+        "subnet competition",
+        "deregistration",
+        "validator power"
+      ],
+      "metaphors": [
+        "pruning",
+        "explosion"
+      ],
       "source": {
         "url": "https://genfinity.io/2024/04/15/navigating-tao-bittensor-revolutionizing-ai-development-on-the-blockchain/",
         "medium": "article",
@@ -108,9 +149,17 @@
       "quote": "Bittensor Guru Episode 28 - Subnet 16 http://BitAds.ai by @firsttensor is up! S16 miners are advertising nodes … a monster idea that has much wider implications (Global Turing Test?!)",
       "context": "His X post announcing the BitAds episode, which he quoted again the next day with audio links; reached through the fxtwitter mirror of the post.",
       "about": "subnet:16",
-      "slots": ["voice", "opportunity"],
-      "themes": ["subnet use cases", "advertising"],
-      "metaphors": ["turing test"],
+      "slots": [
+        "voice",
+        "opportunity"
+      ],
+      "themes": [
+        "subnet use cases",
+        "advertising"
+      ],
+      "metaphors": [
+        "turing test"
+      ],
       "source": {
         "url": "https://x.com/KeithSingery/status/1787477497430544448",
         "medium": "x",
@@ -130,8 +179,13 @@
       "quote": "The Subvortex team joins the Bittensor Guru to share how they've increased network decentralization.",
       "context": "His episode description for the Subnet 7 Subvortex episode.",
       "about": "subnet:7",
-      "slots": ["value.functional", "foundation.values"],
-      "themes": ["decentralisation"],
+      "slots": [
+        "value.functional",
+        "foundation.values"
+      ],
+      "themes": [
+        "decentralisation"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -152,9 +206,16 @@
       "quote": "Sturdy uses their subnet as a crowdsourced yield optimization engine.",
       "context": "His episode description for the Subnet 10 Sturdy episode with Sam Forman.",
       "about": "subnet:10",
-      "slots": ["value.functional"],
-      "themes": ["subnet use cases", "DeFi"],
-      "metaphors": ["engine"],
+      "slots": [
+        "value.functional"
+      ],
+      "themes": [
+        "subnet use cases",
+        "DeFi"
+      ],
+      "metaphors": [
+        "engine"
+      ],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
         "medium": "podcast",
@@ -174,8 +235,14 @@
       "quote": "With Subnet 12 - Compute Horde recently eclipsing 1000 GPUs and breaking all known limits of subnet design.",
       "context": "Opening line of his episode description for the Compute Horde episode with Rhef.",
       "about": "subnet:12",
-      "slots": ["messaging.proof", "voice"],
-      "themes": ["compute", "scale"],
+      "slots": [
+        "messaging.proof",
+        "voice"
+      ],
+      "themes": [
+        "compute",
+        "scale"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -196,8 +263,14 @@
       "quote": "Frank has been a force for good in the Bittensor ecosystem for a long time.",
       "context": "His episode description introducing Frank from the Rizzo validator for the Subnet 20 BitAgent episode, the last of season one.",
       "about": "network",
-      "slots": ["voice", "audience"],
-      "themes": ["community", "validators"],
+      "slots": [
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "community",
+        "validators"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -218,8 +291,12 @@
       "quote": "We're back baby! Season 2 of the Bittensor Guru is finally here and we're dropping the first episode.",
       "context": "His episode description for the Season 2 launch with Macrocosmos after a five-month break.",
       "about": "network",
-      "slots": ["voice"],
-      "themes": ["community"],
+      "slots": [
+        "voice"
+      ],
+      "themes": [
+        "community"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -240,9 +317,15 @@
       "quote": "Ben-Zion and the team … are making waves in Bittensor again with their new Subnet 36 Pyramid Scheme.",
       "context": "His episode description for the WOMBO episode; the directory page strips the linked team name, marked here with an ellipsis.",
       "about": "subnet:36",
-      "slots": ["voice"],
-      "themes": ["subnet use cases"],
-      "metaphors": ["waves"],
+      "slots": [
+        "voice"
+      ],
+      "themes": [
+        "subnet use cases"
+      ],
+      "metaphors": [
+        "waves"
+      ],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
         "medium": "podcast",
@@ -260,10 +343,16 @@
       "date_precision": "day",
       "era": "revolution",
       "quote": "SignalPlus and team went into this crowded category anyway and have set a new bar for competitive investment strategies.",
-      "context": "His episode description for the Subnet 53 Efficient Frontier episode, on a trading subnet entering a field he calls crowded.",
-      "about": "subnet:53",
-      "slots": ["voice", "value.functional"],
-      "themes": ["subnet competition", "trading"],
+      "context": "His episode description for the Subnet 53 Efficient Frontier episode, on a trading subnet entering a field he calls crowded. Netuid 53 was later re-registered as engy; this statement is about Efficient Frontier and not about the subnet that holds the number today.",
+      "about": "network",
+      "slots": [
+        "voice",
+        "value.functional"
+      ],
+      "themes": [
+        "subnet competition",
+        "trading"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -284,8 +373,14 @@
       "quote": "The Bittensor Guru Podcast continues with a new focus on sharing results from TAO.com's subnet evaluations team with the community.",
       "context": "The updated show description after the validator became the TAO.com validator, as surfaced by the podcast directory listing in search; the Spotify page itself did not render.",
       "about": "network",
-      "slots": ["relationship", "audience"],
-      "themes": ["subnet evaluation", "community"],
+      "slots": [
+        "relationship",
+        "audience"
+      ],
+      "themes": [
+        "subnet evaluation",
+        "community"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://open.spotify.com/show/36ZYVLApH9BXooXamsx2tl",
@@ -306,8 +401,14 @@
       "quote": "The Bittensor Guru Validator is now the TAO.com validator!!! It's been one hell of a run",
       "context": "His X post on the day Tensora announced it had acquired his validator, quoted in the blocmates report on the deal.",
       "about": "network",
-      "slots": ["relationship", "voice"],
-      "themes": ["validators", "ownership"],
+      "slots": [
+        "relationship",
+        "voice"
+      ],
+      "themes": [
+        "validators",
+        "ownership"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://www.blocmates.com/news-posts/tensora-acquires-key-bittensor-validator-opens-tao-com-beta-waitlist",
@@ -328,8 +429,15 @@
       "quote": "Think AutoML on Bittensor and you're on the right track but still selling this group way short.",
       "context": "His episode description for the Gradients (subnet 56) episode with wanderingweights, explaining the subnet to a newcomer by analogy.",
       "about": "subnet:56",
-      "slots": ["value.functional", "voice", "audience"],
-      "themes": ["subnet use cases", "model training"],
+      "slots": [
+        "value.functional",
+        "voice",
+        "audience"
+      ],
+      "themes": [
+        "subnet use cases",
+        "model training"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d?page=2",
@@ -350,9 +458,18 @@
       "quote": "Bittensor's home run swing at distributed training and compute explained by it's charismatic leader himself. $TAO",
       "context": "His X post announcing the episode with Sam from Templar (subnet 3) and Basilica (subnet 39); reached through the fxtwitter mirror.",
       "about": "subnet:3",
-      "slots": ["messaging.proof", "opportunity", "voice"],
-      "themes": ["distributed training", "compute"],
-      "metaphors": ["home run"],
+      "slots": [
+        "messaging.proof",
+        "opportunity",
+        "voice"
+      ],
+      "themes": [
+        "distributed training",
+        "compute"
+      ],
+      "metaphors": [
+        "home run"
+      ],
       "source": {
         "url": "https://x.com/KeithSingery/status/1947404033205145938",
         "medium": "x",
@@ -372,8 +489,18 @@
       "quote": "Most Bittensory subnet there is. Code is intelligence man! Unlocks open source models, wide open, winner-take-all, @chutes_ai & @TargonCompute integration, UID-less mining. What else do you need? $TAO",
       "context": "His X post announcing the Ridges (subnet 62) episode, listing what he thinks makes a subnet most like Bittensor itself; reached through the fxtwitter mirror.",
       "about": "subnet:62",
-      "slots": ["language.term", "positioning.differentiator", "voice", "value.self_expressive"],
-      "themes": ["open source", "competition", "winner-take-all", "permissionless entry"],
+      "slots": [
+        "language.term",
+        "positioning.differentiator",
+        "voice",
+        "value.self_expressive"
+      ],
+      "themes": [
+        "open source",
+        "competition",
+        "winner-take-all",
+        "permissionless entry"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://x.com/KeithSingery/status/1949125382579655120",
@@ -394,8 +521,15 @@
       "quote": "Subnet 62 Ridges is on a tear the last month and has now cracked the top 15 subnets. Join me and owner Shakeel on this pod as we jam on all things 62. This is one of my favorite new projects on Bittensor and has a great chance to disrupt AI coding.",
       "context": "His episode description for the Ridges episode, the same subnet he had called the most Bittensory a week earlier.",
       "about": "subnet:62",
-      "slots": ["messaging.proof", "voice", "opportunity"],
-      "themes": ["AI coding", "subnet competition"],
+      "slots": [
+        "messaging.proof",
+        "voice",
+        "opportunity"
+      ],
+      "themes": [
+        "AI coding",
+        "subnet competition"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://directory.libsyn.com/shows/view/id/6cd17825-f44d-40a8-bf0d-76fddff4634d",
@@ -416,8 +550,16 @@
       "quote": "deregistration will shred 40–50 subnets, only the strongest teams will survive, and price charts are a distraction compared to what holders and builders are doing.",
       "context": "The hosts' episode description paraphrasing what he said as a guest on Revenue Search: Inside Bittensor with Siam Kidd and Mark Creaser; the wording is theirs, not his, and no transcript was reached.",
       "about": "network",
-      "slots": ["foundation.values", "audience", "problem.institutional"],
-      "themes": ["deregistration", "subnet competition", "price"],
+      "slots": [
+        "foundation.values",
+        "audience",
+        "problem.institutional"
+      ],
+      "themes": [
+        "deregistration",
+        "subnet competition",
+        "price"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://creators.spotify.com/pod/profile/revenue-search/episodes/Talking-Tao-with-Bittensor-Guru-Keith-Singery-e38ojbl",
@@ -438,8 +580,13 @@
       "quote": "Inference Labs is pioneering zkML applications in AI with Subnet 2 Omron and DSperse. Dan and Hudson join to take me through what they've built and how it applies to much more than proof of inference.",
       "context": "His episode description for the second Omron episode.",
       "about": "subnet:2",
-      "slots": ["value.functional"],
-      "themes": ["verification", "zkML"],
+      "slots": [
+        "value.functional"
+      ],
+      "themes": [
+        "verification",
+        "zkML"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://podcasts.apple.com/us/podcast/bittensor-guru/id1715552186",
@@ -460,8 +607,16 @@
       "quote": "Anyone can now mine on Bittensor using hardware you already own by contributing compute to IOTA's global training cluster, the world's first permissionless pipeline parallel training architecture.",
       "context": "His episode description for the Macrocosmos IOTA announcement on subnet 9, addressed to would-be miners.",
       "about": "subnet:9",
-      "slots": ["audience", "value.functional", "messaging.proof"],
-      "themes": ["permissionless entry", "distributed training", "mining"],
+      "slots": [
+        "audience",
+        "value.functional",
+        "messaging.proof"
+      ],
+      "themes": [
+        "permissionless entry",
+        "distributed training",
+        "mining"
+      ],
       "metaphors": [],
       "source": {
         "url": "https://podcasts.apple.com/us/podcast/bittensor-guru/id1715552186",
@@ -476,52 +631,234 @@
     }
   ],
   "appearances": [
-    {"date": "2023-12-04", "title": "Bittensor | AMA Hosted by Siam Kidd with Keith Singery", "outlet": "YouTube (Siam Kidd)", "url": "https://www.youtube.com/watch?v=Ur8opfprJTc", "medium": "youtube", "note": "Early AMA as a validator and Discord moderator; the YouTube page did not render a description or transcript in this session."},
-    {"date": "2024-02-21", "title": "Bittensor Guru: Own your intelligence with Keith Singery", "outlet": "In Plaintext Podcast (Phil Bonello and Fran Oliva-Velez)", "url": "https://creators.spotify.com/pod/profile/in-plaintext-podcast/episodes/Bittensor-Guru-Own-your-intelligence-with-Keith-Singery-e2g2ecp", "medium": "podcast", "note": "Chapters cover why Bittensor, the value and difficulty of validating, what a healthy subnet looks like, Dynamic TAO, staking, emissions and sustainability, and SN24; show notes only, no transcript."},
-    {"date": "2025-09-27", "title": "Talking Tao: with Bittensor Guru Keith Singery", "outlet": "Revenue Search: Inside Bittensor (Siam Kidd and Mark Creaser)", "url": "https://creators.spotify.com/pod/profile/revenue-search/episodes/Talking-Tao-with-Bittensor-Guru-Keith-Singery-e38ojbl", "medium": "podcast", "note": "Hosts summarise him on how capital enters the ecosystem, one breakout subnet changing everything, Ridges at the front, and deregistration clearing 40 to 50 subnets; show notes only, no transcript."}
+    {
+      "date": "2023-12-04",
+      "title": "Bittensor | AMA Hosted by Siam Kidd with Keith Singery",
+      "outlet": "YouTube (Siam Kidd)",
+      "url": "https://www.youtube.com/watch?v=Ur8opfprJTc",
+      "medium": "youtube",
+      "note": "Early AMA as a validator and Discord moderator; the YouTube page did not render a description or transcript in this session."
+    },
+    {
+      "date": "2024-02-21",
+      "title": "Bittensor Guru: Own your intelligence with Keith Singery",
+      "outlet": "In Plaintext Podcast (Phil Bonello and Fran Oliva-Velez)",
+      "url": "https://creators.spotify.com/pod/profile/in-plaintext-podcast/episodes/Bittensor-Guru-Own-your-intelligence-with-Keith-Singery-e2g2ecp",
+      "medium": "podcast",
+      "note": "Chapters cover why Bittensor, the value and difficulty of validating, what a healthy subnet looks like, Dynamic TAO, staking, emissions and sustainability, and SN24; show notes only, no transcript."
+    },
+    {
+      "date": "2025-09-27",
+      "title": "Talking Tao: with Bittensor Guru Keith Singery",
+      "outlet": "Revenue Search: Inside Bittensor (Siam Kidd and Mark Creaser)",
+      "url": "https://creators.spotify.com/pod/profile/revenue-search/episodes/Talking-Tao-with-Bittensor-Guru-Keith-Singery-e38ojbl",
+      "medium": "podcast",
+      "note": "Hosts summarise him on how capital enters the ecosystem, one breakout subnet changing everything, Ridges at the front, and deregistration clearing 40 to 50 subnets; show notes only, no transcript."
+    }
   ],
   "metaphors": [
-    {"label": "marketplace", "wording": "an incentivized marketplace for machine learning", "first_statement": "keith-singery-001", "origin": "unknown", "lineage_notes": "Matches the Opentensor Foundation's own early self-description of Bittensor as an incentivized marketplace; the foundation page was not fetched in this session so the URL is not recorded."},
-    {"label": "pruning", "wording": "pruning out the subnets that didn't really grow into an effective branch", "first_statement": "keith-singery-004", "origin": "introduced", "lineage_notes": ""},
-    {"label": "explosion", "wording": "an explosion of subnets on Bittensor", "first_statement": "keith-singery-004", "origin": "reused", "lineage_notes": "The Cambrian explosion frame is common in Bittensor circles; no earlier instance was fetched."},
-    {"label": "turing test", "wording": "Global Turing Test?!", "first_statement": "keith-singery-005", "origin": "introduced", "lineage_notes": ""},
-    {"label": "home run", "wording": "Bittensor's home run swing at distributed training and compute", "first_statement": "keith-singery-016", "origin": "introduced", "lineage_notes": ""}
+    {
+      "label": "marketplace",
+      "wording": "an incentivized marketplace for machine learning",
+      "first_statement": "keith-singery-001",
+      "origin": "unknown",
+      "lineage_notes": "Matches the Opentensor Foundation's own early self-description of Bittensor as an incentivized marketplace; the foundation page was not fetched in this session so the URL is not recorded."
+    },
+    {
+      "label": "pruning",
+      "wording": "pruning out the subnets that didn't really grow into an effective branch",
+      "first_statement": "keith-singery-004",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "explosion",
+      "wording": "an explosion of subnets on Bittensor",
+      "first_statement": "keith-singery-004",
+      "origin": "reused",
+      "lineage_notes": "The Cambrian explosion frame is common in Bittensor circles; no earlier instance was fetched."
+    },
+    {
+      "label": "turing test",
+      "wording": "Global Turing Test?!",
+      "first_statement": "keith-singery-005",
+      "origin": "introduced",
+      "lineage_notes": ""
+    },
+    {
+      "label": "home run",
+      "wording": "Bittensor's home run swing at distributed training and compute",
+      "first_statement": "keith-singery-016",
+      "origin": "introduced",
+      "lineage_notes": ""
+    }
   ],
   "framework": {
-    "positioning.category": {"summary": "Bittensor is an incentivized marketplace for machine learning, a project that combines AI and blockchain; he keeps the foundation's marketplace frame rather than coining his own.", "statements": ["keith-singery-001"]},
-    "relationship": {"summary": "He speaks as an enthusiast who runs a validator and moderates the official Discord, then from March 2025 as the host whose validator became the TAO.com validator and whose show relays TAO.com's subnet evaluations.", "statements": ["keith-singery-001", "keith-singery-013", "keith-singery-014"]},
-    "audience": {"summary": "He addresses the community and would-be miners subnet by subnet, translating each project into a one-line hook and, at the end of 2025, telling listeners anyone can now mine on hardware they already own.", "statements": ["keith-singery-001", "keith-singery-015", "keith-singery-021", "keith-singery-019"]},
-    "messaging.proof": {"summary": "His evidence is scale and pedigree: teams that brought 150 million users to AI, a subnet past 1000 GPUs, a subnet cracking the top 15, a permissionless training cluster.", "statements": ["keith-singery-002", "keith-singery-008", "keith-singery-018", "keith-singery-021"]},
-    "value.functional": {"summary": "The concrete benefit is always a working subnet: a trading competition, a yield engine, decentralised infrastructure, AutoML, zkML, distributed training.", "statements": ["keith-singery-003", "keith-singery-006", "keith-singery-007", "keith-singery-015", "keith-singery-020"]},
-    "opportunity": {"summary": "He expects deregistration to prune weak subnets and then an explosion of new ones, and reads distributed training and AI coding subnets as the network's big swings.", "statements": ["keith-singery-004", "keith-singery-016", "keith-singery-018"]},
-    "positioning.differentiator": {"summary": "What is most Bittensor-like to him is open source models, wide-open winner-take-all competition and permissionless mining, summed up as code is intelligence.", "statements": ["keith-singery-017"]},
-    "foundation.values": {"summary": "He praises subnets for increasing decentralisation and, in a hosts' paraphrase, treats price charts as a distraction next to what holders and builders do.", "statements": ["keith-singery-006", "keith-singery-019"]},
-    "language.term": {"summary": "He coins Bittensory as an adjective for a subnet that embodies the network's design.", "statements": ["keith-singery-017"]},
-    "voice": {"summary": "Boosterish, slangy and personal: we're back baby, on a tear, jam on all things 62, code is intelligence man.", "statements": ["keith-singery-010", "keith-singery-017", "keith-singery-018", "keith-singery-009"]},
-    "value.self_expressive": {"summary": "Being into the most Bittensory subnet signals being a true believer in open, winner-take-all competition.", "statements": ["keith-singery-017"]}
+    "positioning.category": {
+      "summary": "Bittensor is an incentivized marketplace for machine learning, a project that combines AI and blockchain; he keeps the foundation's marketplace frame rather than coining his own.",
+      "statements": [
+        "keith-singery-001"
+      ]
+    },
+    "relationship": {
+      "summary": "He speaks as an enthusiast who runs a validator and moderates the official Discord, then from March 2025 as the host whose validator became the TAO.com validator and whose show relays TAO.com's subnet evaluations.",
+      "statements": [
+        "keith-singery-001",
+        "keith-singery-013",
+        "keith-singery-014"
+      ]
+    },
+    "audience": {
+      "summary": "He addresses the community and would-be miners subnet by subnet, translating each project into a one-line hook and, at the end of 2025, telling listeners anyone can now mine on hardware they already own.",
+      "statements": [
+        "keith-singery-001",
+        "keith-singery-015",
+        "keith-singery-021",
+        "keith-singery-019"
+      ]
+    },
+    "messaging.proof": {
+      "summary": "His evidence is scale and pedigree: teams that brought 150 million users to AI, a subnet past 1000 GPUs, a subnet cracking the top 15, a permissionless training cluster.",
+      "statements": [
+        "keith-singery-002",
+        "keith-singery-008",
+        "keith-singery-018",
+        "keith-singery-021"
+      ]
+    },
+    "value.functional": {
+      "summary": "The concrete benefit is always a working subnet: a trading competition, a yield engine, decentralised infrastructure, AutoML, zkML, distributed training.",
+      "statements": [
+        "keith-singery-003",
+        "keith-singery-006",
+        "keith-singery-007",
+        "keith-singery-015",
+        "keith-singery-020"
+      ]
+    },
+    "opportunity": {
+      "summary": "He expects deregistration to prune weak subnets and then an explosion of new ones, and reads distributed training and AI coding subnets as the network's big swings.",
+      "statements": [
+        "keith-singery-004",
+        "keith-singery-016",
+        "keith-singery-018"
+      ]
+    },
+    "positioning.differentiator": {
+      "summary": "What is most Bittensor-like to him is open source models, wide-open winner-take-all competition and permissionless mining, summed up as code is intelligence.",
+      "statements": [
+        "keith-singery-017"
+      ]
+    },
+    "foundation.values": {
+      "summary": "He praises subnets for increasing decentralisation and, in a hosts' paraphrase, treats price charts as a distraction next to what holders and builders do.",
+      "statements": [
+        "keith-singery-006",
+        "keith-singery-019"
+      ]
+    },
+    "language.term": {
+      "summary": "He coins Bittensory as an adjective for a subnet that embodies the network's design.",
+      "statements": [
+        "keith-singery-017"
+      ]
+    },
+    "voice": {
+      "summary": "Boosterish, slangy and personal: we're back baby, on a tear, jam on all things 62, code is intelligence man.",
+      "statements": [
+        "keith-singery-010",
+        "keith-singery-017",
+        "keith-singery-018",
+        "keith-singery-009"
+      ]
+    },
+    "value.self_expressive": {
+      "summary": "Being into the most Bittensory subnet signals being a true believer in open, winner-take-all competition.",
+      "statements": [
+        "keith-singery-017"
+      ]
+    }
   },
   "language": {
-    "words_used": ["incentivized marketplace", "subnet", "miners", "validator", "ecosystem", "community", "winner-take-all", "open source", "permissionless", "decentralization", "on a tear", "monster idea"],
-    "words_avoided": ["commodity", "digital commodity", "Yuma consensus", "root network"],
+    "words_used": [
+      "incentivized marketplace",
+      "subnet",
+      "miners",
+      "validator",
+      "ecosystem",
+      "community",
+      "winner-take-all",
+      "open source",
+      "permissionless",
+      "decentralization",
+      "on a tear",
+      "monster idea"
+    ],
+    "words_avoided": [
+      "commodity",
+      "digital commodity",
+      "Yuma consensus",
+      "root network"
+    ],
     "coinages": [
-      {"term": "Bittensory", "meaning": "Adjective for a subnet that fully embodies Bittensor's design: open source, wide open, winner-take-all, permissionless mining.", "statement": "keith-singery-017"},
-      {"term": "Code is intelligence", "meaning": "His slogan for why an AI coding subnet is the purest expression of a network that pays for intelligence.", "statement": "keith-singery-017"}
+      {
+        "term": "Bittensory",
+        "meaning": "Adjective for a subnet that fully embodies Bittensor's design: open source, wide open, winner-take-all, permissionless mining.",
+        "statement": "keith-singery-017"
+      },
+      {
+        "term": "Code is intelligence",
+        "meaning": "His slogan for why an AI coding subnet is the purest expression of a network that pays for intelligence.",
+        "statement": "keith-singery-017"
+      }
     ]
   },
   "genealogy": [
-    {"era": "revolution", "summary": "From the show's launch in late 2023 he frames Bittensor with the foundation's own words, an incentivized marketplace for machine learning, and speaks as a validator and Discord moderator [keith-singery-001]. His episode copy sells the network one subnet at a time, by team pedigree and scale [keith-singery-002, keith-singery-008], and he reads deregistration as pruning before an explosion of subnets [keith-singery-004].", "dominant_metaphor": "marketplace", "shift": ""},
-    {"era": "dtao", "summary": "After his validator became the TAO.com validator he speaks as an evangelist relaying subnet evaluations [keith-singery-013, keith-singery-014]. The register gets louder and more partisan, picking Ridges as the most Bittensory subnet and coining code is intelligence [keith-singery-017, keith-singery-018], and by December 2025 the pitch to listeners is that anyone can mine on hardware they already own [keith-singery-021].", "dominant_metaphor": "home run", "shift": "From neutral host and validator to affiliated evangelist; from marketplace framing to open-competition slogans; the pruning expectation becomes a hosts' paraphrase that deregistration will shred 40 to 50 subnets [keith-singery-019]."}
+    {
+      "era": "revolution",
+      "summary": "From the show's launch in late 2023 he frames Bittensor with the foundation's own words, an incentivized marketplace for machine learning, and speaks as a validator and Discord moderator [keith-singery-001]. His episode copy sells the network one subnet at a time, by team pedigree and scale [keith-singery-002, keith-singery-008], and he reads deregistration as pruning before an explosion of subnets [keith-singery-004].",
+      "dominant_metaphor": "marketplace",
+      "shift": ""
+    },
+    {
+      "era": "dtao",
+      "summary": "After his validator became the TAO.com validator he speaks as an evangelist relaying subnet evaluations [keith-singery-013, keith-singery-014]. The register gets louder and more partisan, picking Ridges as the most Bittensory subnet and coining code is intelligence [keith-singery-017, keith-singery-018], and by December 2025 the pitch to listeners is that anyone can mine on hardware they already own [keith-singery-021].",
+      "dominant_metaphor": "home run",
+      "shift": "From neutral host and validator to affiliated evangelist; from marketplace framing to open-competition slogans; the pruning expectation becomes a hosts' paraphrase that deregistration will shred 40 to 50 subnets [keith-singery-019]."
+    }
   ],
   "relations": [
-    {"to": "sn62", "kind": "introduces", "statement": "keith-singery-017", "note": "Names Ridges the most Bittensory subnet and gives it a full episode."},
-    {"to": "sami-kassab", "kind": "agrees", "statement": "keith-singery-018", "note": "Both pick Ridges as the proof case in the same quarter; Sami's Ridges memo appeared on 2025-09-23."},
-    {"to": "sn9", "kind": "introduces", "statement": "keith-singery-021", "note": "Relays Macrocosmos' IOTA launch as the moment anyone can mine."}
+    {
+      "to": "sn62",
+      "kind": "introduces",
+      "statement": "keith-singery-017",
+      "note": "Names Ridges the most Bittensory subnet and gives it a full episode."
+    },
+    {
+      "to": "sami-kassab",
+      "kind": "agrees",
+      "statement": "keith-singery-018",
+      "note": "Both pick Ridges as the proof case in the same quarter; Sami's Ridges memo appeared on 2025-09-23."
+    },
+    {
+      "to": "sn9",
+      "kind": "introduces",
+      "statement": "keith-singery-021",
+      "note": "Relays Macrocosmos' IOTA launch as the moment anyone can mine."
+    }
   ],
   "coverage": {
     "searches_used": 14,
     "fetches_used": 67,
-    "well_covered": ["revolution era episode descriptions from March to June 2024", "dtao era X posts and episode descriptions in 2025"],
-    "thin": ["2023 and January to March 2024, the first 17 episodes", "current era, nothing from June 2026 onward", "his own long-form framing in intros: only show notes, no transcripts"],
+    "well_covered": [
+      "revolution era episode descriptions from March to June 2024",
+      "dtao era X posts and episode descriptions in 2025"
+    ],
+    "thin": [
+      "2023 and January to March 2024, the first 17 episodes",
+      "current era, nothing from June 2026 onward",
+      "his own long-form framing in intros: only show notes, no transcripts"
+    ],
     "gaps": [
       "Search and fetch counts are for the three-narrator group as a whole; the session search budget ran out after 14 searches.",
       "https://bittensor.guru/ and /about: TLS certificate error, so his own site and about text were not read.",
@@ -529,6 +866,14 @@
       "No episode transcripts reached; every podcast statement is show-notes text, and his spoken intros are unrecorded.",
       "No 2026 statements found without search budget; his X timeline was not enumerable through the fxtwitter mirror."
     ],
-    "unreachable": ["https://bittensor.guru/", "https://bittensor.guru/about", "https://web.archive.org/web/2025/https://bittensor.guru/about", "http://sites.libsyn.com/bittensor-guru", "https://podtail.com/en/podcast/bittensor-guru/", "https://www.youtube.com/watch?v=Ur8opfprJTc", "https://threadreaderapp.com/thread/1947404033205145938.html"]
+    "unreachable": [
+      "https://bittensor.guru/",
+      "https://bittensor.guru/about",
+      "https://web.archive.org/web/2025/https://bittensor.guru/about",
+      "http://sites.libsyn.com/bittensor-guru",
+      "https://podtail.com/en/podcast/bittensor-guru/",
+      "https://www.youtube.com/watch?v=Ur8opfprJTc",
+      "https://threadreaderapp.com/thread/1947404033205145938.html"
+    ]
   }
 }
