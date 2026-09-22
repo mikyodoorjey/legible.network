@@ -1,0 +1,16 @@
+# Program SN93 Bitcast: re-read against bitcast-x
+
+Read on 2026-09-22. One manifest rewritten: `data/programs/raw/93.json`. It passes `scripts/program_check.py`.
+
+## What changed against the previous reading
+
+The previous manifest (read 2026-09-19) pinned bitcast-network/bitcast at e27397e, the repository the chain identity names, which its own README calls mechanism 0, the YouTube side, at about 2 percent of emission. The new manifest pins bitcast-network/bitcast-x at a1cd123 (2026-09-17), the mechanism 1 X side at about 98 percent. Every field was re-fetched. `work` is now an X post against a brief with a hashed draft committed on chain before posting, not a YouTube video with a Partner Program token. `scoring` moved from the YouTube revenue curve in `bitcast/validator/reward/scaler.py` to the influence-weighted engagement formula in `src/bitcast_x/scoring.py`: twice the author's influence, plus 1 times influence per retweet and 3 times per quote from listed accounts, scaled by 0.1 + 0.9 / relationship score. `split` no longer describes dollar scores folded into a moving average with a treasury uid; it records that no code or config value fixes the 98 to 2 mechanism split, and that within mechanism 1 the shipped default `weight_score_blend = 1.0` weights miners by tweet score share, not by the dollar floors the protocol doc describes. `judges` now names the replay a validator does (historical commitment blocks, X provider, Chutes or OpenRouter, 15,000 alpha qualification) and that the campaign publisher, X provider and LLM are not decentralized. `cadence` adds the 100-block `weight_epoch_blocks` default and the seven-day campaign emission window. `buyer` was re-fetched from bitcast.network on 2026-09-22 ($438.1K revenue, $276.7K buybacks, $544.0K paid to 1.3K creators, 78 on YouTube and 1,216 on X) and the substack post was dropped from sources because it was not fetched this session. `exploits` moved from YouTube traffic caps to the engagement ring scaling, participant exclusion, pre-post draft commitment and the 15,000 alpha barrier. Trust per field: work docs, scoring code, split code, judges chain, cadence chain, buyer docs, exploits code.
+
+## Disagreements recorded
+
+- SN93 `work`: the chain identity and `data/index.json` name bitcast-network/bitcast, the 2 percent YouTube repository, and the explainer treats YouTube as the work; the bitcast-x README and AGENTS.md fetched 2026-09-22 put X at about 98 percent, and no value in either repository's code or config fixes that split.
+- SN93 `split`: `docs/protocol.md` at a1cd123 says reward construction sums per-tweet USD floors by miner UID and normalizes them into the weight vector; `src/bitcast_x/config.py` at the same commit defaults `weight_score_blend` to 1.0, which weights by deduplicated tweet score and ignores floors unless an operator lowers it, and `CHANGELOG.md` lists the change under 3.0.0 as unreleased.
+
+## Unknowns
+
+None. The mechanism emission split itself (98 to 2) is not an `unknown` field; it is recorded inside `split` and `work` at the trust of the README prose, since it was looked for and not found in `src/`, `config/`, `.env.example`, `pyproject.toml`, or `data/hyperparams-2026-09-19.json`.

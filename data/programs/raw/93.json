@@ -2,73 +2,78 @@
   "netuid": 93,
   "name": "Bitcast",
   "version": "1.0",
-  "read_on": "2026-09-19",
+  "read_on": "2026-09-22",
   "commodity": "media",
   "repo": {
-    "url": "https://github.com/bitcast-network/bitcast",
-    "commit": "e27397ed0a10402d0a14e6ae8a327802fcee8c43",
+    "url": "https://github.com/bitcast-network/bitcast-x",
+    "commit": "a1cd12382de5eb2194f13ab7504e44a132bdc873",
     "committed": "2026-09-17"
   },
   "fields": {
     "work": {
-      "text": "A YouTube video that satisfies a brand brief, on a channel in the YouTube Partner Program, plus an OAuth token the miner serves so validators can read the channel's analytics. This repository is mechanism 0, the YouTube side, at about 2 percent of emission; the X side, mechanism 1, lives in a second repository and takes about 98 percent.",
+      "text": "An original X post that satisfies a brand's campaign brief, by a creator ranked inside a curated influence map, whose hashed draft and later submission a miner platform commits on chain in hash-linked batches for validators to replay. Mechanism 0, the YouTube side in the repository the chain identity names, exists at about 2 percent of emission; this X side, mechanism 1, takes about 98 percent.",
       "trust": "docs",
-      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/README.md",
-      "quote": "Creators (miners) publish YouTube videos satisfying brand briefs; validators verify engagement via the YouTube Analytics API, score videos in USD terms",
-      "disagrees": "The chain identity names only this repository and the explainer treats YouTube as the subnet's work; the README fetched 2026-09-19 says this code is mechanism 0 at about 2 percent of emission, with mechanism 1 for X at 98 percent in bitcast-network/bitcast-x."
+      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/README.md",
+      "quote": "This repository implements mechanism 1 of SN93 (~98% of subnet emission). The mechanism 0 YouTube creator-economy mechanism (~2% of emission)",
+      "disagrees": "The chain identity and the index name bitcast-network/bitcast, the 2 percent YouTube repository, and the explainer treats YouTube as the work; the bitcast-x README and AGENTS.md fetched 2026-09-22 put X at about 98 percent, and no value in either repository's code or config fixes that split."
     },
     "scoring": {
-      "text": "A language model passes or fails the transcript against the brief. A passing video's score is the growth of its YouTube Premium partner revenue along a dampened square-root curve between two 7-day windows lagged 3 days, over its first 14 days, times a dollar factor by format (1800 dedicated, 400 ad read, 200 product placement) after a lifetime deduction of $100, $25 or $6.25. Non-Partner channels score zero.",
+      "text": "A language model passes or fails the post against the brief at temperature zero, any of three checks passing. A passing post's score starts at twice the author's influence in the campaign's curated map; each retweet from a listed account adds 1 times that account's influence, each quote 3 times, scaled by 0.1 + 0.9 / relationship score when the engager already has a tie to the author.",
       "trust": "code",
-      "path": "bitcast/validator/reward/scaler.py",
-      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/reward/scaler.py",
-      "quote": "Dampened square-root curve: sqrt(v) / (1 + d*sqrt(v)); 0 for non-positive input."
+      "path": "src/bitcast_x/scoring.py",
+      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/scoring.py",
+      "quote": "BASELINE_TWEET_SCORE_FACTOR = 2.0 RETWEET_WEIGHT = 1.0 QUOTE_WEIGHT = 3.0 CABAL_BASE = 0.1 CABAL_SCALE = 0.9"
     },
     "split": {
-      "text": "Proportional to dollar-valued scores summed across briefs, folded into each validator's exponential moving average. Whatever the miners' weights do not add up to goes to burn uid 0, so emission tracks earned dollars rather than filling to 100 percent; with no active briefs everything burns. A treasury uid 106 exists in the constants with its share set to 0.0.",
+      "text": "No value in code or config fixes the 98 to 2 split between the X and YouTube mechanisms; the validator submits only to mechid 1. At the default weight_score_blend of 1.0, a miner's weight is its share of deduplicated tweet scores. Dollar floors, daily campaign pools split by score to the 0.65 power, set weight only if the blend is lowered. No productive post, all weight burns to uid 0.",
       "trust": "code",
-      "path": "bitcast/validator/reward/scaler.py",
-      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/reward/scaler.py",
-      "quote": "Sum each miner's weights across briefs; the burn UID absorbs the remainder to 1.0."
+      "path": "src/bitcast_x/config.py",
+      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/config.py",
+      "quote": "Share of mechanism-1 emission weight allocated by deduplicated tweet scores instead of campaign floors. 1.0 (the default) allocates purely on content value",
+      "disagrees": "docs/protocol.md at the same commit says reward construction sums per-tweet USD floors by miner UID and normalizes them into the weight vector; config.py defaults weight_score_blend to 1.0, which weights by tweet score and ignores floors unless lowered, and CHANGELOG.md lists the change under 3.0.0 as unreleased."
     },
     "judges": {
-      "text": "Nine validators were active on the 2026-09-09 chain snapshot, against five miners. Commit-reveal is on. A validator does the reading itself: it pulls revenue and engagement from the YouTube Analytics API through the miner's token, calls a language model on Chutes to match brief to transcript, runs a prompt-injection auditor, and publishes hashed ids. Consensus constants are frozen so every validator's arithmetic matches bit for bit.",
+      "text": "Nine validators were active on the 2026-09-09 chain snapshot against five miners; commit-reveal is on. A validator re-derives the result: it reads each miner's 45-byte batch commitments from historical blocks, fetches the post and engagement from the X provider, runs the brief prompt on Chutes or OpenRouter, checks 15,000 alpha in conviction or stake, and submits to mechanism 1. Publisher, X provider and language model are not decentralized.",
       "trust": "chain",
       "snapshot": "data/hyperparams-2026-09-19.json",
       "quote": "commit_reveal_weights_enabled True, weights_rate_limit 100; chain-2026-09-09.json active_validators 9, active_miners 5"
     },
     "cadence": {
-      "text": "Emission settles every 360 blocks, about 72 minutes. A full reward cycle runs every 240 validator steps of 60 seconds, about 4 hours, and weights are set once the last update is older than the epoch length. A video is scoreable for 14 days after release. A new registration is immune from deregistration for 50,400 blocks, seven days, ten times the usual 5,000.",
+      "text": "Emission settles every 360 blocks, about 72 minutes. The validator polls every 12 seconds and submits weights once its mechanism 1 last update is older than weight_epoch_blocks, 100 by default. A campaign's reward pool pays over a seven-day emission window in daily budgets, and its featured post is pinned one day before close. A registration is immune from deregistration for 50,400 blocks, seven days.",
       "trust": "chain",
       "snapshot": "data/hyperparams-2026-09-19.json",
       "quote": "tempo 360, immunity_period 50400"
     },
     "buyer": {
-      "text": "Brands, none named. The dashboard on 2026-09-20 shows $438.1K lifetime revenue, $276.7K of it spent buying back the subnet token, and $539.5K paid to creators across YouTube and X. There is no brand-facing page, no price for a brief and no contact. The 2025 substack post addresses creators with a target CPM of $1,200 and names no client.",
+      "text": "Brands, none named. The dashboard on 2026-09-22 shows $438.1K lifetime revenue across chains, $276.7K of it spent buying the subnet token, and $544.0K paid to 1.3K creators, 78 on YouTube and 1,216 on X. The revenue ledger lists 1,211 transactions, USDC and USDT on Ethereum and TAO on the X side, with wallet addresses but no payer's name. No brand page, price for a brief, or contact.",
       "trust": "docs",
       "url": "https://bitcast.network/",
       "quote": "REVENUE $438.1K BUYBACKS $276.7K RATIO 63.1%"
     },
     "exploits": {
-      "text": "Bought or spiked traffic: a scoring period is capped at the channel's median daily value over days 60 to 30 before, so a sudden jump earns at most the usual rate; the 2025 post calls this the performance lookback. Only positive Partner Program revenue counts, watch time never substitutes, and stake no longer stands in for Partner status. Descriptions and transcripts are screened for prompt injection before the brief check.",
+      "text": "Engagement rings: a retweet or quote from an account with an existing relationship score to the author is scaled by 0.1 + 0.9 / score, self-engagement is dropped, and creators passing the same brief cannot boost one another. Backdated attribution: the hashed draft must be committed on chain before the post exists, and a post counts once. Sybil miners: qualification needs 15,000 alpha in conviction or staked to the hotkey.",
       "trust": "code",
-      "path": "bitcast/validator/reward/scaler.py",
-      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/reward/scaler.py",
-      "quote": "proportional scaling caps a scoring period at the channel's historical median"
+      "path": "src/bitcast_x/scoring.py",
+      "url": "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/scoring.py",
+      "quote": "scale = CABAL_BASE + CABAL_SCALE / relationship"
     }
   },
   "sources": [
     "https://bitcast.network/",
     "https://bitcast.network/revenue",
-    "https://bitcast.substack.com/p/bitcast-v20-scalable-powerful-aligned",
+    "https://github.com/bitcast-network/bitcast-x",
     "https://github.com/bitcast-network/bitcast",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/main/README.md",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/README.md",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/AGENTS.md",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/config.py",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/reward/scaler.py",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/reward/orchestrator.py",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/youtube/scoring.py",
-    "https://raw.githubusercontent.com/bitcast-network/bitcast/e27397ed0a10402d0a14e6ae8a327802fcee8c43/bitcast/validator/base.py"
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/README.md",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/AGENTS.md",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/CHANGELOG.md",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/docs/protocol.md",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/scoring.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/rewards.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/config.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/chain.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/qualification.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/validator/rewards.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/validator/service.py",
+    "https://raw.githubusercontent.com/bitcast-network/bitcast-x/a1cd12382de5eb2194f13ab7504e44a132bdc873/src/bitcast_x/validator/scoring.py"
   ]
 }
