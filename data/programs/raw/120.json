@@ -2,12 +2,12 @@
   "netuid": 120,
   "name": "Affine",
   "version": "1.0",
-  "read_on": "2026-09-19",
+  "read_on": "2026-09-22",
   "commodity": "training",
   "repo": {
     "url": "https://github.com/AffineFoundation/affine",
-    "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
-    "committed": "2026-09-10"
+    "commit": "d41cca5a12a61c482d0655ca6dce9deef594db39",
+    "committed": "2026-09-21"
   },
   "fields": {
     "work": {
@@ -17,19 +17,18 @@
       "quote": "King-of-the-hill subnet. Miners upload checkpoints privately to a validator-controlled bucket"
     },
     "scoring": {
-      "text": "One duel, challenger against king, over 1,300 turns of a coding corpus. A frozen teacher model scores each turn as min(R, G): R is how much the miner's written reasoning helps the teacher predict the right action, G is whether that reasoning sits inside the teacher's own band. The challenger crowns only if its mean margin clears max(2 standard errors, 0.002).",
+      "text": "One duel, challenger against king, over 1,000 turns of a coding corpus. Since 2026-09-18 each turn scores min(z_R, typ_c, z_A): how far the miner's thought-to-action lift, its thought's typicality on content tokens, and its action given the thought sit from three teacher samples, in teacher standard deviations. A forfeit scores -12. The challenger crowns if its mean margin clears max(2 standard errors, 0.2 sd), the thought floor and causality gate.",
       "trust": "code",
-      "path": "affine/affine/score.py",
-      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
-      "quote": "Per turn: turn = min(R, G); paired mean(turn_c - turn_k) > max(k_sigma * SE, min_margin)",
-      "disagrees": "llms.txt on 2026-09-19 opens with a newer meter, min(z_R, typ_c, z_A) with a floor of 0.2 teacher sd, while its own fork history and the repository at the pinned commit give min(R, G) with the 0.002 floor and n_turns = 1300 in affine/affine.toml."
+      "path": "affine/evalsrv/sdmeter.py",
+      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/sdmeter.py",
+      "quote": "turn = min(z_R, typ_c, z_A); forfeit -> forfeit_sd",
+      "disagrees": "The score.py header at this commit still calls min(R, G) the live rule and defaults score_mode to reason; affine.toml sets score_mode sd_min_rga, evalsrv/dueling.py applies it as the deciding rule, and llms.txt on 2026-09-22 agrees with the toml: min(z_R, typ_c, z_A), 1,000 turns, 0.2 sd."
     },
     "split": {
       "text": "Not proportional. Every crown won in the last 72 hours gets one equal share of the miner emission, whether or not it still holds the throne. A crown older than 72 hours earns nothing. When no crown is inside the window, the share goes to the burn UID. Effective 2026-09-14.",
       "trust": "docs",
       "url": "https://www.affine.io/llms.txt",
-      "quote": "a crown is paid for at most 72 hours; every crown inside its window gets one equal share",
-      "disagrees": "The repository at the pinned commit of 2026-09-10 pays equal shares to the current king and prior distinct kings with no time window (affine/affine/chain.py, set_rolling_weights); the 72-hour rule postdates the commit, and the payout module llms.txt cites is published on Hippius, not GitHub."
+      "quote": "a crown is paid for at most 72 hours; every crown inside its window gets one equal share"
     },
     "judges": {
       "text": "Three validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Weights are committed then revealed, at most once per 100 blocks. The validator does the work itself: it rents a GPU pod, loads both checkpoints, runs the whole duel, and seeds it from the reveal-block hash so anyone can replay the verdict. Nothing is sampled.",
@@ -50,10 +49,10 @@
       "quote": "Talk directly to the reigning SN120 king"
     },
     "exploits": {
-      "text": "The program records its own hacks. A king was crowned on a constant filler suffix and scored 0 of 50 on the bench, which is why the score became min(R, G). Reign 13, a re-upload of reign 12's weights, won on noise and was uncrowned. Defences: one evaluation slot per hotkey, burned at enqueue; identical weights rejected as copies; a published exploit audit after every crowning that can revert it.",
+      "text": "The program records its own hacks. A king crowned on a constant filler suffix benched 0 of 50, which forced min(R, G) and later the sd-meter. Reign 13, a re-upload of reign 12's weights, won on noise and was uncrowned. Defences: one evaluation slot per hotkey, burned at enqueue; a challenger holding every king safetensors digest is rejected as a copy; a published exploit audit after each crowning can revert.",
       "trust": "code",
       "path": "affine/affine.toml",
-      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
+      "url": "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine.toml",
       "quote": "wvk-9 king crowned on a constant filler suffix and benched 0/50"
     }
   },
@@ -62,9 +61,13 @@
     "https://www.affine.io/",
     "https://affine.io/api/v1/snapshot",
     "https://github.com/AffineFoundation/affine",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/chain.py",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/state.py"
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/score.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine.toml",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/chain.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/state.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/payout.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/sdmeter.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/dueling.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/model_store.py"
   ]
 }

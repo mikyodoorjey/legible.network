@@ -2,12 +2,12 @@
   "netuid": 51,
   "name": "lium.io",
   "version": "1.0",
-  "read_on": "2026-09-19",
+  "read_on": "2026-09-22",
   "commodity": "compute",
   "repo": {
     "url": "https://github.com/Datura-ai/lium-io",
-    "commit": "6102031346d7ee50c3fca16c44e3864971643217",
-    "committed": "2026-09-18"
+    "commit": "606d4a7261897ee60e4881de7c75361790a86e71",
+    "committed": "2026-09-22"
   },
   "fields": {
     "work": {
@@ -20,16 +20,16 @@
       "text": "Two formulas. A rented machine scores score x gpu_portion x gpu_count / total count of that model, where gpu_portion is a per-model share the platform derives from rental revenue. An idle machine of an eligible model scores gpu_count x hourly_rate x a cap multiplier, min(idle GPUs in its tier, tier cap) / idle GPUs. Both are multiplied by sysbox, driver and uptime gates.",
       "trust": "code",
       "path": "neurons/validators/src/incentive/rental_price.py",
-      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/rental_price.py",
+      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/rental_price.py",
       "quote": "result.rental_share * result.gpu_count * result.effective_rate / result.total_rental_cost"
     },
     "split": {
       "text": "Three pools, each proportional inside. Rented machines share the mining pool by score. Idle eligible machines share a second pool sized by their dollar rate per epoch divided by 0.41 and by the epoch's emission in dollars, capped at the burn ceiling. What the idle pool does not claim goes to designated burn UIDs. The packaged ceiling is 0.91, so the rented pool is 0.09.",
       "trust": "code",
       "path": "packages/lium-core/src/lium_core/shared_config/defaults.py",
-      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/packages/lium-core/src/lium_core/shared_config/defaults.py",
+      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/packages/lium-core/src/lium_core/shared_config/defaults.py",
       "quote": "total_burn_emission=0.91,",
-      "disagrees": "The docs emission page says the rented pool is a fixed 13 percent and the ceiling moved from 91 to 87 percent in mid-2026; the live endpoint lium.io/api/v1/shared-config returned total_burn_emission 0.9 on 2026-09-19; the packaged default at the pinned commit is 0.91."
+      "disagrees": "The docs emission page says the rented pool is a fixed 13 percent and the ceiling moved from 91 to 87 percent in mid-2026; the live endpoint lium.io/api/v1/shared-config returned total_burn_emission 0.9 on 2026-09-19 and again on 2026-09-22; the packaged default at the pinned commit is still 0.91."
     },
     "judges": {
       "text": "Nine validators were active on the 2026-09-09 chain snapshot, of 64 permitted, though the docs say Lium runs a single validator and point others to a community auditor. Weights are committed then revealed, at most once per 100 blocks. The validator connects to every machine every 15 minutes, checks the sysbox runtime, hardware and a test workload, and reads rental state from the platform's backend.",
@@ -53,7 +53,7 @@
       "text": "Faked or secretly busy hardware. The validator pins hashes of the NVIDIA management library per driver version, treats a GPU over 95 percent busy with under 1 percent memory as a wedged ghost, and flags held VRAM above 2,048 MB on an idle node. Idle-pool gates: price above market p90 times 1.1, disk under 1.5 times VRAM, no power-cap rights. Without sysbox every score is 0.",
       "trust": "code",
       "path": "neurons/validators/src/services/const.py",
-      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/services/const.py",
+      "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/services/const.py",
       "quote": "GPU_HELD_VRAM_MB_LIMIT = 2048"
     }
   },
@@ -66,9 +66,9 @@
     "https://docs.lium.io/providers/rewards/penalties.md",
     "https://docs.lium.io/validators/index.md",
     "https://github.com/Datura-ai/lium-io",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/rental_price.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/default.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/packages/lium-core/src/lium_core/shared_config/defaults.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/services/const.py"
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/rental_price.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/default.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/packages/lium-core/src/lium_core/shared_config/defaults.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/services/const.py"
   ]
 }

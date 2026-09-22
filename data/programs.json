@@ -47,7 +47,7 @@
    "read": 10,
    "unknown": 4
   },
-  "disagreements": 32,
+  "disagreements": 35,
   "unknowns": 4,
   "from_chain_or_code": 136
  },
@@ -130,12 +130,12 @@
    "netuid": 51,
    "name": "lium.io",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "compute",
    "repo": {
     "url": "https://github.com/Datura-ai/lium-io",
-    "commit": "6102031346d7ee50c3fca16c44e3864971643217",
-    "committed": "2026-09-18"
+    "commit": "606d4a7261897ee60e4881de7c75361790a86e71",
+    "committed": "2026-09-22"
    },
    "fields": {
     "work": {
@@ -148,16 +148,16 @@
      "text": "Two formulas. A rented machine scores score x gpu_portion x gpu_count / total count of that model, where gpu_portion is a per-model share the platform derives from rental revenue. An idle machine of an eligible model scores gpu_count x hourly_rate x a cap multiplier, min(idle GPUs in its tier, tier cap) / idle GPUs. Both are multiplied by sysbox, driver and uptime gates.",
      "trust": "code",
      "path": "neurons/validators/src/incentive/rental_price.py",
-     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/rental_price.py",
+     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/rental_price.py",
      "quote": "result.rental_share * result.gpu_count * result.effective_rate / result.total_rental_cost"
     },
     "split": {
      "text": "Three pools, each proportional inside. Rented machines share the mining pool by score. Idle eligible machines share a second pool sized by their dollar rate per epoch divided by 0.41 and by the epoch's emission in dollars, capped at the burn ceiling. What the idle pool does not claim goes to designated burn UIDs. The packaged ceiling is 0.91, so the rented pool is 0.09.",
      "trust": "code",
      "path": "packages/lium-core/src/lium_core/shared_config/defaults.py",
-     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/packages/lium-core/src/lium_core/shared_config/defaults.py",
+     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/packages/lium-core/src/lium_core/shared_config/defaults.py",
      "quote": "total_burn_emission=0.91,",
-     "disagrees": "The docs emission page says the rented pool is a fixed 13 percent and the ceiling moved from 91 to 87 percent in mid-2026; the live endpoint lium.io/api/v1/shared-config returned total_burn_emission 0.9 on 2026-09-19; the packaged default at the pinned commit is 0.91."
+     "disagrees": "The docs emission page says the rented pool is a fixed 13 percent and the ceiling moved from 91 to 87 percent in mid-2026; the live endpoint lium.io/api/v1/shared-config returned total_burn_emission 0.9 on 2026-09-19 and again on 2026-09-22; the packaged default at the pinned commit is still 0.91."
     },
     "judges": {
      "text": "Nine validators were active on the 2026-09-09 chain snapshot, of 64 permitted, though the docs say Lium runs a single validator and point others to a community auditor. Weights are committed then revealed, at most once per 100 blocks. The validator connects to every machine every 15 minutes, checks the sysbox runtime, hardware and a test workload, and reads rental state from the platform's backend.",
@@ -181,7 +181,7 @@
      "text": "Faked or secretly busy hardware. The validator pins hashes of the NVIDIA management library per driver version, treats a GPU over 95 percent busy with under 1 percent memory as a wedged ghost, and flags held VRAM above 2,048 MB on an idle node. Idle-pool gates: price above market p90 times 1.1, disk under 1.5 times VRAM, no power-cap rights. Without sysbox every score is 0.",
      "trust": "code",
      "path": "neurons/validators/src/services/const.py",
-     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/services/const.py",
+     "url": "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/services/const.py",
      "quote": "GPU_HELD_VRAM_MB_LIMIT = 2048"
     }
    },
@@ -194,10 +194,10 @@
     "https://docs.lium.io/providers/rewards/penalties.md",
     "https://docs.lium.io/validators/index.md",
     "https://github.com/Datura-ai/lium-io",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/rental_price.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/incentive/default.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/packages/lium-core/src/lium_core/shared_config/defaults.py",
-    "https://raw.githubusercontent.com/Datura-ai/lium-io/6102031346d7ee50c3fca16c44e3864971643217/neurons/validators/src/services/const.py"
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/rental_price.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/incentive/default.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/packages/lium-core/src/lium_core/shared_config/defaults.py",
+    "https://raw.githubusercontent.com/Datura-ai/lium-io/606d4a7261897ee60e4881de7c75361790a86e71/neurons/validators/src/services/const.py"
    ],
    "rank": 2,
    "emission_pct": "8.0%",
@@ -283,12 +283,12 @@
    "netuid": 120,
    "name": "Affine",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "training",
    "repo": {
     "url": "https://github.com/AffineFoundation/affine",
-    "commit": "1c3b5999fbbc10e71fcd7430c018f205ba1980ea",
-    "committed": "2026-09-10"
+    "commit": "d41cca5a12a61c482d0655ca6dce9deef594db39",
+    "committed": "2026-09-21"
    },
    "fields": {
     "work": {
@@ -298,19 +298,18 @@
      "quote": "King-of-the-hill subnet. Miners upload checkpoints privately to a validator-controlled bucket"
     },
     "scoring": {
-     "text": "One duel, challenger against king, over 1,300 turns of a coding corpus. A frozen teacher model scores each turn as min(R, G): R is how much the miner's written reasoning helps the teacher predict the right action, G is whether that reasoning sits inside the teacher's own band. The challenger crowns only if its mean margin clears max(2 standard errors, 0.002).",
+     "text": "One duel, challenger against king, over 1,000 turns of a coding corpus. Since 2026-09-18 each turn scores min(z_R, typ_c, z_A): how far the miner's thought-to-action lift, its thought's typicality on content tokens, and its action given the thought sit from three teacher samples, in teacher standard deviations. A forfeit scores -12. The challenger crowns if its mean margin clears max(2 standard errors, 0.2 sd), the thought floor and causality gate.",
      "trust": "code",
-     "path": "affine/affine/score.py",
-     "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
-     "quote": "Per turn: turn = min(R, G); paired mean(turn_c - turn_k) > max(k_sigma * SE, min_margin)",
-     "disagrees": "llms.txt on 2026-09-19 opens with a newer meter, min(z_R, typ_c, z_A) with a floor of 0.2 teacher sd, while its own fork history and the repository at the pinned commit give min(R, G) with the 0.002 floor and n_turns = 1300 in affine/affine.toml."
+     "path": "affine/evalsrv/sdmeter.py",
+     "url": "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/sdmeter.py",
+     "quote": "turn = min(z_R, typ_c, z_A); forfeit -> forfeit_sd",
+     "disagrees": "The score.py header at this commit still calls min(R, G) the live rule and defaults score_mode to reason; affine.toml sets score_mode sd_min_rga, evalsrv/dueling.py applies it as the deciding rule, and llms.txt on 2026-09-22 agrees with the toml: min(z_R, typ_c, z_A), 1,000 turns, 0.2 sd."
     },
     "split": {
      "text": "Not proportional. Every crown won in the last 72 hours gets one equal share of the miner emission, whether or not it still holds the throne. A crown older than 72 hours earns nothing. When no crown is inside the window, the share goes to the burn UID. Effective 2026-09-14.",
      "trust": "docs",
      "url": "https://www.affine.io/llms.txt",
-     "quote": "a crown is paid for at most 72 hours; every crown inside its window gets one equal share",
-     "disagrees": "The repository at the pinned commit of 2026-09-10 pays equal shares to the current king and prior distinct kings with no time window (affine/affine/chain.py, set_rolling_weights); the 72-hour rule postdates the commit, and the payout module llms.txt cites is published on Hippius, not GitHub."
+     "quote": "a crown is paid for at most 72 hours; every crown inside its window gets one equal share"
     },
     "judges": {
      "text": "Three validators were active on the 2026-09-09 chain snapshot, of 64 permitted. Weights are committed then revealed, at most once per 100 blocks. The validator does the work itself: it rents a GPU pod, loads both checkpoints, runs the whole duel, and seeds it from the reveal-block hash so anyone can replay the verdict. Nothing is sampled.",
@@ -331,10 +330,10 @@
      "quote": "Talk directly to the reigning SN120 king"
     },
     "exploits": {
-     "text": "The program records its own hacks. A king was crowned on a constant filler suffix and scored 0 of 50 on the bench, which is why the score became min(R, G). Reign 13, a re-upload of reign 12's weights, won on noise and was uncrowned. Defences: one evaluation slot per hotkey, burned at enqueue; identical weights rejected as copies; a published exploit audit after every crowning that can revert it.",
+     "text": "The program records its own hacks. A king crowned on a constant filler suffix benched 0 of 50, which forced min(R, G) and later the sd-meter. Reign 13, a re-upload of reign 12's weights, won on noise and was uncrowned. Defences: one evaluation slot per hotkey, burned at enqueue; a challenger holding every king safetensors digest is rejected as a copy; a published exploit audit after each crowning can revert.",
      "trust": "code",
      "path": "affine/affine.toml",
-     "url": "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
+     "url": "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine.toml",
      "quote": "wvk-9 king crowned on a constant filler suffix and benched 0/50"
     }
    },
@@ -343,10 +342,14 @@
     "https://www.affine.io/",
     "https://affine.io/api/v1/snapshot",
     "https://github.com/AffineFoundation/affine",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/score.py",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine.toml",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/chain.py",
-    "https://raw.githubusercontent.com/AffineFoundation/affine/1c3b5999fbbc10e71fcd7430c018f205ba1980ea/affine/affine/state.py"
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/score.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine.toml",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/chain.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/state.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/payout.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/sdmeter.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/evalsrv/dueling.py",
+    "https://raw.githubusercontent.com/AffineFoundation/affine/d41cca5a12a61c482d0655ca6dce9deef594db39/affine/affine/model_store.py"
    ],
    "rank": 4,
    "emission_pct": "6.0%",
@@ -879,32 +882,33 @@
    "netuid": 8,
    "name": "Vanta",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "forecasting",
    "repo": {
     "url": "https://github.com/taoshidev/vanta-network",
-    "commit": "3fd1dcfa87cc92a72e45a56f389ef346c57e7f54",
-    "committed": "2026-09-18"
+    "commit": "1b758503cd77cffa859be29e2bc3843ef16256de",
+    "committed": "2026-09-20"
    },
    "fields": {
     "work": {
      "text": "Trading orders. A miner posts long, short or flat signals on forex, crypto, equities or commodities pairs into a simulated account whose size is set by deposited collateral in Theta, Taoshi's token. Validators book the orders against live prices with fees and slippage. What is paid for is the account's realized profit in dollars, week by week.",
      "trust": "docs",
-     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/README.md",
+     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/README.md",
      "quote": "Miners can submit LONG, SHORT, or FLAT signal for Forex, Crypto, Equities, or Commodities trade pairs into the network during market hours."
     },
     "scoring": {
      "text": "Debt-based. Each week, ending Sunday 00:00 UTC, a miner's realized profit above its own prior high-water mark, in USD, times a penalty multiplier for drawdown, risk profile and minimum collateral, minus unrealized losses, becomes a payout the network owes. Average daily PnL carries 100 percent of the score; Calmar, Sharpe, Omega, Sortino and t-statistic are computed at weight 0.0.",
      "trust": "code",
      "path": "vali_objects/scoring/debt_based_scoring.py",
-     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/scoring/debt_based_scoring.py",
-     "quote": "\"Needed payout\" = Cumulative earnings from activation through end of previous pay period (PnL in USD * penalties)"
+     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/scoring/debt_based_scoring.py",
+     "quote": "\"Needed payout\" = Cumulative earnings from activation through end of previous pay period (PnL in USD * penalties)",
+     "disagrees": "The docstring of debt_based_scoring.py says payout periods start and end at midnight Sunday 00:00:00 UTC; the same file computes week boundaries with TimeUtil.ms_at_start_of_week, which rounds to Monday 00:00 UTC via weekday(), and the pinned commit's challengeperiod_manager.py calls the boundary the first Monday 00:00 UTC."
     },
     "split": {
      "text": "Proportional to debt owed. Each miner's weight is its remaining weekly payout in USD divided by the emission projected, in USD, over the days left to Sunday. Every eligible miner also gets a dust floor: one unit in challenge period, two on probation, three in main competition. If the debts sum to less than the emission, the excess weight goes to burn UID 229.",
      "trust": "code",
      "path": "vali_objects/scoring/debt_based_scoring.py",
-     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/scoring/debt_based_scoring.py",
+     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/scoring/debt_based_scoring.py",
      "quote": "If sum < 1.0: assign (1.0 - sum) to burn address (uid 229 mainnet / uid 5 testnet)"
     },
     "judges": {
@@ -917,7 +921,8 @@
      "text": "Emission settles every 360 blocks, about 72 minutes. The payout period is a week, Sunday 00:00 UTC to Sunday. Ledgers checkpoint every 12 hours and weights refresh every 5 minutes. A new registration is immune from deregistration for only 1,200 blocks, about 4 hours, against the 5,000 most subnets use; the challenge period itself runs 61 to 90 days.",
      "trust": "chain",
      "snapshot": "data/hyperparams-2026-09-19.json",
-     "quote": "tempo 360, immunity_period 1200; SET_WEIGHT_REFRESH_TIME_MS = 60 * 5 * 1000; CHALLENGE_PERIOD_MINIMUM_DAYS = 61"
+     "quote": "tempo 360, immunity_period 1200; SET_WEIGHT_REFRESH_TIME_MS = 60 * 5 * 1000; CHALLENGE_PERIOD_MINIMUM_DAYS = 61",
+     "disagrees": "The Sunday 00:00 UTC payout boundary comes from the debt_based_scoring.py docstring; the boundary the code computes, TimeUtil.ms_at_start_of_week, is Monday 00:00 UTC, and the head commit promotes pro-transition miners at that Monday boundary."
     },
     "buyer": {
      "text": "Two kinds. Traders pay Vanta Trading, Taoshi's prop-firm front end, a one-time evaluation fee, $14 for a $5,000 account up to $599 for $100,000 with a 100 percent reward split, and are paid weekly if they pass. The network's own page says the protocol A-books the best strategies into real capital. No figure for capital deployed or signals sold appears in text.",
@@ -929,7 +934,7 @@
      "text": "Copying another miner's orders: a follower detector compares order streams over a 10-day lookback at 2-minute resolution, flags similarity above 0.75, and elimination follows a two-week review. Eliminated hotkeys are permanently blacklisted. Recovering a loss earns nothing, since payout is gated on the high-water mark. A 1 percent floor on volatility blocks gaming the Sharpe denominator. Drawdown of 5 percent intraday or 8 percent end-of-day eliminates.",
      "trust": "code",
      "path": "vali_objects/vali_config.py",
-     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/vali_config.py",
+     "url": "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/vali_config.py",
      "quote": "PLAGIARISM_FOLLOWER_SIMILARITY_THRESHOLD = 0.75; PLAGIARISM_REVIEW_PERIOD_MS = 1000 * 60 * 60 * 24 * 14",
      "disagrees": "The README at the pinned commit gives one drawdown rule for all miners, 5 percent intraday or 8 percent end-of-day, while docs/miner.md in the same repository says challenge-period miners are eliminated at 5 percent end-of-day and only main-competition miners at 8."
     }
@@ -938,12 +943,12 @@
     "https://www.vantanetwork.io/llms.txt",
     "https://www.vantatrading.io/pricing",
     "https://github.com/taoshidev/vanta-network",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/README.md",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/docs/miner.md",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/scoring/debt_based_scoring.py",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/scoring/weight_calculator_manager.py",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/vali_config.py",
-    "https://raw.githubusercontent.com/taoshidev/vanta-network/3fd1dcfa87cc92a72e45a56f389ef346c57e7f54/vali_objects/plagiarism/plagiarism_manager.py"
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/README.md",
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/docs/miner.md",
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/scoring/debt_based_scoring.py",
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/scoring/weight_calculator_manager.py",
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/vali_config.py",
+    "https://raw.githubusercontent.com/taoshidev/vanta-network/1b758503cd77cffa859be29e2bc3843ef16256de/vali_objects/plagiarism/plagiarism_manager.py"
    ],
    "rank": 12,
    "emission_pct": "2.3%",
@@ -1333,34 +1338,34 @@
    "netuid": 91,
    "name": "cascade",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "forecasting",
    "repo": {
     "url": "https://github.com/TensorLink-AI/cascade",
-    "commit": "e745a3271b4114b3d54b8acb8ea1350acaa7b112",
-    "committed": "2026-09-20"
+    "commit": "7ebfc19da3f21c5b78b402f85446647f166b14cc",
+    "committed": "2026-09-22"
    },
    "fields": {
     "work": {
      "text": "A data generator: Python code that, from a shared seed, yields synthetic time series to train a small forecasting model. The miner ships code only, no weights and no GPU, and commits an encrypted pointer on chain that unlocks before the round boundary. What is paid for is a generator whose data trains a Toto2-4M forecaster that beats the king's on private real-world windows.",
      "trust": "docs",
-     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/README.md",
+     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/README.md",
      "quote": "miners write the synthetic data generators that train it. Better data trains a better forecaster"
     },
     "scoring": {
-     "text": "King and challenger each train a fresh Toto2-4M from the round's shared init and seeds on their own data. Validators score both on the same private held-out windows by the geometric mean of CRPS and MASE, two forecast error measures, lower is better. A paired bootstrap of 10,000 resamples gives a one-sided 95 percent lower bound on the challenger's relative improvement; it wins if that bound clears the margin.",
+     "text": "King and challenger each train a Toto2-4M from a shared init on their generator's data. Validators score both on the same private held-out windows by the geometric mean of CRPS and MASE, lower is better. A paired bootstrap of 10,000 resamples gives a one-sided 95 percent lower bound on the challenger's relative improvement; it wins if that bound clears the margin. An uncomputable bound is inconclusive and the king holds.",
      "trust": "code",
      "path": "cascade/eval/koth.py",
-     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/eval/koth.py",
+     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/eval/koth.py",
      "quote": "The challenger *wins the round* iff that LCB clears the win margin"
     },
     "split": {
      "text": "Geometric decay across the lineage. The current king plus up to 4 prior kings still registered are paid in proportion to 0.5 to the power of their distance from the throne, about 52, 26, 13, 6 and 3 percent. A deregistered prior king drops out and the rest renormalize; with no valid king everything burns to UID 0. The dethrone margin is 0.01 fresh, 0.005 after 8 rounds.",
      "trust": "code",
      "path": "chain.toml",
-     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/chain.toml",
+     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/chain.toml",
      "quote": "reward_prior_kings = 4 ... king_decay = 0.5 # geometric decay across [king, prior kings]",
-     "disagrees": "docs/ARCHITECTURE.md at the pinned commit says the validator sets an equal share across the current king plus up to reward_prior_kings prior kings; chain.toml at the same commit sets king_decay 0.5, cascade/validator/loop.py passes it to decayed_share_vector, and the README and llms.txt give about 52/26/13/6/3 percent."
+     "disagrees": "docs/ARCHITECTURE.md at the pinned commit still says the validator sets an equal share across the current king plus up to reward_prior_kings prior kings; chain.toml at the same commit sets king_decay 0.5, cascade/validator/loop.py passes it to decayed_share_vector, and the README and llms.txt give about 52/26/13/6/3 percent."
     },
     "judges": {
      "text": "Seven validators were active on the 2026-09-09 chain snapshot, of 64 permitted; the margin rollout doc counts 6 external validators. Weights are committed then revealed, at most once per 100 blocks. Training runs on the owner's trainer on rented pods under one shared seed; each validator downloads the king's and finalists' checkpoints, scores them itself on private windows, runs the bootstrap verdict, and publishes a signed receipt cascade-audit can replay.",
@@ -1372,37 +1377,43 @@
      "text": "Emission settles every 360 blocks, about 72 minutes, but the puzzle turns every 3,600 blocks: a round of about 12 hours with boundaries near 08:30 and 20:30 UTC, an encrypted reveal 25 blocks before the boundary, a one-hour heat and a five-hour final. Rounds without funded seats run nothing and the king holds. A new registration is immune from deregistration for 5,000 blocks, about 16 hours.",
      "trust": "chain",
      "snapshot": "data/hyperparams-2026-09-19.json",
-     "quote": "tempo 360, immunity_period 5000"
+     "quote": "tempo 360, immunity_period 5000",
+     "disagrees": "The README at the pinned commit announces rolling intake next: 3 hour settlements against a king trained once per 12 hour era, switched on when 51 percent of validator stake signals readiness on chain; chain.toml at the same commit keeps epoch_blocks 3600 with rolling_from_block and era_king_from_block at 0, and whether the on-chain lock-in has fired was not checked."
     },
     "buyer": {
      "text": "Nobody. The chain URL cascadesub.net did not resolve on 2026-09-19; testnet.cascadesub.net serves a scoreboard of rounds, reigns and model error with no product, price, API or customer. The README describes the output as a trained forecaster checkpoint, and every crowned king's generator code is published. The miner's income is emission.",
      "trust": "read",
      "url": "https://testnet.cascadesub.net/",
-     "quote": "King-of-the-hill · compete on synthetic data · Bittensor"
+     "quote": "King-of-the-hill · compete on synthetic data · Bittensor",
+     "disagrees": "On 2026-09-22 cascadesub.net resolves and redirects to dashboard.cascadesub.net, the mainnet scoreboard of rounds, reigns and model error; it still shows no product, price, API or customer."
     },
     "exploits": {
      "text": "Copying a rival's generator: exact-identity dedup on the file tree, the normalized token stream and the stream with names masked, plus a behavioral probe for identical output; the earliest reveal keeps the slot and dropped copies still burn the hotkey. A similarity threshold was tried and removed after operators spaced variants just under it and it produced one false drop. Jitter-duplicated channels: a 0.999 correlation gate, in shadow.",
      "trust": "code",
      "path": "cascade/interface/dedup.py",
-     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/interface/dedup.py",
+     "url": "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/interface/dedup.py",
      "quote": "a ratio bar is gameable by construction"
     }
    },
    "sources": [
     "https://testnet.cascadesub.net/",
+    "https://dashboard.cascadesub.net/",
     "https://github.com/TensorLink-AI/cascade",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/README.md",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/llms.txt",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/chain.toml",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/docs/ARCHITECTURE.md",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/docs/VALIDATOR.md",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/docs/AUDIT.md",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/docs/MARGIN_DECAY_ROLLOUT.md",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/eval/koth.py",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/eval/scoring.py",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/interface/dedup.py",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/validator/loop.py",
-    "https://raw.githubusercontent.com/TensorLink-AI/cascade/e745a3271b4114b3d54b8acb8ea1350acaa7b112/cascade/shared/chain.py"
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/README.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/llms.txt",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/chain.toml",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/docs/ARCHITECTURE.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/docs/VALIDATOR.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/docs/AUDIT.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/docs/MARGIN_DECAY_ROLLOUT.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/eval/koth.py",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/eval/scoring.py",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/interface/dedup.py",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/validator/loop.py",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/cascade/shared/chain.py",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/decisions/DEC-CA-0039-increment-margin-activation.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/decisions/DEC-CA-0043-rolling-intake-era-king.md",
+    "https://raw.githubusercontent.com/TensorLink-AI/cascade/7ebfc19da3f21c5b78b402f85446647f166b14cc/decisions/DEC-CA-0045-stake-weighted-activation.md"
    ],
    "rank": 18,
    "emission_pct": "1.7%",
@@ -1616,33 +1627,33 @@
    "netuid": 38,
    "name": "ChronoLLM",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "training",
    "repo": {
     "url": "https://github.com/chronollm/sn38",
-    "commit": "01f596b424a01d40ec14db10493d329c0d1c97be",
-    "committed": "2026-09-14"
+    "commit": "a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f",
+    "committed": "2026-09-22"
    },
    "fields": {
     "work": {
      "text": "A set of twelve language models, one per vintage year from 2013 to 2024, each trained only on text available up to its cutoff so it cannot know later events. Each is at most 2.2 billion parameters in safetensors, uploaded to Hugging Face and registered on chain. What is paid for is a slate that passes the leak test and wins text-completion duels.",
      "trust": "docs",
-     "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/README.md",
+     "url": "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/README.md",
      "quote": "Each model must be trained only on data available up to its cutoff year. A model for 2018 must know nothing about 2019 or beyond."
     },
     "scoring": {
      "text": "Stage 1 is a gate: per year the model must recognise at least 70 percent of pre-cutoff items and at most 10 percent of post-cutoff ones, the year average must beat -3.0. Up to 30 survivors then duel round-robin: each writes completions for prompts a judge model invents fresh that round, and GPT-5.4 picks the winner per pair. Final score is leak_weight x normalised leak plus quality_weight x win rate.",
      "trust": "code",
      "path": "sn38/neurons/validator.py",
-     "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
+     "url": "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/neurons/validator.py",
      "quote": "final_scores[uid] = leak_weight * normalized_leak[uid] + quality_weight * win_rates[uid]",
-     "disagrees": "The code's fallback defaults at the pinned commit are leak_weight 0.7, quality_weight 0.3 and top_n_for_quality 10; api.chronollm.com/config on 2026-09-19 returned leak_weight 0.0, quality_weight 1.0 and top_n_for_quality 30, so the README's final_score = quality_win_rate is what runs."
+     "disagrees": "The code's fallback defaults at the pinned commit are leak_weight 0.7, quality_weight 0.3 and top_n_for_quality 10; api.chronollm.com/config, re-fetched 2026-09-22, still returns leak_weight 0.0, quality_weight 1.0 and top_n_for_quality 30, so the README's final_score = quality_win_rate is what runs."
     },
     "split": {
      "text": "Winner-heavy exponential decay. The top ten by final score are paid exp(-0.8 x rank^0.9) normalised to one, which gives about 52, 23, 12, 6, 3, 2, 1 percent and under, and rank eleven and below get nothing. An emission_pct below 1 sends the remainder to the owner UID; the live config has it at 1.0. The owner UID itself is excluded from the ranking.",
      "trust": "code",
      "path": "sn38/neurons/validator.py",
-     "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
+     "url": "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/neurons/validator.py",
      "quote": "rewards = np.exp(-0.8 * (np.arange(n) ** 0.9))"
     },
     "judges": {
@@ -1667,7 +1678,7 @@
      "text": "Copying a rival's weights: an identical checksum is rejected and the first submitter keeps priority; near-copies are caught pairwise by SVD spectral distance under 0.001, weight cosine over 0.95 or logit KL under 1.0, invariant to rotation, permutation and scaling. Overfitting the leak set: it stays inside the enclave, and duel prompts are invented fresh each round. Stale models: the slate is wiped every Monday.",
      "trust": "code",
      "path": "sn38/template/svd_gate.py",
-     "url": "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/svd_gate.py",
+     "url": "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/svd_gate.py",
      "quote": "SVD_THRESHOLD = 0.001 ... COSINE_THRESHOLD = 0.95 ... KL_THRESHOLD = 1.0"
     }
    },
@@ -1676,16 +1687,16 @@
     "https://api.chronollm.com/config",
     "https://leaderboard.chronollm.com/",
     "https://github.com/chronollm/sn38",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/README.md",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/docs/miner.md",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/docs/validator.md",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/neurons/validator.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/constants.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/quality.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/leak.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/dedup.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/svd_gate.py",
-    "https://raw.githubusercontent.com/chronollm/sn38/01f596b424a01d40ec14db10493d329c0d1c97be/sn38/template/tee.py"
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/README.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/docs/miner.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/docs/validator.md",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/neurons/validator.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/constants.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/quality.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/leak.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/dedup.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/svd_gate.py",
+    "https://raw.githubusercontent.com/chronollm/sn38/a1f1aa75452e4e81aa75e3cafdfc1aa89b5be14f/sn38/template/tee.py"
    ],
    "rank": 22,
    "emission_pct": "1.4%",
@@ -1695,35 +1706,35 @@
    "netuid": 56,
    "name": "Gradients",
    "version": "1.0",
-   "read_on": "2026-09-19",
+   "read_on": "2026-09-22",
    "commodity": "training",
    "repo": {
     "url": "https://github.com/gradients-ai/G.O.D",
-    "commit": "8b673e2439273c4eff85f6de4a6d72d133f2a97f",
-    "committed": "2026-09-17"
+    "commit": "0791bb6e345533cae8088ffcc4d214c70c22efaf",
+    "committed": "2026-09-22"
    },
    "fields": {
     "work": {
      "text": "Training code: a GitHub repository and commit, served from a small miner endpoint, that validators build in a container and run on their own GPUs to fine-tune a model on a task. The miner supplies no compute, pays 0.4 to 0.7 TAO to enter a weekly tournament, and a winning repository is republished in public.",
      "trust": "code",
      "path": "docs/miner.md",
-     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
      "quote": "Tournament miners submit training code. Validators clone your submitted repository at the commit you provide, build your Docker image, run your training script"
     },
     "scoring": {
-     "text": "Group rounds, then pairwise knockouts, then a boss round against the reigning champion. Two entries train the same model on the same task; the winner is whichever wins more individual held-out samples, ties inside 0.01 nats counting for neither and mean loss deciding equal counts. GRPO tasks rank on mean score. Duplicate entries are eliminated in three tiers, the last a pairwise model review of the code deltas.",
+     "text": "Round one is a single group of every entrant playing three instruct tasks; the top two advance to a knockout, whose winner meets the reigning champion in a six-task boss round. Two entries train the same model on the same task; the winner wins more held-out samples, ties inside 0.01 nats counting for neither, mean loss deciding equal counts. GRPO tasks rank on mean score. Duplicates are eliminated in tiers.",
      "trust": "code",
      "path": "docs/miner.md",
-     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
      "quote": "Knockout instruct, DPO and chat tasks are decided per held-out sample, not on mean loss."
     },
     "split": {
      "text": "Winner-heavy per pool. Emission divides into text, image and environment pools anchored at 0.35, 0.25 and 0.25, rebalanced by participation with a 0.05 floor and 0.50 cap. Inside a pool the top three ranks are paid by exponential decay with base 0.25, about 76, 19 and 5 percent; a champion whose boss-round margin passes 0.10 has the excess doubled. Every participant gets 0.0001.",
      "trust": "code",
      "path": "validator/scoring/constants.py",
-     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/validator/scoring/constants.py",
+     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/constants.py",
      "quote": "TOURNAMENT_PAID_RANKS = 3; TOURNAMENT_SIMPLE_DECAY_BASE = 0.25; TOURNAMENT_PARTICIPATION_WEIGHT = 0.0001",
-     "disagrees": "docs/miner.md says emissions split between champions and participants and nothing is burned; validator/scoring/constants.py at the same commit defines EMISSION_BURN_HOTKEY on its first line, whose use this reading did not trace."
+     "disagrees": "docs/miner.md says emissions split between champions and participants and nothing is burned; validator/scoring/weights.py agrees and rescales the three pools to fill the whole pie; validator/scoring/emission_balance.py at the same commit says anything shaved off the 0.50 cap falls through to burn. EMISSION_BURN_HOTKEY is a placeholder for a champion that defended, resolved to the real hotkey before scoring."
     },
     "judges": {
      "text": "Twelve validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. Validators do the work themselves: they build each entry, run the training on validator-managed GPUs, upload the model and score it against its opponent on a held-out set. Completion is manual: the team reads the winning code for exploits before a tournament is marked complete, with a Friday 14:00 UTC deadline.",
@@ -1741,14 +1752,14 @@
      "text": "Anyone with a model and a dataset, by the hour, through the site or one API call to api.gradients.io/v1/tasks/create. The rate card, read from SKILL.md because the pricing page loads only with JavaScript, runs $10 to $50 an hour by text model size and $5 an hour for image models. No customer or usage figure is published; the last news post is from November 2025.",
      "trust": "code",
      "path": "SKILL.md",
-     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/SKILL.md",
+     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/SKILL.md",
      "quote": "<=1B text: $10/hour; <=7B text: $15/hour; <=40B text: $25/hour; >40B text: $50/hour; image: $5/hour"
     },
     "exploits": {
      "text": "One entry under many identities: submissions are de-duplicated in three tiers, identical commit, identical source after normalisation, and a Claude pairwise review of deltas, with cosmetic disguises counted as duplicates and eliminated. Hidden datasets, pretrained weights, compiled or obfuscated code are banned. One hotkey per coldkey per tournament. Before a tournament closes the team reads the winning code for exploits, a manual step.",
      "trust": "code",
      "path": "docs/miner.md",
-     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+     "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
      "quote": "the team reviews the winning submission's code to check for exploits and confirm it reflects a genuine training improvement"
     }
    },
@@ -1758,10 +1769,12 @@
     "https://api.gradients.io/docs",
     "https://api.gradients.io/tournament/fees",
     "https://github.com/gradients-ai/G.O.D",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/validator/scoring/constants.py",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/README.md",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/SKILL.md"
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/constants.py",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/README.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/SKILL.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/tournament/constants.py",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/emission_balance.py"
    ],
    "rank": 23,
    "emission_pct": "1.4%",

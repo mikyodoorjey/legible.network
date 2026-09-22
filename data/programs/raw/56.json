@@ -2,35 +2,35 @@
   "netuid": 56,
   "name": "Gradients",
   "version": "1.0",
-  "read_on": "2026-09-19",
+  "read_on": "2026-09-22",
   "commodity": "training",
   "repo": {
     "url": "https://github.com/gradients-ai/G.O.D",
-    "commit": "8b673e2439273c4eff85f6de4a6d72d133f2a97f",
-    "committed": "2026-09-17"
+    "commit": "0791bb6e345533cae8088ffcc4d214c70c22efaf",
+    "committed": "2026-09-22"
   },
   "fields": {
     "work": {
       "text": "Training code: a GitHub repository and commit, served from a small miner endpoint, that validators build in a container and run on their own GPUs to fine-tune a model on a task. The miner supplies no compute, pays 0.4 to 0.7 TAO to enter a weekly tournament, and a winning repository is republished in public.",
       "trust": "code",
       "path": "docs/miner.md",
-      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
       "quote": "Tournament miners submit training code. Validators clone your submitted repository at the commit you provide, build your Docker image, run your training script"
     },
     "scoring": {
-      "text": "Group rounds, then pairwise knockouts, then a boss round against the reigning champion. Two entries train the same model on the same task; the winner is whichever wins more individual held-out samples, ties inside 0.01 nats counting for neither and mean loss deciding equal counts. GRPO tasks rank on mean score. Duplicate entries are eliminated in three tiers, the last a pairwise model review of the code deltas.",
+      "text": "Round one is a single group of every entrant playing three instruct tasks; the top two advance to a knockout, whose winner meets the reigning champion in a six-task boss round. Two entries train the same model on the same task; the winner wins more held-out samples, ties inside 0.01 nats counting for neither, mean loss deciding equal counts. GRPO tasks rank on mean score. Duplicates are eliminated in tiers.",
       "trust": "code",
       "path": "docs/miner.md",
-      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
       "quote": "Knockout instruct, DPO and chat tasks are decided per held-out sample, not on mean loss."
     },
     "split": {
       "text": "Winner-heavy per pool. Emission divides into text, image and environment pools anchored at 0.35, 0.25 and 0.25, rebalanced by participation with a 0.05 floor and 0.50 cap. Inside a pool the top three ranks are paid by exponential decay with base 0.25, about 76, 19 and 5 percent; a champion whose boss-round margin passes 0.10 has the excess doubled. Every participant gets 0.0001.",
       "trust": "code",
       "path": "validator/scoring/constants.py",
-      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/validator/scoring/constants.py",
+      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/constants.py",
       "quote": "TOURNAMENT_PAID_RANKS = 3; TOURNAMENT_SIMPLE_DECAY_BASE = 0.25; TOURNAMENT_PARTICIPATION_WEIGHT = 0.0001",
-      "disagrees": "docs/miner.md says emissions split between champions and participants and nothing is burned; validator/scoring/constants.py at the same commit defines EMISSION_BURN_HOTKEY on its first line, whose use this reading did not trace."
+      "disagrees": "docs/miner.md says emissions split between champions and participants and nothing is burned; validator/scoring/weights.py agrees and rescales the three pools to fill the whole pie; validator/scoring/emission_balance.py at the same commit says anything shaved off the 0.50 cap falls through to burn. EMISSION_BURN_HOTKEY is a placeholder for a champion that defended, resolved to the real hotkey before scoring."
     },
     "judges": {
       "text": "Twelve validators were active on the 2026-09-09 chain snapshot. Commit-reveal is off. Validators do the work themselves: they build each entry, run the training on validator-managed GPUs, upload the model and score it against its opponent on a held-out set. Completion is manual: the team reads the winning code for exploits before a tournament is marked complete, with a Friday 14:00 UTC deadline.",
@@ -48,14 +48,14 @@
       "text": "Anyone with a model and a dataset, by the hour, through the site or one API call to api.gradients.io/v1/tasks/create. The rate card, read from SKILL.md because the pricing page loads only with JavaScript, runs $10 to $50 an hour by text model size and $5 an hour for image models. No customer or usage figure is published; the last news post is from November 2025.",
       "trust": "code",
       "path": "SKILL.md",
-      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/SKILL.md",
+      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/SKILL.md",
       "quote": "<=1B text: $10/hour; <=7B text: $15/hour; <=40B text: $25/hour; >40B text: $50/hour; image: $5/hour"
     },
     "exploits": {
       "text": "One entry under many identities: submissions are de-duplicated in three tiers, identical commit, identical source after normalisation, and a Claude pairwise review of deltas, with cosmetic disguises counted as duplicates and eliminated. Hidden datasets, pretrained weights, compiled or obfuscated code are banned. One hotkey per coldkey per tournament. Before a tournament closes the team reads the winning code for exploits, a manual step.",
       "trust": "code",
       "path": "docs/miner.md",
-      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
+      "url": "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
       "quote": "the team reviews the winning submission's code to check for exploits and confirm it reflects a genuine training improvement"
     }
   },
@@ -65,9 +65,11 @@
     "https://api.gradients.io/docs",
     "https://api.gradients.io/tournament/fees",
     "https://github.com/gradients-ai/G.O.D",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/docs/miner.md",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/validator/scoring/constants.py",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/README.md",
-    "https://raw.githubusercontent.com/gradients-ai/G.O.D/8b673e2439273c4eff85f6de4a6d72d133f2a97f/SKILL.md"
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/docs/miner.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/constants.py",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/README.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/SKILL.md",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/tournament/constants.py",
+    "https://raw.githubusercontent.com/gradients-ai/G.O.D/0791bb6e345533cae8088ffcc4d214c70c22efaf/validator/scoring/emission_balance.py"
   ]
 }
