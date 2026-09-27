@@ -110,7 +110,10 @@ def main():
         want = {f"{SITE}/sn/{s['netuid']}/" for s in data["subnets"]} | {f"{SITE}/", f"{SITE}/method/", f"{SITE}/about/", f"{SITE}/sn/"}
         want |= {f"{SITE}/narrative/"}
         if praw:
-            want |= {f"{SITE}/programs/"}
+            want |= {f"{SITE}/programs/", f"{SITE}/findings/"}
+            pages.append("findings/index.html")
+            if not (REPO / "data" / "findings.json").exists():
+                fails.append("data/findings.json missing while programs exist")
         if npath.exists():
             want |= {f"{SITE}/narrative/frames/"} | {f"{SITE}/narrative/{n['id']}/" for n in nd["narrators"] if n["kind"] != "subnet"}
         have = set(re.findall(r"<loc>([^<]+)</loc>", sm))

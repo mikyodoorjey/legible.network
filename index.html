@@ -34,7 +34,19 @@
 .arg .demo a::after{content:" \203A"}
 .arg .demo a:hover{text-decoration:underline;text-decoration-color:var(--link)}
 .hero-b .stats{justify-content:center;margin-top:44px}
-.arg .top{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;margin-top:72px}
+.arg .findings{max-width:760px;margin:64px auto 0;text-align:left}
+.arg .findings .group{padding-top:0}
+.flist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.flist li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 24px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.flist li b{font-family:var(--disp);font-weight:600;font-size:30px;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.flist li span{display:grid;gap:3px;min-width:0}
+.flist li span a{color:var(--ink);font-size:17px;line-height:1.4;letter-spacing:-.01em}
+.flist li span a:hover{text-decoration:underline}
+.flist li small{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);line-height:1.5}
+.fcap{font-size:13.5px;color:var(--soft);margin:14px 0 0;line-height:1.5}
+.fcap a{color:var(--link)}.fcap a::after{content:" \203A"}
+@media (max-width:600px){.flist li{grid-template-columns:64px 1fr;gap:0 14px}.flist li b{font-size:24px}.flist li span a{font-size:15.5px}}
+.arg .top{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;margin-top:88px}
 .arg .top .group{padding-top:0}
 .sealgrid{display:grid;grid-template-columns:96px repeat(3,1fr);gap:0 24px;font-size:15px;max-width:760px;border-top:1px solid var(--ink)}
 .sealgrid>div{display:flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
@@ -162,6 +174,7 @@
 <nav class="nav"><div class="wrap">
   <span class="wordmark"><a href="/">Legible</a></span>
   <div class="links">
+    <a href="/findings/">Findings</a>
     <a href="/sn/">Subnets</a>
     <a href="/programs/">Programs</a>
     <a href="/narrative/">Voices</a>
@@ -179,6 +192,7 @@
     <h1>Bitcoin gave us digital <em>gold</em>.<br>Ethereum gave us programmable <em>money</em>.<br>Bittensor gives us programmable <em>mining</em>.</h1>
     <p class="lede">One argument about what Bittensor is, and three instruments that record what the puzzles are, whether a reader can find them, and who says so.</p>
     <div class="demo">
+      <a href="#findings">What the record shows</a>
       <a href="#puzzle">Write the puzzle</a>
       <a href="#lineage">Where the phrase came from</a>
       <a href="/programs/">Read the programs</a>
@@ -189,6 +203,12 @@
 <div><b>32</b><span>subnets scored</span></div><div><b>530</b><span>quotes on record</span></div><div><b>19</b><span>voices</span></div><div><b>213</b><span>frames traced</span></div>
 <!-- homestats:end -->
     </div>
+  </div>
+
+  <div class="findings" id="findings">
+  <!-- findings:start -->
+<span class="group">What the record shows</span><ol class="flist"><li id="f-no-buyer"><b>15</b><span><a href="/findings/#table">15 of 32 name no paying buyer today.</a></span></li><li id="f-top-ten-no-buyer"><b>6</b><span><a href="/findings/#table">6 of the ten largest by emission name no buyer.</a></span></li><li id="f-disagreements"><b>35</b><span><a href="/programs/">35 places where a subnet&#x27;s own sources disagree about its program, across 25 subnets.</a></span></li><li id="f-big-delta"><b>7</b><span><a href="/findings/#table">7 sit 10 or more places lower on legibility than on emission.</a></span></li><li id="f-buyers-least"><b>2.7</b><span><a href="/sn/">Buyers are the audience subnets explain least: 2.7 of 5 on average, against 3.5 for miners.</a></span></li><li id="f-spread"><b>3.3</b><span><a href="/sn/">The median legibility is 3.3; the range runs from 1.5 (Hone) to 4.3 (blockmachine).</a></span></li><li id="f-chain-or-code"><b>61%</b><span><a href="/programs/">61% of program fields rest on the chain or the code; 4 could not be found.</a></span></li><li id="f-identity"><b>4</b><span><a href="/sn/">4 of 32 have filled every field of their on-chain identity.</a></span></li></ol><p class="fcap">Counts, not readings: each is computed from the datasets and links to the rows it was counted from. <a href="/findings/">All findings, the rules, and the allocator table</a></p>
+<!-- findings:end -->
   </div>
 
   <div class="top">
@@ -379,6 +399,7 @@
 (function(){var b=document.querySelector("[data-theme-toggle]");if(!b)return;function set(t){document.documentElement.setAttribute("data-theme",t);b.textContent=t==="dark"?"Light":"Dark";try{localStorage.setItem("theme",t)}catch(e){}}
 b.textContent=document.documentElement.getAttribute("data-theme")==="dark"?"Light":"Dark";b.addEventListener("click",function(){set(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark")});})();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 <!-- footer:end -->
 </body>

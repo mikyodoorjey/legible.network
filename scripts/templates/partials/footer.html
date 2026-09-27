@@ -9,3 +9,4 @@
 (function(){var b=document.querySelector("[data-theme-toggle]");if(!b)return;function set(t){document.documentElement.setAttribute("data-theme",t);b.textContent=t==="dark"?"Light":"Dark";try{localStorage.setItem("theme",t)}catch(e){}}
 b.textContent=document.documentElement.getAttribute("data-theme")==="dark"?"Light":"Dark";b.addEventListener("click",function(){set(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark")});})();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>

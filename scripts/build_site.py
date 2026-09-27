@@ -28,7 +28,7 @@ DOCS = [  # (source markdown, output dir, nav key)
     ("method.md", "method", "method"),
     ("about.md", "about", "about"),
 ]
-HAND_PAGES = ["index.html", "sn/index.html", "404.html", "narrative/index.html", "programs/index.html"]  # pages that carry partial markers
+HAND_PAGES = ["index.html", "sn/index.html", "404.html", "narrative/index.html", "programs/index.html", "findings/index.html"]  # pages that carry partial markers
 
 
 # ---------------- tiny markdown
@@ -156,7 +156,7 @@ def partial(name, ctx):
 
 def nav_ctx(active, ctx):
     c = dict(ctx)
-    for k in ("index", "programs", "narrative", "method", "about"):
+    for k in ("findings", "index", "programs", "narrative", "method", "about"):
         c[f"cur_{k}"] = ' aria-current="page"' if k == active else ""
     c["summit"] = " · Exploit Summit 2026 · Montreal" if active == "about" else ""
     return c
@@ -298,6 +298,7 @@ def main():
         pmerged, pchanged = prog.write_merged(programs, (data or {}).get("subnets", []), write_if_changed)
         if pchanged:
             changed.append("data/programs.json")
+    F = None  # the findings, computed once the map is built (below) and injected into the home and /findings/
     descriptions = {
         "method": "How Legible measures what a subnet shows a reader and what the people around Bittensor say it is: the scale, the sources, confidence, coverage, corrections, and the changelog.",
         "about": "Who built Legible and why.",
@@ -310,6 +311,11 @@ def main():
     subnet_names = {sub["netuid"]: sub["name"] for sub in (data or {}).get("subnets", [])}
     n_changed, ndata = build_narrative(nparts, SITE, write_if_changed, raw_dir, subnet_names) if raw_dir is None or raw_dir.exists() else ([], None)
     changed += n_changed
+    if data and pmerged:
+        import findings as fnd
+        F = fnd.compute(data, pmerged, ndata)
+        if write_if_changed(REPO / "data" / "findings.json", json.dumps(fnd.for_json(F), ensure_ascii=False, indent=1)):
+            changed.append("data/findings.json")
     for src, outdir, active in DOCS:
         p = REPO / src
         if not p.exists():
@@ -361,7 +367,7 @@ def main():
         if not p.exists():
             continue
         s = p.read_text(encoding="utf-8")
-        active = "index" if name == "sn/index.html" else ("narrative" if name.startswith("narrative/") else ("programs" if name.startswith("programs/") else ""))
+        active = "index" if name == "sn/index.html" else ("narrative" if name.startswith("narrative/") else ("programs" if name.startswith("programs/") else ("findings" if name.startswith("findings/") else "")))
         c = nav_ctx(active, ctx)
         s2 = inject(inject(inject(s, "topbar", partial("topbar", c)), "nav", partial("nav", c)), "footer", partial("footer", c))
         s2 = inject(s2, "robots", ctx["robots"])
@@ -373,6 +379,14 @@ def main():
                 sm = ndata["summary"]
                 s2 = inject(s2, "homestats", f'<div><b>{len(data["subnets"])}</b><span>subnets scored</span></div><div><b>{sm["statements"]}</b><span>quotes on record</span></div><div><b>{sm["narrators"]}</b><span>voices</span></div><div><b>{sm["metaphors"]}</b><span>frames traced</span></div>')
             s2 = inject(s2, "narrative", home_block(ndata) if ndata else '<p class="sm">The narrative map is being assembled.</p>')
+            if F:
+                import findings as fnd
+                s2 = inject(s2, "findings", fnd.home_block(F))
+        if name == "findings/index.html" and F:
+            import findings as fnd
+            s2 = inject(s2, "fstats", fnd.page_stats(F))
+            s2 = inject(s2, "findings", fnd.page_list(F))
+            s2 = inject(s2, "ftable", fnd.page_rows(F))
             if data and programs:
                 try:
                     from render_learn import load_entries as _le2
@@ -424,7 +438,7 @@ def main():
             p.write_text(s2, encoding="utf-8")
             changed.append("sn/index.html chart")
 
-    urls = ["/", "/method/", "/about/", "/narrative/"] + (["/programs/"] if programs else [])
+    urls = ["/", "/method/", "/about/", "/narrative/"] + (["/programs/"] if programs else []) + (["/findings/"] if F else [])
     if ndata:
         urls += ["/narrative/frames/"] + [f"/narrative/{n['id']}/" for n in ndata["narrators"] if n["kind"] != "subnet"]
     if data:
