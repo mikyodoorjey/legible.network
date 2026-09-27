@@ -34,7 +34,7 @@
 .arg .demo a::after{content:" \203A"}
 .arg .demo a:hover{text-decoration:underline;text-decoration-color:var(--link)}
 .hero-b .stats{justify-content:center;margin-top:44px}
-.arg .findings{max-width:760px;margin:64px auto 0;text-align:left}
+.arg .findings{max-width:760px;margin:56px auto 0;text-align:left}
 .arg .findings .group{padding-top:0}
 .flist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
 .flist li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 24px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
@@ -46,7 +46,7 @@
 .fcap{font-size:13.5px;color:var(--soft);margin:14px 0 0;line-height:1.5}
 .fcap a{color:var(--link)}.fcap a::after{content:" \203A"}
 @media (max-width:600px){.flist li{grid-template-columns:64px 1fr;gap:0 14px}.flist li b{font-size:24px}.flist li span a{font-size:15.5px}}
-.arg .top{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;margin-top:88px}
+.arg .top{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;margin-top:72px}
 .arg .top .group{padding-top:0}
 .sealgrid{display:grid;grid-template-columns:96px repeat(3,1fr);gap:0 24px;font-size:15px;max-width:760px;border-top:1px solid var(--ink)}
 .sealgrid>div{display:flex;align-items:center;min-height:44px;border-bottom:1px solid var(--rule)}
@@ -204,13 +204,6 @@
 <!-- homestats:end -->
     </div>
   </div>
-
-  <div class="findings" id="findings">
-  <!-- findings:start -->
-<span class="group">What the record shows</span><ol class="flist"><li id="f-no-buyer"><b>15</b><span><a href="/findings/#table">15 of 32 name no paying buyer today.</a></span></li><li id="f-top-ten-no-buyer"><b>6</b><span><a href="/findings/#table">6 of the ten largest by emission name no buyer.</a></span></li><li id="f-disagreements"><b>35</b><span><a href="/programs/">35 places where a subnet&#x27;s own sources disagree about its program, across 25 subnets.</a></span></li><li id="f-big-delta"><b>7</b><span><a href="/findings/#table">7 sit 10 or more places lower on legibility than on emission.</a></span></li><li id="f-buyers-least"><b>2.7</b><span><a href="/sn/">Buyers are the audience subnets explain least: 2.7 of 5 on average, against 3.5 for miners.</a></span></li><li id="f-spread"><b>3.3</b><span><a href="/sn/">The median legibility is 3.3; the range runs from 1.5 (Hone) to 4.3 (blockmachine).</a></span></li><li id="f-chain-or-code"><b>61%</b><span><a href="/programs/">61% of program fields rest on the chain or the code; 4 could not be found.</a></span></li><li id="f-identity"><b>4</b><span><a href="/sn/">4 of 32 have filled every field of their on-chain identity.</a></span></li></ol><p class="fcap">Counts, not readings: each is computed from the datasets and links to the rows it was counted from. <a href="/findings/">All findings, the rules, and the allocator table</a></p>
-<!-- findings:end -->
-  </div>
-
   <div class="top">
     <div>
       <span class="group">What each network leaves open</span>
@@ -221,6 +214,12 @@
       </div>
       <p class="sealcap">Sealed: fixed at birth. Open: anyone can write it. TAO keeps Bitcoin's money on purpose: no pre-mine, 21 million, halvings, paid out by the block.</p>
     </div>
+  </div>
+
+  <div class="findings" id="findings">
+  <!-- findings:start -->
+<span class="group">What the record shows</span><ol class="flist"><li id="f-no-buyer"><b>15</b><span><a href="/findings/#table">15 of 32 name no paying buyer today.</a></span></li><li id="f-top-ten-no-buyer"><b>6</b><span><a href="/findings/#table">6 of the ten largest by emission name no buyer.</a></span></li><li id="f-disagreements"><b>35</b><span><a href="/programs/">35 places where a subnet&#x27;s own sources disagree about its program, across 25 subnets.</a></span></li><li id="f-big-delta"><b>7</b><span><a href="/findings/#table">7 sit 10 or more places lower on legibility than on emission.</a></span></li><li id="f-buyers-least"><b>2.7</b><span><a href="/sn/">Buyers are the audience subnets explain least: 2.7 of 5 on average, against 3.5 for miners.</a></span></li><li id="f-spread"><b>3.3</b><span><a href="/sn/">The median legibility is 3.3; the range runs from 1.5 (Hone) to 4.3 (blockmachine).</a></span></li><li id="f-chain-or-code"><b>61%</b><span><a href="/programs/">61% of program fields rest on the chain or the code; 4 could not be found.</a></span></li><li id="f-identity"><b>4</b><span><a href="/sn/">4 of 32 have filled every field of their on-chain identity.</a></span></li></ol><p class="fcap">Counts, not readings: each is computed from the datasets and links to the rows it was counted from. <a href="/findings/">All findings, the rules, and the allocator table</a></p>
+<!-- findings:end -->
   </div>
 
     <div class="lin" id="lin">
